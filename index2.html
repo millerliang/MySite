@@ -1,0 +1,127 @@
+﻿<html lang="en">
+<head>
+	<title>TimeCircles Date Countdown</title>
+	<meta charset="utf-8" />
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+	<link rel='stylesheet' href='asset/css/main.css'>
+</head>
+<body>
+<div class="container">
+	<article>
+		<section>
+			<h1>即將開幕，敬請期待</h1>
+			<img class="pic_top" src="asset/imgs/top.png">
+			<img class="pic_L" src="asset/imgs/left.png">
+			<img class="pic_R" src="asset/imgs/right.png">
+			<div id="DateCountdown" data-timer="11"></div>
+		</section>
+		<footer>
+			<a id="round" href="#" class="action-button shadow animate red"><i class="fa fa-users"></i> 放入人名</a>
+			<a id="clear" href="#" class="action-button shadow animate blue"><i class="fa fa-trash"></i> Clear</a>
+			<a id="roundshadows" href="#" class="action-button shadow animate green"><i class="fa fa-circle-thin"></i> Rounded Shadows</a>
+			<a id="imagebut" href="#" class="action-button shadow animate yellow"><i class="fa fa-picture-o"></i> Images</a>
+			<a href="#" class="action-button shadow animate default full_btn"><i class="fa fa-arrows-alt"></i> Full</a>
+		</footer>
+	</article>
+</div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="asset/TC/TimeCircles.js"></script>
+<link rel="stylesheet" href="asset/TC/TimeCircles.css">
+<script src="asset/js/snowfall.min.js"></script>
+
+<script type='text/javascript'>  
+$(document).ready(function(){
+
+	snowFall.snow(document.body, {round : true, minSize: 5, maxSize:8});
+	snowFall.snow(document.body, "clear");
+
+	document.getElementById("clear").addEventListener("click", function(){
+		snowFall.snow(document.body, "clear");
+	});
+
+	document.getElementById("round").addEventListener("click", function(){
+	//	document.body.className  = "darkBg";
+		snowFall.snow(document.body, "clear");
+		snowFall.snow(document.body, {round : true, minSize: 5, maxSize:8});
+	});
+
+	//document.getElementById("shadows").addEventListener("click", function(){
+	//	document.body.className  = "lightBg";
+	//	snowFall.snow(document.body, "clear");
+	//	snowFall.snow(document.body, {shadow : true, flakeCount:200});
+	//});
+
+	document.getElementById("roundshadows").addEventListener("click", function(){
+		//document.body.className  = "lightBg";
+		snowFall.snow(document.body, "clear");
+		snowFall.snow(document.body, {round : true, shadow : true, minSize: 5, maxSize:8});
+	});
+	
+	document.getElementById("imagebut").addEventListener("click", function(){
+		//document.body.className  = "darkBg";
+		snowFall.snow(document.body, "clear");
+		snowFall.snow(document.body, {image : "asset/imgs/huaban.png", minSize: 10, maxSize:32});
+	});
+
+});
+
+// Full Container Size
+$(".full_btn").click(function() {
+	$('body').toggleClass( "container_fluid" );
+});
+
+// Check Countdown BtnAct
+$(".container section").click(function() {
+	$(this).toggleClass( "curtain" );
+	if ($(this).hasClass('curtain')){
+		$("#DateCountdown").TimeCircles().start();
+	}else {
+		$("#DateCountdown").TimeCircles().restart().stop();
+	}
+});
+
+// TimeCircles Setting
+$("#DateCountdown").TimeCircles({
+	"start": false,
+    "animation": "ticks",
+    "bg_width": 1,
+    "fg_width": 0.1,
+	"refresh_interval": 1,
+    "count_past_zero": false,
+    "circle_bg_color": "rgba(255,255,255,.08)",
+    "time": {
+        "Days": {
+            //"text": "Days",
+            "color": "#FFCC66",
+            "show": false
+        },
+        "Hours": {
+            //"text": "Hours",
+            "color": "#99CCFF",
+            "show": false
+        },
+        "Minutes": {
+            //"text": "Minutes",
+            "color": "#BBFFBB",
+            "show": false
+        },
+        "Seconds": {
+            //"text": "Seconds",
+            //"color": "#e80202",
+            "color": "rgba(255,255,255,.1)",
+            "show": true
+        }
+    }
+}).addListener(countdownComplete);
+
+function countdownComplete(unit, value, total){
+    if(total<=0){
+        $(this).fadeOut('slow').replaceWith("<h2>Time's Up!</h2>");
+		snowFall.snow(document.body, {image : "asset/imgs/huaban.png", minSize: 10, maxSize:32});
+    }
+};
+</script>
+
+</body>
+</html>
