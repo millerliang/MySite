@@ -1,0 +1,619 @@
+<!doctype html>
+<!--[if IE 8]><html class="ie8 lt-ie10"><![endif]-->
+<!--[if IE 9]><html class="ie9 lt-ie10"><![endif]-->
+<!--[if gt IE 9]><!--><html lang="en"><!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <title>Flex justify space-around</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="cleartype" content="on">
+    <meta name="MobileOptimized" content="320">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="asset/css/main.css">
+	<link rel="stylesheet" href="asset/css/swiper.min.css">
+    <link rel="stylesheet" href="asset/css/tabs_modal.css">
+    <link rel="stylesheet" href="asset/css/items_view.css">
+<style>
+* {box-sizing: border-box;}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {margin: 0;padding: 0;border: 0;font-size: 100%;font: inherit;vertical-align: baseline;}
+html,body {height:100%;}
+body {
+font-family:Helvetica;
+line-height: 100%;
+background-color: #999;
+color: white;
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+align-content: stretch;
+align-items: stretch;
+}
+
+.flex-container {
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-content: stretch;
+    height: 100%;
+	width: 100%;
+    margin: 0 auto;
+}
+
+.flex-panel {
+    background-color__: #358d95;
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    flex-grow: 1;
+    flex-basis: 80%;
+    box-shadow: inset 0 3px 5px rgba(0,0,0,.25);
+	background-image:url(http://img01.taopic.com/150409/240385-15040ZJR571.jpg);
+	background-repeat:no-repeat;
+	background-position:center center;
+	background-size:cover;
+}
+.tabs-content {overflow: auto;height:100%!important;background-color:rgba(0,0,0,.5);}
+.tabs-content:after {content:none;}
+
+.contact-source {position: relative;background: #000;text-align: center;}
+/* 標頭 */
+.header-hamburger {position: relative;box-shadow: 0 2px 6px rgba(0,0,0,.35);-webkit-box-shadow: 0 2px 6px rgba(0,0,0,.35);-moz-box-shadow: 0 2px 6px rgba(0,0,0,.35);}
+.header-hamburger h2 {overflow: hidden;text-overflow: ellipsis;white-space: nowrap;width: 73%;margin: auto;}
+
+/* 留言輸入 */
+.command_QA {background: rgb(255, 255, 255);padding:1em;margin: -12px -10px -16px;min-height:100%;}
+.command_input {display: block;position: fixed;bottom: 0;left: 0;}
+.command_input form {padding:.3em;min-height:39px;}
+
+/* 反饋按鈕 */
+.command_input form button {padding: .35em .8em;}
+
+/* 出席 */
+.attend {margin: 1em -5px;list-style: none;background-color:rgba(255,255,255,.8);-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;}
+.attend li {color:#333;border-bottom: 1px solid #fff;clear: both;padding:.8em;}
+.attend li:last-child {border:none;}
+.attend li::after {clear: both;}
+.attend li::after,.attend li::before {content: "";display: table; }
+.attend li img {
+width: 42px;
+height: 42px;
+float: left;
+margin-right: 1em;
+border: 2px solid #fff;
+-moz-box-shadow: 0px 2px 8px rgba(0,0,0,.5);
+-webkit-box-shadow: 0px 2px 8px rgba(0,0,0,.5);
+box-shadow: 0px 2px 8px rgba(0,0,0,.5);
+-webkit-border-radius: 50%;
+-moz-border-radius: 50%;
+border-radius: 50%;
+}
+.attend li .pull-left > p {margin-bottom:.3em;color: #55127d;}
+.attend li .pull-left > p + p {font-size:small;color:#666;margin:0;}
+
+/* 路演說明 */
+.first_d p {line-height:1.25;}
+
+/* 彈出視窗 */
+.modal__inner {box-shadow: 0 2px 12px rgba(0,0,0,.35);-webkit-box-shadow: 0 2px 12px rgba(0,0,0,.35);-moz-box-shadow: 0 2px 12px rgba(0,0,0,.35);}
+
+.swiper-container {background-image__:url('asset/images/header-bg.jpg');background-size__:cover;background-color: #371673;}
+.swiper-slide {padding:0;align-items: flex-start;}
+.swiper-slide img {max-width: 100%;max-height: 252px;}
+
+/* control btn icons */
+.ctrl_icons *{-webkit-transition: all .3s;-moz-transition: all .3s;transition: all .3s;}
+.ctrl_icons {
+background-color:rgba(0,0,0,.25);;
+margin:3em auto 0;
+left: .6em;
+right: .6em;
+padding:1.2em .8em;
+border__:1px solid rgba(0,0,0,.2);
+position:absolute;
+text-align: center;
+-webkit-border-radius:5px;
+-moz-border-radius:5px;
+border-radius:5px;
+}
+.ctrl_icons span {
+position:relative;
+width: 66px;
+height: 66px;
+cursor: pointer;
+display: inline-block;
+background-color: rgba(0,0,0,.15);
+-webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%;
+box-shadow: inset 0 -2px 1px rgba(0,0,0,.15);
+-webkit-box-shadow: inset 0 -2px 1px rgba(0,0,0,.15);
+-moz-box-shadow: inset 0 -2px 1px rgba(0,0,0,.15);
+}
+.ctrl_icons i {font-size:2em;width:auto;line-height: 66px;}
+.ctrl_icons i.fa-play {margin-left: .25em;}
+.ctrl_icons:hover span {background-color: rgba(125,61,156,0.5);color:#ffd24c;}
+.ctrl_icons:active span {
+background-color: rgba(179,0,45,0.85);
+top:1px;
+box-shadow: inset 0 3px 5px rgba(0,0,0,.35);
+-webkit-box-shadow: inset 0 3px 5px rgba(0,0,0,.35);
+-moz-box-shadow: inset 0 3px 5px rgba(0,0,0,.35);
+}
+.ctrl_icons:active i {font-size:1.8em;color: #fff;}
+
+/* ON/OFF Switch */
+.onoffswitch {
+  position: relative;
+  width: 55px;
+  display: inline-block;
+  font-size: 80%;
+}
+.onoffswitch .onoffswitch-label {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  border: 1px solid #e6e6e6;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
+  margin: 0;
+}
+.onoffswitch .onoffswitch-inner {
+  width: 200%;
+  margin-left: -100%;
+  -webkit-transition: margin 0.15s ease-in-out;
+  -o-transition: margin 0.15s ease-in-out;
+  -moz-transition: margin 0.15s ease-in-out;
+  transition: margin 0.15s ease-in-out;
+}
+.onoffswitch .onoffswitch-inner:before,
+.onoffswitch .onoffswitch-inner:after {
+  float: left;
+  width: 50%;
+  height: 24px;
+  padding: 0;
+  line-height: 24px;
+  font-size: 80%;
+  color: #ffffff;
+  font-weight: normal;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.onoffswitch .onoffswitch-inner:before {
+  content: "ON";
+  padding-left: 10px;
+  background-color: #007bc8;
+  color: #ffffff;
+}
+.onoffswitch .onoffswitch-inner:after {
+  content: "OFF";
+  padding-right: 10px;
+  background-color: #fafafa;
+  color: #3d3d3d;
+  text-align: right;
+}
+.onoffswitch .onoffswitch-switch {
+  width: 22px;
+  height: 22px;
+  margin: 0;
+  background: #ffffff;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  bottom: 0;
+  right: 35px;
+  -webkit-transition: right 0.15s ease-in-out;
+  -o-transition: right 0.15s ease-in-out;
+  -moz-transition: right 0.15s ease-in-out;
+  transition: right 0.15s ease-in-out;
+}
+.toggle-group {
+  position: relative;
+  margin: 1.2em 0;
+  min-height: 1.5em;
+}
+.toggle-group input[type=checkbox] {
+  position: absolute;
+  display: none;
+}
+.toggle-group input[type=checkbox]:checked ~ .onoffswitch .onoffswitch-label .onoffswitch-inner {
+  margin-left: 0;
+}
+.toggle-group input[type=checkbox]:checked ~ .onoffswitch .onoffswitch-label .onoffswitch-switch {
+  right: 1px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+}
+.toggle-group input[type=checkbox]:focus ~ .onoffswitch {
+  outline: thin dotted #333;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+.toggle-group label {
+  position: absolute;
+  cursor: pointer;
+  padding-left__: 65px;
+  display: inline-block;
+  text-align: left;
+  line-height: 24px;
+  width: 100%;
+  z-index: 1;
+  height: 24px;
+  font-weight: 200;
+}
+</style>
+</head>
+<body>
+<aside class="flex-container">
+
+	<header class="header-hamburger">
+		<a class="ninja-btn ninja-back" title="menu" onclick="history.go(-1)"><span></span></a>
+		<h2>青创赛在线启动仪式 [靠谱创业] [靠谱创业]</h2>
+		<div class="lower">
+			<label for="modal-0"><i class="fa fa-ellipsis-v"></i></label>
+		</div>
+	</header>
+	<div class="contact-source">
+
+		<section class="slider">
+			<!-- Swiper -->
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+
+					<div class="swiper-slide">
+						<iframe width="100%" height="252" src="https://www.youtube.com/embed/I6H_uoiVg4c" frameborder="0" allowfullscreen></iframe>
+					</div>
+
+					<div class="swiper-slide">
+						<img src="http://heart2true.com/rc/pdfImages/0739761bb1e94f6f953817c3dc4a5b88B/pages/0.jpg">
+					</div>
+
+					<div class="swiper-slide">
+						<img src="http://heart2true.com/rc/newItemcoverImage/1474954749221_How_to_start_a_business_crop.jpg">
+						<div class="ctrl_icons">
+							<span><i class="fa fa-spinner fa-pulse fa-fw"></i></span>
+							<span><i class="fa fa-play"></i></span>
+							<span><i class="fa fa-stop"></i></span>
+							<span><i class="fa fa-pause"></i></span>
+						</div>
+					</div>
+
+				</div>
+				<!-- Add Pagination -->
+				<div class="swiper-pagination"></div>
+			</div>
+		</section>
+
+		<div class="tabs-header">
+			<div class="border"></div>
+			<ul id="show_mm">
+				<li class="active"><a href="#tab-1" tab-id="1" ripple="ripple" ripple-color="#FFF">说明</a></li>
+				<li><a href="#tab-2" tab-id="2" ripple="ripple" ripple-color="#FFF">预约</a></li>
+				<li><a href="#tab-3" tab-id="3" ripple="ripple" ripple-color="#FFF">报名</a></li>
+				<li class="hidden_f"><a href="#tab-4" tab-id="4" ripple="ripple" ripple-color="#FFF">聊天</a></li>
+				<li class="hidden_f"><a href="#tab-5" tab-id="5" ripple="ripple" ripple-color="#FFF">提问</a></li>
+				<li><a href="#tab-6" tab-id="6" ripple="ripple" ripple-color="#FFF">控制</a></li>
+			</ul>
+		</div>
+
+	</div>
+
+    <div class="flex-panel">
+		<div class="tabs-content">
+			<div tab-id="1" class="tab first_d">
+				<p><b>路演日期：</b>2016-10-14</p>
+				<p><b>路演时间：</b>00:00-23:55</p>
+				<p><b>发会方：</b>左右逢源</p>
+				<p><b>主办方：</b>创新马槽</p>
+				<p><b>讲师：</b>李松/创新马槽合伙人</p>
+				<p><b>议程：</b><br>
+				全球青年创业大赛在线启动仪式<br>
+				14:30~15:00 [靠谱创业]<br><br>
+				14:30经济学分析<br>
+				14:40商业预测<br>
+				14:48黑森林<br>
+				14:50小心三个方向<br>
+				14:54庙算-道天地法将<br>
+				14:57 SWOT分析</p>
+				<p><b>简介：</b></p>
+				<p>&nbsp;</p>
+			</div><!-- id=1 -->
+
+			<div tab-id="2" class="tab">
+				<h5>
+					<i class="fa fa-user blue"></i>
+					<span id="id_listReserveNum">2</span> 人出席
+				</h5>
+				<ul class="attend">
+					<li>
+						<img src="asset/images/user-icon.png">
+						<div class="pull-left">
+							<p>lq200092</p>
+							<p>聚世道建筑科技上海有限公司</p>
+							<p>经理</p>
+						</div>
+					</li>
+					<li>
+						<img src="http://heart2true.com/meeting/images/ic_menu_user_active.png">
+						<div class="pull-left">
+							<p>User name</p>
+							<p>LOL 有限公司</p>
+							<p>協理</p>
+						</div>
+					</li>
+				</ul>
+			</div><!-- id=2 -->
+
+			<div tab-id="3" class="tab">
+				<h5>
+					<i class="fa fa-user blue"></i>
+					<span id="id_listReserveNum">1</span> 人出席
+				</h5>
+				<ul class="attend">
+					<li>
+						<img src="http://heart2true.com/meeting/images/ic_menu_user_active.png">
+						<div class="pull-left">
+							<p>3345678</p>
+							<p>XD科技有限公司</p>
+							<p>歪理</p>
+						</div>
+					</li>
+				</ul>
+			</div><!-- id=3 -->
+
+			<div tab-id="4" class="tab command_QA">
+				<div class="commentArea clearfix" id="commentArea">
+					<div class="row">
+						<img class="command_img" src="asset/images/user-icon.png">
+						<div class="pull-left">
+							<div class="user-info">
+								<span class="user-name">Jason hung</span>
+								<span class="post-time">05/19 <i class="fa fa-clock-o"></i>16:28</span>
+							</div>
+							<div class="bubbledLeft">
+								讲的好 バカやろう
+							</div>
+							<p class="re_Command">
+								<a href="" class="btn_">回应</a>
+							</p>
+						</div>
+					</div>
+
+					<div class="row my_Command">
+						<div class="pull-left">
+							<div class="user-info">
+								<span class="post-time">05/19 <i class="fa fa-clock-o"></i>16:28</span>
+							</div>
+							<div class="bubbledRight">
+								たわけもの
+								日清カップヌードル
+								日清カップヌードル
+								日清カップヌードル
+								日清カップヌードル
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="pull-left">
+							<div class="user-info">
+								<span class="user-name">Eric</span>
+								<span class="post-time">05/19 <i class="fa fa-clock-o"></i>16:28</span>
+							</div>
+							<div class="bubbledLeft">
+								稅金逃れや女性蔑視発言の暴露は遅すぎた
+							</div>
+							<p class="re_Command">
+								<a href="" class="btn_">回应</a>
+							</p>
+						</div>
+					</div>
+
+					<div class="row">
+						<img class="command_img" src="http://heart2true.com/meeting/images/ic_menu_user_active.png">
+						<div class="pull-left">
+							<div class="user-info">
+								<span class="user-name">Alex</span>
+								<span class="post-time">05/19 <i class="fa fa-clock-o"></i>16:28</span>
+							</div>
+							<div class="bubbledLeft">
+								赤身肉、塊肉、熟成肉、そして希少部位。昨今、人気の焼き肉店を訪れると実にさまざまなメニューが用意されています。それゆえに今では、ご丁寧にもメニューごとに焼き方を秒単位で指導してくれる焼き肉店も多々存在するぐらいです。
+							</div>
+							<p class="re_Command">
+								<a href="" class="btn_">回应</a>
+							</p>
+						</div>
+					</div>
+
+					<div class="row">
+						<img class="command_img" src="asset/images/liz-icon.jpg">
+						<div class="pull-left">
+							<div class="user-info">
+								<span class="user-name">Liz</span>
+								<span class="post-time">05/18 <i class="fa fa-clock-o"></i>9:38</span>
+							</div>
+							<div class="bubbledLeft">
+								Liz丽致深层修护面膜给你全方位保养与俢护，商店街开幕庆~众多好康，千万不要错过啰~
+							</div>
+							<p class="re_Command">
+								<a href="" class="btn_">回应</a>
+							</p>
+						</div>
+					</div>
+
+					<div class="row my_Command">
+						<div class="pull-left">
+							<div class="user-info">
+								<span class="post-time">05/18 <i class="fa fa-clock-o"></i>21:19</span>
+							</div>
+							<div class="bubbledRight">
+								蝦米小...朋友？
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<div class="command_input">
+					<form>
+						<input type="text" id="content" class="" placeholder="在此處反饋">
+						<input type="hidden" id="sourceId">
+						<button type="button" class="btn btn-warning" onclick="addComment()">反饋</button>
+					</form>
+				</div>
+			</div><!-- id=4 -->
+
+			<div tab-id="5" class="tab command_QA">
+				<div class="commentArea clearfix" id="commentArea">
+					<div class="row">
+						<img class="command_img" src="http://heart2true.com/meeting/images/ic_menu_user_active.png">
+						<div class="pull-left">
+							<div class="user-info">
+								<span class="user-name">nike name</span>
+								<span class="post-time">05/12 <i class="fa fa-clock-o"></i>12:09</span>
+							</div>
+							<div class="bubbledLeft">
+								You go to die one die~
+							</div>
+							<p class="re_Command">
+								<a href="" class="btn_">回应</a>
+							</p>
+						</div>
+					</div>
+
+					<div class="row my_Command">
+						<div class="pull-left">
+							<div class="user-info">
+								<span class="post-time">05/12 <i class="fa fa-clock-o"></i>12:08</span>
+							</div>
+							<div class="bubbledRight">
+								Thank You. i'm go to de.
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<div class="command_input">
+					<form>
+						<input type="text" id="content" class="" placeholder="在此處反饋">
+						<input type="hidden" id="sourceId">
+						<button type="button" class="btn btn-warning" onclick="addComment()">Send</button>
+					</form>
+				</div>
+			</div><!-- id=5 -->
+			
+			<div tab-id="6" class="tab control">
+				<div style="display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+	justify-content:space-around;
+	flex-wrap:wrap;
+    border: 1px solid red;">
+					<p>Control</p>
+					<p>Control</p>
+					<p>Control</p>
+					<p>Control</p>
+				</div>
+			</div><!-- id=5 -->
+		</div>
+    </div>
+
+</aside>
+
+<footer class="panel-footer">
+	<a target="_blank" href="http://www.miitbeian.gov.cn/">蘇ICP備15055858號 常州左右逢源股權投資有限公司版權所有</a>
+</footer>
+<a href="#0" class="cd-top"><div class="jSlider"><span></span></div></a>
+
+<input class="modal-state" id="modal-0" type="checkbox" />
+<div class="modal">
+  <label class="modal__bg" for="modal-0"></label>
+  <div class="modal__inner" style="color:#333;">
+	<label class="modal__close" for="modal-0"></label>
+	<h4>Modal Title<small class="grey">(Remote control)</small></h4>
+	<form class="form-style">
+		<div class="form-row">
+			<label>授权码控制</label>
+			<div class="ipt_ico userMail">
+				<input type="password" class="form-control" placeholder="请输入您的四位数授权码">
+			</div>
+		</div>
+
+		<div class="toggle-group">
+			<input type="checkbox" name="on-off-switch" id="on-off-switch" checked="" tabindex="1">
+			<label for="on-off-switch">
+				Toggle Switch
+			</label>
+			<div class="onoffswitch pull-right" aria-hidden="true">
+				<div class="onoffswitch-label">
+					<div class="onoffswitch-inner"></div>
+					<div class="onoffswitch-switch"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="toggle-group">
+			<input type="checkbox" name="on-off-switch" id="on-off-switch2" checked="" tabindex="1">
+			<label for="on-off-switch2">
+				Toggle Switch
+			</label>
+			<div class="onoffswitch pull-right" aria-hidden="true">
+				<div class="onoffswitch-label">
+					<div class="onoffswitch-inner"></div>
+					<div class="onoffswitch-switch"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="ctrl_icons" style="position:static;margin:1em 0;background-color:rgba(0,0,0,.06);">
+			<span><i class="fa fa-step-backward"></i></span>
+			<span><i class="fa fa-stop"></i></span>
+			<span><i class="fa fa-play"></i></span>
+			<span><i class="fa fa-step-forward"></i></span>
+		</div>
+
+	</form>
+	<footer>
+		<div>
+			<button type="button" class="btn blue_bg">Send</button>
+			<button type="button" class="btn default"><label for="modal-0">Cancel</label></button>
+		</div>
+	</footer>
+  </div>
+</div>
+
+<script src="asset/js/index_slider.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+<script src="asset/js/tabs_modal.js"></script>
+<script src="asset/js/slideout.min.js"></script>
+<script src="asset/js/main.js"></script>
+<!-- Initialize Swiper -->
+<script>
+$(document).ready(function() {
+	$(".first_d").addClass("active");
+
+	var swiper = new Swiper('.swiper-container', {
+		pagination: '.swiper-pagination',
+		paginationClickable: true,
+		//parallax: true,
+		speed: 600,
+	});
+	
+	// Check .panel-footer show hide
+	$("#show_mm li").click(function() {
+		if ($(this).hasClass("hidden_f")){
+			$('.panel-footer').addClass( "this_hidden" );
+		}else {
+			$('.panel-footer').removeClass( "this_hidden" );
+		}
+	});
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,256 @@
+<!doctype html>
+<!--[if IE 8]><html class="ie8 lt-ie10"><![endif]-->
+<!--[if IE 9]><html class="ie9 lt-ie10"><![endif]-->
+<!--[if gt IE 9]><!--><html lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>LuAnn List</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="cleartype" content="on">
+<meta name="MobileOptimized" content="320">
+<meta name="HandheldFriendly" content="True">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+<link rel="stylesheet" href="asset/css/main.css">
+<style>
+.header-hamburger {box-shadow: 0 1px 5px rgba(0,0,0,0.35);}
+.now_stus {background-color:rgba(255,0,0,.75);color:#fff;position:absolute;font-size:xx-small;top:0.3em;left:0;padding:.1em .8em .1em .5em;margin-top:.4em;}
+.now_stus i {font-size:13px;}
+
+.row {margin-left: -15px;margin-right: -15px;}
+.row.fix_bottom {margin:0;position: absolute;width: 100%;bottom: 0;}
+.row:before, .row:after {content: " ";display: table;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;clear: both;}
+
+/* footer btns */
+.back footer {padding:6px 0;position:fixed;bottom:0;width:100%;}
+.back footer div {padding:0 .5em;}
+.back footer .luann_btn {width:100%;margin:2px auto;border:0;position: relative;padding: 4px 10px;border-radius: 3px;font-size: 16px;color: #333;text-decoration: none;background-color: #e8e8e8;border-bottom: 5px solid #ddd;transition: all 0.1s;-webkit-transition: all 0.1s;}
+.back footer .luann_btn:hover,.back footer .luann_btn:focus {text-decoration: none;}
+.back footer .luann_btn:active {transform: translate(0px,3px);-webkit-transform: translate(0px,3px);border-bottom: 1px solid;}
+
+.back footer .blue_btn {color:#fff;background-color: #3498DB;border-bottom: 5px solid #2980B9;text-shadow: 0px -2px #2980B9;}
+.back footer .green_btn {color:#fff;background-color: #99c050;border-bottom: 5px solid #89AB4B;text-shadow: 0px -2px #659555;}
+.back footer .red_btn {color:#fff;background-color: #D04F39;border-bottom: 5px solid #A73A3A;text-shadow: 0px -2px #6F1E1E;}
+
+/* card-list style */
+.card-list {text-align:left;min-height:430px;margin:.4em 0 1em;width:100%;}
+.card-list img {max-height:260px;max-width:100%;}
+.card-list h5 {height:3rem;overflow:hidden;font-size: 16px;color:#ffbf00;padding: 0 8px;border-bottom: 1px solid #333;}
+.card-list .back h5 {height:auto;margin:8px;border-left:4px solid #ff4000;padding-left:.3em;color:#fff;}
+.card-list .info {padding:4px 10px;max-height: 260px;overflow: auto;font-size: small;}
+.card-list .row .col-sm-6 {background-color:#000;float: left;text-align:center;width: 50%;position: relative;min-height: 1px;padding-left: 15px;padding-right: 15px;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+
+.card-list .row p {margin:0;padding:4px 0 0;color:#C599FB;}
+.card-list .row .col-sm-6 b {font-size:24px;color:#ffff00;display: block;padding-bottom: .4em;}
+
+.card-list .front,.card-list  .back {width:100%;min-height:100%;-webkit-border-radius__:5px;-moz-border-radius__:5px;border-radius__:5px;}
+.card-list .front,.card-list .back {background-color:#222;color:#fff;backface-visibility: hidden;position: absolute;top: 0;left: 0;box-shadow:0 3px 3px rgba(0,0,0,.25);overflow:hidden;}
+
+/* winsize */
+@media (min-width: 768px){
+	.card-list {text-align:center;}
+	.card-list .info {text-align:left;}
+}
+</style>
+</head>
+  <body>
+	<nav id="menu" class="menu">
+		<header class="slide_logo">
+			<a href="index.html"><img src="asset/images/slide_logo.png"></a>
+		</header>
+
+		<section class="menu-section">
+			<h3 class="menu-section-title"><i class="fa fa-home"></i> <a href="index.html">首頁 <small>Home</small></a></h3>
+		</section>
+
+		<section class="menu-section">
+			<label for="items" class="menu-section-title">
+				<i class="fa fa-th"></i> 項目 <small>items</small>
+				<i class="fa fa-angle-right"></i>
+			</label>
+			<input class="sh-state" id="items" type="checkbox" />
+			<ul class="menu-section-list sh-modal">
+			  <li><a href="">在線項目</a></li>
+			  <li><a href="form.html">發起項目</a></li>
+			  <li><a href="form.html">發起路演</a></li>
+			</ul>
+		</section>
+
+		<section class="menu-section">
+			<label for="luAnn" class="menu-section-title">
+				<i class="fa fa-calendar-check-o"></i> 路演 <small>LuAnn</small>
+				<i class="fa fa-angle-right"></i>
+			</label>
+			<input class="sh-state" id="luAnn" type="checkbox" />
+			<ul class="menu-section-list sh-modal">
+			  <li><a href="">路演大廳</a></li>
+			  <li><a href="">今日路演</a></li>
+			</ul>
+		</section>
+
+		<section class="menu-section">
+			<h3 class="menu-section-title"><i class="fa fa-bullhorn"></i> <a href="news.html">消息 <small>News</small></a>
+			<span class="notice">0</span></h3>
+		</section>
+
+		<section class="menu-section">
+			<label for="member" class="menu-section-title">
+				<i class="fa fa-user"></i> 會員 <small>Member</small>
+				<i class="fa fa-angle-right"></i>
+			</label>
+			<input class="sh-state" id="member" type="checkbox" />
+			<ul class="menu-section-list sh-modal">
+				<li><a href="">我的投資</a></li>
+				<li><a href="">我的融資</a></li>
+				<li><a href="">我的路演</a></li>
+				<li><a href="">我的收藏</a></li>
+				<li><a href="notice.html">我的通知 <span class="notice red_bg">2</span></a></li>
+				<li><a href="user_profile.html">個人設置</a></li>
+			</ul>
+		</section>
+
+		<section class="menu-section">
+			<h3 class="menu-section-title"><i class="fa fa-usd"></i> <a href="">投資者 <small>Investment</small></a></h3>
+		</section>
+
+		<section class="menu-section">
+			<label for="docs" class="menu-section-title">
+				<i class="fa fa-file-text-o"></i> 文件 <small>Docs</small>
+				<i class="fa fa-angle-right"></i>
+			</label>
+			<input class="sh-state" id="docs" type="checkbox" />
+			<ul class="menu-section-list sh-modal">
+				<li><a href="使用条款.html">使用条款</a></li>
+				<li><a href="融资人规则.html">融资人规则</a></li>
+				<li><a href="融资信息披露规则.html">融资信息披露规则</a></li>
+				<li><a href="融资居间合同.html">融资居间合同</a></li>
+				<li><a href="投资人规则.html">投资人规则</a></li>
+				<li><a href="風險提示.html">風險提示</a></li>
+				<li><a href="有限合伙协议.html">有限合伙协议</a></li>
+				<li><a href="投资协议.html">投资协议</a></li>
+				<li><a href="股权转让协议.html">股权转让协议</a></li>
+				<li><a href="版权申明.html">版权申明</a></li>
+			</ul>
+		</section>
+
+	</nav>
+
+	<header class="header-hamburger fixed">
+		<a class="ninja-btn" title="menu"><span></span></a>
+		<h2>LuAnn List</h2>
+
+		<input type="checkbox" id="op">
+		<div class="lower">
+			<label for="bell" style="margin-right:.5em;"><i class="fa fa-bell-o"></i> 0</label>
+			<label for="op"><i class="fa fa-ellipsis-v"></i></label>
+		</div>
+		<div class="overlay overlay-hugeinc">
+			<label for="op"><i class="fa fa-times-circle"></i></label>
+			<nav>
+				<ul>
+					<li><input type="checkbox" id="a1"><label for="a1"><i class="fa fa-check"></i> 預熱中</label></li>
+					<li><input type="checkbox" id="a2"><label for="a2"><i class="fa fa-check"></i> 融資中</label></li>
+					<li><input type="checkbox" id="a3"><label for="a3"><i class="fa fa-check"></i> 融資成功</label></li>
+					<li><input type="checkbox" id="a4"><label for="a4"><i class="fa fa-check"></i> 融資失敗</label></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<main id="panel" class="panel">
+
+		<article class="luann-list">
+
+			<section class="card-list"> 
+				<div class="front">
+					<time class="now_stus"><i class="fa fa-eye"></i> 1,23K</time>
+					<img src="http://heart2true.com/rc/newItemcoverImage/1474954749221_How_to_start_a_business_crop.jpg">
+					<h5 id="id_title9">青创赛在线启动仪式 [靠谱创业]</h5>
+					<div class="info">
+						<p>【时间】2016/10/14  00:00-23:55</p>
+						<p>【发会方】左右逢源</p>
+					</div>
+					<div class="row fix_bottom">
+						<div class="col-sm-6">
+							<p class="dark">预约收视</p><b class="dark">1</b>
+						</div>
+						<div class="col-sm-6">
+							<p class="dark">线下报名</p>
+							<b class="dark">无</b>
+						</div>
+					</div>
+				</div>
+				<div class="back">
+					<h5>路演议程</h5>
+					<div class="info">
+						<p>全球青年创业大赛在线启动仪式 <br>14:30~15:00 [靠谱创业]<br><br>14:30经济学分析<br>14:40商业预测<br>14:48黑森林<br>14:50小心三个方向<br>14:54庙算-道天地法将<br>14:57 SWOT分析</p>
+						<p>全球青年创业大赛在线启动仪式 <br>14:30~15:00 [靠谱创业]<br><br>14:30经济学分析<br>14:40商业预测<br>14:48黑森林<br>14:50小心三个方向<br>14:54庙算-道天地法将<br>14:57 SWOT分析</p>
+						<p>全球青年创业大赛在线启动仪式 <br>14:30~15:00 [靠谱创业]<br><br>14:30经济学分析<br>14:40商业预测<br>14:48黑森林<br>14:50小心三个方向<br>14:54庙算-道天地法将<br>14:57 SWOT分析</p>
+						<p>全球青年创业大赛在线启动仪式 <br>14:30~15:00 [靠谱创业]<br><br>14:30经济学分析<br>14:40商业预测<br>14:48黑森林<br>14:50小心三个方向<br>14:54庙算-道天地法将<br>14:57 SWOT分析</p>
+					</div>
+					<footer>
+						<div>
+							<button class="luann_btn blue_btn" onclick="showReply(8)">Blue btn</button>
+							<button class="luann_btn green_btn" onclick="showReply(9)">更多内容</button>
+						</div>
+					</footer>
+				</div>
+			</section>
+
+			<section class="card-list"> 
+				<div class="front">
+					<time class="now_stus"><i class="fa fa-thumbs-up"></i> 666</time>
+					<img src="http://heart2true.com/rc/newItemcoverImage/1476857714004_images.jpg">
+					<h5 id="id_title9">青创赛在线启动仪式 [靠谱创业]</h5>
+					<div class="info">
+						<p>【时间】2016/10/14  00:00-23:55</p>
+						<p>【发会方】左右逢源</p>
+					</div>
+					<div class="row fix_bottom">
+						<div class="col-sm-6">
+							<p class="dark">预约收视</p><b class="dark">1</b>
+						</div>
+						<div class="col-sm-6">
+							<p class="dark">线下报名</p>
+							<b class="dark">无</b>
+						</div>
+					</div>
+				</div>
+				<div class="back">
+					<h5>路演议程</h5>
+					<div class="info">
+						<p>全球青年创业大赛在线启动仪式 <br>14:30~15:00 [靠谱创业]<br><br>14:30经济学分析<br>14:40商业预测<br>14:48黑森林<br>14:50小心三个方向<br>14:54庙算-道天地法将<br>14:57 SWOT分析</p>
+						<p>全球青年创业大赛在线启动仪式 <br>14:30~15:00 [靠谱创业]<br><br>14:30经济学分析<br>14:40商业预测<br>14:48黑森林<br>14:50小心三个方向<br>14:54庙算-道天地法将<br>14:57 SWOT分析</p>
+						<p>全球青年创业大赛在线启动仪式 <br>14:30~15:00 [靠谱创业]<br><br>14:30经济学分析<br>14:40商业预测<br>14:48黑森林<br>14:50小心三个方向<br>14:54庙算-道天地法将<br>14:57 SWOT分析</p>
+						<p>全球青年创业大赛在线启动仪式 <br>14:30~15:00 [靠谱创业]<br><br>14:30经济学分析<br>14:40商业预测<br>14:48黑森林<br>14:50小心三个方向<br>14:54庙算-道天地法将<br>14:57 SWOT分析</p>
+					</div>
+					<footer>
+						<div>
+							<button class="luann_btn red_btn" onclick="showReply(7)">Red btn</button>
+							<button class="luann_btn blue_btn" onclick="showReply(8)">Blue btn</button>
+							<button class="luann_btn green_btn" onclick="showReply(9)">更多内容</button>
+						</div>
+					</footer>
+				</div>
+			</section>
+
+		</article>
+
+    </main>
+	<footer class="panel-footer">
+		<a target="_blank" href="http://www.miitbeian.gov.cn/">蘇ICP備15055858號 常州左右逢源股權投資有限公司版權所有</a>
+	</footer>
+	<a href="#0" class="cd-top"><div class="jSlider"><span></span></div></a>
+
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<!-- Flip JS -->
+	<script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
+    <script src="asset/js/slideout.min.js"></script>
+	<script src="asset/js/main.js"></script>
+	<script>
+		$(".card-list").flip();
+	</script>
+
+  </body>
+</html>

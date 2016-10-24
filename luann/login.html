@@ -1,0 +1,275 @@
+<!doctype html>
+<!--[if IE 8]><html class="ie8 lt-ie10"><![endif]-->
+<!--[if IE 9]><html class="ie9 lt-ie10"><![endif]-->
+<!--[if gt IE 9]><!--><html lang="en"><!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <title>Login SignUp</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="cleartype" content="on">
+    <meta name="MobileOptimized" content="320">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+	<link rel="stylesheet" href="asset/css/main.css">
+    <link rel="stylesheet" href="asset/css/tabs_modal.css">
+	<link rel="stylesheet" href="asset/css/items_view.css">
+    <link rel="stylesheet" href="asset/css/login_signup.css">
+  </head>
+  <body>
+	<nav id="menu" class="menu">
+		<header class="slide_logo">
+			<a href="index.html"><img src="asset/images/slide_logo.png"></a>
+		</header>
+
+		<section class="menu-section">
+			<h3 class="menu-section-title"><i class="fa fa-home"></i> <a href="index.html">首頁 <small>Home</small></a></h3>
+		</section>
+
+		<section class="menu-section">
+			<label for="items" class="menu-section-title">
+				<i class="fa fa-th"></i> 項目 <small>items</small>
+				<i class="fa fa-angle-right"></i>
+			</label>
+			<input class="sh-state" id="items" type="checkbox" />
+			<ul class="menu-section-list sh-modal">
+			  <li><a href="">在線項目</a></li>
+			  <li><a href="form.html">發起項目</a></li>
+			  <li><a href="form.html">發起路演</a></li>
+			</ul>
+		</section>
+
+		<section class="menu-section">
+			<label for="luAnn" class="menu-section-title">
+				<i class="fa fa-calendar-check-o"></i> 路演 <small>LuAnn</small>
+				<i class="fa fa-angle-right"></i>
+			</label>
+			<input class="sh-state" id="luAnn" type="checkbox" />
+			<ul class="menu-section-list sh-modal">
+			  <li><a href="">路演大廳</a></li>
+			  <li><a href="">今日路演</a></li>
+			</ul>
+		</section>
+
+		<section class="menu-section">
+			<h3 class="menu-section-title"><i class="fa fa-bullhorn"></i> <a href="news.html">消息 <small>News</small></a>
+			<span class="notice">0</span></h3>
+		</section>
+
+		<section class="menu-section">
+			<label for="member" class="menu-section-title">
+				<i class="fa fa-user"></i> 會員 <small>Member</small>
+				<i class="fa fa-angle-right"></i>
+			</label>
+			<input class="sh-state" id="member" type="checkbox" />
+			<ul class="menu-section-list sh-modal">
+				<li><a href="">我的投資</a></li>
+				<li><a href="">我的融資</a></li>
+				<li><a href="">我的路演</a></li>
+				<li><a href="">我的收藏</a></li>
+				<li><a href="notice.html">我的通知 <span class="notice red_bg">2</span></a></li>
+				<li><a href="user_profile.html">個人設置</a></li>
+			</ul>
+		</section>
+
+		<section class="menu-section">
+			<h3 class="menu-section-title"><i class="fa fa-usd"></i> <a href="">投資者 <small>Investment</small></a></h3>
+		</section>
+
+		<section class="menu-section">
+			<label for="docs" class="menu-section-title">
+				<i class="fa fa-file-text-o"></i> 文件 <small>Docs</small>
+				<i class="fa fa-angle-right"></i>
+			</label>
+			<input class="sh-state" id="docs" type="checkbox" />
+			<ul class="menu-section-list sh-modal">
+				<li><a href="使用条款.html">使用条款</a></li>
+				<li><a href="融资人规则.html">融资人规则</a></li>
+				<li><a href="融资信息披露规则.html">融资信息披露规则</a></li>
+				<li><a href="融资居间合同.html">融资居间合同</a></li>
+				<li><a href="投资人规则.html">投资人规则</a></li>
+				<li><a href="風險提示.html">風險提示</a></li>
+				<li><a href="有限合伙协议.html">有限合伙协议</a></li>
+				<li><a href="投资协议.html">投资协议</a></li>
+				<li><a href="股权转让协议.html">股权转让协议</a></li>
+				<li><a href="版权申明.html">版权申明</a></li>
+			</ul>
+		</section>
+
+	</nav>
+
+	<header class="header-hamburger fixed">
+		<a class="ninja-btn" title="menu"><span></span></a>
+		<h2>Panel Title</h2>
+		<div class="tabs-header">
+			<div class="border"></div>
+			<ul>
+				<li class="active"><a href="#tab-1" tab-id="1" ripple="ripple" ripple-color="#FFF">用户登入</a></li>
+				<li><a href="#tab-2" tab-id="2" ripple="ripple" ripple-color="#FFF">用户注册</a></li>
+			</ul>
+		</div>
+
+		<input type="checkbox" id="op2">
+		<div class="overlay overlay-hugeinc">
+			<label for="op2"><i class="fa fa-times-circle"></i></label>
+			<iframe src="privacy.html"></iframe>
+		</div>
+
+		<input type="checkbox" id="op">
+		<div class="lower">
+			<label for="modal-forget">忘记密码</label>
+		</div>
+		<div class="overlay overlay-hugeinc">
+			<label for="op"><i class="fa fa-times-circle"></i></label>
+			<iframe src="terms.html"></iframe>
+		</div>
+	</header>
+
+	<main id="panel" class="panel">
+		<div class="tabs-o">
+			<div class="tabs-content form-style">
+				<form>
+					<div tab-id="1" class="tab active" style="width: 95%;margin: 0 auto;">
+						<div class="form-row">
+							<label for="userAccount">登入帐号</label>
+							<div class="ipt_ico user_ico">
+								<input id="userAccount" name="userAccount" placeholder="请输入手机号或是电邮">
+							</div>
+						</div>
+						<div class="form-row">
+							<label for="userPwd">登入密码</label>
+							<div class="ipt_ico userPwd">
+								<input type="password" id="userPwd" placeholder="请输入密码">
+							</div>
+						</div>
+						<footer class="tool_bar">
+							<button type="button" id="btLogin" class="btn blue_bg" onclick="sendForm()">Login</button>
+							<!-- <button type="button" id="btLogout" class="btn red_bg" onclick="logout()">Logout</button> -->
+						</footer>
+						<hr id="seven" data-symbol="OR">
+						<div class="social_bar">
+							<button class="social-signin facebook">Log in with facebook</button>
+							<button class="social-signin twitter">Log in with Twitter</button>
+							<button class="social-signin google">Log in with Google+</button>
+							<a href="#" class="btn-social btn-facebook"><i class="fa fa-facebook"></i> Sign in with Facebook</a>
+							<a href="#" class="btn-social btn-weixin"><i class="fa fa-weixin"></i> Sign in with Weixin</a>
+							<a href="#" class="btn-social btn-twitter"><i class="fa fa-twitter"></i> Sign in with Twitter</a>
+							<a href="#" class="btn-social btn-google"><i class="fa fa-google"></i> Sign in with Google</a>
+							<a href="#" class="btn-social btn-linkedin"><i class="fa fa-linkedin"></i> Sign in with Linkedin</a>
+						</div>
+					</div>
+				</form>
+
+				<div tab-id="2" class="tab">
+					<div class="form-row">
+						<label><b>*</b>电 邮</label>
+						<div class="">
+							<input type="email" name="email" placeholder="请输入电邮">
+						</div>
+					</div>
+					<div class="form-row">
+						<label><b>*</b>手机号</label>
+						<div class="">
+							<input type="tel" name="mobile" placeholder="请输入手机号(半形数字)">
+						</div>
+					</div>
+					<div class="form-row">
+						<label>昵 称</label>
+						<div class="">
+							<input type="text" id="nickName" name="nickName" placeholder="请输入5-20个字昵称" aria-invalid="true">
+						</div>
+					</div>
+					<div class="form-row">
+						<label><b>*</b>输入登入密码</label>
+						<div class="">
+							<input type="password" id="userPwd" name="userPwd" placeholder="新密码">
+						</div>
+					</div>
+					<div class="form-row">
+						<label><b>*</b>再输入一次密码</label>
+						<div class="">
+							<input type="password" id="userPwdCheck" placeholder="确认密码">
+						</div>
+					</div>
+
+					<section class="checkbox">
+						<input class="check_terms" id="knowRisk" name="knowRisk" type="checkbox" value="1">
+						<label for="knowRisk" style="margin:0;">
+							<i class="fa fa-square-o"></i>
+							<i class="fa fa-check-square-o"></i>
+							&nbsp;我已阅读并同意
+						</label>
+						<label for="op">服务条款</label>及<label for="op2">个人资料暨隐私权保护政策</label>
+					</section>
+
+					<footer class="tool_bar">
+						<button type="button" class="btn blue_bg" onclick="changePwd()">Sign Up</button>
+					</footer>
+					<hr id="seven" data-symbol="OR">
+					<div class="social_bar">
+						<a href="#" class="btn-social btn-facebook"><i class="fa fa-facebook"></i> Sign Up with Facebook</a>
+						<a href="#" class="btn-social btn-weixin"><i class="fa fa-weixin"></i> Sign Up with Weixin</a>
+						<button class="social-signin facebook">Sign Up with facebook</button>
+						<button class="social-signin twitter">Sign Up with Twitter</button>
+						<button class="social-signin google">Sign Up with Google+</button>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+    </main>
+
+	<footer class="panel-footer">
+		<a target="_blank" href="http://www.miitbeian.gov.cn/">蘇ICP備15055858號 常州左右逢源股權投資有限公司版權所有</a>
+	</footer>
+	<a href="#0" class="cd-top"><div class="jSlider"><span></span></div></a>
+	
+	<input class="modal-state" id="modal-forget" type="checkbox" />
+	<div class="modal">
+	  <label class="modal__bg" for="modal-forget"></label>
+	  <div class="modal__inner">
+		<label class="modal__close" for="modal-forget"></label>
+		<h4>忘记密码</h4>
+		<form class="form-style">
+			<div class="form-row">
+				<label>请输入电子邮件&nbsp;</label>
+				<div class="ipt_ico userMail">
+					<input type="email" class="form-control" id="" placeholder="请输入您的电子邮件...">
+				</div>
+			</div>
+			<div class="form-row help">
+				<p>请输入电子邮件，将协助您重新设定密码</p>
+				<p>提醒您：使用忘记密码查询之前，须先完成帐号启用（<a href="" class="blue">相关说明</a>）。</p>
+				<p>若无法利用以下方式取回您的密码，请帐号使用者本人于上班时间携带本校身份证件至资讯中心网路管理组（圣言楼SF416办公室）办理（<span class="red">请亲洽，不接受委托</span>）。</p>
+				<p>请输入电子邮件，将协助您重新设定密码</p>
+				<p>请输入电子邮件，将协助您重新设定密码</p>
+				<p>请输入电子邮件，将协助您重新设定密码</p>
+				<p>请输入电子邮件，将协助您重新设定密码</p>
+				<p>请输入电子邮件，将协助您重新设定密码</p>
+				<p>请输入电子邮件，将协助您重新设定密码</p>
+				<p>请输入电子邮件，将协助您重新设定密码</p>
+				<p>请输入电子邮件，将协助您重新设定密码</p>
+				<p>请输入电子邮件，将协助您重新设定密码</p>
+				<p>请输入电子邮件，将协助您重新设定密码</p>
+				<p>请输入电子邮件，将协助您重新设定密码</p>
+				<p>请输入电子邮件，将协助您重新设定密码</p>
+				<p>请输入电子邮件，将协助您重新设定密码</p>
+				<p>请输入电子邮件，将协助您重新设定密码</p>
+			</div>
+		</form>
+		<footer>
+			<div>
+				<button type="button" class="btn blue_bg">Send</button>
+			</div>
+		</footer>
+	  </div>
+	</div>
+
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src="asset/js/slideout.min.js"></script>
+    <script src="asset/js/main.js"></script>
+    <script src="asset/js/tabs_modal.js"></script>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+/* Reset CSS */
+html, body, h1, form, fieldset, legend, ol, li {margin: 0;padding: 0;border: 0;outline: 0;font-size: 100%;vertical-align: baseline;background: transparent;}
+ol, ul {list-style: none;}
+:focus {outline: 0;}
+/* Reset CSS */
+/* terms & PRIVACY */
+.wrap {max-width: 100%;margin: 0 auto;background-color: #fff;padding: 0.3em 1em;-webkit-border-radius: 0px;-moz-border-radius: 0px;border-radius: 0px;box-shadow: 0px 3px 5px rgba(0,0,0,.25);-moz-box-shadow: 0px 3px 5px rgba(0,0,0,.25);-webkit-box-shadow: 0px 3px 5px rgba(0,0,0,.25);}
+.wrap .page_title {border-bottom: 3px solid #ED4093;padding-bottom: 10px;}
+.wrap .page_title .txt_cht {font-size: 18px;font-weight: bold;color: #555;}
+.wrap .page_title .txt_eng {font-size: 14px;color: #999;border-left: 1px solid #999;padding-left: 10px;}
+.wrap ul {padding: 0px;}
+.wrap ul li {line-height: 1.6em;margin: 5px;}
+.wrap .pd10 {padding: 0px;}
+.wrap .mgb10 {margin-bottom: 10px;}
+.wrap .pdl20 {padding-left: 20px;}
+.wrap .fw_bd {font-weight: bold;}
+/* terms & PRIVACY */
+
+body {
+line-height: 1;
+color: #333;
+font: 14px "Microsoft Yahei", Georgia, Times, serif;
+/*padding: 20px;*/
+background-image: url('../img/noise.png');
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#234160), color-stop(100%,#728EAA));
+background: linear-gradient(to bottom, #234160 0%,#728EAA 100%);
+background-size: cover;
+background-attachment: fixed;
+overflow-x:hidden;
+background-image: url("http://heart2true.com/img/backImg.jpg");
+background-repeat: no-repeat;
+background-size: 100% 100%;
+background-position: center top;
+background-attachment: fixed;
+height: 100%;
+width: 100%;
+position: relative;
+}
+
+@media all and (min-width:40em) {
+	body{font: 16px;}
+	.wrap {max-width: 80%;padding: 0.5em 1.5em;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;}
+	.wrap .page_title .txt_cht {font-size: 24px;}
+	.wrap .page_title .txt_eng {font-size: 18px;}
+	.wrap .pd10 {padding: 10px;}
+	.wrap ul {padding: 10px;}
+}

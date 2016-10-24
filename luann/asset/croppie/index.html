@@ -1,0 +1,50 @@
+<!DOCTYPE html> 
+<html lang ="en">
+    <head>
+        <meta charset="UTF-8" >
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Croppie</title>
+		<link rel="stylesheet" href="../css/main.css">
+        <link rel="Stylesheet" type="text/css" href="croppie.css" />
+        <link rel="Stylesheet" type="text/css" href="croppie_style.css" />
+        <link rel="Stylesheet" type="text/css" href="sweetalert.css" />
+    </head>
+    <body>
+		<header class="header-hamburger fixed">
+			<a class="ninja-btn ninja-back" title="menu" onclick="history.go(-1)"><span></span></a>
+			<h2>個人頭像設置</h2>
+		</header>
+
+        <section>
+
+			<div class="upload-demo">
+				<div>
+					<div>
+						<div style="float: none;padding: 0 10px;">
+							<label class="upload-msg" for="upload">
+								<img src="demo/cat.jpg">
+								<p>上傳設置個人頭像照片</p>
+							</label>
+							<div id="upload-demo"></div>
+							<div class="btns">
+								<a class="file-btn">
+									<label for="upload">上傳照片</label>
+									<input type="file" id="upload" value="Choose a file" accept="image/*" />
+								</a>
+								<button class="upload-result">預覽頭像</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+        </section>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script src="sweetalert.min.js"></script>
+        <script src="croppie.min.js"></script>
+        <script src="croppie_js.js"></script>
+        <script>
+            CropImg.init();
+        </script>
+		<div class="sweet-overlay" tabindex="-1"></div>
+    </body>
+</html>

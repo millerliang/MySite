@@ -1,0 +1,332 @@
+<!doctype html>
+<!--[if IE 8]><html class="ie8 lt-ie10"><![endif]-->
+<!--[if IE 9]><html class="ie9 lt-ie10"><![endif]-->
+<!--[if gt IE 9]><!--><html lang="en"><!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <title>User Profile</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="cleartype" content="on">
+    <meta name="MobileOptimized" content="320">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+	<link rel="stylesheet" href="asset/css/main.css">
+    <link rel="stylesheet" href="asset/css/tabs_modal.css">
+	<style>
+		.panel {background-color: #efefef;background-image: none;}
+		small.info_r {color: #c4c1da;position: absolute;right: 0;margin-right: 1em;}
+		small.info_r + input {background-color:#fff;color:#3d197e;}
+		.panel blockquote {border-left: 3px solid #f1d3a2;padding-left: .5em;margin-bottom:1em;}
+		.tool_bar {margin-top:5em;color:#fff;}
+		.tool_bar button {margin-bottom:.5em;text-align:center;}
+		.tool_bar button span.stust {float: right;min-width: 15%;color: #f7e425;font-size: small;background-color: rgba(0,0,0,.75);padding: 0 7px;border-radius: 3px;-moz-border-radius: 3px;-webkit-border-radius: 3px;}
+		.panel .tab center img {max-width:46%;opacity:.5;-webkit-filter: blur(0px);filter: blur(0px);-webkit-transition: all 1s;-moz-transition: all 1s;transition: all 1s;}
+		.panel:hover .tab center img {max-width:30%;opacity:.25;-webkit-filter: blur(8px);filter: blur(8px);-webkit-transition: all 1s;-moz-transition: all 1s;transition: all 1s;}
+		.userBack {
+			height:9em;
+			position:relative;
+			margin:-1.1em -1em 2em;
+			background-color:#e0dee3;
+			background-image__:url('http://demo.geekslabs.com/materialize/v3.0/default/images/user-bg.jpg');
+			background-image__:url('asset/images/userBackground.jpg');
+			background-image:url('asset/images/abstract-bg.jpg');
+			background-repeat:no-repeat;
+			background-position:center;
+			background-size:cover;
+			-moz-box-shadow:inset 0 -2px 12px rgba(0,0,0,.25);-webkit-box-shadow:inset 0 -2px 12px rgba(0,0,0,.25);box-shadow:inset 0 -2px 12px rgba(0,0,0,.25);
+		}
+		.userBack .userImg {position:relative;top:1.5em;margin:.3em auto .8em;text-align:center;width:144px;height:144px;overflow:hidden;border:3px solid white;background-color:#ddd;-moz-box-shadow: 0px 2px 8px rgba(0,0,0,.5);-webkit-box-shadow: 0px 2px 8px rgba(0,0,0,.5);box-shadow: 0px 2px 8px rgba(0,0,0,.5);-webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%;
+		}
+		.userBack:hover {height:13em;overflow:hidden;}
+		.userBack:hover .userImg {
+			width:88px;height:88px;
+		}
+		.userImg img {height:100%;}
+
+		/* upLoad Btn */
+		.userBack #picPathdiv {
+			padding: 5px 20px;
+			position: absolute;
+			right: -50%;
+			top: 8.8em;
+			margin-right: -65px;
+			outline: 0;
+			border: 0;
+			line-height: 1.2;
+			color:#fff;
+			-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;
+			-moz-box-shadow: 0px 2px 5px rgba(0,0,0,.35);-webkit-box-shadow: 0px 2px 5px rgba(0,0,0,.35);box-shadow: 0px 2px 5px rgba(0,0,0,.35);
+		}
+		.userBack:hover #picPathdiv {right: 50%;}
+		.transition-all {-webkit-transition: all 1s;-moz-transition: all 1s;transition: all 1s;}
+	</style>
+  </head>
+  <body>
+	<nav id="menu" class="menu">
+		<header class="slide_logo">
+			<a href="index.html"><img src="asset/images/slide_logo.png"></a>
+		</header>
+
+		<section class="menu-section">
+			<h3 class="menu-section-title"><i class="fa fa-home"></i> <a href="index.html">首頁 <small>Home</small></a></h3>
+		</section>
+
+		<section class="menu-section">
+			<label for="items" class="menu-section-title">
+				<i class="fa fa-th"></i> 項目 <small>items</small>
+				<i class="fa fa-angle-right"></i>
+			</label>
+			<input class="sh-state" id="items" type="checkbox" />
+			<ul class="menu-section-list sh-modal">
+			  <li><a href="">在線項目</a></li>
+			  <li><a href="form.html">發起項目</a></li>
+			  <li><a href="form.html">發起路演</a></li>
+			</ul>
+		</section>
+
+		<section class="menu-section">
+			<label for="luAnn" class="menu-section-title">
+				<i class="fa fa-calendar-check-o"></i> 路演 <small>LuAnn</small>
+				<i class="fa fa-angle-right"></i>
+			</label>
+			<input class="sh-state" id="luAnn" type="checkbox" />
+			<ul class="menu-section-list sh-modal">
+			  <li><a href="">路演大廳</a></li>
+			  <li><a href="">今日路演</a></li>
+			</ul>
+		</section>
+
+		<section class="menu-section">
+			<h3 class="menu-section-title"><i class="fa fa-bullhorn"></i> <a href="news.html">消息 <small>News</small></a>
+			<span class="notice">0</span></h3>
+		</section>
+
+		<section class="menu-section">
+			<label for="member" class="menu-section-title">
+				<i class="fa fa-user"></i> 會員 <small>Member</small>
+				<i class="fa fa-angle-right"></i>
+			</label>
+			<input class="sh-state" id="member" type="checkbox" />
+			<ul class="menu-section-list sh-modal">
+				<li><a href="">我的投資</a></li>
+				<li><a href="">我的融資</a></li>
+				<li><a href="">我的路演</a></li>
+				<li><a href="">我的收藏</a></li>
+				<li><a href="notice.html">我的通知 <span class="notice red_bg">2</span></a></li>
+				<li><a href="user_profile.html">個人設置</a></li>
+			</ul>
+		</section>
+
+		<section class="menu-section">
+			<h3 class="menu-section-title"><i class="fa fa-usd"></i> <a href="">投資者 <small>Investment</small></a></h3>
+		</section>
+
+		<section class="menu-section">
+			<label for="docs" class="menu-section-title">
+				<i class="fa fa-file-text-o"></i> 文件 <small>Docs</small>
+				<i class="fa fa-angle-right"></i>
+			</label>
+			<input class="sh-state" id="docs" type="checkbox" />
+			<ul class="menu-section-list sh-modal">
+				<li><a href="使用条款.html">使用条款</a></li>
+				<li><a href="融资人规则.html">融资人规则</a></li>
+				<li><a href="融资信息披露规则.html">融资信息披露规则</a></li>
+				<li><a href="融资居间合同.html">融资居间合同</a></li>
+				<li><a href="投资人规则.html">投资人规则</a></li>
+				<li><a href="風險提示.html">風險提示</a></li>
+				<li><a href="有限合伙协议.html">有限合伙协议</a></li>
+				<li><a href="投资协议.html">投资协议</a></li>
+				<li><a href="股权转让协议.html">股权转让协议</a></li>
+				<li><a href="版权申明.html">版权申明</a></li>
+			</ul>
+		</section>
+
+	</nav>
+
+	<header class="header-hamburger fixed">
+		<a class="ninja-btn" title="menu"><span></span></a>
+		<h2>User Profile</h2>
+		<div class="tabs-header">
+			<div class="border"></div>
+			<ul>
+				<li class="active"><a href="#tab-1" tab-id="1" ripple="ripple" ripple-color="#FFF">个人资料</a></li>
+				<li><a href="#tab-2" tab-id="2" ripple="ripple" ripple-color="#FFF">投资人认证</a></li>
+				<li><a href="#tab-3" tab-id="3" ripple="ripple" ripple-color="#FFF">修改密码</a></li>
+			</ul>
+		</div>
+		<input type="checkbox" id="op">
+		<div class="lower">
+			<label for="bell" style="margin-right:.5em;"><i class="fa fa-bell-o"></i></label>
+			<label for="op">登出</label>
+		</div>
+		<div class="overlay overlay-hugeinc overlay_b">
+			<label for="op"><i class="fa fa-times-circle"></i></label>
+			<nav class="opt">
+				<ul>
+					<li><button class="btn blue_bg"><i class="fa fa-floppy-o fa-3x"></i> 提交</button></li>
+					<li><button class="btn default"><i class="fa fa-edit"></i> 编辑</button></li>
+					<li><button class="btn green_bg"><i class="fa fa-file-o"></i> 草稿</button></li>
+					<li><button class="btn red_bg"><i class="fa fa-sign-out"></i> Sign out</button></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<main id="panel" class="panel">
+		<div class="tabs-o">
+			<div class="tabs-content form-style">
+				<form>
+					<div tab-id="1" class="tab active">
+						<div class="userBack transition-all">
+							<div class="userImg transition-all">
+								<img id="picPathcimg" src="asset/croppie/demo/cat.jpg">
+							</div>
+							<a id="picPathdiv" href="asset/croppie/index.html" class="green_bg transition-all"><i class="fa fa-picture-o"></i> 变更头像</a>
+						</div>
+						<div class="form-row">
+							<label for="nickName"><b>*</b>会员昵称</label>
+							<div class="">
+								<input type="text" id="nickName" placeholder="Your nick name">
+							</div>
+						</div>
+						<div class="form-row">
+							<label for="userName"><b>*</b>会员姓名</label>
+							<div class="">
+								<small class="info_r">Can not be changed</small>
+								<input type="text" id="userName" disabled value="Alex lee" placeholder="User name">
+							</div>
+						</div>
+						<div class="form-row">
+							<label for="inputEmai"><b>*</b>注册电邮</label>
+							<div class="">
+								<input type="email" id="inputEmai" placeholder="显示注册时设定的联络邮箱">
+							</div>
+						</div>
+						<div class="form-row">
+							<label for="sex">性 别</label>
+							<div class="">
+								<select>
+									<option>男</option>
+									<option>女</option>
+								</select>
+							</div>
+						</div>
+						<div class="form-row">
+							<label for="phoneNum"><b>*</b>联系电话</label>
+							<div class="">
+								<input type="text" id="phoneNum" placeholder="联系电话">
+							</div>
+						</div>
+						<div class="form-row">
+							<label for="adderss">联系地址</label>
+							<div class="">
+								<input type="text" id="adderss" placeholder="联系地址">
+							</div>
+						</div>
+						<div class="form-row">
+							<label for="company">服务公司</label>
+							<div class="">
+								<input type="text" id="company" placeholder="服务公司">
+							</div>
+						</div>
+						<div class="form-row">
+							<label for="jobTitle">职 称</label>
+							<div class="">
+								<input type="text" id="jobTitle" placeholder="职称">
+							</div>
+						</div>
+						<div class="form-row">
+							<label for="area">工作经历</label>
+							<div class="">
+								<textarea rows="4" cols="50" name="brief" placeholder="工作经历"></textarea>
+							</div>
+						</div>
+						<div class="form-row">
+							<label for="area">感兴趣轮次</label>
+							<div class="">
+								<ol id="interestseriesList" class="checkbox_list">
+									<li><input type="checkbox">天使轮</li>
+									<li><input type="checkbox">A</li>
+									<li><input type="checkbox">B</li>
+									<li><input type="checkbox">C</li>
+									<li><input type="checkbox">D</li>
+								</ol>
+							</div>
+						</div>
+						<div class="form-row">
+							<label for="area">感兴趣类别</label>
+							<div class="">
+								<ol id="interestseriesList" class="checkbox_list">
+									<li><input type="checkbox">通信</li>
+									<li><input type="checkbox">媒体</li>
+									<li><input type="checkbox">科技</li>
+									<li><input type="checkbox">互联网</li>
+								</ol>
+							</div>
+						</div>
+						<footer class="tool_bar">
+							<button type="button" class="btn blue_bg" onclick="sendForm()">保存最新的设置</button>
+						</footer>
+					</div>
+				</form>
+
+				<div tab-id="2" class="tab">
+					<h4><i class="fa fa-user"></i> 目前投资人身份：<span class="blue">机构投资人</span></h4>
+					<blockquote>
+						<p>申请成为投资人，可参与项目投资。</p>
+						<p class="red">每一帐号，限选择一种投资人身份进行申请。</p>
+						<p>申请成为个人投资人，可对项目进行跟投。</p>
+						<p>申请成为机构投资人，可对项目参与领投或跟投。</p>
+					</blockquote>
+					<footer class="tool_bar">
+						<button type="button" class="btn default" disabled=""><i class="fa fa-times-circle red"></i> 申请个人投资人</button>
+						<button type="button" class="btn green_bg"><i class="fa fa-check"></i> 申请机构投资人<span class="stust">可申请</span></button>
+						<button type="button" class="btn blue_bg"><i class="fa fa-check-circle"></i> 申请机构投资人<span class="stust">审核通过</span></button>
+					</footer>
+				</div>
+
+				<div tab-id="3" class="tab">
+					<center>
+						<img src="http://1.bp.blogspot.com/-YPRVGklDEoQ/VlndOLaQSsI/AAAAAAAAH7c/9SK6X9wcpyE/s1600/password-reset.gif">
+					</center>
+					<div class="form-row">
+						<label><b>*</b>旧密码</label>
+						<div class="">
+							<input type="password" id="userPwdOld" placeholder="旧密码">
+						</div>                                                                    
+					</div>                                                                        
+					<div class="form-row">                                                        
+						<label><b>*</b>新密码</label>                                             
+						<div class="">                                                            
+							<input type="password" id="userPwdNew" placeholder="新密码">
+						</div>                                                                    
+					</div>                                                                        
+					<div class="form-row">                                                        
+						<label><b>*</b>确认密码</label>                                           
+						<div class="">                                                            
+							<input type="password" id="userPwdCheck" placeholder="确认密码">
+						</div>
+					</div>
+					<footer class="tool_bar">
+						<button type="button" class="btn green_bg" onclick="changePwd()">保存密码</button>
+					</footer>
+				</div>
+
+			</div>
+		</div>
+
+    </main>
+
+	<footer class="panel-footer">
+		<a target="_blank" href="http://www.miitbeian.gov.cn/">蘇ICP備15055858號 常州左右逢源股權投資有限公司版權所有</a>
+	</footer>
+	<a href="#0" class="cd-top"><div class="jSlider"><span></span></div></a>
+
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src="asset/js/slideout.min.js"></script>
+    <script src="asset/js/main.js"></script>
+    <script src="asset/js/tabs_modal.js"></script>
+  </body>
+</html>

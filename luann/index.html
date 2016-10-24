@@ -1,0 +1,476 @@
+<!doctype html>
+<!--[if IE 8]><html class="ie8 lt-ie10"><![endif]-->
+<!--[if IE 9]><html class="ie9 lt-ie10"><![endif]-->
+<!--[if gt IE 9]><!--><html lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Home Page</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="cleartype" content="on">
+<meta name="MobileOptimized" content="320">
+<meta name="HandheldFriendly" content="True">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+<link rel="stylesheet" href="asset/css/main.css">
+<link rel="stylesheet" href="asset/css/swiper.min.css">
+<style>
+.now_stus {background-color:rgba(255,0,0,.8);color:#fff;position:absolute;font-size:xx-small;top:0.3em;left:0;padding:0 4px;}
+.now_stus i {font-size:13px;}
+
+.swiper-container {
+	width: 100%;
+	height: 100%;
+}
+.swiper-slide {
+	text-align: center;
+	font-size: 18px;
+	max-height:200px;
+	overflow:hidden;
+	background: #fff;
+	/* Center slide text vertically */
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+}
+.swiper-slide header {
+	position: absolute;
+	font-size:medium;
+	bottom: 0;
+	padding: 4px;
+	color: #fff;
+	width: 100%;
+	background-color: rgba(23, 60, 86, 0.35);
+	text-align: left;
+	text-shadow: 0px 1px 1px rgba(0,0,0,.5);
+	-moz-text-shadow: 0px 1px 1px rgba(0,0,0,.5);
+	-webkit-text-shadow: 0px 1px 1px rgba(0,0,0,.5);
+}
+.swiper-slide img {width:100%;min-height:200px;}
+.swiper-wrapper {background-color:#000;}
+.swiper-pagination {text-align: right;width: 98%!important;bottom:5px!important;}
+.swiper-pagination-bullet {background-color:#fff;opacity: .5;margin: 0 3px!important;}
+.swiper-pagination-bullet-active {background-color:#007aff;opacity:1;}
+	
+// TAB ~~~~~~~~~~~~~~~ (.)(.)
+.tab {
+	position: relative;
+	overflow: hidden;
+	background-color:#fff;
+	width: 70%;
+	margin: 0 auto;
+	font-family: 'Roboto', sans-serif;
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+}
+.tabs span {position: relative;}
+.tabs span a {color:#333;line-height: 2.5;display:block;}
+.tabs span.current {border-bottom: 1px solid #d9006c;}
+.tabs span.current a {color: #d9006c;}
+
+.tabs span a:before {
+	position: absolute;
+	right: 0;
+	top: 50%;
+	height: 20px;
+	margin-top: -10px;
+	content: "";
+	border-right: 1px solid #ccc;
+}
+.tab span:last-child a:before {border-width: 0;}
+.tab_content {min-height: 130px;overflow: hidden;background-color:white;}
+.tabs_item {position:relative;display: none;padding:12px 6px;text-align:left;}
+.tabs_item img {max-width: 140px;float: left;margin-right:16px;}
+.tabs_item:first-child {display: block;}
+
+.tabs_item .btn {padding: 0.1em .6em;color: #fff;float: right;width: auto;}
+// END TAB ~~~~~~~~~~~~~~~ (.)(.)
+</style>
+</head>
+  <body>
+	<nav id="menu" class="menu">
+		<header class="slide_logo">
+			<a href="index.html"><img src="asset/images/slide_logo.png"></a>
+		</header>
+
+		<section class="menu-section">
+			<h3 class="menu-section-title"><i class="fa fa-home"></i> <a href="index.html">首頁 <small>Home</small></a></h3>
+		</section>
+
+		<section class="menu-section">
+			<label for="items" class="menu-section-title">
+				<i class="fa fa-th"></i> 項目 <small>items</small>
+				<i class="fa fa-angle-right"></i>
+			</label>
+			<input class="sh-state" id="items" type="checkbox" />
+			<ul class="menu-section-list sh-modal">
+			  <li><a href="">在線項目</a></li>
+			  <li><a href="form.html">發起項目</a></li>
+			  <li><a href="form.html">發起路演</a></li>
+			</ul>
+		</section>
+
+		<section class="menu-section">
+			<label for="luAnn" class="menu-section-title">
+				<i class="fa fa-calendar-check-o"></i> 路演 <small>LuAnn</small>
+				<i class="fa fa-angle-right"></i>
+			</label>
+			<input class="sh-state" id="luAnn" type="checkbox" />
+			<ul class="menu-section-list sh-modal">
+			  <li><a href="">路演大廳</a></li>
+			  <li><a href="">今日路演</a></li>
+			</ul>
+		</section>
+
+		<section class="menu-section">
+			<h3 class="menu-section-title"><i class="fa fa-bullhorn"></i> <a href="news.html">消息 <small>News</small></a>
+			<span class="notice">0</span></h3>
+		</section>
+
+		<section class="menu-section">
+			<label for="member" class="menu-section-title">
+				<i class="fa fa-user"></i> 會員 <small>Member</small>
+				<i class="fa fa-angle-right"></i>
+			</label>
+			<input class="sh-state" id="member" type="checkbox" />
+			<ul class="menu-section-list sh-modal">
+				<li><a href="">我的投資</a></li>
+				<li><a href="">我的融資</a></li>
+				<li><a href="">我的路演</a></li>
+				<li><a href="">我的收藏</a></li>
+				<li><a href="notice.html">我的通知 <span class="notice red_bg">2</span></a></li>
+				<li><a href="user_profile.html">個人設置</a></li>
+			</ul>
+		</section>
+
+		<section class="menu-section">
+			<h3 class="menu-section-title"><i class="fa fa-usd"></i> <a href="">投資者 <small>Investment</small></a></h3>
+		</section>
+
+		<section class="menu-section">
+			<label for="docs" class="menu-section-title">
+				<i class="fa fa-file-text-o"></i> 文件 <small>Docs</small>
+				<i class="fa fa-angle-right"></i>
+			</label>
+			<input class="sh-state" id="docs" type="checkbox" />
+			<ul class="menu-section-list sh-modal">
+				<li><a href="使用条款.html">使用条款</a></li>
+				<li><a href="融资人规则.html">融资人规则</a></li>
+				<li><a href="融资信息披露规则.html">融资信息披露规则</a></li>
+				<li><a href="融资居间合同.html">融资居间合同</a></li>
+				<li><a href="投资人规则.html">投资人规则</a></li>
+				<li><a href="風險提示.html">風險提示</a></li>
+				<li><a href="有限合伙协议.html">有限合伙协议</a></li>
+				<li><a href="投资协议.html">投资协议</a></li>
+				<li><a href="股权转让协议.html">股权转让协议</a></li>
+				<li><a href="版权申明.html">版权申明</a></li>
+			</ul>
+		</section>
+
+	</nav>
+
+	<header class="header-hamburger fixed">
+		<a class="ninja-btn" title="menu"><span></span></a>
+		<h2>Panel Title</h2>
+
+		<input type="checkbox" id="op">
+		<div class="lower">
+			<label for="bell" style="margin-right:.5em;"><i class="fa fa-bell-o"></i> 0</label>
+			<label for="op"><i class="fa fa-ellipsis-v"></i></label>
+		</div>
+		<div class="overlay overlay-hugeinc">
+			<label for="op"><i class="fa fa-times-circle"></i></label>
+			<nav>
+				<ul>
+					<li><input type="checkbox" id="a1"><label for="a1"><i class="fa fa-check"></i> 預熱中</label></li>
+					<li><input type="checkbox" id="a2"><label for="a2"><i class="fa fa-check"></i> 融資中</label></li>
+					<li><input type="checkbox" id="a3"><label for="a3"><i class="fa fa-check"></i> 融資成功</label></li>
+					<li><input type="checkbox" id="a4"><label for="a4"><i class="fa fa-check"></i> 融資失敗</label></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<main id="panel" class="panel">
+
+		<section class="slider">
+			<!-- Swiper -->
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<a href="news.html">
+							<header><i class="fa fa-angle-right"></i>氪空間×理想日融資大趴揭開春的面紗</header>
+							<img src="http://heart2true.com/rc/newspicPath/1462531033010_667x371.jpg">
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="news.html">
+							<header><i class="fa fa-angle-right"></i>眾籌平台助「印象」</header>
+							<img src="http://heart2true.com/rc/newspicPath/1462519199092_1.jpg">
+						</a>
+					</div>
+					<!-- <div class="swiper-slide">Slide 3</div>
+					<div class="swiper-slide">Slide 4</div>
+					<div class="swiper-slide">Slide 5</div>
+					<div class="swiper-slide">Slide 6</div>
+					<div class="swiper-slide">Slide 7</div>
+					<div class="swiper-slide">Slide 8</div>
+					<div class="swiper-slide">Slide 9</div>
+					<div class="swiper-slide">Slide 10</div> -->
+				</div>
+				<!-- Add Pagination -->
+				<div class="swiper-pagination"></div>
+			</div>
+		</section>
+
+		<div class="title">
+			<span class="tit-hd">消息<small>News</small></span>
+			<a href="news.html" class="mores">更多<i class="fa fa-angle-right"></i></a>
+		</div>
+
+		<div class="title">
+			<span class="tit-hd">項目<small>Items</small></span>
+			<a href="" class="mores">更多<i class="fa fa-angle-right"></i></a>
+		</div>
+
+		<div class="title">
+			<span class="tit-hd">路演<small>LuAnn</small></span>
+			<a href="" class="mores">更多<i class="fa fa-angle-right"></i></a>
+		</div>
+
+		<div class="tab clearfix">
+			<nav class="tabs">
+				<span>
+					<a href="">App下载</a>
+				</span>
+				<span class="">
+					<a href="">平台统计</a>
+				</span>
+				<span class="">
+					<a href="">Tab C</a>
+				</span>
+				<span class="">
+					<a href="">Tab D</a>
+				</span>
+			</nav>
+
+			<div class="tab_content">
+
+				<div class="tabs_item">
+					<a class="btn green_bg" href="http://heart2true.com/heart2True.apk">Download</a>
+					<a href="http://heart2true.com/heart2True.apk"><img src="asset/images/app-icon.png"></a>
+					<h4>Android APP</h4>
+					<p>Consectetur adipisicing elit. Neque, repellat facilis totam ab eos distinctio sint atque maiores!</p>
+				</div> <!-- / tabs_item -->
+
+				<div class="tabs_item">
+					<p><i class="fa fa-angle-right"></i>融资项目数：422 件</p>
+					<p><i class="fa fa-angle-right"></i>融资总金额：5493 万元</p>
+					<p><i class="fa fa-angle-right"></i>融资成功率：0 ％</p>
+					<p><i class="fa fa-angle-right"></i>投资人总数：1 人</p>
+					<p><i class="fa fa-angle-right"></i>人均投资 额：5493 万元</p>
+				</div> <!-- / tabs_item -->
+
+				<div class="tabs_item">
+					<img class="alignleft max_width" alt="tabs_shortcode2" src="http://d13yacurqjgara.cloudfront.net/users/424765/screenshots/1412407/ezyinsights.jpg">
+					<h4>Tab02 Maiores, suscipit</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, suscipit, eaque asperiores neque numquam nam possimus dolorem ipsa aspernatur reiciendis?</p>
+				</div> <!-- / tabs_item -->
+
+				<div class="tabs_item">
+					<img src="http://d13yacurqjgara.cloudfront.net/users/347667/screenshots/1412641/untitled-1.jpg">
+					<h4>Tab03</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, excepturi, minima, corporis deserunt quia quae sit officiis labore inventore autem a delectus consequuntur voluptatem modi eligendi similique sed nam vitae.</p>
+				</div> <!-- / tabs_item -->
+				
+			</div> <!-- / tab_content -->
+		</div> <!-- / tab -->
+
+		<section class="news clearfix">
+			<a href="news.html">
+				<span class="news_img"><img src="http://heart2true.com/rc/newspicPath/1462531033010_667x371.jpg"></span>
+				<div class="news_content">
+					<header>氪空間×理想日融資大趴揭開春的面紗</header>
+					<time>2016/05/27</time>
+					<p>3月31日，坐標北京，氪空間×理想日融資大趴邀您，和暖氣流一起躁起來！</p>
+				</div>
+			</a>
+		</section>
+
+		<section class="news clearfix">
+			<a href="news.html">
+				<span class="news_img"><img src="http://heart2true.com/rc/newspicPath/1462519199092_1.jpg"></span>
+				<div class="news_content">
+					<header>眾籌平台助「印象」</header>
+					<time>2016/05/06</time>
+					<p>三顧茅廬，方識茅廬真印象!目前已經擁有直營店的平台，10月18號將與平台投資人見面。</p>
+				</div>
+			</a>
+		</section>
+
+		<section class="box">
+			<img class="box_img" src="http://heart2true.com/rc/newItemcoverImage/1462412530665_28f8550efe5e0be006c227004ebf78f7.jpg">
+			<h2 class="box-title">DreamNEXT 3D 眼鏡</h2>
+			<div class="status">
+				<span class="tag tag_green">融資中</span>
+				<div class="pull_right">
+					<small><i class="fa fa-star"></i><span class="valueFollow"> 1 </span></small>
+					<small><i class="fa fa-money"></i><span class="valueComment"> 0 </span></small>
+					<small><i class="fa fa-thumbs-up"></i><span class="valueLike"> 2 </span></small>
+				</div>
+			</div>
+			<div class="box_info">
+				<span>其他類</span>
+				<span>估值 1234.6 萬</span>
+				<span>剩餘 61 天</span><br>
+				<span>釋股 0%</span>
+				<span>融資 3690 萬</span>
+				<span>起投 10 萬</span>
+			</div>
+		</section>
+
+		<article class="clearfix">
+			<section>
+				<div class="col-6">
+					<div class="pictures">
+						<header>路演測試20160903</header>
+						<time class="now_stus">直播中</time>
+						<img src="http://heart2true.com/rc/newItemcoverImage/1473472121105_8668633-3421465.jpg">
+					</div>
+					<div><small><i class="fa fa-clock-o"></i> 09/29 20:00-22:00</small></div>
+					<footer>
+						<i class="fa fa-eye"></i> 1,024
+						<span><i class="fa fa-male"></i> 52</span>
+					</footer>
+				</div>
+			</section>
+			<section>
+				<div class="col-6">
+					<div class="pictures">
+						<header>穀東俱樂部02</header>
+						<time class="now_stus"><i class="fa fa-eye"></i> 123</time>
+						<img src="http://heart2true.com/rc/newItemcoverImage/1473670548611_-13-638.jpg">
+					</div>
+					<div><small><i class="fa fa-clock-o"></i> 09/29 20:00-22:00</small></div>
+					<footer>
+						<i class="fa fa-eye"></i> 541
+						<span><i class="fa fa-male"></i> 0</span>
+					</footer>
+				</div>
+			</section>
+		</article>
+
+		<section class="box">
+			<img class="box_img" src="http://www.grfxpro.com/uploads/img_lg/iPhone-6-with-Stationary-Mockup-18092016110411.jpg">
+			<h2 class="box-title">《國學精粹解讀》</h2>
+			<div class="" style="border-bottom: 1px solid #e9e9e9;">
+				<span class="tag tag_red"><i class="fa fa-usd"></i> 融資中</span>
+			</div>
+			<div class="statistics">
+				<small><i class="fa fa-star"></i><span class="valueFollow"> 0 </span></small>
+				<small><i class="fa fa-money"></i><span class="valueComment"> 0 </span></small>
+				<small><i class="fa fa-thumbs-up"></i><span class="valueLike"> 0 </span></small>
+			</div>
+			<div class="box_info">
+				<span>其他類</span>
+				<span>估值 1234.6 萬</span>
+				<span>剩餘 61 天</span><br>
+				<span>釋股 0%</span>
+				<span>融資 3690 萬</span>
+				<span>起投 10 萬</span>
+			</div>
+		</section>
+
+		<section class="box">
+			<time style="background-color:rgba(0,0,0,.85);color:#fff;position:absolute;font-size:xx-small;top:0.5em;padding:0 5px;">09/30 17:32</time>
+			<img class="box_img" src="http://www.zjiay.com/public/attachment/201604/12/12/570ce3c64281c.jpg">
+			<h2 class="box-title">【中國留學人才發展基金會推介項目】國外小語種國家標準識別著錄平台系統</h2>
+			<span class="tag tag_blue"><i class="fa fa-tag" style="font-size:12px;"></i> 融資中</span>
+			<span class="tag" style="background-color:#deeaed;color: #39454b;"><i class="fa fa-clock-o" style="font-size:12px;"></i> 9/30 18:45</span>
+			<div class="box_info">
+				<span>其他類</span>
+				<span>估值 1234.6 萬</span>
+				<span>剩餘 183 天</span><br>
+				<span>釋股 0%</span>
+				<span>融資 200 萬</span>
+				<span>起投 10 萬</span>
+			</div>
+		</section>
+
+		<section class="box">
+			<img class="box_img" src="http://www.zjiay.com/public/attachment/201604/12/11/570cdfded0a6c.jpg">
+			<h2 class="box-title">【中國留學人才發展基金會推介項目】網上購物助手項目</h2>
+			<div class="status">
+				<span class="tag tag_grey">融資中</span>
+			</div>
+			<div class="progress">
+				<div class="progress-bar" style="width:50%;">50%</div>
+			</div>
+			<div class="progress">
+				<div class="progress-bar progress-bar-red" style="width:85%;">85%</div>
+			</div>
+			<div class="progress">
+				<div class="progress-bar progress-bar-grey" style="width:25%;">25%</div>
+			</div>
+			<div class="progress">
+				<div class="progress-bar progress-bar-green" style="width:5%;">0%</div>
+			</div>
+			<div class="box_info">
+				<span>其他類</span>
+				<span>估值 1234.6 萬</span>
+				<span>剩餘 183 天</span><br>
+				<span>釋股 0%</span>
+				<span>融資 2000 萬</span>
+				<span>起投 10 萬</span>
+			</div>
+		</section>
+
+    </main>
+	<footer class="panel-footer">
+		<a target="_blank" href="http://www.miitbeian.gov.cn/">蘇ICP備15055858號 常州左右逢源股權投資有限公司版權所有</a>
+	</footer>
+	<a href="#0" class="cd-top"><div class="jSlider"><span></span></div></a>
+
+	<script src="asset/js/index_slider.js"></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+	<!-- Swiper JS -->
+    <script src="asset/js/slideout.min.js"></script>
+	<script src="asset/js/main.js"></script>
+	<!-- Initialize Swiper -->
+	<script>
+	$(document).ready(function() {
+
+		var swiper = new Swiper('.swiper-container', {
+			pagination: '.swiper-pagination',
+			paginationClickable: true
+		});
+	
+		(function ($) { 
+			$('.tab .tabs').addClass('active').find('> span:eq(0)').addClass('current');
+
+			$('.tab .tabs span a').click(function (g) { 
+				var tab = $(this).closest('.tab'), 
+					index = $(this).closest('span').index();
+				
+				tab.find('.tabs > span').removeClass('current');
+				$(this).closest('span').addClass('current');
+				
+				tab.find('.tab_content').find('div.tabs_item').not('div.tabs_item:eq(' + index + ')').slideUp();
+				tab.find('.tab_content').find('div.tabs_item:eq(' + index + ')').slideDown();
+				
+				g.preventDefault();
+			} );
+		})(jQuery);
+	});
+	</script>
+  </body>
+</html>

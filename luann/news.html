@@ -1,0 +1,347 @@
+<!doctype html>
+<!--[if IE 8]><html class="ie8 lt-ie10"><![endif]-->
+<!--[if IE 9]><html class="ie9 lt-ie10"><![endif]-->
+<!--[if gt IE 9]><!--><html lang="en"><!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <title>Home Page</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="cleartype" content="on">
+    <meta name="MobileOptimized" content="320">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="asset/css/main.css">
+	<link rel="stylesheet" href="asset/css/swiper.min.css">
+<style>
+.swiper-container {
+	width: 100%;
+	height: 100%;
+}
+.swiper-slide {
+	text-align: center;
+	font-size: 18px;
+	max-height:200px;
+	overflow:hidden;
+	background: #fff;
+	/* Center slide text vertically */
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+}
+.swiper-slide header {
+	position: absolute;
+	font-size:medium;
+	bottom: 0;
+	padding: 4px;
+	color: #fff;
+	width: 100%;
+	background-color: rgba(23, 60, 86, 0.35);
+	text-align: left;
+	text-shadow: 0px 1px 1px rgba(0,0,0,.5);
+	-moz-text-shadow: 0px 1px 1px rgba(0,0,0,.5);
+	-webkit-text-shadow: 0px 1px 1px rgba(0,0,0,.5);
+}
+.swiper-slide img {width:100%;min-height:200px;}
+.swiper-wrapper {background-color:#000;}
+.swiper-pagination {text-align: right;width: 98%!important;bottom:5px!important;}
+.swiper-pagination-bullet {background-color:#fff;opacity: .5;margin: 0 3px!important;}
+.swiper-pagination-bullet-active {background-color:#007aff;opacity:1;}
+
+.news label {cursor: pointer;}
+
+/* STAR .modal box */
+.modal__inner {min-height:90%;}
+.modal__inner header {font-size: medium;border-left: 2px solid #e42959;padding-left:.5em;margin-bottom:.8em;}
+
+#popContent {line-height: 1.4;}
+#popContent h3 {font-size:medium;}
+/* END .modal box */
+</style>
+  </head>
+  <body>
+	<nav id="menu" class="menu">
+		<header class="slide_logo">
+			<a href="index.html"><img src="asset/images/slide_logo.png"></a>
+		</header>
+
+		<section class="menu-section">
+			<h3 class="menu-section-title"><i class="fa fa-home"></i> <a href="index.html">首頁 <small>Home</small></a></h3>
+		</section>
+
+		<section class="menu-section">
+			<label for="items" class="menu-section-title">
+				<i class="fa fa-th"></i> 項目 <small>items</small>
+				<i class="fa fa-angle-right"></i>
+			</label>
+			<input class="sh-state" id="items" type="checkbox" />
+			<ul class="menu-section-list sh-modal">
+			  <li><a href="">在線項目</a></li>
+			  <li><a href="form.html">發起項目</a></li>
+			  <li><a href="form.html">發起路演</a></li>
+			</ul>
+		</section>
+
+		<section class="menu-section">
+			<label for="luAnn" class="menu-section-title">
+				<i class="fa fa-calendar-check-o"></i> 路演 <small>LuAnn</small>
+				<i class="fa fa-angle-right"></i>
+			</label>
+			<input class="sh-state" id="luAnn" type="checkbox" />
+			<ul class="menu-section-list sh-modal">
+			  <li><a href="">路演大廳</a></li>
+			  <li><a href="">今日路演</a></li>
+			</ul>
+		</section>
+
+		<section class="menu-section">
+			<h3 class="menu-section-title"><i class="fa fa-bullhorn"></i> <a href="news.html">消息 <small>News</small></a>
+			<span class="notice">0</span></h3>
+		</section>
+
+		<section class="menu-section">
+			<label for="member" class="menu-section-title">
+				<i class="fa fa-user"></i> 會員 <small>Member</small>
+				<i class="fa fa-angle-right"></i>
+			</label>
+			<input class="sh-state" id="member" type="checkbox" />
+			<ul class="menu-section-list sh-modal">
+				<li><a href="">我的投資</a></li>
+				<li><a href="">我的融資</a></li>
+				<li><a href="">我的路演</a></li>
+				<li><a href="">我的收藏</a></li>
+				<li><a href="notice.html">我的通知 <span class="notice red_bg">2</span></a></li>
+				<li><a href="user_profile.html">個人設置</a></li>
+			</ul>
+		</section>
+
+		<section class="menu-section">
+			<h3 class="menu-section-title"><i class="fa fa-usd"></i> <a href="">投資者 <small>Investment</small></a></h3>
+		</section>
+
+		<section class="menu-section">
+			<label for="docs" class="menu-section-title">
+				<i class="fa fa-file-text-o"></i> 文件 <small>Docs</small>
+				<i class="fa fa-angle-right"></i>
+			</label>
+			<input class="sh-state" id="docs" type="checkbox" />
+			<ul class="menu-section-list sh-modal">
+				<li><a href="使用条款.html">使用条款</a></li>
+				<li><a href="融资人规则.html">融资人规则</a></li>
+				<li><a href="融资信息披露规则.html">融资信息披露规则</a></li>
+				<li><a href="融资居间合同.html">融资居间合同</a></li>
+				<li><a href="投资人规则.html">投资人规则</a></li>
+				<li><a href="風險提示.html">風險提示</a></li>
+				<li><a href="有限合伙协议.html">有限合伙协议</a></li>
+				<li><a href="投资协议.html">投资协议</a></li>
+				<li><a href="股权转让协议.html">股权转让协议</a></li>
+				<li><a href="版权申明.html">版权申明</a></li>
+			</ul>
+		</section>
+
+	</nav>
+
+	<header class="header-hamburger fixed">
+		<a class="ninja-btn" title="menu"><span></span></a>
+		<h2>Panel Title</h2>
+
+		<input type="checkbox" id="op">
+		<div class="lower">
+			<label for="bell" style="margin-right:.5em;"><i class="fa fa-bell-o"></i></label>
+			<label for="op"><i class="fa fa-ellipsis-v"></i></label>
+		</div>
+		<div class="overlay overlay-hugeinc">
+			<label for="op"><i class="fa fa-times-circle"></i></label>
+			<nav>
+				<ul>
+					<li><input type="checkbox" id="a1"><label for="a1"><i class="fa fa-check"></i> Check 1</label></li>
+					<li><input type="checkbox" id="a2"><label for="a2"><i class="fa fa-check"></i> Check 2</label></li>
+					<li><input type="checkbox" id="a3"><label for="a3"><i class="fa fa-check"></i> Check 3</label></li>
+					<li><input type="checkbox" id="a4"><label for="a4"><i class="fa fa-check"></i> Check 4</label></li>
+					<li><input type="checkbox" id="a5"><label for="a5"><i class="fa fa-check"></i> Check 5</label></li>
+					<li><input type="checkbox" id="a6"><label for="a6"><i class="fa fa-check"></i> Check 6</label></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<main id="panel" class="panel">
+
+		<section class="slider">
+			<!-- Swiper -->
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<header><i class="fa fa-angle-right"></i>氪空間×理想日融資大趴揭開春的面紗</header>
+						<img src="http://heart2true.com/rc/newspicPath/1462531033010_667x371.jpg">
+					</div>
+					<div class="swiper-slide">
+						<header><i class="fa fa-angle-right"></i>眾籌平台助「印象」</header>
+						<img src="http://heart2true.com/rc/newspicPath/1462519199092_1.jpg">
+					</div>
+				</div>
+				<!-- Add Pagination -->
+				<div class="swiper-pagination"></div>
+			</div>
+		</section>
+
+		<div class="title">
+			<span class="tit-hd">消息<small>News</small></span>
+		</div>
+
+		<section class="news clearfix">
+			<label for="modal-0">
+				<span class="news_img"><img src="http://heart2true.com/rc/newspicPath/1462531033010_667x371.jpg"></span>
+				<div class="news_content">
+					<header>氪空間×理想日融資大趴揭開春的面紗</header>
+					<time>2016/05/27</time>
+					<p>3月31日，坐標北京，氪空間×理想日融資大趴邀您，和暖氣流一起躁起來！</p>
+				</div>
+			</label>
+		</section>
+
+		<section class="news clearfix">
+			<label for="modal-0">
+				<span class="news_img"><img src="http://heart2true.com/rc/newspicPath/1462519199092_1.jpg"></span>
+				<div class="news_content">
+					<header>眾籌平台助「印象」</header>
+					<time>2016/05/06</time>
+					<p>三顧茅廬，方識茅廬真印象!目前已經擁有直營店的平台，10月18號將與平台投資人見面。</p>
+				</div>
+			</label>
+		</section>
+
+		<section class="news clearfix">
+			<label for="modal-0">
+				<span class="news_img"><img src="http://heart2true.com/rc/newspicPath/1462531033010_667x371.jpg"></span>
+				<div class="news_content">
+					<header>蝦餃燒賣</header>
+					<time>2016/05/05</time>
+					<p>Text Text Text Text Text Text Text Text Text Text Text Text Text Text.</p>
+				</div>
+			</label>
+		</section>
+
+		<section class="news clearfix">
+			<label for="modal-0">
+				<span class="news_img"><img src="http://heart2true.com/rc/newspicPath/1462519199092_1.jpg"></span>
+				<div class="news_content">
+					<header>Title</header>
+					<time>2016/05/04</time>
+					<p>Text Text Text Text Text Text Text Text Text Text Text Text Text Text.</p>
+				</div>
+			</label>
+		</section>
+
+		<section class="news clearfix">
+			<label for="modal-0">
+				<span class="news_img"><img class="img_broken" src="asset/images/img_broken.gif"></span>
+				<div class="news_content">
+					<header>Title</header>
+					<time>2016/05/04</time>
+					<p>Text Text Text Text Text Text Text Text Text Text Text Text Text Text.</p>
+				</div>
+			</label>
+		</section>
+
+		<section class="news clearfix">
+			<label for="modal-0">
+				<span class="news_img"><img src="http://heart2true.com/rc/newspicPath/1462519199092_1.jpg"></span>
+				<div class="news_content">
+					<header>Title</header>
+					<time>2016/05/03</time>
+					<p>Text Text Text Text Text Text Text Text Text Text Text Text Text Text.</p>
+				</div>
+			</label>
+		</section>
+
+		<section class="news clearfix">
+			<label for="modal-0">
+				<span class="news_img"><img class="img_broken" src="asset/images/img_broken.png"></span>
+				<div class="news_content">
+					<header>Title</header>
+					<time>2016/05/02</time>
+					<p>Text Text Text Text Text Text Text Text Text Text Text Text Text Text.</p>
+				</div>
+			</label>
+		</section>
+
+		<section class="news clearfix">
+			<label for="modal-0">
+				<span class="news_img"><img src="http://heart2true.com/rc/newspicPath/1462519199092_1.jpg"></span>
+				<div class="news_content">
+					<header>Title</header>
+					<time>2016/05/04</time>
+					<p>Text Text Text Text Text Text Text Text Text Text Text Text Text Text.</p>
+				</div>
+			</label>
+		</section>
+
+    </main>
+	<footer class="panel-footer">
+		<a target="_blank" href="http://www.miitbeian.gov.cn/">蘇ICP備15055858號 常州左右逢源股權投資有限公司版權所有</a>
+	</footer>
+	<a href="#0" class="cd-top"><div class="jSlider"><span></span></div></a>
+	
+	<input class="modal-state" id="modal-0" type="checkbox" />
+	<div class="modal">
+	  <label class="modal__bg" for="modal-0"></label>
+	  <div class="modal__inner">
+		<label class="modal__close" for="modal-0"></label>
+		<header>Modal Title</header>
+
+		<div id="popContent">
+			<p>對於大多數創業者來說，去年的冬天來的略早、寒冷更甚。資本寒冬如同一把雙刃劍，一方面，創業者們需要面對死亡、抱團取暖，需要在嚴酷的環境下不斷修煉內功，提升自身生存概率。另一方面，殘酷環境下，馬太效應凸顯，劣質項目批量淘汰，優秀的創業者和創業項目更加突顯其價值。</p>
+			<p>如今，嚴冬已過，所有寂靜消散，冰封了一冬的熱情逐漸擴散開來。挺過了冬天的創業者們帶領著他們的項目，逐漸復甦，蠢蠢欲動，蓄勢待發。沉寂了一冬的投資人，還在等什麼呢？<br>
+			<br>
+			<span style="font-size:16px"><strong><span style="font-family:arial,helvetica,sans-serif">3月31日，坐標北京，氪空間×理想日融資大趴邀您，和暖氣流一起躁起來！</span></strong></span></p>
+			<p>【活動相關信息】</p>
+			<h3><span style="color:#FF0000">活動時間</span></h3>
+			<p>2016年5月31日14:00-17:00</p>
+			<h3>活動地點</h3>
+			<p>金剛偶巴（包場，憑邀請函入場）（朝陽區工體北路工體北門院內東側VICS一層）</p>
+			<h3>活動流程</h3>
+			<p>1、 13:30-14:00 活動簽到<br>
+			2、 14:00-14:10 投資人介紹<br>
+			3、 14:10-15:45 微路演時刻<br>
+			4、 15:45-17:00 下午茶時間（項目 1V1 投資人）<br>
+			5、 17:00 活動結束</p>
+		</div><!-- #popContent End -->
+
+		<!-- <footer style="position: static;margin:0;">
+			<div style="padding:0;">
+				<button type="button" class="btn blue_bg">Send</button>
+				<button type="button" class="btn default"><label for="modal-0">Cancel</label></button>
+			</div>
+		</footer> -->
+	  </div>
+	</div>
+
+	<script src="asset/js/index_slider.js"></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+	<!-- Swiper JS -->
+    <script src="asset/js/slideout.min.js"></script>
+	<script src="asset/js/main.js"></script>
+	<!-- Initialize Swiper -->
+	<script>
+	$(document).ready(function() {
+
+		var swiper = new Swiper('.swiper-container', {
+			pagination: '.swiper-pagination',
+			paginationClickable: true
+		});
+
+	});
+	</script>
+  </body>
+</html>

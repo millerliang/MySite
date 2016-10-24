@@ -1,0 +1,332 @@
+<!doctype html>
+<!--[if IE 8]><html class="ie8 lt-ie10"><![endif]-->
+<!--[if IE 9]><html class="ie9 lt-ie10"><![endif]-->
+<!--[if gt IE 9]><!--><html lang="en"><!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <title>我的通知</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="cleartype" content="on">
+    <meta name="MobileOptimized" content="320">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="asset/css/main.css">
+	<style>
+		#noticeArea {background-color:#fff;}
+		#noticeArea .notice {padding:4px 5px;text-align:left;cursor:pointer;background-color:#eef1f2;}
+		#noticeArea .notice .panel-body {padding:4px 7px 7px 8px;border:1px solid #b4c3d0;background-color:#fff;-moz-box-shadow: 0px 2px 1px rgba(0,0,0,.08);-webkit-box-shadow: 0px 2px 1px rgba(0,0,0,.08);box-shadow: 0px 2px 1px rgba(0,0,0,.08);-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;}
+		#noticeArea .notice small {display:block;color:#666;}
+		#noticeArea .notice small + i {color: #54bfc9;}
+		.fa-clock-o {color:#bbb;font-size:13px;}
+	</style>
+  </head>
+  <body>
+	<nav id="menu" class="menu">
+		<header class="slide_logo">
+			<a href="index.html"><img src="asset/images/slide_logo.png"></a>
+		</header>
+
+		<section class="menu-section">
+			<h3 class="menu-section-title"><i class="fa fa-home"></i> <a href="index.html">首頁 <small>Home</small></a></h3>
+		</section>
+
+		<section class="menu-section">
+			<label for="items" class="menu-section-title">
+				<i class="fa fa-th"></i> 項目 <small>items</small>
+				<i class="fa fa-angle-right"></i>
+			</label>
+			<input class="sh-state" id="items" type="checkbox" />
+			<ul class="menu-section-list sh-modal">
+			  <li><a href="">在線項目</a></li>
+			  <li><a href="form.html">發起項目</a></li>
+			  <li><a href="form.html">發起路演</a></li>
+			</ul>
+		</section>
+
+		<section class="menu-section">
+			<label for="luAnn" class="menu-section-title">
+				<i class="fa fa-calendar-check-o"></i> 路演 <small>LuAnn</small>
+				<i class="fa fa-angle-right"></i>
+			</label>
+			<input class="sh-state" id="luAnn" type="checkbox" />
+			<ul class="menu-section-list sh-modal">
+			  <li><a href="">路演大廳</a></li>
+			  <li><a href="">今日路演</a></li>
+			</ul>
+		</section>
+
+		<section class="menu-section">
+			<h3 class="menu-section-title"><i class="fa fa-bullhorn"></i> <a href="news.html">消息 <small>News</small></a>
+			<span class="notice">0</span></h3>
+		</section>
+
+		<section class="menu-section">
+			<label for="member" class="menu-section-title">
+				<i class="fa fa-user"></i> 會員 <small>Member</small>
+				<i class="fa fa-angle-right"></i>
+			</label>
+			<input class="sh-state" id="member" type="checkbox" />
+			<ul class="menu-section-list sh-modal">
+				<li><a href="">我的投資</a></li>
+				<li><a href="">我的融資</a></li>
+				<li><a href="">我的路演</a></li>
+				<li><a href="">我的收藏</a></li>
+				<li><a href="notice.html">我的通知 <span class="notice red_bg">2</span></a></li>
+				<li><a href="user_profile.html">個人設置</a></li>
+			</ul>
+		</section>
+
+		<section class="menu-section">
+			<h3 class="menu-section-title"><i class="fa fa-usd"></i> <a href="">投資者 <small>Investment</small></a></h3>
+		</section>
+
+		<section class="menu-section">
+			<label for="docs" class="menu-section-title">
+				<i class="fa fa-file-text-o"></i> 文件 <small>Docs</small>
+				<i class="fa fa-angle-right"></i>
+			</label>
+			<input class="sh-state" id="docs" type="checkbox" />
+			<ul class="menu-section-list sh-modal">
+				<li><a href="使用条款.html">使用条款</a></li>
+				<li><a href="融资人规则.html">融资人规则</a></li>
+				<li><a href="融资信息披露规则.html">融资信息披露规则</a></li>
+				<li><a href="融资居间合同.html">融资居间合同</a></li>
+				<li><a href="投资人规则.html">投资人规则</a></li>
+				<li><a href="風險提示.html">風險提示</a></li>
+				<li><a href="有限合伙协议.html">有限合伙协议</a></li>
+				<li><a href="投资协议.html">投资协议</a></li>
+				<li><a href="股权转让协议.html">股权转让协议</a></li>
+				<li><a href="版权申明.html">版权申明</a></li>
+			</ul>
+		</section>
+
+	</nav>
+
+	<header class="header-hamburger fixed">
+		<a class="ninja-btn" title="menu"><span></span></a>
+		<h2>通知</h2>
+		<input type="checkbox" id="op">
+		<div class="lower">
+			<label for="op" style="margin-right:.5em;"><i class="fa fa-bell-o"></i> 47</label>
+			<label for="op"><i class="fa fa-ellipsis-v"></i></label>
+		</div>
+		<div class="overlay overlay-hugeinc overlay_b">
+			<label for="op"><i class="fa fa-times-circle"></i></label>
+			<nav class="opt">
+				<ul>
+					<li><button class="btn default"><i class="fa fa-edit"></i> text</button></li>
+					<li><button class="btn blue_bg"><i class="fa fa-refresh"></i> Refresh</button></li>
+					<li><button class="btn red_bg"><i class="fa fa-trash"></i> Clear All</button></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<main id="panel" class="panel">
+
+		<div id="noticeArea">
+
+			<div class="notice" onclick="showDetail(34,2,544)">
+				<div class="panel-body">
+					<small class="text-muted"><i class="fa fa-clock-o"></i> 2016-10-03 11:06:40</small>
+					<i class="fa fa-bullhorn text-primary"></i> 您的項目[測試項目16051302] 項目計畫書已有更新檔發佈。
+				</div>
+			</div>
+
+			<div class="notice" onclick="showDetail(34,2,544)">
+				<div class="panel-body">
+					<small class="text-muted"><i class="fa fa-clock-o"></i> 2016-10-03 11:06:40</small>
+					<i class="fa fa-bullhorn text-primary"></i> 您的項目[測試項目16051302] 項目計畫書已有更新檔發佈。
+				</div>
+			</div>
+
+			<div class="notice" onclick="showDetail(34,2,542)">
+				<div class="panel-body">
+					<small class="text-muted"><i class="fa fa-clock-o"></i> 2016-10-03 11:06:40</small>
+					<i class="fa fa-bullhorn text-primary"></i> 您的項目[測試項目160513] 項目計畫書已有更新檔發佈。
+				</div>
+			</div>
+
+			<div class="notice" onclick="showDetail(1,3,542)">
+				<div class="panel-body">
+					<small class="text-muted"><i class="fa fa-clock-o"></i> 2016-10-03 10:53:38</small>
+					<i class="fa fa-bullhorn text-primary"></i> 你的項目[測試項目160513]管理者留言給你，請查看審查紀錄。
+				</div>
+			</div>
+
+			<div class="notice" onclick="showDetail(1,3,544)">
+				<div class="panel-body">
+					<small class="text-muted"><i class="fa fa-clock-o"></i> 2016-10-03 10:53:27</small>
+					<i class="fa fa-bullhorn text-primary"></i> 你的項目[測試項目16051302]管理者留言給你，請查看審查紀錄。
+				</div>
+			</div>
+
+			<div class="notice" onclick="showDetail(34,2,553)">
+				<div class="panel-body">
+					<small class="text-muted"><i class="fa fa-clock-o"></i> 2016-09-30 08:29:04</small>
+					<i class="fa fa-bullhorn text-primary"></i> 您的項目[青創賽在線啟動儀式 [靠譜創業]0] 項目計畫書已有更新檔發佈。
+				</div>
+			</div>
+
+			<div class="notice" onclick="showDetail(1,3,553)">
+				<div class="panel-body">
+					<small class="text-muted"><i class="fa fa-clock-o"></i> 2016-09-30 00:12:31</small>
+					<i class="fa fa-bullhorn text-primary"></i> 你的項目[青創賽在線啟動儀式 [靠譜創業]0]管理者留言給你，請查看審查紀錄。
+				</div>
+			</div>
+
+			<div class="notice" onclick="showDetail(7,5,9)">
+				<div class="panel-body">
+					<small class="text-muted"><i class="fa fa-clock-o"></i> 2016-09-27 13:59:23</small>
+					<i class="fa fa-bullhorn text-primary"></i> 你的路演[青創賽在線啟動儀式 [靠譜創業]]已發佈上線，舉辦日為 2016-09-27 14:30 ~ 15:00
+				</div>
+			</div>
+
+			<div class="notice" onclick="showDetail(2,2,554)">
+				<div class="panel-body">
+					<small class="text-muted"><i class="fa fa-clock-o"></i> 2016-09-27 13:39:46</small>
+					<i class="fa fa-bullhorn text-primary"></i> 你的項目[青創賽在線啟動儀式 [靠譜創業]]已審核通過發佈上線
+				</div>
+			</div>
+
+			<div class="notice" onclick="showDetail(1,3,553)">
+				<div class="panel-body">
+					<small class="text-muted"><i class="fa fa-clock-o"></i> 2016-09-27 13:38:28</small>
+					<i class="fa fa-bullhorn text-primary"></i> 你的項目[青創賽在線啟動儀式 [靠譜創業]0]管理者留言給你，請查看審查紀錄。
+				</div>
+			</div>
+
+			<div class="notice" onclick="showDetail(1,3,553)">
+				<div class="panel-body">
+					<small class="text-muted"><i class="fa fa-clock-o"></i> 2016-09-27 13:17:49</small>
+					<i class="fa fa-bullhorn text-primary"></i> 你的項目[青創賽在線啟動儀式 [靠譜創業]0]管理者留言給你，請查看審查紀錄。
+				</div>
+			</div>
+
+			<div class="notice" onclick="showDetail(7,5,8)">
+				<div class="panel-body">
+					<small class="text-muted"><i class="fa fa-clock-o"></i> 2016-09-26 18:26:28</small>
+					<i class="fa fa-bullhorn text-primary"></i> 你的路演[青創賽在線啟動儀式 [靠譜創業]]已發佈上線，舉辦日為 2016-09-26 18:25 ~ 18:25
+				</div>
+			</div>
+
+			<div class="notice" onclick="showDetail(2,2,553)">
+				<div class="panel-body">
+					<small class="text-muted"><i class="fa fa-clock-o"></i> 2016-09-26 18:25:09</small>
+					<i class="fa fa-bullhorn text-primary"></i> 你的項目[青創賽在線啟動儀式 [靠譜創業]0]已審核通過發佈上線
+				</div>
+			</div>
+
+			<div class="notice" onclick="showDetail(7,5,7)">
+				<div class="panel-body">
+					<small class="text-muted"><i class="fa fa-clock-o"></i> 2016-09-22 15:43:06</small>
+					<i class="fa fa-bullhorn text-primary"></i> 你的路演[產業級植保無人機]已發佈上線，舉辦日為 2016-09-22 18:00 ~ 19:00
+				</div>
+			</div>
+
+			<div class="notice" onclick="showDetail(2,2,552)">
+				<div class="panel-body">
+					<small class="text-muted"><i class="fa fa-clock-o"></i> 2016-09-22 15:40:58</small>
+					<i class="fa fa-bullhorn text-primary"></i> 你的項目[產業級植保無人機]已審核通過發佈上線
+				</div>
+			</div>
+
+			<div class="notice" onclick="showDetail(34,2,552)">
+				<div class="panel-body">
+					<small class="text-muted"><i class="fa fa-clock-o"></i> 2016-09-22 15:39:57</small>
+					<i class="fa fa-bullhorn text-primary"></i> 您的項目[產業級植保無人機] 項目計畫書已有更新檔發佈。
+				</div>
+			</div>
+
+			<div class="notice" onclick="showDetail(34,2,552)">
+				<div class="panel-body">
+					<small class="text-muted"><i class="fa fa-clock-o"></i> 2016-09-22 15:39:57</small>
+					<i class="fa fa-bullhorn text-primary"></i> 您的項目[產業級植保無人機] 項目計畫書已有更新檔發佈。
+				</div>
+			</div>
+
+			<div class="notice" onclick="showDetail(28,5,2)">
+				<div class="panel-body">
+					<small class="text-muted"><i class="fa fa-clock-o"></i> 2016-08-30 11:49:00</small>
+					<i class="fa fa-bullhorn text-primary"></i> 你已撤回項目[搭建農產品B2B批發平台]的線下路演報名。
+				</div>
+			</div>
+
+			<div class="notice" onclick="showDetail(27,5,2)">
+				<div class="panel-body">
+					<small class="text-muted"><i class="fa fa-clock-o"></i> 2016-08-30 11:48:55</small>
+					<i class="fa fa-bullhorn text-primary"></i> 你已報名項目[搭建農產品B2B批發平台]的線下路演。
+				</div>
+			</div>
+
+			<div class="notice" onclick="showDetail(28,5,2)">
+				<div class="panel-body">
+					<small class="text-muted"><i class="fa fa-clock-o"></i> 2016-08-30 11:48:49</small>
+					<i class="fa fa-bullhorn text-primary"></i> 你已撤回項目[搭建農產品B2B批發平台]的線下路演報名。
+				</div>
+			</div>
+
+			<div class="notice" onclick="showDetail(27,5,2)">
+				<div class="panel-body">
+					<small class="text-muted"><i class="fa fa-clock-o"></i> 2016-08-30 10:51:51</small>
+					<i class="fa fa-bullhorn text-primary"></i> 你已报名项目[搭建农产品B2B批发平台]的线下路演。
+				</div>
+			</div>
+
+			<div class="notice" onclick="showDetail(28,5,2)">
+				<div class="panel-body">
+					<small class="text-muted"><i class="fa fa-clock-o"></i> 2016-08-30 10:51:02</small>
+					<i class="fa fa-bullhorn text-primary"></i> 你已撤回项目[搭建农产品B2B批发平台]的线下路演报名。
+				</div>
+			</div>
+
+			<div class="notice" onclick="showDetail(27,5,2)">
+				<div class="panel-body">
+					<small class="text-muted"><i class="fa fa-clock-o"></i> 2016-08-30 10:50:25</small>
+					<i class="fa fa-bullhorn text-primary"></i> 你已报名项目[搭建农产品B2B批发平台]的线下路演。
+				</div>
+			</div>
+
+			<div class="notice" onclick="showDetail(12,2,543)">
+				<div class="panel-body">
+					<small class="text-muted"><i class="fa fa-clock-o"></i> 2016-08-11 16:30:01</small>
+					<i class="fa fa-bullhorn text-primary"></i> 你的投资[测试项目16051302]融资期已结束，本项目融资失败。
+				</div>
+			</div>
+
+			<div class="notice" onclick="showDetail(27,5,1)">
+				<div class="panel-body">
+					<small class="text-muted"><i class="fa fa-clock-o"></i> 2016-08-02 10:03:44</small>
+					<i class="fa fa-bullhorn text-primary"></i> 你已报名项目[融聚天下定增]的线下路演。
+				</div>
+			</div>
+
+			<div class="notice" onclick="showDetail(9,2,543)">
+				<div class="panel-body">
+					<small class="text-muted"><i class="fa fa-clock-o"></i> 2016-07-15 08:05:01</small>
+					<i class="fa fa-bullhorn text-primary"></i> 你的跟投[测试项目16051302]冷静期已结束，跟投申请已生效。
+				</div>
+			</div>
+
+			<div class="notice" onclick="showDetail(5,4,543)">
+				<div class="panel-body">
+					<small class="text-muted"><i class="fa fa-clock-o"></i> 2016-07-15 08:05:01</small>
+					<i class="fa fa-bullhorn text-primary"></i> 你的项目[测试项目16051302]新增了一位跟投人 ale
+				</div>
+			</div>
+
+		</div>
+
+    </main>
+	<footer class="panel-footer">
+		<a target="_blank" href="http://www.miitbeian.gov.cn/">蘇ICP備15055858號 常州左右逢源股權投資有限公司版權所有</a>
+	</footer>
+	<a href="#0" class="cd-top"><div class="jSlider"><span></span></div></a>
+
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src="asset/js/slideout.min.js"></script>
+    <script src="asset/js/main.js"></script>
+  </body>
+</html>
