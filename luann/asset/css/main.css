@@ -671,7 +671,7 @@ background-color:#00d9d9;
 @media screen and (max-width: 768px) {
   .modal__inner {
 	width: 96%;
-	height: 96%;
+	min-height: 96%;
 	box-sizing: border-box;
   }
 }
