@@ -34,22 +34,22 @@
 .back footer .red_btn {color:#fff;background-color: #D04F39;border-bottom: 5px solid #A73A3A;text-shadow: 0px -2px #6F1E1E;}
 
 /* card-list style */
-.card-list {text-align:left;min-height:430px;margin:.4em 0 1em;width:100%;}
+.card-list {text-align__:left;min-height:400px;margin:.4em 0 1em;width:100%;}
 .card-list img {max-height:260px;max-width:100%;}
 .card-list h5 {height:3rem;overflow:hidden;font-size: 16px;color:#ffbf00;padding: 0 8px;border-bottom: 1px solid #333;}
 .card-list .back h5 {height:auto;margin:8px;border-left:4px solid #ff4000;padding-left:.3em;color:#fff;}
-.card-list .info {padding:4px 10px;max-height: 260px;overflow: auto;font-size: small;}
+.card-list .info {text-align:left;padding:4px 10px;max-height: 260px;overflow: auto;font-size: small;}
 .card-list .row .col-sm-6 {background-color:#000;float: left;text-align:center;width: 50%;position: relative;min-height: 1px;padding-left: 15px;padding-right: 15px;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
 
 .card-list .row p {margin:0;padding:4px 0 0;color:#C599FB;}
 .card-list .row .col-sm-6 b {font-size:24px;color:#ffff00;display: block;padding-bottom: .4em;}
 
-.card-list .front,.card-list  .back {background-color:#59b300;width:100%;min-height:100%;-webkit-border-radius__:5px;-moz-border-radius__:5px;border-radius__:5px;}
-.card-list .front,.card-list .back {background-color:#222;color:#fff;backface-visibility: hidden;position: absolute;top: 0;left: 0;box-shadow:0 3px 3px rgba(0,0,0,.25);overflow:hidden;}
+.card-list .front,.card-list .back {width:100%;min-height:100%;background-color:#222;color:#fff;backface-visibility: hidden;position: absolute;top: 0;left: 0;box-shadow:0 3px 3px rgba(0,0,0,.25);overflow:hidden;}
+.card-list .back {background-color:#19032e;}
 
 /* winsize */
 @media (min-width: 768px){
-	.card-list {text-align:center;}
+	.card-list {text-align:center;min-height:430px;}
 	.card-list .info {text-align:left;}
 }
 </style>
@@ -245,11 +245,13 @@
 
 	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 	<!-- Flip JS -->
-	<script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
     <script src="asset/js/slideout.min.js"></script>
 	<script src="asset/js/main.js"></script>
+	<script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
 	<script>
+	$(document).ready(function() {
 		$(".card-list").flip();
+	});
 	</script>
 
   </body>

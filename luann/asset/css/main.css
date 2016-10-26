@@ -570,7 +570,7 @@ background-color:#00d9d9;
  * Popup Bottom Menu
  */
 .overlay_b .opt ul li {display: block;margin:.5em 6px;}
-.overlay_b {top: auto;bottom:0;height: 50%;background: rgba(89,57,129,.95);}
+.overlay_b {top: auto;bottom:0;height__: 50%;background: rgba(89,57,129,.95);}
 .overlay_b nav {margin-top: 1.5em;}
 .overlay_b > label {bottom: 1.2em;}
 
