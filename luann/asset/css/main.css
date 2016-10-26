@@ -642,7 +642,7 @@ background-color:#00d9d9;
   background: #fff;
   border-radius: 5px;
   padding: 1em;
-  max-height: 65%;
+  height: 65%;
 }
 .modal__inner h4 {font-size:medium;border-left: 2px solid #e42959;padding-left:.25em;margin-bottom:.8em;}
 .modal__inner footer {margin:0 -1em;position: absolute;width:100%;bottom: 0;}
@@ -671,12 +671,12 @@ background-color:#00d9d9;
 @media screen and (max-width: 768px) {
   .modal__inner {
 	width: 96%;
-	height: 80%;
+	height: 96%;
 	box-sizing: border-box;
   }
 }
 @media screen and (max-width: 320px) {
-  .modal__inner {min-height:90%;}
+  .modal__inner {min-height__:90%;}
 }
 
 /* Modal End
