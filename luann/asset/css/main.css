@@ -595,7 +595,7 @@ background-color:#00d9d9;
 .form-style .form-row label {font-size:small;}
 .form-style .form-row label b {color:red;margin-right:.25em;}
 .form-style .form-row input,.form-style div.form-row select ,.form-style div.form-row textarea {border-width:0;border-bottom:1px solid #e5e5e5;width:96%;outline: 0;padding:8px 6px;}
-.form-style .form-row select {width:100%;background-color:transparent;}
+.form-style .form-row select {width:100%;}
 .form-style .form-row input:focus{border-bottom:1px solid #4f25a0;outline: 0;}
 .form-style .form-row:hover label{color:#4f25a0;}
 
