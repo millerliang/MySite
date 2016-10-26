@@ -34,7 +34,7 @@
 .back footer .red_btn {color:#fff;background-color: #D04F39;border-bottom: 5px solid #A73A3A;text-shadow: 0px -2px #6F1E1E;}
 
 /* card-list style */
-.card-list {text-align__:left;min-height:400px;margin:.4em 0 1em;width:100%;}
+.card-list {text-align__:left;min-height:430px;margin:.4em 0 1em;width:100%;}
 .card-list img {max-height:260px;max-width:100%;}
 .card-list h5 {height:3rem;overflow:hidden;font-size: 16px;color:#ffbf00;padding: 0 8px;border-bottom: 1px solid #333;}
 .card-list .back h5 {height:auto;margin:8px;border-left:4px solid #ff4000;padding-left:.3em;color:#fff;}
@@ -52,6 +52,48 @@
 	.card-list {text-align:center;min-height:430px;}
 	.card-list .info {text-align:left;}
 }
+
+/* Card New Style */
+.luann-list {width:auto;padding:.4em;}
+.card-new {margin:.4em 0 .8em;color:#fff;position: relative;width: 100%;float: none;overflow: hidden;text-align:left;-moz-box-shadow: 0px 2px 6px rgba(0,0,0,.6);-webkit-box-shadow: 0px 2px 6px rgba(0,0,0,.6);box-shadow: 0px 2px 6px rgba(0,0,0,.6);-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;}
+.card-new * {-webkit-transition: all .4s;-moz-transition: all .4s;transition: all .4s;}
+.card-new .front {background:#222;}
+.card-new .front img {width:100%;}
+.card-new .front h5 {font-size: 16px;color: #ffbf00;padding:.4em 8px;border-bottom: 1px solid #333;margin-bottom:.5em;}
+
+.card-new .back {
+	background:rgba(25,3,46,.9);
+	position: absolute;
+	bottom:-100%;
+	width: 100%;
+	height: 100%;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	align-content: stretch;
+	align-items: stretch;
+	justify-content: space-between;
+
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+
+	-webkit-flex-wrap: nowrap;
+	-ms-flex-wrap: nowrap;
+	flex-wrap: nowrap;
+}
+.card-new:hover___ .back {bottom:0%;}
+.card-new.active .back {bottom:0%;}
+
+.card-new .back .info {padding:0 .8em;font-size__:small;overflow-x:hidden;flex-basis:85%;}
+.card-new .back footer {position:static;flex-basis:2%;}
+.card-new .back h5 {font-size: 16px;border-bottom: 1px solid rgba(255,255,255,.35);padding:.4em 0;margin:8px .5em;border-left: 3px solid #ff4000;padding-left:.4em;}
+
+ul.flex_box {margin-top:1em;padding:.4em 0;background-color:#000;list-style: none;display: -webkit-box;display: -webkit-flex;display: -ms-flexbox;display: flex;-webkit-box-orient: horizontal;-webkit-box-direction: normal;-webkit-flex-direction: row;-ms-flex-direction: row;flex-direction: row;-webkit-flex-wrap: nowrap;-ms-flex-wrap: nowrap;flex-wrap: nowrap;}
+ul.flex_box li {text-align: center;-webkit-box-flex: 1;box-flex: 1;-webkit-flex: 1;-ms-flex: 1;flex: 1;white-space: nowrap;}
+ul.flex_box li p {color: #C599FB;}
+ul.flex_box li b {font-size: 24px;color: #ffff00;}
 </style>
 </head>
   <body>
@@ -162,7 +204,78 @@
 
 		<article class="luann-list">
 
-			<section class="card-list"> 
+			<section class="card-new"> 
+				<div class="front">
+					<time class="now_stus"><i class="fa fa-eye"></i> 1,23K</time>
+					<img src="http://heart2true.com/rc/newItemcoverImage/1474954749221_How_to_start_a_business_crop.jpg">
+					<h5>青创赛在线启动仪式 [靠谱创业]</h5>
+					<div class="info">
+						<p>【时间】2016/10/14  00:00-23:55</p>
+						<p>【发会方】左右逢源</p>
+					</div>
+					<ul class="flex_box">
+						<li>
+							<p class="dark">预约收视</p><b class="dark">1</b>
+						</li>
+						<li>
+							<p class="dark">线下报名</p>
+							<b class="dark">无</b>
+						</li>
+					</ul>
+				</div>
+				<div class="back">
+					<h5>路演议程</h5>
+					<div class="info">
+						<p>全球青年创业大赛在线启动仪式 <br>14:30~15:00 [靠谱创业]<br><br>14:30经济学分析<br>14:40商业预测<br>14:48黑森林<br>14:50小心三个方向<br>14:54庙算-道天地法将<br>14:57 SWOT分析</p>
+						<p>全球青年创业大赛在线启动仪式 <br>14:30~15:00 [靠谱创业]<br><br>14:30经济学分析<br>14:40商业预测<br>14:48黑森林<br>14:50小心三个方向<br>14:54庙算-道天地法将<br>14:57 SWOT分析</p>
+						<p>全球青年创业大赛在线启动仪式 <br>14:30~15:00 [靠谱创业]<br><br>14:30经济学分析<br>14:40商业预测<br>14:48黑森林<br>14:50小心三个方向<br>14:54庙算-道天地法将<br>14:57 SWOT分析</p>
+						<p>全球青年创业大赛在线启动仪式 <br>14:30~15:00 [靠谱创业]<br><br>14:30经济学分析<br>14:40商业预测<br>14:48黑森林<br>14:50小心三个方向<br>14:54庙算-道天地法将<br>14:57 SWOT分析</p>
+					</div>
+					<footer>
+						<div>
+							<button class="luann_btn blue_btn" onclick="showReply(8)">Blue btn</button>
+							<button class="luann_btn green_btn" onclick="showReply(9)">更多内容</button>
+						</div>
+					</footer>
+				</div>
+			</section>
+
+			<section class="card-new"> 
+				<div class="front">
+					<time class="now_stus"><i class="fa fa-thumbs-up"></i> 666</time>
+					<img src="http://heart2true.com/rc/newItemcoverImage/1476857714004_images.jpg">
+					<h5>青创赛在线启动仪式 [靠谱创业]</h5>
+					<div class="info">
+						<p>【时间】2016/10/14  00:00-23:55</p>
+						<p>【发会方】左右逢源</p>
+					</div>
+					<ul class="flex_box">
+						<li>
+							<p class="dark">预约收视</p><b class="dark">2</b>
+						</li>
+						<li>
+							<p class="dark">线下报名</p>
+							<b class="dark">无</b>
+						</li>
+					</ul>
+				</div>
+				<div class="back">
+					<h5>路演议程</h5>
+					<div class="info">
+						<p>全球青年创业大赛在线启动仪式 <br>14:30~15:00 [靠谱创业]<br><br>14:30经济学分析<br>14:40商业预测<br>14:48黑森林<br>14:50小心三个方向<br>14:54庙算-道天地法将<br>14:57 SWOT分析</p>
+						<p>全球青年创业大赛在线启动仪式 <br>14:30~15:00 [靠谱创业]<br><br>14:30经济学分析<br>14:40商业预测<br>14:48黑森林<br>14:50小心三个方向<br>14:54庙算-道天地法将<br>14:57 SWOT分析</p>
+					</div>
+					<footer>
+						<div>
+							<button class="luann_btn red_btn" onclick="showReply(7)">Red btn</button>
+							<button class="luann_btn blue_btn" onclick="showReply(8)">Blue btn</button>
+							<button class="luann_btn green_btn" onclick="showReply(9)">更多内容</button>
+						</div>
+					</footer>
+				</div>
+			</section>
+
+			<!-- <section class="card-list"> 
 				<div class="front">
 					<time class="now_stus"><i class="fa fa-eye"></i> 1,23K</time>
 					<img src="http://heart2true.com/rc/newItemcoverImage/1474954749221_How_to_start_a_business_crop.jpg">
@@ -217,7 +330,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="back">
+				<div class="back" style="backface-visibility: hidden;">
 					<h5>路演议程</h5>
 					<div class="info">
 						<p>全球青年创业大赛在线启动仪式 <br>14:30~15:00 [靠谱创业]<br><br>14:30经济学分析<br>14:40商业预测<br>14:48黑森林<br>14:50小心三个方向<br>14:54庙算-道天地法将<br>14:57 SWOT分析</p>
@@ -233,7 +346,7 @@
 						</div>
 					</footer>
 				</div>
-			</section>
+			</section> -->
 
 		</article>
 
@@ -245,13 +358,14 @@
 
 	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 	<!-- Flip JS -->
+	<!-- <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script> -->
     <script src="asset/js/slideout.min.js"></script>
 	<script src="asset/js/main.js"></script>
-	<script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
 	<script>
-	$(document).ready(function() {
-		$(".card-list").flip();
-	});
+		// $(".card-list").flip();
+		$('.card-new').click(function() {
+			$(this).toggleClass('active');
+		});
 	</script>
 
   </body>
