@@ -224,6 +224,7 @@ ul.flex_box li b {font-size: 24px;color: #ffff00;}
 					</ul>
 				</div>
 				<div class="back">
+					<label class="modal__close" for="modal-0"></label>
 					<h5>路演议程</h5>
 					<div class="info">
 						<p>全球青年创业大赛在线启动仪式 <br>14:30~15:00 [靠谱创业]<br><br>14:30经济学分析<br>14:40商业预测<br>14:48黑森林<br>14:50小心三个方向<br>14:54庙算-道天地法将<br>14:57 SWOT分析</p>
@@ -235,6 +236,7 @@ ul.flex_box li b {font-size: 24px;color: #ffff00;}
 						<div>
 							<button class="luann_btn blue_btn" onclick="showReply(8)">Blue btn</button>
 							<button class="luann_btn green_btn" onclick="showReply(9)">更多内容</button>
+							<button class="luann_btn default_btn close_btn">Close</button>
 						</div>
 					</footer>
 				</div>
@@ -260,6 +262,7 @@ ul.flex_box li b {font-size: 24px;color: #ffff00;}
 					</ul>
 				</div>
 				<div class="back">
+					<label class="modal__close" for="modal-0"></label>
 					<h5>路演议程</h5>
 					<div class="info">
 						<p>全球青年创业大赛在线启动仪式 <br>14:30~15:00 [靠谱创业]<br><br>14:30经济学分析<br>14:40商业预测<br>14:48黑森林<br>14:50小心三个方向<br>14:54庙算-道天地法将<br>14:57 SWOT分析</p>
@@ -363,8 +366,13 @@ ul.flex_box li b {font-size: 24px;color: #ffff00;}
 	<script src="asset/js/main.js"></script>
 	<script>
 		// $(".card-list").flip();
-		$('.card-new').click(function() {
-			$(this).toggleClass('active');
+		$('.card-new img,.card-new h5,.card-new .info,.card-new .flex_box').click(function() {
+			//$(this).toggleClass('active');
+			$(this).parents('.card-new').addClass('active');
+		});
+
+		$('.close_btn,.modal__close').click(function() {
+			$(this).parents('.card-new').removeClass('active');
 		});
 	</script>
 
