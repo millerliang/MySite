@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>檢視廣告 - 後台管理系統</title>
+
+		<meta name="description" content="" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- basic styles -->
+
+		<link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+
+		<!--[if IE 7]>
+		  <link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css" />
+		<![endif]-->
+
+		<!-- page specific plugin styles -->
+
+		<!-- fonts -->
+
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" />
+
+		<!-- ace styles -->
+
+		<link rel="stylesheet" href="assets/css/ace.min.css" />
+		<link rel="stylesheet" href="assets/css/ace-rtl.min.css" />
+		<link rel="stylesheet" href="assets/css/ace-skins.min.css" />
+
+		<!--[if lte IE 8]>
+		  <link rel="stylesheet" href="assets/css/ace-ie.min.css" />
+		<![endif]-->
+
+		<!-- inline styles related to this page -->
+
+		<!-- ace settings handler -->
+
+		<script src="assets/js/ace-extra.min.js"></script>
+
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+
+		<!--[if lt IE 9]>
+		<script src="assets/js/html5shiv.js"></script>
+		<script src="assets/js/respond.min.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<div class="navbar navbar-default" id="navbar">
+
+			<script type="text/javascript">
+				try{ace.settings.check('navbar' , 'fixed')}catch(e){}
+			</script>
+
+
+			<div class="navbar-container" id="navbar-container">
+				<div class="navbar-header pull-left logo">
+					<a href="index.html" class="navbar-brand">
+						<small>
+							後台管理系統
+						</small>
+					</a><!-- /.brand -->
+				</div><!-- /.navbar-header -->
+
+				<div class="navbar-header pull-right" role="navigation">
+					<ul class="nav ace-nav">
+						<li class="color">
+							<a data-toggle="dropdown" class="dropdown-toggle" href="#">
+								<i class="icon-envelope icon-animated-vertical"></i>
+								<span class="badge badge-important">12</span>
+							</a>
+
+							<ul class="pull-right dropdown-navbar navbar-pink dropdown-menu dropdown-caret dropdown-times">
+								<li>
+									<a href="user_feedback.html">
+										<div class="clearfix">
+											<span class="pull-left">
+												<i class="btn btn-xs no-hover btn-success icon-user"></i>
+												客服管理
+											</span>
+											<span class="pull-right badge badge-success">+8</span>
+										</div>
+									</a>
+								</li>
+
+								<li>
+									<a href="user_feedback.html">
+										查看所有通知
+										<i class="icon-arrow-right"></i>
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li class="light-blue">
+							<a data-toggle="dropdown" href="#" class="dropdown-toggle">
+								<img class="nav-user-photo" src="assets/avatars/avatar4.png" alt="Jason's Photo" />
+								<span class="user-info">
+									<small>您好, 歡迎</small>
+									超級管理員
+								</span>
+
+								<i class="icon-caret-down"></i>
+							</a>
+
+							<ul class="user-menu pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
+								<li>
+									<a href="admin_profile.html">
+										<i class="icon-user"></i>
+										個人資料
+									</a>
+								</li>
+
+								<li class="divider"></li>
+
+								<li>
+									<a href="login.html">
+										<i class="icon-power-off"></i>
+										登 出
+									</a>
+								</li>
+							</ul>
+						</li>
+					</ul><!-- /.ace-nav -->
+				</div><!-- /.navbar-header -->
+			</div><!-- /.container -->
+		</div>
+
+		<div class="main-container" id="main-container">
+			<script type="text/javascript">
+				try{ace.settings.check('main-container' , 'fixed')}catch(e){}
+			</script>
+
+			<div class="main-container-inner">
+				<a class="menu-toggler" id="menu-toggler" href="#">
+					<span class="menu-text"></span>
+				</a>
+
+				<div class="sidebar" id="sidebar">
+					<script type="text/javascript">
+						try{ace.settings.check('sidebar' , 'fixed')}catch(e){}
+					</script>
+
+					<ul class="nav nav-list">
+						<li>
+							<a href="index.html">
+								<i class="icon-home"></i>
+								<span class="menu-text"> 首 頁 </span>
+							</a>
+						</li>
+
+						<li>
+							<a href="admin_group.html">
+								<i class="icon-user-md"></i>
+								<span class="menu-text"> 系統管理員群組 </span>
+							</a>
+						</li>
+
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-th"></i>
+								<span class="menu-text"> 商城商品管理 </span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="market_manager.html">
+										<i class="icon-double-angle-right"></i>
+										商品總覽
+									</a>
+								</li>
+								<li>
+									<a href="market_orderlist.html">
+										<i class="icon-double-angle-right"></i>
+										訂單管理
+									</a>
+								</li>
+                                <li>
+									<a href="market_new.html">
+										<i class="icon-double-angle-right"></i>
+										新增商品
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li class="active">
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-cloud-upload"></i>
+								<span class="menu-text"> 廣告管理 </span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="ad_manager.html">
+										<i class="icon-double-angle-right"></i>
+										廣告總覽
+									</a>
+								</li>
+                                <li>
+									<a href="ad_new.html">
+										<i class="icon-double-angle-right"></i>
+										新增廣告
+									</a>
+								</li>
+								<li>
+									<a href="ad_admin.html">
+										<i class="icon-double-angle-right"></i>
+										廣告審查
+									</a>
+								</li>
+								<li>
+									<a href="ad_type.html">
+										<i class="icon-double-angle-right"></i>
+										廣告類別
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="#" class="dropdown-toggle"> 
+								<i class="icon-codepen"></i> <span class="menu-text"> 序號管理 </span> 
+								<b class="arrow icon-angle-down"></b>
+							</a>
+							<ul class="submenu">
+								<li>
+									<a href="sn_list.html"> <i class="icon-double-angle-right"></i> 序號總覽</a>
+								</li>
+
+								<li>
+									<a href="sn_create.html"> <i class="icon-double-angle-right"></i> 新增序號</a>
+								</li>
+
+							</ul>
+						</li>
+
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-users"></i>
+								<span class="menu-text"> 會員管理 </span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="user_group.html">
+										<i class="icon-double-angle-right"></i>
+										會員總覽
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-rocket"></i>
+								<span class="menu-text"> 商家管理 </span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="sell_manager.html">
+										<i class="icon-double-angle-right"></i>
+										商家總覽
+									</a>
+								</li>
+								<li>
+									<a href="sell_new.html">
+										<i class="icon-double-angle-right"></i>
+										新增商家
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="user_feedback.html">
+								<i class="icon-wechat"></i>
+								<span class="menu-text"> 客服管理 </span>
+							</a>
+						</li>
+
+						<li>
+							<a href="sys_postnews.html">
+								<i class="icon-laptop"></i>
+								<span class="menu-text"> 公告管理 </span>
+							</a>
+						</li>
+
+						<li>
+							<a href="sys_announcement.html">
+								<i class="icon-bullhorn"></i>
+								<span class="menu-text"> 消息管理 </span>
+							</a>
+						</li>
+
+                        <li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-bar-chart-o"></i>
+								<span class="menu-text"> 數據分析 </span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="analysis_isp.html">
+										<i class="icon-double-angle-right"></i>
+										基本分析
+									</a>
+								</li>
+
+								<li>
+									<a href="analysis_local.html">
+										<i class="icon-double-angle-right"></i>
+										依地區地域分布
+									</a>
+								</li>
+
+                                <li>
+									<a href="analysis_trend.html">
+										<i class="icon-double-angle-right"></i>
+										APP 使用次數趨勢圖
+									</a>
+								</li>
+                                <li>
+									<a href="analysis_boot.html">
+										<i class="icon-double-angle-right"></i>
+										開機次數趨勢圖
+									</a>
+								</li>
+							</ul>
+						</li>
+						
+                        <li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-adn"></i>
+								<span class="menu-text"> APP 類別管理 </span>
+                                <b class="arrow icon-angle-down"></b>
+							</a>
+                            
+                            <ul class="submenu">
+								<li>
+									<a href="app_catalog.html">
+										<i class="icon-double-angle-right"></i>
+										APP 類型歸類對應
+									</a>
+								</li>
+
+								<li>
+									<a href="mobile_device.html">
+										<i class="icon-double-angle-right"></i>
+										手機型號裝置對應
+									</a>
+								</li>
+							</ul>
+						</li>
+					</ul><!-- /.nav-list -->
+
+					<div class="sidebar-collapse" id="sidebar-collapse">
+						<i class="icon-angle-double-left" data-icon1="icon-angle-double-left" data-icon2="icon-angle-double-right"></i>
+					</div>
+
+					<script type="text/javascript">
+						try{ace.settings.check('sidebar' , 'collapsed')}catch(e){}
+					</script>
+				</div>
+
+				<div class="main-content">
+					<div class="breadcrumbs" id="breadcrumbs">
+						<script type="text/javascript">
+							try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
+						</script>
+
+						<ul class="breadcrumb">
+							<li>
+								<i class="icon-home home-icon"></i>
+								<a href="index.html">Home</a>
+							</li>
+							<li><a href="ad_manager.html">廣告總覽</a></li>
+							<li class="active">檢視廣告</li>
+						</ul><!-- .breadcrumb -->
+
+						<div class="nav-search" id="nav-search">
+							<form class="form-search">
+								<span class="input-icon">
+									<input type="text" placeholder="搜尋 ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
+									<i class="icon-search nav-search-icon"></i>
+								</span>
+							</form>
+						</div><!-- #nav-search -->
+					</div>
+
+					<div class="page-content">
+
+						<div class="widget-toolbar no-border">
+							<button class="btn btn-">
+								<i class="icon-trash-o align-top bigger-125"></i>
+								刪除廣告
+							</button>
+							&nbsp;
+							<button class="btn btn-primary">
+								<i class="icon-edit align-top bigger-125"></i>
+								編輯廣告
+							</button>
+						</div>
+						
+						<div class="page-header">
+							<h1>
+								檢視廣告
+								<small>
+									<i class="icon-angle-double-right"></i>
+								    資生堂夏日美白護膚面膜
+								</small>
+							</h1>
+						</div>
+
+						<div class="row">
+							<div class="col-sm-12">
+								<!-- PAGE CONTENT BEGINS -->
+								
+								<div class="row">
+									<div class="col-xs-12 col-sm-5 center">
+										<span class="profile-picture" style="max-width:60%;">
+											<img class="img-responsive" src="ad_imgs/ad_shiseido.jpg">
+										</span>
+										<h4 class="grey"><i class="icon-picture-o"></i> 全智賢跨刀代言資生堂.jpg</h4>
+
+										<div class="space-16"></div>
+
+										<div class="row">
+											<div class="col-sm-7 col-xs-12 center">
+												<span class="profile-picture"><img src="images/anessa.jpg" style="max-width: 100%;max-height: 120px;"></span><br><small class="grey">(活動版位圖片 720 x 360px)</small>
+											</div>
+											<div class="col-sm-5 col-xs-12 center">
+												<img src="kitty.gif" style="max-width: 100%;max-height: 120px;"><br><small class="grey">(收藏廣告圖示 100 x 100px)</small>
+											</div>
+										</div>
+										
+									</div><!-- 圖片 -->
+
+									<div class="col-xs-12 col-sm-7">
+
+										<table class="table">
+										  <tr>
+											<th width="15%" style="border-top:0">廣告 ID</th>
+											<td class="orange lead" style="border-top:0"><span>SN : 65412-1353131</span></td>
+										  </tr>
+										  <tr>
+											<th width="15%">廣告建立</th>
+											<td>
+												<span class="blue">王小美 - <small>2014-12-20 11:34</small></span>
+												<div class="pull-right purple">
+													<small>最後編輯：王大強 - 2015-01-19 22:02</small>
+												</div>
+											</td>
+										  </tr>
+										  <tr>
+											<th width="15%">廣告審查</th>
+											<td>
+												<span class="pink2">蔣有為 - <small>思樂行銷公關公司</small></span>
+											</td>
+										  </tr>
+										  
+										  <tr>
+											<th width="15%">廣告名稱</th>
+											<td>
+												<span>資生堂夏日美白護膚面膜</span>
+											</td>
+										  </tr>
+										    <tr>
+											<th width="15%">廣告主</th>
+											<td>資生堂彩妝有限公司</td>
+										  </tr>
+										    <tr>
+											<th width="15%">廣告板位</th>
+											<td>鎖 屏</td>
+										  </tr>
+										  </tr>
+										    <tr>
+											<th width="15%">廣告類別</th>
+											<td>保養美妝</td>
+										  </tr>
+										  <tr>
+											<th width="15%">負責業務</th>
+											<td>
+												<span>艾力克斯</span>
+												<span class="grey"> - 職 稱</span></td>
+										  </tr>
+										  <tr>
+											<th>刊登日期</th>
+											<td>2014-11-03 ～ 2014-11-10</td>
+										  </tr>
+										  <tr>
+											<th>刊登星期</th>
+											<td>一、二、三、四、五、六、日</td>
+										  </tr>
+										  <tr>
+											<th>廣告定向</th>
+											<td>
+												<div><i class="icon-caret-right blue"></i> 手動匯入名單：<span class="text-warning">檔案名稱, 人數</span></div>
+												<div><i class="icon-caret-right blue"></i> 條件定向：</div>
+												<dl class="dl-horizontal">
+													<dt><i class="icon-female blue"></i> &nbsp;性 別</dt>
+													<dd>全 部</dd>
+													<dt><i class="icon-asterisk blue"></i> &nbsp;年 齡</dt>
+													<dd>19歲以下、20~29歲、30~39歲、40~49歲、50~59歲、60歲以上</dd>
+													<dt><i class="icon-foursquare blue"></i> &nbsp;電信服務商</dt>
+													<dd>中華電信、台灣大哥大、遠傳、亞太、威寶、台灣之星、國基</dd>
+													<dt><i class="icon-windows blue"></i> &nbsp;作業系統</dt>
+													<dd>全部 <i class="icon-apple bigger-120 text-muted"></i> IOS ＋<i class="icon-android bigger-120 text-success"></i> Android</dd><!-- 三選一 -->
+													<dt><i class="icon-building-o blue"></i> &nbsp;常居城市</dt>
+													<dd>台北、新北市、基隆、桃園、新竹、苗栗、台中、彰化、南投、雲林、嘉義、台南、高雄、屏東、台東、花蓮、宜蘭、外島</dd>
+												</dl>
+											</td>
+										  </tr>
+										  <tr>
+											<th>廣告時段</th>
+											<td>
+												<p class="orange"><i class="icon-caret-right blue"></i> <i class="icon-clock-o bigger-110"></i> 整日 24hr</p><!-- 三選一 -->
+												<p class="purple"><i class="icon-caret-right blue"></i> CPM 指定時段價格 <span class="green">(NTD)</span></p><!-- 三選一 -->
+												<p class="blue"><i class="icon-caret-right blue"></i> CPA 指定時段價格  <span class="green">(NTD)</span></p><!-- 三選一 -->
+
+												<div class="col-sm-4">
+													<p>
+															<i class="icon-clock-o grey"></i>
+															<span> 00:00 ｜</span>
+															<span class="grey"> $ </span>
+														</p>
+														<p>
+															<i class="icon-clock-o grey"></i>
+															<span> 01:00 ｜</span>
+															<span class="grey"> $ </span>
+														</p>
+														<p>
+															<i class="icon-clock-o grey"></i>
+															<span> 02:00 ｜</span>
+															<span class="grey"> $ </span>
+														</p>
+														<p>
+															<i class="icon-clock-o grey"></i>
+															<span> 03:00 ｜</span>
+															<span class="grey"> $ </span>
+														</p>
+														<p>
+															<i class="icon-clock-o grey"></i>
+															<span> 04:00 ｜</span>
+															<span class="grey"> $ </span>
+														</p>
+														<p>
+															<i class="icon-clock-o grey"></i>
+															<span> 05:00 ｜</span>
+															<span class="grey"> $ </span>
+														</p>
+														<p>
+															<i class="icon-clock-o grey"></i>
+															<span> 06:00 ｜</span>
+															<span class="grey"> $ </span>
+														</p>
+														<p>
+															<i class="icon-check green"></i>
+															<span> 07:00 ｜</span>
+															<span class="red"> $ 2000</span>
+														</p>
+													</div>
+													<div class="col-sm-4">
+														<p>
+															<i class="icon-check green"></i>
+															<span> 08:00 ｜</span>
+															<span class="red"> $ 2000</span>
+														</p>
+														<p>
+															<i class="icon-clock-o grey"></i>
+															<span> 09:00 ｜</span>
+															<span class="grey"> $ </span>
+														</p>
+														<p>
+															<i class="icon-clock-o grey"></i>
+															<span> 10:00 ｜</span>
+															<span class="grey"> $ </span>
+														</p>
+														<p>
+															<i class="icon-clock-o grey"></i>
+															<span> 11:00 ｜</span>
+															<span class="grey"> $ </span>
+														</p>
+														<p>
+															<i class="icon-clock-o grey"></i>
+															<span> 12:00 ｜</span>
+															<span class="grey"> $ </span>
+														</p>
+														<p>
+															<i class="icon-check green"></i>
+															<span> 13:00 ｜</span>
+															<span class="grey"> $ </span>
+														</p>
+														<p>
+															<i class="icon-check green"></i>
+															<span> 14:00 ｜</span>
+															<span class="grey"> $ </span>
+														</p>
+														<p>
+															<i class="icon-clock-o grey"></i>
+															<span> 15:00 ｜</span>
+															<span class="grey"> $ </span>
+														</p>
+													</div>
+													<div class="col-sm-4">
+														<p>
+															<i class="icon-check green"></i>
+															<span> 16:00 ｜</span>
+															<span class="red"> $ 1500</span>
+														</p>
+														<p>
+															<i class="icon-check green"></i>
+															<span> 17:00 ｜</span>
+															<span class="red"> $ 1500</span>
+														</p>
+														<p>
+															<i class="icon-check green"></i>
+															<span> 18:00 ｜</span>
+															<span class="red"> $ 1500</span>
+														</p>
+														<p>
+															<i class="icon-clock-o grey"></i>
+															<span> 19:00 ｜</span>
+															<span class="grey"> $ </span>
+														</p>
+														<p>
+															<i class="icon-clock-o grey"></i>
+															<span> 20:00 ｜</span>
+															<span class="grey"> $ </span>
+														</p>
+														<p>
+															<i class="icon-clock-o grey"></i>
+															<span> 21:00 ｜</span>
+															<span class="grey"> $ </span>
+														</p>
+														<p>
+															<i class="icon-clock-o grey"></i>
+															<span> 22:00 ｜</span>
+															<span class="grey"> $ </span>
+														</p>
+														<p>
+															<i class="icon-clock-o grey"></i>
+															<span> 23:00 ｜</span>
+															<span class="grey"> $ </span>
+														</p>
+													</div><!-- /指定小時價格 -->
+												
+											</td>
+										  </tr>
+										</table><!-- /基本資料 -->
+
+									</div><!-- /.col -->
+								</div><!-- /.row -->
+								
+                                <div class="widget-box transparent">
+
+									<h4 class="header lighter purple">
+										<i class="icon-calendar bigger-120"></i>
+										CPM 設定
+									</h4>
+
+									<dl class="dl-horizontal">
+										<dt class="purple">廣告目標人數</dt>
+										<dd class="lead"><i class="icon-male bigger-120 blue"></i> 50,000 <span class="green">(人次)</span></dd>
+										<dt class="purple">廣告金額設定</dt>
+										<dd class="lead"><i class="icon-dollar text-warning"></i> 15000</dd>
+										<dt class="purple">可得點數</dt>
+										<dd class="lead"><i class="icon-dollar text-warning"></i> 10</dd>
+										<dt class="purple">限定瀏覽次數</dt>
+										<dd class="lead"><i class="icon-bolt orange"></i> 0 <span class="green">(次)</span></dd>
+										<dt class="purple">連結外網</dt>
+										<dd><i class="icon-link bigger-120 blue"></i> <a href="http://www.htc.com/tw/campaign/htc-one-m8/" target="_blank" >http://www.htc.com/tw/campaign/htc-one-m8/</a></dd>
+									</dl>
+
+								</div><!-- /CPM .widget-box -->
+
+								<div class="widget-box transparent">
+
+									<h4 class="header lighter blue">
+										<i class="icon-calendar-o bigger-120"></i>
+										CPA 設定
+									</h4>
+
+									<dl class="dl-horizontal">
+										<dt>廣告目標人數</dt>
+										<dd class="lead"><i class="icon-male bigger-120 blue"></i> 50,000 <span class="green">(人次)</span></dd>
+
+										<dt>廣告金額設定</dt>
+										<dd class="lead"><i class="icon-dollar text-warning"></i> 15000</dd>
+
+										<dt>可得點數</dt>
+										<dd class="lead"><i class="icon-dollar text-warning"></i> 5</dd>
+
+										<div class="space-12"></div><!-- /下方任務間距 -->
+
+										<dt><i class="icon-android bigger-120"></i> 下載 APP</dt>
+										<dd><i class="icon-android bigger-120 text-success"></i> <a href="https://play.google.com/store/apps/details?id=com.jytinc.app.ctgo" target="_blank" >https://play.google.com/store/apps/details?id=com.jytinc.app.ctgo</a></dd>
+										<dd><i class="icon-apple bigger-120 text-muted"></i> <a href="https://play.google.com/store/apps/details?id=jp.naver.line.android" target="_blank" >https://play.google.com/store/apps/details?id=jp.naver.line.android</a></dd>
+										<dd>
+											<p><i class="icon-exclamation-circle bigger-110 grey"></i> 任務敘述(文字)</p>
+											<hr>
+										</dd>
+
+										<dt><i class="icon-globe bigger-120"></i> 連結外網</dt>
+										<dd>
+											<a href="http://www.apple.com" target="_blank" >http://www.apple.com</a>
+											<p><i class="icon-exclamation-circle bigger-110 grey"></i> 任務敘述(文字)</p>
+											<hr>
+										</dd>
+
+										<dt><i class="icon-map-marker bigger-120"></i> FB 打卡</dt>
+										<dd>
+											<a href="https://www.facebook.com/" target="_blank" >https://www.facebook.com/</a>
+											<p><i class="icon-exclamation-circle bigger-110 grey"></i> 任務敘述(文字)</p>
+											<hr>
+										</dd>
+
+										<dt><i class="icon-facebook-square bigger-120"></i> FB 連結</dt>
+										<dd>
+											<span class="col-sm-2">
+												<img src="http://www.htc.com/managed-assets/shared/desktop/smartphones/htc-one-m8/pdp/image/explorer/htc-one-m8-en-slide-01-tw.png" style="width:100px;">
+											</span>
+											<div class="col-sm-10">
+												<p>連結： <a href="http://www.htc.com/tw/smartphones/" target="_blank">http://www.htc.com/tw/smartphones/</a></p>
+												<p>標題： HTC one M8</p>
+												<p>分享caption： HTC one M8</p>
+												<p>分享description： FB 分享連結得點數</p>
+												<p>說明： HTC One (M8) Duo 景深相機，可輕鬆拍出令人驚豔專業級照片，UFocus™ 可以重新任意選擇對焦點、前景突顯柔化背景，魔法幻境帶給你好玩的動畫呈現，還...</p>
+												<hr>
+											</div>
+										</dd>
+
+										<dt><i class="icon-facebook-square bigger-120"></i> FB 分享</dt>
+										<dd>
+											<a href="https://www.facebook.com/" target="_blank" >https://www.facebook.com/</a>
+											<p><i class="icon-exclamation-circle bigger-110 grey"></i> 任務敘述(文字)</p>
+											<hr>
+										</dd>
+
+										<dt><i class="icon-thumbs-o-up bigger-120"></i> FB 按讚</dt>
+										<dd>
+											<a href="https://www.facebook.com/HTCTaiwan?fref=ts" target="_blank" >https://www.facebook.com/HTCTaiwan?fref=ts</a>
+											<p><i class="icon-exclamation-circle bigger-110 grey"></i> 任務敘述(文字)</p>
+											<hr>
+										</dd>
+
+										<dt><i class="icon-calendar bigger-120"></i> FB 活動</dt>
+										<dd>
+											<a href="https://www.facebook.com/HTCTaiwan?fref=ts" target="_blank" >https://www.facebook.com/HTCTaiwan?fref=ts</a>
+											<p><i class="icon-exclamation-circle bigger-110 grey"></i> 任務敘述(文字)</p>
+											<hr>
+										</dd>
+
+										<dt>
+											<i class="icon-youtube-play bigger-120"></i> 廣告影片
+										</dt>
+										<dd>
+											<a href="https://www.youtube.com/watch?v=wrHhE-QXWvE" target="_blank" >https://www.youtube.com/watch?v=wrHhE-QXWvE</a>
+											<p><i class="icon-exclamation-circle bigger-110 grey"></i> 任務敘述(文字)</p>
+											<hr>
+										</dd>
+
+										<dt><i class="icon-ticket bigger-120"></i> 下載折價卷</dt>
+										<dd>
+											<span class="profile-picture">
+												<img src="coupon.jpg" style="max-width:80px;">
+											</span>
+											<label>
+												<p>　檔案名稱</p>
+												<p>　<i class="icon-exclamation-circle bigger-110 grey"></i> 任務敘述(文字)</p>
+											</label>
+											<hr>
+										</dd>
+
+										<dt><i class="icon-file-text-o bigger-120"></i> 測驗 (有正解)</dt>
+										<dd>
+											<p><i class="icon-bookmark-o bigger-120"></i> 任務標題(文字)</p>
+											<p><i class="icon-exclamation-circle bigger-110 grey"></i> 任務敘述(文字)</p>
+											<p class="orange"><i class="icon-arrow-circle-o-down bigger-110"></i> 提問問題選項 <span class="text-success">(正解答案)</span></p>
+											<ol class="text-muted">
+												<li><i class="icon-square-o"></i> 選項 1</li>
+												<li class="text-success"><i class="icon-check-square bi"></i> 選項 2</li>
+												<li><i class="icon-square-o"></i> 選項 3</li>
+												<li><i class="icon-square-o"></i> 選項 4</li>
+												<li><i class="icon-square-o"></i> 選項 5</li>
+												<li><i class="icon-square-o"></i> 選項 6</li>
+												<li><i class="icon-square-o"></i> 選項 7</li>
+												<li><i class="icon-square-o"></i> 選項 8</li>
+											</ol>
+										</dd>
+
+									</dl>
+								</div><!-- /CPA .widget-box -->
+								
+								<div class="well">
+									<div class="center">
+										<a href="#" class="btn btn-grey">
+											<i class="icon-arrow-left"></i>
+											返 回
+										</a>
+
+										<a href="#" class="btn btn-primary">
+											<i class="icon-edit"></i>
+											編輯廣告
+										</a>
+									</div>
+								</div>
+
+                                <div class="hr hr32 hr-dotted"></div>
+                                
+								<!-- PAGE CONTENT ENDS -->
+							</div><!-- /.col -->
+						</div><!-- /.row -->
+					</div><!-- /.page-content -->
+				</div><!-- /.main-content -->
+
+			</div><!-- /.main-container-inner -->
+
+			<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+				<i class="icon-angle-double-up icon-only bigger-110"></i>
+			</a>
+		</div><!-- /.main-container -->
+
+		<!-- basic scripts -->
+
+		<!--[if !IE]> -->
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+		<!-- <![endif]-->
+
+		<!--[if IE]>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<![endif]-->
+
+		<!--[if !IE]> -->
+
+		<script type="text/javascript">
+			window.jQuery || document.write("<script src='assets/js/jquery-2.0.3.min.js'>"+"<"+"/script>");
+		</script>
+
+		<!-- <![endif]-->
+
+		<!--[if IE]>
+<script type="text/javascript">
+ window.jQuery || document.write("<script src='assets/js/jquery-1.10.2.min.js'>"+"<"+"/script>");
+</script>
+<![endif]-->
+
+		<script type="text/javascript">
+			if("ontouchend" in document) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+		</script>
+		<script src="assets/js/bootstrap.min.js"></script>
+		<script src="assets/js/typeahead-bs2.min.js"></script>
+
+		<!-- page specific plugin scripts -->
+
+		<!-- ace scripts -->
+
+		<script src="assets/js/ace-elements.min.js"></script>
+		<script src="assets/js/ace.min.js"></script>
+
+		<!-- inline scripts related to this page -->
+	</body>
+</html>

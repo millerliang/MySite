@@ -1,0 +1,76 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>常見問題</title>
+<link rel="stylesheet" href="css/ionic.min.css">
+<script src="jquery-1.10.2.min.js" type="text/javascript"></script>
+<style type="text/css">
+body {margin:0;padding:0;}
+.wrap {font-family: "微軟正黑體","Microsoft Jhenghei",arial,sans-serif;margin-top:50px;/*-webkit-box-shadow: 0px 2px 4px 0px rgba(30, 30, 30, 50);box-shadow: 0px 2px 4px 0px rgba(30, 30, 30, 50);*/}
+.wrap ol {margin:1.5em 0em;}
+.wrap ol li {list-style:circle !important;color: #222;border-bottom:1px dotted #ddd;font-weight: bold;line-height: 1.2;margin: auto 0 0.8em auto;padding:8px 0 12px 2em;-webkit-transition: all 2s ease-in-out 0s; -moz-transition: all 2s ease-in-out 0s; -ms-transition: all 2s ease-in-out 0s; -o-transition: all 1s ease-in-out 0s; transition: all 2s ease-in-out 0s;}
+.wrap ol ul {display:none;list-style: none;margin:0;padding:6px 10px;background-color: #F5F5F5;margin-bottom: 1em;}
+.wrap ol ul li {position:relative;padding:0;color: #545454;font-weight:normal;line-height: 1.5;margin: 0.3em 0em;border-bottom:0px solid #ddd;}
+.wrap ol ul li span {top:-1.2em;position:absolute;border-style: solid;border-width: 0 15px 12px 15px;border-color: transparent transparent #f5f5f5 transparent;display: inline-block;}
+.qItem {cursor: pointer;}
+#accordion .set {color:#EF473A;-webkit-transition: all 1s ease-in-out 0s; -moz-transition: all 1s ease-in-out 0s; -ms-transition: all 1s ease-in-out 0s; -o-transition: all 1s ease-in-out 0s; transition: all 1s ease-in-out 0s;}
+</style>
+
+<script>
+$(document).ready(function(){
+	$('#accordion').find('.qItem').click(function(){
+		$('.qItem').removeClass('set');
+		var $aItem = $(this).next('ul.aItem');
+		if (!$aItem.is(':visible')) {
+   			$(this).addClass('set');
+			$('#accordion ul.aItem:visible').slideUp();
+		}
+		$(this).next().slideToggle();
+	})
+});
+</script>
+</head>
+
+<body>
+<div class="bar bar-header bar-assertive" style="position:fixed;top:0;width:100%;z-index:100;">
+	<button onclick="history.go(-1)" class="button icon-left ion-chevron-left">Back</button>
+	<div class="h1 title">幫助說明</div>
+	<button onclick="history.go(-1)" class="button">關 閉</button>
+</div>
+<div class="wrap">
+	<ol id="accordion">
+		<li class='qItem'>什麼是 BMCV 活動？</li><ul class='aItem'><li><span></span> BMCV 活動為 BMCV 活動平台獎勵用戶所提供之活動。用戶透過完成 BMCV 活動即可獲取各種虛擬點數或實體商品獎勵。</li></ul>
+		<li class='qItem'>我是否可以多次完成某一個 BMCV 活動？</li><ul class='aItem'><li><span></span>不可以。一旦您完成了活動，就不能再次進行操作。但是針對部分的 BMCV 活動，比如購買商品，您可以多次完成。 請仔細閱讀每個活動的具體說明。</li></ul>
+		<li class='qItem'>在 BMCV 平台以外完成了 BMCV 活動是否可以獲得獎勵？</li><ul class='aItem'><li><span></span>不可以。僅有透過  BMCV 中提供的連結，進而達到 BMCV 活動條件才能確認為完成。</li><li>如果您直接從廣告夥伴的網站或透過其他線下方式完成 BMCV 活動，然後才存取 BMCV ，這是不允許的，即使達成也將不會發送獎勵給您。</li></ul>
+		<li class='qItem'>如何確保成功的完成 BMCV 活動？</li><ul class='aItem'><li><span></span>為保證順利完成 BMCV 活動，請根據活動要求完成每步指令。 </li><li>舉例來說，若活動要求填寫「真實有效」的個人聯絡資訊，並且在活動完成前不要關閉瀏覽器。</li><li>如果您提交了錯誤的資訊或是活動中有關閉瀏覽器，因無法確認您的身分、或無法取得相關資料，則您將不會獲得優惠活動獎勵。</li></ul>
+		<li class='qItem'>我所填寫的資料是否會被洩漏出去？</li><ul class='aItem'><li><span></span>您參與活動所填寫的資料只是因應活動的需要，為了廣告主能夠跟您聯絡或是進行其他的接觸，我們並不會做其他用途，因此請您不要擔心，詳情可以至隱私政策裡查閱。</li></ul>
+		<li class='qItem'>為什麼我看不到任何 BMCV 活動？</li><ul class='aItem'><li><span></span>請確認您所填寫的生日是否已超過100歲？如已超過會不能看到活動。再請聯絡客服並提供正確生日，讓我們幫您進行修改。</li></ul>
+		<li class='qItem'>為什麼我不能註冊帳號？</li><ul class='aItem'><li><span></span> BMCV 目前只提供 BMCV 活動予台灣以及香港的玩家使用，如果您的ip位置是來自其他國家，我們將不會對您開放進行註冊。</li></ul>
+		<li class='qItem'>我找不到要完成的特定 BMCV 活動</li><ul class='aItem'><li><span></span>如果您正在尋找特定優惠活動但卻找一直不到，可能是它已暫時移除或是你已經完成過該特定的優惠活動。</li></ul>
+		<li class='qItem'>為什麼有些活動在帳號登入前會出現，登入之後卻又不見了？</li><ul class='aItem'><li><span></span>好康活動會有FB朋友數、年齡、地區、性別的限制，這些條件會造成您無法參與部分資格不符的活動，若還是有所疑問，再麻煩您寄信給客服人員。</li></ul>
+		<li class='qItem'>在完成過程中出現錯誤資訊？</li><ul class='aItem'><li><span></span>如果在活動過程中出現任何錯誤資訊，您將不會得到米幣獎勵。</li><li>倘若出現此種情況，請您提供您電腦的瀏覽器版本，或是其他相關的網路環境，提供給我們為您作問題排除。或是請您更換其他瀏覽器再試一次。</li></ul>
+		<li class='qItem'>為什麼我要參加的活動原本沒有限制參加後卻出現條件限制訊息呢？？</li><ul class='aItem'><li><span></span>請確認您是否已經參與過此活動，若您參與過此活動則會出現此訊息。若您確認過您尚未參與過此活動，再麻煩您提供該活動名稱及相關訊息供客服人員查詢。</li></ul>
+		<li class='qItem'>為什麼我完成活動了卻無法收取到獎勵？</li><ul class='aItem'><li><span></span>請確認您所參與的活動是否是審核活動，若是審核活動需要經過專員審核因此無法立即入帳，若您參與的活動是立即取得活動，請確認您的活動步驟都有確實執行，若有確實執行再麻煩您寄信通知給客服人員。</li></ul>
+		<li class='qItem'>為什麼我的帳戶狀態顯示為「等待確認」？</li><ul class='aItem'><li><span></span>當此活動需經廣告客戶審核，所以會顯示此情況，如後續經審核無誤會自動入帳。</li></ul>
+		<li class='qItem'>為什麼我的帳戶狀態顯示為「等待入帳」？</li><ul class='aItem'><li><span></span>獎勵正在發送中，請耐心等候。</li></ul>
+		<li class='qItem'>為什麼我的帳戶狀態顯示為「失敗」？</li><ul class='aItem'><li><span></span>這可能是您在參加 BMCV 活動之前，即完成了活動所需條件；或是同時間透過不同的瀏覽器參加了同一個 BMCV 活動，以及任何其他不允許的操作造成。</li><li>當然也有可能源自你所填寫的資料或是購買資訊不符合資格，造成廣告主的拒絕，請詳查活動完成的所需條件，如果還是有問題，請聯繫客服。</li></ul>
+		<li class='qItem'>為什麼我的帳戶狀態顯示為「審核失敗」？</li><ul class='aItem'><li><span></span>審核失敗是指當此審核活動，審核後您並未符合活動資格或是在參與活動30天後您並沒有確實完成活動步驟，則狀態會從等待確認改變為審核失敗。</li></ul>
+		<li class='qItem'>帳戶狀態顯示為「已入帳」，卻沒有收到遊戲幣獎勵</li><ul class='aItem'><li><span></span>假使您遇到了這個問題，請發送所有完成活動的證明到客服，以便您可收到米幣獎勵。</li><li>證明可能包括確認郵件、確認文字、截圖、付款收據、發票等，依活動類型而不同。 BMCV 客服需要您的證明來儘快幫您獲得米幣獎勵。</li></ul>
+		<li class='qItem'>為什麼我參加活動後，帳戶狀態顯示為「未中獎」？</li><ul class='aItem'><li><span></span>此活動為抽獎活動，代表沒有中獎，請再接再厲了。立即參加更多活動。</li></ul>
+		<li class='qItem'>為什麼我參加抽獎活動，卻沒有跳出福袋？</li><ul class='aItem'><li><span></span>部分的抽獎活動，因為需要連結到廠商的頁面，所以不會跳出福袋，但仍然是以您在 BMCV 活動牆中所看到的機率進行得獎的判定。</li><li>如果您想知道有沒有中獎，請到 BMCV 活動紀錄中查詢喔！立即前往 BMCV 活動紀錄。</li></ul>
+		<li class='qItem'>為什麼我已經輸入手機號碼卻收不到驗證碼呢？</li><ul class='aItem'><li><span></span>請您先確認手機號碼是否無誤，或是您的手機門號有設定過不接收廣告簡訊，若都設定無誤，再請您十分鐘後再傳送一次驗證碼。</li></ul>
+		<li class='qItem'>為什麼我會出現暫停發送驗證碼訊息呢？</li><ul class='aItem'><li><span></span>手機驗證碼十分鐘之內只能傳送一次且一組帳號只有三次機會可以傳送，若超過三次則會暫停發送簡訊。</li><li>若您出現此訊息，再麻煩您寄信給客服人員，且告知您已瞭解原因並提供您輸入驗證的手機號碼，客服人員會再為您查詢。</li></ul>
+		<li class='qItem'>為什麼手機驗證時我的手機號碼出現有被使用過的訊息呢？</li><ul class='aItem'><li><span></span>由於手機驗證一隻手機號碼只能驗證一組帳號，不能重複驗證，倘若您遇到了此訊息，請您更換別隻手機號碼進行驗證。</li></ul>
+		<li class='qItem'>我應該如何兌換點數？</li><ul class='aItem'><li><span></span>請前往兌換中心，選定您想要的商品就可以囉。</li></ul>
+		<li class='qItem'>我兌換完點數了，要去哪裡確認是否兌換成功呢？</li><ul class='aItem'><li><span></span>您可以去我的帳戶裡的「兌換歷史紀錄」，確認兌換狀態。若狀態在一個小時內都尚未變成兌換成功，則請您聯繫客戶服務。</li></ul>
+		<li class='qItem'>點數兌換完了，怎麼等待了一小時怎麼還是兌換進行中呢？</li><ul class='aItem'><li><span></span>此狀況是因為您兌換的點數正在缺貨當中，若您是在貨品充足時兌換卻出現此狀況，請您聯繫給客服人員，客服人員會再為您查詢。</li></ul>
+		<li class='qItem'>點數已經兌換成功了，怎麼還是看不到我的點數呢？</li><ul class='aItem'><li><span></span>您兌換完點數後，要麻煩您閱讀您所兌換的點數平台商品說明，依商品的不同，點數入帳的方式也會不同。</li></ul>
+		<li class='qItem'>我玩的遊戲有分伺服器，如果兌換的時候我選錯伺服器，請問可以改嗎？</li><ul class='aItem'><li><span></span>親愛的使用者，非常抱歉，由於 BMCV 活動平台只能認證且發送點數到您當時選擇的遊戲以及伺服器，因此無法作點數轉移的動作，請您見諒。但請千萬不要氣餒，我們陸續都會有不停的 BMCV 活動推出！</li></ul>
+		<li class='qItem'>取得遊戲幣三步驟</li><ul class='aItem'><li><span></span>1.請到您所玩的遊戲中找到 BMCV 活動牆，並且確認挑選您感興趣的 BMCV 活動</li><li>2.閱讀 BMCV 活動的指令，並依照指令完成活動</li><li>3.遊戲幣將會直接儲值到該遊戲帳戶當中(依活動屬性不同，有可能發生三天後才收到點數的狀況，請見諒)</li></ul>
+		<li class='qItem'>哪裡可以看到我獲得的遊戲幣？</li><ul class='aItem'><li><span></span>完成 BMCV 活動並通過確認後，請直接進入您參加 BMCV 活動的應用程式當中，即可看到您收到的獎勵。或是到 BMCV 活動紀錄查詢入帳情況。</li></ul>
+		<li class='qItem'>在 Facebook 遊戲中，儲值帳號與參加的帳號不同怎麼辦？</li><ul class='aItem'><li><span></span>親愛的使用者， BMCV 活動平台僅記錄您當時參加活動所使用的帳號。所以如果出現這種狀況，請您立即更換帳號，再請您留意了！</li></ul>
+	</ol>
+</div>
+</body>
+</html>

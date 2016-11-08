@@ -1,0 +1,2531 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>廣告新增 - 後台管理系統</title>
+
+		<meta name="description" content="" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- basic styles -->
+
+		<link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+
+		<!--[if IE 7]>
+		  <link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css" />
+		<![endif]-->
+
+		<!-- page specific plugin styles -->
+		<link rel="stylesheet" href="assets/css/daterangepicker.css" />
+		<link rel="stylesheet" href="assets/css/jquery-ui-1.10.3.custom.min.css" />
+		<link rel="stylesheet" href="assets/css/jquery.gritter.css" />
+		<link rel="stylesheet" href="assets/css/select2.css" />
+		<link rel="stylesheet" href="assets/css/bootstrap-editable.css" />
+
+		<!-- fonts -->
+
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" />
+
+		<!-- ace styles -->
+
+		<link rel="stylesheet" href="assets/css/ace.min.css" />
+		<link rel="stylesheet" href="assets/css/ace-rtl.min.css" />
+		<link rel="stylesheet" href="assets/css/ace-skins.min.css" />
+
+		<!--[if lte IE 8]>
+		  <link rel="stylesheet" href="assets/css/ace-ie.min.css" />
+		<![endif]-->
+
+		<!-- inline styles related to this page -->
+
+		<!-- ace settings handler -->
+
+		<script src="assets/js/ace-extra.min.js"></script>
+
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+
+		<!--[if lt IE 9]>
+		<script src="assets/js/html5shiv.js"></script>
+		<script src="assets/js/respond.min.js"></script>
+		<![endif]-->
+		
+		<style type="text/css"> 
+		.widget-box {
+		  margin-bottom:0;
+		}
+		.widget-box h4 {
+		  margin:0;
+		}
+		.widget-body {
+		  margin-top:10px;
+		  border-top: 1px solid #eaeaea!important;
+		}
+		.add_btn div {
+			border-radius: 7px!important;
+			text-align:left;
+			padding-left:6px;
+			position:reactive;
+			z-index:100;
+		}
+		.add_btn div .icon-on-right {
+			float:right;
+			margin-top:3px;
+		{
+		
+		@-webkit-keyframes fadeOutRight {
+		  0% {
+			opacity: 1;
+			-webkit-transform: translateX(0);
+			transform: translateX(0);
+		  }
+
+		  100% {
+			opacity: 0;
+			-webkit-transform: translateX(20px);
+			transform: translateX(20px);
+		  }
+		}
+
+		@keyframes fadeOutRight {
+		  0% {
+			opacity: 1;
+			-webkit-transform: translateX(0);
+			-ms-transform: translateX(0);
+			transform: translateX(0);
+		  }
+
+		  100% {
+			opacity: 0;
+			-webkit-transform: translateX(20px);
+			-ms-transform: translateX(20px);
+			transform: translateX(20px);
+		  }
+		}
+
+		.fadeOutRight {
+		  -webkit-animation-name: fadeOutRight;
+		  animation-name: fadeOutRight;
+		}
+	  </style>
+	</head>
+
+	<body>
+		<div class="navbar navbar-default" id="navbar">
+
+			<script type="text/javascript">
+				try{ace.settings.check('navbar' , 'fixed')}catch(e){}
+			</script>
+
+			<div class="navbar-container" id="navbar-container">
+				<div class="navbar-header pull-left logo">
+					<a href="index.html" class="navbar-brand">
+						<small>
+							後台管理系統
+						</small>
+					</a><!-- /.brand -->
+				</div><!-- /.navbar-header -->
+
+				<div class="navbar-header pull-right" role="navigation">
+					<ul class="nav ace-nav">
+						<li class="color">
+							<a data-toggle="dropdown" class="dropdown-toggle" href="#">
+								<i class="icon-envelope icon-animated-vertical"></i>
+								<span class="badge badge-important">12</span>
+							</a>
+
+							<ul class="pull-right dropdown-navbar navbar-pink dropdown-menu dropdown-caret dropdown-times">
+								<li>
+									<a href="user_feedback.html">
+										<div class="clearfix">
+											<span class="pull-left">
+												<i class="btn btn-xs no-hover btn-success icon-user"></i>
+												客服管理
+											</span>
+											<span class="pull-right badge badge-success">+8</span>
+										</div>
+									</a>
+								</li>
+
+								<li>
+									<a href="user_feedback.html">
+										查看所有通知
+										<i class="icon-arrow-right"></i>
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li class="light-blue">
+							<a data-toggle="dropdown" href="#" class="dropdown-toggle">
+								<img class="nav-user-photo" src="assets/avatars/avatar4.png" alt="Jason's Photo" />
+								<span class="user-info">
+									<small>您好, 歡迎</small>
+									超級管理員
+								</span>
+
+								<i class="icon-caret-down"></i>
+							</a>
+
+							<ul class="user-menu pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
+								<li>
+									<a href="admin_profile.html">
+										<i class="icon-user"></i>
+										個人資料
+									</a>
+								</li>
+
+								<li class="divider"></li>
+
+								<li>
+									<a href="login.html">
+										<i class="icon-power-off"></i>
+										登 出
+									</a>
+								</li>
+							</ul>
+						</li>
+					</ul><!-- /.ace-nav -->
+				</div><!-- /.navbar-header -->
+			</div><!-- /.container -->
+		</div>
+
+		<div class="main-container" id="main-container">
+			<script type="text/javascript">
+				try{ace.settings.check('main-container' , 'fixed')}catch(e){}
+			</script>
+
+			<div class="main-container-inner">
+				<a class="menu-toggler" id="menu-toggler" href="#">
+					<span class="menu-text"></span>
+				</a>
+
+				<div class="sidebar" id="sidebar">
+					<script type="text/javascript">
+						try{ace.settings.check('sidebar' , 'fixed')}catch(e){}
+					</script>
+
+					<ul class="nav nav-list">
+						<li>
+							<a href="index.html">
+								<i class="icon-home"></i>
+								<span class="menu-text"> 首 頁 </span>
+							</a>
+						</li>
+
+						<li>
+							<a href="admin_group.html">
+								<i class="icon-user-md"></i>
+								<span class="menu-text"> 系統管理員群組 </span>
+							</a>
+						</li>
+
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-th"></i>
+								<span class="menu-text"> 商城商品管理 </span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="market_manager.html">
+										<i class="icon-double-angle-right"></i>
+										商品總覽
+									</a>
+								</li>
+								<li>
+									<a href="market_orderlist.html">
+										<i class="icon-double-angle-right"></i>
+										訂單管理
+									</a>
+								</li>
+                                <li>
+									<a href="market_new.html">
+										<i class="icon-double-angle-right"></i>
+										新增商品
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li class="active open">
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-cloud-upload"></i>
+								<span class="menu-text"> 廣告管理 </span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="ad_manager.html">
+										<i class="icon-double-angle-right"></i>
+										廣告總覽
+									</a>
+								</li>
+                                <li class="active">
+									<a href="ad_new.html">
+										<i class="icon-double-angle-right"></i>
+										新增廣告
+									</a>
+								</li>
+								<li>
+									<a href="ad_admin.html">
+										<i class="icon-double-angle-right"></i>
+										廣告審查
+									</a>
+								</li>
+								<li>
+									<a href="ad_type.html">
+										<i class="icon-double-angle-right"></i>
+										廣告類別
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="#" class="dropdown-toggle"> 
+								<i class="icon-codepen"></i> <span class="menu-text"> 序號管理 </span> 
+								<b class="arrow icon-angle-down"></b>
+							</a>
+							<ul class="submenu">
+								<li>
+									<a href="sn_list.html"> <i class="icon-double-angle-right"></i> 序號總覽</a>
+								</li>
+
+								<li>
+									<a href="sn_create.html"> <i class="icon-double-angle-right"></i> 新增序號</a>
+								</li>
+
+							</ul>
+						</li>
+
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-users"></i>
+								<span class="menu-text"> 會員管理 </span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="user_group.html">
+										<i class="icon-double-angle-right"></i>
+										會員總覽
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-rocket"></i>
+								<span class="menu-text"> 商家管理 </span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="sell_manager.html">
+										<i class="icon-double-angle-right"></i>
+										商家總覽
+									</a>
+								</li>
+								<li>
+									<a href="sell_new.html">
+										<i class="icon-double-angle-right"></i>
+										新增商家
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="user_feedback.html">
+								<i class="icon-wechat"></i>
+								<span class="menu-text"> 客服管理 </span>
+							</a>
+						</li>
+
+						<li>
+							<a href="sys_postnews.html">
+								<i class="icon-laptop"></i>
+								<span class="menu-text"> 公告管理 </span>
+							</a>
+						</li>
+
+						<li>
+							<a href="sys_announcement.html">
+								<i class="icon-bullhorn"></i>
+								<span class="menu-text"> 消息管理 </span>
+							</a>
+						</li>
+
+                        <li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-bar-chart-o"></i>
+								<span class="menu-text"> 數據分析 </span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="analysis_isp.html">
+										<i class="icon-double-angle-right"></i>
+										基本分析
+									</a>
+								</li>
+
+								<li>
+									<a href="analysis_local.html">
+										<i class="icon-double-angle-right"></i>
+										依地區地域分布
+									</a>
+								</li>
+								
+                                <li>
+									<a href="analysis_trend.html">
+										<i class="icon-double-angle-right"></i>
+										APP 使用次數趨勢圖
+									</a>
+								</li>
+                                <li>
+									<a href="analysis_boot.html">
+										<i class="icon-double-angle-right"></i>
+										開機次數趨勢圖
+									</a>
+								</li>
+							</ul>
+						</li>
+						
+                        <li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-adn"></i>
+								<span class="menu-text"> APP 類別管理 </span>
+                                <b class="arrow icon-angle-down"></b>
+							</a>
+                            
+                            <ul class="submenu">
+								<li>
+									<a href="app_catalog.html">
+										<i class="icon-double-angle-right"></i>
+										APP 類型歸類對應
+									</a>
+								</li>
+
+								<li>
+									<a href="mobile_device.html">
+										<i class="icon-double-angle-right"></i>
+										手機型號裝置對應
+									</a>
+								</li>
+							</ul>
+						</li>
+					</ul><!-- /.nav-list -->
+
+					<div class="sidebar-collapse" id="sidebar-collapse">
+						<i class="icon-angle-double-left" data-icon1="icon-angle-double-left" data-icon2="icon-angle-double-right"></i>
+					</div>
+
+					<script type="text/javascript">
+						try{ace.settings.check('sidebar' , 'collapsed')}catch(e){}
+					</script>
+				</div>
+
+				<div class="main-content">
+					<div class="breadcrumbs" id="breadcrumbs">
+						<script type="text/javascript">
+							try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
+						</script>
+
+						<ul class="breadcrumb">
+							<li>
+								<i class="icon-home home-icon"></i>
+								<a href="index.html">Home</a>
+							</li>
+							<li>
+								<a href="ad_manager.html">廣告總覽</a>
+							</li>
+							<li class="active">新增廣告</li>
+						</ul><!-- .breadcrumb -->
+
+						<div class="nav-search" id="nav-search">
+							<form class="form-search">
+								<span class="input-icon">
+									<input type="text" placeholder="搜尋 ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
+									<i class="icon-search nav-search-icon"></i>
+								</span>
+							</form>
+						</div><!-- #nav-search -->
+					</div>
+
+					<div class="page-content">
+						<div class="page-header">
+							<h1>
+								<i class="icon-file-o"></i>
+								新增廣告
+								<small>
+									<i class="icon-angle-double-right"></i>
+								    輸入基本資料 &amp; 上下架時程排定
+								</small>
+							</h1>
+						</div>
+
+						<div class="row">
+							<div class="col-sm-12">
+								<!-- PAGE CONTENT BEGINS -->
+
+								<form class="form-horizontal" role="form">
+
+									<div class="form-group">
+										<label class="col-sm-2 control-label no-padding-right"><b class="red">*</b> 廣告主 </label>
+										<div class="col-sm-10">
+											<input type="text" placeholder="請輸入廣告主名稱" class="col-xs-10 col-sm-5">
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-sm-2 control-label no-padding-right"><b class="red">*</b> 廣告名稱 </label>
+										<div class="col-sm-10">
+											<input type="text" placeholder="請輸入廣告名稱" class="col-xs-10 col-sm-5">
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-sm-2 control-label no-padding-right"><b class="red">*</b> 廣告版位 </label>
+										<div class="col-sm-10">
+											<select class="form-control input-large">
+												<option value="a">鎖屏區</option>
+												<option value="b">APP 首頁</option>
+											</select>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-sm-2 control-label no-padding-right"><b class="red">*</b> 廣告類別 </label>
+										<div class="col-sm-10">
+											<select class="input-large">
+												<option value="">廣告類別</option>
+												<option value="type1">1.零售</option>
+												<option value="type2">2.3C</option>
+												<option value="type3">3.遊戲</option>
+												<option value="type4">4.美妝</option>
+												<option value="type5">5.精品</option>
+												<option value="type6">6.食品</option>
+												<option value="type7">7.飲品</option>
+												<option value="type8">8.酒類</option>
+												<option value="type9">9.香煙</option>
+												<option value="type10">10.汽車</option>
+												<option value="type11">11.金融</option>
+												<option value="type12">12.保險</option>
+												<option value="type13">13.建築</option>
+												<option value="type14">14.娛樂</option>
+												<option value="type15">15醫療保健</option>
+												<option value="type16">16.家庭日用清潔</option>
+												<option value="type17">17.家具</option>
+												<option value="type18">18.專業服務</option>
+												<option value="new_type">新增類別...</option>
+											</select>
+											<input type="text" placeholder="請輸入新類別名稱">
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="col-sm-2 control-label no-padding-right"><b class="red">*</b> 刊登日期 </label>
+										<div class="col-sm-10">
+											<div class="input-group">
+												<span class="input-group-addon">
+													<i class="icon-calendar bigger-110"></i>
+												</span>
+												<input type="text" name="date-range-picker">
+											&nbsp;
+											<label>
+												<input name="form-field-checkbox" type="checkbox" class="ace">
+												<span class="lbl"> 一 </span>
+											</label>
+											&nbsp;
+											<label>
+												<input name="form-field-checkbox" type="checkbox" class="ace">
+												<span class="lbl"> 二 </span>
+											</label>
+											&nbsp;
+											<label>
+												<input name="form-field-checkbox" type="checkbox" class="ace">
+												<span class="lbl"> 三 </span>
+											</label>
+											&nbsp;
+											<label>
+												<input name="form-field-checkbox" type="checkbox" class="ace">
+												<span class="lbl"> 四 </span>
+											</label>
+											&nbsp;
+											<label>
+												<input name="form-field-checkbox" type="checkbox" class="ace">
+												<span class="lbl"> 五 </span>
+											</label>
+											&nbsp;
+											<label>
+												<input name="form-field-checkbox" type="checkbox" class="ace">
+												<span class="lbl"> 六 </span>
+											</label>
+											&nbsp;
+											<label>
+												<input name="form-field-checkbox" type="checkbox" class="ace">
+												<span class="lbl"> 日 </span>
+											</label>
+											
+											</div><!-- DatePicker -->
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="col-sm-2 control-label no-padding-right"><b class="red">*</b> 廣告定向 </label>
+										<div class="col-sm-10">
+											<label>
+												<input name="form-field-radio3" type="radio" class="ace module" checked>
+												<span class="lbl"> 模組定向</span>
+											</label>
+											<label>
+												<input name="form-field-radio3" type="radio" class="ace inputfile">
+												<span class="lbl"> 手動匯入定向名單 </span>
+											</label>
+											<div class="space-6"></div>
+											<table class="table">
+											  <tr>
+												<th width="14%">性別</th>
+													<td>
+													<label>
+														<input type="radio" name="sex" class="ace" checked>
+														<span class="lbl">  全部 </span>
+													</label>
+													<label>
+														<input type="radio" name="sex" class="ace">
+														<span class="lbl">  男 </span>
+													</label>
+													<label>	
+														<input type="radio" name="sex" class="ace">
+														<span class="lbl">  女 </span>
+													</label>
+												</td>
+											  </tr>
+											  <tr>
+												<th>年齡級別</th>
+												<td>															
+													<p>
+														<label>
+															<input type="radio" name="age" class="ace" checked>
+															<span class="lbl">  全 部 </span>
+														</label>
+														<label>
+															<input type="radio" name="age" class="ace">
+															<span class="lbl">  自定義 </span>
+														</label>
+													</p>
+													<p>
+														<label>
+															<input type="checkbox" name="age1" class="ace">
+															<span class="lbl"> 19歲以下 </span>
+														</label>
+														<label>
+															<input type="checkbox" name="age2" class="ace">
+															<span class="lbl"> 20~29歲 </span>
+														</label>
+														<label>
+															<input type="checkbox" name="age3" class="ace">
+															<span class="lbl"> 30~39歲 </span>
+														</label>
+														<label>
+															<input type="checkbox" name="age4" class="ace">
+															<span class="lbl"> 40~49歲 </span>
+														</label>
+														<label>
+															<input type="checkbox" name="age5" class="ace">
+															<span class="lbl"> 50~59歲 </span>
+														</label>
+														<label>
+															<input type="checkbox" name="age6" class="ace">
+															<span class="lbl"> 60歲以上 </span>
+														</label>
+													</p>
+												</td>
+											  </tr>
+											  <tr>
+												<th>電信服務商</th>
+												<td>
+													<label>
+														<input type="checkbox" name="isp1" class="ace">
+														<span class="lbl"> 中華電信 </span>
+													</label>
+													<label>
+														<input type="checkbox" name="isp2" class="ace">
+														<span class="lbl"> 台灣大哥大 </span>
+													</label>
+													<label>
+														<input type="checkbox" name="isp3" class="ace">
+														<span class="lbl"> 遠傳 </span>
+													</label>
+													<label>
+														<input type="checkbox" name="isp4" class="ace">
+														<span class="lbl"> 亞太 </span>
+													</label>
+													<label>
+														<input type="checkbox" name="isp5" class="ace">
+														<span class="lbl"> 威寶 </span>
+													</label>
+													<label>
+														<input type="checkbox" name="isp6" class="ace">
+														<span class="lbl"> 台灣之星 </span>
+													</label>
+													<label>
+														<input type="checkbox" name="isp7" class="ace">
+														<span class="lbl"> 國基 </span>
+													</label>
+												</td>
+											  </tr>
+											  <tr>
+												<th>作業系統</th>
+												<td>
+													<label>
+														<input type="radio" name="sys" class="ace" checked>
+														<span class="lbl">  全 部 </span>
+													</label>
+													<label>
+														<input type="radio" name="sys" class="ace">
+														<span class="lbl">  Android </span>
+													</label>
+													<label>	
+														<input type="radio" name="sys" class="ace">
+														<span class="lbl">  IOS </span>
+													</label>
+												</td>
+											  </tr>
+											  <tr>
+												<th>常居城市</th>
+												<td>
+													<p>
+														<label>
+															<input type="radio" name="loc" class="ace" checked>
+															<span class="lbl">  全 部 </span>
+														</label>
+														<label>
+															<input type="radio" name="loc" class="ace">
+															<span class="lbl">  自 定 </span>
+														</label>
+													</p>
+													<p>
+														<label>	
+															<input type="checkbox" name="local" class="ace">
+															<span class="lbl"> 台北 </label>
+														</label>
+														<label>	
+															<input type="checkbox" name="local" class="ace">
+															<span class="lbl"> 新北市 </span>
+														</label>
+														<label>	
+															<input type="checkbox" name="local" class="ace">
+															<span class="lbl"> 基隆 </span>
+														</label>
+														<label>	
+															<input type="checkbox" name="local" class="ace">
+															<span class="lbl"> 桃園 </span>
+														</label>
+														<label>	
+															<input type="checkbox" name="local" class="ace">
+															<span class="lbl"> 新竹 </span>
+														</label>
+														<label>	
+															<input type="checkbox" name="local" class="ace">
+															<span class="lbl"> 苗栗 </span>
+														</label>
+														<label>	
+															<input type="checkbox" name="local" class="ace">
+															<span class="lbl"> 台中 </span>
+														</label>
+														<label>	
+															<input type="checkbox" name="local" class="ace">
+															<span class="lbl"> 彰化 </span>
+														</label>
+														<label>	
+															<input type="checkbox" name="local" class="ace">
+															<span class="lbl"> 南投 </span>
+														</label>
+														<label>	
+															<input type="checkbox" name="local" class="ace">
+															<span class="lbl"> 雲林 </span>
+														</label>
+														<label>	
+															<input type="checkbox" name="local" class="ace">
+															<span class="lbl"> 嘉義 </span>
+														</label>
+														<label>	
+															<input type="checkbox" name="local" class="ace">
+															<span class="lbl"> 台南 </span>
+														</label>
+														<label>	
+															<input type="checkbox" name="local" class="ace">
+															<span class="lbl"> 高雄 </span>
+														</label>
+														<label>	
+															<input type="checkbox" name="local" class="ace">
+															<span class="lbl"> 屏東 </span>
+														</label>
+														<label>	
+															<input type="checkbox" name="local" class="ace">
+															<span class="lbl"> 台東 </span>
+														</label>
+														<label>	
+															<input type="checkbox" name="local" class="ace">
+															<span class="lbl"> 花蓮 </span>
+														</label>
+														<label>	
+															<input type="checkbox" name="local" class="ace">
+															<span class="lbl"> 宜蘭 </span>
+														</label>
+														<label>	
+															<input type="checkbox" name="local" class="ace">
+															<span class="lbl"> 外島 </span>
+														</label>
+													</p>
+												</td>
+											  </tr>
+											</table>
+											
+											<div class="col-sm-6 fileupload">
+												<h4 class="text-success">檔案上傳</h4>
+												<input type="file" id="id-input-file-1"/>
+												<span class="text-warning">檔案名稱.xexl (10,336 人)</span>
+											</div>
+
+											<div class="row"></div>
+
+											<h4 class="header grey bolder smaller">
+												<i class="icon-picture-o bigger-120"></i>
+												廣告圖片上傳
+											</h4>
+
+											<div class="row">
+												<div class="col-xs-12 col-sm-4">
+													<input type="file" id="id-input-file-3"/>
+												</div>
+
+												<div class="vspace-xs"></div>
+
+												<div class="col-xs-12 col-sm-8">
+													<div class="form-group">
+														<label class="col-sm-4 control-label no-padding-right" for="form-field-username">小圖示圖片</label>
+
+														<div class="col-sm-8">
+															<input type="file" id="id-input-file-2"/>
+														</div>
+													</div>
+
+													<div class="space-4"></div>
+
+													<div class="form-group">
+														<label class="col-sm-3 control-label no-padding-right"></label>
+
+														<div class="col-sm-9">
+															<blockquote><span class="red">鎖屏廣告檔案尺寸：720 x 1280像素，限制 100kb 以下。<br/>首頁廣告檔案尺寸：1080 x 540像素，限制 100kb 以下。</span>
+																<small>
+																	小圖示圖片尺寸：100 x 100 像素，請使用 jpg 或 png 格式。</cite>
+																</small>
+															</blockquote>
+														</div>
+													</div>
+												</div>
+											</div><!-- 圖片上傳 -->
+											
+											
+										</div><!-- col -->
+										
+									</div>
+									<div class="form-group">
+										<label class="col-sm-2 control-label no-padding-right red"><i class="icon-spin icon-asterisk bigger-120"></i> 計費類型 </label>
+										<div class="col-sm-10">
+											<select class="form-control input-large">
+												<option value="zero">請選取...</option>
+												<option value="cpa" class="blue">CPA</option>
+												<option value="cpm" class="purple">CPM</option>
+											</select>(註：選取後顯示下方設定)
+										</div>
+									</div>
+
+									<h4 class="header purple bolder smaller">
+										<i class="icon-calendar bigger-120"></i>
+										CPM 設定
+									</h4>
+
+									<div class="form-group">
+										<label class="col-sm-2 control-label no-padding-right"> 廣告目標人數 </label>
+										<div class="col-sm-10">
+											<label>
+												<input name="form-field-radio4" type="radio" class="ace" checked>
+												<span class="lbl"> 無上限 </span>
+											</label>
+											<label>
+												<input name="form-field-radio4" type="radio" class="ace">
+												<span class="lbl"> 上限 </span>
+											</label>
+											<input type="text" placeholder="50000" value="">
+											<label>
+												<input type="checkbox" name="viewSce" class="ace">
+												<span class="lbl"> 單機限定瀏覽次數 </span>
+												<!-- <input type="text" style="width:60px;" value=""> -->
+											</label>
+											<label>
+												<select class="form-control input-large" style="width:auto;">
+													<option value="zero">請選擇次數...</option>
+													<option value="1">1</option>
+													<option value="2">2</option>
+													<option value="3">3</option>
+													<option value="4">4</option>
+													<option value="5">5</option>
+												</select>
+											</label>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="col-sm-2 control-label no-padding-right purple"> $ 廣告金額 </label>
+										<div class="col-sm-10">
+											<label>
+												<input type="text" class="input-sm"><span class="text-success"> (NTD) </span>
+											</label>
+											<label>	
+												<span class="purple">　得點數 </span><input type="text" style="width:60px;">
+											</label>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="col-sm-2 control-label no-padding-right">
+											<input type="checkbox" name="outURL" class="ace">
+											<span class="lbl"> 連結外網 </span>
+										</label>
+										<div class="col-sm-10">
+											<input class="input-xxlarge" type="text" placeholder="連結網址張貼"><!-- <a href="#" target="_blank"><i class="icon-globe bigger-120"></i> 瀏覽網頁</a> -->
+										</div>
+									</div>
+									
+									<div class="form-group">
+										<label class="col-sm-2 control-label no-padding-right"><i class="icon-clock-o bigger-110"></i> 廣告時段 </label>
+										<div class="col-sm-10">
+											
+												<label>
+													<input name="time-checkbox" type="checkbox" id="clickAll" class="ace">
+													<span class="lbl"> 整日 24hr　</span>
+												</label>
+												<label>
+													<input name="upPrice" type="checkbox" id="upPrice" class="ace">
+													<span class="lbl"> CPM 指定時段價格 </span>
+												</label>
+
+											<div class="row showtime">
+												<hr>
+												<div class="col-lg-12" style="white-space: nowrap;">
+													<div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
+														<label>
+															<input name="time-checkbox" type="checkbox" class="ace">
+															<span class="lbl"> 00:00 </span>｜
+														</label>
+														<label>
+															<span class="purple"> 價格 $ </span><input type="text" class="input-small">
+														</label>
+													</div>
+													<div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
+														<label>
+															<input name="time-checkbox" type="checkbox" class="ace">
+															<span class="lbl"> 01:00 </span>｜
+														</label>
+														<label>
+															<span class="purple"> 價格 $ </span><input type="text" class="input-small">
+														</label>
+													</div>
+													<div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
+														<label>
+															<input name="time-checkbox" type="checkbox" class="ace">
+															<span class="lbl"> 02:00 </span>｜
+														</label>
+														<label>
+															<span class="purple"> 價格 $ </span><input type="text" class="input-small">
+														</label>
+													</div>
+													<div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
+														<label>
+															<input name="time-checkbox" type="checkbox" class="ace">
+															<span class="lbl"> 03:00 </span>｜
+														</label>
+														<label>
+															<span class="purple"> 價格 $ </span><input type="text" class="input-small">
+														</label>
+													</div>
+													<div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
+														<label>
+															<input name="time-checkbox" type="checkbox" class="ace">
+															<span class="lbl"> 04:00 </span>｜
+														</label>
+														<label>
+															<span class="purple"> 價格 $ </span><input type="text" class="input-small">
+														</label>
+													</div>
+													<div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
+														<label>
+															<input name="time-checkbox" type="checkbox" class="ace">
+															<span class="lbl"> 05:00 </span>｜
+														</label>
+														<label>
+															<span class="purple"> 價格 $ </span><input type="text" class="input-small">
+														</label>
+													</div>
+													<div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
+														<label>
+															<input name="time-checkbox" type="checkbox" class="ace">
+															<span class="lbl"> 06:00 </span>｜
+														</label>
+														<label>
+															<span class="purple"> 價格 $ </span><input type="text" class="input-small">
+														</label>
+													</div>
+													<div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
+														<label>
+															<input name="time-checkbox" type="checkbox" class="ace">
+															<span class="lbl"> 07:00 </span>｜
+														</label>
+														<label>
+															<span class="purple"> 價格 $ </span><input type="text" class="input-small">
+														</label>
+													</div>
+													<div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
+														<label>
+															<input name="time-checkbox" type="checkbox" class="ace">
+															<span class="lbl"> 08:00 </span>｜
+														</label>
+														<label>
+															<span class="purple"> 價格 $ </span><input type="text" class="input-small">
+														</label>
+													</div>
+													<div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
+														<label>
+															<input name="time-checkbox" type="checkbox" class="ace">
+															<span class="lbl"> 09:00 </span>｜
+														</label>
+														<label>
+															<span class="purple"> 價格 $ </span><input type="text" class="input-small">
+														</label>
+													</div>
+													<div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
+														<label>
+															<input name="time-checkbox" type="checkbox" class="ace">
+															<span class="lbl"> 10:00 </span>｜
+														</label>
+														<label>
+															<span class="purple"> 價格 $ </span><input type="text" class="input-small">
+														</label>
+													</div>
+													<div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
+														<label>
+															<input name="time-checkbox" type="checkbox" class="ace">
+															<span class="lbl"> 11:00 </span>｜
+														</label>
+														<label>
+															<span class="purple"> 價格 $ </span><input type="text" class="input-small">
+														</label>
+													</div>
+													<div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
+														<label>
+															<input name="time-checkbox" type="checkbox" class="ace">
+															<span class="lbl"> 12:00 </span>｜
+														</label>
+														<label>
+															<span class="purple"> 價格 $ </span><input type="text" class="input-small">
+														</label>
+													</div>
+													<div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
+														<label>
+															<input name="time-checkbox" type="checkbox" class="ace">
+															<span class="lbl"> 13:00 </span>｜
+														</label>
+														<label>
+															<span class="purple"> 價格 $ </span><input type="text" class="input-small">
+														</label>
+													</div>
+													<div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
+														<label>
+															<input name="time-checkbox" type="checkbox" class="ace">
+															<span class="lbl"> 14:00 </span>｜
+														</label>
+														<label>
+															<span class="purple"> 價格 $ </span><input type="text" class="input-small">
+														</label>
+													</div>
+													<div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
+														<label>
+															<input name="time-checkbox" type="checkbox" class="ace">
+															<span class="lbl"> 15:00 </span>｜
+														</label>
+														<label>
+															<span class="purple"> 價格 $ </span><input type="text" class="input-small">
+														</label>
+													</div>
+													<div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
+														<label>
+															<input name="time-checkbox" type="checkbox" class="ace">
+															<span class="lbl"> 16:00 </span>｜
+														</label>
+														<label>
+															<span class="purple"> 價格 $ </span><input type="text" class="input-small">
+														</label>
+													</div>
+													<div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
+														<label>
+															<input name="time-checkbox" type="checkbox" class="ace">
+															<span class="lbl"> 17:00 </span>｜
+														</label>
+														<label>
+															<span class="purple"> 價格 $ </span><input type="text" class="input-small">
+														</label>
+													</div>
+													<div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
+														<label>
+															<input name="time-checkbox" type="checkbox" class="ace">
+															<span class="lbl"> 18:00 </span>｜
+														</label>
+														<label>
+															<span class="purple"> 價格 $ </span><input type="text" class="input-small">
+														</label>
+													</div>
+													<div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
+														<label>
+															<input name="time-checkbox" type="checkbox" class="ace">
+															<span class="lbl"> 19:00 </span>｜
+														</label>
+														<label>
+															<span class="purple"> 價格 $ </span><input type="text" class="input-small">
+														</label>
+													</div>
+													<div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
+														<label>
+															<input name="time-checkbox" type="checkbox" class="ace">
+															<span class="lbl"> 20:00 </span>｜
+														</label>
+														<label>
+															<span class="purple"> 價格 $ </span><input type="text" class="input-small">
+														</label>
+													</div>
+													<div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
+														<label>
+															<input name="time-checkbox" type="checkbox" class="ace">
+															<span class="lbl"> 21:00 </span>｜
+														</label>
+														<label>
+															<span class="purple"> 價格 $ </span><input type="text" class="input-small">
+														</label>
+													</div>
+													<div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
+														<label>
+															<input name="time-checkbox" type="checkbox" class="ace">
+															<span class="lbl"> 22:00 </span>｜
+														</label>
+														<label>
+															<span class="purple"> 價格 $ </span><input type="text" class="input-small">
+														</label>
+													</div>
+													<div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
+														<label>
+															<input name="time-checkbox" type="checkbox" class="ace">
+															<span class="lbl"> 23:00 </span>｜
+														</label>
+														<label>
+															<span class="purple"> 價格 $ </span><input type="text" class="input-small">
+														</label>
+													</div>
+												</div>
+											</div>
+
+										</div>
+									</div><!-- CPM 時段&價格 -->
+
+									<h4 class="header blue bolder smaller">
+										<i class="icon-calendar-o bigger-120"></i>
+										CPA 設定
+									</h4>
+
+									<div class="form-group">
+										<label class="col-sm-2 control-label no-padding-right"> 廣告目標人數 </label>
+										<div class="col-sm-10">
+											<label>
+												<input name="form-field-radio6" type="radio" class="ace" checked>
+												<span class="lbl"> 無上限</span>
+											</label>
+											<label>
+												<input name="form-field-radio6" type="radio" class="ace">
+												<span class="lbl"> 上限</span>
+											</label>
+											<input type="text" placeholder="50000" value="">
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="col-sm-2 control-label no-padding-right blue"> $ 廣告金額 </label>
+										<div class="col-sm-10">
+											<label>
+												<input type="text" class="input-sm"><span class="text-success"> (NTD) </span>
+											</label>
+											<label>
+												<span class="blue">　得點數 </span><input type="text" style="width:60px;">
+											</label>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="col-sm-2 control-label no-padding-right"><i class="icon-clock-o bigger-110"></i> 廣告時段 </label>
+										<div class="col-sm-10">
+											
+												<label>
+													<input name="time-checkbox" type="checkbox" id="clickAll_2" class="ace">
+													<span class="lbl"> 整日 24hr　</span>
+												</label>
+												<label>
+													<input name="upPrice" type="checkbox" id="upPrice_2" class="ace">
+													<span class="lbl"> CPA 指定時段價格 </span>
+												</label>
+
+											<div class="row showtime">
+												<hr>
+												<div class="col-lg-12" style="white-space: nowrap;">
+													<div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
+														<label>
+															<input name="time-checkbox" type="checkbox" class="ace">
+															<span class="lbl"> 00:00 </span>｜
+														</label>
+														<label>
+															<span class="blue"> 價格 $ </span><input type="text" class="input-small">
+														</label>
+													</div>
+													<div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
+														<label>
+															<input name="time-checkbox" type="checkbox" class="ace">
+															<span class="lbl"> 01:00 </span>｜
+														</label>
+														<label>
+															<span class="blue"> 價格 $ </span><input type="text" class="input-small">
+														</label>
+													</div>
+													<div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
+														<label>
+															<input name="time-checkbox" type="checkbox" class="ace">
+															<span class="lbl"> 02:00 </span>｜
+														</label>
+														<label>
+															<span class="blue"> 價格 $ </span><input type="text" class="input-small">
+														</label>
+													</div>
+													<div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
+														<label>
+															<input name="time-checkbox" type="checkbox" class="ace">
+															<span class="lbl"> 03:00 </span>｜
+														</label>
+														<label>
+															<span class="blue"> 價格 $ </span><input type="text" class="input-small">
+														</label>
+													</div>
+													<div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
+														<label>
+															<input name="time-checkbox" type="checkbox" class="ace">
+															<span class="lbl"> 04:00 </span>｜
+														</label>
+														<label>
+															<span class="blue"> 價格 $ </span><input type="text" class="input-small">
+														</label>
+													</div>
+													<div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
+														<label>
+															<input name="time-checkbox" type="checkbox" class="ace">
+															<span class="lbl"> 05:00 </span>｜
+														</label>
+														<label>
+															<span class="blue"> 價格 $ </span><input type="text" class="input-small">
+														</label>
+													</div>
+													<div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
+														<label>
+															<input name="time-checkbox" type="checkbox" class="ace">
+															<span class="lbl"> 06:00 </span>｜
+														</label>
+														<label>
+															<span class="blue"> 價格 $ </span><input type="text" class="input-small">
+														</label>
+													</div>
+													<div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
+														<label>
+															<input name="time-checkbox" type="checkbox" class="ace">
+															<span class="lbl"> 07:00 </span>｜
+														</label>
+														<label>
+															<span class="blue"> 價格 $ </span><input type="text" class="input-small">
+														</label>
+													</div>
+													<div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
+														<label>
+															<input name="time-checkbox" type="checkbox" class="ace">
+															<span class="lbl"> 08:00 </span>｜
+														</label>
+														<label>
+															<span class="blue"> 價格 $ </span><input type="text" class="input-small">
+														</label>
+													</div>
+													<div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
+														<label>
+															<input name="time-checkbox" type="checkbox" class="ace">
+															<span class="lbl"> 09:00 </span>｜
+														</label>
+														<label>
+															<span class="blue"> 價格 $ </span><input type="text" class="input-small">
+														</label>
+													</div>
+													<div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
+														<label>
+															<input name="time-checkbox" type="checkbox" class="ace">
+															<span class="lbl"> 10:00 </span>｜
+														</label>
+														<label>
+															<span class="blue"> 價格 $ </span><input type="text" class="input-small">
+														</label>
+													</div>
+													<div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
+														<label>
+															<input name="time-checkbox" type="checkbox" class="ace">
+															<span class="lbl"> 11:00 </span>｜
+														</label>
+														<label>
+															<span class="blue"> 價格 $ </span><input type="text" class="input-small">
+														</label>
+													</div>
+													<div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
+														<label>
+															<input name="time-checkbox" type="checkbox" class="ace">
+															<span class="lbl"> 12:00 </span>｜
+														</label>
+														<label>
+															<span class="blue"> 價格 $ </span><input type="text" class="input-small">
+														</label>
+													</div>
+													<div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
+														<label>
+															<input name="time-checkbox" type="checkbox" class="ace">
+															<span class="lbl"> 13:00 </span>｜
+														</label>
+														<label>
+															<span class="blue"> 價格 $ </span><input type="text" class="input-small">
+														</label>
+													</div>
+													<div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
+														<label>
+															<input name="time-checkbox" type="checkbox" class="ace">
+															<span class="lbl"> 14:00 </span>｜
+														</label>
+														<label>
+															<span class="blue"> 價格 $ </span><input type="text" class="input-small">
+														</label>
+													</div>
+													<div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
+														<label>
+															<input name="time-checkbox" type="checkbox" class="ace">
+															<span class="lbl"> 15:00 </span>｜
+														</label>
+														<label>
+															<span class="blue"> 價格 $ </span><input type="text" class="input-small">
+														</label>
+													</div>
+													<div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
+														<label>
+															<input name="time-checkbox" type="checkbox" class="ace">
+															<span class="lbl"> 16:00 </span>｜
+														</label>
+														<label>
+															<span class="blue"> 價格 $ </span><input type="text" class="input-small">
+														</label>
+													</div>
+													<div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
+														<label>
+															<input name="time-checkbox" type="checkbox" class="ace">
+															<span class="lbl"> 17:00 </span>｜
+														</label>
+														<label>
+															<span class="blue"> 價格 $ </span><input type="text" class="input-small">
+														</label>
+													</div>
+													<div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
+														<label>
+															<input name="time-checkbox" type="checkbox" class="ace">
+															<span class="lbl"> 18:00 </span>｜
+														</label>
+														<label>
+															<span class="blue"> 價格 $ </span><input type="text" class="input-small">
+														</label>
+													</div>
+													<div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
+														<label>
+															<input name="time-checkbox" type="checkbox" class="ace">
+															<span class="lbl"> 19:00 </span>｜
+														</label>
+														<label>
+															<span class="blue"> 價格 $ </span><input type="text" class="input-small">
+														</label>
+													</div>
+													<div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
+														<label>
+															<input name="time-checkbox" type="checkbox" class="ace">
+															<span class="lbl"> 20:00 </span>｜
+														</label>
+														<label>
+															<span class="blue"> 價格 $ </span><input type="text" class="input-small">
+														</label>
+													</div>
+													<div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
+														<label>
+															<input name="time-checkbox" type="checkbox" class="ace">
+															<span class="lbl"> 21:00 </span>｜
+														</label>
+														<label>
+															<span class="blue"> 價格 $ </span><input type="text" class="input-small">
+														</label>
+													</div>
+													<div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
+														<label>
+															<input name="time-checkbox" type="checkbox" class="ace">
+															<span class="lbl"> 22:00 </span>｜
+														</label>
+														<label>
+															<span class="blue"> 價格 $ </span><input type="text" class="input-small">
+														</label>
+													</div>
+													<div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
+														<label>
+															<input name="time-checkbox" type="checkbox" class="ace">
+															<span class="lbl"> 23:00 </span>｜
+														</label>
+														<label>
+															<span class="blue"> 價格 $ </span><input type="text" class="input-small">
+														</label>
+													</div>
+												</div>
+											</div>
+
+										</div>
+									</div><!-- CPA 時段&價格 -->
+
+									<div class="row">
+
+										<div class="col-xs-12 col-sm-3 add_btn" style="min-height:520px;">
+										
+											<h4 class="header blue bolder smaller">
+												<i class="icon-gift bigger-150"></i>
+												新增廣告任務
+											</h4>
+
+											<div class="btn btn-block btn-primary fb_btn">
+												<i class="icon-arrow-right icon-on-right bigger-120"></i>
+												<i class="icon-thumbs-o-up bigger-160"></i>
+												FaceBook 按讚
+											</div>
+											<div class="btn btn-block btn-primary fbLink_btn">
+												<i class="icon-arrow-right icon-on-right bigger-120"></i>
+												<i class="icon-facebook-square bigger-160"></i>
+												FaceBook 連結
+											</div>
+											<div class="btn btn-block btn-primary fbshare_btn">
+												<i class="icon-arrow-right icon-on-right bigger-120"></i>
+												<i class="icon-facebook-square bigger-160"></i>
+												FaceBook 分享
+											</div>
+											<div class="btn btn-block btn-primary fbpunch_btn">
+												<i class="icon-arrow-right icon-on-right bigger-120"></i>
+												<i class="icon-map-marker bigger-160"></i>
+												FaceBook 打卡
+											</div>
+											<div class="btn btn-block btn-primary fbactivity_btn">
+												<i class="icon-arrow-right icon-on-right bigger-120"></i>
+												<i class="icon-calendar bigger-160"></i>
+												FaceBook 活動
+											</div>
+											<div class="btn btn-block btn-danger youtube_btn">
+												<i class="icon-arrow-right icon-on-right bigger-120"></i>
+												<i class="icon-youtube-play bigger-160"></i>
+												Youtube 影片
+											</div>
+											<div class="btn btn-block btn-purple link_btn url_btn">
+												<i class="icon-arrow-right icon-on-right bigger-120"></i>
+												<i class="icon-globe bigger-160"></i>
+												連結外網
+											</div>
+											<div class="btn btn-block btn-success link_btn download_btn">
+												<i class="icon-arrow-right icon-on-right bigger-120"></i>
+												<i class="icon-android bigger-160"></i>
+												APP 下載
+											</div>
+											<div class="btn btn-block btn-pink link_btn coupon_btn">
+												<i class="icon-arrow-right icon-on-right bigger-120"></i>
+												<i class="icon-ticket bigger-160"></i>
+												下載折價卷
+											</div>
+											<div class="btn btn-block btn-default link_btn file-txt1_btn">
+												<i class="icon-arrow-right icon-on-right bigger-120"></i>
+												<i class="icon-file-text-o bigger-160"></i>
+												單選(有正確)
+											</div>
+											<div class="btn btn-block btn-grey link_btn file-txt2_btn">
+												<i class="icon-arrow-right icon-on-right bigger-120"></i>
+												<i class="icon-file bigger-160"></i>
+												單選(無正確)
+											</div>
+											<div class="btn btn-block btn-light link_btn file-txt3_btn">
+												<i class="icon-arrow-right icon-on-right bigger-120"></i>
+												<i class="icon-file-text bigger-160"></i>
+												複選(無正確)
+											</div>
+
+										</div>
+
+										<div class="col-xs-12 col-sm-9">
+										
+											<h4 class="header smaller lighter red">
+												<i class="icon-arrow-down bigger-120"></i>
+												已建立的任務
+											</h4>
+
+											<ul id="tasks" class="item-list">
+												<li class="item-blue widget-box collapsed fb_b">
+													<h4 class="blue">
+														<i class="icon-thumbs-o-up bigger-150"></i>
+															FB 按讚
+														<div class="pull-right action-buttons">
+															<a href="#" data-action="collapse">
+																<i class="icon-chevron-down bigger-120"></i>
+															</a>
+															<a href="#" data-action="close_2">
+																<i class="icon-trash-o bigger-110 red"></i>
+															</a>
+														</div>
+													</h4>
+
+													<div class="widget-box transparent">
+														<div class="widget-body">
+															<div class="widget-main">
+
+																<div class="form-group">
+																	<label class="col-sm-2 control-label no-padding-right">任務說明</label>
+																	<div class="col-sm-10">
+																		<textarea class="autosize-transition form-control" maxlength="250" placeholder="請在此填寫描述，勿超過250個字"></textarea>
+																	</div>
+																</div>
+
+																<div class="form-group">
+																	<label class="col-sm-2 control-label no-padding-right">文字說明</label>
+																	<div class="col-sm-10">
+																		<textarea class="autosize-transition form-control" maxlength="250" placeholder="請在此填寫描述，勿超過250個字"></textarea>
+																	</div>
+																</div>
+
+																<div class="form-group">
+																	<label class="col-sm-2 control-label no-padding-right"> 網址 </label>
+																	<div class="col-sm-10">
+																		<input class="input-xxlarge" type="text" placeholder="粉絲頁網址張貼" value="">
+																	</div>
+																</div>
+
+															</div>
+														</div>
+													</div>
+												</li><!-- /FB 按讚 -->
+
+												<li class="item-blue widget-box collapsed fbLink_b">
+													<h4 class="blue">
+														<i class="icon-facebook-square bigger-150"></i>
+															FB 連結
+														<div class="pull-right action-buttons">
+															<a href="#" data-action="collapse">
+																<i class="icon-chevron-down bigger-120"></i>
+															</a>
+															<a href="#" data-action="close_2">
+																<i class="icon-trash-o bigger-110 red"></i>
+															</a>
+														</div>
+													</h4>
+
+													<div class="widget-box transparent">
+														<div class="widget-body">
+															<div class="widget-main">
+
+																<div class="form-group">
+																	<label class="col-sm-2 control-label no-padding-right">任務說明</label>
+																	<div class="col-sm-10">
+																		<textarea class="autosize-transition form-control" maxlength="250" placeholder="請在此填寫描述，勿超過250個字"></textarea>
+																	</div>
+																</div>
+
+																<div class="form-group">
+																	<label class="col-sm-2 control-label no-padding-right">文字說明</label>
+																	<div class="col-sm-10">
+																		<textarea class="autosize-transition form-control" maxlength="250" placeholder="請在此填寫描述，勿超過250個字"></textarea>
+																	</div>
+																</div>
+
+																<div class="form-group">
+																	<label class="col-sm-2 control-label no-padding-right"> 網址 </label>
+																	<div class="col-sm-10">
+																		<input class="input-xxlarge" type="text" placeholder="FaceBook 網址張貼" value="">
+																	</div>
+																</div>
+
+															</div>
+														</div>
+													</div>
+												</li><!-- /FB 連結 -->
+												
+												<li class="item-blue widget-box collapsed fbshare_b">
+													<h4 class="blue">
+														<i class="icon-facebook-square bigger-150"></i>
+															FB 分享
+														<div class="pull-right action-buttons">
+															<a href="#" data-action="collapse">
+																<i class="icon-chevron-down bigger-120"></i>
+															</a>
+															<a href="#" data-action="close_2">
+																<i class="icon-trash-o bigger-110 red"></i>
+															</a>
+														</div>
+													</h4>
+
+													<div class="widget-box transparent">
+														<div class="widget-body">
+															<div class="widget-main">
+
+																<div class="form-group">
+																	<label class="col-sm-2 control-label no-padding-right">任務說明</label>
+																	<div class="col-sm-10">
+																		<textarea class="autosize-transition form-control" maxlength="250" placeholder="請在此填寫描述，勿超過250個字"></textarea>
+																	</div>
+																</div>
+
+																<div class="form-group">
+																	<label class="col-sm-2 control-label no-padding-right">文字說明</label>
+																	<div class="col-sm-10">
+																		<textarea class="autosize-transition form-control" maxlength="250" placeholder="請在此填寫描述，勿超過250個字"></textarea>
+																	</div>
+																</div>
+
+																<div class="form-group">
+																	<label class="col-sm-2 control-label no-padding-right"> 網址 </label>
+																	<div class="col-sm-10">
+																		<input class="input-xxlarge" type="text" placeholder="FaceBook 網址張貼" value="">
+																	</div>
+																</div>
+
+															</div>
+														</div>
+													</div>
+												</li><!-- /FB 連結 -->
+
+												<li class="item-blue widget-box collapsed fbpunch_b">
+													<h4 class="blue">
+														<i class="icon-map-marker bigger-150"></i>
+															FB 打卡
+														<div class="pull-right action-buttons">
+															<a href="#" data-action="collapse">
+																<i class="icon-chevron-down bigger-120"></i>
+															</a>
+															<a href="#" data-action="close_2">
+																<i class="icon-trash-o bigger-110 red"></i>
+															</a>
+														</div>
+													</h4>
+
+													<div class="widget-box transparent">
+														<div class="widget-body">
+															<div class="widget-main">
+
+																<div class="form-group">
+																	<label class="col-sm-2 control-label no-padding-right">任務說明</label>
+																	<div class="col-sm-10">
+																		<textarea class="autosize-transition form-control" maxlength="250" placeholder="請在此填寫描述，勿超過250個字"></textarea>
+																	</div>
+																</div>
+
+																<div class="form-group">
+																	<label class="col-sm-2 control-label no-padding-right">ID</label>
+																	<div class="col-sm-10">
+																		<input class="input-xxlarge" type="text" placeholder="FaceBook ID" value="">
+																	</div>
+																</div>
+
+																<div class="form-group">
+																	<label class="col-sm-2 control-label no-padding-right"> 網址 </label>
+																	<div class="col-sm-10">
+																		<input class="input-xxlarge" type="text" placeholder="FaceBook 網址張貼" value="">
+																	</div>
+																</div>
+
+															</div>
+														</div>
+													</div>
+												</li><!-- /FB 打卡 -->
+												
+												<li class="item-blue widget-box collapsed fbactivity_b">
+													<h4 class="blue">
+														<i class="icon-calendar bigger-150"></i>
+															FB 活動
+														<div class="pull-right action-buttons">
+															<a href="#" data-action="collapse">
+																<i class="icon-chevron-down bigger-120"></i>
+															</a>
+															<a href="#" data-action="close_2">
+																<i class="icon-trash-o bigger-110 red"></i>
+															</a>
+														</div>
+													</h4>
+
+													<div class="widget-box transparent">
+														<div class="widget-body">
+															<div class="widget-main">
+
+																<div class="form-group">
+																	<label class="col-sm-2 control-label no-padding-right">任務說明</label>
+																	<div class="col-sm-10">
+																		<textarea class="autosize-transition form-control" maxlength="250" placeholder="請在此填寫描述，勿超過250個字"></textarea>
+																	</div>
+																</div>
+
+																<div class="form-group">
+																	<label class="col-sm-2 control-label no-padding-right">ID</label>
+																	<div class="col-sm-10">
+																		<input class="input-xxlarge" type="text" placeholder="FaceBook ID" value="">
+																	</div>
+																</div>
+
+																<div class="form-group">
+																	<label class="col-sm-2 control-label no-padding-right"> 網址 </label>
+																	<div class="col-sm-10">
+																		<input class="input-xxlarge" type="text" placeholder="FaceBook 網址張貼" value="">
+																	</div>
+																</div>
+
+															</div>
+														</div>
+													</div>
+												</li><!-- /FB 活動 -->
+
+												<li class="item-red widget-box collapsed youtube_b">
+													<h4 class="red">
+														<i class="icon-youtube-play bigger-150"></i>
+															Youtube 影片
+														<div class="pull-right action-buttons">
+															<a href="#" data-action="collapse">
+																<i class="icon-chevron-down bigger-120"></i>
+															</a>
+															<a href="#" data-action="close_2">
+																<i class="icon-trash-o bigger-110 red"></i>
+															</a>
+														</div>
+													</h4>
+
+													<div class="widget-box transparent">
+														<div class="widget-body">
+															<div class="widget-main">
+
+																<div class="form-group">
+																	<label class="col-sm-2 control-label no-padding-right">任務說明</label>
+																	<div class="col-sm-10">
+																		<textarea class="autosize-transition form-control" maxlength="250" placeholder="請在此填寫描述，勿超過250個字"></textarea>
+																	</div>
+																</div>
+																
+																<div class="form-group">
+																	<label class="col-sm-2 control-label no-padding-right"> 影片網址 </label>
+																	<div class="col-sm-10">
+																		<input class="input-xxlarge" type="text" placeholder="Youtube 影片網址張貼" value="">
+																	</div>
+																</div>
+
+															</div>
+														</div>
+													</div>
+												</li><!-- /Youtube 影片 -->
+
+												<li class="item-purple widget-box collapsed url_b">
+													<h4 class="purple">
+														<i class="icon-globe bigger-150"></i>
+															連結外網
+														<div class="pull-right action-buttons">
+															<a href="#" data-action="collapse">
+																<i class="icon-chevron-down bigger-120"></i>
+															</a>
+															<a href="#" data-action="close_2">
+																<i class="icon-trash-o bigger-110 red"></i>
+															</a>
+														</div>
+													</h4>
+
+													<div class="widget-box transparent">
+														<div class="widget-body">
+															<div class="widget-main">
+
+																<div class="form-group">
+																	<label class="col-sm-2 control-label no-padding-right">任務說明</label>
+																	<div class="col-sm-10">
+																		<textarea class="autosize-transition form-control" maxlength="250" placeholder="請在此填寫描述，勿超過250個字"></textarea>
+																	</div>
+																</div>
+																
+																<div class="form-group">
+																	<label class="col-sm-2 control-label no-padding-right"> 網址 </label>
+																	<div class="col-sm-10">
+																		<input class="input-xxlarge" type="text" placeholder="連結網址張貼" value="">
+																	</div>
+																</div>
+
+															</div>
+														</div>
+													</div>
+												</li><!-- /連結外網 -->
+
+												<li class="item-green widget-box collapsed download_b">
+													<h4 class="green">
+														<i class="icon-android bigger-150"></i>
+															APP 下載
+														<div class="pull-right action-buttons">
+															<a href="#" data-action="collapse">
+																<i class="icon-chevron-down bigger-120"></i>
+															</a>
+															<a href="#" data-action="close_2">
+																<i class="icon-trash-o bigger-110 red"></i>
+															</a>
+														</div>
+													</h4>
+
+													<div class="widget-box transparent">
+														<div class="widget-body">
+															<div class="widget-main">
+
+																<div class="form-group">
+																	<label class="col-sm-2 control-label no-padding-right">任務說明</label>
+																	<div class="col-sm-10">
+																		<textarea class="autosize-transition form-control" maxlength="250" placeholder="請在此填寫描述，勿超過250個字"></textarea>
+																	</div>
+																</div>
+																
+																<div class="form-group">
+																	<label class="col-sm-2 control-label no-padding-right text-success"><i class="icon-android bigger-120"></i> 安卓 </label>
+																	<div class="col-sm-10">
+																		<input class="input-xxlarge" type="text" placeholder="連結網址張貼" value="">
+																	</div>
+																</div>
+
+																<div class="form-group">
+																	<label class="col-sm-2 control-label no-padding-right text-muted"><i class="icon-apple bigger-120"></i> 蘋果 </label>
+																	<div class="col-sm-10">
+																		<input class="input-xxlarge" type="text" placeholder="連結網址張貼" value="">
+																	</div>
+																</div>
+
+															</div>
+														</div>
+													</div>
+												</li><!-- /APP 下載 -->
+
+												<li class="item-pink widget-box collapsed coupon_b">
+													<h4 class="pink">
+														<i class="icon-ticket bigger-150"></i>
+															下載折價卷
+														<div class="pull-right action-buttons">
+															<a href="#" data-action="collapse">
+																<i class="icon-chevron-down bigger-120"></i>
+															</a>
+															<a href="#" data-action="close_2">
+																<i class="icon-trash-o bigger-110 red"></i>
+															</a>
+														</div>
+													</h4>
+
+													<div class="widget-box transparent">
+														<div class="widget-body">
+															<div class="widget-main">
+
+																<div class="form-group">
+																	<div class="col-sm-5">
+																		<label>使用效期 </label>
+																		<input type="text" name="date-range-picker">
+																	</div>
+																	<div class="col-sm-5">
+																		<input type="file" id="id-input-file-4"/>
+																	</div>
+																</div>
+
+															</div>
+														</div>
+													</div>
+												</li><!-- /下載折價卷 -->
+
+												<li class="item-grey widget-box collapsed file-txt1_b">
+													<h4 class="grey">
+														<i class="icon-file-text-o bigger-150"></i>
+															單選(有正確)
+														<div class="pull-right action-buttons">
+															<a href="#" data-action="collapse">
+																<i class="icon-chevron-down bigger-120"></i>
+															</a>
+															<a href="#" data-action="close_2">
+																<i class="icon-trash-o bigger-110 red"></i>
+															</a>
+														</div>
+													</h4>
+
+													<div class="widget-box transparent">
+														<div class="widget-body">
+															<div class="widget-main">
+
+																<div class="form-group">
+																	<label class="col-sm-2 control-label no-padding-right text-warning"><strong>問 題</strong></label>
+																	<div class="col-sm-10">
+																		<input class="input-xxlarge" type="text" placeholder="標題">
+																	</div>
+																</div>
+														
+																<div class="form-group">
+																	<label class="col-sm-2 control-label no-padding-right">任務說明</label>
+																	<div class="col-sm-10">
+																		<textarea class="autosize-transition form-control" maxlength="250" placeholder="請在此填寫描述，勿超過250個字"></textarea>
+																	</div>
+																</div>
+																
+																<div class="form-group">
+																	<label class="col-sm-2 control-label no-padding-right text-success">正解選項</label>
+																	<div class="col-sm-10">
+																		<select class="form-control">
+																			<option value="">&nbsp;</option>
+																			<option value="a">1</option>
+																			<option value="b">2</option>
+																			<option value="c">3</option>
+																			<option value="d">4</option>
+																			<option value="e">5</option>
+																			<option value="f">6</option>
+																			<option value="g">7</option>
+																			<option value="h">8</option>
+																		</select>
+																	</div>
+																</div>
+
+																<div class="form-group">
+																	<label class="col-sm-2 control-label no-padding-right">選項1</label>
+																	<div class="col-sm-10">
+																		<input class="input-xxlarge" type="text" placeholder="文字輸入">
+																	</div>
+																</div>
+																<div class="form-group">
+																	<label class="col-sm-2 control-label no-padding-right">選項2</label>
+																	<div class="col-sm-10">
+																		<input class="input-xxlarge" type="text" placeholder="文字輸入">
+																	</div>
+																</div>
+																<div class="form-group">
+																	<label class="col-sm-2 control-label no-padding-right">選項3</label>
+																	<div class="col-sm-10">
+																		<input class="input-xxlarge" type="text" placeholder="文字輸入">
+																	</div>
+																</div>
+																<div class="form-group">
+																	<label class="col-sm-2 control-label no-padding-right">選項4</label>
+																	<div class="col-sm-10">
+																		<input class="input-xxlarge" type="text" placeholder="文字輸入">
+																	</div>
+																</div>
+																<div class="form-group">
+																	<label class="col-sm-2 control-label no-padding-right">選項5</label>
+																	<div class="col-sm-10">
+																		<input class="input-xxlarge" type="text" placeholder="文字輸入">
+																	</div>
+																</div>
+																<div class="form-group">
+																	<label class="col-sm-2 control-label no-padding-right">選項6</label>
+																	<div class="col-sm-10">
+																		<input class="input-xxlarge" type="text" placeholder="文字輸入">
+																	</div>
+																</div>
+
+																<div class="form-group">
+																	<label class="col-sm-2 control-label no-padding-right">選項7</label>
+																	<div class="col-sm-10">
+																		<input class="input-xxlarge" type="text" placeholder="文字輸入">
+																	</div>
+																</div>
+
+																<div class="form-group">
+																	<label class="col-sm-2 control-label no-padding-right">選項8</label>
+																	<div class="col-sm-10">
+																		<input class="input-xxlarge" type="text" placeholder="文字輸入">
+																	</div>
+																</div>
+
+															</div>
+														</div>
+													</div>
+												</li><!-- /單選(有正確) -->
+
+												<li class="item-grey widget-box collapsed file-txt2_b">
+													<h4 class="grey">
+														<i class="icon-file bigger-150"></i>
+															單選(無正確)
+														<div class="pull-right action-buttons">
+															<a href="#" data-action="collapse">
+																<i class="icon-chevron-down bigger-120"></i>
+															</a>
+															<a href="#" data-action="close_2">
+																<i class="icon-trash-o bigger-110 red"></i>
+															</a>
+														</div>
+													</h4>
+
+													<div class="widget-box transparent">
+														<div class="widget-body">
+															<div class="widget-main">
+
+																<div class="form-group">
+																	<label class="col-sm-2 control-label no-padding-right text-warning"><strong>問 題</strong></label>
+																	<div class="col-sm-10">
+																		<input class="input-xxlarge" type="text" placeholder="標題">
+																	</div>
+																</div>
+														
+																<div class="form-group">
+																	<label class="col-sm-2 control-label no-padding-right">任務說明</label>
+																	<div class="col-sm-10">
+																		<textarea class="autosize-transition form-control" maxlength="250" placeholder="請在此填寫描述，勿超過250個字"></textarea>
+																	</div>
+																</div>
+
+																<div class="form-group">
+																	<label class="col-sm-2 control-label no-padding-right">選項1</label>
+																	<div class="col-sm-10">
+																		<input class="input-xxlarge" type="text" placeholder="文字輸入">
+																	</div>
+																</div>
+																<div class="form-group">
+																	<label class="col-sm-2 control-label no-padding-right">選項2</label>
+																	<div class="col-sm-10">
+																		<input class="input-xxlarge" type="text" placeholder="文字輸入">
+																	</div>
+																</div>
+																<div class="form-group">
+																	<label class="col-sm-2 control-label no-padding-right">選項3</label>
+																	<div class="col-sm-10">
+																		<input class="input-xxlarge" type="text" placeholder="文字輸入">
+																	</div>
+																</div>
+																<div class="form-group">
+																	<label class="col-sm-2 control-label no-padding-right">選項4</label>
+																	<div class="col-sm-10">
+																		<input class="input-xxlarge" type="text" placeholder="文字輸入">
+																	</div>
+																</div>
+																<div class="form-group">
+																	<label class="col-sm-2 control-label no-padding-right">選項5</label>
+																	<div class="col-sm-10">
+																		<input class="input-xxlarge" type="text" placeholder="文字輸入">
+																	</div>
+																</div>
+																<div class="form-group">
+																	<label class="col-sm-2 control-label no-padding-right">選項6</label>
+																	<div class="col-sm-10">
+																		<input class="input-xxlarge" type="text" placeholder="文字輸入">
+																	</div>
+																</div>
+
+																<div class="form-group">
+																	<label class="col-sm-2 control-label no-padding-right">選項7</label>
+																	<div class="col-sm-10">
+																		<input class="input-xxlarge" type="text" placeholder="文字輸入">
+																	</div>
+																</div>
+
+																<div class="form-group">
+																	<label class="col-sm-2 control-label no-padding-right">選項8</label>
+																	<div class="col-sm-10">
+																		<input class="input-xxlarge" type="text" placeholder="文字輸入">
+																	</div>
+																</div>
+
+															</div>
+														</div>
+													</div>
+												</li><!-- /單選(無正確) -->
+
+												<li class="item-grey widget-box collapsed file-txt3_b">
+													<h4 class="grey">
+														<i class="icon-file-text bigger-150"></i>
+															複選(無正確)
+														<div class="pull-right action-buttons">
+															<a href="#" data-action="collapse">
+																<i class="icon-chevron-down bigger-120"></i>
+															</a>
+															<a href="#" data-action="close_2">
+																<i class="icon-trash-o bigger-110 red"></i>
+															</a>
+														</div>
+													</h4>
+
+													<div class="widget-box transparent">
+														<div class="widget-body">
+															<div class="widget-main">
+
+																<div class="form-group">
+																	<label class="col-sm-2 control-label no-padding-right text-warning"><strong>問 題</strong></label>
+																	<div class="col-sm-10">
+																		<input class="input-xxlarge" type="text" placeholder="標題">
+																	</div>
+																</div>
+														
+																<div class="form-group">
+																	<label class="col-sm-2 control-label no-padding-right">任務說明</label>
+																	<div class="col-sm-10">
+																		<textarea class="autosize-transition form-control" maxlength="250" placeholder="請在此填寫描述，勿超過250個字"></textarea>
+																	</div>
+																</div>
+
+																<div class="form-group">
+																	<label class="col-sm-2 control-label no-padding-right">選項1</label>
+																	<div class="col-sm-10">
+																		<input class="input-xxlarge" type="text" placeholder="文字輸入">
+																	</div>
+																</div>
+																<div class="form-group">
+																	<label class="col-sm-2 control-label no-padding-right">選項2</label>
+																	<div class="col-sm-10">
+																		<input class="input-xxlarge" type="text" placeholder="文字輸入">
+																	</div>
+																</div>
+																<div class="form-group">
+																	<label class="col-sm-2 control-label no-padding-right">選項3</label>
+																	<div class="col-sm-10">
+																		<input class="input-xxlarge" type="text" placeholder="文字輸入">
+																	</div>
+																</div>
+																<div class="form-group">
+																	<label class="col-sm-2 control-label no-padding-right">選項4</label>
+																	<div class="col-sm-10">
+																		<input class="input-xxlarge" type="text" placeholder="文字輸入">
+																	</div>
+																</div>
+																<div class="form-group">
+																	<label class="col-sm-2 control-label no-padding-right">選項5</label>
+																	<div class="col-sm-10">
+																		<input class="input-xxlarge" type="text" placeholder="文字輸入">
+																	</div>
+																</div>
+																<div class="form-group">
+																	<label class="col-sm-2 control-label no-padding-right">選項6</label>
+																	<div class="col-sm-10">
+																		<input class="input-xxlarge" type="text" placeholder="文字輸入">
+																	</div>
+																</div>
+
+																<div class="form-group">
+																	<label class="col-sm-2 control-label no-padding-right">選項7</label>
+																	<div class="col-sm-10">
+																		<input class="input-xxlarge" type="text" placeholder="文字輸入">
+																	</div>
+																</div>
+
+																<div class="form-group">
+																	<label class="col-sm-2 control-label no-padding-right">選項8</label>
+																	<div class="col-sm-10">
+																		<input class="input-xxlarge" type="text" placeholder="文字輸入">
+																	</div>
+																</div>
+
+															</div>
+														</div>
+													</div>
+												</li><!-- 複選(無正確) -->
+
+												<div class="space-4"></div>
+												<div class="alert alert-warning">
+													<button type="button" class="close" data-dismiss="alert">
+														<i class="icon-times"></i>
+													</button>
+													<strong>Hey！</strong>您知道嗎？任務順序可以上下拖曳移動排序哦。
+												</div>
+
+											</ul>
+										</div>
+
+									</div><!-- /.row -->
+
+									<div class="clearfix form-actions center">
+											<button class="btn" type="button">
+												<i class="icon-times bigger-110"></i>
+												取 消
+											</button>
+											&nbsp;
+											<button class="btn btn-info" type="button">
+												<i class="icon-check bigger-110"></i>
+												儲存新增
+											</button>
+									</div><!-- button submit -->
+
+								</form><!-- /.form-horizontal -->
+
+								<div class="hr hr32 hr-dotted"></div>
+
+								<!-- PAGE CONTENT ENDS -->
+							</div><!-- /.col -->
+						</div><!-- /.row -->
+					</div><!-- /.page-content -->
+				</div><!-- /.main-content -->
+
+			</div><!-- /.main-container-inner -->
+
+			<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+				<i class="icon-angle-double-up icon-only bigger-110"></i>
+			</a>
+		</div><!-- /.main-container -->
+
+		<!-- basic scripts -->
+
+		<!--[if !IE]> -->
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+		<!-- <![endif]-->
+
+		<!--[if IE]>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<![endif]-->
+
+		<!--[if !IE]> -->
+
+		<script type="text/javascript">
+			window.jQuery || document.write("<script src='assets/js/jquery-2.0.3.min.js'>"+"<"+"/script>");
+		</script>
+
+		<!-- <![endif]-->
+
+		<!--[if IE]>
+<script type="text/javascript">
+ window.jQuery || document.write("<script src='assets/js/jquery-1.10.2.min.js'>"+"<"+"/script>");
+</script>
+<![endif]-->
+
+		<script type="text/javascript">
+			if("ontouchend" in document) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+		</script>
+		<script src="assets/js/bootstrap.min.js"></script>
+		<script src="assets/js/typeahead-bs2.min.js"></script>
+
+		<!-- page specific plugin scripts -->
+
+		<script src="assets/js/jquery.nestable.min.js"></script>
+		<!--[if lte IE 8]>
+		  <script src="assets/js/excanvas.min.js"></script>
+		<![endif]-->
+		<script src="assets/js/jquery-ui-1.10.3.custom.min.js"></script>
+
+		<script src="assets/js/date-time/bootstrap-datepicker.min.js"></script>
+		<script src="assets/js/date-time/bootstrap-timepicker.min.js"></script>
+		<script src="assets/js/date-time/moment.min.js"></script>
+		<script src="assets/js/date-time/daterangepicker.min.js"></script>
+		<script src="assets/js/jquery.autosize.min.js"></script>
+
+		<!-- ace scripts -->
+
+		<script src="assets/js/ace-elements.min.js"></script>
+		<script src="assets/js/ace.min.js"></script>
+
+		<!-- inline scripts related to this page -->
+		<script type="text/javascript">
+
+		$(document).ready(function(){
+			$(".fileupload").hide();
+			$(".showtime").find(".input-small").prop("readonly", true);
+			//$(".showtime").find("input[name='time-checkbox']").prop("checked", true);
+
+			// 判斷 checkbox 是否選取，實現全選跟全部取消
+			$("#clickAll").click(function() {
+	 
+			   if($("#clickAll").prop("checked"))
+			   {
+				 $(".showtime").find("input[name='time-checkbox']").each(function() {
+					 $(this).prop("checked", true);
+				 });
+			   }
+			   else
+			   {
+				 $(".showtime").find("input[name='time-checkbox']").each(function() {
+					 $(this).prop("checked", false);
+				 });           
+			   }
+			});
+
+			// 顯示整日每小時
+			//$('#month').click(function() {
+			//	$(".showtime").fadeIn().show();
+			//	$(".alltime").hide();
+			//});
+			
+			// 所有時間 Show hide
+			//$('#alltime').click(function() {
+			//	$(".showtime").hide();
+			//	$(".alltime").fadeIn().show();
+			//});
+			
+			// 點選後可輸入每小時價格
+			//$(".showtime").find("input").click(function() {
+			//	$(this).removeAttr('readonly');
+			//});
+			
+			// 模組定向 Show hide
+			$(".module").click(function() {
+				$(this).parent().parent().children('table').fadeIn().show();
+				$(this).parent().parent().children('.fileupload').hide();
+			});
+			
+			// 手動匯入定向名單 Show hide
+			$(".inputfile").click(function() {
+				$(".module").parent().parent().children('table').hide();
+				$(".module").parent().parent().children('.fileupload').fadeIn().show();
+			});
+			
+			// 判斷 小時 checkbox 是否選取，後方價格欄位可否填入
+			//$(".showtime").children(".col-sm-6").find(".ace").click(function() {
+	 
+			//   if($("#upPrice").prop("checked")&$(this).prop("checked"))
+			//   {
+			//	$(this).parent().find(".input-small").removeAttr('readonly');
+			//   }
+			//   else
+			//   {
+			//	$(this).parent().find(".input-small").prop("readonly");
+			//   }
+			//});
+			
+			// 判斷 時段加價 checkbox 是否選取，價格欄位清除並關閉
+			$("#upPrice").click(function() {
+	 
+			   if($("#upPrice").prop("checked"))
+			   {
+				$(".showtime").find(".input-small").removeAttr('readonly');
+			   }
+			   else
+			   {
+				$(".showtime").find(":input").val("");
+				$(".showtime").find(".input-small").prop("readonly", true);
+			   }
+			});
+			
+			/// DatePicker Dialog 日期區間選擇 ///
+
+			$('input[name=date-range-picker]').daterangepicker().prev().on(ace.click_event, function(){
+				$(this).next().focus();
+			});
+			
+			/// Nestable ///
+			$('.dd').nestable();
+			
+			$('.dd-handle a').on('mousedown', function(e){
+				e.stopPropagation();
+			});
+			
+			$('[data-rel="tooltip"]').tooltip();
+			
+			// 檔案上傳
+			$('#id-input-file-1 , #id-input-file-2').ace_file_input({
+				no_file:'選擇檔案 ...',
+				btn_choose:'選取',
+				btn_change:'更換',
+				droppable:false,
+				onchange:null,
+				thumbnail:false //| true | large
+				//whitelist:'gif|png|jpg|jpeg'
+				//blacklist:'exe|php'
+				//onchange:''
+				//
+			});
+			
+			$('#id-input-file-3, #id-input-file-4').ace_file_input({
+				style:'well',
+				btn_choose:'檔案拖曳到這裡或點擊選取檔案',
+				btn_change:null,
+				no_icon:'icon-cloud-upload',
+				droppable:true,
+				thumbnail:'large'//small | large | fit
+				//,icon_remove:null//set null, to hide remove/reset button
+				/**,before_change:function(files, dropped) {
+					//Check an example below
+					//or examples/file-upload.html
+					return true;
+				}*/
+				/**,before_remove : function() {
+					return true;
+				}*/
+				,
+				preview_error : function(filename, error_code) {
+					//name of the file that failed
+					//error_code values
+					//1 = 'FILE_LOAD_FAILED',
+					//2 = 'IMAGE_LOAD_FAILED',
+					//3 = 'THUMBNAIL_FAILED'
+					//alert(error_code);
+				}
+		
+			}).on('change', function(){
+				//console.log($(this).data('ace_input_files'));
+				//console.log($(this).data('ace_input_method'));
+			});
+			
+			/// TextArea
+			$('textarea[class*=autosize]').autosize({append: "\n"});
+			//$('textarea.limited').inputlimiter({
+			//	remText: '%n 字已輸入，斷行不會扣除',
+			//	limitText: '本文可輸入: %n 個字'
+			//});
+			
+			//Android's default browser somehow is confused when tapping on label which will lead to dragging the task
+			//so disable dragging when clicking on label
+			var agent = navigator.userAgent.toLowerCase();
+			if("ontouchstart" in document && /applewebkit/.test(agent) && /android/.test(agent))
+			  $('#tasks').on('touchstart', function(e){
+				var li = $(e.target).closest('#tasks li');
+				if(li.length == 0)return;
+				var label = li.find('label.inline').get(0);
+				if(label == e.target || $.contains(label, e.target)) e.stopImmediatePropagation() ;
+			});
+		
+			$('#tasks').sortable({
+				opacity:0.8,
+				revert:true,
+				forceHelperSize:true,
+				placeholder: 'draggable-placeholder',
+				forcePlaceholderSize:true,
+				tolerance:'pointer',
+				stop: function( event, ui ) {//just for Chrome!!!! so that dropdowns on items don't appear below other items after being moved
+					$(ui.item).css('z-index', 'auto');
+				}
+				}
+			);
+			
+			$('#tasks').children("li").hide();
+
+			$(".add_btn").children("div").click(function() {
+				$(this).fadeOut();
+			});
+			
+			$(".fb_btn").click(function() {
+				$('.fb_b').fadeIn();
+			});
+			
+			$(".fbLink_btn").click(function() {
+				$('.fbLink_b').fadeIn();
+			});
+			
+			$(".fbshare_btn").click(function() {
+				$('.fbshare_b').fadeIn();
+			});
+
+			$(".fbpunch_btn").click(function() {
+				$('.fbpunch_b').fadeIn();
+			});
+
+			$(".fbactivity_btn").click(function() {
+				$('.fbactivity_b').fadeIn();
+			});
+
+			$(".youtube_btn").click(function() {
+				$('.youtube_b').fadeIn();
+			});
+			
+			$(".url_btn").click(function() {
+				$('.url_b').fadeIn();
+			});
+			
+			$(".download_btn").click(function() {
+				$('.download_b').fadeIn();
+			});
+			
+			$(".coupon_btn").click(function() {
+				$('.coupon_b').fadeIn();
+			});
+			
+			$(".file-txt1_btn").click(function() {
+				$('.file-txt1_b').fadeIn();
+			});
+			
+			$(".file-txt2_btn").click(function() {
+				$('.file-txt2_b').fadeIn();
+			});
+			
+			$(".file-txt3_btn").click(function() {
+				$('.file-txt3_b').fadeIn();
+			});
+			
+
+			////////////////////////////
+			$("#tasks").find(".icon-trash-o").click(function() {
+				$(this).parent().parent().parent().parent('li').fadeOut();
+			});
+			
+			$(".fb_b").find(".icon-trash-o").click(function() {
+				$('.fb_btn').fadeIn();
+			});
+			
+			$(".fbLink_b").find(".icon-trash-o").click(function() {
+				$('.fbLink_btn').fadeIn();
+			});
+			
+			$(".fbshare_b").find(".icon-trash-o").click(function() {
+				$('.fbshare_btn').fadeIn();
+			});
+
+			$(".fbpunch_b").find(".icon-trash-o").click(function() {
+				$('.fbpunch_btn').fadeIn();
+			});
+
+			$(".fbactivity_b").find(".icon-trash-o").click(function() {
+				$('.fbactivity_btn').fadeIn();
+			});
+
+			$(".youtube_b").find(".icon-trash-o").click(function() {
+				$('.youtube_btn').fadeIn();
+			});
+			
+			$(".url_b").find(".icon-trash-o").click(function() {
+				$('.url_btn').fadeIn();
+			});
+			
+			$(".download_b").find(".icon-trash-o").click(function() {
+				$('.download_btn').fadeIn();
+			});
+			
+			$(".coupon_b").find(".icon-trash-o").click(function() {
+				$('.coupon_btn').fadeIn();
+			});
+			
+			$(".file-txt1_b").find(".icon-trash-o").click(function() {
+				$('.file-txt1_btn').fadeIn();
+			});
+			
+			$(".file-txt2_b").find(".icon-trash-o").click(function() {
+				$('.file-txt2_btn').fadeIn();
+			});
+			
+			$(".file-txt3_b").find(".icon-trash-o").click(function() {
+				$('.file-txt3_btn').fadeIn();
+			});
+			
+			//$('#tasks').disableSelection();
+			//$('#tasks input:checkbox').removeAttr('checked').on('click', function(){
+			//	if(this.checked) $(this).closest('li').addClass('selected');
+			//	else $(this).closest('li').removeClass('selected');
+			//});
+
+		});
+		</script>
+
+	</body>
+</html>

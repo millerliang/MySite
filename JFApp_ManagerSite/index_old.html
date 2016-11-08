@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>首頁 - 後台管理系統</title>
+
+		<meta name="description" content="" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- basic styles -->
+
+		<link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+
+		<!--[if IE 7]>
+		  <link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css" />
+		<![endif]-->
+
+		<!-- page specific plugin styles -->
+
+		<!-- fonts -->
+
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" />
+
+		<!-- ace styles -->
+
+		<link rel="stylesheet" href="assets/css/ace.min.css" />
+		<link rel="stylesheet" href="assets/css/ace-rtl.min.css" />
+		<link rel="stylesheet" href="assets/css/ace-skins.min.css" />
+
+		<!--[if lte IE 8]>
+		  <link rel="stylesheet" href="assets/css/ace-ie.min.css" />
+		<![endif]-->
+
+		<!-- inline styles related to this page -->
+
+		<!-- ace settings handler -->
+
+		<script src="assets/js/ace-extra.min.js"></script>
+
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+
+		<!--[if lt IE 9]>
+		<script src="assets/js/html5shiv.js"></script>
+		<script src="assets/js/respond.min.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<div class="navbar navbar-default" id="navbar">
+
+			<script type="text/javascript">
+				try{ace.settings.check('navbar' , 'fixed')}catch(e){}
+			</script>
+
+
+			<div class="navbar-container" id="navbar-container">
+				<div class="navbar-header pull-left logo">
+					<a href="index.html" class="navbar-brand">
+						<small>
+							後台管理系統
+						</small>
+					</a><!-- /.brand -->
+				</div><!-- /.navbar-header -->
+
+				<div class="navbar-header pull-right" role="navigation">
+					<ul class="nav ace-nav">
+						<li class="color">
+							<a data-toggle="dropdown" class="dropdown-toggle" href="#">
+								<i class="icon-envelope icon-animated-vertical"></i>
+								<span class="badge badge-important">12</span>
+							</a>
+
+							<ul class="pull-right dropdown-navbar navbar-pink dropdown-menu dropdown-caret dropdown-times">
+								<li>
+									<a href="user_feedback.html">
+										<div class="clearfix">
+											<span class="pull-left">
+												<i class="btn btn-xs no-hover btn-success icon-user"></i>
+												客服管理
+											</span>
+											<span class="pull-right badge badge-success">+8</span>
+										</div>
+									</a>
+								</li>
+
+								<li>
+									<a href="user_feedback.html">
+										查看所有通知
+										<i class="icon-arrow-right"></i>
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li class="light-blue">
+							<a data-toggle="dropdown" href="#" class="dropdown-toggle">
+								<img class="nav-user-photo" src="assets/avatars/avatar4.png" alt="Jason's Photo" />
+								<span class="user-info">
+									<small>您好, 歡迎</small>
+									超級管理員
+								</span>
+
+								<i class="icon-caret-down"></i>
+							</a>
+
+							<ul class="user-menu pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-times">
+								<li>
+									<a href="admin_profile.html">
+										<i class="icon-user"></i>
+										個人資料
+									</a>
+								</li>
+
+								<li class="divider"></li>
+
+								<li>
+									<a href="login.html">
+										<i class="icon-power-off"></i>
+										登 出
+									</a>
+								</li>
+							</ul>
+						</li>
+					</ul><!-- /.ace-nav -->
+				</div><!-- /.navbar-header -->
+			</div><!-- /.container -->
+		</div>
+
+		<div class="main-container" id="main-container">
+			<script type="text/javascript">
+				try{ace.settings.check('main-container' , 'fixed')}catch(e){}
+			</script>
+
+			<div class="main-container-inner">
+				<a class="menu-toggler" id="menu-toggler" href="#">
+					<span class="menu-text"></span>
+				</a>
+
+				<div class="sidebar" id="sidebar">
+					<script type="text/javascript">
+						try{ace.settings.check('sidebar' , 'fixed')}catch(e){}
+					</script>
+
+					<ul class="nav nav-list">
+						<li class="active">
+							<a href="index.html">
+								<i class="icon-home"></i>
+								<span class="menu-text"> 首 頁 </span>
+							</a>
+						</li>
+
+						<li>
+							<a href="admin_group.html">
+								<i class="icon-user-md"></i>
+								<span class="menu-text"> 系統管理員群組 </span>
+							</a>
+						</li>
+
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-th"></i>
+								<span class="menu-text"> 商城商品管理 </span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="market_manager.html">
+										<i class="icon-double-angle-right"></i>
+										商品總覽
+									</a>
+								</li>
+								<li>
+									<a href="market_orderlist.html">
+										<i class="icon-double-angle-right"></i>
+										訂單管理
+									</a>
+								</li>
+                                <li>
+									<a href="market_new.html">
+										<i class="icon-double-angle-right"></i>
+										新增商品
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-cloud-upload"></i>
+								<span class="menu-text"> 廣告管理 </span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="ad_manager.html">
+										<i class="icon-double-angle-right"></i>
+										廣告總覽
+									</a>
+								</li>
+                                <li>
+									<a href="ad_new.html">
+										<i class="icon-double-angle-right"></i>
+										新增廣告
+									</a>
+								</li>
+								<li>
+									<a href="ad_type.html">
+										<i class="icon-double-angle-right"></i>
+										廣告類別管理
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="#" class="dropdown-toggle"> 
+								<i class="icon-codepen"></i> <span class="menu-text"> 序號管理 </span> 
+								<b class="arrow icon-angle-down"></b>
+							</a>
+							<ul class="submenu">
+								<li>
+									<a href="sn_list.html"> <i class="icon-double-angle-right"></i> 序號總覽</a>
+								</li>
+								<li>
+									<a href="sn_create.html"> <i class="icon-double-angle-right"></i> 新增序號</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-users"></i>
+								<span class="menu-text"> 會員管理 </span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="user_group.html">
+										<i class="icon-double-angle-right"></i>
+										會員總覽
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-rocket"></i>
+								<span class="menu-text"> 商家管理 </span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="sell_manager.html">
+										<i class="icon-double-angle-right"></i>
+										商家總覽
+									</a>
+								</li>
+								<li>
+									<a href="sell_new.html">
+										<i class="icon-double-angle-right"></i>
+										新增商家
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="user_feedback.html">
+								<i class="icon-wechat"></i>
+								<span class="menu-text"> 客服管理 </span>
+							</a>
+						</li>
+
+						<li>
+							<a href="sys_postnews.html">
+								<i class="icon-laptop"></i>
+								<span class="menu-text"> 公告管理 </span>
+							</a>
+						</li>
+
+						<li>
+							<a href="sys_announcement.html">
+								<i class="icon-bullhorn"></i>
+								<span class="menu-text"> 消息管理 </span>
+							</a>
+						</li>
+
+                        <li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-bar-chart-o"></i>
+								<span class="menu-text"> 數據分析 </span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="analysis_isp.html">
+										<i class="icon-double-angle-right"></i>
+										基本分析
+									</a>
+								</li>
+
+								<li>
+									<a href="analysis_local.html">
+										<i class="icon-double-angle-right"></i>
+										依地區地域分布
+									</a>
+								</li>
+
+                                <li>
+									<a href="analysis_trend.html">
+										<i class="icon-double-angle-right"></i>
+										APP 使用次數趨勢圖
+									</a>
+								</li>
+                                <li>
+									<a href="analysis_boot.html">
+										<i class="icon-double-angle-right"></i>
+										開機次數趨勢圖
+									</a>
+								</li>
+							</ul>
+						</li>
+						
+                        <li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-adn"></i>
+								<span class="menu-text"> APP 類別管理 </span>
+                                <b class="arrow icon-angle-down"></b>
+							</a>
+                            
+                            <ul class="submenu">
+								<li>
+									<a href="app_catalog.html">
+										<i class="icon-double-angle-right"></i>
+										APP 類型歸類對應
+									</a>
+								</li>
+
+								<li>
+									<a href="mobile_device.html">
+										<i class="icon-double-angle-right"></i>
+										手機型號裝置對應
+									</a>
+								</li>
+							</ul>
+						</li>
+					</ul><!-- /.nav-list -->
+
+					<div class="sidebar-collapse" id="sidebar-collapse">
+						<i class="icon-angle-double-left" data-icon1="icon-angle-double-left" data-icon2="icon-angle-double-right"></i>
+					</div>
+
+					<script type="text/javascript">
+						try{ace.settings.check('sidebar' , 'collapsed')}catch(e){}
+					</script>
+				</div>
+
+				<div class="main-content">
+					<div class="breadcrumbs" id="breadcrumbs">
+						<script type="text/javascript">
+							try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
+						</script>
+
+						<ul class="breadcrumb">
+							<li class="active">
+								<i class="icon-home home-icon"></i>
+								<a href="index.html">Home</a>
+							</li>
+						</ul><!-- .breadcrumb -->
+
+						<div class="nav-search" id="nav-search">
+							<form class="form-search">
+								<span class="input-icon">
+									<input type="text" placeholder="搜尋 ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
+									<i class="icon-search nav-search-icon"></i>
+								</span>
+							</form>
+						</div><!-- #nav-search -->
+					</div>
+
+					<div class="page-content">
+						<div class="page-header">
+							<h1>
+								首頁
+								<small>
+									<i class="icon-angle-double-right"></i>
+									概觀系統狀態
+								</small>
+							</h1>
+						</div><!-- /.page-header -->
+
+						<div class="row">
+							<div class="col-xs-12">
+								<!-- PAGE CONTENT BEGINS -->
+
+								<div class="alert alert-block alert-info">
+									<button type="button" class="close" data-dismiss="alert">
+										<i class="icon-times"></i>
+									</button>
+									<i class="icon-check"></i>
+									歡迎管理員
+									<strong>
+										Alex
+									</strong>，您尚有 12 條未讀訊息。
+								</div>
+
+								<div class="row">
+									<div class="space-6"></div>
+
+									<div class="col-sm-7 infobox-container">
+										<div class="infobox infobox-green"><i class="icon-comments"></i>
+											<div class="infobox-icon">
+												<i class="icon-comments"></i>
+											</div>
+
+											<div class="infobox-data">
+												<span class="infobox-data-number">32</span>
+												<div class="infobox-content">
+													問題回饋
+													<a href="user_feedback.html">
+														檢視
+														<i class="icon-search-plus bigger-110"></i>
+													</a>
+												</div>
+											</div>
+											<div class="stat stat-success">8%</div>
+										</div>
+
+										<div class="infobox infobox-blue">
+											<div class="infobox-icon">
+												<i class="icon-apple"></i>
+											</div>
+
+											<div class="infobox-data">
+												<span class="infobox-data-number">1100</span>
+												<div class="infobox-content">IOS 會員數</div>
+											</div>
+										</div>
+
+										<div class="infobox infobox-pink">
+											<div class="infobox-icon">
+												<i class="icon-android"></i>
+											</div>
+
+											<div class="infobox-data">
+												<span class="infobox-data-number">3210</span>
+												<div class="infobox-content">Android 會員數</div>
+											</div>
+										</div>
+
+										<div class="infobox infobox-orange2">
+											<div class="infobox-icon">
+												<i class="icon-mobile bigger-200"></i>
+											</div>
+
+											<div class="infobox-data">
+												<span class="infobox-data-number">12</span>
+												<div class="infobox-content">上架廣告</div>
+											</div>
+										</div>
+
+										<div class="infobox infobox-red">
+											<div class="infobox-icon">
+												<i class="icon-user"></i>
+											</div>
+
+											<div class="infobox-data">
+												<span class="infobox-data-number">7</span>
+												<div class="infobox-content">系統管理員</div>
+											</div>
+										</div>
+
+
+										<div class="infobox infobox-blue2 ">
+											<div class="infobox-progress">
+												<div class="easy-pie-chart percentage" data-percent="42" data-size="46">
+													<span class="percent">42</span>%
+												</div>
+											</div>
+
+											<div class="infobox-data">
+												<span class="infobox-text">磁碟空間</span>
+
+												<div class="infobox-content">
+													<span class="bigger-110">~</span>
+													剩餘 358GB
+												</div>
+											</div>
+										</div>
+
+										<div class="space-6"></div>
+
+										<div class="infobox infobox-red infobox-small infobox-dark">
+											<div class="infobox-icon">
+												<i class="icon-beer"></i>
+											</div>
+
+											<div class="infobox-data">
+												<div class="infobox-content">品牌廣告</div>
+												<div class="infobox-content">34</div>
+											</div>
+										</div>
+										
+										<div class="infobox infobox-green infobox-small infobox-dark">
+											<div class="infobox-icon bigger-110">
+												<i class="icon-mobile"></i>
+											</div>
+
+											<div class="infobox-data">
+												<div class="infobox-content">鎖頻廣告</div>
+												<div class="infobox-content">12</div>
+											</div>
+										</div>
+										
+										
+										<div class="infobox infobox-grey infobox-small infobox-dark">
+											<div class="infobox-icon">
+												<i class="icon-download"></i>
+											</div>
+
+											<div class="infobox-data">
+												<div class="infobox-content">APP 下載</div>
+												<div class="infobox-content">11,205</div>
+											</div>
+										</div>
+										
+										<div class="infobox infobox-blue infobox-small infobox-dark">
+											<div class="infobox-icon">
+												<i class="icon-users"></i>
+											</div>
+
+											<div class="infobox-data">
+												<div class="infobox-content">總會員數</div>
+												<div class="infobox-content">32,205</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="vspace-sm"></div>
+
+									<div class="col-sm-5">
+										<div class="widget-box">
+											<div class="widget-header widget-header-flat widget-header-small">
+												<h5>
+													<i class="icon-signal"></i>
+													年齡分布
+												</h5>
+
+												<div class="widget-toolbar no-border">
+													<button class="btn btn-minier btn-primary dropdown-toggle" data-toggle="dropdown">
+														本週
+														<i class="icon-angle-down icon-on-right bigger-110"></i>
+													</button>
+
+													<ul class="dropdown-menu pull-right dropdown-125 dropdown-lighter dropdown-caret">
+														<li class="active">
+															<a href="#" class="blue">
+																<i class="icon-caret-right bigger-110">&nbsp;</i>
+																本週
+															</a>
+														</li>
+
+														<li>
+															<a href="#">
+																<i class="icon-caret-right bigger-110 invisible">&nbsp;</i>
+																上個星期
+															</a>
+														</li>
+
+														<li>
+															<a href="#">
+																<i class="icon-caret-right bigger-110 invisible">&nbsp;</i>
+																本月
+															</a>
+														</li>
+
+														<li>
+															<a href="#">
+																<i class="icon-caret-right bigger-110 invisible">&nbsp;</i>
+																上個月
+															</a>
+														</li>
+													</ul>
+												</div>
+											</div>
+
+											<div class="widget-body">
+												<div class="widget-main">
+													<div id="piechart-placeholder"></div>
+
+													<div class="hr hr8 hr-double"></div>
+
+													<div class="clearfix">
+														<div class="grid3">
+															<span class="grey">
+																<i class="icon-male icon-2x blue"></i>
+																&nbsp; 男性
+															</span>
+															<h4 class="bigger pull-right">1,255</h4>
+														</div>
+
+														<div class="grid3">
+															<span class="grey">
+																<i class="icon-female icon-2x purple"></i>
+																&nbsp; 女性
+															</span>
+															<h4 class="bigger pull-right">941</h4>
+														</div>
+
+														<div class="grid3">
+															<span class="grey">
+																<i class="icon-stack-exchange icon-2x red"></i>
+																&nbsp; 合計
+															</span>
+															<h4 class="bigger pull-right">2,196</h4>
+														</div>
+													</div>
+												</div><!-- /widget-main -->
+											</div><!-- /widget-body -->
+										</div><!-- /widget-box -->
+									</div><!-- /span -->
+								</div><!-- /row -->
+
+								<h4 class="header blue">
+									<i class="icon-cloud-upload"></i>
+									流量
+								</h4>
+
+								<canvas id="canvas" height="150" width="1100" style="max-width:100%"></canvas>
+
+								<div class="hr hr32 hr-dotted"></div>
+
+								<div class="row">
+
+									<div class="col-xs-12 col-sm-6">
+										<p> Left Side </p>
+									</div>
+
+									<div class="col-xs-12 col-sm-6">
+										<p> Right Side </p>
+									</div><!-- /.col-7 -->
+
+								</div><!-- /.row -->
+
+								<div class="hr hr32 hr-dotted"></div>
+
+								<!-- PAGE CONTENT ENDS -->
+							</div><!-- /.col -->
+						</div><!-- /.row -->
+					</div><!-- /.page-content -->
+				</div><!-- /.main-content -->
+
+			</div><!-- /.main-container-inner -->
+
+			<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+				<i class="icon-angle-double-up icon-only bigger-110"></i>
+			</a>
+		</div><!-- /.main-container -->
+
+		<!-- basic scripts -->
+
+		<!--[if !IE]> -->
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+		<!-- <![endif]-->
+
+		<!--[if IE]>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<![endif]-->
+
+		<!--[if !IE]> -->
+
+		<script type="text/javascript">
+			window.jQuery || document.write("<script src='assets/js/jquery-2.0.3.min.js'>"+"<"+"/script>");
+		</script>
+
+		<!-- <![endif]-->
+
+		<!--[if IE]>
+		<script type="text/javascript">
+		 window.jQuery || document.write("<script src='assets/js/jquery-1.10.2.min.js'>"+"<"+"/script>");
+		</script>
+		<![endif]-->
+
+		<script type="text/javascript">
+			if("ontouchend" in document) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+		</script>
+		<script src="assets/js/bootstrap.min.js"></script>
+		<script src="assets/js/typeahead-bs2.min.js"></script>
+
+		<!-- page specific plugin scripts -->
+		<script src="assets/js/Chart.min.js"></script>
+
+		<!--[if lte IE 8]>
+		  <script src="assets/js/excanvas.min.js"></script>
+		<![endif]-->
+
+		<script src="assets/js/jquery-ui-1.10.3.custom.min.js"></script>
+		<script src="assets/js/jquery.ui.touch-punch.min.js"></script>
+		<script src="assets/js/jquery.slimscroll.min.js"></script>
+		<script src="assets/js/jquery.easy-pie-chart.min.js"></script>
+		<script src="assets/js/jquery.sparkline.min.js"></script>
+		<script src="assets/js/flot/jquery.flot.min.js"></script>
+		<script src="assets/js/flot/jquery.flot.pie.min.js"></script>
+		<script src="assets/js/flot/jquery.flot.resize.min.js"></script>
+
+		<!-- ace scripts -->
+
+		<script src="assets/js/ace-elements.min.js"></script>
+		<script src="assets/js/ace.min.js"></script>
+
+		<!-- inline scripts related to this page -->
+		<script type="text/javascript">
+			jQuery(function($) {
+				$('.easy-pie-chart.percentage').each(function(){
+					var $box = $(this).closest('.infobox');
+					var barColor = $(this).data('color') || (!$box.hasClass('infobox-dark') ? $box.css('color') : 'rgba(255,255,255,0.95)');
+					var trackColor = barColor == 'rgba(255,255,255,0.95)' ? 'rgba(255,255,255,0.25)' : '#E2E2E2';
+					var size = parseInt($(this).data('size')) || 50;
+					$(this).easyPieChart({
+						barColor: barColor,
+						trackColor: trackColor,
+						scaleColor: false,
+						lineCap: 'butt',
+						lineWidth: parseInt(size/10),
+						animate: /msie\s*(8|7|6)/.test(navigator.userAgent.toLowerCase()) ? false : 1000,
+						size: size
+					});
+				})
+			
+				$('.sparkline').each(function(){
+					var $box = $(this).closest('.infobox');
+					var barColor = !$box.hasClass('infobox-dark') ? $box.css('color') : '#FFF';
+					$(this).sparkline('html', {tagValuesAttribute:'data-values', type: 'bar', barColor: barColor , chartRangeMin:$(this).data('min') || 0} );
+				});
+
+			  var placeholder = $('#piechart-placeholder').css({'width':'80%' , 'min-height':'180px'});
+			  var data = [
+				{ label: "10歲以下",  data: 4, color: "#F5B9FC"},
+				{ label: "11~19歲",  data: 39, color: "#68BC31"},
+				{ label: "20~29歲",  data: 24, color: "#2091CF"},
+				{ label: "30~39歲",  data: 15, color: "#DA5430"},
+				{ label: "40~49歲",  data: 12, color: "#AF4E96"},
+				{ label: "60歲以上",  data: 2, color: "#FEE074"},
+				{ label: "其他",  data: 4, color: "#6c6c6c"}
+			  ]
+			  function drawPieChart(placeholder, data, position) {
+			 	  $.plot(placeholder, data, {
+					series: {
+						pie: {
+							show: true,
+							tilt:0.8,
+							highlight: {
+								opacity: 0.25
+							},
+							stroke: {
+								color: '#fff',
+								width: 1
+							},
+							startAngle: 2
+						}
+					},
+					legend: {
+						show: true,
+						position: position || "ne", 
+						labelBoxBorderColor: null,
+						margin:[-30,15]
+					}
+					,
+					grid: {
+						hoverable: true,
+						clickable: true
+					}
+				 })
+			 }
+			 drawPieChart(placeholder, data);
+			
+			 /**
+			 we saved the drawing function and the data to redraw with different position later when switching to RTL mode dynamically
+			 so that's not needed actually.
+			 */
+			 placeholder.data('chart', data);
+			 placeholder.data('draw', drawPieChart);
+
+			  var $tooltip = $("<div class='tooltip top in'><div class='tooltip-inner'></div></div>").hide().appendTo('body');
+			  var previousPoint = null;
+			
+			  placeholder.on('plothover', function (event, pos, item) {
+				if(item) {
+					if (previousPoint != item.seriesIndex) {
+						previousPoint = item.seriesIndex;
+						var tip = item.series['label'] + " : " + item.series['percent']+'%';
+						$tooltip.show().children(0).text(tip);
+					}
+					$tooltip.css({top:pos.pageY + 10, left:pos.pageX + 10});
+				} else {
+					$tooltip.hide();
+					previousPoint = null;
+				}
+				
+			 });
+
+				var d1 = [];
+				for (var i = 0; i < Math.PI * 2; i += 0.5) {
+					d1.push([i, Math.sin(i)]);
+				}
+			
+				var d2 = [];
+				for (var i = 0; i < Math.PI * 2; i += 0.5) {
+					d2.push([i, Math.cos(i)]);
+				}
+			
+				var d3 = [];
+				for (var i = 0; i < Math.PI * 2; i += 0.2) {
+					d3.push([i, Math.tan(i)]);
+				}
+
+				$('#recent-box [data-rel="tooltip"]').tooltip({placement: tooltip_placement});
+				function tooltip_placement(context, source) {
+					var $source = $(source);
+					var $parent = $source.closest('.tab-content')
+					var off1 = $parent.offset();
+					var w1 = $parent.width();
+			
+					var off2 = $source.offset();
+					var w2 = $source.width();
+			
+					if( parseInt(off2.left) < parseInt(off1.left) + parseInt(w1 / 2) ) return 'right';
+					return 'left';
+				}
+
+				$('.dialogs,.comments').slimScroll({
+					height: '300px'
+			    });
+				
+				var lineChartData = {
+						labels : ["01","02","03","04","05","06","07","08","09","10","11","12","13","14","15","16","17","18","19","20","24","22","23","24","25","26","27","28","29","30","31"],
+						datasets : [
+							{
+								fillColor : "rgba(130,130,195,0.3)",
+								strokeColor : "rgba(130,130,195,0.5)",
+								pointColor : "rgba(130,130,195,1)",
+								pointStrokeColor : "#fff",
+								data : [6,5,4,6,5,5,4,5,6,7,4,3,2,4,3,3,4,7,6,5,4,3,5,4,3,4,5,12,11,9,4,6]
+							}
+						]
+						
+					}
+
+				var myLine = new Chart(document.getElementById("canvas").getContext("2d")).Line(lineChartData);
+
+			})
+		</script>
+	</body>
+</html>

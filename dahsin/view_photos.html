@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>view_form</title>
+<style>
+body {font-family: 'Lato,sans-serif',"微軟正黑體";padding:0;margin:0;color:#333;background-color:#CFD7D8;}
+a {text-decoration: none;}
+.clearfix:before,.clearfix:after {content: "";display: table;}
+.clearfix:after {clear: both;}
+.clearfix {*zoom: 1;}
+
+.menu_bar {position:fixed;top:0;left:0;z-index:3;width:100%;box-shadow:0 2px 4px rgba(0,0,0,.35);
+background-color:rgba(0,70,140,1);
+background: -moz-linear-gradient(left, rgba(52,138,219,1) 0%, rgba(0,70,140,1) 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(52,138,219,1)), color-stop(100%, rgba(0,70,140,1)));
+background: -webkit-linear-gradient(left, rgba(52,138,219,1) 0%, rgba(0,70,140,1) 100%);
+background: -o-linear-gradient(left, rgba(52,138,219,1) 0%, rgba(0,70,140,1) 100%);
+background: -ms-linear-gradient(left, rgba(52,138,219,1) 0%, rgba(0,70,140,1) 100%);
+background: linear-gradient(to right, rgba(52,138,219,1) 0%, rgba(0,70,140,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#348adb', endColorstr='#00468c', GradientType=1 );
+}
+.menu_bar h3 {display:inline-block;color:#fff;margin-left:1em;}
+.menu_bar a {color:#fff;line-height:2;padding:0 8px;margin-left:1em;display:inline-block;text-decoration: none;border:1px solid rgba(255,255,255,.25);-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;}
+.menu_bar a:last-child {float:right;margin: 1em 1em 0 0;border: 0px solid #fff;background-color:#ff0000;}
+.menu_bar a:last-child:hover {color:#ffff00;;}
+
+.wrap {padding:4.6em .6em 1em .6em;}
+
+.card_cont {
+text-decoration: none;
+display: block;
+background-color: #fff;
+line-height: 1.2;
+margin-bottom: 8px;
+padding_:0.5em 0;
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+border-radius: 4px;
+background-image: url('../imgs/doc_ic.png');
+background-repeat: no-repeat;
+background-position: 8px 13px;
+background-size: 22px;
+box-shadow: 0 1px 4px rgba(0,0,0,0.12);
+}
+.card_cont .infomaction {padding:0.5em;border-bottom: 1px solid #eaeaea;}
+.card_cont .infomaction img {float:left;width:48px;margin-right:0.5em;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;}
+.card_cont .infomaction small,.back small {color:#7F9194;}
+.card_cont .infomaction h3 {margin:0;color: #C564BE;display: inline-block;}
+
+.card_cont header {background-color: #E6ECEC;color: #7D9FB5;padding:0.5em;-webkit-border-radius: 4px 4px 0 0;-moz-border-radius: 4px 4px 0 0;border-radius: 4px 4px 0 0;}
+.card_cont header.other {background-color: #475b92;color: #AAC1FF;}
+.card_cont b {color:#338BB5;}
+.card_cont p {margin:0 0 0 0.5em;line-height:1.6;}
+
+.pictures {padding:.5em .3em;background-color:#000;text-align:center;}
+.pictures img {width:49%;cursor:pointer;}
+
+.overlayer {transition:all 1s;opacity:0;z-index:-1;visibility: visible;overflow:auto;background-color:rgba(0,0,0,.75);position:fixed;top:0;left:0;height:100%;width:100%;text-align:center;}
+.overlayer img {max-width:100%;}
+
+.showhide {transition:all 1s;opacity:1;z-index:105;}
+
+.overlayer label {
+    width: 58px;
+    height: 58px;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background: url('imgs/cross.png');
+    z-index: 106;
+    cursor: pointer;
+}
+</style>
+</head>
+<body>
+<div class="menu_bar"><a href="home.html">← Back</a><h3>view photos</h3><a href="#">Delect</a></div>
+<div class="wrap">
+	<div class="card_cont">
+		<div class="infomaction clearfix">
+			<img src="imgs/user-icon.jpg">
+			<div><small>05/30 - 16:45:14</small></div>
+			<h3>Jessica</h3> - <small>行政助理</small>
+		</div>
+
+		<p style="padding:.8em 0.2em;"><img style="width:20px;vertical-align: middle;margin-right: 0.3em;" src="imgs/map_marker_blue.png">台北中山區 - 中泰建設</p>
+		<!-- <div class="check_toolBar">
+			審核
+			<a class="" href="#">Pass</a>
+			<a class="" href="#">退件</a>
+			<a class="active" href="#">不想審</a>
+		</div> -->
+	</div>
+	<div class="card_cont">
+		<header class="other">上傳的照片</header>
+		<div class="pictures">
+			<img src="http://www.hong-shin.com.tw/templates/cache/16753/images/products/photooriginal-16753-338674.jpg">
+			<img src="http://home.southcn.com/h/images/attachement/jpg/site4/20150615/26/11165310736014991486.jpg">
+			<img src="http://www.echn.com.tw/img/story/204.jpg">
+			<img src="http://www.echn.com.tw/img/story/205.jpg">
+			<img src="http://www.echn.com.tw/img/story/206.jpg">
+			<img src="http://www.echn.com.tw/img/story/207.jpg">
+			<img src="http://www.echn.com.tw/img/story/208.jpg">
+			<img src="http://www.echn.com.tw/img/story/209.jpg">
+		</div>
+	</div>
+</div>
+<div class="overlayer">
+	<img src="http://www.hong-shin.com.tw/templates/cache/16753/images/products/photooriginal-16753-338674.jpg">
+	<img src="http://home.southcn.com/h/images/attachement/jpg/site4/20150615/26/11165310736014991486.jpg">
+	<img src="http://www.echn.com.tw/img/story/204.jpg">
+	<img src="http://www.echn.com.tw/img/story/205.jpg">
+	<img src="http://www.echn.com.tw/img/story/206.jpg">
+	<img src="http://www.echn.com.tw/img/story/207.jpg">
+	<img src="http://www.echn.com.tw/img/story/208.jpg">
+	<img src="http://www.echn.com.tw/img/story/209.jpg">
+	<label></label>
+</div>
+
+<script src="js/jquery-latest.min.js"></script>
+<script>
+$(".pictures img, .overlayer").click(function() {
+	$('.overlayer').toggleClass( "showhide" );
+});
+</script>
+
+</body>
+</html>

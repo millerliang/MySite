@@ -1,0 +1,113 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<title>Welcome BMCV</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link rel="stylesheet" href="css/ionic.min.css">
+<link rel="stylesheet" href="css/ionicons.min.css">
+<link rel="stylesheet" href="css/animate.css">
+<script type="text/javascript" src="js/ionic.bundle.min.js"></script>
+<script type="text/javascript" src="js/ionic.min.js"></script>
+<script type="text/javascript" src="js/ionic-angular.min.js"></script>
+<script type="text/javascript" src="jquery-1.10.2.min.js"></script>
+</head>
+
+<body style="background-color:#EF473A;color:#fff;">
+<div id="preload" style="position:absolute;top:0;background-color: #fff;width:1%;font-size:2px;height:3px;">&nbsp;</div>
+
+	<div class="padding_ animated" style="text-align:center;">
+		<div id="cont" style="margin-top:20%;">
+			<img src="imgs/sound_icon.svg" style="width:100%;"><br>
+			<h4 class="animated" style="color:#fff;">等待回應.....</h4>
+			<a class="button button-block button-light button-large button-clear loading animated" style="margin-top:3em;color:#fff;" href="#">
+			<i class="icon ion-loading-c"></i>
+			音頻偵測中
+			</a>
+			<div class="padding Confirmation animated" style="text-align:left;width:95%;margin:1em auto;font-size:130%;">
+				<p>商品名稱：摩斯漢堡薯條 (小)</p>
+				<p>目前點數：450點</p>
+				<p class="col">扣除點數：-108點</p>
+				<div class="row" style="padding:0;">
+					<p class="col">小　　計：<span style="font-size:150%;">342</span> 點</p>
+					<button onclick="history.go(0)" class="button button-sm button-light button-outline">重新偵測</button>
+				</div>
+				<a href="ad_done.html" class="button button-larger button-block button-light icon-item-right" style="margin-top:2em;">
+				下一步
+				<i class="icon ion-ios-arrow-right padding"></i>
+				扣除點數
+				</a>
+				<ol style="font-size:11pt;margin:2em 0 0 1em;list-style: inherit;">
+					<li>本活動對象為 BMCV 會員。</li>
+					<li>兌換前請先確認網路連線是否正常，商品兌換後將無法退還已消費之點數！</li>
+					<li>詳細活動辦法以 BMCV 公告為準，本方保留變更、修改或終止本活動之權利。</li>
+					<li>每張兌換券上，皆標示使用有效期限，請務必於期限內使用，逾期即視同自動放棄，恕不接受兌換，兌換券若經塗改不能使用，將無法退換、補發。</li>
+					<li>超商現金抵用券不適用於含有菸、酒、代收、代售的商品。</li>
+					<li>現金抵用券與商品兌換券不得兌領現金及找零。</li>
+				</ol>
+			</div>
+		</div>
+	</div>
+
+	<footer style="position:absolute;bottom:0;width:100%;text-align:center;line-height:3;">
+	<div class="row">
+		<button class="button button-block button-light button-outline animated" onclick="history.go(-1)">
+		取 消
+		</button>
+	</div>
+	<small>Copyright © 2015 by jyt-inc</small>
+	</footer>
+
+	<script type="text/javascript">
+		// Test
+		$(document).ready(function(){
+			$('.loading, .padding_').delay(1000).show(100).addClass('fadeInUp');
+
+			$('.loading').click(function(){
+				$(this).removeClass('fadeInUp').addClass('bounceIn')
+			});
+		
+			$(".button-outline").hide(0, function(){
+				$(this).delay(2500).show(0).addClass('fadeInUp');
+			});
+		});
+
+		<!-- JavaScript -->
+		$('.Confirmation').hide();
+		var funs = [
+			function() {
+				$("#preload").animate({width:"100%"}, 2000, goNext);
+			},
+			function() {
+				$("#cont").animate({margin:"0%"},1500);
+				setTimeout(goNext, 3000);
+			},
+			function() {
+				$("#preload").animate({width:"0%"},1000);
+				$('.loading, h4').removeClass('fadeInUp').addClass('fadeOutDown');
+				setTimeout(goNext, 1000);
+			},
+			function() {
+				$('.loading, h4').css({display:"none"},2000);
+				$('.Confirmation').show(0).addClass('flipInX');
+				setTimeout(goNext, 3000);
+			},
+			function() {
+				$("#cont img").addClass('flipOutX animated').hide(3000);
+			}
+		];
+
+		$(document).ready(function(){
+			goNext();
+		});
+
+		function goNext()
+		{
+			funs.shift()();
+		}
+	</script>
+
+</body>
+</html> 

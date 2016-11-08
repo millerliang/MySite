@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+	<meta charset="utf-8">
+	<title>Hannah BMC Voice Technology | (beta)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<meta name="google-translate-customization" content="53025ebb3faf80ab-f77afe6e8e6b699a-g6c56652471bbe4d1-f"></meta>
+	
+	<link rel="shortcut icon" href="images/favicon.png">
+    
+	<!-- CSS -->
+	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="css/flexslider.css" rel="stylesheet" type="text/css" />
+	<link href="css/prettyPhoto.css" rel="stylesheet" type="text/css" />
+	<link href="css/animate.css" rel="stylesheet" type="text/css" />
+    <link href="css/owl.carousel.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet" type="text/css" />
+    
+	<!-- FONTS -->
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500italic,700,500,700italic,900,900italic' rel='stylesheet' type='text/css'>
+	<!-- <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet"> -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    
+	<!-- SCRIPTS -->
+	<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <!--[if IE]><html class="ie" lang="en"> <![endif]-->
+	
+	<script src="js/jquery.min.js" type="text/javascript"></script>
+	<script src="js/bootstrap.min.js" type="text/javascript"></script>
+	<script src="js/jquery.prettyPhoto.js" type="text/javascript"></script>
+	<script src="js/jquery.nicescroll.min.js" type="text/javascript"></script>
+	<script src="js/superfish.min.js" type="text/javascript"></script>
+	<script src="js/jquery.flexslider-min.js" type="text/javascript"></script>
+	<script src="js/owl.carousel.js" type="text/javascript"></script>
+	<script src="js/animate.js" type="text/javascript"></script>
+	<script src="js/jquery.BlackAndWhite.js"></script>
+	<script src="js/myscript.js" type="text/javascript"></script>
+	<script>
+		
+		//PrettyPhoto
+		jQuery(document).ready(function() {
+			$("a[rel^='prettyPhoto']").prettyPhoto();
+		});
+		
+		//BlackAndWhite
+		$(window).load(function(){
+			$('.client_img').BlackAndWhite({
+				hoverEffect : true, // default true
+				// set the path to BnWWorker.js for a superfast implementation
+				webworkerPath : false,
+				// for the images with a fluid width and height 
+				responsive:true,
+				// to invert the hover effect
+				invertHoverEffect: false,
+				// this option works only on the modern browsers ( on IE lower than 9 it remains always 1)
+				intensity:1,
+				speed: { //this property could also be just speed: value for both fadeIn and fadeOut
+					fadeIn: 300, // 200ms for fadeIn animations
+					fadeOut: 300 // 800ms for fadeOut animations
+				},
+				onImageReady:function(img) {
+					// this callback gets executed anytime an image is converted
+				}
+			});
+		});
+		
+	</script>
+	
+</head>
+<body>
+<!-- PRELOADER -->
+<!-- <img id="preloader" src="images/preloader.gif"/> -->
+<img id="preloader" src="images/bmc_preloader.svg"/>
+<!-- //PRELOADER -->
+<div class="preloader_hide">
+
+	<!-- PAGE -->
+	<div id="page">
+	
+		<!-- HEADER -->
+		<header>
+
+			<!-- MENU BLOCK -->
+			<div class="menu_block">
+
+				<!-- CONTAINER -->
+				<div class="container clearfix">
+
+					<!-- LOGO -->
+					<div class="logo pull-left">
+						<a href="index.html" ><span class="b1 toplogo" style="color:#7E308D;">Hannah</span><span class="b2 f14pt" style="color:#FC462A;">BMC</span><!-- <span class="b3">C</span> --><span class="b4" style="font-size: 14pt;">Voice</span><!-- <span class="b5">inc</span> --></a>
+					</div><!-- //LOGO -->
+
+					<!-- SEARCH FORM -->
+					<div id="search-form" class="pull-right">
+						<!-- <form method="get" action="#">
+							<input type="text" name="Search" value="Search" onFocus="if (this.value == 'Search') this.value = '';" onBlur="if (this.value == '') this.value = 'Search';" />
+						</form> -->
+					</div><!-- SEARCH FORM -->
+
+					<!-- MENU -->
+					<div class="pull-right">
+						<nav class="navmenu center">
+							<ul>
+								<li class="first active scroll_btn"><a href="#home">首 頁</a></li>
+								<li class="scroll_btn"><a href="#bmcv">BMCV</a></li>
+								<!-- <li class="sub-menu">
+									<a href="javascript:void(0);">產 品 <i class="fa fa-angle-down"></i></a>
+									<ul>
+										<li><a href="#bmcv">BMCV</a></li>
+										<li><a href="#v2d2">V2D2</a></li>
+									</ul>
+								</li> -->
+								<li class="scroll_btn"><a href="#projects">應 用</a></li>
+								<!-- <li class="scroll_btn"><a href="#team">Team</a></li> -->
+								<!-- <li class="scroll_btn"><a href="#news">新 聞</a></li> -->
+								<li class="scroll_btn last"><a href="#contacts" >聯 繫</a></li>
+								<!-- <li class="sub-menu">
+									<a href="javascript:void(0);">Pages <i class="fa fa-angle-down"></i></a>
+									<ul>
+										<li><a href="blog.html" >Blog</a></li>
+										<li><a href="blog-post.html" >Blog Post</a></li>
+										<li><a href="portfolio-post.html" >Portfolio Single Work</a></li>
+									</ul>
+								</li> -->
+								<li class="sub-menu">
+									<a href="javascript:void(0);">語言 <i class="fa fa-angle-down"></i></a>
+									<ul>
+										<li><a href="index.html"><i class="fa fa-angle-right"></i> 繁體中文</a></li>
+										<li><a href="index-en.html"><i class="fa fa-angle-right"></i> English</a></li>
+										<li><a href="#"><i class="fa fa-angle-right"></i> Japanese</a></li>
+										<!-- <li><a href="#" >Japan</a></li> -->
+									</ul>
+								</li>
+							</ul>
+						</nav>
+					</div><!-- //MENU -->
+				</div><!-- //MENU BLOCK -->
+			</div><!-- //CONTAINER -->
+		</header><!-- //HEADER -->
+
+		<!-- HOME -->
+		<section id="home" class="padbot0">
+				
+			<!-- TOP SLIDER -->
+			<div class="flexslider top_slider">
+				<ul class="slides">
+					<li class="slide1" style="background-color: #22C3BE;">
+						<div class="flex_caption1">
+							<p class="title1 captionDelay2 FromTop">HANNAH</p>
+							<p class="title2 captionDelay4 FromTop">&nbsp;BMC&nbsp;</p>
+							<p class="title3 captionDelay5 FromTop"><q class="f50">Voice</q></p>
+							<p class="title4 captionDelay6 FromLeft"><q class="f160">瀚吶音頻近場通訊技術</q></p>
+							<p class="title4 captionDelay7 FromBottom">主動取得最新優惠資訊</p>
+							<p class="title4 captionDelay8 FromBottom">在無網路的環境下也能傳遞訊息<br>無需 NFC 讓你的手機立即實現近場支付</p>
+						</div>
+						<!-- <a class="slide_btn FromRight" href="javascript:void(0);" >檢視更多</a> -->
+					</li>
+					<li class="slide3 slide4">
+						<div class="flex_caption1">
+							<p class="title1 captionDelay2 FromTop">Interactive</p>
+							<p class="title2 captionDelay4 FromTop">&nbsp;TV&nbsp;</p>
+							<p class="title3 captionDelay6 FromTop"><q class="f60">&nbsp;Multimedia&nbsp;</q></p>
+							<p class="title4 captionDelay7 FromBottom">Hannah BMCV 與電視影音配合產生互動關係，也就是說未來客廳端，當下在收看電視節目時，埋入 Hannah 音頻的電視節目或電視廣告，可立即主動將您想知道的地點，以及交通、消費等信息、更多優惠訊息或限時促銷活動…，透過節目內容播送主動傳遞到您的手機，您不用再憑記憶或上網搜尋，僅需要用手機即時點選即可，如此的互動電視，才是真正的未來生活事。</p>
+						</div>
+						<!-- <a class="slide_btn FromRight" href="javascript:void(0);" >檢視更多</a> -->
+					</li>
+					<li class="slide2">
+						<div class="flex_caption1">
+							<p class="title1 captionDelay2 FromLeft">Future</p>
+							<p class="title2 captionDelay4 FromLeft">&nbsp;BMC&nbsp;</p>
+							<p class="title3 captionDelay6 FromLeft"><q class="f50">Voice</q></p>
+							<p class="title4 captionDelay7 FromLeft">無限可能的穿戴裝置<br></p>
+							<p class="title4 captionDelay8 FromBottom">行動裝置與穿戴裝置，未來產品面貌令人非常期待，但轉換之間不能只著眼於「將行動裝置變成穿戴裝置」，而是要擴大使用物件的互聯及形變各種使用可能。</p>
+						</div>
+						<!-- <a class="slide_btn FromRight" href="javascript:void(0);" >檢視更多</a> -->
+					</li>
+					<li class="slide3">
+						<div class="flex_caption1">
+							<p class="title1 captionDelay1 FromBottom">What</p>
+							<p class="title2 captionDelay2 FromBottom"><q class="f60">&nbsp;is&nbsp;</q></p>
+							<p class="title3 captionDelay3 FromBottom">Big Data?</p>
+							<p class="title4 captionDelay5 FromBottom">隨著技術的進步，Big Data 的發展重心已經從技術回到資料本身，也就是說，對於處理超大量資料的技術已經成熟並變成一種服務，像是 Goolge 的雲端服務平台便有提供處理 Big Data 的服務，而且，價格並不算貴，所以，個人和企業想要運用 Big Data 的門檻已經大大降低。</p>
+						</div>
+						<!-- <a class="slide_btn FromRight" href="javascript:void(0);" >檢視更多</a> -->
+						
+						<!-- VIDEO BACKGROUND -->
+						<!-- <a id="P2" class="player" data-property="{videoURL:'tDvBwPzJ7dY',containment:'.top_slider .slide3',autoPlay:true, mute:true, startAt:0, opacity:1}" ></a> -->
+						<!-- //VIDEO BACKGROUND -->
+					</li>
+				</ul>
+			</div>
+			<div id="carousel">
+				<ul class="slides">
+					<li><img src="images/slider/slide1_bg.jpg"/></li>
+					<li><img src="images/slider/slide4_bg.jpg"/></li>
+					<li><img src="images/slider/slide2_bg.jpg"/></li>
+					<li><img src="images/slider/slide3_bg.jpg"/></li>
+				</ul>
+			</div><!-- //TOP SLIDER -->
+		</section><!-- //HOME -->
+
+		<!-- BMCV -->
+		<section id="bmcv">
+			
+			<!-- SERVICES -->
+			<div class="services_block padbot40" data-appear-top-offset="-200" data-animated="fadeInUp">
+
+				<!-- CONTAINER -->
+				<div class="container">
+
+					<h2 style="margin-top:1em;"><q class="txt3D">BMC Voice</q> 技術原理</h2>
+
+					<!-- ROW -->
+					<div class="row">
+					<ul class="technology" data-appear-top-offset="-250" data-animated="fadeInUp">
+						<li>
+							<img src="images/technology/intro-1.png">
+							<span>BMC Voice 音訊技術</span>
+						</li>
+						<li class="arr">
+							<img src="images/technology/icon-arrow.png">
+						</li>
+						<li>
+							<img src="images/technology/intro-2.png">
+							<span>轉換成音波</span>
+						</li>
+						<li class="arr">
+							<img src="images/technology/icon-arrow.png">
+						</li>
+						<li>
+							<img src="images/technology/intro-3.png">
+							<span>發送音訊的裝置</span>
+						</li>
+						<li class="arr">
+							<img src="images/technology/icon-arrow.png">
+						</li>
+						<li>
+							<img src="images/technology/intro-4.png">
+							<span>接收裝置的麥克風</span>
+						</li>
+						<li class="arr">
+							<img src="images/technology/icon-arrow.png">
+						</li>
+						<li>
+							<img src="images/technology/intro-5.png">
+							<span>音波轉換成訊息</span>
+						</li>
+						<li class="arr">
+							<img src="images/technology/icon-arrow.png">
+						</li>
+						<li>
+							<img src="images/technology/intro-6.png">
+							<span>訊息轉換APP應用</span>
+						</li>
+					</ul>
+
+					</div>
+
+					<div class="row margbot60" data-appear-top-offset="-200" data-animated="fadeInUp">
+						<div class="col-sm-6 col-xs12 center">
+							<img class="margbot20" src="images/services_targeting1.jpg">
+							<p class="f120">透過漢吶的音頻技術將人耳聽不見的訊息傳送到手機</p>
+						</div>
+						<div class="col-sm-6 col-xs12 center">
+							<img class="margbot20" src="images/services_targeting2.jpg">
+							<p class="f120">即便在無網路環境下透過音頻預載技術也可以顯示出資訊內容</p>
+						</div>
+					</div>
+
+					<h3 style="color:#3C1A57;font-family:inherit;"><i class="fa fa-connectdevelop f80"></i> <q>導入運用</q> <small>Import using</small></h3>
+					<!-- ROW -->
+					<div class="row" data-appear-top-offset="-200" data-animated="fadeInUp">
+						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-ss-12 margbot30">
+							<a class="services_item" href="javascript:void(0);" >
+								<p><i class="fa fa-music"></i> <b>影音媒體</b> Multimedia</p>
+								<span>消費者在觀賞影片時，廣告商或是影片發佈商，可透過BMCV音頻技術，將更多節目或商品資訊，或是互動內容，直接發送到觀眾手機上，讓觀眾可利用這些資訊立即線上下單，瀏覽隱藏版訊息，或是進行搶答，投票等互動任務。</span>
+							</a>
+						</div>
+						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-ss-12 margbot30">
+							<a class="services_item" href="javascript:void(0);" >
+								<p><i class="fa fa-keyboard-o"></i> <b>文字傳輸</b> Text</p>
+								<span>不需要使用 3G、wifi 連上網路，也不需要透過藍芽等裝置，使用 BMC Voice 音頻技術就可以讓手機之間互相溝通，形成區域內的小型聊天室。</span>
+							</a>
+						</div>
+						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-ss-12 margbot30">
+							<a class="services_item" href="javascript:void(0);" >
+								<p><i class="fa fa-microphone"></i> <b>硬體設備</b> Hardware</p>
+								<span>不論是使用蘋果或是安卓系統或是電視、音響設備等，只要有擴音設備(喇叭)都可以使用 BMC Voice 音頻傳輸技術，完全無需添購新硬體設備，預算成本最節省。</span>
+							</a>
+						</div>
+						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-ss-12 margbot30">
+							<a class="services_item" href="javascript:void(0);" >
+								<p><i class="fa fa-random"></i> <b>雙向傳輸</b> Transmission</p>
+								<span>BMCV 音頻為雙向傳輸技術，比傳統採用單向傳輸技術更具有優勢，可即時反應消費者的需求，讓企業主可以隨時掌握目前最新消費需求。</span>
+							</a>
+						</div>
+
+						<!-- <div class="row">
+							<p class="subtext">人手一機的時代改變了收視習慣，也改變了影音媒體廣告的版圖，數位電視廣告將會是下一波媒體規劃重點！<p>
+							<p class="subtext">根據資策會FIND結合Mobile First調查數據顯示，台灣持有智慧型手機或平板電腦的民眾已高達1,330萬人，占12歲以上人口約六成的比例，而有超過兩成比例同時持有智慧型手機與平板電腦，相較於2013年下半年的調查結果，智慧型手機普及率持續成長，平板電腦則顯趨緩。<p>
+							<p class="subtext">數位行動生活浪潮襲捲全球，根據資策會FIND調查國內12歲（含）以上的民眾發現，目前擁有智慧型手機的人口佔比已高達58.7%，推估持有人數為1,225萬；在過去半年，臺灣智慧型手機普及率由51.4%成長到58.7%，仍維持明顯的成長。另外，平板電腦的普及率已達25.4%，推估為530萬人，相較於2013年下半年增加了1.8個百分點。觀察不同特徵消費者持有智慧型手機的情況，智慧型手機普及率成長的動力主要來自於「年齡在50歲以上的民眾」，持有智慧型手機的比例平均增加幅度約為1~2成。”<p>
+						</div> -->
+					</div><!-- //ROW -->
+				</div><!-- //CONTAINER -->
+			</div><!-- //SERVICES -->
+			
+			<!-- CLEAN CODE -->
+			<div class="cleancode_block">
+				
+				<!-- CONTAINER -->
+				<div class="container" data-appear-top-offset="-200" data-animated="fadeInUp">
+					
+					<!-- CASTOM TAB -->
+					<div id="myTabContent" class="tab-content">
+						<div class="tab-pane fade in active clearfix" id="tab1">
+							<p class="title"><b class="txt3D color_white">管理平台</b> <q class="f18pt">Management</q></p>
+							<span>透過強大的後台管理網頁，讓不懂專業軟體的人也可以輕鬆的編輯、刪除、新增資料，安全的帳戶管理與防毒加密強化功能，結合音頻開發更加無往不利。</span>
+						</div>
+						<div class="tab-pane fade clearfix" id="tab2">
+							<p class="title"><b class="txt3D color_white">技術支援</b> <q class="f18pt">Support</q></p>
+							<span>我們非常重視產品用戶是否可以很容易地使用我們的產品，近年來我們一直致力於將產品技術透過研討會或網際網路的方式，完整而迅速的傳遞給每個使用客戶。</span>
+						</div>
+						<div class="tab-pane fade clearfix" id="tab3">
+							<p class="title"><b class="txt3D color_white">跨平台</b> <q class="f18pt">Platform</q></p>
+							<span>透過 SDK 開發套件，你將可以用各項開發環境開發各行動平台 (Windows/iOS/Android) 的 App，而且執行效能一樣好！</span>
+						</div>
+						<div class="tab-pane fade clearfix" id="tab4">
+							<p class="title"><b class="txt3D color_white">開放檔案</b> <q class="f18pt">Open File</q></p>
+							<span>支援開放文件格式！現在文件支援圖片格式、試算表支援，還有 .PDF 等開放格式。<br>透過 API 介接資料庫整合已開發系統。</span>
+						</div>
+						<div class="tab-pane fade clearfix" id="tab5">
+							<p class="title"><b class="txt3D color_white">評 價</b> <q class="f18pt">Appraisal</q></p>
+							<span>近年來在國內每年均獲得最新創軟體開發之金獎與銀獎等優異獎項，在國際上漢吶科技更屢屢獲得好評，以及各項專案開發計畫亦多次獲得新加坡「最佳潛力」金牌獎之殊榮。</span>
+						</div>
+						<div class="tab-pane fade clearfix" id="tab6">
+							<p class="title"><b class="txt3D color_white">使用經驗</b> <q class="f18pt">Experience</q></p>
+							<span>使用者的需求是我們最重視的聲音，也是一切改變的起點。漢吶科技，透過各種方式去聆聽、去探索、去找出真正行為上的洞察。</span>
+						</div>
+					</div>
+					<ul id="myTab" class="nav nav-tabs">
+						<li class="active"><a class="i1" href="#tab1" data-toggle="tab" ><i></i><span>管理平台</span></a></li>
+						<li><a class="i2" href="#tab2" data-toggle="tab" ><i></i><span>技術支援</span></a></li>
+						<li><a class="i3" href="#tab3" data-toggle="tab" ><i></i><span>平 台</span></a></li>
+						<li><a class="i4" href="#tab4" data-toggle="tab" ><i></i><span>文 件</span></a></li>
+						<li><a class="i5" href="#tab5" data-toggle="tab" ><i></i><span>評 價</span></a></li>
+						<li><a class="i6" href="#tab6" data-toggle="tab" ><i></i><span>使用者</span></a></li>
+					</ul><!-- CASTOM TAB -->
+				</div><!-- //CONTAINER -->
+			</div><!-- //CLEAN CODE -->
+			
+			<!-- MULTI PURPOSE -->
+			<div class="purpose_block">
+				
+				<!-- CONTAINER -->
+				<div class="container">
+					
+					<!-- ROW -->
+					<div class="row" style="border-bottom:1px solid #eee;padding-bottom:3em;">
+					
+						<div class="col-lg-7 col-md-7 col-sm-7" data-appear-top-offset="-200" data-animated="fadeInLeft">
+							<h2>馬上體驗 <q class="txt3D">BMC Voice</q></h2>
+							<p>這是一個非常高品質的產品，我們的代碼整潔乾淨，您的開發技術人員，只需要利用我們提供的 SDK 文件，短短30分鐘就可以設定完成，您就能將音頻自由運用在您已開發的手機程式中。</p>
+							<p>我們的SDK提供您接受辨識我們的音頻並且解譯我們的音頻資訊，如果您需要我們提供接收音頻後，用戶手機端的顯示方式，或是各類資訊的互動模組，您也可以與我們商議，由我們替您完成整個應用面的開發。</p>
+							<p>如果您需要透過您自己的後台管理這些音頻的上下架資訊，您也可以與我們聯繫，進行您的管理系統和我們音頻管理系統的串接。我們提供各類客製化服務，歡迎您與我們聯繫。</p>
+							<div class="row">
+								<div class="col-sm-12">
+									<a class="btn btn-active" href="javascript:void(0);"><span class="f14pt" data-hover="聯繫我們">我有興趣</span></a>
+									<a class="btn f14pt" href="https://googledrive.com/host/0B3r7J_pp6rgNQURUZ3VxTDc2NEE/try_bmcv.html?iframe=true&width=90%&height=100%" rel="prettyPhoto[iframes]">體驗 BMCV</a>
+								</div>
+								<style>
+									#pp_full_res iframe {width:100%!important;}
+									.pp_pic_holder,.pp_default {left:2%!important;width:96%!important;}
+									.pp_content,.pp_hoverContainer {width:100%!important;text-align: center;}
+								</style>
+							</div>
+						</div>
+						
+						<div class="col-lg-5 col-md-5 col-sm-5 ipad_img_in" data-appear-top-offset="-200" data-animated="fadeInRight">
+							<img class="ipad_img1" src="images/img1.png"/>
+						</div>
+					</div><!-- //ROW -->
+				</div><!-- //CONTAINER -->
+			</div><!-- //MULTI PURPOSE -->
+		</section><!-- //BMCV -->
+
+		
+		<!-- PROJECTS -->
+		<section id="projects" class="padbot20">
+		
+			<!-- CONTAINER -->
+			<div class="container">
+				<h2><q class="txt3D">BMCV</q> 音頻應用</h2>
+			</div><!-- //CONTAINER -->
+			
+			<div class="projects-wrapper" data-appear-top-offset="-200" data-animated="fadeInUp">
+				<!-- PROJECTS SLIDER -->
+				<div class="owl-demo owl-carousel projects_slider" style="background-color: #fafafa;">
+
+					<!-- work1 -->
+					<div class="item">
+						<div class="work_item">
+							<div class="work_img">
+								<p class="title">購物商場上使用</p>
+								<img src="images/works/BMC-01.png"/>
+							</div>
+							<div class="work_description">
+								<div class="work_descr_cont">
+									<a href="images/works/BMC-01.jpg" rel="prettyPhoto[portfolio1]">購物商場上使用</a>
+									<!-- <span>17 March, 2014</span> -->
+								</div>
+							</div>
+						</div>
+					</div><!-- //work1 -->
+
+					<!-- work2 -->
+					<div class="item">
+						<div class="work_item">
+							<div class="work_img">
+								<p class="title">付款消費核銷</p>
+								<img src="images/works/BMC-22.jpg"/>
+							</div>
+							<div class="work_description">
+								<div class="work_descr_cont">
+									<a href="images/works/BMC-02.jpg" rel="prettyPhoto[portfolio1]">付款消費核銷</a>
+									<!-- <span>17 March, 2014</span> -->
+								</div>
+							</div>
+						</div>
+					</div><!-- //work2 -->
+
+					<!-- work3 -->
+					<div class="item">
+						<div class="work_item">
+							<div class="work_img">
+								<p class="title">電子錢包</p>
+								<img src="images/works/BMC-03.png"/>
+								<!-- <a class="zoom" href="images/works/BMC-03.jpg" rel="prettyPhoto[portfolio1]" ></a> -->
+							</div>
+							<div class="work_description">
+								<div class="work_descr_cont">
+									<a href="images/works/BMC-03.jpg" rel="prettyPhoto[portfolio1]">電子錢包</a>
+									<!-- <span>17 March, 2014</span> -->
+								</div>
+							</div>
+						</div>
+					</div><!-- //work3 -->
+
+					<!-- work4 -->
+					<div class="item">
+						<div class="work_item">
+							<div class="work_img">
+								<p class="title">室內定位</p>
+								<img src="images/works/BMC-44.jpg"/>
+								<!-- <a class="zoom" href="images/works/BMC-04.jpg" rel="prettyPhoto[portfolio1]" ></a> -->
+							</div>
+							<div class="work_description">
+								<div class="work_descr_cont">
+									<a href="images/works/BMC-04.jpg" rel="prettyPhoto[portfolio1]">室內定位</a>
+									<!-- <span>17 March, 2014</span> -->
+								</div>
+							</div>
+						</div>
+					</div><!-- //work4 -->
+
+					<!-- work5 -->
+					<div class="item">
+						<div class="work_item">
+							<div class="work_img">
+								<p class="title">展覽品或商品簡介主動推送</p>
+								<img src="images/works/BMC-55.jpg"/>
+								<!-- <a class="zoom" href="images/works/BMC-05.jpg" rel="prettyPhoto[portfolio1]" ></a> -->
+							</div>
+							<div class="work_description">
+								<div class="work_descr_cont">
+									<a href="images/works/BMC-05.jpg" rel="prettyPhoto[portfolio1]">展覽品或商品簡介主動推送</a>
+									<!-- <span>17 March, 2014</span> -->
+								</div>
+							</div>
+						</div>
+					</div><!-- //work5 -->
+
+					<!-- work6 -->
+					<div class="item">
+						<div class="work_item">
+							<div class="work_img">
+								<p class="title">電視影音多媒體</p>
+								<img src="images/works/BMC-06.png"/>
+								<!-- <a class="zoom" href="images/works/BMC-06.jpg" rel="prettyPhoto[portfolio1]" ></a> -->
+							</div>
+							<div class="work_description">
+								<div class="work_descr_cont">
+									<a href="images/works/BMC-06.jpg" rel="prettyPhoto[portfolio1]">電視影音多媒體</a>
+									<!-- <span>17 March, 2014</span> -->
+								</div>
+							</div>
+						</div>
+					</div><!-- //work6 -->
+
+					<!-- work7 -->
+					<div class="item">
+						<div class="work_item">
+							<div class="work_img">
+								<p class="title">即時訊息傳遞</p>
+								<img src="images/works/BMC-77.jpg"/>
+								<!-- <a class="zoom" href="images/works/BMC-07.jpg" rel="prettyPhoto[portfolio1]" ></a> -->
+							</div>
+							<div class="work_description">
+								<div class="work_descr_cont">
+									<a href="images/works/BMC-07.jpg" rel="prettyPhoto[portfolio1]">即時訊息傳遞</a>
+									<!-- <span>17 March, 2014</span> -->
+								</div>
+							</div>
+						</div>
+					</div><!-- //work7 -->
+
+					<!-- work8 -->
+					<div class="item">
+						<div class="work_item">
+							<div class="work_img">
+								<p class="title">機場車站廣播訊息推送</p>
+								<img src="images/works/BMC-08.png"/>
+								<!-- <a class="zoom" href="images/works/BMC-08.jpg" rel="prettyPhoto[portfolio1]" ></a> -->
+							</div>
+							<div class="work_description">
+								<div class="work_descr_cont">
+									<a href="images/works/BMC-08.jpg" rel="prettyPhoto[portfolio1]">機場車站廣播訊息推送</a>
+									<!-- <span>17 March, 2014</span> -->
+								</div>
+							</div>
+						</div>
+					</div><!-- //work8 -->
+
+				</div><!-- //PROJECTS SLIDER -->
+			</div>
+			
+			<!-- OUR CLIENTS -->
+			<div class="our_clients">
+			
+				<!-- CONTAINER -->
+				<div class="container" data-appear-top-offset="-200" data-animated="fadeInUp">
+					
+					<!-- ROW -->
+					<div class="row">
+						<div class="col-lg-2 col-md-2 col-sm-2 client_img">
+							<img src="images/clients/1.jpg"/>
+						</div>
+						<div class="col-lg-2 col-md-2 col-sm-2 client_img">
+							<img src="images/clients/2.jpg"/>
+						</div>
+						<div class="col-lg-2 col-md-2 col-sm-2 client_img">
+							<img src="images/clients/3.jpg"/>
+						</div>
+						<div class="col-lg-2 col-md-2 col-sm-2 client_img">
+							<img src="images/clients/4.jpg"/>
+						</div>
+						<div class="col-lg-2 col-md-2 col-sm-2 client_img">
+							<img src="images/clients/5.jpg"/>
+						</div>
+						<div class="col-lg-2 col-md-2 col-sm-2 client_img">
+							<img src="images/clients/6.jpg"/>
+						</div>
+					</div><!-- //ROW -->
+				</div><!-- CONTAINER -->
+			</div><!-- //OUR CLIENTS -->
+		</section><!-- //PROJECTS -->
+		
+		
+		<!-- TEAM -->
+		<!-- <section id="team"> -->
+		
+			<!-- CONTAINER -->
+			<!-- <div class="container">
+				<h2><b>專業的</b>技術團隊</h2> -->
+				
+				<!-- ROW -->
+				<!-- <div class="row" data-appear-top-offset="-200" data-animated="fadeInUp"> -->
+						
+					<!-- TEAM SLIDER -->
+					<!-- <div class="owl-demo owl-carousel team_slider"> -->
+				
+						<!-- crewman1 -->
+						<!-- <div class="item">
+							<div class="crewman_item">
+								<div class="crewman">
+									<img src="images/team/1.jpg"/>
+								</div>
+								<div class="crewman_descr center">
+									<div class="crewman_descr_cont">
+										<p>薩拉·布朗</p>
+										<span>專案經理</span>
+									</div>
+								</div>
+								<div class="crewman_social">
+									<a href="javascript:void(0);" ><i class="fa fa-twitter"></i></a>
+									<a href="javascript:void(0);" ><i class="fa fa-facebook-square"></i></a>
+								</div>
+							</div>
+						</div> --><!-- crewman1 -->
+						
+						<!-- crewman2 -->
+						<!-- <div class="item">
+							<div class="crewman_item">
+								<div class="crewman">
+									<img src="images/team/2.jpg"/>
+								</div>
+								<div class="crewman_descr center">
+									<div class="crewman_descr_cont">
+										<p>大衛·瓊斯</p>
+										<span>創意總監</span>
+									</div>
+								</div>
+								<div class="crewman_social">
+									<a href="javascript:void(0);" ><i class="fa fa-google-plus"></i></a>
+									<a href="javascript:void(0);" ><i class="fa fa-twitter"></i></a>
+									<a href="javascript:void(0);" ><i class="fa fa-facebook-square"></i></a>
+								</div>
+							</div>
+						</div> --><!-- crewman1 -->
+						
+						<!-- crewman3 -->
+						<!-- <div class="item">
+							<div class="crewman_item">
+								<div class="crewman">
+									<img src="images/team/3.jpg"/>
+								</div>
+								<div class="crewman_descr center">
+									<div class="crewman_descr_cont">
+										<p>凱特·史密斯</p>
+										<span>業務經理</span>
+									</div>
+								</div>
+								<div class="crewman_social">
+									<a href="javascript:void(0);" ><i class="fa fa-twitter"></i></a>
+									<a href="javascript:void(0);" ><i class="fa fa-facebook-square"></i></a>
+								</div>
+							</div>
+						</div> --><!-- crewman3 -->
+						
+						<!-- crewman4 -->
+						<!-- <div class="item">
+							<div class="crewman_item">
+								<div class="crewman">
+									<img src="images/team/4.jpg"/>
+								</div>
+								<div class="crewman_descr center">
+									<div class="crewman_descr_cont">
+										<p>彼得·帕克</p>
+										<span>專案經理</span>
+									</div>
+								</div>
+								<div class="crewman_social">
+									<a href="javascript:void(0);" ><i class="fa fa-twitter"></i></a>
+									<a href="javascript:void(0);" ><i class="fa fa-facebook-square"></i></a>
+								</div>
+							</div>
+						</div> --><!-- crewman4 -->
+						
+						<!-- crewman5 -->
+						<!-- <div class="item">
+							<div class="crewman_item">
+								<div class="crewman">
+									<img src="images/team/5.jpg"/>
+								</div>
+								<div class="crewman_descr center">
+									<div class="crewman_descr_cont">
+										<p>吉姆·莫斯</p>
+										<span>前端開發設計師</span>
+									</div>
+								</div>
+								<div class="crewman_social">
+									<a href="javascript:void(0);" ><i class="fa fa-google-plus"></i></a>
+									<a href="javascript:void(0);" ><i class="fa fa-twitter"></i></a>
+									<a href="javascript:void(0);" ><i class="fa fa-facebook-square"></i></a>
+								</div>
+							</div>
+						</div> --><!-- crewman5 -->
+						
+						<!-- crewman6 -->
+						<!-- <div class="item">
+							<div class="crewman_item">
+								<div class="crewman">
+									<img src="images/team/6.jpg"/>
+								</div>
+								<div class="crewman_descr center">
+									<div class="crewman_descr_cont">
+										<p>約翰·馬克斯</p>
+										<span>互動行為設計師</span>
+									</div>
+								</div>
+								<div class="crewman_social">
+									<a href="javascript:void(0);" ><i class="fa fa-twitter"></i></a>
+									<a href="javascript:void(0);" ><i class="fa fa-facebook-square"></i></a>
+								</div>
+							</div>
+						</div> --><!-- crewman6 -->
+						
+						<!-- crewman7 -->
+						<!-- <div class="item">
+							<div class="crewman_item">
+								<div class="crewman">
+									<img src="images/team/7.jpg"/>
+								</div>
+								<div class="crewman_descr center">
+									<div class="crewman_descr_cont">
+										<p>喬 尼亞莫</p>
+										<span>程式開發人員</span>
+									</div>
+								</div>
+								<div class="crewman_social">
+									<a href="javascript:void(0);" ><i class="fa fa-twitter"></i></a>
+									<a href="javascript:void(0);" ><i class="fa fa-facebook-square"></i></a>
+								</div>
+							</div>
+						</div> --><!-- crewman7 -->
+						
+						<!-- crewman8 -->
+						<!-- <div class="item">
+							<div class="crewman_item">
+								<div class="crewman">
+									<img src="images/team/8.jpg"/>
+								</div>
+								<div class="crewman_descr center">
+									<div class="crewman_descr_cont">
+										<p>朱莉婭·安德森</p>
+										<span>市場行銷經理</span>
+									</div>
+								</div>
+								<div class="crewman_social">
+									<a href="javascript:void(0);" ><i class="fa fa-google-plus"></i></a>
+									<a href="javascript:void(0);" ><i class="fa fa-twitter"></i></a>
+									<a href="javascript:void(0);" ><i class="fa fa-facebook-square"></i></a>
+								</div>
+							</div>
+						</div> --><!-- crewman8 -->
+					<!-- </div> --><!-- TEAM SLIDER -->
+				<!-- </div> --><!-- //ROW -->
+			<!-- </div> --><!-- //CONTAINER -->
+		<!-- </section> --><!-- //TEAM -->
+		
+		
+		<!-- NEWS -->
+		<!-- <section id="news"> -->
+		
+			<!-- CONTAINER -->
+			<!-- <div class="container">
+				<h2><i class="fa fa-newspaper-o"></i> <b>新聞報導</b> News</h2> -->
+				
+				<!-- TESTIMONIALS -->
+				<!-- <div class="testimonials" data-appear-top-offset="-200" data-animated="fadeInUp"> -->
+						
+					<!-- TESTIMONIALS SLIDER -->
+					<!-- <div class="owl-demo owl-carousel testim_slider"> -->
+
+						<!-- TESTIMONIAL1 -->
+						<!-- <div class="item">
+							<div class="testim_content">漢吶科技與多家銀行業者合作</div>
+							<p>漢吶科技今天（4/13）與玉山、國泰世華、萬泰、中國信託、元大、台銀、合庫、台新銀行八家銀行業者合作發表手機 BMCV 行動支付服務，結合智慧型手機基本的喇叭和錄音功能，讓消費者可以手機取代信用卡完成電子消費購物，增加行動支付的便利性。</p>
+							<p>消費者使用這項服務不需要向銀行或中華電信申請，只要是有智慧型手機用戶，且擁有8家銀行業者發行的信用卡，就能在手機內安裝 BMCV 信用卡扣款App，第一次開啟 App 需先輸入個人身份證字號、信用卡卡號、手機門號，App 會自動連接到資料庫確認用戶身份（依手機中的SIM卡驗證身份），通過後再連到發卡銀行確認信用卡用戶身份，完成兩道驗認程序後才能開始使用服務。</p>
+							<div class="testim_author">—  聯合新聞, <b>1 小時前</b></div>
+						</div> --><!-- TESTIMONIAL1 -->
+
+						<!-- TESTIMONIAL2 -->
+						<!-- <div class="item">
+							<div class="testim_content">視訊內容分享網站紛紛與手機業者合作</div>
+							<P>從 2006 年 12 月開始，使用 Verizon 無線通訊 V CAST 視訊與音樂套裝計畫的客戶，將可自他們的手機連線觀看 YouTube 網站，並下載影音內容。V CAST 的訂閱費用為每日訂閱費用為 3 美元，如果訂閱整個月的月費是 15 美元。</P>
+							<P>不過，服務只限於部分高畫質影音內容可在 Verizon 手機的YouTube頻道收看。使用者可將運用 Verizon 手機拍攝的影音內容，上傳至 YouTube 網站。</P>
+							<p>MySpace Mobile 服務每月收費 2.99 美元，可讓 Cingular 用戶透過手機，在 MySpace 的網頁貼照片、寫部落格、發表意見以及收發電子郵件；至於 MySpace 廣受歡迎的視訊、圖像和廣告服務則暫不提供。</p>
+							<div class="testim_author">—  蘋果日報, <b>1 小時前</b></div>
+						</div> --><!-- TESTIMONIAL2 -->
+
+						<!-- TESTIMONIAL3 -->
+						<!-- <div class="item">
+							<div class="testim_content">微軟擬與手機業者合作推出智慧型手機</div>
+							<p>微軟表示，將與三菱及摩托羅拉等業者合作，利用 MSN 服務推出 Stinger 智慧型手機、傳呼機等無線裝置。微軟指出，透過與手機業者結盟，攻佔無線市場，將可使其本身的軟體服務更有發展機會。</p>
+							<p>微軟的 Stinger 智慧型手機將由三菱、三星電子、Sendo 與台灣宏達國際公司製造。宏達國際目前為康柏 iPaq 掌上電腦代工，其手機產品將於今年底問世。而三菱將首先採用微軟的手機瀏覽器 Mobile Explorer，在美國推出 Trium G520、GT550 手機產品，預計明年第一季上市。</p>
+							<p>此外，微軟也與摩托羅拉合作推出雙向傳呼機。以MSN品牌結合摩托羅拉 Talkabout T900 推出新產品；該款 MSN 傳呼機售價約 99 美元，計畫搭配 MSN 服務，主打年輕消費者市場。</p>
+							<div class="testim_author">—  聯合新聞網, <b>昨天 下午 12:45</b></div>
+						</div> --><!-- TESTIMONIAL3 -->
+
+						<!-- TESTIMONIAL4 -->
+						<!-- <div class="item">
+							<div class="testim_content">穿戴式裝置普及四大挑戰</div>
+							<p>穿戴式裝置議題持續在市場上發酵，儘管話題的熱度夠高，然而如何能將這樣的熱度，轉化成為消費者願意真正將穿戴式裝置穿上身的助力，則仍有待考驗。而這道鴻溝的存在，也代表了要將穿戴式裝置推向市場，獲得更高的普及率，將面臨許多的挑戰。UL亞太區事業發展經理陳立閔認為，目前穿戴式裝置普及之途，主要會遇到以下四大挑戰。</p>
+							<p>在消費者類型中的早期大眾，屬於實用主義者，並不會著迷於新科技，他們真正在意的是實用性，運用新科技必須能提高生產力。以智慧手環為例，記錄每天行走的步數、呼吸與心跳、換算得出的熱量消耗等的「數據」，對實用主義者來說，尚未產生「有意義的資訊並提供附加價值」。</p>
+							<p>穿戴裝置就像衣服與裝飾，就消費者心理層面來說，這是非常個人化的產品。產品設計除了必須實用之外，也必須注重美感，不能造成配戴者突兀的感覺。</p>
+							<div class="testim_author">—  中時電子報, <b>2015 年 3 月 9 日 下午 3:08</b></div>
+						</div> --><!-- TESTIMONIAL4 -->
+					<!-- </div> --><!-- TESTIMONIALS SLIDER -->
+				<!-- </div> --><!-- //TESTIMONIALS -->
+				
+				<!-- RECENT POSTS -->
+				<!-- <div class="row recent_posts" data-appear-top-offset="-200" data-animated="fadeInUp">
+					<div class="col-lg-4 col-md-4 col-sm-4 padbot30 post_item_block">
+						<div class="post_item">
+							<div class="post_item_img">
+								<img src="images/blog/bmcv-ad.jpg"/>
+								<a class="link" href="http://www.uni-hankyu.com.tw/" target="_blank"></a>
+							</div>
+							<div class="post_item_content">
+								<div class="clip">
+									<a class="title" href="http://www.uni-hankyu.com.tw/" target="_blank">統一阪急百貨商場結合手機音頻廣告</a>
+								</div>
+								<ul class="post_item_inf">
+									<li><a href="javascript:void(0);" >報導</a> |</li>
+									<li><a href="javascript:void(0);" >新聞媒體</a> |</li>
+									<li><a href="javascript:void(0);" >131 瀏覽</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-4 padbot30 post_item_block">
+						<div class="post_item">
+							<div class="post_item_img">
+								<img src="images/blog/outside.jpg"/>
+								<a class="link" href="http://okashi.pixnet.net/blog/post/24445897-%E6%8F%90%E4%BE%9B%E6%88%B6%E5%A4%96%E6%95%B8%E4%BD%8D%E7%9C%8B%E6%9D%BF%E5%A4%9A%E4%BA%BA%E9%81%8A%E6%88%B2%E7%9A%84megaphone-call-game" target="_blank"></a>
+							</div>
+							<div class="post_item_content">
+								<div class="clip">
+									<a class="title" href="http://okashi.pixnet.net/blog/post/24445897-%E6%8F%90%E4%BE%9B%E6%88%B6%E5%A4%96%E6%95%B8%E4%BD%8D%E7%9C%8B%E6%9D%BF%E5%A4%9A%E4%BA%BA%E9%81%8A%E6%88%B2%E7%9A%84megaphone-call-game" target="_blank">漢吶科技戶外看板多人傳訊互動的大型實驗活動</a>
+								</div>
+								<ul class="post_item_inf">
+									<li><a href="javascript:void(0);" >報導</a> |</li>
+									<li><a href="javascript:void(0);" >新聞媒體</a> |</li>
+									<li><a href="javascript:void(0);" >1.1k 瀏覽</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-4 padbot30 post_item_block">
+						<div class="post_item">
+							<div class="post_item_img">
+								<img src="images/blog/miramar.jpg"/>
+								<a class="link" href="http://www.miramarcinemas.com/" target="_blank"></a>
+							</div>
+							<div class="post_item_content">
+								<div class="clip">
+									<a class="title" href="http://www.miramarcinemas.com/" target="_blank">漢吶科技與美麗華在今日記者會上正式發表合作</a>
+								</div>
+								<ul class="post_item_inf">
+									<li><a href="javascript:void(0);" >媒體報導</a> |</li>
+									<li><a href="javascript:void(0);" >行動裝置</a> |</li>
+									<li><a href="javascript:void(0);" >25 瀏覽</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div> --><!-- RECENT POSTS -->
+			<!-- </div> --><!-- //CONTAINER -->
+		<!-- </section> --><!-- //NEWS -->
+	</div><!-- //PAGE -->
+	
+	<!-- CONTACTS -->
+	<section id="contacts">
+	</section><!-- //CONTACTS -->
+	
+	<!-- FOOTER -->
+	<footer>
+			
+		<!-- CONTAINER -->
+		<div class="container">
+			
+			<!-- ROW -->
+			<div class="row" data-appear-top-offset="-200" data-animated="fadeInUp">
+				
+				<div class="col-lg-4 col-md-4 col-sm-6 padbot30">
+					<h4><i class="fa fa-street-view"></i> <b>Partner /</b> 合作夥伴</h4>
+					<div class="recent_posts_small clearfix">
+						<!-- <div class="post_item_img_small">
+							<img src="images/blog/1.jpg"/>
+						</div> -->
+						<div class="post_item_content_small">
+							<a class="title" href="http://www.jyt-inc.com/" target="_blank"><img src="images/jyt_logo.png"/></a>
+							<ul class="post_item_inf_small">
+								<li>碁曄科技是專業程式設計與開發公司，我們提供專案管理及高品質軟體介面設計開發流程，為您量身打造的 APP 軟體的 ODM/OEM 設計團隊，服務項目包含 APP 專案軟體設計等...</li>
+							</ul>
+						</div>
+					</div>
+					<div class="recent_posts_small clearfix">
+						<!-- <div class="post_item_img_small">
+							<img src="images/blog/2.jpg"/>
+						</div> -->
+						<div class="post_item_content_small">
+							<a class="title" href="http://offerme2.com/" target="_blank"><img src="images/offerme.png"/></a>
+							<ul class="post_item_inf_small">
+								<li>Off Me2 歐米爾網路科技股份有限公司成立於 2011 年，主要服務項目為遊戲行銷、媒體採購、整合行銷與品牌社群行銷。產品方面，則提供來自日本的 F.O.X 第三方偵測系統、激勵式積分牆產品與即將推出的手遊影音娛樂平台。</li>
+							</ul>
+						</div>
+					</div>
+					<div class="recent_posts_small clearfix">
+						<!-- <div class="post_item_img_small">
+							<img src="images/blog/3.jpg"/>
+						</div> -->
+						<div class="post_item_content_small">
+							<a class="title" href="http://www.viatech.com.tw//" target="_blank"><img src="images/via_logo.png"/></a>
+							<ul class="post_item_inf_small">
+								<li>威盛電子（VIA Technologies, Inc. 簡稱 VIA）是無晶圓低功耗X86處理器平台先驅，也是個人電腦、終端機、超行動裝置與嵌入式市場的領導廠商。有效整合低功耗的處理器、多媒體的晶片組及先進的IO、匯流排與網路控制器，組成電腦運算與通訊平台以及廣受好評的EPIA系列主機板。</li>
+							</ul>
+						</div>
+					</div>
+					<!-- <div class="recent_posts_small clearfix"> -->
+						<!-- <div class="post_item_img_small">
+							<img src="images/blog/3.jpg"/>
+						</div> -->
+						<!-- <div class="post_item_content_small">
+							<a class="title" href="http://www.asus.com/" target="_blank"><img src="images/ASUS.png"/></a>
+							<ul class="post_item_inf_small">
+								<li>華碩電腦股份有限公司創立於1989年，為全球最大的主機板製造商，並躋身全球前三大消費性筆記型電腦品牌。華碩始終對品質與創新全力以赴，不斷為消費者及企業用戶提供嶄新的科技解決方案。</li>
+							</ul>
+						</div>
+					</div> -->
+				</div>
+				
+				<div class="col-lg-4 col-md-4 col-sm-6 padbot30 foot_about_block">
+					<h4><img src="images/favicon.png" style="width:24px;"> Hannah 漢吶科技</h4>
+					<p>漢吶科技股份有限公司成立於 2015 年，成員多來自於台灣，由一群活潑、創新、熱血的團隊所組成。在漢吶科技的團隊中大家一起打拼，一起學習，一起成長，非常歡迎志同道合的優秀朋友們一起加入漢吶科技。</p>
+					<p>漢吶科技主要發展音波技術，利用音波來進行資料傳遞/鍊結，與國內外廠商合作，以提供一般民眾更加舒適/便利的生活環境，期望成為立足台灣，放眼全球的一流公司。</p>
+					<address>電話：+886-2-6636 7777<br>傳真：+886-2-6636 3377<br><a class="map_show" href="javascript:void(0);">10688 台灣台北市大安區仁愛路四段101號4樓之2</a></address>
+					<ul class="social">
+						<!-- <li><a href="javascript:void(0);" ><i class="fa fa-twitter"></i></a></li>
+						<li><a href="javascript:void(0);" ><i class="fa fa-facebook"></i></a></li>
+						<li><a href="javascript:void(0);" ><i class="fa fa-google-plus"></i></a></li> -->
+						<!-- <li><a href="javascript:void(0);" ><i class="fa fa-pinterest-square"></i></a></li> -->
+						<li><a class="map_show" href="javascript:void(0);" ><i class="fa fa-map-marker"></i></a></li>
+					</ul>
+				</div>
+				
+				<div class="respond_clear"></div>
+				
+				<div class="col-lg-4 col-md-4 padbot30">
+					<h4><i class="fa fa-send"></i> <b>Contact /</b> 聯繫我們</h4>
+					
+					<!-- CONTACT FORM -->
+					<div class="span9 contact_form">
+						<div id="note"></div>
+						<div id="fields">
+							<form id="contact-form-face" class="clearfix" action="#">
+								<input type="text" name="name" value="稱謂 / Name" onFocus="if (this.value == '稱謂 / Name') this.value = '';" onBlur="if (this.value == '') this.value = '稱謂 / Name';" />
+								<input type="text" name="email" value="電子郵件 / E-mail" onFocus="if (this.value == '電子郵件 / E-mail') this.value = '';" onBlur="if (this.value == '') this.value = '電子郵件 / E-mail';" />
+								<textarea name="message" onFocus="if (this.value == '訊息 / Message') this.value = '';" onBlur="if (this.value == '') this.value = '訊息 / Message';">訊息 / Message</textarea>
+								<input class="contact_btn" type="submit" value="送出 / Send" />
+							</form>
+						</div>
+					</div><!-- //CONTACT FORM -->
+				</div>
+			</div><!-- //ROW -->
+		</div><!-- //CONTAINER -->
+	</footer><!-- //FOOTER -->
+	
+	
+	<!-- MAP -->
+	<div id="map">
+		<a class="map_hide" href="javascript:void(0);" ><i class="fa fa-angle-right"></i><i class="fa fa-angle-left"></i></a>
+		<!-- <iframe src="http://maps.google.com/maps?f=q&amp;give%20a%20hand=s_q&amp;hl=en&amp;geocode=&amp;q=london&amp;sll=37.0625,-95.677068&amp;sspn=42.631141,90.263672&amp;ie=UTF8&amp;hq=&amp;hnear=London,+United+Kingdom&amp;ll=51.500141,-0.126257&amp;spn=0.026448,0.039396&amp;z=14&amp;output=embed" ></iframe> -->
+		<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1807.4343227507266!2d121.54697024055629!3d25.038531415506075!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abd0286edca9%3A0x0bc90bcf10665f39!2sNo.+101%2C+Section+4%2C+Ren&#39;ai+Rd%2C+Da%E2%80%99an+District%2C+Taipei+City%2C+Taiwan+106!5e0!3m2!1sen!2s!4v1427886749204"></iframe>
+	</div><!-- //MAP -->
+
+</div>
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>創投平台 - 會員中心個人設置</title>
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+	<script src="https://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<style>
+		body {font-family:'微軟正黑體';background-image: url("http://www.newlife.org.tw/img/base/backImg.jpg");background-repeat: no-repeat;background-size: 100% 100%;background-position: center top;background-attachment: fixed;height: 100%;width: 100%;position: relative;}
+		.bg_style {background-color: rgba(255,255,255,.95);margin:4em auto;padding:1em;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;}
+		.userImg {max-width:50%;border:1px solid #ccc;-webkit-border-radius:8px;-moz-border-radius:8px;border-radius:8px;}
+		.mrTop2em {margin-top:2em;}
+		.form-group b {color:red;margin-right:4px;}
+		.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {color: #FFF;background-color: #00AADA;}
+		.tab-pane + div {min-height:450px;}
+		#home .mrTop2em h4 {color: #3a2ca3;padding:0 10px;}
+		#home .mrTop2em button {position:relative;font-size: 18px;padding-left: 10px;}
+		#home .mrTop2em button q {position: absolute;background-color: #262626;padding: .2em 1em;top: -2em;left:55%;color: #fff;border-radius: 5px;-moz-box-shadow: 0px 2px 5px rgba(0,0,0,.75);-webkit-box-shadow: 0px 2px 5px rgba(0,0,0,.75);box-shadow: 0px 2px 5px rgba(0,0,0,.75);}
+		#home .mrTop2em button q:before {content: '';position: absolute;bottom:-12px;left: 40%;width: 0;height: 0;border-style: solid;border-width:12px 12px 0 0;border-color: #262626 transparent transparent transparent;}
+		#home .mrTop2em .alert-success {padding:.6em 2em;margin:1em 4em 2em;}
+		@media screen and (max-width: 640px){
+			#home .mrTop2em .alert-success {padding:.6em 2em;margin:1em 0.5em 2em;}
+			#home .mrTop2em button {font-size: 16px;}
+			#home .mrTop2em button q {left:18%;}
+			.col-sm-offset-4 button {width:100%;}
+		}
+	</style>
+</head>
+<body>
+	<div class="container bg_style">
+		<!-- Nav tabs -->
+		<ul class="nav nav-tabs" role="tablist">
+			<li role="presentation" class="active"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">個人資料</a></li>
+			<li role="presentation"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">投資人認證</a></li>
+			<li role="presentation"><a href="#changPassword" aria-controls="changPassword" role="tab" data-toggle="tab">修改密碼</a></li>
+		</ul>
+
+		<!-- Tab panes -->
+		<div class="tab-content">
+			<div role="tabpanel" class="tab-pane active" id="profile">
+				<div class="row">
+					<div class="col-sm-4">
+						<p align="center"><img class="img-responsive userImg mrTop2em" src="https://www.icta.lk/icta-assets/uploads/2015/12/profile-pic.png"></p>
+						<p align="center"><button type="button" class="btn btn-success">上传</button></p>
+					</div><!-- ./col-sm-4 -->
+
+					<div class="col-sm-8">
+						<form class="form-horizontal mrTop2em">
+							<div class="form-group">
+								<label for="userName" class="col-sm-2 control-label"><b>*</b>會員暱稱</label>
+								<div class="col-sm-10">
+									<input type="text" class="form-control" readonly id="userName" placeholder="顯示註冊時設定的帳戶">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="inputEmai" class="col-sm-2 control-label"><b>*</b>註冊電郵</label>
+								<div class="col-sm-10">
+									<input type="email" class="form-control" readonly id="inputEmai" placeholder="顯示註冊時設定的聯絡郵箱">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="sex" class="col-sm-2 control-label">性 别</label>
+								<div class="col-sm-10">
+									<select class="form-control">
+										<option>男</option>
+										<option>女</option>
+									</select>
+									<label class="radio-inline">
+										<input type="radio" name="user_sex" id="male" value="option1"> 男
+									</label>
+									<label class="radio-inline">
+										<input type="radio" name="user_sex" id="Female" value="option2"> 女
+									</label>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="phoneNum" class="col-sm-2 control-label"><b>*</b>聯繫電話</label>
+								<div class="col-sm-10">
+									<input type="text" class="form-control" id="phoneNum" placeholder="聯繫電話">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="adderss" class="col-sm-2 control-label">聯繫地址</label>
+								<div class="col-sm-10">
+									<input type="text" class="form-control" id="adderss" placeholder="聯繫地址">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="company" class="col-sm-2 control-label">服務公司</label>
+								<div class="col-sm-10">
+									<input type="text" class="form-control" id="company" placeholder="服務公司">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="jobTitle" class="col-sm-2 control-label">職 稱</label>
+								<div class="col-sm-10">
+									<input type="text" class="form-control" id="jobTitle" placeholder="職稱">
+								</div>
+							</div>
+							<!-- <div class="form-group">
+								<div class="col-sm-offset-2 col-sm-10">
+									<button type="submit" class="btn btn-success">保存最新的设置</button>
+								</div>
+							</div> -->
+						</form>
+					
+					</div><!-- ./col-sm-8 -->
+					<hr>
+					<div class="footer">
+						<div class="col-sm-offset-4 col-sm-12">
+							<button type="submit" class="btn btn-primary"><i class="glyphicon glyphicon-ok"></i> 保存最新的设置</button>
+						</div>
+					</div>
+				</div>
+			</div><!-- /.tab-pane -->
+
+			<div role="tabpanel" class="tab-pane" id="home">
+				<div class="row">
+					<center class="mrTop2em">
+						<h4>申請成為投資人，可參與項目投資。申請成為個人投資人，可對項目進行跟投。申請成為機構投資人，可對項目參與領投或跟投。</h4>
+						<h3 class="alert alert-success">目前投資人身份：<span class="text-primary">非投資人</span></h3>
+						<div class="sanchid">
+							<div class="col-xs-6">
+								<button type="button" class="btn btn-block btn-success btn-lg">申請個人投資人</button>
+							</div>
+							<div class="col-xs-6">
+								<button type="button" class="btn btn-block btn-primary btn-lg">申請機構投資人<q>送審中</q></button>
+							</div>
+						</div>
+					</center>
+				</div>
+			</div><!-- /.tab-pane -->
+
+			<div role="tabpanel" class="tab-pane" id="changPassword">
+				<div class="row">
+					<div class="col-sm-8">
+						<form class="form-horizontal mrTop2em">
+							<div class="form-group">
+								<label for="password" class="col-sm-2 control-label">新密碼</label>
+								<div class="col-sm-10">
+									<input type="password" class="form-control" id="password" placeholder="新密碼">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="nwePassword" class="col-sm-2 control-label">確認密碼</label>
+								<div class="col-sm-10">
+									<input type="password" class="form-control" id="nwePassword" placeholder="確認密碼">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-offset-2 col-sm-10">
+									<button type="submit" class="btn btn-primary"><i class="glyphicon glyphicon-ok"></i> 保存密码</button>
+								</div>
+							</div>
+						</form>
+					</div><!-- /.col-sm-8 -->
+				</div><!-- /.row -->
+			</div><!-- /.tab-pane -->
+
+		</div>
+	</div>
+</body>
+</html>

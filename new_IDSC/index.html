@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>IDSC UAV Fly Height</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+<link rel="stylesheet" href="http://v4-alpha.getbootstrap.com/examples/sticky-footer-navbar/sticky-footer-navbar.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+<style>
+	body {position__: relative;font-family: "Helvetica Neue",Helvetica,"Microsoft JhengHei",Arial,sans-serif;}
+	.bg-faded {background-color: rgba(247,247,249,.95);border-radius: 0;-moz-box-shadow: 0px 1px 8px rgba(0,0,0,.25);-webkit-box-shadow: 0px 1px 8px rgba(0,0,0,.25);box-shadow: 0px 1px 8px rgba(0,0,0,.25);}
+	.jumbotron {padding:6rem 2rem 12rem;background-image: url("images/bg_img.jpg");background-size: cover;background-repeat: no-repeat;background-position: center 30%;color: white;border-radius: 0;}
+	.jumbotron hr {border-color:rgba(255,255,255,.35);}
+	.marketing .col-lg-4 {margin-bottom: 1.5rem;text-align: center;}
+	.table-bordered {color:#486616;background-color:#ebfceb;}
+	.table-bordered th {background-color:#edfbe7;}
+	.table-bordered th:nth-child(3),.table-bordered td:nth-child(3){position:relative;-moz-box-shadow: 0px 2px 6px rgba(0,0,0,.10);-webkit-box-shadow: 0px 2px 6px rgba(0,0,0,.10);box-shadow: 0px 2px 6px rgba(0,0,0,.10);}
+	.table-bordered th:nth-child(3) {background-color:#baedb3;}
+	.table-bordered td:nth-child(3) {background-color:#d9efcf;}
+	.red {color:red;}
+	.fs_18pt {font-size:18pt;}
+	.fs_21pt {font-size:21pt;}
+	.fs_24pt {font-size:24pt;}
+	.fs_28pt {font-size:28pt;}
+	.yosi {margin-top:3rem;background-color:rgba(0,0,0,.25);color:#fff;padding:1.5em 2.5em;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;}
+	h5 {color:#5cb85c;}
+	.card {min-height:400px;}
+	.card .card-title {color:#bf2a89;margin-top: 0.6em;text-align: center;}
+	.img-responsive {max-width:100%;}
+	.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .active>.nav-link:focus, .navbar-light .navbar-nav .active>.nav-link:hover, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.active:focus, .navbar-light .navbar-nav .nav-link.active:hover, .navbar-light .navbar-nav .nav-link.open, .navbar-light .navbar-nav .nav-link.open:focus, .navbar-light .navbar-nav .nav-link.open:hover, .navbar-light .navbar-nav .open>.nav-link, .navbar-light .navbar-nav .open>.nav-link:focus, .navbar-light .navbar-nav .open>.nav-link:hover {
+	color:#00b32d;}
+	.navbar-brand {width:186px}
+	.navbar-brand img {height: 54px;position: absolute;top: 8px;}
+	.navbar-light .navbar-nav, .navbar-light .navbar-nav .nav-link:hover {color:#00b32d;}
+	.navbar-light .pull-right, .navbar-light .pull-right .nav-link:hover {color: rgba(17, 138, 241, 0.6);}
+	#app_dl {margin-bottom:6rem;}
+	#app_dl .col-lg-4 img {margin:0.5em 0 .8em;}
+	@media screen and (max-width: 640px){
+		.navbar-nav .nav-item {width: 100%;border-bottom: 1px solid #dedede;}
+		.navbar-nav .nav-item+.nav-item {margin-left: 0;}
+		.navbar-nav .nav-item+.nav-item:last-child {border-bottom: 0px solid #fff;}
+		.navbar-light .pull-right {float:none;}
+		.navbar {padding: .5rem 0;}
+	}
+</style>
+</head>
+<body id="top_home" data-spy="scroll" data-target="#navbar" data-offset="10">
+	<div class="pos-f-t">
+		<div class="collapse" id="navbar-header">
+			<div class="container bg-inverse p-a-1">
+				<h3>Collapsed content</h3>
+				<p>Toggleable via the navbar brand.</p>
+			</div>
+		</div>
+		<nav id="navbar" class="navbar navbar-light navbar-static-top bg-faded">
+			<div class="container">
+				<button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
+				☰
+				</button>
+				<div class="collapse navbar-toggleable-xs" id="exCollapsingNavbar">
+					<a class="navbar-brand display-3 hidden-xs-down" href="#top_home">
+						<!-- IDSC -->
+						<img src="images/IDSC_logo.png">
+					</a>
+					<ul class="nav navbar-nav">
+						<li class="nav-item">
+							<a class="nav-link" href="#top">UAV 简介</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#one">智能农保机</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#two">侦查无人机</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#three">油电混合无人机</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#for">APP 简介</a>
+						</li>
+						<!-- <li class="nav-item">
+							<a class="nav-link" href="#app_dl">App 下载</a>
+						</li> -->
+					</ul>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</div>
+			
+	<div class="container-fluid">
+		<div class="row">
+			<div class="jumbotron">
+				<div class="container">
+					<h1 class="display-3">IDSC 智能无人机</h1>
+					<p class="lead">IDSC SMART UAV</p>
+					<hr class="m-y-2">
+					<p>高效化客制  破壞式創新  優化無限可能</p>
+				</div>
+			</div>
+		</div>
+	</div><!-- /.container-fluid -->
+
+	<div id="top" class="container marketing">
+
+		<h4 class="display-4">SMART UAV Model</h4>
+		<p class="text-muted">智能无人机机型</p>
+		
+		<div class="row">
+			<div class="col-lg-4">
+				<img class="img-circle__" src="images/潤.png" width="140" height="140">
+				<h2>润系-智能农保机</h2>
+				<p>Agricultural and Forest</p>
+				<hr>
+				<!-- <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p> -->
+				<p class="text-left">用于农林植物保护作业的无人驾驶飞机，通过地面遥控或GPS飞控，来实现喷洒作业，可以喷洒药剂、种子、粉剂等。</p>
+			</div><!-- /.col-lg-4 -->
+			<div class="col-lg-4">
+				<img class="img-circle" src="images/鹫.jpg" width="140" height="140">
+				<h2>鹫系-侦查无人机</h2>
+				<p>Surveillance and Scouting</p>
+				<hr>
+				<!-- <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p> -->
+				<p class="text-left">鹫系无人机，专业配备高清摄像头，红外热成像仪等高端电子成像设备，能完成侦查、电力巡检，偷猎巡查、航拍航测、管道巡视、突发时间监视等复杂地形任务任务。</p>
+			</div><!-- /.col-lg-4 -->
+			<div class="col-lg-4">
+				<img class="img-circle" src="images/油.jpg" width="140" height="140">
+				<h2>油电混合无人机</h2>
+				<p>Long-Range Hybrid UAV</p>
+				<hr>
+				<!-- <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p> -->
+				<p class="text-left">IDSC油电混合型无人机，采用最新专利技术“油电混合动力技术”，史无前例的在不牺牲其他飞行性能的前提下，将续航时间提高到5小时以上，载重将达到40公斤！</p>
+			</div><!-- /.col-lg-4 -->
+		</div>
+
+		<div class="embed-responsive embed-responsive-16by9">
+			<video autoplay_ loop muted controls="false" id="myVideo">
+				<source src="images/Solo.mp4" type="video/mp4">
+			</video>
+		</div>
+
+		<hr class="m-y-2">
+		<h4 class="display-4">智能无人机带来的社会效益</h4>
+		<p>无人机用于农业植保的巨大社会效益-----我国现有耕地面积18亿亩，平均一年两季种植，每季种植需要3次药液喷洒，每年有108亿亩药液喷洒作用要求。使用无人机进行农药喷洒，可以大幅度节省农药，节水，减少对环境的污染，以及减少对人体健康的危害，带来无可估量的社会效益。</p>
+		<!-- <img style="margin-bottom:8em;" class="img-responsive center-block" src="images/ghost.png">
+		<hr class="m-y-2"> -->
+		<div style="margin-bottom:5em;"></div>
+		<h4 class="display-4">传统植保作业问题与不足</h4>
+		<p class="text-muted">Issues from Traditionalfrom Approach</p>
+		<div style="margin:1em 0 6em;"><img style="max-width:100%;" class="img-responsive center-block" src="images/img1.svg"></div>
+		<hr class="m-y-2">
+		<div class="row">
+			<div class="col-sm-5">
+				<img style="margin-bottom:2em;" class="img-responsive center-block" src="images/danger_img.jpg">
+			</div>
+			<div class="col-sm-7">
+				<h3 class="display-5">劳动力短缺以及农药对人体的危害</h3>
+				<p>我国农业发展主要依靠大量使用化肥、农药来支撑。某些地区单位面积可耕地上的氮肥使用量甚至高达5000千克／公顷。而有机肥的施用量却明显不足。另一方面，我国每年使用的近千种农药，高毒、剧毒品种居多，每年由于农药污染造成急性中毒的人约10万，死亡数千人。随着现在经济体质的变化以及打药过程对人体的伤害，愿意从事打药工作的人原来越少。</p>
+			</div>
+		</div>
+	</div><!-- /.container -->
+
+	<div id="one" class="container-fluid" style="background-image:url('images/uav_img.jpg');background-size:cover;background-repeat:no-repeat;padding:4em 0;">
+		<div class="container">
+			<h4 class="display-4">智能农保机的优势</h4>
+			<p class="text-muted">Advantage of Smart UAV</p>
+			<div class="row">
+				<div class="col-sm-offset-7 col-sm-6">
+					<ul class="yosi">
+						<li>效率高（解决施药人员严重短缺的问题）</li>
+						<li>效果好（高浓缩，提高杀虫效率达95%以上）</li>
+						<li>人身安全有保障（原理药害）</li>
+						<li>适应环境强（深水田、丘陵、高山、灌木）</li>
+						<li>用途广（施药、施肥、除草剂、授粉）</li>
+					</ul>
+				</div>
+			</div>
+		</div><!-- /.container -->
+	</div><!-- /.container-fluid -->
+
+	<div class="container">
+
+		<h4 class="display-4">与传统植保作业效率与效果对比</h4>
+		<p class="text-muted">Efficiency Comparison</p>
+		<h5>作业效果分析</h5>
+		<div class="row">
+			<div class="col-sm-12">
+				<ul>
+					<li>无人机飞行过程中产生的下旋气压和风场，能够有效将药物送达根部和叶片背面；</li>
+					<li>走动式机械受速度制约，勾兑水比较大，药效差，复杂地形无法作业，受环境影响较大；</li>
+					<li>高压枪远近药液分布不均，精准度差，效果不理想；</li>
+				</ul>
+			</div>
+			<div class="col-sm-4">
+				<img class="img-thumbnail" src="images/img1.jpg">
+			</div>
+			<div class="col-sm-4">
+				<img class="img-thumbnail" src="images/img2.jpg">
+			</div>
+			<div class="col-sm-4">
+				<img class="img-thumbnail" src="images/img3.jpg">
+			</div>
+		</div>
+
+		<hr class="m-y-2">
+		<h4 class="display-4">与传统植保作业经济效率对比</h4>
+		<p>---</p>
+		<table class="table table-bordered">
+			<thead>
+				<tr>
+					<th>作业开支</th>
+					<th>传统农业喷洒</th>
+					<th>无人机植保</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>水</td>
+					<td>假设用水量为10公斤</td>
+					<td>1公斤</td>
+				</tr>
+				<tr>
+					<td>农药</td>
+					<td>假设用药量为1公斤</td>
+					<td>0.1公斤</td>
+				</tr>
+				<tr>
+					<td>喷洒效率</td>
+					<td>1亩/三小时</td>
+					<td>1~2亩/分钟</td>
+				</tr>
+				<tr>
+					<td>8小时作业面积</td>
+					<td>3亩左右</td>
+					<td>200亩</td>
+				</tr>
+				<tr>
+					<td>每亩综合成本（人工+耗材+管销+其他）</td>
+					<td><h2>$15USD</h2></td>
+					<td><h2>$1.0USD</h2></td>
+				</tr>
+			</tbody>
+		</table>
+		<h3><i class="fa fa-envira text-success"></i> 无人机打药用水、用药为传统农业的<span class="lead red fs_28pt">10分之1</span></h3>
+		<h3><i class="fa fa-envira text-success"></i> 无人机打药成本大约为人工打药的<span class="lead red fs_28pt">15分之1</span></h3>
+		<hr class="m-y-2">
+	</div><!-- /.container -->
+
+	<div class="container-fluid" style="background-image:url('images/img4.jpg');background-size:cover;background-repeat:no-repeat;padding:4em 0;">
+		<div class="container">
+			<h4 class="display-4">无人机防治效果好</h4>
+			<p class="text-muted"> --- </p>
+			<div class="row">
+				<div class="col-sm-offset-4 col-sm-8">
+					<p class="yosi">与传统地面植保机械相比，无人机施药效率明显提高,每天作业面积高达200亩以上，同时无人机适应各种复杂环境和经济作物。<br>替补传统地面机械很多不足。</p>
+				</div>
+			</div>
+		</div><!-- /.container -->
+	</div><!-- /.container-fluid -->
+
+	<div class="container">
+		<h4 class="display-4">IDSC 无人机性能参数</h4>
+		
+		<hr class="m-y-2">
+		<div class="row">
+			<div class="col-sm-6">
+				<h5 class="display-5">IDSC UAV-R310 四軸四槳</h5>
+				<img class="img-thumbnail" style="max-width:50%;" src="images/img5.jpg">
+				<p class="text-muted">UAV-R310 系列植保无人机</p>
+				<table class="table">
+					<tr>
+						<th>空机净重</th>
+						<td>15KG</td>
+					</tr>
+					<tr>
+						<th>载重</th>
+						<td>10kg</td>
+					</tr>
+					<tr>
+						<th>作业工作时间（每组电池）</th>
+						<td>10~20分钟/每趟</td>
+					</tr>
+					<tr>
+						<th>飞行模式</th>
+						<td>智能飞行/手动遥控</td>
+					</tr>
+					<tr>
+						<th>工作温度范围</th>
+						<td>-10~60℃</td>
+					</tr>
+					<tr>
+						<th>最大飞行高度</th>
+						<td>35m</td>
+					</tr>
+					<tr>
+						<th>喷洒作业宽度</th>
+						<td>3~6m</td>
+					</tr>
+					<tr>
+						<th>作业飞行速度</th>
+						<td>5~30公尺/分</td>
+					</tr>
+					<tr>
+						<th>喷洒效率</th>
+						<td>2~3公升/分钟</td>
+					</tr>
+					<tr>
+						<th>作业高度</th>
+						<td>1.5~3.5m</td>
+					</tr>
+					<tr>
+						<th>遥控距离</th>
+						<td>800m半径以内</td>
+					</tr>
+				</table>
+			</div>
+			<div class="col-sm-6">
+				<h5 class="display-5">IDSC UAV-F520 四軸八槳</h5>
+				<img class="img-thumbnail" style="max-width:50%;" src="images/img7.jpg">
+				<p class="text-muted">UAV-F520 系列植保无人机</p>
+				<table class="table">
+					<tr>
+						<th>空机净重</th>
+						<td>16KG</td>
+					</tr>
+					<tr>
+						<th>载重</th>
+						<td>20kg</td>
+					</tr>
+					<tr>
+						<th>作业工作时间（每组电池）</th>
+						<td>10~20分钟/每趟</td>
+					</tr>
+					<tr>
+						<th>飞行模式</th>
+						<td>智能飞行/手动遥控</td>
+					</tr>
+					<tr>
+						<th>工作温度范围</th>
+						<td>-10~60℃</td>
+					</tr>
+					<tr>
+						<th>最大飞行高度</th>
+						<td>35m</td>
+					</tr>
+					<tr>
+						<th>喷洒作业宽度</th>
+						<td>3~6m</td>
+					</tr>
+					<tr>
+						<th>作业飞行速度</th>
+						<td>5~30公尺/分</td>
+					</tr>
+					<tr>
+						<th>喷洒效率</th>
+						<td>2~3公升/分钟</td>
+					</tr>
+					<tr>
+						<th>作业高度</th>
+						<td>1.5~3.5m</td>
+					</tr>
+					<tr>
+						<th>遥控距离</th>
+						<td>800m半径以内</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div><!-- /.container -->
+
+	<div id="two__" class="container">
+		<h4 class="display-4">蝦塘投餌作业</h4>
+		<hr class="m-y-2">
+		<div class="row">
+			<div class="col-sm-4 text-sm-center">
+				<img class="img-thumbnail" style="max-width:100%;" src="images/img6.jpg">
+			</div>
+			<div class="col-sm-8">
+				<h5 class="display-5">IDSC UAV-R5 <small class="text-muted">系列植保无人机</small></h5>
+				
+				<table class="table">
+					<tr>
+						<th>空机净重</th>
+						<td>--</td>
+					</tr>
+					<tr>
+						<th>载重</th>
+						<td>--</td>
+					</tr>
+					<tr>
+						<th>飞行时间</th>
+						<td>--</td>
+					</tr>
+					<tr>
+						<th>飞行模式</th>
+						<td>--</td>
+					</tr>
+					<tr>
+						<th>工作温度范围</th>
+						<td>--</td>
+					</tr>
+					<tr>
+						<th>最大飞行高度</th>
+						<td>--</td>
+					</tr>
+					<tr>
+						<th>操作环境</th>
+						<td>--</td>
+					</tr>
+					<tr>
+						<th>飞行速度</th>
+						<td>--</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div><!-- /.container -->
+
+	<div class="container">
+		<hr class="m-y-2">
+		<h4 class="display-4">与同行业无人机优势对比</h4>
+		<p class="text-muted">Comparative Advantage</p>
+		<div><img class="img-responsive center-block" src="images/img2.svg"></div>
+	</div><!-- /.container -->
+
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-3">
+				<div class="card">
+					<div class="card-block">
+						<img class="img-responsive center-block" src="images/processor.svg">
+						<h4 class="card-title">自主智能飞控</h4>
+						<hr>
+						<p class="card-text">自主设计研发的飞控及软件，能更好的提高喷洒效率以及降低飞机的失事率。全自动化飞行，摆脱传统飞机需要通过人眼观察操作来控制飞行的高难度操作带来的困扰。智能化飞控能正确处理应对恶劣环境及人员操作失误带来的坠机等损失。</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-3">
+				<div class="card">
+					<div class="card-block">
+						<img class="img-responsive center-block" src="images/shower.svg">
+						<h4 class="card-title">自主专利喷洒设备</h4>
+						<hr>
+						<p class="card-text">自主专利喷洒设备，大大提高喷洒效率，提高雾化效果，促使喷洒更加均匀，节约购药成本。</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-3">
+				<div class="card">
+					<div class="card-block">
+						<img class="img-responsive center-block" src="images/battery.svg">
+						<h4 class="card-title">高性能石墨烯电池</h4>
+						<hr>
+						<p class="card-text">拥有世界领先的电池组——石墨烯电池。市面上通常的电力无人机一般负载都在五公斤左右，IDSC无人机搭配石墨烯动力电池，可以将负载提高到10公斤、30公斤、50公斤，续航时间提高到30Min~1Hour,从而大大提高工作效率，减少因电池更换及充放浪费的不必要时间。</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-3">
+				<div class="card">
+					<div class="card-block">
+						<img class="img-responsive center-block" src="images/app.svg">
+						<h4 class="card-title">更完善的智能软件系统</h4>
+						<hr>
+						<p class="card-text">自主研发的智能软件系统，直接安装在Android手机端或Iphone手机端就可以使用，简单的配置，一目了然的操作界面，堪比大型飞机的飞行自检系统，傻瓜式操作，给用户提供更加便捷安全的操作环境，减少因为人为原因带来的损失。</p>
+					</div>
+				</div>
+			</div>
+		</div><!-- /.row -->
+		<hr class="m-y-2">
+
+	</div><!-- /.container -->
+
+	<div id="two" class="container marketing">
+		<h4 class="display-4">鹫系—侦查无人机</h4>
+		<p class="text-muted">Surveillance and Scouting lance Scouting</p>
+		<p class="text-muted_">鹫系无人机，专业配备高清摄像头，红外热成像仪等高端电子成像设备，能完成侦查、电力巡检，偷猎巡查、航拍航测、管道巡视、突发时间监视等复杂地形任务任务。</p>
+		<!-- <img class="img-responsive center-block" src="images/bbb.jpg"> -->
+	</div>
+	<div class="container-fluid" style="background-image:url('images/bbb.jpg');background-size:cover;background-repeat:no-repeat;background-position:center 95%;min-height:280px;"></div>
+	<!-- <div class="container marketing">
+		<div class="row" style="margin:0em -.9375rem 5em;">
+			<div class="col-sm-3">
+				<img class="img-thumbnail center-block" src="images/img_s1.jpg">
+				<center>线路巡查</center>
+			</div>
+			<div class="col-sm-3">
+				<img class="img-thumbnail center-block" src="images/img_s2.jpg">
+				<center>边境巡逻</center>
+			</div>
+			<div class="col-sm-3">
+				<img class="img-thumbnail center-block" src="images/img_s3.jpg">
+				<center>目标追踪</center>
+			</div>
+			<div class="col-sm-3">
+				<img class="img-thumbnail center-block" src="images/img_s4.jpg">
+				<center>电力检测</center>
+			</div>
+		</div>
+	</div> -->
+
+	<div class="container">
+		<!-- <h4 class="display-4">海防侦查型无人机</h4>
+		<hr class="m-y-2"> -->
+		<div class="row">
+			<div class="col-sm-6 text-sm-center">
+				<div class="col-sm-6">
+					<img class="img-thumbnail" style="max-width:100%;" src="images/img_s1.jpg">
+					<center>线路巡查</center>
+				</div>
+				<div class="col-sm-6">
+					<img class="img-thumbnail" style="max-width:100%;" src="images/img_s2.jpg">
+					<center>边境巡逻</center>
+				</div>
+				<div class="col-sm-6">
+					<img class="img-thumbnail" style="max-width:100%;" src="images/img_s3.jpg">
+					<center>目标追踪</center>
+				</div>
+				<div class="col-sm-6">
+					<img class="img-thumbnail" style="max-width:100%;" src="images/img_s4.jpg">
+					<center>电力检测</center>
+				</div>
+			</div>
+			<div class="col-sm-6">
+				<h5 class="display-5">IDSC UAV-S7051 <small class="text-muted">(海防/林牧/监控/救援) 六軸 P16</small></h5>
+				<p class="text-muted">UAV-S7051系列海防侦查型无人机</p>
+
+				<table class="table">
+					<caption class="red fs_18pt" align="bottom"><i class="fa fa-magic"></i> 特殊需求可訂做</caption>
+					<tr>
+						<th>空机净重</th>
+						<td>13KG</td>
+					</tr>
+					<tr>
+						<th>载重</th>
+						<td>5~6kg</td>
+					</tr>
+					<tr>
+						<th>飞行时间</th>
+						<td>1小时</td>
+					</tr>
+					<tr>
+						<th>飞行模式</th>
+						<td>智能飞行/手动遥控</td>
+					</tr>
+					<tr>
+						<th>工作温度范围</th>
+						<td>0~60℃</td>
+					</tr>
+					<tr>
+						<th>最大飞行高度</th>
+						<td><500公尺</td>
+					</tr>
+					<tr>
+						<th>操作环境</th>
+						<td>IP45</td>
+					</tr>
+					<tr>
+						<th>飞行速度</th>
+						<td>50~500公尺/分</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div><!-- /.container -->
+
+	<div id="three" class="container">
+
+		<h4 class="display-4">油电混合无人机</h4>
+		<p class="card-text">IDSC 混合油电混合动力无人机，将提供更大的载荷，更高的续航能力，可广泛用于农业植保作业、通信中继、超高压输电线路巡线和石油、天然气管路、高速公路、高速铁路巡查、监控。</p>
+		<div class="row">
+			<div class="col-sm-4">
+				<img class="img-responsive img-thumbnail center-block" src="images/img3.png">
+			</div>
+			<div class="col-sm-8">
+				<div id="carousel-generic" class="carousel slide" data-ride="carousel">
+					<ol class="carousel-indicators">
+						<li data-target="#carousel-generic" data-slide-to="0" class="active"></li>
+						<li data-target="#carousel-generic" data-slide-to="1"></li>
+						<li data-target="#carousel-generic" data-slide-to="2"></li>
+					</ol>
+					<div class="carousel-inner" role="listbox">
+						<div class="carousel-item active">
+							<!-- <img data-src="holder.js/900x500/auto/#777:#555/text:First slide" alt="First slide"> -->
+							<img class="img-responsive center-block" src="images/uav_a.jpg">
+						</div>
+						<div class="carousel-item">
+							<img class="img-responsive center-block" src="images/uav_b.jpg">
+						</div>
+						<div class="carousel-item">
+							<img class="img-responsive center-block" src="images/uav_c.jpg">
+						</div>
+					</div>
+					<a class="left carousel-control" href="#carousel-generic" role="button" data-slide="prev">
+						<span class="icon-prev" aria-hidden="true"></span>
+						<span class="sr-only">Previous</span>
+					</a>
+					<a class="right carousel-control" href="#carousel-generic" role="button" data-slide="next">
+						<span class="icon-next" aria-hidden="true"></span>
+						<span class="sr-only">Next</span>
+					</a>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<div id="for" class="container">
+		<div class="row">
+			<h4 class="display-4">智能农植软件 APP 简介</h4>
+			<hr class="m-y-2">
+			<!-- <p>简约直观的可视化操作界面，从飞行计划制定到，飞行路径规划，再到计划执行，智能化的操作流程，为客户带来更好的操作体验。</p>
+			<p>智能飞控-提高飞行效率<br>起飞前所有安全检查，确保任务执行要件具备才放飞.</p> -->
+		</div>
+	</div>
+
+	<div class="container-fluid" style="background-image:url('images/app_bg.jpg');background-size:cover;background-repeat:no-repeat;padding:6em 0 8em;">
+		<div class="container">
+			<h4 class="display-4 fs_21pt" style="color:#fff;margin-bottom:3em;">智能飞控-提高飞行效率
+			<div class="text-muted"><small>Intelligent Flight Control</small></div></h4>
+			<div class="row">
+				<div class="col-sm-offset-7 col-sm-6">
+					<ul class="yosi">
+						<li>简约直观的可视化操作界面，从飞行计划制定到，飞行路径规划，再到计划执行，智能化的操作流程，为客户带来更好的操作体验。</li>
+						<li>智能飞控-提高飞行效率<br>起飞前所有安全检查，确保任务执行要件具备才放飞.</li>
+					</ul>
+				</div>
+			</div>
+		</div><!-- /.container -->
+	</div><!-- /.container-fluid -->
+
+	<!-- <div id="app_dl" class="container">
+
+		<h4 class="display-4">手机 APP 下载</h4>
+		<hr class="m-y-2">
+		<div class="row">
+			<div class="col-sm-6">
+				<img class="img-responsive center-block" src="images/dl_phone.png">
+			</div>
+			<div class="col-sm-6">
+				<img style="margin:2em auto;" class="img-responsive center-block" src="images/app_icon.png">
+				<h4>Find the best places to eat, drink, shop, or visit in any city in the world.</h4>
+				<p>Access over 75 million short tips from local experts.</p>
+				<div class="row">
+					<div class="col-lg-4">
+						<a href="#"><img class="img-responsive center-block" alt="Download on the App Store" src="images/dl_ios.png"></a>
+					</div>
+					<div class="col-lg-4">
+						<a href="#"><img class="img-responsive center-block" alt="Get it on Google Play" src="images/dl_android.png"></a>
+					</div>
+					<div class="col-lg-4">
+						<a href="#"><img class="img-responsive center-block" alt="Download from Windows Store" src="images/dl_win.png"></a>
+					</div>
+				</div>
+				<p>Also available for iPad, Apple Watch, Android tablets, and Windows tablets</p>
+			</div>
+		</div>
+
+	</div> -->
+
+	<div class="container-fluid" style="background-image:url('images/sky_bg.jpg');background-size:cover;background-repeat:no-repeat;background-position:center center;padding:6em 0 8em;">
+		<div class="container">
+			<h4 class="display-4">智慧农业喷洒系统-喷洒优化</h4>
+			<p class="text-muted">智能监控大数据</p>
+			<div class="row">
+				<div class="col-sm-4">
+					<ul class="">
+						<li>自动依规划路线执行喷洒任务</li>
+						<li>电力不足自动返航</li>
+						<li>紧急事故，手动停止执行，一键迫降</li>
+						<li>未完成任务自动警示，一键继续执行</li>
+						<li>历次任务执行数据检阅分析</li>
+					</ul>
+				</div>
+				<div class="col-sm-8">
+					<img style="max-width:100%;" src="images/phone.png">
+				</div>
+			</div>
+		</div><!-- /.container -->
+	</div><!-- /.container-fluid -->
+
+
+
+	<div class="container-fluid" style="background-color:#e2e7eb;padding:2em 0;">
+
+		<div class="container">
+				<div class="row">
+					<div class="col-sm-4">
+						<div class="media">
+							<a class="media-left" __href="#">
+								<img class="media-object" src="images/ic_zoo.svg">
+							</a>
+							<div class="media-body">
+								<h4 class="media-heading">润系-智能农保机</h4>
+								Agricultural and Forest
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="media">
+							<a class="media-left" __href="#">
+								<img class="media-object" src="images/ic_jo.svg">
+							</a>
+							<div class="media-body">
+								<h4 class="media-heading">鹫系-侦查无人机</h4>
+								Surveillance and Scouting
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="media">
+							<a class="media-left" __href="#">
+								<img class="media-object" src="images/ic_you.svg">
+							</a>
+							<div class="media-body">
+								<h4 class="media-heading">油电混合无人机</h4>
+								Long-Range Hybrid UAV
+							</div>
+						</div>
+					</div>
+				</div><!-- /.row -->
+
+				<!-- <hr class="m-y-2"> -->
+				<div class="row">
+					<!-- <div class="col-sm-12">
+						<button type="button" class="btn btn-primary-outline">Primary</button>
+						<button type="button" class="btn btn-secondary-outline">Secondary</button>
+						<button type="button" class="btn btn-success-outline">Success</button>
+						<button type="button" class="btn btn-info-outline">Info</button>
+						<button type="button" class="btn btn-warning-outline">Warning</button>
+						<button type="button" class="btn btn-danger-outline">Danger</button>
+					</div> --><!-- /.col-sm-12 -->
+				</div><!-- /.row -->
+			</div><!-- /.container -->
+
+	</div><!-- /.container-fluid -->
+	
+	<div id="partner" class="container">
+		<h4 class="display-4">Partner</h4>
+		<p class="text-muted">合作伙伴</p>
+		<div class="row">
+			<div class="col-sm-1 col-xs-6">
+				<img class="img-fluid" src="images/partner_ic1.jpg">
+			</div>
+			<div class="col-sm-1 col-xs-6">
+				<img class="img-fluid" src="images/partner_ic2.jpg">
+			</div>
+			<div class="col-sm-1 col-xs-6">
+				<img class="img-fluid" src="images/partner_ic3.jpg">
+			</div>
+			<div class="col-sm-1 col-xs-6">
+				<img class="img-fluid" src="images/partner_ic4.jpg">
+			</div>
+			<div class="col-sm-1 col-xs-6">
+				<img class="img-fluid" src="images/partner_ic5.jpg">
+			</div>
+			<div class="col-sm-1 col-xs-6">
+				<img class="img-fluid" src="images/partner_ic6.jpg">
+			</div>
+			<div class="col-sm-1 col-xs-6">
+				<img class="img-fluid" src="images/partner_ic7.jpg">
+			</div>
+			<div class="col-sm-2 col-xs-6">
+				<img class="img-fluid" src="images/partner_ic8.png">
+			</div>
+		</div>
+	</div><!-- /.container -->
+
+	<hr class="m-y-2">
+	<footer class="footer">
+		<div class="container">
+			<span class="text-muted">Copyright © 2016 IDSC 英達思康</span>
+		</div>
+	</footer>
+
+	<!-- jQuery first, then Bootstrap JS. -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
+	<script>
+		$(function() {
+		  $('#navbar a[href*="#"]:not([href="#"])').click(function() {
+			if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+			  var target = $(this.hash);
+			  target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+			  if (target.length) {
+				$('html, body').animate({
+				  scrollTop: target.offset().top
+				}, 800);
+				return false;
+			  }
+			}
+		  });
+		});
+	</script>
+</body>
+</html>

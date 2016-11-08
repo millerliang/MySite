@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>廣告總覽 - 後台管理系統</title>
+
+		<meta name="description" content="" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- basic styles -->
+
+		<link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+
+		<!--[if IE 7]>
+		  <link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css" />
+		<![endif]-->
+
+		<!-- page specific plugin styles -->
+
+		<!-- fonts -->
+
+		<!-- <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" /> -->
+
+		<!-- ace styles -->
+
+		<link rel="stylesheet" href="assets/css/ace.min.css" />
+		<link rel="stylesheet" href="assets/css/ace-rtl.min.css" />
+		<link rel="stylesheet" href="assets/css/ace-skins.min.css" />
+
+		<!--[if lte IE 8]>
+		  <link rel="stylesheet" href="assets/css/ace-ie.min.css" />
+		<![endif]-->
+
+		<!-- inline styles related to this page -->
+
+		<!-- ace settings handler -->
+
+		<script src="assets/js/ace-extra.min.js"></script>
+
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+
+		<!--[if lt IE 9]>
+		<script src="assets/js/html5shiv.js"></script>
+		<script src="assets/js/respond.min.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<div class="navbar navbar-default" id="navbar">
+
+			<!-- <script type="text/javascript">
+				try{ace.settings.check('navbar' , 'fixed')}catch(e){}
+			</script> -->
+
+
+			<div class="navbar-container" id="navbar-container">
+				<div class="navbar-header pull-left logo">
+					<a href="index.html" class="navbar-brand">
+						<small>
+							後台管理系統
+						</small>
+					</a><!-- /.brand -->
+				</div><!-- /.navbar-header -->
+
+				<div class="navbar-header pull-right" role="navigation">
+					<ul class="nav ace-nav">
+						<li class="color">
+							<a data-toggle="dropdown" class="dropdown-toggle" href="#">
+								<i class="icon-envelope icon-animated-vertical"></i>
+								<span class="badge badge-important">12</span>
+							</a>
+
+							<ul class="pull-right dropdown-navbar navbar-pink dropdown-menu dropdown-caret dropdown-times">
+								<li>
+									<a href="user_feedback.html">
+										<div class="clearfix">
+											<span class="pull-left">
+												<i class="btn btn-xs no-hover btn-success icon-user"></i>
+												客服管理
+											</span>
+											<span class="pull-right badge badge-success">+8</span>
+										</div>
+									</a>
+								</li>
+
+								<li>
+									<a href="user_feedback.html">
+										查看所有通知
+										<i class="icon-arrow-right"></i>
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li class="light-blue">
+							<a data-toggle="dropdown" href="#" class="dropdown-toggle">
+								<img class="nav-user-photo" src="assets/avatars/avatar4.png" alt="Jason's Photo" />
+								<span class="user-info">
+									<small>您好, 歡迎</small>
+									超級管理員
+								</span>
+
+								<i class="icon-caret-down"></i>
+							</a>
+
+							<ul class="user-menu pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
+								<li>
+									<a href="admin_profile.html">
+										<i class="icon-user"></i>
+										個人資料
+									</a>
+								</li>
+
+								<li class="divider"></li>
+
+								<li>
+									<a href="login.html">
+										<i class="icon-power-off"></i>
+										登 出
+									</a>
+								</li>
+							</ul>
+						</li>
+					</ul><!-- /.ace-nav -->
+				</div><!-- /.navbar-header -->
+			</div><!-- /.container -->
+		</div>
+
+		<div class="main-container" id="main-container">
+			<!-- <script type="text/javascript">
+				try{ace.settings.check('main-container' , 'fixed')}catch(e){}
+			</script> -->
+
+			<div class="main-container-inner">
+				<a class="menu-toggler" id="menu-toggler" href="#">
+					<span class="menu-text"></span>
+				</a>
+
+				<div class="sidebar" id="sidebar">
+					<!-- <script type="text/javascript">
+						try{ace.settings.check('sidebar' , 'fixed')}catch(e){}
+					</script> -->
+
+					<ul class="nav nav-list">
+						<li>
+							<a href="index.html">
+								<i class="icon-home"></i>
+								<span class="menu-text"> 首 頁 </span>
+							</a>
+						</li>
+
+						<li>
+							<a href="admin_group.html">
+								<i class="icon-user-md"></i>
+								<span class="menu-text"> 系統管理員群組 </span>
+							</a>
+						</li>
+
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-th"></i>
+								<span class="menu-text"> 商城商品管理 </span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="market_manager.html">
+										<i class="icon-double-angle-right"></i>
+										商品總覽
+									</a>
+								</li>
+								<li>
+									<a href="market_orderlist.html">
+										<i class="icon-double-angle-right"></i>
+										訂單管理
+									</a>
+								</li>
+                                <li>
+									<a href="market_new.html">
+										<i class="icon-double-angle-right"></i>
+										新增商品
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li class="active open">
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-cloud-upload"></i>
+								<span class="menu-text"> 廣告管理 </span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="ad_manager.html">
+										<i class="icon-double-angle-right"></i>
+										廣告總覽
+									</a>
+								</li>
+                                <li>
+									<a href="ad_new.html">
+										<i class="icon-double-angle-right"></i>
+										新增廣告
+									</a>
+								</li>
+								<li class="active">
+									<a href="ad_admin.html">
+										<i class="icon-double-angle-right"></i>
+										廣告審查
+									</a>
+								</li>
+								<li>
+									<a href="ad_type.html">
+										<i class="icon-double-angle-right"></i>
+										廣告類別
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="#" class="dropdown-toggle"> 
+								<i class="icon-codepen"></i> <span class="menu-text"> 序號管理 </span> 
+								<b class="arrow icon-angle-down"></b>
+							</a>
+							<ul class="submenu">
+								<li>
+									<a href="sn_list.html"> <i class="icon-double-angle-right"></i> 序號總覽</a>
+								</li>
+
+								<li>
+									<a href="sn_create.html"> <i class="icon-double-angle-right"></i> 新增序號</a>
+								</li>
+
+							</ul>
+						</li>
+
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-users"></i>
+								<span class="menu-text"> 會員管理 </span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="user_group.html">
+										<i class="icon-double-angle-right"></i>
+										會員總覽
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-rocket"></i>
+								<span class="menu-text"> 商家管理 </span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="sell_manager.html">
+										<i class="icon-double-angle-right"></i>
+										商家總覽
+									</a>
+								</li>
+								<li>
+									<a href="sell_new.html">
+										<i class="icon-double-angle-right"></i>
+										新增商家
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="user_feedback.html">
+								<i class="icon-wechat"></i>
+								<span class="menu-text"> 客服管理 </span>
+							</a>
+						</li>
+
+						<li>
+							<a href="sys_postnews.html">
+								<i class="icon-laptop"></i>
+								<span class="menu-text"> 公告管理 </span>
+							</a>
+						</li>
+
+						<li>
+							<a href="sys_announcement.html">
+								<i class="icon-bullhorn"></i>
+								<span class="menu-text"> 消息管理 </span>
+							</a>
+						</li>
+
+                        <li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-bar-chart-o"></i>
+								<span class="menu-text"> 數據分析 </span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="analysis_isp.html">
+										<i class="icon-double-angle-right"></i>
+										基本分析
+									</a>
+								</li>
+
+								<li>
+									<a href="analysis_local.html">
+										<i class="icon-double-angle-right"></i>
+										依地區地域分布
+									</a>
+								</li>
+
+                                <li>
+									<a href="analysis_trend.html">
+										<i class="icon-double-angle-right"></i>
+										APP 使用次數趨勢圖
+									</a>
+								</li>
+                                <li>
+									<a href="analysis_boot.html">
+										<i class="icon-double-angle-right"></i>
+										開機次數趨勢圖
+									</a>
+								</li>
+							</ul>
+						</li>
+						
+                        <li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-adn"></i>
+								<span class="menu-text"> APP 類別管理 </span>
+                                <b class="arrow icon-angle-down"></b>
+							</a>
+                            
+                            <ul class="submenu">
+								<li>
+									<a href="app_catalog.html">
+										<i class="icon-double-angle-right"></i>
+										APP 類型歸類對應
+									</a>
+								</li>
+
+								<li>
+									<a href="mobile_device.html">
+										<i class="icon-double-angle-right"></i>
+										手機型號裝置對應
+									</a>
+								</li>
+							</ul>
+						</li>
+					</ul><!-- /.nav-list -->
+
+					<div class="sidebar-collapse" id="sidebar-collapse">
+						<i class="icon-angle-double-left" data-icon1="icon-angle-double-left" data-icon2="icon-angle-double-right"></i>
+					</div>
+
+					<!-- <script type="text/javascript">
+						try{ace.settings.check('sidebar' , 'collapsed')}catch(e){}
+					</script> -->
+				</div>
+
+				<div class="main-content">
+					<div class="breadcrumbs" id="breadcrumbs">
+						<!-- <script type="text/javascript">
+							try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
+						</script> -->
+
+						<ul class="breadcrumb">
+							<li>
+								<i class="icon-home home-icon"></i>
+								<a href="index.html">Home</a>
+							</li>
+							<li class="active">廣告總覽</li>
+						</ul><!-- .breadcrumb -->
+
+						<div class="nav-search" id="nav-search">
+							<form class="form-search">
+								<span class="input-icon">
+									<input type="text" placeholder="搜尋 ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
+									<i class="icon-search nav-search-icon"></i>
+								</span>
+							</form>
+						</div><!-- #nav-search -->
+					</div>
+
+					<div class="page-content">
+
+						<div class="pull-right inline">
+							<a class="btn btn-sm btn-primary" href="#modal-form" data-toggle="modal" data-rel="tooltip" title="" data-placement="top" data-original-title="編輯">
+								<i class="icon-plus align-top bigger-125"></i>
+								新增廣告審查
+							</a>
+						</div>
+						<div class="page-header">
+							<h1>
+								廣告審查權限設定
+								<small>
+									<i class="icon-angle-double-right"></i>
+								    廣告審核權限 &amp; 審查通過管理
+								</small>
+							</h1>
+						</div>
+
+						<div class="row">
+							<div class="col-sm-12">
+								<!-- PAGE CONTENT BEGINS -->
+
+								<div class="form-group">
+									<div class="input-group">
+										搜尋：
+										<input type="text" class="search-query input-xlarge" placeholder="搜尋使用者 ID">
+										&nbsp;
+										狀態：
+										<select>
+											<option value="">全部</option>
+											<option value="">未停權</option>
+											<option value="">已停權</option>
+										</select>
+										&nbsp;
+											<button type="button" class="btn btn-purple btn-sm">
+												搜 尋
+												<i class="icon-search icon-on-right bigger-110"></i>
+											</button>
+										<span class="input-group-btn">
+											<a href="admin_group.html" class="text-primary tooltip-info" data-rel="tooltip" title="" data-placement="left" data-original-title="新增使用者">
+												<i class="icon-user bigger-130"></i>
+											</a>
+										</span>
+									</div><!-- /.input-group -->
+								</div>
+
+								<table class="table table-striped table-bordered table-hover">
+								<thead>
+									<tr>
+										<th>序</th>
+										<th>建立日期</th>
+										<th>可建立廣告 ID</th>
+										<th>廣告審查 ID</th>
+										<th>管理</th>
+									</tr>
+								</thead>
+									<tr>
+										<td>1</td>
+										<td>2015-03-09 14:54</td>
+										<td><a href="admin_group.html" class="blue tooltip-info" data-rel="tooltip" title="" data-placement="top" data-original-title="檢視帳號">Amherst</a></td>
+										<td>
+											<a href="admin_group.html" class="blue tooltip-info" data-rel="tooltip" title="" data-placement="top" data-original-title="檢視帳號">Jamie</a> ,
+											<a href="admin_group.html" class="blue tooltip-info" data-rel="tooltip" title="" data-placement="top" data-original-title="檢視帳號">Alex</a> ,
+											<a href="admin_group.html" class="blue tooltip-info" data-rel="tooltip" title="" data-placement="top" data-original-title="檢視帳號">Max</a> ,
+											<a href="admin_group.html" class="blue tooltip-info" data-rel="tooltip" title="" data-placement="top" data-original-title="檢視帳號">John</a>
+										</td>
+										<td>
+											<a class="blue tooltip-info" href="#modal-form" data-toggle="modal" data-rel="tooltip" title="" data-placement="top" data-original-title="編輯">
+												<i class="icon-pencil bigger-130"></i>
+											</a>
+											<a class="red tooltip-warning bootbox-confirm" href="#" data-rel="tooltip" data-original-title="刪除">
+												<i class="icon-trash-o bigger-130"></i>
+											</a>
+										</td>
+									</tr>
+									<tr>
+										<td>2</td>
+										<td>2015-02-21 19:17</td>
+										<td><a href="admin_group.html" class="blue tooltip-info" data-rel="tooltip" title="" data-placement="top" data-original-title="檢視帳號">Brennan</a></td>
+										<td><a href="admin_group.html" class="blue tooltip-info" data-rel="tooltip" title="" data-placement="top" data-original-title="檢視帳號">kiki_lee</a></td>
+										<td>
+											<a class="blue tooltip-info" href="#modal-form" data-toggle="modal" data-rel="tooltip" title="" data-placement="top" data-original-title="編輯">
+												<i class="icon-pencil bigger-130"></i>
+											</a>
+											<a class="red tooltip-warning bootbox-confirm" href="#" data-rel="tooltip" data-original-title="刪除">
+												<i class="icon-trash-o bigger-130"></i>
+											</a>
+										</td>
+									</tr>
+									<tr>
+										<td>3</td>
+										<td>2015-02-11 13:32</td>
+										<td><a href="admin_group.html" class="blue tooltip-info" data-rel="tooltip" title="" data-placement="top" data-original-title="檢視帳號">jojolin</a></td>
+										<td><a href="admin_group.html" class="blue tooltip-info" data-rel="tooltip" title="" data-placement="top" data-original-title="檢視帳號">Jamie</a></td>
+										<td>
+											<a class="blue tooltip-info" href="#modal-form" data-toggle="modal" data-rel="tooltip" title="" data-placement="top" data-original-title="編輯">
+												<i class="icon-pencil bigger-130"></i>
+											</a>
+											<a class="red tooltip-warning bootbox-confirm" href="#" data-rel="tooltip" data-original-title="刪除">
+												<i class="icon-trash-o bigger-130"></i>
+											</a>
+										</td>
+									</tr>
+									<tr>
+										<td>4</td>
+										<td>2015-01-25 11:02</td>
+										<td><a href="admin_group.html" class="blue tooltip-info" data-rel="tooltip" title="" data-placement="top" data-original-title="檢視帳號">kobayashi</a></td>
+										<td>
+											<a href="admin_group.html" class="blue tooltip-info" data-rel="tooltip" title="" data-placement="top" data-original-title="檢視帳號">frank</a> ,
+											<a href="admin_group.html" class="blue tooltip-info" data-rel="tooltip" title="" data-placement="top" data-original-title="檢視帳號">Alex</a> ,
+											<a href="admin_group.html" class="blue tooltip-info" data-rel="tooltip" title="" data-placement="top" data-original-title="檢視帳號">Dulex</a>
+										</td>
+										<td>
+											<a class="blue tooltip-info" href="#modal-form" data-toggle="modal" data-rel="tooltip" title="" data-placement="top" data-original-title="編輯">
+												<i class="icon-pencil bigger-130"></i>
+											</a>
+											<a class="red tooltip-warning bootbox-confirm" href="#" data-rel="tooltip" data-original-title="刪除">
+												<i class="icon-trash-o bigger-130"></i>
+											</a>
+										</td>
+									</tr>
+									<tr>
+										<td>5</td>
+										<td>2015-01-22 21:34</td>
+										<td><a href="admin_group.html" class="blue tooltip-info" data-rel="tooltip" title="" data-placement="top" data-original-title="檢視帳號">angela_wang</a></td>
+										<td><a href="admin_group.html" class="blue tooltip-info" data-rel="tooltip" title="" data-placement="top" data-original-title="檢視帳號">gigi_yha</a></td>
+										<td>
+											<a class="blue tooltip-info" href="#modal-form" data-toggle="modal" data-rel="tooltip" title="" data-placement="top" data-original-title="編輯">
+												<i class="icon-pencil bigger-130"></i>
+											</a>
+											<a class="red tooltip-warning bootbox-confirm" href="#" data-rel="tooltip" data-original-title="刪除">
+												<i class="icon-trash-o bigger-130"></i>
+											</a>
+										</td>
+									</tr>
+									<tr>
+										<td>6</td>
+										<td>2014-12-24 10:17</td>
+										<td><a href="admin_group.html" class="blue tooltip-info" data-rel="tooltip" title="" data-placement="top" data-original-title="檢視帳號">Alex</a></td>
+										<td><a href="admin_group.html" class="red tooltip-warning" data-rel="tooltip" title="" data-placement="top" data-original-title="檢視帳號">Bramwell</a> <i class="icon-ban red bigger-110"></i></td>
+										<td>
+											<a class="blue tooltip-info" href="#modal-form" data-toggle="modal" data-rel="tooltip" title="" data-placement="top" data-original-title="編輯">
+												<i class="icon-pencil bigger-130"></i>
+											</a>
+											<a class="red tooltip-warning bootbox-confirm" href="#" data-rel="tooltip" data-original-title="刪除">
+												<i class="icon-trash-o bigger-130"></i>
+											</a>
+										</td>
+									</tr>
+									<tr>
+										<td>7</td>
+										<td>2014-12-24 11:44</td>
+										<td><a href="admin_group.html" class="red tooltip-warning" data-rel="tooltip" title="" data-placement="top" data-original-title="檢視帳號">Eric</a> <i class="icon-ban red bigger-110"></i></td>
+										<td><a href="admin_group.html" class="blue tooltip-info" data-rel="tooltip" title="" data-placement="top" data-original-title="檢視帳號">Eson</a></td>
+										<td>
+											<a class="blue tooltip-info" href="#modal-form" data-toggle="modal" data-rel="tooltip" title="" data-placement="top" data-original-title="編輯">
+												<i class="icon-pencil bigger-130"></i>
+											</a>
+											<a class="red tooltip-warning bootbox-confirm" href="#" data-rel="tooltip" data-original-title="刪除">
+												<i class="icon-trash-o bigger-130"></i>
+											</a>
+										</td>
+									</tr>
+								</table>
+								
+								<p>搜尋到 <b class="red">7</b> 筆資料</p>
+
+								<div class="hr hr32 hr-dotted"></div>
+								
+								<div id="modal-form" class="modal" tabindex="-1">
+									<div class="modal-dialog">
+										<div class="modal-content">
+											<div class="modal-header" style="padding: 6px 16px">
+												<button type="button" class="close" data-dismiss="modal">&times;</button>
+												<h4 class="blue"><i class="icon-pencil bigger-130"></i> 新增 / 變更審核權限</h4>
+											</div>
+
+											<div class="modal-body form-horizontal overflow-visible">
+												<div class="row">
+
+													<div class="form-group">
+														<label class="col-sm-3 control-label text-right">建立者 / 日期</label>
+														<div class="col-sm-7">
+															<p class="text-muted bigger-110">Administrator - 2015-03-09 14:54</p>
+														</div>
+													</div>
+													<div class="form-group">
+														<label class="col-sm-3 control-label text-right"><b class="red">*</b> 使用者清單 </label>
+														<div class="col-sm-8">
+															<span class="pull-right">
+																<a href="admin_group.html" class="text-primary tooltip-info" data-rel="tooltip" title="" data-placement="left" data-original-title="新增使用者">
+																	<i class="icon-user bigger-130"></i>
+																</a>
+															</span>
+															<select class="form-control input-large black">
+																<option value="1">Alex</option>
+																<option value="2">Anant</option>
+																<option value="3">Amos</option>
+																<option value="4">Anderon</option>
+																<option value="5">Alfred</option>
+																<option value="6">Brent</option>
+																<option value="7">Brenda</option>
+																<option value="8">Jillian</option>
+																<option value="9">Allard</option>
+																<option value="10">Brett</option>
+																<option value="11">Brook</option>
+																<option value="12">Jocelyn (Joyce)</option>
+																<option value="13">Alvin</option>
+																<option value="14">Brewster</option>
+																<option value="15">Bunny</option>
+																<option value="16">Jonesy</option>
+																<option value="17">Amherst</option>
+																<option value="18">Brigham</option>
+																<option value="19">Burdette</option>
+																<option value="20">Joy</option>
+																<option value="21">Amsden</option>
+																<option value="22">rinley</option>
+																<option value="23">Carling</option>
+																<option value="24">Kaelyn</option>
+																<option value="25">Ansley</option>
+																<option value="26">Brishen</option>
+															</select>
+														</div>
+													</div>
+
+													<div class="form-group black">
+														<label class="col-sm-3 control-label text-right"><b class="red">*</b> 審查者清單 </label>
+														<div class="col-sm-8 no-padding">
+															<label class="col-xs-6">
+																<input type="checkbox" name="admin" class="ace">
+																<span class="lbl"> JYT-inc </span>
+															</label>
+															<label class="col-xs-6">
+																<input type="checkbox" name="admin" class="ace">
+																<span class="lbl"> uupon-admin </span>
+															</label>
+															<label class="col-xs-6">
+																<input type="checkbox" name="admin" class="ace">
+																<span class="lbl"> joice </span>
+															</label>
+															<label class="col-xs-6">
+																<input type="checkbox" name="admin" class="ace">
+																<span class="lbl"> alex </span>
+															</label>
+															<label class="col-xs-6">
+																<input type="checkbox" name="admin" class="ace">
+																<span class="lbl"> max </span>
+															</label>
+															<label class="col-xs-6">	
+																<input type="checkbox" name="admin" class="ace">
+																<span class="lbl"> wangder </span>
+															</label>
+															<label class="col-xs-6">
+																<input type="checkbox" name="admin" class="ace">
+																<span class="lbl"> luice </span>
+															</label>
+															<label class="col-xs-6">
+																<input type="checkbox" name="admin" class="ace">
+																<span class="lbl"> blue-lee </span>
+															</label>
+															<label class="col-xs-6">
+																<input type="checkbox" name="admin" class="ace">
+																<span class="lbl"> john-ive </span>
+															</label>
+															<label class="col-xs-6">
+																<input type="checkbox" name="admin" class="ace">
+																<span class="lbl"> joe-lin </span>
+															</label>
+															<label class="col-xs-6">
+																<input type="checkbox" name="admin" class="ace">
+																<span class="lbl"> kobayashi </span>
+															</label>
+															<label class="col-xs-6">
+																<input type="checkbox" name="admin" class="ace">
+																<span class="lbl"> yukohama </span>
+															</label>
+															<label class="col-xs-6">
+																<input type="checkbox" name="admin" class="ace">
+																<span class="lbl"> kety </span>
+															</label>
+															<label class="col-xs-6">
+																<input type="checkbox" name="admin" class="ace">
+																<span class="lbl"> paegi </span>
+															</label>
+															<label class="col-xs-6">
+																<input type="checkbox" name="admin" class="ace">
+																<span class="lbl"> maria </span>
+															</label>
+															<label class="col-xs-6">
+																<input type="checkbox" name="admin" class="ace">
+																<span class="lbl"> sofina </span>
+															</label>
+															<label class="col-xs-6">
+																<input type="checkbox" name="admin" class="ace">
+																<span class="lbl"> accoland </span>
+															</label>
+														</div>
+													</div>
+
+													<div class="form-group">
+														<label class="col-sm-3 control-label text-right"> 其他選項 </label>
+														<div class="col-sm-8 no-padding">
+															<label class="col-xs-4">
+																<input type="checkbox" name="othe" class="ace">
+																<span class="lbl"> A-option </span>
+															</label>
+															<label class="col-xs-4">
+																<input type="checkbox" name="othe" class="ace">
+																<span class="lbl"> B-option </span>
+															</label>
+															<label class="col-xs-4">
+																<input type="checkbox" name="othe" class="ace">
+																<span class="lbl"> C-option </span>
+															</label>
+														</div>
+													</div>
+												</div><!-- /.row -->
+											</div>
+
+											<div class="modal-footer">
+												<button class="btn btn-sm btn-danger bootbox-confirm" data-dismiss="modal">
+													<i class="icon-trash-o"></i>
+													刪 除
+												</button>
+												<button class="btn btn-sm" data-dismiss="modal">
+													<i class="icon-times"></i>
+													取 消
+												</button>
+												<button class="btn btn-sm btn-primary">
+													<i class="icon-check"></i>
+													套 用 / 建 立
+												</button>
+											</div>
+										</div>
+									</div>
+								</div><!-- /#modal-form -->
+
+										</div><!-- /.modal-content -->
+
+								<!-- PAGE CONTENT ENDS -->
+							</div><!-- /.col -->
+						</div><!-- /.row -->
+					</div><!-- /.page-content -->
+				</div><!-- /.main-content -->
+
+			</div><!-- /.main-container-inner -->
+
+			<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+				<i class="icon-angle-double-up icon-only bigger-110"></i>
+			</a>
+		</div><!-- /.main-container -->
+
+		<!-- basic scripts -->
+
+		<!--[if !IE]> -->
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+		<!-- <![endif]-->
+
+		<!--[if IE]>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<![endif]-->
+
+		<!--[if !IE]> -->
+
+		<script type="text/javascript">
+			window.jQuery || document.write("<script src='assets/js/jquery-2.0.3.min.js'>"+"<"+"/script>");
+		</script>
+
+		<!-- <![endif]-->
+
+		<!--[if IE]>
+<script type="text/javascript">
+ window.jQuery || document.write("<script src='assets/js/jquery-1.10.2.min.js'>"+"<"+"/script>");
+</script>
+<![endif]-->
+
+		<script type="text/javascript">
+			if("ontouchend" in document) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+		</script>
+		<script src="assets/js/bootstrap.min.js"></script>
+		<script src="assets/js/typeahead-bs2.min.js"></script>
+
+		<!-- page specific plugin scripts -->
+		<script src="assets/js/bootbox.min.js"></script>
+
+		<!-- ace scripts -->
+
+		<script src="assets/js/ace-elements.min.js"></script>
+		<script src="assets/js/ace.min.js"></script>
+
+		<!-- inline scripts related to this page -->
+		<script type="text/javascript">
+			jQuery(function($) {
+
+				$('[data-rel=tooltip]').tooltip();
+				$('[data-rel=popover]').popover({html:true});
+
+
+                /// Confirm Dialog///
+					
+				$(".bootbox-confirm").on(ace.click_event, function() {
+					bootbox.confirm("確定刪除？", function(result) {
+						if(result) {
+							//
+						}
+					});
+				});
+
+			})
+		</script>
+
+	</body>
+</html>

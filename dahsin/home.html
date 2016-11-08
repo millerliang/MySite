@@ -1,0 +1,202 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Home page</title>
+		<link rel="stylesheet" href="css/glide.core.min.css">
+		<link rel="stylesheet" href="css/glide.theme.min.css">
+		<!-- Other stylesheet -->
+		<link rel="stylesheet" href="css/fixd_style.css">
+		<link rel="stylesheet" href="css/home_styel.css">
+		<link rel="stylesheet" href="css/jalendar.css" type="text/css" />
+	</head>
+	<body>
+
+		<div class="user_info">
+			<a class="user_hard" href="croppie/index.html"><img src="imgs/user-icon.jpg"></a>
+			<center style="text-shadow: 0 1px 1px #333;color: #fff;">Jessica Wang</center>
+			<div id="cd-nav">
+				<a href="#0" class="cd-nav-trigger">Menu<span></span></a>
+				<nav id="cd-main-nav">
+					<ul>
+						<li><a href="new_form.html"><img src="imgs/doc_ic.png">工作報表</a></li>
+						<li><a href="fileload/file_load.html"><img src="imgs/camera_ic.png">相片上傳</a></li>
+						<li><a href="geolocation.html"><img src="imgs/map_marker_blue.png">定位打卡</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<input type="checkbox" id="op"></input>
+		<div class="lower">
+			<label for="op"><img src="imgs/settings.png" style="width:32px;"></label>
+		</div>
+		<div class="overlay overlay-hugeinc">
+			<label for="op"></label>
+			<nav>
+				<ul>
+					<li><a href="chang_password.html">Chang password</a></li>
+					<li><a href="servicepolicy.html">Servicepolicy</a></li>
+					<li><a href="index.html">Logout</a></li>
+				</ul>
+			</nav>
+		</div>
+
+		<div id="sub_menu">
+			<a href="" data-glide-trigger="#Glide" data-glide-dir="=1">
+				Work
+			</a>
+			<a href="" data-glide-trigger="#Glide" data-glide-dir="=2">
+				Calendar
+			</a>
+		</div>
+		<div style="clear:both;"></div>
+
+		<div id="Glide" class="glide">
+
+			<!-- <div class="glide__arrows">
+				<button class="glide__arrow prev" data-glide-dir="<">prev</button>
+				<button class="glide__arrow next" data-glide-dir=">">next</button>
+			</div> -->
+
+			<div class="glide__wrapper">
+				<ul class="glide__track">
+					<li class="glide__slide">
+						<div class="box">
+							<!-- <p align="center">
+								<a class="btn" href="geolocation_test.html">GEOLocation TEST link</a>
+							</p>
+							<br> -->
+							<div class="daytxt">05/16 (一)</div>
+							<ul class="file_log">
+								<li>
+									<div class="punch up">上班<span>XX建設</span><small>AM 08:56</small><div class="del_btn"><button>刪除</button></div></div>
+								</li>
+								<li>
+									<div class="punch down">下班<span>XX建設</span><small>PM 17:30</small><div class="del_btn"><button>刪除</button></div></div>
+								</li>
+								<li><a class="photo_upload" href="view_photos.html">Jessica Wang<small>AM 11:42</small>
+									<div class="loc">上傳 6 張照片</div></a>
+								</li>
+								<li><a class="gen" href="view_form.html">Jessica Wang<small>AM 08:02</small>
+									<div class="loc">工時 - 2hr<small class="this_pass">PASS</small></div></a>
+								</li>
+								<li><a href="view_form.html">Edson Chang - <span class="job_title">點工</span><small>AM 08:03</small>
+									<div class="loc">工時 - 4hr</div></a>
+								</li>
+								<li><a href="view_form.html">Dora Lee<small>AM 08:04</small>
+									<div class="loc">工時 - 8hr</div></a>
+								</li>
+								<li><a href="view_form.html">Kobayashi<small>AM 08:05</small>
+									<div class="loc">工時 - 8hr</div></a>
+								</li>
+							</ul>
+							<div class="daytxt">05/13 (五)</div>
+							<ul class="file_log">
+								<li>
+									<div class="punch up">上班<span>XX建設</span><small>AM 08:56</small><div class="del_btn"><button>刪除</button></div></div>
+								</li>
+								<li>
+									<div class="punch up">上班<span>XX建設</span><small>AM 08:57</small><div class="del_btn"><button>刪除</button></div></div>
+								</li>
+								<li>
+									<div class="punch down">下班<span>XX建設</span><small>PM 17:30</small><div class="del_btn"><button>刪除</button></div></div>
+								</li>
+								<li><a class="gen" href="view_form.html">Jessica Wang<small>PM 18:02</small>
+									<div class="loc">工時 - 4hr<small class="this_pass">pass</small></div></a>
+								</li>
+								<li><a class="red" href="view_form.html">Edson Chang<small>PM 18:03</small>
+									<div class="loc">工時 - 8hr<small class="this_block">Block</small></div></a>
+								</li>
+								<li><a class="" href="view_form.html">Dora Lee<small>PM 18:04</small>
+									<div class="loc">工時 - 8hr</div></a>
+								</li>
+								<li><a class="red" href="view_form.html">Kobayashi<small>PM 18:05</small>
+									<div class="loc">工時 - 2hr<small class="this_block">Block</small></div></a>
+								</li>
+							</ul>
+							<div class="daytxt">05/12 (四)</div>
+							<ul class="file_log">
+								<li>
+									<div class="punch up">上班<span>XX建設</span><small>AM 08:56</small><div class="del_btn"><button>刪除</button></div></div>
+								</li>
+								<li>
+									<div class="punch down">下班<span>XX建設</span><small>PM 17:30</small><div class="del_btn"><button>刪除</button></div></div>
+								</li>
+								<li><a class="photo_upload" href="view_photos.html">Edson Chang<small>AM 10:16</small>
+									<div class="loc">上傳 3 張照片</div></a>
+								</li>
+								<li><a class="gen" href="view_form.html">Jessica Wang<small>PM 18:18</small>
+									<div class="loc">工時 - 8hr<small class="this_pass">pass</small></div></a>
+								</li>
+								<li><a href="view_form.html">Edson Chang<small>PM 19:11</small>
+									<div class="loc">工時 - 8hr</div></a>
+								</li>
+								<li>
+									<div class="punch down">下班<span>XX建設</span><small>PM 19:41</small><div class="del_btn"><button>刪除</button></div></div>
+								</li>
+								<li><a class="red" href="view_form.html">Dora Lee<small>PM 19:59</small>
+									<div class="loc">工時 - 8hr<small class="this_block">Block</small></div></a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="glide__slide" style="background: -webkit-linear-gradient(top, #3aa4d1, #3aa4d1);height:auto;min-height:720px;">
+
+							<div id="your_jalendar" class="jalendar">
+								<div class="added-event" data-link="view_form.html" data-date="2016-5-18" data-title="Lolita 未審核 - 1hr"></div>
+								<div class="added-event" data-link="view_form.html" data-date="2016-5-18" data-title="Lolita 未審核 - 2hr"></div>
+								<div class="added-event" data-link="view_form.html" data-date="2016-5-18" data-title="Lolita 未審核 - 3hr"></div>
+								<div class="added-event" data-link="view_form.html" data-date="2016-5-18" data-title="Lolita 未審核 - 4hr"></div>
+								<div class="added-event" data-link="view_form.html" data-date="2016-5-18" data-title="Lolita 未審核 - 5hr"></div>
+								<div class="added-event" data-link="view_form.html" data-date="2016-5-18" data-title="Lolita 未審核 - 6hr"></div>
+								<div class="added-event" data-link="view_form.html" data-date="2016-5-18" data-title="Lolita 未審核 - 7hr"></div>
+								<div class="added-event" data-link="view_form.html" data-date="2016-5-18" data-title="Lolita 未審核 - 8hr"></div>
+								<div class="added-event" data-link="view_form.html" data-date="2016-5-18" data-title="Judy 未審核 - 4hr"></div>
+								<div class="added-event" data-link="view_form.html" data-date="2016-5-18" data-title="Judy 未審核 - 4hr"></div>
+								<div class="added-event" data-link="view_form.html" data-date="2016-5-19" data-title="Jackson 未審核 - 8hr"></div>
+								<div class="added-event" data-link="view_form.html" data-date="2016-5-23" data-title="Kobayashi 未審核 - 8hr"></div>
+								<div class="added-event" data-link="view_form.html" data-date="2016-5-25" data-title="Jessica 未審核 - 8hr"></div>
+								<div class="added-event" data-link="view_form.html" data-date="2016-5-30" data-title="Jessica 未審核 - 8hr"></div>
+								<div class="added-event" data-link="view_form.html" data-date="2016-5-30" data-title="Edson 未審核 - 4hr"></div>
+								<div class="added-event" data-link="view_form.html" data-date="2016-6-1" data-title="Dora 未審核 - 8hr"></div>
+								<div class="added-event" data-link="view_form.html" data-date="2016-6-2" data-title="Kobayashi 未審核 - 8hr"></div>
+								<div class="added-event" data-link="view_form.html" data-date="2016-6-6" data-title="Jessica 未審核 - 6hr"></div>
+								<div class="added-event" data-link="view_form.html" data-date="2016-6-6" data-title="Dora 未審核 - 8hr"></div>
+							</div>
+
+					</li>
+				</ul>
+			</div>
+
+			<div class="glide__bullets"></div>
+
+		</div>
+
+		<script src="js/jquery-latest.min.js"></script>
+		<script src="js/jalendar.min.js"></script>
+		<script src="js/jquery-scrolltofixed-min.js"></script>
+		<script src="js/fixed_navigation.js"></script>
+		<script src="js/glide.min.js"></script>
+		<script>
+			$('#your_jalendar').jalendar({
+				//color: '#23baff', // Unlimited
+				//color2: '#46a0a2', // Unlimited
+				dateType: 'yyyy-mm-dd',
+				titleColor: '#ffffff',
+				weekColor: '#a8f1ff',
+				todayColor: '#ffff00',
+				lang: 'ZH',
+				sundayStart: true
+			});
+			
+			var slider = $('#Glide').glide({ autoheight: true,autoplay: false });
+			var slider_api = slider.data('glide_api');
+			// Scroll To Fixed
+			$('#sub_menu').scrollToFixed();
+		</script>
+
+	</body>
+</html>

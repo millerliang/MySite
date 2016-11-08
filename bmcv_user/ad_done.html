@@ -1,0 +1,91 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<title>Welcome BMCV</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link rel="stylesheet" href="css/ionic.min.css">
+<link rel="stylesheet" href="css/ionicons.min.css">
+<link rel="stylesheet" href="css/animate.css">
+<script type="text/javascript" src="js/ionic.bundle.min.js"></script>
+<script type="text/javascript" src="js/ionic.min.js"></script>
+<script type="text/javascript" src="js/ionic-angular.min.js"></script>
+<script type="text/javascript" src="jquery-1.10.2.min.js"></script>
+</head>
+
+<body style="background-color:#EF473A;color:#fff;">
+
+	<div class="padding_ animated" style="text-align:center;">
+		<div id="cont" style="margin-top:5%;">
+			<h1 class="animated" style="color:#fff;">交易明細</h1>
+			<i class="icon ion-android-checkmark-circle animated" style="font-size:72pt;"></i>
+			<h4 class="animated" style="color:#fff;">交易成功</h4>
+			<a class="button button-block button-light button-large button-clear loading animated" style="color:#fff;" href="#">
+			<i class="icon ion-loading-c"></i>
+			交易確認中....
+			</a>
+			<div id="preload" style="position:absolute;background-color: #fff;width:1%;font-size:2px;height:3px;">&nbsp;</div>
+			<div class="padding animated" style="text-align:left;width:95%;margin:1em auto;font-size:130%;">
+				<p>商品名稱：摩斯漢堡薯條 (小)</p>
+				<p>目前點數：450點</p>
+				<p>扣除點數：-108點</p>
+				<p>點數餘額：<span style="font-size:150%;">342</span> 點</p>
+
+				<ol style="font-size:11pt;margin:2em 0 0 1em;list-style: inherit;">
+					<li>本活動對象為 BMCV 會員。</li>
+					<li>兌換前請先確認網路連線是否正常，商品兌換後將無法退還已消費之點數！</li>
+					<li>詳細活動辦法以 BMCV 公告為準，本方保留變更、修改或終止本活動之權利。</li>
+					<li>每張兌換券上，皆標示使用有效期限，請務必於期限內使用，逾期即視同自動放棄，恕不接受兌換，兌換券若經塗改不能使用，將無法退換、補發。</li>
+					<li>超商現金抵用券不適用於含有菸、酒、代收、代售的商品。</li>
+					<li>現金抵用券與商品兌換券不得兌領現金及找零。</li>
+				</ol>
+			</div>
+		</div>
+	</div>
+
+	<footer style="position:absolute;bottom:0;width:100%;text-align:center;line-height:3;">
+		<div class="padding">
+			<a href="index.html" class="button button-block button-full button-light animated">
+			確 定
+			</a>
+		</div>
+		<small>Copyright © 2015 by jyt-inc</small>
+	</footer>
+
+	<script type="text/javascript">
+		<!-- JavaScript -->
+		$('.ion-android-checkmark-circle, h4').hide();
+		var funs = [
+			function() {
+				$("#preload").animate({width:"100%"}, 1500);
+				setTimeout(goNext, 2500);
+			},
+			function() {
+				$("#preload").animate({width:"0%"},1000);
+				$('.loading').removeClass('fadeInUp').addClass('fadeOutDown');
+				setTimeout(goNext, 1000);
+			},
+			function() {
+				$('.loading').css({display:"none"},2000);
+				$('.ion-android-checkmark-circle, h4').show(0).addClass('flipInX');
+				setTimeout(goNext, 3000);
+			},
+			function() {
+				$("#cont img").addClass('flipOutX animated').hide(3000);
+			}
+		];
+
+		$(document).ready(function(){
+			goNext();
+		});
+
+		function goNext()
+		{
+			funs.shift()();
+		}
+	</script>
+
+</body>
+</html> 

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Geolocation 定位打卡</title>
+<style>
+html,body{margin:0;padding:0;height:100%;border:none;}
+body {overflow-x:hidden;font-family:'微軟正黑體';}
+#mapcanvas {position:absolute;z-index:1;top: 0;background-color:#ddd;width:100%;height:100%;}
+.menu_bar {position:absolute;z-index:100;width:100%;top: 0;}
+.menu_bar a {font-size:21px;line-height:2.4;display:block;padding:0 0.5em 0 1em;color:#fff;text-decoration: none;
+background-color:rgba(0,70,140,1);
+background: -moz-linear-gradient(left, rgba(52,138,219,1) 0%, rgba(0,70,140,1) 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(52,138,219,1)), color-stop(100%, rgba(0,70,140,1)));
+background: -webkit-linear-gradient(left, rgba(52,138,219,1) 0%, rgba(0,70,140,1) 100%);
+background: -o-linear-gradient(left, rgba(52,138,219,1) 0%, rgba(0,70,140,1) 100%);
+background: -ms-linear-gradient(left, rgba(52,138,219,1) 0%, rgba(0,70,140,1) 100%);
+background: linear-gradient(to right, rgba(52,138,219,1) 0%, rgba(0,70,140,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#348adb', endColorstr='#00468c', GradientType=1 );
+}
+.menu_bar p {text-shadow:1px 1px 1px #666;line-height:1.8;padding-left:1em;margin:0;color:#fff;background-color:rgba(0,60,60,0.35);}
+#showTime {font-size:16px;float:right;margin-top:6px;}
+#showTime samll {font-size:8px;}
+.sel_model {position:fixed;z-index:101;bottom:4em;width:100%;}
+.sel_model input {display:none;}
+.sel_model input:checked + label {background-color:#00a3d9;color:#fff;}
+.sel_model input:checked + label:nth-last-child(2) {background-color:#a45eb3;}
+.sel_model input:checked ~ div.send_btn {transition: all .8s;position:fixed;bottom:-1.5em;}
+
+.sel_model label {
+font-size:21px;
+position: relative;
+float:left;
+cursor: pointer;
+padding: 0.8em 2.5em;
+background-color:rgba(0,0,0,.2);
+text-align:center;
+-webkit-border-radius:0px 50px 50px 0px;-moz-border-radius:0px 50px 50px 0px;border-radius:0px 50px 50px 0px;
+}
+.sel_model label:before {
+content: '';
+position: absolute;
+right: 0.5em;
+top: 16px;
+background-color: white;
+background-repeat: no-repeat;
+background-image: url('imgs/map_marker_blue.png');
+background-position: center center;
+background-size: 25px;
+border-radius: 50%;
+width: 30px;
+height: 30px;
+}
+.sel_model label:nth-last-child(2) {float:right;-webkit-border-radius:50px 0px 0px 50px;-moz-border-radius:50px 0px 0px 50px;border-radius:50px 0px 0px 50px;}
+.sel_model label:nth-last-child(2):before {left: 0.58em;background-image: url('imgs/map_marker_purple.png');}
+.sel_model .send_btn {position:fixed;z-index:102;bottom:-7em;width:100%;text-align:center;clear:both;}
+.sel_model .send_btn button{margin-left__:-3em;font-size:18px;padding:1.8em;border:1px solid #fff;line-height:2;background-color:#e84a64;color:#fff;box-shadow: 0 0 8px rgba(0,0,0,0.4);-webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%;}
+.sel_model .send_btn button:hover, .send_btn button:focus {background-color:#e53351;}
+
+/* disabled Google item */
+.gmnoprint {display:none;}
+</style>
+</head>
+<body onload="timeshow()">
+
+<div class="menu_bar">
+	<a class="" href="home.html">← 定位打卡<span id="showTime"></span></a>
+	<p> 所在位置: <span id="status">定位中...</span></p>
+</div>
+<div class="sel_model">
+	<input type="radio" id="up" name="ggg" value="10"></input><label for="up">上班</label>
+	<input type="radio" id="down" name="ggg" value="10"></input><label for="down">下班</label>
+	<div class="send_btn"><button onclick="location.href='home.html'">打卡</button></div>
+</div>
+<!-- <script type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=false"></script> -->
+<script type="text/javascript" src="js/map_sensor.js?sensor=false"></script>
+
+<script>
+function success(position) {
+	var s = document.querySelector('#status');
+
+	if (s.className == 'success') {
+	// not sure why we're hitting this twice in FF, I think it's to do with a cached result coming back    
+	return;
+}
+
+s.innerHTML = "找到你了！";
+s.className = 'success';
+
+var mapcanvas = document.createElement('div');
+mapcanvas.id = 'mapcanvas';
+//mapcanvas.style.height = '400px';
+//mapcanvas.style.width = '560px';
+
+document.querySelector('body').appendChild(mapcanvas);
+
+var latlng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+var myOptions = {
+	zoom: 15,
+	center: latlng,
+	mapTypeControl: false,
+	navigationControlOptions: {style: google.maps.NavigationControlStyle.SMALL},
+	mapTypeId: google.maps.MapTypeId.ROADMAP
+};
+var map = new google.maps.Map(document.getElementById("mapcanvas"), myOptions);
+
+var marker = new google.maps.Marker({
+	position: latlng, 
+	map: map, 
+	title:"You are here! (at least within a "+position.coords.accuracy+" meter radius)"
+});
+}
+
+function error(msg) {
+var s = document.querySelector('#status');
+s.innerHTML = typeof msg == 'string' ? msg : "failed";
+s.className = 'fail';
+
+// console.log(arguments);
+}
+
+if (navigator.geolocation) {
+	navigator.geolocation.getCurrentPosition(success, error);
+} else {
+	error('not supported');
+}
+</script>
+
+<script language="javascript">
+function timeshow(){
+	dayname= new Array("日","一","二","三","四","五","六");
+	d=new Date( );
+	var show="";
+	var y=d.getYear();
+	var m=((d.getMonth()*1+1)<10)? "0"+(d.getMonth()*1+1):(d.getMonth()*1+1);
+	var da=(d.getDate()<10)? "0"+d.getDate():d.getDate();
+	var dd=(dayname[d.getDay()]<10)? "0"+dayname[d.getDay()]:dayname[d.getDay()];
+	var hi=(d.getHours()<10) ? "0"+d.getHours():d.getHours();
+	var mi=(d.getMinutes()<10)? "0"+d.getMinutes():d.getMinutes();
+	var Si=(d.getSeconds()<10)? "0"+d.getSeconds():d.getSeconds();
+	show+=m +"/" +da +" (<small>" +dd +"</small>) " +hi +":" +mi +":" +Si;
+	document.getElementById("showTime").innerHTML=show;
+	setTimeout("timeshow()",1000);
+}
+</script>
+
+</body>
+</html>

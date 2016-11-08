@@ -1,0 +1,101 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<title>Welcome BMCV</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link rel="stylesheet" href="css/ionic.min.css">
+<link rel="stylesheet" href="css/ionicons.min.css">
+<script type="text/javascript" src="js/ionic.bundle.min.js"></script>
+<script type="text/javascript" src="js/ionic.min.js"></script>
+<script type="text/javascript" src="js/ionic-angular.min.js"></script>
+</head>
+
+<body style="background-color:#F4F8FC;">
+
+	<div class="bar bar-header bar-assertive">
+		<button onclick="history.go(-1)" class="button icon-left ion-chevron-left">Back</button>
+		<div class="h1 title">地 區</div>
+	</div>
+
+	<div class="content has-header">
+		<div class="list">
+			<label class="item item-input item-select">
+				<div class="input-label">
+				國家
+				</div>
+				<select>
+					<option value="0">台灣</option>
+					<option value="1">中國</option>
+					<option value="2">日本</option>
+					<option value="3">香港</option>
+					<option value="4">韓國</option>
+				</select>
+			</label>
+			<label class="item item-input item-select">
+				<div class="input-label">
+				城市
+				</div>
+				<select name="city" id="city">
+					<option value="%">請選擇縣市</option>
+					<option value="基隆市">基隆市</option>
+					<option value="臺北市">臺北市</option>
+					<option value="新北市">新北市</option>
+					<option value="桃園市">桃園市</option>
+					<option value="新竹市">新竹市</option>
+					<option value="新竹縣">新竹縣</option>
+					<option value="苗栗縣">苗栗縣</option>
+					<option value="臺中市">臺中市</option>
+					<option value="彰化縣">彰化縣</option>
+					<option value="南投縣">南投縣</option>
+					<option value="雲林縣">雲林縣</option>
+					<option value="嘉義市">嘉義市</option>
+					<option value="嘉義縣">嘉義縣</option>
+					<option value="臺南市">臺南市</option>
+					<option value="高雄市">高雄市</option>
+					<option value="屏東縣">屏東縣</option>
+					<option value="臺東縣">臺東縣</option>
+					<option value="花蓮縣">花蓮縣</option>
+					<option value="宜蘭縣">宜蘭縣</option>
+					<option value="澎湖縣">澎湖縣</option>
+					<option value="金門縣">金門縣</option>
+					<option value="連江縣">連江縣</option>
+				</select>
+			</label>
+			<label class="item item-input item-select">
+				<div class="input-label">
+				地區
+				</div>
+				<select name="cityarea" id="cityarea" onchange="cityareaChange()" size="1" class="select">
+					<option value="%">請選擇地區</option><option value="中正區">中正區</option><option value="大同區">大同區</option><option value="中山區">中山區</option><option value="松山區">松山區</option><option value="大安區">大安區</option><option value="萬華區">萬華區</option><option value="信義區">信義區</option><option value="士林區">士林區</option><option value="北投區">北投區</option><option value="內湖區">內湖區</option><option value="南港區">南港區</option><option value="文山區">文山區</option>
+				</select>
+			</label>
+		</div>
+
+		<div class="list">
+			<label class="item item-radio">
+			<input type="radio" name="group">
+			<div class="item-content">
+			攝氏
+			</div>
+			<i class="radio-icon ion-checkmark"></i>
+			</label>
+			<label class="item item-radio">
+			<input type="radio" name="group" checked>
+			<div class="item-content">
+			華氏
+			</div>
+			<i class="radio-icon ion-checkmark"></i>
+			</label>
+		</div>
+	
+		<div class="padding">
+			<button onclick="history.go(-1)" class="button button-block button-positive">完 成</button>
+		</div>
+	</div>
+	<p><br></p>
+
+</body>
+</html> 

@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>基本分析 - 後台管理系統</title>
+
+		<meta name="description" content="" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- basic styles -->
+
+		<link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+
+		<!--[if IE 7]>
+		  <link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css" />
+		<![endif]-->
+
+		<!-- page specific plugin styles -->
+
+		<!-- fonts -->
+
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" />
+
+		<!-- ace styles -->
+
+		<link rel="stylesheet" href="assets/css/ace.min.css" />
+		<link rel="stylesheet" href="assets/css/ace-rtl.min.css" />
+		<link rel="stylesheet" href="assets/css/ace-skins.min.css" />
+
+		<!--[if lte IE 8]>
+		  <link rel="stylesheet" href="assets/css/ace-ie.min.css" />
+		<![endif]-->
+
+		<!-- inline styles related to this page -->
+
+		<!-- ace settings handler -->
+
+		<script src="assets/js/ace-extra.min.js"></script>
+
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+
+		<!--[if lt IE 9]>
+		<script src="assets/js/html5shiv.js"></script>
+		<script src="assets/js/respond.min.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<div class="navbar navbar-default" id="navbar">
+
+			<script type="text/javascript">
+				try{ace.settings.check('navbar' , 'fixed')}catch(e){}
+			</script>
+
+
+			<div class="navbar-container" id="navbar-container">
+				<div class="navbar-header pull-left logo">
+					<a href="index.html" class="navbar-brand">
+						<small>
+							後台管理系統
+						</small>
+					</a><!-- /.brand -->
+				</div><!-- /.navbar-header -->
+
+				<div class="navbar-header pull-right" role="navigation">
+					<ul class="nav ace-nav">
+						<li class="color">
+							<a data-toggle="dropdown" class="dropdown-toggle" href="#">
+								<i class="icon-envelope icon-animated-vertical"></i>
+								<span class="badge badge-important">12</span>
+							</a>
+
+							<ul class="pull-right dropdown-navbar navbar-pink dropdown-menu dropdown-caret dropdown-times">
+								<li>
+									<a href="user_feedback.html">
+										<div class="clearfix">
+											<span class="pull-left">
+												<i class="btn btn-xs no-hover btn-success icon-user"></i>
+												客服管理
+											</span>
+											<span class="pull-right badge badge-success">+8</span>
+										</div>
+									</a>
+								</li>
+
+								<li>
+									<a href="user_feedback.html">
+										查看所有通知
+										<i class="icon-arrow-right"></i>
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li class="light-blue">
+							<a data-toggle="dropdown" href="#" class="dropdown-toggle">
+								<img class="nav-user-photo" src="assets/avatars/avatar4.png" alt="Jason's Photo" />
+								<span class="user-info">
+									<small>您好, 歡迎</small>
+									超級管理員
+								</span>
+
+								<i class="icon-caret-down"></i>
+							</a>
+
+							<ul class="user-menu pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
+								<li>
+									<a href="admin_profile.html">
+										<i class="icon-user"></i>
+										個人資料
+									</a>
+								</li>
+
+								<li class="divider"></li>
+
+								<li>
+									<a href="login.html">
+										<i class="icon-power-off"></i>
+										登 出
+									</a>
+								</li>
+							</ul>
+						</li>
+					</ul><!-- /.ace-nav -->
+				</div><!-- /.navbar-header -->
+			</div><!-- /.container -->
+		</div>
+
+		<div class="main-container" id="main-container">
+			<script type="text/javascript">
+				try{ace.settings.check('main-container' , 'fixed')}catch(e){}
+			</script>
+
+			<div class="main-container-inner">
+				<a class="menu-toggler" id="menu-toggler" href="#">
+					<span class="menu-text"></span>
+				</a>
+
+				<div class="sidebar" id="sidebar">
+					<script type="text/javascript">
+						try{ace.settings.check('sidebar' , 'fixed')}catch(e){}
+					</script>
+
+					<ul class="nav nav-list">
+						<li>
+							<a href="index.html">
+								<i class="icon-home"></i>
+								<span class="menu-text"> 首 頁 </span>
+							</a>
+						</li>
+
+						<li>
+							<a href="admin_group.html">
+								<i class="icon-user-md"></i>
+								<span class="menu-text"> 系統管理員群組 </span>
+							</a>
+						</li>
+
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-th"></i>
+								<span class="menu-text"> 商城商品管理 </span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="market_manager.html">
+										<i class="icon-double-angle-right"></i>
+										商品總覽
+									</a>
+								</li>
+								<li>
+									<a href="market_orderlist.html">
+										<i class="icon-double-angle-right"></i>
+										訂單管理
+									</a>
+								</li>
+                                <li>
+									<a href="market_new.html">
+										<i class="icon-double-angle-right"></i>
+										新增商品
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-cloud-upload"></i>
+								<span class="menu-text"> 廣告管理 </span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="ad_manager.html">
+										<i class="icon-double-angle-right"></i>
+										廣告總覽
+									</a>
+								</li>
+                                <li>
+									<a href="ad_new.html">
+										<i class="icon-double-angle-right"></i>
+										新增廣告
+									</a>
+								</li>
+								<li>
+									<a href="ad_type.html">
+										<i class="icon-double-angle-right"></i>
+										廣告類別管理
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="#" class="dropdown-toggle"> 
+								<i class="icon-codepen"></i> <span class="menu-text"> 序號管理 </span> 
+								<b class="arrow icon-angle-down"></b>
+							</a>
+							<ul class="submenu">
+								<li>
+									<a href="sn_list.html"> <i class="icon-double-angle-right"></i> 序號總覽</a>
+								</li>
+								<li>
+									<a href="sn_create.html"> <i class="icon-double-angle-right"></i> 新增序號</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-users"></i>
+								<span class="menu-text"> 會員管理 </span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="user_group.html">
+										<i class="icon-double-angle-right"></i>
+										會員總覽
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-rocket"></i>
+								<span class="menu-text"> 商家管理 </span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="sell_manager.html">
+										<i class="icon-double-angle-right"></i>
+										商家總覽
+									</a>
+								</li>
+								<li>
+									<a href="sell_new.html">
+										<i class="icon-double-angle-right"></i>
+										新增商家
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="user_feedback.html">
+								<i class="icon-wechat"></i>
+								<span class="menu-text"> 客服管理 </span>
+							</a>
+						</li>
+
+						<li>
+							<a href="sys_postnews.html">
+								<i class="icon-laptop"></i>
+								<span class="menu-text"> 公告管理 </span>
+							</a>
+						</li>
+
+						<li>
+							<a href="sys_announcement.html">
+								<i class="icon-bullhorn"></i>
+								<span class="menu-text"> 消息管理 </span>
+							</a>
+						</li>
+
+                        <li class="active open">
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-bar-chart-o"></i>
+								<span class="menu-text"> 數據分析 </span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li class="active">
+									<a href="analysis_isp.html">
+										<i class="icon-double-angle-right"></i>
+										基本分析
+									</a>
+								</li>
+
+								<li>
+									<a href="analysis_local.html">
+										<i class="icon-double-angle-right"></i>
+										依地區地域分布
+									</a>
+								</li>
+
+                                <li>
+									<a href="analysis_trend.html">
+										<i class="icon-double-angle-right"></i>
+										APP 安裝統計
+									</a>
+								</li>
+                                <li>
+									<a href="analysis_boot.html">
+										<i class="icon-double-angle-right"></i>
+										開機次數趨勢圖
+									</a>
+								</li>
+							</ul>
+						</li>
+
+                        <li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-adn"></i>
+								<span class="menu-text"> APP 類別管理 </span>
+                                <b class="arrow icon-angle-down"></b>
+							</a>
+                            
+                            <ul class="submenu">
+								<li>
+									<a href="app_catalog.html">
+										<i class="icon-double-angle-right"></i>
+										APP 類型歸類對應
+									</a>
+								</li>
+
+								<li>
+									<a href="mobile_device.html">
+										<i class="icon-double-angle-right"></i>
+										手機型號裝置對應
+									</a>
+								</li>
+							</ul>
+						</li>
+					</ul><!-- /.nav-list -->
+
+					<div class="sidebar-collapse" id="sidebar-collapse">
+						<i class="icon-angle-double-left" data-icon1="icon-angle-double-left" data-icon2="icon-angle-double-right"></i>
+					</div>
+
+					<script type="text/javascript">
+						try{ace.settings.check('sidebar' , 'collapsed')}catch(e){}
+					</script>
+				</div>
+
+				<div class="main-content">
+					<div class="breadcrumbs" id="breadcrumbs">
+						<script type="text/javascript">
+							try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
+						</script>
+
+						<ul class="breadcrumb">
+							<li>
+								<i class="icon-home home-icon"></i>
+								<a href="index.html">Home</a>
+							</li>
+							<li class="active">基本分析</li>
+						</ul><!-- .breadcrumb -->
+
+						<div class="nav-search" id="nav-search">
+							<form class="form-search">
+								<span class="input-icon">
+									<input type="text" placeholder="搜尋 ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
+									<i class="icon-search nav-search-icon"></i>
+								</span>
+							</form>
+						</div><!-- #nav-search -->
+					</div>
+
+					<div class="page-content">
+
+                        <div class="page-header">
+							<h1>
+								基本分析
+								<!-- <small>
+									<i class="icon-angle-double-right"></i>
+								    依電信系統分布概況
+								</small> -->
+							</h1>
+						</div>
+
+						<div class="row">
+							<div class="col-sm-12">
+								<!-- PAGE CONTENT BEGINS -->
+								
+								<form>
+
+									<div class="input-group">
+										請選取時間
+										&nbsp;
+										<select>
+											<option value="0">選擇年份</option>
+											<option value="1">2012</option>
+											<option value="2">2013</option>
+											<option value="3">2014</option>
+											<option value="4">2015</option>
+										</select>
+										&nbsp;
+										<select>
+											<option value="0">檢視月份</option>
+											<option value="1">5月</option>
+											<option value="2">6月</option>
+											<option value="3">7月</option>
+											<option value="4">8月</option>
+											<option value="5">9月</option>
+											<option value="6">10月</option>
+										</select>
+										&nbsp;
+										<label>
+											<input type="radio" name="app" class="ace" checked="">
+											<span class="lbl"> 全 部 </span>
+										</label>
+										&nbsp;
+										<label>
+											<input type="radio" name="app" class="ace">
+											<span class="lbl"> <i class="icon-android bigger-120 green"></i>Android</span>
+										</label>
+										&nbsp;
+										<label>
+											<input type="radio" name="app" class="ace">
+											<span class="lbl"> <i class="icon-apple bigger-120 grey"></i>Apple</span>
+										</label>
+										&nbsp;
+										<span class="input-group-btn">
+											<button type="button" class="btn btn-purple btn-sm">
+												送 出
+												<i class="icon-search icon-on-right bigger-110"></i>
+											</button>
+										</span>
+									</div>
+
+								</form>
+
+								<div class="hr hr16 hr-dotted"></div>
+								
+								<div class="col-xs-12 col-sm-6">
+									<h4 class="header blue"><i class="icon-filter bigger-100"></i>
+										電信系統商
+										<div class="pull-right">
+											<span class="blue smaller-80"><i class="icon-male"></i>男</span>
+											<span class="red smaller-80"><i class="icon-female"></i>女</span>
+											<span class="grey smaller-80"><i class="icon-question"></i>未知</span>
+										</div>
+									</h4>
+									
+									<style type="text/css">
+										.telsys {margin:0;padding:0;list-style-type:none;}
+										.telsys li {border-bottom:1px solid #ececec;padding:6px;}
+									</style>
+
+									<ul class="telsys">
+										<li class="clearfix">
+											<div class="col-sm-1 no-padding">
+												<img src="assets/images/cht_logo.jpg" style="width:32px;"/>
+											</div>
+											<div class="col-sm-4">
+												<span class="blue">中華電信</span><br>
+												<span>391</span>
+											</div>
+											<div class="col-sm-3 bigger-110 text-right">
+												<span class="blue">264 人</span><br>
+												<span class="red">127 人</span><br>
+												<span class="grey">0 人</span>
+											</div>
+											<div class="col-sm-3 bigger-110 text-right">
+												<span class="blue">31%</span><br>
+												<span class="red">29%</span><br>
+												<span class="grey">0%</span>
+											</div>
+										</li>
+
+										<li class="clearfix">
+											<div class="col-sm-1 no-padding">
+												<img src="assets/images/taiwanmobile_logo.jpg" style="width:32px;"/>
+											</div>
+											<div class="col-sm-4">
+												<span class="blue">台灣大哥大</span><br>
+												<span>154</span>
+											</div>
+											<div class="col-sm-3 bigger-110 text-right">
+												<span class="blue">86 人</span><br>
+												<span class="red">68 人</span><br>
+												<span class="grey">0 人</span>
+											</div>
+											<div class="col-sm-3 bigger-110 text-right">
+												<span class="blue">26%</span><br>
+												<span class="red">24%</span><br>
+												<span class="grey">0%</span>
+											</div>
+										</li>
+
+										<li class="clearfix">
+											<div class="col-sm-1 no-padding">
+												<img src="assets/images/aptg_logo.gif" style="width:32px;"/>
+											</div>
+											<div class="col-sm-4">
+												<span class="blue">亞太電信</span><br>
+												<span>54</span>
+											</div>
+											<div class="col-sm-3 bigger-110 text-right">
+												<span class="blue">24 人</span><br>
+												<span class="red">30 人</span><br>
+												<span class="grey">0 人</span>
+											</div>
+											<div class="col-sm-3 bigger-110 text-right">
+												<span class="blue">20%</span><br>
+												<span class="red">18%</span><br>
+												<span class="grey">0%</span>
+											</div>
+										</li>
+
+										<li class="clearfix">
+											<div class="col-sm-1 no-padding">
+												<img src="assets/images/vibo_logo.gif" style="width:32px;"/>
+											</div>
+											<div class="col-sm-4">
+												<span class="blue">威寶電信</span><br>
+												<span>46</span>
+											</div>
+											<div class="col-sm-3 bigger-110 text-right">
+												<span class="blue">17 人</span><br>
+												<span class="red">29 人</span><br>
+												<span class="grey">0 人</span>
+											</div>
+											<div class="col-sm-3 bigger-110 text-right">
+												<span class="blue">15%</span><br>
+												<span class="red">12%</span><br>
+												<span class="grey">0%</span>
+											</div>
+										</li>
+
+										<li class="clearfix">
+											<div class="col-sm-1 no-padding">
+												<img src="assets/images/eft_logo.gif" style="width:32px;"/>
+											</div>
+											<div class="col-sm-4">
+												<span class="blue">遠傳電信</span><br>
+												<span>282</span>
+											</div>
+											<div class="col-sm-3 bigger-110 text-right">
+												<span class="blue">165 人</span><br>
+												<span class="red">117 人</span><br>
+												<span class="grey">0 人</span>
+											</div>
+											<div class="col-sm-3 bigger-110 text-right">
+												<span class="blue">10%</span><br>
+												<span class="red">20%</span><br>
+												<span class="grey">0%</span>
+											</div>
+										</li>
+
+										<li class="clearfix">
+											<div class="col-sm-1 no-padding">
+												<img src="assets/images/fitel_logo.gif" style="width:32px;"/>
+											</div>
+											<div class="col-sm-4">
+												<span class="blue">大眾電信</span><br>
+												<span>27</span>
+											</div>
+											<div class="col-sm-3 bigger-110 text-right">
+												<span class="blue">16 人</span><br>
+												<span class="red">11 人</span><br>
+												<span class="grey">0 人</span>
+											</div>
+											<div class="col-sm-3 bigger-110 text-right">
+												<span class="blue">3%</span><br>
+												<span class="red">1%</span><br>
+												<span class="grey">0%</span>
+											</div>
+										</li>
+
+										<li class="clearfix">
+											<div class="col-sm-1 no-padding">
+												<i class="icon-question-circle light-grey bigger-280 grey"></i>
+											</div>
+											<div class="col-sm-4">
+												<span class="blue">其他業者</span><br>
+												<span>0</span>
+											</div>
+											<div class="col-sm-3 bigger-110 text-right">
+												<span class="blue">0 人</span><br>
+												<span class="red">0 人</span><br>
+												<span class="grey">0 人</span>
+											</div>
+											<div class="col-sm-3 bigger-110 text-right">
+												<span class="blue">0%</span><br>
+												<span class="red">0%</span><br>
+												<span class="grey">0%</span>
+											</div>
+										</li>
+									</ul>
+								</div>
+
+								<div class="col-xs-12 col-sm-6">
+
+									<div class="profile-user-info">	
+
+										<div class="profile-info-row">
+											<div class="profile-info-name"> 所有會員 </div>
+
+											<div class="profile-info-value bigger-150">
+												<span class="bigger-120 line-height-1">2,236 人</span>
+											</div>
+										</div>
+
+										<div class="profile-info-row">
+											<div class="profile-info-name"> 性 別 </div>
+
+											<div class="profile-info-value bigger-140 clearfix">
+												<p style="white-space:nowrap;">
+													<span class="blue col-xs-12 col-lg-4">
+														<i class="icon-male blue bigger-120"></i>
+														1,385
+													</span>
+													<span class="red col-xs-12 col-lg-4">
+														<i class="icon-female red bigger-120"></i>
+														812,634
+													</span>
+													<span class="grey col-xs-12 col-lg-4">
+														<i class="icon-question grey bigger-120"></i>
+														53
+													</span>
+												</p>
+											</div>
+										</div>
+
+										<div class="profile-info-row">
+											<div class="profile-info-name"> 手機系統 </div>
+
+											<div class="profile-info-value bigger-130 clearfix">
+												<p class="clearfix" style="white-space:nowrap;">
+													<span class="col-sm-12 light-grey smaller-90">
+														<i class="icon-apple"></i>
+														Apple IOS
+													</span>
+													<span class="blue col-xs-12 col-lg-4">42% 124253</span>
+													<span class="red col-xs-12 col-lg-4">35% 13</span>
+													<span class="grey col-xs-12 col-lg-4">5% 20</span>
+												</p>
+												
+												<p class="clearfix" style="white-space:nowrap;">
+													<span class="col-sm-12 light-green smaller-90">
+														<i class="icon-android green"></i>
+														Android
+													</span>
+													<span class="blue col-xs-12 col-lg-4">75% 1220</span>
+													<span class="red col-xs-12 col-lg-4">65% 7125</span>
+													<span class="grey col-xs-12 col-lg-4">4% 33</span>
+												</p>
+											</div>
+										</div>
+
+										<div class="hr hr-double"></div>
+
+										<div>
+											<strong>年齡分布&nbsp;</strong>
+											<i class="icon-square orange2 bigger-110"></i>0-20歲&nbsp;
+											<i class="icon-square blue bigger-110"></i>21-40歲&nbsp;
+											<i class="icon-square pink2 bigger-110"></i>41-60歲&nbsp;
+											<i class="icon-square light-grey bigger-110"></i>61-80歲&nbsp;
+											<i class="icon-square grey bigger-110"></i>未知
+										</div>
+
+										<div class="space-10"></div>
+
+										<div class="clearfix">
+											<div class="grid3 center">
+												<canvas id="canvas1" height="100" width="100"></canvas>
+												<p>所 有</p>
+											</div>
+											<div class="grid3 center">
+												<canvas id="canvas2" height="100" width="100"></canvas>
+												<p>男 性</p>
+											</div>
+											<div class="grid3 center">
+												<canvas id="canvas3" height="100" width="100"></canvas>
+												<p>女 性</p>
+											</div>
+										</div>
+
+									</div><!-- /.profile-user-info -->
+
+								</div><!-- /.col6 -->
+
+                                <div class="hr hr32 hr-dotted"></div>
+                                
+								<!-- PAGE CONTENT ENDS -->
+							</div><!-- /.col -->
+						</div><!-- /.row -->
+					</div><!-- /.page-content -->
+				</div><!-- /.main-content -->
+
+			</div><!-- /.main-container-inner -->
+
+			<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+				<i class="icon-angle-double-up icon-only bigger-110"></i>
+			</a>
+		</div><!-- /.main-container -->
+
+		<!-- basic scripts -->
+
+		<!--[if !IE]> -->
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+		<!-- <![endif]-->
+
+		<!--[if IE]>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<![endif]-->
+
+		<!--[if !IE]> -->
+
+		<script type="text/javascript">
+			window.jQuery || document.write("<script src='assets/js/jquery-2.0.3.min.js'>"+"<"+"/script>");
+		</script>
+
+		<!-- <![endif]-->
+
+		<!--[if IE]>
+		<script type="text/javascript">
+		 window.jQuery || document.write("<script src='assets/js/jquery-1.10.2.min.js'>"+"<"+"/script>");
+		</script>
+		<![endif]-->
+
+		<script type="text/javascript">
+			if("ontouchend" in document) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+		</script>
+		<script src="assets/js/bootstrap.min.js"></script>
+		<script src="assets/js/typeahead-bs2.min.js"></script>
+
+		<!-- page specific plugin scripts -->
+		<script src="assets/js/Chart.min.js"></script>
+
+		<!-- ace scripts -->
+
+		<script src="assets/js/ace-elements.min.js"></script>
+		<script src="assets/js/ace.min.js"></script>
+
+		<!-- inline scripts related to this page -->
+		<script>
+
+		var pieData1 = [
+				{
+					value: 40,
+					color:"#feb902"
+				},
+				{
+					value : 8,
+					color : "#00B6E7"
+				},
+				{
+					value : 30,
+					color : "#ED1C7C"
+				},
+				{
+					value : 16,
+					color : "#ccc"
+				},
+				{
+					value : 6,
+					color : "#6c6c6c"
+				}
+			
+			];
+		var pieData2 = [
+				{
+					value: 25,
+					color:"#feb902"
+				},
+				{
+					value : 35,
+					color : "#00B6E7"
+				},
+				{
+					value : 20,
+					color : "#ED1C7C"
+				},
+				{
+					value : 12,
+					color : "#ccc"
+				}
+			
+			];
+		var pieData3 = [
+				{
+					value: 28,
+					color:"#feb902"
+				},
+				{
+					value : 37,
+					color : "#00B6E7"
+				},
+				{
+					value : 25,
+					color : "#ED1C7C"
+				},
+				{
+					value : 15,
+					color : "#ccc"
+				}
+			
+			];
+
+		var myPie1 = new Chart(document.getElementById("canvas1").getContext("2d")).Pie(pieData1);
+		var myPie2 = new Chart(document.getElementById("canvas2").getContext("2d")).Pie(pieData2);
+		var myPie3 = new Chart(document.getElementById("canvas3").getContext("2d")).Pie(pieData3);
+	</script>
+	</body>
+</html>

@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>首頁 - 後台管理系統</title>
+
+		<meta name="description" content="" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- basic styles -->
+
+		<link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+		<!--[if IE 7]>
+		  <link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css" />
+		<![endif]-->
+
+		<!-- page specific plugin styles -->
+
+		<!-- fonts -->
+
+		<!-- <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" /> -->
+
+		<!-- ace styles -->
+
+		<link rel="stylesheet" href="assets/css/ace.min.css" />
+		<link rel="stylesheet" href="assets/css/ace-rtl.min.css" />
+		<link rel="stylesheet" href="assets/css/ace-skins.min.css" />
+
+		<!--[if lte IE 8]>
+		  <link rel="stylesheet" href="assets/css/ace-ie.min.css" />
+		<![endif]-->
+
+		<!-- inline styles related to this page -->
+
+		<!-- ace settings handler -->
+
+		<script src="assets/js/ace-extra.min.js"></script>
+
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+
+		<!--[if lt IE 9]>
+		<script src="assets/js/html5shiv.js"></script>
+		<script src="assets/js/respond.min.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<div class="navbar navbar-default" id="navbar">
+
+			<script type="text/javascript">
+				try{ace.settings.check('navbar' , 'fixed')}catch(e){}
+			</script>
+
+
+			<div class="navbar-container" id="navbar-container">
+				<div class="navbar-header pull-left logo">
+					<a href="index.html" class="navbar-brand">
+						<small>
+							後台管理系統
+						</small>
+					</a><!-- /.brand -->
+				</div><!-- /.navbar-header -->
+
+				<div class="navbar-header pull-right" role="navigation">
+					<ul class="nav ace-nav">
+						<li class="color">
+							<a data-toggle="dropdown" class="dropdown-toggle" href="#">
+								<i class="icon-envelope icon-animated-vertical"></i>
+								<span class="badge badge-important">12</span>
+							</a>
+
+							<ul class="pull-right dropdown-navbar navbar-pink dropdown-menu dropdown-caret dropdown-times">
+								<li>
+									<a href="user_feedback.html">
+										<div class="clearfix">
+											<span class="pull-left">
+												<i class="btn btn-xs no-hover btn-success icon-user"></i>
+												客服管理
+											</span>
+											<span class="pull-right badge badge-success">+8</span>
+										</div>
+									</a>
+								</li>
+
+								<li>
+									<a href="user_feedback.html">
+										查看所有通知
+										<i class="icon-arrow-right"></i>
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li class="light-blue">
+							<a data-toggle="dropdown" href="#" class="dropdown-toggle">
+								<img class="nav-user-photo" src="assets/avatars/avatar4.png" alt="Jason's Photo" />
+								<span class="user-info">
+									<small>您好, 歡迎</small>
+									超級管理員
+								</span>
+
+								<i class="icon-caret-down"></i>
+							</a>
+
+							<ul class="user-menu pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-times">
+								<li>
+									<a href="admin_profile.html">
+										<i class="icon-user"></i>
+										個人資料
+									</a>
+								</li>
+
+								<li class="divider"></li>
+
+								<li>
+									<a href="login.html">
+										<i class="icon-power-off"></i>
+										登 出
+									</a>
+								</li>
+							</ul>
+						</li>
+					</ul><!-- /.ace-nav -->
+				</div><!-- /.navbar-header -->
+			</div><!-- /.container -->
+		</div>
+
+		<div class="main-container" id="main-container">
+			<script type="text/javascript">
+				try{ace.settings.check('main-container' , 'fixed')}catch(e){}
+			</script>
+
+			<div class="main-container-inner">
+				<a class="menu-toggler" id="menu-toggler" href="#">
+					<span class="menu-text"></span>
+				</a>
+
+				<div class="sidebar" id="sidebar">
+					<script type="text/javascript">
+						try{ace.settings.check('sidebar' , 'fixed')}catch(e){}
+					</script>
+
+					<ul class="nav nav-list">
+						<li class="active">
+							<a href="index.html">
+								<i class="icon-home"></i>
+								<span class="menu-text">首 頁</span>
+							</a>
+						</li>
+
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-user-md"></i>
+								<span class="menu-text">系統管理</span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="#.html">
+										<i class="icon-double-angle-right"></i>
+										系統管理員群組
+									</a>
+								</li>
+								<li>
+									<a href="#.html">
+										<i class="icon-double-angle-right"></i>
+										教會名片總覽
+									</a>
+								</li>
+								<li>
+									<a href="#.html">
+										<i class="icon-double-angle-right"></i>
+										新增教會名片
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="#.html">
+								<i class="icon-wechat"></i>
+								<span class="menu-text">客服管理</span>
+							</a>
+						</li>
+
+						<li>
+							<a href="sys_postnews.html">
+								<i class="icon-laptop"></i>
+								<span class="menu-text">公告管理</span>
+							</a>
+						</li>
+
+                        <li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-bar-chart-o"></i>
+								<span class="menu-text">數據分析</span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="#.html">
+										<i class="icon-double-angle-right"></i>
+										區間統計分析
+									</a>
+								</li>
+								<li>
+									<a href="#.html">
+										<i class="icon-double-angle-right"></i>
+										地區地域分布
+									</a>
+								</li>
+                                <li>
+									<a href="#.html">
+										<i class="icon-double-angle-right"></i>
+										流量及數據分析
+									</a>
+								</li>
+							</ul>
+						</li>
+
+                        <li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-database"></i>
+								<span class="menu-text">資料庫</span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="#.html">
+										<i class="icon-double-angle-right"></i>
+										資料庫備份
+									</a>
+								</li>
+								<li>
+									<a href="#.html">
+										<i class="icon-double-angle-right"></i>
+										資料庫還原
+									</a>
+								</li>
+                                <li>
+									<a href="#.html">
+										<i class="icon-double-angle-right"></i>
+										工作排程
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="#.html">
+								<i class="icon-cogs"></i>
+								<span class="menu-text">系統設定</span>
+							</a>
+						</li>
+
+						<li style="padding:3px;">
+							<!-- <div class="sidebar-collapse_">
+							</div>
+							<a href="#">
+								<span class="menu-text">教會帳戶</span>
+								<i class="icon-angle-down"></i>
+							</a> -->
+						</li>
+
+						<li>
+							<a href="user_profile.html">
+								<i class="icon-credit-card"></i>
+								<span class="menu-text">教會名片</span>
+							</a>
+						</li>
+
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-user-md"></i>
+								<span class="menu-text">權限管理</span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="#.html">
+										<i class="icon-double-angle-right"></i>
+										管理員指派
+									</a>
+								</li>
+								<li>
+									<a href="#.html">
+										<i class="icon-double-angle-right"></i>
+										角色權限設定
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-heart-o"></i>
+								<span class="menu-text">代禱信管理</span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="#.html">
+										<i class="icon-double-angle-right"></i>
+										代禱信總覽
+									</a>
+								</li>
+								<li>
+									<a href="#.html">
+										<i class="icon-double-angle-right"></i>
+										新增代禱信
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-heartbeat"></i>
+								<span class="menu-text">輪班禱告管理</span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="#.html">
+										<i class="icon-double-angle-right"></i>
+										輪班禱告總覽
+									</a>
+								</li>
+								<li>
+									<a href="#.html">
+										<i class="icon-double-angle-right"></i>
+										新增輪班禱告
+									</a>
+								</li>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-slideshare"></i>
+								<span class="menu-text">認領禱告管理</span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="#.html">
+										<i class="icon-double-angle-right"></i>
+										認領禱告總覽
+									</a>
+								</li>
+								<li>
+									<a href="#.html">
+										<i class="icon-double-angle-right"></i>
+										新增認領禱告
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-users"></i>
+								<span class="menu-text">會友/群組管理</span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="#.html">
+										<i class="icon-double-angle-right"></i>
+										會友管理
+									</a>
+								</li>
+								<li>
+									<a href="#.html">
+										<i class="icon-double-angle-right"></i>
+										群組管理
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-th"></i>
+								<span class="menu-text">主題管理</span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="slideshow_manager.html">
+										<i class="icon-double-angle-right"></i>
+										廣告列表
+									</a>
+								</li>
+								<li>
+									<a href="witness_manager.html">
+										<i class="icon-double-angle-right"></i>
+										見證列表
+									</a>
+								</li>
+								<li>
+									<a href="#.html">
+										<i class="icon-double-angle-right"></i>
+										參數設定
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="popular_msnager.html">
+								<i class="icon-heart-o"></i>
+								<span class="menu-text">熱門禱告管理</span>
+							</a>
+						</li>
+
+						<li>
+							<a href="ban_msnager.html">
+								<i class="icon-ban"></i>
+								<span class="menu-text">檢舉管理</span>
+							</a>
+						</li>
+
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-leanpub"></i>
+								<span class="menu-text">教導管理</span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="#.html">
+										<i class="icon-double-angle-right"></i>
+										教導總覽
+									</a>
+								</li>
+								<li>
+									<a href="#.html">
+										<i class="icon-double-angle-right"></i>
+										新增文章
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-bullhorn"></i>
+								<span class="menu-text">推播管理</span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="#.html">
+										<i class="icon-double-angle-right"></i>
+										推播總覽
+									</a>
+								</li>
+								<li>
+									<a href="#.html">
+										<i class="icon-double-angle-right"></i>
+										新增推播
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-youtube-play"></i>
+								<span class="menu-text">影音管理</span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="#.html">
+										<i class="icon-double-angle-right"></i>
+										影音總覽
+									</a>
+								</li>
+								<li>
+									<a href="#.html">
+										<i class="icon-double-angle-right"></i>
+										新增影音
+									</a>
+								</li>
+							</ul>
+						</li>
+
+					</ul><!-- /.nav-list -->
+
+					<div class="sidebar-collapse" id="sidebar-collapse">
+						<i class="icon-angle-double-left" data-icon1="icon-angle-double-left" data-icon2="icon-angle-double-right"></i>
+					</div>
+
+					<script type="text/javascript">
+						try{ace.settings.check('sidebar' , 'collapsed')}catch(e){}
+					</script>
+				</div>
+
+				<div class="main-content">
+					<div class="breadcrumbs" id="breadcrumbs">
+						<script type="text/javascript">
+							try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
+						</script>
+
+						<ul class="breadcrumb">
+							<li class="active">
+								<i class="icon-home home-icon"></i>
+								<a href="index.html">Home</a>
+							</li>
+						</ul><!-- .breadcrumb -->
+
+						<div class="nav-search" id="nav-search">
+							<form class="form-search">
+								<span class="input-icon">
+									<input type="text" placeholder="搜尋 ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
+									<i class="icon-search nav-search-icon"></i>
+								</span>
+							</form>
+						</div><!-- #nav-search -->
+					</div>
+
+					<div class="page-content">
+						<div class="page-header">
+							<h1>
+								首頁
+								<small>
+									<i class="icon-angle-double-right"></i>
+									主題區顯示狀態
+								</small>
+							</h1>
+						</div><!-- /.page-header -->
+
+						<div class="row">
+							<div class="col-xs-12">
+								<!-- PAGE CONTENT BEGINS -->
+
+								<div class="space-4"></div>
+
+								<div class="row">
+
+									<div class="col-xs-12 col-sm-8">
+										<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+										<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+										<style>
+										.slick-prev, .slick-next {display: none!important;}
+										.at {-webkit-transition: all 0.3s ease-in-out;-moz-transition: all 0.3s ease-in-out;-o-transition: all 0.3s ease-in-out;transition: all 0.3s ease-in-out;}
+										@media only screen and (min-width: 601px){
+											.container {max-width: 480px;background-color:#fafafa;padding:0 8px;border:1px solid #e4e4e4;border-bottom:0px solid #e4e4e4;}
+											.slick-prev {left:-10px}
+											.slick-next {right:-10px}
+											.slick-prev, .slick-next {display:block!important;z-index:10;}
+											.slick-prev:before, .slick-next:before {color:rgb(128, 128, 128);}
+										}
+										
+										.single-item {box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);}
+										.single-item div.clop {overflow:hidden;max-height:266px;}
+										.single-item .btn-white {position:absolute;margin:10px;}
+										.single-item p.sys-ad {position:absolute;background:#AA67D2;padding:3px 7px;color:#fff;}
+										.single-item .title {/*display:none;*/font-size:130%;padding-left:1em;min-width:100%;color:#fff;background-color:rgba(0,0,0,0.15);position:absolute;bottom:0;line-height: 2;}
+										.single-item img {width:100%;}
+										
+										.slick-slider {margin-bottom: 10px;}
+										h3 {font-size:125%;color:#2579CD;padding-left:0.3em;margin-bottom:0.5em;}
+										h3 a.btn {margin-right:0.3em;padding:1px 8px;}
+
+										.itemstyle .slick-list {margin:0 3px;}
+										.itemstyle .slick-slide {/*min-height:100px;*/overflow:hidden;margin:5px;background-color:#fff;border-radius: 2px; box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);}
+										.itemstyle div.info {padding-left:0.3em;}
+										.itemstyle div.info p,.max-heihght div p {white-space:nowrap;text-overflow:ellipsis;-o-text-overflow:ellipsis;overflow: hidden;}
+										.itemstyle h5 {font-size:100%;margin:0;padding:0;line-height:2;font-weight:normal;}
+										.itemstyle h5 span {font-size:100%;float:left;width:48%;text-align:center;color:#666;}
+										.itemstyle div a img {width:100%;}
+										.itemstyle div p {font-size:100%;color:#333;margin:0;line-height:1.4;}
+										.itemstyle div small {font-size:80%;color:#999;}
+
+										.max-heihght div a {position:relative;overflow:hidden;display:block;max-height:92px;min-height:92px;background-color:#E7EAEB;}
+										.max-heihght div p {color:#fff;position:absolute;background-color:rgba(0,0,0,.2);width:100%;bottom:0;}
+										.multiple-items1 div a p {padding:0.2em 0.5em;}
+										.multiple-items1 div a {border-bottom:1px solid #eee;}
+										/*.bb_line div a {border-bottom:1px solid #b278d7;}*/
+										.bb_line div a {border-bottom:1px solid #ddd;}
+										.bb_line div a p {line-height:1.4;padding:0.5em;}
+										.medium-heihght div a {overflow:hidden;display:block;/*max-height:126px;min-height:60px;*/}
+										.theheight div a {max-height:120px;}
+										.item-new {font-size:8pt;position:absolute;background-color:rgba(255,0,0,.85);color:#fff;padding:1px 6px;border-radius:2px;-webkit-transform: scale(1) rotate(-18deg) skewY(0deg) skewX(0deg);transform: scale(1) rotate(-18deg) skewY(0deg) skewX(0deg);}
+
+										.nav_btn {clear:both;height:44px;background-color:#DEE9EB;width:auto;position:relative;}
+										.fixtop {position:fixed;box-shadow: 0 2px 5px 0 rgba(0,0,0,0.3);width:100%;display:block;z-index:1000;}
+										.nav_btn ul {list-style-type: none;margin:0;padding:0;text-align:center;margin-bottom:0.3em;}
+										.nav_btn ul li {float:left;min-width:33.3%;overflow:hidden;}
+										.nav_btn ul li a {letter-spacing:2px;lighter:30px;display:block;text-decoration:none;padding:10px;color:#324358;background-color:#DEE9EB;border-radius:99em;margin:0 5px 6px 5px;}
+										.nav_btn ul li a:hover {color:#fff;background-color:#598A93;box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);}
+										.nav_btn ul li a span {color:#fff;background-color:#598A93;}
+
+										.type_links {background-color:#111;padding:0.2em 0;}
+										.type_links ol {list-style-type: none;margin:0;padding:0;}
+										.type_links ol li {text-align:center;/*float:left;width:32.4%;margin:2px;*/}
+										.type_links ol li.col-sm-4 {margin-bottom:2px;padding-right:1px;padding-left:1px;}
+										.type_links ol li a {display:block;overflow:hidden;white-space:nowrap;letter-spacing:1px;color:#fff;text-decoration:none;background-color:rgba(255,255,255,0.35);padding-top:3em; min-width:32.2%;
+											background-repeat:no-repeat;
+											background-position:center center;
+											background-size:cover;
+											/*-webkit-filter: grayscale(1);
+											filter: grayscale(1);*/
+											text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.35);
+										}
+										.type_links ol li a:hover {color:#fff;background-color:rgba(255,255,255,0.35);-webkit-filter: grayscale(0);filter: grayscale(0);}
+										.type_links ol li a div {font-size:100%;background-color:rgba(0,0,0,0.15);margin:0;padding-top:0.3em;}
+										.type_links ol li a:hover div, .type_links ol li a:hover span {background-color:rgba(0,0,0,0.35);}
+										.type_links ol li a span {/*display:none;*/font-size:80%;letter-spacing:0px;background-color:rgba(0,0,0,0.15);color:#fff;padding:0.2em 0.5em;line-height:1.2;display:block;}
+
+										/* Type items color style*/
+										.type_links ol li a.t1 {background-image:url('type_imgs/信心信仰.jpg');}
+										.type_links ol li a.t2 {background-image:url('type_imgs/教會時事.jpg');}
+										.type_links ol li a.t3 {background-image:url('type_imgs/困難挑戰.jpg');}
+										.type_links ol li a.t4 {background-image:url('type_imgs/安慰鼓勵.jpg');}
+										.type_links ol li a.t5 {background-image:url('type_imgs/家庭生活.jpg');}
+										.type_links ol li a.t6 {background-image:url('type_imgs/職場工作.jpg');}
+										.type_links ol li a.t7 {background-image:url('type_imgs/校園生活.jpg');}
+										.type_links ol li a.t8 {background-image:url('type_imgs/時事議題.jpg');}
+										.type_links ol li a.t9 {background-image:url('type_imgs/身體健.jpg');}
+										.type_links ol li a.t10 {background-image:url('type_imgs/婚姻家庭.jpg');}
+										.type_links ol li a.t11 {background-image:url('type_imgs/財務經濟.jpg');}
+										.type_links ol li a.t12 {background-image:url('type_imgs/人際關係.jpg');}
+										</style>
+
+										<div class="btn_bar text-right_">
+											<a href="#" class="btn btn-sm btn-primary"><i class="icon-share-square-o"></i> 發佈至 App</a>
+											<a href="prayer_teaches/index.html" class="btn btn-sm btn-purple" target="_blank"><i class="icon-edit"></i> 禱告教導</a>
+										</div>
+										<div class="space-8"></div>
+
+										<div class="fadeIn animated" style="padding:5px;max-width:480px;margin:0 auto;border:1px solid #ccc;">
+											
+											<h3>Top Slideshow Ads
+												<span class="pull-right">
+													<a class="btn btn-xs btn-white" href="slideshow_manager.html">檢 視</a>
+													<a class="btn btn-xs btn-white" href="slideshow_sequence.html">排 序</a>
+												</span>
+											</h3>
+											<p></p> 
+											<div class="single-item">
+												<div class="clop">
+													<!-- <a class="btn btn-xs btn-white" href="slideshow_new.html">編 輯</a> -->
+													<p class="sys-ad">系統廣告</p>
+													<div class="title">教會消息 <i class="fa fa-angle-right"></i> 2015 教會青年國是論壇</div>
+													<a href="https://www.youtube.com/watch?t=60&v=gJjNGPHXr8E" target="_blank"><img src="教會青年國是論壇.jpg"></a>
+												</div>
+												<div class="clop">
+													<a class="btn btn-xs btn-white" href="slideshow_new.html">編 輯</a>
+													<div class="title">台灣消息 <i class="fa fa-angle-right"></i> 為天鵝颱風禱告</div>
+													<a href="http://bit.ly/1Nq95LG" target="_blank"><img src="為天鵝颱風禱告.jpg"></a>
+												</div>
+												<div class="clop">
+													<a class="btn btn-xs btn-white" href="slideshow_new.html">編 輯</a>
+													<div class="title">國際消息 <i class="fa fa-angle-right"></i> 為曼谷爆炸攻擊案禱告</div>
+													<a href="http://bit.ly/1WBeSSA" target="_blank"><img src="曼谷爆炸.jpg"></a>
+												</div>
+												<div class="clop">
+													<a class="btn btn-xs btn-white" href="slideshow_new.html">編 輯</a>
+													<div class="title">社群消息 <i class="fa fa-angle-right"></i> 為App命名、設計Logo</div>
+													<a href="http://bit.ly/1Pjc4Eh" target="_blank"><img src="app命名.jpg"></a>
+												</div>
+												<div class="clop">
+													<a class="btn btn-xs btn-white" href="slideshow_new.html">編 輯</a>
+													<div class="title">台灣消息 <i class="fa fa-angle-right"></i> 為八仙塵爆傷患禱告</div>
+													<a href="https://www.youtube.com/watch?v=I_DQKHTz_a4" target="_blank"><img src="jj.jpg"></a>
+												</div>
+											</div>
+
+											<h3>熱門禱告 Prayer
+												<span class="pull-right">
+													<a class="btn btn-xs btn-white" href="popular_msnager.html">排 序</a>
+												</span>
+											</h3>
+											<div class="itemstyle max-heihght multiple-items1">
+												<div>
+													<a href="#!">
+														<p>為颱風禱告，為台灣的平安守望！</p>
+														<img src="颱風.jpg">
+													</a>
+													<div class="info">
+														<small><i class="fa fa-clock-o"></i> 07/19 15:22</small>
+														<h5>
+															<span>3.5k 禱告</span>
+															<span>1.6k 回應</span>
+														</h5>
+													</div>
+												</div>
+												<div>
+													<a href="#!">
+														<p>為天津爆炸案禱告</p>
+													</a>
+													<div class="info">
+														<small><i class="fa fa-clock-o"></i> 07/19 16:12</small>
+														<h5>
+															<span>2.2k 禱告</span>
+															<span>962 回應</span>
+														</h5>
+													</div>
+												</div>
+												<div>
+													<a href="#!">
+														<p>為寶貴的下一代禱告</p>
+													</a>
+													<div class="info">
+														<small><i class="fa fa-clock-o"></i> 07/19 13:49</small>
+														<h5>
+															<span>1.1k 禱告</span>
+															<span>1,367 回應</span>
+														</h5>
+													</div>
+												</div>
+												<div>
+													<a href="#!">
+														<p>為 jesus fashion 演唱會禱告</p>
+													</a>
+													<div class="info">
+														<small><i class="fa fa-clock-o"></i> 07/19 11:33</small>
+														<h5>
+															<span>6.2k 禱告</span>
+															<span>219 回應</span>
+														</h5>
+													</div>
+												</div>
+												<div>
+													<a href="#!">
+														<p>全副軍裝禱告</p>
+													</a>
+													<div class="info">
+														<small><i class="fa fa-clock-o"></i> 07/14 10:34</small>
+														<h5>
+															<span>2.3k 禱告</span>
+															<span>631 回應</span>
+														</h5>
+													</div>
+												</div>
+											</div>
+
+											<h3>熱門見證 Testimonies
+												<span class="pull-right">
+													<a class="btn btn-xs btn-white" href="witness_manager.html">檢 視</a>
+													<a class="btn btn-xs btn-white" href="witness_sequence.html">排 序</a>
+												</span>
+											</h3>
+											<div class="itemstyle medium-heihght multiple-items2 bb_line">
+												<div>
+													<span class="item-new">New</span>
+													<a href="https://www.youtube.com/watch?v=dE_eucVPKNQ" target="_blank">
+														<img src="witness_imgs/好媽媽.jpg">
+													</a>
+													<div class="info">
+														<small><i class="fa fa-clock-o"></i> 2015-05-11</small>
+														<p>好媽媽 How Mom</p>
+														<!-- <p>512 觀看</p> -->
+													</div>
+												</div>
+												<div>
+													<a href="http://bit.ly/1MzHzfN" target="_blank">
+														<img src="witness_imgs/羅文裕張平.jpg">
+													</a>
+													<div class="info">
+														<small><i class="fa fa-clock-o"></i> 2015-07-09</small>
+														<p>羅文裕＆張平 婚姻見證</p>
+														<!-- <p>1,2k 觀看</p> -->
+													</div>
+												</div>
+												<div>
+													<a href="http://bit.ly/1eebPhc" target="_blank">
+														<img src="witness_imgs/任容萱.jpg">
+													</a>
+													<div class="info">
+														<small><i class="fa fa-clock-o"></i> 2015-06-29</small>
+														<p>任容萱不畏挑戰</p>
+														<!-- <p>477 觀看</p> -->
+													</div>
+												</div>
+												<div>
+													<a href="http://bit.ly/1CLOt8O" target="_blank">
+														<img src="witness_imgs/火吻的女孩.jpg">
+													</a>
+													<div class="info">
+														<small><i class="fa fa-clock-o"></i> 2015-07-02</small>
+														<p>被火吻的女孩 上帝醫治我的心</p>
+														<!-- <p>566 觀看</p> -->
+													</div>
+												</div>
+												<div>
+													<a href="http://bit.ly/1OhLrQD" target="_blank">
+														<img src="witness_imgs/謝博安.jpg">
+													</a>
+													<div class="info">
+														<small><i class="fa fa-clock-o"></i> 2015-04-08</small>
+														<p>謝博安 從叛逆少年變超偶</p>
+														<!-- <p>314 觀看</p> -->
+													</div>
+												</div>
+												<div>
+													<a href="http://bit.ly/1cryvde" target="_blank">
+														<img src="witness_imgs/生命復活的反轉.jpg">
+													</a>
+													<div class="info">
+														<small><i class="fa fa-clock-o"></i> 2015-04-14</small>
+														<p>死裡復活的生命</p>
+														<!-- <p>477 觀看</p> -->
+													</div>
+												</div>
+												<div>
+													<a href="https://www.youtube.com/watch?v=ZuZ8uDmHpJ8" target="_blank">
+														<img src="witness_imgs/我有家但我住在教會.jpg">
+													</a>
+													<div class="info">
+														<small><i class="fa fa-clock-o"></i> 2015-02-16</small>
+														<p>我有家，但我住在教會</p>
+														<!-- <p>985 觀看</p> -->
+													</div>
+												</div>
+											</div>
+
+											<h3>推 薦 Recommendation
+												<span class="pull-right">
+													<a class="btn btn-xs btn-white disabled" href="">編 輯</a>
+												</span>
+											</h3>
+											<div class="itemstyle medium-heihght multiple-items2 theheight">
+												<div>
+													<a href="#!"><img src="台北和平教會.jpg"></a>
+													<div class="info">
+														<small><i class="fa fa-map-marker"></i> 台北市</small>
+														<p>台北和平教會</p>
+													</div>
+												</div>
+												<div>
+													<a href="#!"><img src="屏東聖教會.jpg"></a>
+													<div class="info">
+														<small><i class="fa fa-map-marker"></i> 高屏地區</small>
+														<p>屏東聖教會</p>
+													</div>
+												</div>
+												<div>
+													<a href="#!"><img src="日月潭教會.jpg"></a>
+													<div class="info">
+														<small><i class="fa fa-map-marker"></i> 南投縣</small>
+														<p>日月潭教會</p>
+													</div>
+												</div>
+												<div>
+													<span class="item-new">推</span>
+													<a href="#!"><img src="左鎮教會.jpg"></a>
+													<div class="info">
+														<small><i class="fa fa-map-marker"></i> 台南市</small>
+														<p>左鎮教會</p>
+													</div>
+												</div>
+												<div>
+													<a href="#!"><img src="反正是教會.jpg"></a>
+													<div class="info">
+														<small><i class="fa fa-map-marker"></i> 新北市</small>
+														<p>淡水長老教會</p>
+													</div>
+												</div>
+											</div>
+
+											<!-- <a href="../prayer_teaches/index.html"><img src="pray_teachings.jpg" style="width:100%;"></a> -->
+											
+											<h3>禱告分類 Classification
+												<span class="pull-right">
+													<a class="btn btn-xs btn-white disabled" href="">編 輯</a>
+												</span>
+											</h3>
+											<div class="type_links">
+												<ol class="row">
+													<li class="col-xs-6 col-sm-4"><a class="t1 at" href="#!"><div>信心信仰</div><span>Faith Belief</span></a></li>
+													<li class="col-xs-6 col-sm-4"><a class="t2 at" href="#!"><div>教會生活</div><span>Church Life</span></a></li>
+													<li class="col-xs-6 col-sm-4"><a class="t3 at" href="#!"><div>困難挑戰</div><span>Challenges</span></a></li>
+													<li class="col-xs-6 col-sm-4"><a class="t4 at" href="#!"><div>安慰鼓勵</div><span>Encouragement</span></a></li>
+													<li class="col-xs-6 col-sm-4"><a class="t5 at" href="#!"><div>家庭親子</div><span>Family Life</span></a></li>
+													<li class="col-xs-6 col-sm-4"><a class="t6 at" href="#!"><div>職場工作</div><span>Marketplace</span></a></li>
+													<li class="col-xs-6 col-sm-4"><a class="t7 at" href="#!"><div>校園課業 </div><span>School Life</span></a></li>
+													<li class="col-xs-6 col-sm-4"><a class="t8 at" href="#!"><div>時事議題</div><span>Current Issues</span></a></li>
+													<li class="col-xs-6 col-sm-4"><a class="t9 at" href="#!"><div>身體健康</div><span>Health & Body</span></a></li>
+													<li class="col-xs-6 col-sm-4"><a class="t10 at" href="#!"><div>婚姻交友</div><span>Dating & Marriage</span></a></li>
+													<li class="col-xs-6 col-sm-4"><a class="t11 at" href="#!"><div>財務經濟</div><span>Finances</span></a></li>
+													<li class="col-xs-6 col-sm-4"><a class="t12 at" href="#!"><div>人際關係</div><span>Interpersonal</span></a></li>
+												</ol>
+											</div><!-- .type_links -->
+
+										</div><!-- .animated end -->
+
+									</div><!-- Left/.col-sm-8 -->
+
+									<div class="col-xs-12 col-sm-4 hidden-sm hidden-xs">
+										<div class="widget-box">
+											<div class="widget-header">
+												<h4 class="smaller">
+													基本資料
+													<!-- <small>操作說明</small> -->
+													<div class="pull-right">
+														<button class="btn btn-xs btn-white">檢視更多</button>
+														&nbsp;
+													</div>
+												</h4>
+											</div>
+
+											<div class="widget-body">
+												<div class="widget-main">
+													<h4><!-- <i class="icon-hospital-o"></i> -->OOO 教會</h4>
+													<p class="muted">聯 繫：02-237xxxxxx</p>
+													<p class="muted">地 址：110 台北市中正區</p>
+													<p class="muted">牧 師：xxx牧師</p>
+													<p class="muted">組 長：</p>
+													<p class="muted">日 期：2015/07/27 創建</p>
+													<hr>
+													<p class="text-success">
+														<i class="icon-user"></i> 加入會友：3,041<br>
+														<i class="icon-users"></i> 教會群組：16
+													</p>
+													<p class="text-muted">
+														<!-- <i class="icon-download purple"></i> APP下載：64,864<br> -->
+														<i class="icon-apple"></i> 蘋果：234<br>
+														<i class="icon-android green"></i> 安卓：3,631<br>
+														<i class="icon-male blue"></i> 男性：439<br>
+														<i class="icon-female text-danger"></i> 女性：605<br>
+													</p>
+													<hr>
+													<ul class="list-unstyled spaced">
+														<li>
+															<i class="icon-bell bigger-110 light-grey"></i>
+															<a href="#">0</a> 則未讀項目
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div><!-- Right/.col-sm-3 -->
+
+								</div><!-- /.row -->
+								<div class="hr hr32 hr-dotted"></div>
+
+								<!-- PAGE CONTENT ENDS -->
+							</div><!-- /.col -->
+						</div><!-- /.row -->
+					</div><!-- /.page-content -->
+				</div><!-- /.main-content -->
+
+			</div><!-- /.main-container-inner -->
+
+			<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+				<i class="icon-angle-double-up icon-only bigger-110"></i>
+			</a>
+		</div><!-- /.main-container -->
+
+		<!-- basic scripts -->
+
+		<!--[if !IE]> -->
+
+		<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script> -->
+
+		<!-- <![endif]-->
+
+		<!--[if IE]>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<![endif]-->
+
+		<!--[if !IE]> -->
+
+		<script type="text/javascript">
+			window.jQuery || document.write("<script src='assets/js/jquery-2.0.3.min.js'>"+"<"+"/script>");
+		</script>
+
+		<!-- <![endif]-->
+
+		<!--[if IE]>
+		<script type="text/javascript">
+		 window.jQuery || document.write("<script src='assets/js/jquery-1.10.2.min.js'>"+"<"+"/script>");
+		</script>
+		<![endif]-->
+
+		<script type="text/javascript">
+			if("ontouchend" in document) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+		</script>
+		<script src="assets/js/bootstrap.min.js"></script>
+		<script src="assets/js/typeahead-bs2.min.js"></script>
+
+		<!-- page specific plugin scripts -->
+		<!-- <script src="assets/js/Chart.min.js"></script> -->
+		<script src="assets/js/bootbox.min.js"></script>
+		<link href="assets/css/animate.css" rel="stylesheet"/>
+
+		<!--[if lte IE 8]>
+		  <script src="assets/js/excanvas.min.js"></script>
+		<![endif]-->
+
+		<!-- ace scripts -->
+
+		<script src="assets/js/ace-elements.min.js"></script>
+		<script src="assets/js/ace.min.js"></script>
+		
+		<script type="text/javascript" src="assets/js/jquery-1.11.0.min.js"></script>
+		<script type="text/javascript" src="slick/slick.min.js"></script>
+
+		<!-- inline scripts related to this page -->
+		<script type="text/javascript">
+			$('.single-item').slick({
+				//dots: false,
+				autoplay: true,
+				slidesToScroll: 1,
+				autoplaySpeed: 3200,
+				slidesToScroll: 1
+			});
+			$('.multiple-items1').slick({
+				infinite: false,
+				slidesToShow: 2,
+				autoplay: true,
+				slidesToScroll: 1,
+				autoplaySpeed: 2000,
+				slidesToScroll: 2
+			});
+			$('.multiple-items2').slick({
+				infinite: false,
+				slidesToShow: 2,
+				autoplay: true,
+				slidesToScroll: 1,
+				autoplaySpeed: 3000,
+				slidesToScroll: 2
+			});
+			
+			$("#bootbox-confirm").on(ace.click_event, function() {
+				bootbox.confirm("Are you sure?", function(result) {
+					if(result) {
+						//
+					}
+				});
+			});
+		</script>
+	</body>
+</html>

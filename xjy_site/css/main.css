@@ -1,0 +1,1488 @@
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+html {
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #d0fbde;
+    text-shadow: 0 1px 2px rgba(0,0,0,.5);;
+}
+
+::selection {
+    background: #B1D502;
+	color:#fff;
+   /*  text-shadow: 0 1px 2px rgba(0,0,0,.5);; */
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images, videos, audio and canvas and the bottom of
+ * their containers: h5bp.com/i/440
+ */
+
+audio,
+canvas,
+img,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browse Happy prompt
+   ========================================================================== */
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/* Fonts */
+
+/* Josefin Sans */
+
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('../fonts/josefinsans-thin-webfont.eot');
+    src: url('../fonts/josefinsans-thin-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/josefinsans-thin-webfont.woff') format('woff'),
+         url('../fonts/josefinsans-thin-webfont.ttf') format('truetype'),
+         url('../fonts/josefinsans-thin-webfont.svg#josefin_sansthin') format('svg');
+    font-weight: 100;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('../fonts/josefinsans-thinitalic-webfont.eot');
+    src: url('../fonts/josefinsans-thinitalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/josefinsans-thinitalic-webfont.woff') format('woff'),
+         url('../fonts/josefinsans-thinitalic-webfont.ttf') format('truetype'),
+         url('../fonts/josefinsans-thinitalic-webfont.svg#josefin_sansthin_italic') format('svg');
+    font-weight: 100;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('../fonts/josefinsans-regular-webfont.eot');
+    src: url('../fonts/josefinsans-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/josefinsans-regular-webfont.woff') format('woff'),
+         url('../fonts/josefinsans-regular-webfont.ttf') format('truetype'),
+         url('../fonts/josefinsans-regular-webfont.svg#josefin_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('../fonts/josefinsans-italic-webfont.eot');
+    src: url('../fonts/josefinsans-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/josefinsans-italic-webfont.woff') format('woff'),
+         url('../fonts/josefinsans-italic-webfont.ttf') format('truetype'),
+         url('../fonts/josefinsans-italic-webfont.svg#josefin_sansitalic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('../fonts/josefinsans-semibold-webfont.eot');
+    src: url('../fonts/josefinsans-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/josefinsans-semibold-webfont.woff') format('woff'),
+         url('../fonts/josefinsans-semibold-webfont.ttf') format('truetype'),
+         url('../fonts/josefinsans-semibold-webfont.svg#josefin_sanssemibold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('../fonts/josefinsans-semibolditalic-webfont.eot');
+    src: url('../fonts/josefinsans-semibolditalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/josefinsans-semibolditalic-webfont.woff') format('woff'),
+         url('../fonts/josefinsans-semibolditalic-webfont.ttf') format('truetype'),
+         url('../fonts/josefinsans-semibolditalic-webfont.svg#josefin_sanssemibold_italic') format('svg');
+    font-weight: 600;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('../fonts/josefinsans-bold-webfont.eot');
+    src: url('../fonts/josefinsans-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/josefinsans-bold-webfont.woff') format('woff'),
+         url('../fonts/josefinsans-bold-webfont.ttf') format('truetype'),
+         url('../fonts/josefinsans-bold-webfont.svg#josefin_sansbold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('../fonts/josefinsans-bolditalic-webfont.eot');
+    src: url('../fonts/josefinsans-bolditalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/josefinsans-bolditalic-webfont.woff') format('woff'),
+         url('../fonts/josefinsans-bolditalic-webfont.ttf') format('truetype'),
+         url('../fonts/josefinsans-bolditalic-webfont.svg#josefin_sansbold_italic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* Lora */
+
+@font-face {
+    font-family: 'Lora';
+    src: url('../fonts/lora-regular-webfont.eot');
+    src: url('../fonts/lora-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/lora-regular-webfont.woff') format('woff'),
+         url('../fonts/lora-regular-webfont.ttf') format('truetype'),
+         url('../fonts/lora-regular-webfont.svg#loraregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Lora';
+    src: url('../fonts/lora-italic-webfont.eot');
+    src: url('../fonts/lora-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/lora-italic-webfont.woff') format('woff'),
+         url('../fonts/lora-italic-webfont.ttf') format('truetype'),
+         url('../fonts/lora-italic-webfont.svg#loraitalic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Lora';
+    src: url('../fonts/lora-bold-webfont.eot');
+    src: url('../fonts/lora-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/lora-bold-webfont.woff') format('woff'),
+         url('../fonts/lora-bold-webfont.ttf') format('truetype'),
+         url('../fonts/lora-bold-webfont.svg#lorabold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Lora';
+    src: url('../fonts/lora-bolditalic-webfont.eot');
+    src: url('../fonts/lora-bolditalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/lora-bolditalic-webfont.woff') format('woff'),
+         url('../fonts/lora-bolditalic-webfont.ttf') format('truetype'),
+         url('../fonts/lora-bolditalic-webfont.svg#lorabold_italic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* Base */
+
+:focus {
+    outline: none;
+}
+
+::-moz-focus-inner {
+    border: 0;
+}
+
+a {
+    color: #fff;
+    outline: none !important;
+}
+
+/* Esqueleto */
+
+body {
+    font-family: 'Lora', serif,"微软雅黑","微軟正黑體";
+    color: #444;
+    text-rendering: optimizeLegibility;
+}
+
+.container {
+    width: 68.75em;/*1100px*/
+    margin: 0 auto;
+}
+
+/* Elementos */
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1em;
+    margin: 0;
+}
+
+.btn-big {
+    display: inline-block;
+    position: relative;
+    padding: 1.25em;/*20px*/
+    color: #fff;
+    border-radius: 4px;
+    background-color: #313131;
+    font-family: "Josefin Sans", sans-serif;
+    text-decoration: none;
+    -webkit-transition: all 0.5s;
+            transition: all 0.5s;
+}
+
+.btn-big-text {
+    font-size: 1.5em;/*24px*/
+    text-transform: uppercase;
+}
+
+.btn-big:hover {
+    background-color: #81BF2B;
+}
+
+.btn-big:before {
+    content: '';
+    display: inline-block;
+    vertical-align: text-bottom;
+    height: 26px;
+    width: 26px;
+    margin-right: 10px;
+    -webkit-transform: rotate(30deg);
+        -ms-transform: rotate(30deg);
+            transform: rotate(30deg);
+    -webkit-transition: all 0.5s;
+            transition: all 0.5s;
+}
+
+.btn-big:hover:before {
+    -webkit-transform: rotate(210deg);
+        -ms-transform: rotate(210deg);
+            transform: rotate(210deg);
+}
+
+.btn-big:after {
+    content: '';
+    display: inline-block;
+    vertical-align: text-bottom;
+    height: 26px;
+    width: 26px;
+    margin-left: 5px;
+    background: url('../img/btn-icon-arrow.svg') no-repeat center center;
+    -webkit-transition: all 0.5s;
+            transition: all 0.5s;
+}
+
+.btn-big:hover:after {
+    -webkit-transform: translateX(10px);
+        -ms-transform: translateX(10px);
+            transform: translateX(10px);
+}
+
+.btn-big.history:before {
+    background: url('../img/btn-icon-history.svg') no-repeat center center;
+}
+
+.btn-big.group:before {
+    background: url('../img/btn-icon-group.svg') no-repeat center center;
+}
+
+.btn-small-white {
+    display: block;
+    position: relative;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: #313131;
+    border-radius: 4px;
+    background-color: #fff;
+    font-family: "Lora", serif;
+    font-size: 1em;
+    font-weight: bold;
+    line-height: 2.5;
+    text-decoration: none;
+    text-align: center;
+    white-space:nowrap;
+    -webkit-transition: all 0.5s;
+            transition: all 0.5s;
+}
+
+.btn-small-white:hover {
+    background-color: #999;
+}
+
+.title-section {
+    font-size: 2.38em;/*38px*/
+    text-transform: uppercase;
+    text-align: center;
+    margin: 1em 0;
+}
+
+/* HOME */
+
+.home {
+    position: relative;
+    height: 37.5em;/*600px*/
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    padding-top: 6.25em;/*100px*/
+    background: url('../img/horizon-vintage.jpg') no-repeat center center;
+    -webkit-background-size: cover;
+            background-size: cover;
+}
+
+.home__claim {
+    background-image: url('../img/home-we-are-viko.png');
+    width: 41.81em;/*669px*/;
+    height: 120px;
+}
+
+/* NAV */
+
+.scrollmagic-pin-spacer {
+    bottom:80px !important;
+}
+
+nav {
+    position: absolute;
+    bottom: 0;
+    height: 80px;
+    width: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0) 100%);
+    z-index: 10;
+}
+
+.nav--bg {
+    background-color: rgba(255, 255, 255, 0);
+    box-shadow: 0 2px 2px #ddd;
+}
+
+.nav__logo {
+    opacity: 0;
+    visibility: hidden;
+    float: left;
+    height: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.nav__logo-viko {
+    width: 5.88em;/*94px*/
+}
+
+.nav__mobile {
+    display: none;
+    float: right;
+    width: 100px;
+    height: 80px;
+    padding-left: 20px;
+    padding-right: 20px;
+    line-height: 80px;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: top;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1.35em;/*18px*/
+    color: #fff;
+    -webkit-transition: all 0.5s;
+            transition: all 0.5s;
+}
+
+.nav__menu {
+    float: right;
+    margin: 0;
+    color: #fff;
+    font-family: "Josefin Sans", sans-serif;
+    text-transform: uppercase;
+}
+
+.nav__menu li {
+    display: inline-block;
+	background-color: rgba(136, 136, 126, 0.2);
+}
+
+.nav__menu a {
+    display: inline-block;
+    position: relative;
+    font-size: 1.13em;/*18px*/
+    color: #fff;
+    text-decoration: none;
+    font-weight: 400;
+    -webkit-transition: all 0.5s;
+            transition: all 0.5s;
+}
+
+.nav__menu span {
+    display: inline-block;
+    padding-left: 16px;
+    padding-right: 16px;
+    line-height: 80px;
+    white-space: nowrap;
+}
+
+.nav__menu a:visited {
+    color: #fff;
+}
+
+.nav__menu a:hover {
+    color: #666 !important;
+    background-color: #fff;
+}
+
+.pinned .nav__menu a:hover {
+    color: #fff !important;
+    background-color: #ACD237;
+}
+
+/* WE ARE */
+
+.weare {
+    text-align: center;
+    padding-top: 4.5em;/*72px*/
+	background-image: url('../img/bg.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	padding: 4em 0;
+}
+
+.weare__rotativa {
+    font-size: 3.5em;/*72px*/
+    font-family: "Josefin Sans", "微軟正黑體", sans-serif;
+    margin: 0;
+}
+
+.weare__rotativa--intro {
+    font-weight: 400;
+}
+
+.weare__rotativa--highlight {
+    vertical-align: top;
+    font-weight: 700;
+    display: inline-block;
+}
+
+.weare__descrip {
+    font-size: 1.38em;/*22px*/
+}
+
+.description-section {
+    /* font-style: italic; */
+    color: #666;
+    margin-bottom: 60px;
+}
+
+
+
+/* SCOPE */
+
+.scope-section {
+    padding-top: 4.5em;/*72px*/
+    padding-bottom: 4.5em;/*72px*/
+}
+
+.scope__container {
+    text-align: justify;
+}
+
+.scope__container:after{
+    content: '';
+    display: inline-block;
+    width: 100%;
+}
+
+.scope__definition {
+    display: inline-block;
+    position: relative;
+    width: 210px;
+    padding: 20px;
+    vertical-align: top;
+	visibility: hidden;
+}
+
+.scope__definition:hover .scope__circle-over {
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0) inset,0 0 0 62px rgba(255, 255, 255, 0) inset,0 0 0 62px rgba(255, 255, 255, 0) inset;
+}
+
+.scope__definition:hover .scope__circle-viko:before {
+    -webkit-animation:spin 1s linear infinite;
+       -moz-animation:spin 1s linear infinite;
+            animation:spin 1s linear infinite;
+}
+
+.scope__definition:hover .svg-fill {
+    fill: #313131;
+}
+
+.scope__definition:hover .scope__title {
+    color: #fff;
+}
+
+.scope__definition:hover .scope__title:after {
+    height: 40px;
+}
+
+.scope__circle-viko {
+    position: relative;
+    margin: 0 auto;
+    height: 124px;
+    width: 124px;
+}
+
+.scope__circle-viko:before {
+    position: absolute;
+    content: '';
+    display: block;
+    vertical-align: top;
+    height: 26px;
+    width: 26px;
+    margin-right: 10px;
+    margin: 0 auto;
+    height: 124px;
+    width: 124px;
+    background: url('../img/scope-radial-viko.png') no-repeat center center;
+    z-index: 1;
+}
+
+.scope__circle-over {
+    position: absolute;
+       -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    margin: 0 auto;
+    height: 124px;
+    width: 124px;
+    border-radius: 112px;
+    -webkit-box-shadow: 0 0 0 3px #313131 inset,0 0 0 6px #fff inset,0 0 0 62px #313131 inset;
+            box-shadow: 0 0 0 3px #313131 inset,0 0 0 6px #fff inset,0 0 0 62px #313131 inset;
+    -webkit-transition: all 0.35s;
+            transition: all 0.35s;
+    z-index: 2;
+}
+
+.scope__icon {
+    padding: 30px;
+}
+
+.scope-svg {
+    display: block;
+    margin: 0 auto;
+    width: 64px;
+    height: 64px;
+}
+
+.svg-fill {
+    fill: #ffffff;
+}
+
+.scope__title {
+    display: block;
+    position: relative;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-family: "Josefin Sans", sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.13em;/*18px*/
+    -webkit-transition: all 0.25s;
+            transition: all 0.25s;
+}
+
+.scope__title--text {
+    display: block;
+    position: relative;
+    z-index: 2;
+}
+
+.scope__title:after {
+    content: '';
+    display: block;
+    bottom: 2px;
+    position: absolute;
+    background-color: #81BF2B;
+    height: 2px;
+    width: 100%;
+    z-index: 1;
+    -webkit-transition: all 0.15s;
+            transition: all 0.15s;
+}
+
+.scope__description {
+    display: block;
+    padding-top: 10px;
+    color: #666;
+    text-align: center;
+    font-family: "Lora", serif;
+    font-size: 1em;/*16px*/
+}
+
+
+@-moz-keyframes spin {
+    100% {
+        -moz-transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg); transform:rotate(360deg);
+    }
+}
+
+/* BRANDS */
+
+.brands__descrip {
+    font-size: 1.25em;/*20px*/
+}
+
+.brands-section {
+    text-align: center;
+    padding-top: 4.5em;/*72px*/
+    padding-bottom: 3em;
+    background-color: #f3f3f3;
+}
+
+.brand__container {
+
+}
+
+.brand__icon-container {
+    height: 64px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+.brand__icon {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.brand__title {
+    position: relative;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1.88em;/*30px*/
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+    padding-bottom: 20px;
+}
+
+.brand__title--line {
+    position: absolute;
+    height: 2px;
+    bottom: 44px;
+    left: 0;
+    right: 0;
+    width: 1%;
+    z-index: 1;
+    margin: 0 auto;
+    background-color: #313131;
+}
+
+.brand__title--bg {
+    display: inline-block;
+    position: relative;
+    background-color: #f3f3f3;
+    padding-left: 25px;
+    padding-right: 25px;
+    z-index: 2;
+}
+
+.brand__description {
+    font-size: 1.13em;/*18px*/
+    font-style: italic;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.brand__logos {
+    display: block;
+    width: 100%;
+    text-align: justify;
+    padding-top: 30px;
+}
+
+.brand__logos:after{
+    content: '';
+    display: inline-block;
+    width: 100%;
+}
+
+.brand__logo {
+    display: inline-block;
+    width: 33.33%;
+    vertical-align: top;
+    text-align: center;
+    visibility: hidden;
+}
+
+.brand__link {
+    display: block;
+    position: relative;
+    height: 230px;
+    padding-top: 50px;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-bottom: 70px;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.13em;/*18px*/
+    font-style: italic;
+    overflow: hidden;
+    -webkit-transition: all 0.25s;
+            transition: all 0.25s;
+}
+
+.brand__logo-img {
+    width: 100%;
+    -webkit-transition: all 0.25s;
+            transition: all 0.25s;
+}
+
+.brand__claim {
+    display: block;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    line-height: 1.35;
+    background-color: rgba(49, 49, 49, 0.5);
+    -webkit-transition: all 0.25s;
+            transition: all 0.25s;
+    -webkit-transform: translateY(100%);
+        -ms-transform: translateY(100%);
+            transform: translateY(100%);
+}
+
+.brand__link:hover  {
+    padding-top: 30px;
+}
+
+.brand__link:hover .brand__logo-img  {
+    width: 85%;
+}
+
+.brand__link:hover .brand__claim  {
+    -webkit-transform: translateY(0%);
+        -ms-transform: translateY(0%);
+            transform: translateY(0%);
+}
+
+.brand__logo.elogia {
+    background-color: #e83327;
+}
+
+.brand__logo.moddity {
+    background-color: #009fe4;
+}
+
+.brand__logo.ibrands {
+    background-color: #e95a36;
+}
+
+.brand__logo.mittum {
+    background-color: #00adaf;
+}
+
+.brand__logo.moose {
+    background-color: #db2881;
+}
+
+.brand__logo.emma {
+    background-color: #2da61c;
+}
+
+.brand__logo.m4e {
+    background-color: #00afb4;
+}
+
+.brand__icon-container.technology {
+    padding-top: 0px;
+}
+
+.brand__icon-container.media {
+    padding-top: 0px;
+}
+
+.brand__logos.media {
+    text-align: center;
+}
+
+/* VENTURES */
+
+.ventures-section {
+    text-align: center;
+    padding-top: 3em;/*16px*/
+    padding-bottom: 3em;
+    background-color: #e6e6e6;
+	/* background: url('../img/bg.png') no-repeat center center; */
+}
+
+.brand__logo.ulabox {
+    background-color: #fa5a7c;
+}
+
+.brand__logo.blueknow {
+    background-color: #1369b4;
+}
+
+.brand__logo.offemily {
+    background-color: #e0092b;
+}
+
+.venture .brand__title--bg {
+    background-color: #e6e6e6;
+}
+
+/* FIND US */
+
+.findus-section {
+    text-align: center;
+    padding-top: 3em;/*16px*/
+    padding-bottom: 1em;
+    background-color: #313131;
+	background-image: url('../img/contact_bg.png');
+}
+
+.title-section.findus {
+    color: #fff;
+}
+
+.findus__descrip.description-section {
+    width: 50%;
+    margin: 0 auto;
+    font-size: 1.13em;/*18px*/
+    color: #999;
+}
+
+.locations__container {
+    padding-top: 40px;
+    text-align: justify;
+}
+
+.locations__container:after{
+    content: '';
+    display: inline-block;
+    width: 100%;
+}
+
+.location__definition {
+    padding-bottom: 50px;
+    display: inline-block;
+    width: 32em;/*192px*/
+	color:#999;
+}
+
+.location__definition.placeholder {
+    padding: 0;
+}
+
+.location__city {
+    padding-top: 15px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 0px;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.location__city__icon {
+    width: 100%;
+}
+
+.location__name {
+    display: block;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 10px;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1.13em;/*18px*/
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+}
+
+.location__info {
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    font-size: 0.9em;
+    color: #fff;
+    text-align: center;
+}
+
+.location__address {
+    display: block;
+    font-style: italic;
+    padding-bottom: 10px;
+}
+
+.location__phone {
+    display: block;
+}
+.location__usmsg{visibility: hidden;margin-top:60px;}
+.location__usmsg h3 {text-align: left;}
+.location__msg,.push_button {font-family: "Josefin Sans", sans-serif;}
+.location__msg input, .location__msg textarea {
+    border-radius: 4px;
+	padding: 0.5em;
+}
+/* CSS 3D 按鈕 */
+.push_button{
+	position:relative;
+	width:88%;
+	color:#FFF;
+	font-weight: bold;
+	display:block;
+	font-size:14pt;
+	text-decoration:none;
+	margin:0 auto;
+	border-radius:5px;
+	border:solid 1px #D94E3B;
+	background:#cb3b27;
+	text-align:center;
+	padding:16px 30px;
+	
+	-webkit-transition: all 0.1s;
+	-moz-transition: all 0.1s;
+	transition: all 0.1s;
+	
+	-webkit-box-shadow: 0px 9px 0px #84261a;
+        -moz-box-shadow: 0px 9px 0px #84261a;
+        box-shadow: 0px 9px 0px #84261a;
+}
+.push_button:active{
+    -webkit-box-shadow: 0px 2px 0px #84261a;
+    -moz-box-shadow: 0px 2px 0px #84261a;
+    box-shadow: 0px 2px 0px #84261a;
+    position:relative;
+    top:7px;
+}
+
+footer {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #111111;
+	background-image: url('../img/dashed.png');
+}
+
+.footer__logo {
+    width: 64px;
+}
+
+.footer__legal {
+    display: block;
+    float: right;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1.13em;/*18px*/
+    color: #999;
+    text-transform: uppercase;
+}
+
+/* 1120px */
+@media only screen and (max-width: 70em) {
+    .container {
+        -webkit-box-sizing: border-box;
+           -moz-box-sizing: border-box;
+                box-sizing: border-box;
+        width: 100%;
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+
+    .home__claim {
+        display: block;
+        background-image: url('../img/home-we-are-viko.png');
+        margin: 0 auto;
+    }
+
+    .weare__rotativa--intro {
+        display: block;
+    }
+
+    .scope__container {
+        text-align: center;
+    }
+
+    .scope__definition {
+        -webkit-box-sizing: border-box;
+           -moz-box-sizing: border-box;
+                box-sizing: border-box;
+        width: 48%;
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+
+    .scope__definition:nth-child(odd) {
+/*        width: 270px;*/
+/*        padding-right: 30px;*/
+    }
+
+    .scope__definition:nth-child(even) {
+/*        width: 270px;*/
+/*        padding-left: 30px;*/
+    }
+
+    .brand__link {
+        min-height: auto;
+        height: auto;
+        padding-top: 40px;
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-bottom: 40px;
+        font-size: 1em;/*16px*/
+    }
+
+    .brand__link:hover  {
+        padding-top: 10px;
+        padding-bottom: 70px;
+    }
+
+    .brand__link:hover .brand__logo-img  {
+        width: 100%;
+    }
+
+}
+
+@media only screen and (max-width: 50em) {
+    .container {
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+
+    .btn-small-white {
+        font-size: 1.25em;/*20px*/
+        line-height: 3;
+    }
+
+    .home__claim {
+        display: block;
+        background-image: url('../img/home-we-are-viko-responsive.png');
+        width: 21.25em;/*340px*/;
+        height: 250px;
+        margin: 0 auto;
+    }
+
+    .nav__mobile {
+        display: inline-block;
+    }
+
+    .nav__mobile span {
+        display: inline-block;
+    }
+
+    .menu__arrow {
+        display: inline-block;
+        vertical-align: text-bottom;
+        height: 26px;
+        width: 26px;
+        margin-left: 5px;
+        -webkit-transform: rotate(90deg);
+            -ms-transform: rotate(90deg);
+                transform: rotate(90deg);
+        -webkit-transition: all 0.5s;
+                transition: all 0.5s;
+    }
+
+    .menu__arrow-svg {
+        display: block;
+        margin: 0 auto;
+        width: 26px;
+        height: 26px;
+    }
+
+    .menu__arrow-fill {
+        fill: #fff;
+        -webkit-transition: all 0.5s;
+                transition: all 0.5s;
+    }
+
+    .nav__mobile:hover {
+        color: #666 !important;
+        background-color: #fff;
+    }
+
+    .nav__mobile:hover .menu__arrow-fill {
+        fill: #313131;
+    }
+
+    .nav__menu {
+        display: none;
+        position: absolute;
+        top: 80px;
+        right: 0;
+        width: 100%;
+        padding: 0;
+        background-color: #f8f8f8;
+        box-shadow: 0 2px 2px #ddd;
+    }
+
+    .nav__menu.showmenu {
+        display: block;
+    }
+
+    .nav__mobile.showmenu .menu__arrow {
+        -webkit-transform: rotate(270deg);
+            -ms-transform: rotate(270deg);
+                transform: rotate(270deg);
+    }
+
+    .nav__menu li {
+        display: block;
+        text-align: center;
+    }
+
+    .nav__menu a {
+        font-size: 1.35em;/*18px*/
+        display: block;
+        background-color: #f8f8f8;
+        border-bottom: 1px solid #eee;
+    }
+
+    .nav__menu span {
+        line-height: 60px;
+    }
+
+    .pinned .nav__mobile:hover {
+        color: #fff !important;
+        background-color: #313131;
+    }
+
+    .pinned .nav__mobile .menu__arrow-fill {
+        fill: #313131;
+    }
+
+    .pinned .nav__mobile:hover .menu__arrow-fill {
+        fill: #fff;
+    }
+
+
+    .weare__rotativa {
+        font-size: 2.5em;/*72px*/
+    }
+
+    .scope__definition {
+        -webkit-box-sizing: border-box;
+           -moz-box-sizing: border-box;
+                box-sizing: border-box;
+        width: 100%;
+    }
+
+    .brand__logo {
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .findus__descrip.description-section {
+        width: 100%;
+    }
+
+    .location__definition {
+        width: 100%;
+    }
+
+    .location__city__icon {
+        display: block;
+        width: 60%;
+        max-width: 200px;
+        margin: 0 auto;
+    }
+
+    .location__name {
+        font-size: 1.5em;/*24px*/
+    }
+
+    .location__info {
+        font-size: 1.13em;/*18px*/
+    }
+
+    .footer__logo {
+        display: block;
+        margin: 20px auto;
+        width: 64px;
+    }
+
+    .footer__legal {
+        float: none;
+        text-align: center;
+    }
+
+    .btn-big:before {
+        display: none;
+    }
+
+
+}
+
+@media only screen and (max-width: 25em) {
+    .home__claim {
+        background-image: url('../img/home-we-are-viko-mobile.png');
+        width: 16.25em;/*260px*/;
+        height: 270px;
+    }
+
+    .home {
+        padding-top: 3em;/*48px*/
+    }
+
+    .btn-big-text {
+        font-size: 1.3em;
+    }
+
+    .weare__rotativa {
+        font-size: 2.2em;
+    }
+
+    .btn-big {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+}
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

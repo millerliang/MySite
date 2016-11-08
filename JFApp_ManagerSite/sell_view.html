@@ -1,0 +1,1501 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>商家檢視 - 後台管理系統</title>
+
+		<meta name="description" content="" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- basic styles -->
+
+		<link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+
+		<!--[if IE 7]>
+		  <link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css" />
+		<![endif]-->
+
+		<!-- page specific plugin styles -->
+
+		<!-- fonts -->
+
+		<!-- <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" /> -->
+
+		<!-- ace styles -->
+
+		<link rel="stylesheet" href="assets/css/ace.min.css" />
+		<link rel="stylesheet" href="assets/css/ace-rtl.min.css" />
+		<link rel="stylesheet" href="assets/css/ace-skins.min.css" />
+
+		<!--[if lte IE 8]>
+		  <link rel="stylesheet" href="assets/css/ace-ie.min.css" />
+		<![endif]-->
+
+		<!-- inline styles related to this page -->
+
+		<!-- ace settings handler -->
+
+		<script src="assets/js/ace-extra.min.js"></script>
+
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+
+		<!--[if lt IE 9]>
+		<script src="assets/js/html5shiv.js"></script>
+		<script src="assets/js/respond.min.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<div class="navbar navbar-default tst" id="navbar"">
+
+			<script type="text/javascript">
+				try{ace.settings.check('navbar' , 'fixed')}catch(e){}
+			</script>
+
+
+			<div class="navbar-container" id="navbar-container">
+				<div class="navbar-header pull-left logo">
+					<a href="index.html" class="navbar-brand">
+						<small>
+							後台管理系統
+						</small>
+					</a><!-- /.brand -->
+				</div><!-- /.navbar-header -->
+
+				<div class="navbar-header pull-right" role="navigation">
+					<ul class="nav ace-nav">
+						<li class="color">
+							<a data-toggle="dropdown" class="dropdown-toggle" href="#">
+								<i class="icon-envelope icon-animated-vertical"></i>
+								<span class="badge badge-important">12</span>
+							</a>
+
+							<ul class="pull-right dropdown-navbar navbar-pink dropdown-menu dropdown-caret dropdown-times">
+								<li>
+									<a href="user_feedback.html">
+										<div class="clearfix">
+											<span class="pull-left">
+												<i class="btn btn-xs no-hover btn-success icon-user"></i>
+												客服管理
+											</span>
+											<span class="pull-right badge badge-success">+8</span>
+										</div>
+									</a>
+								</li>
+
+								<li>
+									<a href="user_feedback.html">
+										查看所有通知
+										<i class="icon-arrow-right"></i>
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li class="light-blue">
+							<a data-toggle="dropdown" href="#" class="dropdown-toggle">
+								<img class="nav-user-photo" src="assets/avatars/avatar4.png" alt="Jason's Photo" />
+								<span class="user-info">
+									<small>您好, 歡迎</small>
+									超級管理員
+								</span>
+
+								<i class="icon-caret-down"></i>
+							</a>
+
+							<ul class="user-menu pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
+								<li>
+									<a href="admin_profile.html">
+										<i class="icon-user"></i>
+										個人資料
+									</a>
+								</li>
+
+								<li class="divider"></li>
+
+								<li>
+									<a href="login.html">
+										<i class="icon-power-off"></i>
+										登 出
+									</a>
+								</li>
+							</ul>
+						</li>
+					</ul><!-- /.ace-nav -->
+				</div><!-- /.navbar-header -->
+			</div><!-- /.container -->
+		</div>
+
+		<div class="main-container" id="main-container">
+			<script type="text/javascript">
+				try{ace.settings.check('main-container' , 'fixed')}catch(e){}
+			</script>
+
+			<div class="main-container-inner">
+				<a class="menu-toggler" id="menu-toggler" href="#">
+					<span class="menu-text"></span>
+				</a>
+
+				<div class="sidebar" id="sidebar">
+					<script type="text/javascript">
+						try{ace.settings.check('sidebar' , 'fixed')}catch(e){}
+					</script>
+
+					<ul class="nav nav-list">
+						<li>
+							<a href="index.html">
+								<i class="icon-home"></i>
+								<span class="menu-text"> 首 頁 </span>
+							</a>
+						</li>
+
+						<li>
+							<a href="admin_group.html">
+								<i class="icon-user-md"></i>
+								<span class="menu-text"> 系統管理員群組 </span>
+							</a>
+						</li>
+
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-th"></i>
+								<span class="menu-text"> 商城商品管理 </span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="market_manager.html">
+										<i class="icon-double-angle-right"></i>
+										商品總覽
+									</a>
+								</li>
+								<li>
+									<a href="market_orderlist.html">
+										<i class="icon-double-angle-right"></i>
+										訂單管理
+									</a>
+								</li>
+                                <li>
+									<a href="market_new.html">
+										<i class="icon-double-angle-right"></i>
+										新增商品
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-cloud-upload"></i>
+								<span class="menu-text"> 廣告管理 </span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="ad_manager.html">
+										<i class="icon-double-angle-right"></i>
+										廣告總覽
+									</a>
+								</li>
+                                <li>
+									<a href="ad_new.html">
+										<i class="icon-double-angle-right"></i>
+										新增廣告
+									</a>
+								</li>
+								<li>
+									<a href="ad_type.html">
+										<i class="icon-double-angle-right"></i>
+										廣告類別管理
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="#" class="dropdown-toggle"> 
+								<i class="icon-codepen"></i> <span class="menu-text"> 序號管理 </span> 
+								<b class="arrow icon-angle-down"></b>
+							</a>
+							<ul class="submenu">
+								<li>
+									<a href="sn_list.html"> <i class="icon-double-angle-right"></i> 序號總覽</a>
+								</li>
+
+								<li>
+									<a href="sn_create.html"> <i class="icon-double-angle-right"></i> 新增序號</a>
+								</li>
+
+							</ul>
+						</li>
+
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-users"></i>
+								<span class="menu-text"> 會員管理 </span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="user_group.html">
+										<i class="icon-double-angle-right"></i>
+										會員總覽
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li class="active open">
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-rocket"></i>
+								<span class="menu-text"> 商家管理 </span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li class="active">
+									<a href="sell_manager.html">
+										<i class="icon-double-angle-right"></i>
+										商家總覽
+									</a>
+								</li>
+								<li>
+									<a href="sell_new.html">
+										<i class="icon-double-angle-right"></i>
+										新增商家
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="user_feedback.html">
+								<i class="icon-wechat"></i>
+								<span class="menu-text"> 客服管理 </span>
+							</a>
+						</li>
+
+						<li>
+							<a href="sys_postnews.html">
+								<i class="icon-laptop"></i>
+								<span class="menu-text"> 公告管理 </span>
+							</a>
+						</li>
+
+						<li>
+							<a href="sys_announcement.html">
+								<i class="icon-bullhorn"></i>
+								<span class="menu-text"> 消息管理 </span>
+							</a>
+						</li>
+
+                        <li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-bar-chart-o"></i>
+								<span class="menu-text"> 數據分析 </span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="analysis_isp.html">
+										<i class="icon-double-angle-right"></i>
+										基本分析
+									</a>
+								</li>
+
+								<li>
+									<a href="analysis_local.html">
+										<i class="icon-double-angle-right"></i>
+										依地區地域分布
+									</a>
+								</li>
+
+                                <li>
+									<a href="analysis_trend.html">
+										<i class="icon-double-angle-right"></i>
+										APP 使用次數趨勢圖
+									</a>
+								</li>
+                                <li>
+									<a href="analysis_boot.html">
+										<i class="icon-double-angle-right"></i>
+										開機次數趨勢圖
+									</a>
+								</li>
+							</ul>
+						</li>
+						
+                        <li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-adn"></i>
+								<span class="menu-text"> APP 類別管理 </span>
+                                <b class="arrow icon-angle-down"></b>
+							</a>
+                            
+                            <ul class="submenu">
+								<li>
+									<a href="app_catalog.html">
+										<i class="icon-double-angle-right"></i>
+										APP 類型歸類對應
+									</a>
+								</li>
+
+								<li>
+									<a href="mobile_device.html">
+										<i class="icon-double-angle-right"></i>
+										手機型號裝置對應
+									</a>
+								</li>
+							</ul>
+						</li>
+					</ul><!-- /.nav-list -->
+
+					<div class="sidebar-collapse" id="sidebar-collapse">
+						<i class="icon-angle-double-left" data-icon1="icon-angle-double-left" data-icon2="icon-angle-double-right"></i>
+					</div>
+
+					<script type="text/javascript">
+						try{ace.settings.check('sidebar' , 'collapsed')}catch(e){}
+					</script>
+				</div>
+
+				<div class="main-content">
+					<div class="breadcrumbs" id="breadcrumbs">
+						<script type="text/javascript">
+							try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
+						</script>
+
+						<ul class="breadcrumb">
+							<li>
+								<i class="icon-home home-icon"></i>
+								<a href="index.html">Home</a>
+							</li>
+							<li>
+								<a href="sell_manager.html">商家總覽</a>
+							</li>
+							<li class="active">商家廠商檢視</li>
+						</ul><!-- .breadcrumb -->
+
+						<div class="nav-search" id="nav-search">
+							<form class="form-search">
+								<span class="input-icon">
+									<input type="text" placeholder="搜尋 ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
+									<i class="icon-search nav-search-icon"></i>
+								</span>
+							</form>
+						</div><!-- #nav-search -->
+					</div>
+
+					<div class="page-content">
+
+						<!-- <div class="pull-right no-border">
+							<button class="btn btn-">
+								<i class="icon-trash-o align-top bigger-125"></i>
+								刪除廣告
+							</button>
+							&nbsp;
+							<button class="btn btn-primary btn-sm">
+								<i class="icon-edit align-top bigger-125"></i>
+								編 輯
+							</button>
+						</div> -->
+
+						<div class="page-header">
+							<h1>商家 / 廠商檢視
+								<!-- <small>
+									<i class="icon-angle-double-right"></i>
+									<button class="btn btn-xs btn-white" type="button" onclick="history.go(-1)"><i class="icon-mail-reply light-grey"></i> 回前頁</button>
+								</small> -->
+							</h1>
+						</div>
+
+						<div class="row">
+								<!-- PAGE CONTENT BEGINS -->
+
+								<div class="col-xs-12 col-sm-12 col-md-8">
+									<!-- <div class="tabbable">
+										<ul class="nav nav-tabs">
+											<li class="active">
+												<a data-toggle="tab" href="#firm">
+													<i class="blue icon-trello bigger-110 hidden-480"></i>
+													廠商基本資料
+													<span class="badge" style="background-color:#fff!important">&nbsp;</span>
+												</a>
+											</li>
+
+											<li>
+												<a data-toggle="tab" href="#contact_person">
+													<i class="pink icon-male bigger-110 hidden-480"></i>
+													聯絡人資料
+													<span class="badge" style="background-color:rgba(0,0,0,0)!important;">&nbsp;</span>
+												</a>
+											</li>
+											<div class="pull-right">
+												<button class="btn btn-xs btn-primary">
+													<i class="icon-edit"></i>
+													編輯
+												</button>
+											</div>
+										</ul>
+
+										<div class="tab-content">
+										
+											<div id="firm" class="tab-pane active">
+												<div class="row">
+													<b class="col-xs-3 col-sm-2 no-wrap">註冊日期</b>
+													<div class="col-xs-9 col-sm-4">
+														<p>2015/01/05
+														<span class="badge2 tooltip-success" data-rel="tooltip" data-placement="top" data-original-title="帳號啟用中"><i class="icon-check-circle light-green"></i></span>
+														<span class="badge2 tooltip-warning" data-rel="tooltip" data-placement="top" data-original-title="帳號已停用"><i class="icon-ban text-danger"></i></span>
+														</p>
+													</div>
+													<b class="col-xs-3 col-sm-2 no-wrap">登入帳號</b>
+													<div class="col-xs-9 col-sm-4">
+													<p><span>nextmedia_2014tw</span>
+														&nbsp;<span class="btn btn-xs btn-white popover-notitle" data-rel="popover" data-placement="top" data-content="最近登入：2015/01/06 16:36" data-original-title="" title=""><i class="icon-angle-right"></i></span>
+													</p></div>
+												</div>
+												<div class="row">
+													<b class="col-xs-3 col-sm-2 no-wrap">廠商名稱</b>
+													<div class="col-xs-9 col-sm-4"><p>壹傳媒</p></div>
+													<b class="col-xs-3 col-sm-2 no-wrap">行業類別</b>
+													<div class="col-xs-9 col-sm-4"><p>媒體傳播</p></div>
+													<b class="col-xs-3 col-sm-2 no-wrap">聯絡電話</b>
+													<div class="col-xs-9 col-sm-4"><p><i class="icon-phone grey"></i>02-2773-5566</p></div>
+													<b class="col-xs-3 col-sm-2 no-wrap">統一編號</b>
+													<div class="col-xs-9 col-sm-4"><p>none</p></div>
+													<b class="col-xs-3 col-sm-2 no-wrap">傳真電話</b>
+													<div class="col-xs-9 col-sm-4"><p><i class="icon-fax grey"></i>02-2773-4422</p></div>
+													<b class="col-xs-3 col-sm-2 no-wrap">網站網址</b>
+													<div class="col-xs-9 col-sm-4 no-wrap"><p><i class="icon-globe grey"></i> <a href="http://tw.nextmedia.com/" target="_blank">http://tw.nextmedia.com/</a></p></div>
+												</div>
+												<div class="row">
+													<b class="col-xs-3 col-sm-2 no-wrap">廠商地址</b>
+													<div class="col-xs-9 col-sm-10"><p>114 台北市內湖區行愛路141巷48號</p></div>
+												</div>
+												<hr>
+												<div class="row">
+													<b class="col-xs-3 col-sm-2 no-wrap">公司介紹</b>
+													<div class="col-xs-9 col-sm-9"><p>穿越時間的縱軸，臺鹽從單純的鹽品專賣，陸續跨足鹽、水、保養、保健、清潔用品以及鹽雕六大類產品，今日的臺鹽，已從傳統鹽業國營，轉型成深耕海洋科技的民營公司。鹽田白金歲月傳承一甲子後，玉透晶瑩的食用精鹽昇華成時下最夯的鹽雕白菜文創產品，臺鹽備受讚譽卻不以為滿，仍將懷抱理想，再創佳績。</p></div>
+												</div>
+											</div>
+											
+											<div id="contact_person" class="tab-pane">
+												<div class="row">
+													<b class="col-xs-3 col-sm-2 no-wrap">聯 絡 人</b>
+													<div class="col-xs-9 col-sm-4"><p>安琪拉</p></div>
+													<b class="col-xs-3 col-sm-2 no-wrap">聯絡電話</b>
+													<div class="col-xs-9 col-sm-4"><p>02-2773-5566 #12</p></div>
+													<b class="col-xs-3 col-sm-2 no-wrap">職務名稱</b>
+													<div class="col-xs-9 col-sm-4"><p>行銷經理</p></div>
+													<b class="col-xs-3 col-sm-2 no-wrap">行動電話</b>
+													<div class="col-xs-9 col-sm-4"><p>0935 555 333</p></div>
+													<b class="col-xs-3 col-sm-2 no-wrap">電子郵件</b>
+													<div class="col-xs-9 col-sm-4 no-wrap"><p><i class="icon-envelope-o grey"></i><a href="mailto:angela@service.com">angela@service.com</a></p></div>
+													<b class="col-xs-3 col-sm-2 no-wrap">社群&IM</b>
+													<div class="col-xs-9 col-sm-4">
+														<a class="bigger-150 icon-facebook-square" href="#" target="_blank" data-rel="tooltip" data-placement="top" data-original-title="Facebook"></a>
+														<a class="bigger-150 icon-google-plus-square" href="#" target="_blank" data-rel="tooltip" data-placement="top" data-original-title="Goole+"></a>
+														<a class="bigger-150 icon-linkedin" href="#" target="_blank" data-rel="tooltip" data-placement="top" data-original-title="Line"></a>
+														<a class="bigger-150 icon-twitter-square" href="#" target="_blank" data-rel="tooltip" data-placement="top" data-original-title="Twitter"></a>
+														<a class="bigger-150 icon-skype" href="#" target="_blank" data-rel="tooltip" data-placement="top" data-original-title="Skype"></a>
+													</div>
+												</div>
+												<hr>
+												<div class="row">
+													<b class="col-xs-3 col-sm-2 no-wrap">職務代理人</b>
+													<div class="col-xs-9 col-sm-4">
+														<p>Alex Wang </p>
+														<p class="no-wrap"><i class="icon-envelope-o grey"></i><a href="mailto:alexwang@service.com">alexwang@service.com</a></p>
+														<p><i class="icon-mobile grey"></i> 0935 333 444</p>
+														<p><i class="icon-phone grey"></i>02-5666 7777 #22</p>
+													</div>
+												</div>
+											</div>
+
+										</div>
+									</div> --><!-- tabbable ENDS -->
+
+									<style>
+										.widget-main blockquote {-webkit-transition: all 0.3s ease-in-out;-moz-transition: all 0.3s ease-in-out;-o-transition: all 0.3s ease-in-out;transition: all 0.3s ease-in-out;}
+										.widget-main blockquote .pull-right button {display:none;}
+										.widget-main blockquote:hover {background-color:#f5f9fa;border-color: #C8CDED;}
+										.widget-main blockquote:hover .pull-right button {display:inline;}
+										.widget-main blockquote.ban,.widget-main blockquote.ban .text-success {color:#ddd!important;}
+										.widget-main blockquote.ban .badge-warning,.widget-main blockquote.ban .badge-info {background-color:#ddd!important;}
+										.widget-main blockquote.ban .no-wrap, .ban_key {color:#cddbdd;text-decoration:line-through;}
+										.item_list {padding:0 1em;"}
+										.item_list li a {font-size:120%;}
+										.item_list li {margin-bottom:1em;border-bottom:1px dotted #ddd;padding-bottom:0.5em;-webkit-transition: all 0.3s ease-in-out;-moz-transition: all 0.3s ease-in-out;-o-transition: all 0.3s ease-in-out;transition: all 0.3s ease-in-out;}
+										.item_list li:hover {background-color:#fafafa;}
+										.item_list li .tst {visibility:hidden;} /* 標籤隱藏 */
+										.item_list li:hover .tst {visibility:visible;} /* 標籤顯示 */
+										.item_list li:hover .label-danger, .item_list li:hover .label-pink {color:#FFDC73;} /* 標籤變色 */
+										.item_list li:hover i.tst {color:#16B0CB;} /* icon變色 */
+										.item_list li img {width:50px;margin:0 0.5em 0.5em 0;border:1px solid #ddd;padding:3px;border-radius:3px;-webkit-border-radius:3px;}
+									</style>
+									
+									<div class="btn-toolsbar">
+										<button class="btn btn-sm btn-white" type="button" onclick="history.go(-1)"><i class="icon-mail-reply light-grey"></i> 回前頁</button>
+										<a class="btn btn-xs btn-primary" href="ad_new.html"><i class="icon-plus"></i> 新增廣告</a>
+										<a class="btn btn-xs btn-success" href="market_new.html"><i class="icon-plus"></i> 新增商品</a>
+										<a class="btn btn-xs btn-yellow" href="sn_create.html"><i class="icon-plus"></i> 新增序號</a>
+									</div>
+									
+									<div class="space-6"></div>
+
+									<div class="widget-box">
+										<div class="widget-header">
+											<h5><i class="icon-cloud-upload bigger-120"></i> 音頻廣告 (5)</h5>
+											<div class="widget-toolbar">
+												<a href="ad_new.html" data-rel="tooltip" data-placement="top" data-original-title="新增廣告"><i class="icon-plus"></i></a>&nbsp;
+												<a href="#" data-action="reload" data-rel="tooltip" data-placement="top" data-original-title="重新整理"><i class="icon-refresh"></i></a>&nbsp;
+												<a href="#" data-action="collapse" data-rel="tooltip" data-placement="top" data-original-title="摺 合"><i class="icon-chevron-up"></i></a>
+												<a href="#" data-action="close" data-rel="tooltip" data-placement="top" data-original-title="關 閉"><i class="icon-times_"></i></a>
+											</div>
+										</div>
+
+										<div class="widget-body"><div class="widget-body-inner">
+											<div class="widget-main">
+												<div class="alert alert-block alert-info shake animated">
+													<button type="button" class="close" data-dismiss="alert">
+														<i class="icon-times"></i>
+													</button>
+													<i class="icon-bell-o"></i>提醒您目前該廠商尚無上架廣告。
+												</div>
+												<div class="row">
+													<div class="col-sx-12">
+													<ol class="item_list">
+														<li>
+															<a href="ad_view.html" target="_blank">
+															資生堂夏日美白護膚面膜
+															</a>
+															<div class="row grey">
+																<div class="col-xs-12 col-sm-7" data-rel="tooltip" data-placement="bottom" data-original-title="完成任務加 5 點">
+																	<small class="block">2015/01/01 ~ 2015/01/30 日止</small>
+																	<span class="label label-sm label-primary arrowed-right line-height-normal">CPA</span>
+																	<span class="tst label label-sm label-danger arrowed-in arrowed-right line-height-normal">鎖屏</span><span class="tst label label-sm label-pink arrowed-in arrowed-right line-height-normal">保養美妝</span>
+																	&nbsp;<!-- 任務類型 -->
+																	<i class="tst icon-download bigger-120"></i>
+																	<i class="tst icon-globe bigger-120"></i>
+																	<i class="tst icon-map-marker bigger-120"></i>
+																	<i class="tst icon-facebook-square bigger-120"></i>
+																	<i class="tst icon-download bigger-120"></i>
+																	<i class="tst icon-thumbs-o-up bigger-120"></i>
+																	<i class="tst icon-calendar bigger-120"></i>
+																	<i class="tst icon-youtube-play bigger-120"></i>
+																	<i class="tst icon-ticket bigger-120"></i>
+																	<i class="tst icon-file-text-o bigger-120"></i>
+																</div>
+																<div class="col-xs-12 col-sm-5">
+																	<div data-rel="tooltip" data-placement="top" data-original-title="音頻啟用中">
+																		<div class="block"><i class="icon-apple bigger-120 light-grey"></i> com.cntv.bmc <i class="icon-toggle-on bigger-120 green"></i></div>
+																		<div class="no-wrap"><i class="icon-file-sound-o bigger-120"></i> 893f156dd3503e5dfecd9ad6682b2711</div>
+																	</div>
+																</div>
+															</div>
+														</li>
+														<li>
+															<a href="ad_view.html" target="_blank">
+															迎接暑假旺季，百達遊旅行箱全面下殺6折起。
+															</a>
+															<div class="row grey">
+																<div class="col-xs-12 col-sm-7" data-rel="tooltip" data-placement="bottom" data-original-title="CPM 廣告">
+																	<small class="block">2015/01/01 ~ 2015/01/30 日止</small>
+																	<span class="label label-sm label-purple arrowed-right line-height-normal">CPM</span>
+																	<span class="tst label label-sm label-danger arrowed-in arrowed-right line-height-normal">鎖屏</span><span class="tst label label-sm label-pink arrowed-in arrowed-right line-height-normal">生活用品</span>
+																</div>
+																<div class="col-xs-12 col-sm-5">
+																	<div class="tooltip-error" data-rel="tooltip" data-placement="top" data-original-title="音頻失效">
+																		<div class="block"><i class="icon-android bigger-120 light-green"></i> com.fensigo.FansBuy <i class="icon-toggle-off bigger-120"></i></div>
+																		<div class="no-wrap ban_key"><i class="icon-file-sound-o bigger-120"></i> a46f56a4f382faa813b19e26e7f86ca0</div>
+																	</div>
+																</div>
+															</div>
+														</li>
+														<li>
+															<a href="ad_view.html" target="_blank">
+															鴻海 - 60吋液晶電視全面出清
+															</a>
+															<div class="row grey">
+																<div class="col-xs-12 col-sm-7" data-rel="tooltip" data-placement="bottom" data-original-title="完成任務加 5 點">
+																	<small class="block">2015/01/01 ~ 2015/01/30 日止</small>
+																	<span class="label label-sm label-primary arrowed-right line-height-normal">CPA</span>
+																	<span class="tst label label-sm label-danger arrowed-in arrowed-right line-height-normal">APP 首頁</span><span class="tst label label-sm label-pink arrowed-in arrowed-right line-height-normal">3C 家電</span>
+																	&nbsp;<!-- 任務類型 -->
+																	<i class="tst icon-download bigger-120"></i>
+																	<i class="tst icon-globe bigger-120"></i>
+																	<i class="tst icon-map-marker bigger-120"></i>
+																	<i class="tst icon-ticket bigger-120"></i>
+																	<i class="tst icon-file-text-o bigger-120"></i>
+																</div>
+																<div class="col-xs-12 col-sm-5">
+																	<div data-rel="tooltip" data-placement="top" data-original-title="音頻啟用中">
+																		<div class="block"><i class="icon-apple bigger-120 light-grey"></i> com.jyt.moviedemo <i class="icon-toggle-on bigger-120 green"></i></div>
+																		<div class="no-wrap"><i class="icon-file-sound-o bigger-120"></i> 2a47f7c757d5b310015d2b0e1415f05f</div>
+																	</div>
+																</div>
+															</div>
+														</li>
+														<li>
+															<a href="ad_view.html" target="_blank">
+															薄荷島旅遊五天四夜-機票.住宿.簽證.TOUR不到12,000通通搞定！
+															</a>
+															<div class="row grey">
+																<div class="col-xs-12 col-sm-7" data-rel="tooltip" data-placement="bottom" data-original-title="完成任務加 5 點">
+																	<small class="block">2015/01/01 ~ 2015/01/30 日止</small>
+																	<span class="label label-sm label-primary arrowed-right line-height-normal">CPA</span>
+																	<span class="tst label label-sm label-danger arrowed-in arrowed-right line-height-normal">鎖屏</span><span class="tst label label-sm label-pink arrowed-in arrowed-right line-height-normal">休閒旅遊</span>
+																	&nbsp;<!-- 任務類型 -->
+																	<i class="tst icon-map-marker bigger-120"></i>
+																	<i class="tst icon-facebook-square bigger-120"></i>
+																	<i class="tst icon-download bigger-120"></i>
+																	<i class="tst icon-youtube-play bigger-120"></i>
+																</div>
+																<div class="col-xs-12 col-sm-5">
+																	<div data-rel="tooltip" data-placement="top" data-original-title="音頻啟用中">
+																		<div class="block"><i class="icon-apple bigger-120 light-grey"></i> com.jyt.taiwantaxidemo <i class="icon-toggle-on bigger-120 green"></i></div>
+																		<div class="no-wrap"><i class="icon-file-sound-o bigger-120"></i> 5d01940c9b3a382ed5538a841fc49c9a</div>
+																	</div>
+																</div>
+															</div>
+														</li>
+														<li>
+															<a href="ad_view.html" target="_blank">
+															NIXON 極限運動玩家的最愛
+															</a>
+															<div class="row grey">
+																<div class="col-xs-12 col-sm-7" data-rel="tooltip" data-placement="bottom" data-original-title="完成任務加 5 點">
+																	<small class="block">2015/01/01 ~ 2015/01/30 日止</small>
+																	<span class="label label-sm label-primary arrowed-right line-height-normal">CPA</span>
+																	<span class="tst label label-sm label-danger arrowed-in arrowed-right line-height-normal">鎖屏</span><span class="tst label label-sm label-pink arrowed-in arrowed-right line-height-normal">運動休閒</span>
+																	&nbsp;<!-- 任務類型 -->
+																	<i class="tst icon-facebook-square bigger-120"></i>
+																	<i class="tst icon-calendar bigger-120"></i>
+																	<i class="tst icon-file-text-o bigger-120"></i>
+																</div>
+																<div class="col-xs-12 col-sm-5">
+																	<div data-rel="tooltip" data-placement="top" data-original-title="音頻啟用中">
+																		<div class="block"><i class="icon-android bigger-120 light-green"></i> com.cntv.bmc <i class="icon-toggle-on bigger-120 green"></i></div>
+																		<div class="no-wrap"><i class="icon-file-sound-o bigger-120"></i> 26ecf6453062913b70c534acdffb7b5f</div>
+																	</div>
+																</div>
+															</div>
+														</li>
+													</ol>
+													</div>
+												</div>
+											</div><!-- row ENDS-->
+											</div>
+										</div>
+									</div><!-- 廠商廣告 ENDS -->
+
+									<div class="space-6"></div>
+
+									<div class="widget-box">
+										<div class="widget-header">
+											<h5><i class="icon-th bigger-120"></i> 商城商品 (3)</h5>
+											<div class="widget-toolbar">
+												<a href="market_new.html" data-rel="tooltip" data-placement="top" data-original-title="新增商品"><i class="icon-plus"></i></a>&nbsp;
+												<a href="#" data-action="reload" data-rel="tooltip" data-placement="top" data-original-title="重新整理"><i class="icon-refresh"></i></a>&nbsp;
+												<a href="#" data-action="collapse" data-rel="tooltip" data-placement="top" data-original-title="摺 合"><i class="icon-chevron-up"></i></a>
+												<a href="#" data-action="close" data-rel="tooltip" data-placement="top" data-original-title="關 閉"><i class="icon-times_"></i></a>
+											</div>
+										</div>
+
+										<div class="widget-body"><div class="widget-body-inner">
+											<div class="widget-main">
+												<div class="alert alert-block alert-success shake animated">
+													<button type="button" class="close" data-dismiss="alert">
+														<i class="icon-times"></i>
+													</button>
+													<i class="icon-bell-o"></i>提醒您目前該廠商尚無上架商品。
+												</div>
+												<div class="row">
+													<div class="col-xs-12">
+														<ol class="item_list">
+															<li>
+																<img src="ad_imgs/eschick_120x120.jpg">
+																<a class="tooltip-success" href="market_view.html" target="_blank" data-rel="tooltip" data-placement="top" data-original-title="檢視商品">舒適衛生紙第二包5折</a>
+																<div class="row grey">
+																	<div class="col-xs-12 col-sm-7">
+																		<small class="block"><i class="icon-clock-o"></i> 2015/01/01 ~ 2015/01/30 日止</small>
+																		<p><span class="badge line-height-normal badge-danger">扣點</span> 10點+24元</p>
+																		<span class="label label-sm label-success arrowed-right line-height-normal">商品品號</span> WD12345678
+																		<span class="label label-sm label-success arrowed-right line-height-normal">庫存</span> 12
+																		<span class="label label-sm label-success arrowed-right line-height-normal">特店</span> 全聯
+																	</div>
+																	<div class="col-xs-12 col-sm-5">
+																		<div data-rel="tooltip" data-placement="top" data-original-title="音頻啟用中">
+																			<div class="block"><i class="icon-apple bigger-120 light-grey"></i> com.jyt.moneymakerdemo <i class="icon-toggle-on bigger-120 green"></i></div>
+																			<div class="no-wrap"><i class="icon-file-sound-o bigger-120"></i> 9ab98e9dfd99ea3c5cb4aee11bd774c3</div>
+																		</div>
+																	</div>
+																</div>
+															</li>
+															<li>
+																<img src="ad_imgs/fubon_120x120.jpg">
+																<a class="tooltip-success" href="market_view.html" target="_blank" data-rel="tooltip" data-placement="top" data-original-title="檢視商品">2014 台北富邦馬拉松</a>
+																<div class="row grey">
+																	<div class="col-xs-12 col-sm-7">
+																		<small class="block"><i class="icon-clock-o"></i> 2015/01/01 ~ 2015/01/30 日止</small>
+																		<p><span class="badge line-height-normal badge-danger">扣點</span> 30點</p>
+																		<span class="label label-sm label-success arrowed-right line-height-normal">商品品號</span> GF0021E5463
+																		<span class="label label-sm label-success arrowed-right line-height-normal">庫存</span> 68
+																		<span class="label label-sm label-success arrowed-right line-height-normal">特店</span> 全家
+																	</div>
+																	<div class="col-xs-12 col-sm-5">
+																		<div data-rel="tooltip" data-placement="top" data-original-title="音頻啟用中">
+																			<div class="block"><i class="icon-android bigger-120 light-green"></i> com.jyt.taitungtravelairdemo <i class="icon-toggle-on bigger-120 green"></i></div>
+																			<div class="no-wrap"><i class="icon-file-sound-o bigger-120"></i> 8ef7cf0deca282fbef4697b4dfc5410f</div>
+																		</div>
+																	</div>
+																</div>
+															</li>
+															<li>
+																<img src="kitty.gif">
+																<a class="tooltip-success" href="market_view.html" target="_blank" data-rel="tooltip" data-placement="top" data-original-title="檢視商品">貝殼窩貓窩貓屋可拆式保暖寵物窩</a>
+																<div class="row grey">
+																	<div class="col-xs-12 col-sm-7">
+																		<small class="block"><i class="icon-clock-o"></i> 2015/01/01 ~ 2015/01/30 日止</small>
+																		<p><span class="badge line-height-normal badge-danger">扣點</span> 20點+33元</p>
+																		<span class="label label-sm label-success arrowed-right line-height-normal">商品品號</span> A4FB00243
+																		<span class="label label-sm label-success arrowed-right line-height-normal">庫存</span> 3
+																		<span class="label label-sm label-success arrowed-right line-height-normal">特店</span> 特店
+																	</div>
+																	<div class="col-xs-12 col-sm-5">
+																		<div class="tooltip-error" data-rel="tooltip" data-placement="top" data-original-title="音頻失效">
+																			<div class="block"><i class="icon-android bigger-120 light-green"></i> com.cqyqs.moneytree <i class="icon-toggle-off bigger-120"></i></div>
+																			<div class="no-wrap ban_key"><i class="icon-file-sound-o bigger-120"></i> 6c29ac7aeeddcc05bc7b053b359c5e71</div>
+																		</div>
+																	</div>
+																</div>
+															</li>
+														</ol>
+													</div>
+												</div>
+											</div><!-- row ENDS-->
+											</div>
+										</div>
+									</div><!-- 上架商品 ENDS -->
+
+									<div class="space-6"></div>
+
+									<div class="widget-box collapsed">
+										<div class="widget-header">
+											<h5><i class="icon-file-sound-o bigger-120"></i> 音頻序號</h5>
+											<div class="widget-toolbar">
+												<a href="sn_create.html" data-rel="tooltip" data-placement="top" data-original-title="新增序號"><i class="icon-plus"></i></a>&nbsp;
+												<a href="#" data-action="reload" data-rel="tooltip" data-placement="top" data-original-title="重新整理"><i class="icon-refresh"></i></a>&nbsp;
+												<a href="#" data-action="collapse" data-rel="tooltip" data-placement="top" data-original-title="摺 合"><i class="icon-chevron-down"></i></a>
+												<a href="#" data-action="close" data-rel="tooltip" data-placement="top" data-original-title="關 閉"><i class="icon-times_"></i></a>
+											</div>
+										</div>
+
+										<div class="widget-body"><div class="widget-body-inner">
+											<div class="widget-main">
+												<div class="alert alert-block alert-warning shake animated">
+													<button type="button" class="close" data-dismiss="alert">
+														<i class="icon-times"></i>
+													</button>
+													<i class="icon-bell-o"></i>提醒您目前該廠商尚未設置音頻。
+												</div>
+
+												<div class="row">
+													<div class="col-md-6">
+														<blockquote class="ban"><!-- 序號停用樣式 -->
+															<div class="pull-right">
+																<button href="#view-analytics" class="btn btn-xs btn-white" data-toggle="modal" data-rel="tooltip" data-placement="top" data-original-title="詳細資料">
+																	<i class="icon-bar-chart-o blue"></i>
+																</button>
+																<button type="button" class="btn btn-xs btn-white">
+																	<i class="icon-check tooltip-success green bootbox-confirm" data-rel="tooltip" data-placement="top" data-original-title="重新啟用"></i>
+																</button>
+																<i class="icon-ban bigger-130 text-danger" data-rel="tooltip" data-placement="top" data-original-title="序號已停用"></i>
+															</div>
+
+															<div><b>系統：</b><i class="icon-android bigger-120 text-success"></i>Android</div>
+															<div><b>名稱：</b><span>com.cntv.bmc</span></div>
+															<div class="no-wrap"><b>序號：</b><span class="no-wrap">893f156dd3503e5dfecd9ad6682b2711</span></div>
+															<div style="padding:8px 0;">
+																廣告數：<span class="badge badge-warning">16</span>
+																商品數：<span class="badge badge-info">5</span>
+															</div>
+															<small>有效日期 2014/11/30</small>
+														</blockquote class="">
+													</div>
+													<div class="col-md-6">
+														<blockquote>
+															<div class="pull-right">
+																<button href="#view-analytics" class="btn btn-xs btn-white" data-toggle="modal" data-rel="tooltip" data-placement="top" data-original-title="詳細資料">
+																	<i class="icon-bar-chart-o blue"></i>
+																</button>
+																<button type="button" class="btn btn-xs btn-white">
+																	<i class="icon-trash-o tooltip-warning text-danger bootbox-confirm" data-rel="tooltip" data-placement="top" data-original-title="回收序號"></i>
+																</button>
+																<i class="icon-check-circle bigger-130 light-green" data-rel="tooltip" data-placement="top" data-original-title="序號使用中"></i>
+															</div>
+															
+															<div><b>系統：</b><i class="icon-apple bigger-120 light-grey"></i>Apple IOS</div>
+															<div><b>名稱：</b><span>fensigo.FansBuy</span></div>
+															<div class="no-wrap"><b>序號：</b><span>75eddf819ddc135053498cdcb2c3f61a</span></div>
+															<div style="padding:8px 0;">
+																廣告數 <span class="badge badge-warning">9</span>
+																商品數 <span class="badge badge-info">108</span>
+															</div>
+															<small>有效日期 2015/06/30</small>
+														</blockquote>
+													</div>
+													<div class="col-md-6">
+														<blockquote class="">
+															<div class="pull-right">
+																<button href="#view-analytics" class="btn btn-xs btn-white" data-toggle="modal" data-rel="tooltip" data-placement="top" data-original-title="詳細資料">
+																	<i class="icon-bar-chart-o blue"></i>
+																</button>
+																<button type="button" class="btn btn-xs btn-white">
+																	<i class="icon-trash-o tooltip-warning text-danger bootbox-confirm" data-rel="tooltip" data-placement="top" data-original-title="回收序號"></i>
+																</button>
+																<i class="icon-check-circle bigger-130 light-green" data-rel="tooltip" data-placement="top" data-original-title="序號使用中"></i>
+															</div>
+															
+															<div><b>系統：</b><i class="icon-apple bigger-120 light-grey"></i>Apple IOS</div>
+															<div><b>名稱：</b><span>fensigo.FansBuy</span></div>
+															<div class="no-wrap"><b>序號：</b><span>75eddf819ddc135053498cdcb2c3f61a</span></div>
+															<div style="padding:8px 0;">
+																廣告數 <span class="badge badge-warning">9</span>
+																商品數 <span class="badge badge-info">108</span>
+															</div>
+															<small>有效日期 2015/06/30</small>
+														</blockquote>
+													</div>
+													<div class="col-md-6">
+														<blockquote class="">
+															<div class="pull-right">
+																<button href="#view-analytics" class="btn btn-xs btn-white" data-toggle="modal" data-rel="tooltip" data-placement="top" data-original-title="詳細資料">
+																	<i class="icon-bar-chart-o blue"></i>
+																</button>
+																<button type="button" class="btn btn-xs btn-white">
+																	<i class="icon-trash-o tooltip-warning text-danger bootbox-confirm" data-rel="tooltip" data-placement="top" data-original-title="回收序號"></i>
+																</button>
+																<i class="icon-check-circle bigger-130 light-green" data-rel="tooltip" data-placement="top" data-original-title="序號使用中"></i>
+															</div>
+
+															<div><b>系統：</b><i class="icon-android bigger-120 text-success"></i>Android</div>
+															<div><b>名稱：</b><span>com.cntv.bmc</span></div>
+															<div class="no-wrap"><b>序號：</b><span class="no-wrap">893f156dd3503e5dfecd9ad6682b2711</span></div>
+															<div style="padding:8px 0;">
+																廣告數：<span class="badge badge-warning">16</span>
+																商品數：<span class="badge badge-info">5</span>
+															</div>
+															<small>有效日期 2015/02/28</small>
+														</blockquote class="">
+													</div>
+												</div><!-- row ENDS-->
+											</div>
+										</div></div>
+									</div><!-- 音頻序號 ENDS -->
+
+								</div><!-- col-8 left -->
+
+								<div class="col-xs-12 col-sm-12 col-md-4">
+
+										<h3 class="header lighter blue">
+											<i class="icon-stack-overflow bigger-110"></i>
+											廠商 / 商家資料
+											<div class="pull-right">
+												<button class="btn btn-xs btn-primary" onclick="javascript:location.href='sell_new.html'">
+													<i class="icon-edit"></i>
+													編輯
+												</button>
+											</div>
+										</h3>
+
+										<div id="accordion" class="accordion-style1 panel-group accordion-style2">
+											<div class="panel panel-default">
+												<div class="panel-heading">
+													<h4 class="panel-title">
+														<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+															<i class="icon-angle-down bigger-110" data-icon-hide="icon-angle-down" data-icon-show="icon-angle-right"></i>
+															基本資料
+														</a>
+													</h4>
+												</div>
+
+												<div class="panel-collapse collapse in" id="collapseOne">
+													<div class="panel-body">
+														<div class="row">
+															<b class="col-xs-3 no-wrap">註冊日期</b>
+															<div class="col-xs-9">
+															<p>2015/01/05
+															<span class="badge2 tooltip-success" data-rel="tooltip" data-placement="top" data-original-title="帳號啟用中"><i class="icon-check-circle text-success"></i></span>
+															<span class="badge2 tooltip-warning" data-rel="tooltip" data-placement="top" data-original-title="帳號已停用"><i class="icon-ban text-danger"></i></span>
+															</p>
+															</div>
+														</div>
+														<div class="row">
+															<b class="col-xs-3 no-wrap">登入帳號</b>
+															<div class="col-xs-9"><p>nextmedia</p></div>
+														</div>
+														<div class="row">
+															<b class="col-xs-3 no-wrap">廠商名稱</b>
+															<div class="col-xs-9"><p>壹傳媒</p></div>
+														</div>
+														<div class="row">
+															<b class="col-xs-3 no-wrap">行業類別</b>
+															<div class="col-xs-9"><p>媒體傳播</p></div>
+														</div>
+														<div class="row">
+															<b class="col-xs-3 no-wrap">聯絡電話</b>
+															<div class="col-xs-9"><p>02-2773-5566</p></div>
+														</div>
+														<div class="row">
+															<b class="col-xs-3 no-wrap">統一編號</b>
+															<div class="col-xs-9"><p>none</p></div>
+														</div>
+														<div class="row">
+															<b class="col-xs-3 no-wrap">傳真電話</b>
+															<div class="col-xs-9"><p>none</p></div>
+														</div>
+														<div class="row">
+															<b class="col-xs-3 no-wrap">網站網址</b>
+															<div class="col-xs-9"><p><a href="http://tw.nextmedia.com/" target="_blank">http://tw.nextmedia.com/</a></p></div>
+														</div>
+														<div class="row">
+															<b class="col-xs-3 no-wrap">廠商地址</b>
+															<div class="col-xs-9"><p>台北市內湖區行愛路141巷48號</p></div>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="panel panel-default">
+												<div class="panel-heading">
+													<h4 class="panel-title">
+														<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+															<i class="icon-angle-right bigger-110" data-icon-hide="icon-angle-down" data-icon-show="icon-angle-right"></i>
+															聯絡人資料
+														</a>
+													</h4>
+												</div>
+
+												<div class="panel-collapse collapse" id="collapseTwo">
+													<div class="panel-body">
+														<div class="row">
+															<b class="col-xs-3 no-wrap">姓　　名</b>
+															<div class="col-xs-9"><p>Angela</p></div>
+														</div>
+														<div class="row">
+															<b class="col-xs-3 no-wrap">職務名稱</b>
+															<div class="col-xs-9"><p>行銷業務</p></div>
+														</div>
+														<div class="row">
+															<b class="col-xs-3 no-wrap">聯絡電話</b>
+															<div class="col-xs-9"><p>02-2773-5566 #12</p></div>
+														</div>
+														<div class="row">
+															<b class="col-xs-3 no-wrap">行動電話</b>
+															<div class="col-xs-9"><p>0935 555 333</p></div>
+														</div>
+														<div class="row">
+															<b class="col-xs-3 no-wrap">電子郵件</b>
+															<div class="col-xs-9"><p><a href="mailto:angela@service.com" target="_blank">angela@service.com</a></p></div>
+														</div>
+														<div class="row">
+															<b class="col-xs-3 no-wrap">社群&IM</b>
+															<div class="col-xs-9">
+																<a class="bigger-150 icon-facebook-square" href="#" target="_blank" data-rel="tooltip" data-placement="top" data-original-title="Facebook"></a>
+																<a class="bigger-150 icon-google-plus-square" href="#" target="_blank" data-rel="tooltip" data-placement="top" data-original-title="Goole+"></a>
+																<a class="bigger-150 icon-linkedin" href="#" target="_blank" data-rel="tooltip" data-placement="top" data-original-title="Line"></a>
+																<a class="bigger-150 icon-twitter-square" href="#" target="_blank" data-rel="tooltip" data-placement="top" data-original-title="Twitter"></a>
+																<a class="bigger-150 icon-skype" href="#" target="_blank" data-rel="tooltip" data-placement="top" data-original-title="Skype"></a>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="panel panel-default">
+												<div class="panel-heading">
+													<h4 class="panel-title">
+														<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+															<i class="icon-angle-right bigger-110" data-icon-hide="icon-angle-down" data-icon-show="icon-angle-right"></i>
+															代理人
+														</a>
+													</h4>
+												</div>
+
+												<div class="panel-collapse collapse" id="collapseThree">
+													<div class="panel-body">
+														<div class="row">
+															<b class="col-xs-3 no-wrap">姓　　名</b>
+															<div class="col-xs-9">
+																<p>Alex Wang </p>
+															</div>
+														</div>
+														<div class="row">
+															<b class="col-xs-3 no-wrap">聯絡電話</b>
+															<div class="col-xs-9"><p>02-5666 7777 #12</p></div>
+														</div>
+														<div class="row">
+															<b class="col-xs-3 no-wrap">行動電話</b>
+															<div class="col-xs-9"><p>0935 333 444</p></div>
+														</div>
+														<div class="row">
+															<b class="col-xs-3 no-wrap">電子郵件</b>
+															<div class="col-xs-9"><p class="no-wrap"><a href="mailto:alexwang@service.com">alexwang@service.com</a></p></div>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="panel panel-default">
+												<div class="panel-heading">
+													<h4 class="panel-title">
+														<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
+															<i class="icon-angle-right bigger-110" data-icon-hide="icon-angle-down" data-icon-show="icon-angle-right"></i>
+															公司介紹
+														</a>
+													</h4>
+												</div>
+
+												<div class="panel-collapse collapse" id="collapseFour">
+													<div class="panel-body">
+														穿越時間的縱軸，臺鹽從單純的鹽品專賣，陸續跨足鹽、水、保養、保健、清潔用品以及鹽雕六大類產品，今日的臺鹽，已從傳統鹽業國營，轉型成深耕海洋科技的民營公司。鹽田白金歲月傳承一甲子後，玉透晶瑩的食用精鹽昇華成時下最夯的鹽雕白菜文創產品，臺鹽備受讚譽卻不以為滿，仍將懷抱理想，再創佳績。
+													</div>
+												</div>
+											</div>
+										</div>
+
+								</div><!-- col-4 right -->
+
+								<div class="hr hr16 hr-dotted"></div>
+								
+								<div id="view-analytics" class="modal" tabindex="-1">
+									<div class="modal-dialog" style="min-width:90%">
+										<div class="modal-content">
+											<div class="modal-header" style="padding: 6px 16px">
+												<button type="button" class="close" data-dismiss="modal">&times;</button>
+												<h4 class="blue bigger">
+												<i class="icon-ioxhost"></i>
+												BMCV Ads Analytics 詳細資料
+												</h4>
+											</div>
+
+											<div class="modal-body overflow-visible">
+												<div class="row">
+
+													<div class="col-md-8"><!-- left side -->
+														<!-- <div class="row">
+															<div class="btn-group">
+																<button class="btn btn-xs btn-white">button A</button>
+																<button class="btn btn-xs btn-white">button B</button>
+																<button class="btn btn-xs btn-white">button C</button>
+																<button class="btn btn-xs btn-white">button D</button>
+															</div>
+														</div>
+														<div class="btn-group text-left">
+															<button class="btn btn-xs btn-primary">
+																<i class="icon-external-link"></i>
+																更 多
+															</button>
+															<button class="btn btn-xs btn-success">
+																<i class="icon-print"></i>
+																列 印
+															</button>
+															<button class="btn btn-xs btn-purple">
+																<i class="icon-file-excel-o"></i>
+																Excel
+															</button>
+															<button class="btn btn-xs btn-pink">
+																<i class="icon-file-pdf-o"></i>
+																PDF
+															</button>
+														</div>
+
+														<div class="space-8"></div> -->
+
+														<div class="row">
+															<b class="col-xs-2 text-right no-wrap">廣告數</b>
+															<div class="col-xs-4">
+																<span class="badge badge-warning">7</span>
+															</div>
+															<b class="col-xs-2 text-right no-wrap">商品數</b>
+															<div class="col-xs-4">
+																<span class="badge badge-info">5</span></p>
+															</div>
+															<b class="col-xs-2 text-right no-wrap">啟用日期</b>
+															<div class="col-xs-4">
+																<p>2014/10/10</<p>
+															</div>
+															<b class="col-xs-2 text-right no-wrap">有效日期</b>
+															<div class="col-xs-4">
+																<p>2015/06/30</<p>
+															</div>
+															<b class="col-xs-2 text-right no-wrap">label</b>
+															<div class="col-xs-4">
+																<p>Text</p>
+															</div>
+															<b class="col-xs-2 text-right no-wrap">label</b>
+															<div class="col-xs-4">
+																<p>Text</<p>
+															</div>
+															<b class="col-xs-2 text-right no-wrap">label</b>
+															<div class="col-xs-4">
+																<p>Text</<p>
+															</div>
+															<b class="col-xs-2 text-right no-wrap">label</b>
+															<div class="col-xs-4">
+																<p>Text</<p>
+															</div>
+															<b class="col-xs-2 text-right no-wrap">label</b>
+															<div class="col-xs-4">
+																<p>Text</<p>
+															</div>
+															<b class="col-xs-2 text-right no-wrap">label</b>
+															<div class="col-xs-4">
+																<p>Text</<p>
+															</div>
+														</div>
+
+														<div class="space-8"></div>
+
+														<div class="widget-box">
+															<div class="widget-header">
+																<h5 class=""><i class="icon-angle-right"></i>資料表列</h5>
+
+																<div class="widget-toolbar no-border">
+																	<ul class="nav nav-tabs" id="myTab">
+																		<li class="active">
+																			<a data-toggle="tab" href="#ads"><i class="icon-cloud-upload"></i>廣告</a>
+																		</li>
+																		<li class="">
+																			<a data-toggle="tab" href="#market"><i class="icon-th"></i>商品</a>
+																		</li>
+																		<li class="">
+																			<a data-toggle="tab" href="#info"><i class="icon-area-chart"></i>Info</a>
+																		</li>
+																	</ul>
+																</div>
+															</div>
+
+															<div class="widget-body">
+																<div class="widget-main no-padding">
+																	<div class="tab-content">
+																		<div id="ads" class="tab-pane active">
+																			<table class="table table-striped table-bordered table-hover">
+																				<thead>
+																					<tr>
+																						<th>廣告名稱</th>
+																						<th>廣告金額</th>
+																						<th>可得點數</th>
+																						<th class="hidden-480">活動類別</th>
+																						<th class="hidden-480">已消費</th>
+																					</tr>
+																				</thead>
+
+																				<tbody>
+																					<tr>
+																						<td><a href="ad_view.html">Ad name</a></td>
+																						<td>0</td>
+																						<td>
+																							<span>0</span>
+																						</td>
+																						<td class="hidden-480">0</td>
+																						<td class="hidden-480">0%</td>
+																					</tr>
+																					<tr>
+																						<td><a href="ad_view.html">Ad name</a></td>
+																						<td>0</td>
+																						<td>
+																							<span>0</span>
+																						</td>
+																						<td class="hidden-480">0</td>
+																						<td class="hidden-480">0%</td>
+																					</tr>
+																					<tr>
+																						<td><a href="ad_view.html">Ad name</a></td>
+																						<td>0</td>
+																						<td>
+																							<span>0</span>
+																						</td>
+																						<td class="hidden-480">0</td>
+																						<td class="hidden-480">0%</td>
+																					</tr>
+																					<tr>
+																						<td><a href="ad_view.html">Ad name</a></td>
+																						<td>0</td>
+																						<td>
+																							<span>0</span>
+																						</td>
+																						<td class="hidden-480">0</td>
+																						<td class="hidden-480">0%</td>
+																					</tr>
+																					<tr>
+																						<td><a href="ad_view.html">Ad name</a></td>
+																						<td>0</td>
+																						<td>
+																							<span>0</span>
+																						</td>
+																						<td class="hidden-480">0</td>
+																						<td class="hidden-480">0%</td>
+																					</tr>
+																					<tr>
+																						<td><a href="ad_view.html">Ad name</a></td>
+																						<td>0</td>
+																						<td>
+																							<span>0</span>
+																						</td>
+																						<td class="hidden-480">0</td>
+																						<td class="hidden-480">0%</td>
+																					</tr>
+																					<tr>
+																						<td><a href="ad_view.html">Ad name</a></td>
+																						<td>0</td>
+																						<td>
+																							<span>0</span>
+																						</td>
+																						<td class="hidden-480">0</td>
+																						<td class="hidden-480">0%</td>
+																					</tr>
+																				</tbody>
+																			</table>
+																		</div><!-- ads ENDS -->
+
+																		<div id="market" class="tab-pane">
+																			<table class="table table-striped table-bordered table-hover no-margin-bottom">
+																				<thead>
+																					<tr>
+																						<th>text</th>
+																						<th>text</th>
+																						<th>text</th>
+																						<th>text</th>
+																						<th>text</th>
+																					</tr>
+																				</thead>
+
+																				<tbody>
+																					<tr>
+																						<td>
+																							<a href="market_view.html">Market Item1</a>
+																						</td>
+																						<td>0</td>
+																						<td>0</td>
+																						<td>0</td>
+																						<td>0</td>
+																					</tr>
+																					<tr>
+																						<td>
+																							<a href="market_view.html">Market Item2</a>
+																						</td>
+																						<td>0</td>
+																						<td>0</td>
+																						<td>0</td>
+																						<td>0</td>
+																					</tr>
+																					<tr>
+																						<td>
+																							<a href="market_view.html">Market Item3</a>
+																						</td>
+																						<td>0</td>
+																						<td>0</td>
+																						<td>0</td>
+																						<td>0</td>
+																					</tr>
+																					<tr>
+																						<td>
+																							<a href="market_view.html">Market Item4</a>
+																						</td>
+																						<td>0</td>
+																						<td>0</td>
+																						<td>0</td>
+																						<td>0</td>
+																					</tr>
+																					<tr>
+																						<td>
+																							<a href="market_view.html">Market Item5</a>
+																						</td>
+																						<td>0</td>
+																						<td>0</td>
+																						<td>0</td>
+																						<td>0</td>
+																					</tr>
+																				</tbody>
+																			</table>
+																		</div>
+
+																		<div id="info" class="tab-pane">
+																			<h4>
+																				<div>花蓮發生規模5.4地震 北市震度2級</div>
+																				<small class="smaller-70">2015-01-07 PM 14:00 - Yahoo 即時新聞</small>
+																			</h4>
+																			
+																			<p>今天中午12點48分33.6秒，台灣地區發生芮氏規模5.4地震。震央在花蓮縣政府北偏東方31.3公里(位於花蓮縣秀林鄉)，震源深度：22公里。各地最大震度為：花蓮縣太魯閣、宜蘭縣南澳5級，南投縣、台中市、桃園市部分地區3級，新北市與台北市部分地區2級。</p>
+																			<p>
+																				<img src="analytics_pngs/analysis_promo_customvariable.png" style="max-width:100%;">
+																				<img src="analytics_pngs/analysis_promo_dashboard.png" style="max-width:100%;">
+																			</p>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div><!-- widget-box ENDS -->
+
+													</div><!-- Left side ENDS -->
+
+													<div class="col-md-4"><!-- Right side -->
+														<div class="row">
+															<div class="col-xs-12">
+																<h5 class="header_ blue"><i class="icon-line-chart"></i> 數據統計分析</h5>
+																<p><img src="analytics_pngs/customreports_hero.png" style="max-width:100%;"></p>
+																<blockquote>
+																	<small>數據統計時間： 2015/01/07 PM 14:30</small>
+																</blockquote>
+
+																<h5 class="header blue"><i class="icon-binoculars"></i> Sub Title Text</h5>
+																<table class="table table-striped table-bordered table-hover no-margin-bottom">
+																	<thead class="thin-border-bottom">
+																		<tr>
+																			<th>兌換劵</th>
+																			<th>已發送</th>
+																			<th>已核銷</th>
+																			<th>達成率</th>
+																		</tr>
+																	</thead>
+
+																	<tbody>
+																		<tr>
+																			<td>
+																				<a href="#.html">AiAiAi</a>
+																			</td>
+																			<td>0</td>
+																			<td>0</td>
+																			<td>0</td>
+																		</tr>
+																		<tr>
+																			<td>
+																				<a href="#.html">BiBiBi</a>
+																			</td>
+																			<td>0</td>
+																			<td>0</td>
+																			<td>0</td>
+																		</tr>
+																	</tbody>
+																</table>
+															</div>
+														</div>
+													</div><!-- Right side ENDS -->
+
+												</div>
+											</div><!-- /.modal-body -->
+
+											<div class="modal-footer center">
+												<!-- <button class="btn btn-sm btn-danger">
+													<i class="icon-trash-o"></i>
+													刪 除
+												</button> -->
+												<button class="btn btn-sm" data-dismiss="modal">
+													<i class="icon-times"></i>
+													關 閉
+												</button>
+												<button class="btn btn-sm btn-primary">
+													<i class="icon-external-link"></i>
+													更 多
+												</button>
+												<button class="btn btn-sm btn-success">
+													<i class="icon-print"></i>
+													列 印
+												</button>
+												<button class="btn btn-sm btn-purple">
+													<i class="icon-file-excel-o"></i>
+													Excel
+												</button>
+												<button class="btn btn-sm btn-pink">
+													<i class="icon-file-pdf-o"></i>
+													PDF
+												</button>
+											</div>
+										</div>
+									</div>
+								</div><!-- view-analytics ENDS -->
+
+								<!-- PAGE CONTENT ENDS -->
+						</div><!-- /.row -->
+					</div><!-- /.page-content -->
+				</div><!-- /.main-content -->
+
+			</div><!-- /.main-container-inner -->
+
+			<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+				<i class="icon-angle-double-up icon-only bigger-110"></i>
+			</a>
+		</div><!-- /.main-container -->
+
+		<!-- basic scripts -->
+
+		<!--[if !IE]> -->
+
+		<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script> -->
+
+		<!-- <![endif]-->
+
+		<!--[if IE]>
+			<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<![endif]-->
+
+		<!--[if !IE]> -->
+
+		<script type="text/javascript">
+			window.jQuery || document.write("<script src='assets/js/jquery-2.0.3.min.js'>"+"<"+"/script>");
+		</script>
+
+		<!-- <![endif]-->
+
+		<!--[if IE]>
+<script type="text/javascript">
+ window.jQuery || document.write("<script src='assets/js/jquery-1.10.2.min.js'>"+"<"+"/script>");
+</script>
+<![endif]-->
+
+		<script type="text/javascript">
+			if("ontouchend" in document) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+		</script>
+		<script src="assets/js/bootstrap.min.js"></script>
+		<script src="assets/js/typeahead-bs2.min.js"></script>
+
+		<!-- page specific plugin scripts -->
+
+		<script src="assets/js/bootbox.min.js"></script>
+		<link href="assets/css/animate.css" rel="stylesheet"/>
+
+		<!-- ace scripts -->
+
+		<script src="assets/js/ace-elements.min.js"></script>
+		<script src="assets/js/ace.min.js"></script>
+
+		<!-- inline scripts related to this page -->
+		<script type="text/javascript">
+			jQuery(function($) {
+
+				$('[data-rel=tooltip]').tooltip();
+				$('[data-rel=popover]').popover({html:true});
+
+                /// Confirm Dialog///
+					
+				$(".bootbox-confirm").on(ace.click_event, function() {
+					bootbox.confirm("啟用 / 停用序號？", function(result) {
+						if(result) {
+							//
+						}
+					});
+				});
+
+			})
+		</script>
+
+	</body>
+</html>

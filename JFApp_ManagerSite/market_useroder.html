@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>訂單明細 - 後台管理系統</title>
+
+		<meta name="description" content="" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- basic styles -->
+
+		<link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+
+		<!--[if IE 7]>
+		  <link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css" />
+		<![endif]-->
+
+		<!-- page specific plugin styles -->
+		<link rel="stylesheet" href="assets/css/daterangepicker.css" />
+		<link rel="stylesheet" href="assets/css/jquery-ui-1.10.3.custom.min.css" />
+		<link rel="stylesheet" href="assets/css/jquery.gritter.css" />
+		<link rel="stylesheet" href="assets/css/select2.css" />
+		<link rel="stylesheet" href="assets/css/bootstrap-editable.css" />
+
+		<!-- fonts -->
+
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" />
+
+		<!-- ace styles -->
+
+		<link rel="stylesheet" href="assets/css/ace.min.css" />
+		<link rel="stylesheet" href="assets/css/ace-rtl.min.css" />
+		<link rel="stylesheet" href="assets/css/ace-skins.min.css" />
+
+		<!--[if lte IE 8]>
+		  <link rel="stylesheet" href="assets/css/ace-ie.min.css" />
+		<![endif]-->
+
+		<!-- inline styles related to this page -->
+
+		<!-- ace settings handler -->
+
+		<script src="assets/js/ace-extra.min.js"></script>
+
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+
+		<!--[if lt IE 9]>
+		<script src="assets/js/html5shiv.js"></script>
+		<script src="assets/js/respond.min.js"></script>
+		<![endif]-->
+		
+		<style type="text/css">
+			a.showimg {position: absolute;}
+			a.showimg img {display: none;margin-top: -140px;max-width: 120px;}
+			a.showimg:hover img {display: block;}
+		</style>
+	</head>
+
+	<body>
+		<div class="navbar navbar-default" id="navbar">
+
+			<script type="text/javascript">
+				try{ace.settings.check('navbar' , 'fixed')}catch(e){}
+			</script>
+
+			<div class="navbar-container" id="navbar-container">
+				<div class="navbar-header pull-left logo">
+					<a href="index.html" class="navbar-brand">
+						<small>
+							後台管理系統
+						</small>
+					</a><!-- /.brand -->
+				</div><!-- /.navbar-header -->
+
+				<div class="navbar-header pull-right" role="navigation">
+					<ul class="nav ace-nav">
+						<li class="color">
+							<a data-toggle="dropdown" class="dropdown-toggle" href="#">
+								<i class="icon-envelope icon-animated-vertical"></i>
+								<span class="badge badge-important">12</span>
+							</a>
+
+							<ul class="pull-right dropdown-navbar navbar-pink dropdown-menu dropdown-caret dropdown-times">
+								<li>
+									<a href="user_feedback.html">
+										<div class="clearfix">
+											<span class="pull-left">
+												<i class="btn btn-xs no-hover btn-success icon-user"></i>
+												客服管理
+											</span>
+											<span class="pull-right badge badge-success">+8</span>
+										</div>
+									</a>
+								</li>
+
+								<li>
+									<a href="user_feedback.html">
+										查看所有通知
+										<i class="icon-arrow-right"></i>
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li class="light-blue">
+							<a data-toggle="dropdown" href="#" class="dropdown-toggle">
+								<img class="nav-user-photo" src="assets/avatars/avatar4.png" alt="Jason's Photo" />
+								<span class="user-info">
+									<small>您好, 歡迎</small>
+									超級管理員
+								</span>
+
+								<i class="icon-caret-down"></i>
+							</a>
+
+							<ul class="user-menu pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
+								<li>
+									<a href="admin_profile.html">
+										<i class="icon-user"></i>
+										個人資料
+									</a>
+								</li>
+
+								<li class="divider"></li>
+
+								<li>
+									<a href="login.html">
+										<i class="icon-power-off"></i>
+										登 出
+									</a>
+								</li>
+							</ul>
+						</li>
+					</ul><!-- /.ace-nav -->
+				</div><!-- /.navbar-header -->
+			</div><!-- /.container -->
+		</div>
+
+		<div class="main-container" id="main-container">
+			<script type="text/javascript">
+				try{ace.settings.check('main-container' , 'fixed')}catch(e){}
+			</script>
+
+			<div class="main-container-inner">
+				<a class="menu-toggler" id="menu-toggler" href="#">
+					<span class="menu-text"></span>
+				</a>
+
+				<div class="sidebar" id="sidebar">
+					<script type="text/javascript">
+						try{ace.settings.check('sidebar' , 'fixed')}catch(e){}
+					</script>
+
+					<ul class="nav nav-list">
+						<li>
+							<a href="index.html">
+								<i class="icon-home"></i>
+								<span class="menu-text"> 首 頁 </span>
+							</a>
+						</li>
+
+						<li>
+							<a href="admin_group.html">
+								<i class="icon-user-md"></i>
+								<span class="menu-text"> 系統管理員群組 </span>
+							</a>
+						</li>
+
+						<li class="active open">
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-th"></i>
+								<span class="menu-text"> 商城商品管理 </span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="market_manager.html">
+										<i class="icon-double-angle-right"></i>
+										商品總覽
+									</a>
+								</li>
+								<li class="active">
+									<a href="market_orderlist.html">
+										<i class="icon-double-angle-right"></i>
+										訂單管理
+									</a>
+								</li>
+                                <li>
+									<a href="market_new.html">
+										<i class="icon-double-angle-right"></i>
+										新增商品
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-cloud-upload"></i>
+								<span class="menu-text"> 廣告管理 </span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="ad_manager.html">
+										<i class="icon-double-angle-right"></i>
+										廣告總覽
+									</a>
+								</li>
+                                <li>
+									<a href="ad_new.html">
+										<i class="icon-double-angle-right"></i>
+										新增廣告
+									</a>
+								</li>
+								<li>
+									<a href="ad_type.html">
+										<i class="icon-double-angle-right"></i>
+										廣告類別管理
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="#" class="dropdown-toggle"> 
+								<i class="icon-codepen"></i> <span class="menu-text"> 序號管理 </span> 
+								<b class="arrow icon-angle-down"></b>
+							</a>
+							<ul class="submenu">
+								<li>
+									<a href="sn_list.html"> <i class="icon-double-angle-right"></i> 序號總覽</a>
+								</li>
+								<li>
+									<a href="sn_create.html"> <i class="icon-double-angle-right"></i> 新增序號</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-users"></i>
+								<span class="menu-text"> 會員管理 </span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="user_group.html">
+										<i class="icon-double-angle-right"></i>
+										會員總覽
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-rocket"></i>
+								<span class="menu-text"> 商家管理 </span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="sell_manager.html">
+										<i class="icon-double-angle-right"></i>
+										商家總覽
+									</a>
+								</li>
+								<li>
+									<a href="sell_new.html">
+										<i class="icon-double-angle-right"></i>
+										新增商家
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="user_feedback.html">
+								<i class="icon-wechat"></i>
+								<span class="menu-text"> 客服管理 </span>
+							</a>
+						</li>
+
+						<li>
+							<a href="sys_postnews.html">
+								<i class="icon-laptop"></i>
+								<span class="menu-text"> 公告管理 </span>
+							</a>
+						</li>
+
+						<li>
+							<a href="sys_announcement.html">
+								<i class="icon-bullhorn"></i>
+								<span class="menu-text"> 消息管理 </span>
+							</a>
+						</li>
+
+                        <li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-bar-chart-o"></i>
+								<span class="menu-text"> 數據分析 </span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="analysis_isp.html">
+										<i class="icon-double-angle-right"></i>
+										基本分析
+									</a>
+								</li>
+
+								<li>
+									<a href="analysis_local.html">
+										<i class="icon-double-angle-right"></i>
+										依地區地域分布
+									</a>
+								</li>
+								
+                                <li>
+									<a href="analysis_trend.html">
+										<i class="icon-double-angle-right"></i>
+										APP 使用次數趨勢圖
+									</a>
+								</li>
+                                <li>
+									<a href="analysis_boot.html">
+										<i class="icon-double-angle-right"></i>
+										開機次數趨勢圖
+									</a>
+								</li>
+							</ul>
+						</li>
+						
+                        <li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-adn"></i>
+								<span class="menu-text"> APP 類別管理 </span>
+                                <b class="arrow icon-angle-down"></b>
+							</a>
+                            
+                            <ul class="submenu">
+								<li>
+									<a href="app_catalog.html">
+										<i class="icon-double-angle-right"></i>
+										APP 類型歸類對應
+									</a>
+								</li>
+
+								<li>
+									<a href="mobile_device.html">
+										<i class="icon-double-angle-right"></i>
+										手機型號裝置對應
+									</a>
+								</li>
+							</ul>
+						</li>
+					</ul><!-- /.nav-list -->
+
+					<div class="sidebar-collapse" id="sidebar-collapse">
+						<i class="icon-angle-double-left" data-icon1="icon-angle-double-left" data-icon2="icon-angle-double-right"></i>
+					</div>
+
+					<script type="text/javascript">
+						try{ace.settings.check('sidebar' , 'collapsed')}catch(e){}
+					</script>
+				</div>
+
+				<div class="main-content">
+					<div class="breadcrumbs" id="breadcrumbs">
+						<script type="text/javascript">
+							try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
+						</script>
+
+						<ul class="breadcrumb">
+							<li>
+								<i class="icon-home home-icon"></i>
+								<a href="index.html">Home</a>
+							</li>
+							<li><a href="market_orderlist.html">訂單管理</a></li>
+							<li class="active">訂單明細</li>
+						</ul><!-- .breadcrumb -->
+
+						<div class="nav-search" id="nav-search">
+							<form class="form-search">
+								<span class="input-icon">
+									<input type="text" placeholder="搜尋 ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
+									<i class="icon-search nav-search-icon"></i>
+								</span>
+							</form>
+						</div><!-- #nav-search -->
+					</div>
+
+					<div class="page-content">
+						<div class="page-header">
+							<h1>
+								<i class="icon-file-o"></i>
+								訂單明細資料
+								<small>
+									<i class="icon-angle-double-right"></i>
+								    訂單編號：S1410210000258AGX
+								</small>
+								<div class="pull-right">
+									<button class="btn btn-danger bootbox-confirm" type="button"><i class="icon-trash-o bigger-110"></i>刪 除</button>
+								</div>
+							</h1>
+						</div>
+
+						<div class="row">
+							<div class="col-sm-12">
+								<!-- PAGE CONTENT BEGINS -->
+
+								<form class="form-horizontal" role="form">
+								
+									<!-- <div class="form-group">
+										<div class="col-sm-12">
+											<label>親愛的 X XX 先生/小姐 您好：</label>
+											<p>感謝您在 後台管理系統 的店家訂購商品，以下為店家聯絡方式與您此次的訂單內容，若有任何訂單相關問題， 請以訂單編號向店家查詢！
+											<br/><span class="pink"><此通知信僅表示店家已收到您的訂購需求，店家仍保有接單及出貨與否的權利。></span>
+											</p>
+										</div>
+									</div> --><!-- 此列可隱藏 -->
+
+									<!-- <div class="hr hr10 hr-dotted"></div> -->
+
+									<h5><i class="icon-angle-left blue"></i><i class="icon-file-text-o"></i>訂單資訊 <i class="icon-angle-right blue"></i></h5>
+
+									<div class="form-group">
+										<div class="col-sm-6"><i class="icon-file-code-o grey"></i> 訂單編號：S1410210000258AGX</div>
+										<div class="col-sm-6"><i class="icon-user grey"></i> &nbsp;會 員 ID&nbsp;：FSV13610004640</div>
+										<div class="col-sm-6"><i class="icon-clock-o grey"></i> 訂購日期：2014/08/31 14:33:42</div>
+										<div class="col-sm-6"><i class="icon-cube grey"></i> 商品數量：1</div>
+										<div class="col-sm-6"><i class="icon-clock-o grey"></i> 取貨期限：<i class="red">2014/12/31 12:00:00</i></div>
+										<div class="col-sm-6"><i class="icon-building-o grey"></i> 店家名稱：全家</div>
+										<!-- <div class="col-sm-6 light-grey"><i class="icon-male"></i>　訂 購 人：未填寫</div>
+										<div class="col-sm-6 light-grey"><i class="icon-envelope-o"></i> 電子郵件：unknow@yahoo.com.tw</div>
+										<div class="col-sm-6 light-grey"><i class="icon-truck"></i> 配送方式：自取</div>
+										<div class="col-sm-6 light-grey"><i class="icon-credit-card"></i> 付款方式：ATM轉帳</div> -->
+									</div>
+									
+									<div class="hr hr10 hr-dotted"></div>
+									
+									<h5><i class="icon-angle-left blue"></i><i class="icon-archive"></i>商品資訊 <i class="icon-angle-right blue"></i></h5>
+									<div class="form-group">
+										<div class="col-sm-6"><i class="icon-arrow-circle-o-right light-grey"></i>商品名稱：<a class="showimg" href="market_view.html" target="_blank">日本HELLO KITTY 濕巾盒 <i class="icon-external-link"></i><img src="assets/images/gallery/thumb-1.jpg"></a></div>
+										<div class="col-sm-6"><i class="icon-arrow-circle-o-right light-grey"></i>商品品號：ICE-123F45025</div>
+										<div class="col-sm-6"><i class="icon-arrow-circle-o-right light-grey"></i>扣除點數：<span class="blue">95點</span></div>
+										<div class="col-sm-6"><i class="icon-arrow-circle-o-right light-grey"></i>購買數量：1</div>
+										<div class="col-sm-6"><i class="icon-arrow-circle-o-right light-grey"></i>應付金額：<span class="red">95元</span></div>
+										<!-- <div class="col-sm-6"><i class="icon-arrow-circle-o-right light-grey"></i>小　　計：95點 + 270元</div> -->
+									</div>
+
+									<div class="hr hr10 hr-dotted"></div>
+									
+									<table class="table table-striped table-bordered table-hover">
+										<caption style="background-color:#438EB9;color:#fff;padding:6px">
+											<div class="col-sm-6 text-left"><i class="icon-ticket hidden-480"></i>折價劵 / 優惠劵 (3)</div>
+											<div class="col-sm-6 text-right"><i class="icon-clock-o hidden-480"></i>取貨期限：2014/12/31 12:00:00</div>
+										</caption>
+										<thead>
+											<tr>
+												<th>編 號</th>
+												<th>憑證種類</th>
+												<th>使用狀態</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>ICE-123F45030</td>
+												<td>一維碼</td>
+												<td><span class="green">已使用</span></td>
+											</tr>
+											<tr>
+												<td>ICE-123F45031</td>
+												<td>一維碼</td>
+												<td>未使用</td>
+											</tr>
+											<tr>
+												<td>ICE-123F45032</td>
+												<td>PINCODE</td>
+												<td>&nbsp;</td>
+											</tr>
+										</tbody>
+									</table>
+
+									<!-- <div class="form-group light-grey">
+										<label class="col-sm-2 control-label no-padding-right">$ 折扣合計 </label>
+										<div class="col-sm-2">
+											<p class="bigger-130">0</p>
+										</div>
+										<label class="col-sm-2 control-label no-padding-right">$ 稅 率 </label>
+										<div class="col-sm-2">
+											<p class="bigger-130">0</p>
+										</div>
+										<label class="col-sm-2 control-label no-padding-right">$ 運 費 </label>
+										<div class="col-sm-2">
+											<p class="bigger-130">0</p>
+										</div>
+									</div> -->
+									
+									<div class="form-group">
+										<label class="col-sm-2 col-sm-offset-4 control-label no-padding-right">應付點數 </label>
+										<div class="col-sm-2">
+											<p class="blue bigger-160">95 點</p>
+										</div>
+										<label class="col-sm-2 control-label no-padding-right">應付金額 </label>
+										<div class="col-sm-2">
+											<p class="red bigger-160">270 元</p>
+										</div>
+									</div>
+
+									<div class="hr hr20 hr-dotted"></div>
+									
+									<!-- <p><i class="icon-exclamation-triangle orange"></i>如果要查詢訂單詳細內容，請至點賺官方網站查詢購買紀錄。</p> -->
+									<p><i class="icon-exclamation-triangle orange"></i>注意事項<br/>
+									※ 後台管理系統 APP 僅提供交易平台，所有訂單交易(包括商品銷售、取消訂單、出貨及退換貨....等)均由店家處理，若有相關問題請直接與您購買商品的店家聯絡。</p>
+
+									<div class="clearfix form-actions center">
+											<button class="btn" type="button" onclick="location.href='market_orderlist.html'">
+												<i class="icon-arrow-left bigger-110"></i>
+												上一頁
+											</button>
+											&nbsp;
+											<button class="btn btn-info" type="button" disabled>
+												<i class="icon-pencil bigger-110"></i>
+												編 輯
+											</button>
+											&nbsp;
+											<button class="btn btn-danger bootbox-confirm" type="button">
+												<i class="icon-trash-o bigger-110"></i>
+												刪 除
+											</button>
+									</div><!-- button submit -->
+
+								</form><!-- /.form-horizontal -->
+
+								<div class="hr hr32 hr-dotted"></div>
+
+								<!-- PAGE CONTENT ENDS -->
+							</div><!-- /.col -->
+						</div><!-- /.row -->
+					</div><!-- /.page-content -->
+				</div><!-- /.main-content -->
+
+			</div><!-- /.main-container-inner -->
+
+			<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+				<i class="icon-angle-double-up icon-only bigger-110"></i>
+			</a>
+		</div><!-- /.main-container -->
+
+		<!-- basic scripts -->
+
+		<!--[if !IE]> -->
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+		<!-- <![endif]-->
+
+		<!--[if IE]>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<![endif]-->
+
+		<!--[if !IE]> -->
+
+		<script type="text/javascript">
+			window.jQuery || document.write("<script src='assets/js/jquery-2.0.3.min.js'>"+"<"+"/script>");
+		</script>
+
+		<!-- <![endif]-->
+
+		<!--[if IE]>
+		<script type="text/javascript">
+		 window.jQuery || document.write("<script src='assets/js/jquery-1.10.2.min.js'>"+"<"+"/script>");
+		</script>
+		<![endif]-->
+
+		<script type="text/javascript">
+			if("ontouchend" in document) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+		</script>
+		<script src="assets/js/bootstrap.min.js"></script>
+		<script src="assets/js/typeahead-bs2.min.js"></script>
+
+		<!-- page specific plugin scripts -->
+
+		<script src="assets/js/bootbox.min.js"></script>
+
+
+		<!-- ace scripts -->
+
+		<script src="assets/js/ace-elements.min.js"></script>
+		<script src="assets/js/ace.min.js"></script>
+
+		<!-- inline scripts related to this page -->
+		<script type="text/javascript">
+			jQuery(function($) {
+
+				$('[data-rel=tooltip]').tooltip();
+
+                /// Confirm Dialog///
+					
+				$(".bootbox-confirm").on(ace.click_event, function() {
+					bootbox.confirm("確定刪除？", function(result) {
+						if(result) {
+							//
+						}
+					});
+				});
+
+			})
+		</script>
+
+	</body>
+</html>

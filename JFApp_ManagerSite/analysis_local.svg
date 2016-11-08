@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 17.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" [
+	<!ENTITY ns_flows "http://ns.adobe.com/Flows/1.0/">
+	<!ENTITY ns_extend "http://ns.adobe.com/Extensibility/1.0/">
+	<!ENTITY ns_ai "http://ns.adobe.com/AdobeIllustrator/10.0/">
+	<!ENTITY ns_graphs "http://ns.adobe.com/Graphs/1.0/">
+]>
+<svg version="1.1" id="圖層_1" xmlns:x="&ns_extend;" xmlns:i="&ns_ai;" xmlns:graph="&ns_graphs;"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+	 x="0px" y="0px" width="800px" height="500px" viewBox="0 0 800 500" enable-background="new 0 0 800 500" xml:space="preserve">
+<text transform="matrix(1 0 0 1 671.8927 198.769)" fill="#FF2300" font-family="'Helvetica-Narrow-Bold'" font-size="33.6">851</text>
+<text transform="matrix(1 0 0 1 496.835 198.7696)" fill="#0064DC" font-family="'Helvetica-Narrow-Bold'" font-size="33.6">1,385</text>
+<text transform="matrix(1 0 0 1 671.8937 261.9869)" fill="#0064DC" font-family="'Helvetica-Narrow-Bold'" font-size="20.8">75%</text>
+<text transform="matrix(1 0 0 1 671.8937 284.8502)" fill="#ED1C24" font-family="'Helvetica-Narrow-Bold'" font-size="20.8">65%</text>
+<g id="android_5_" enable-background="new    ">
+	<g id="android_6_">
+		<g>
+			<path fill="#39B54A" d="M630.4,271.875c0,1.046,0.117,1.541,1.133,1.541h1.33c-0.044,0-0.063,0.681-0.063,0.854v3.793
+				c0,0.992,1.036,1.796,2,1.796c0.964,0,2-0.805,2-1.796v-3.793c0-0.173-0.54-0.854-0.584-0.854h3.242
+				c-0.044,0,0.542,0.681,0.542,0.854v3.793c0,0.992,0.636,1.796,1.6,1.796c0.964,0,1.6-0.805,1.6-1.796v-3.793
+				c0-0.173-0.345-0.854-0.39-0.854h1.33c1.016,0,2.26-0.495,2.26-1.541v-13.659h-16V271.875z M627.2,258.7
+				c-0.964,0-1.6,0.804-1.6,1.796v7.685c0,0.992,0.636,1.796,1.6,1.796c0.964,0,1.6-0.805,1.6-1.796v-7.685
+				C628.8,259.505,628.164,258.7,627.2,258.7z M649.2,258.7c-0.964,0-2,0.804-2,1.796v7.685c0,0.992,1.036,1.796,2,1.796
+				c0.964,0,2-0.805,2-1.796v-7.685C651.2,259.505,650.164,258.7,649.2,258.7z M641.842,251.467l0.328-0.484l0.323-0.488
+				l0.725-1.115c0.089-0.138,0.053-0.321-0.08-0.412c-0.134-0.092-0.315-0.054-0.404,0.084l-0.778,1.202l-0.327,0.505l-0.332,0.512
+				c-1.051-0.419-2.224-0.655-3.461-0.655c-1.237,0-2.41,0.235-3.46,0.654l-0.331-0.512l-0.327-0.505l-0.779-1.201
+				c-0.089-0.138-0.27-0.175-0.404-0.083c-0.133,0.092-0.17,0.277-0.08,0.415l0.725,1.12l0.323,0.499l0.328,0.463
+				c-2.469,1.184-4.14,3.549-4.14,5.949h16.29C645.982,255.016,644.311,252.651,641.842,251.467z M634.346,255.108
+				c-0.482,0-0.873-0.403-0.873-0.898s0.391-0.897,0.873-0.897c0.482,0,0.873,0.402,0.873,0.897S634.828,255.108,634.346,255.108z
+				 M641.327,255.108c-0.482,0-0.872-0.403-0.872-0.898s0.391-0.897,0.872-0.897c0.482,0,0.873,0.402,0.873,0.897
+				C642.199,254.705,641.809,255.108,641.327,255.108z"/>
+		</g>
+	</g>
+</g>
+<g id="apple_5_" enable-background="new    ">
+	<g id="apple_6_">
+		<g>
+			<path fill="#CCCCCC" d="M470.756,257.284c1.097-1.238,1.838-2.959,1.636-4.672c-1.581,0.059-3.496,0.978-4.631,2.215
+				c-1.017,1.098-1.906,2.846-1.669,4.528C467.857,259.483,469.657,258.52,470.756,257.284z M474.714,268.161
+				c-0.04-3.707,3.247-5.484,3.395-5.574c-1.847-2.514-4.725-2.859-5.749-2.898c-2.448-0.231-4.777,1.342-6.02,1.342
+				c-1.239,0-3.157-1.308-5.187-1.275c-2.67,0.037-5.13,1.445-6.504,3.67c-2.773,4.477-0.709,11.112,1.993,14.745
+				c1.321,1.776,2.896,3.775,4.962,3.701c1.992-0.073,2.744-1.199,5.151-1.199c2.408,0,3.084,1.199,5.19,1.162
+				c2.142-0.036,3.499-1.81,4.81-3.593c1.517-2.063,2.141-4.062,2.178-4.163C478.885,274.059,474.757,272.587,474.714,268.161z"/>
+		</g>
+	</g>
+</g>
+<text transform="matrix(1 0 0 1 496.8352 265.6793)" fill="#0064DC" font-family="'Helvetica-Narrow-Bold'" font-size="20.8">25%</text>
+<text transform="matrix(1 0 0 1 496.835 288.5417)" fill="#ED1C24" font-family="'Helvetica-Narrow-Bold'" font-size="20.8">35%</text>
+<text transform="matrix(1 0 0 1 721.7432 261.9869)" fill="#0064DC" font-family="'Helvetica-Narrow-Bold'" font-size="20.8">1220</text>
+<text transform="matrix(1 0 0 1 721.7432 284.8502)" fill="#ED1C24" font-family="'Helvetica-Narrow-Bold'" font-size="20.8">715</text>
+<text transform="matrix(1 0 0 1 545.8849 265.6793)" fill="#0064DC" font-family="'Helvetica-Narrow-Bold'" font-size="20.8">165</text>
+<text transform="matrix(1 0 0 1 545.8849 288.5417)" fill="#ED1C24" font-family="'Helvetica-Narrow-Bold'" font-size="20.8">136</text>
+<rect x="354" y="327.416" fill="none" stroke="#B3B3B3" stroke-miterlimit="10" width="80" height="24"/>
+<text transform="matrix(1 0 0 1 364.8223 344.8716)" fill="#333333" font-family="'MicrosoftJhengHeiRegular'"  a:adobe-font-script="chineseTraditional" font-size="12.8">年齡分布</text>
+<text transform="matrix(1 0 0 1 351.7578 132.4111)" fill="#333333" font-family="'MicrosoftJhengHeiRegular'"  a:adobe-font-script="chineseTraditional" font-size="16.8">本月會員</text>
+<g>
+	<g>
+		<g>
+			<g>
+				<path fill-rule="evenodd" clip-rule="evenodd" fill="#E6E6E6" stroke="#FFFFFF" stroke-miterlimit="10" d="M557.276,416.856
+					l-7.416-38.152c2.528-0.492,4.84-0.714,7.416-0.714V416.856z"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<path fill-rule="evenodd" clip-rule="evenodd" fill="#ED1C7C" d="M557.276,416.856H518.41c0-18.889,12.908-34.548,31.45-38.152
+					L557.276,416.856z"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<path fill-rule="evenodd" clip-rule="evenodd" fill="#00B6E7" stroke="#FFFFFF" stroke-miterlimit="10" d="M557.276,416.856
+					l22.845,31.443c-17.366,12.617-41.671,8.767-54.288-8.598c-5.047-6.946-7.423-14.259-7.423-22.845H557.276z"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<path fill="#FCE650" stroke="#FFFFFF" stroke-miterlimit="10" d="M557.276,416.856V377.99c21.465,0,38.866,17.401,38.866,38.866
+					c0,12.879-5.602,23.873-16.021,31.443L557.276,416.856z"/>
+			</g>
+		</g>
+	</g>
+	<g>
+		<g>
+		</g>
+		<g>
+		</g>
+		<g>
+		</g>
+		<g>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<g>
+			<g>
+				<path fill-rule="evenodd" clip-rule="evenodd" fill="#E6E6E6" stroke="#FFFFFF" stroke-miterlimit="10" d="M704.023,416.856
+					l-10.059-37.542c3.317-0.889,6.625-1.324,10.059-1.324V416.856z"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<path fill-rule="evenodd" clip-rule="evenodd" fill="#ED1C7C" d="M704.023,416.856l-38.813-2.034
+					c0.899-17.149,12.167-31.063,28.754-35.508L704.023,416.856z"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<path fill-rule="evenodd" clip-rule="evenodd" fill="#00B6E7" stroke="#FFFFFF" stroke-miterlimit="10" d="M704.023,416.856
+					l36.964,12.01c-6.633,20.415-28.56,31.587-48.974,24.954c-17.148-5.572-27.746-20.992-26.803-38.998L704.023,416.856z"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<path fill="#FCE650" stroke="#FFFFFF" stroke-miterlimit="10" d="M704.023,416.856V377.99c21.465,0,38.866,17.401,38.866,38.866
+					c0,4.293-0.576,7.927-1.902,12.01L704.023,416.856z"/>
+			</g>
+		</g>
+	</g>
+	<g>
+		<g>
+		</g>
+		<g>
+		</g>
+		<g>
+		</g>
+		<g>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<g>
+			<g>
+				<path fill="#E6E6E6" stroke="#FFFFFF" stroke-miterlimit="10" d="M410.947,414.527l-2.711-38.771
+					c0.857-0.06,1.853-0.095,2.711-0.095V414.527z"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<path fill="#ED1C7C" stroke="#FFFFFF" stroke-miterlimit="10" d="M410.947,414.527l-37.712-9.403
+					c4.154-16.662,17.87-28.171,35-29.369L410.947,414.527z"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<path fill="#00B6E7" stroke="#FFFFFF" stroke-miterlimit="10" d="M410.947,414.527l24.983,29.773
+					c-16.443,13.798-40.958,11.653-54.756-4.791c-8.279-9.866-11.054-21.889-7.938-34.385L410.947,414.527z"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<path fill="#FCE650" stroke="#FFFFFF" stroke-miterlimit="10" d="M410.947,414.527v-38.866
+					c21.465,0,38.866,17.401,38.866,38.866c0,12.02-4.675,22.047-13.883,29.773L410.947,414.527z"/>
+			</g>
+		</g>
+	</g>
+	<g>
+		<g>
+		</g>
+		<g>
+		</g>
+		<g>
+		</g>
+		<g>
+		</g>
+	</g>
+</g>
+<g>
+	
+		<text transform="matrix(1 0 0 1 472.3624 342.813)" fill="#333333" font-family="'MicrosoftJhengHeiBold'"  a:adobe-font-script="chineseTraditional" font-size="12.8">0-20</text>
+</g>
+<rect x="453.6" y="332.616" fill="#FCE650" width="12.8" height="12.8"/>
+<rect x="518.4" y="332.616" fill="#00B6E7" width="12.8" height="12.8"/>
+<rect x="591.2" y="332.616" fill="#ED1C7C" width="12.8" height="12.8"/>
+<rect x="661.6" y="332.616" fill="#CCCCCC" width="12.8" height="12.8"/>
+<g>
+	<path fill="#0064DC" d="M466.298,177.171c2.019-0.041,3.66-1.698,3.66-3.736s-1.641-3.694-3.66-3.736
+		c-2.019,0.041-3.66,1.698-3.66,3.736S464.28,177.13,466.298,177.171z"/>
+	<path fill="#0064DC" d="M473.127,178.667l-6.712-0.776l-6.803,0.776c-0.512,0-1.212,0.38-1.212,0.893v10.871
+		c0,0.512,0.146,0.585,0.658,0.585h0.466c0.512,0,1.276-0.073,1.276-0.585v-7.842c0-0.512,0.237-0.544,0.387-0.544
+		c0.149,0,0.413,0.031,0.413,0.544v24.614c0,0.512,0.619,0.614,1.131,0.614h0.854c0.512,0,1.215-0.101,1.215-0.614v-11.298
+		c0-0.512,0.136-0.889,0.649-0.889h0.815h0.815c0.512,0,0.921,0.376,0.921,0.889v11.298c0,0.512,0.431,0.614,0.943,0.614h0.854
+		c0.512,0,1.403-0.101,1.403-0.614v-24.614c0-0.512,0.251-0.544,0.4-0.544s0.4,0.031,0.4,0.544v7.842
+		c0,0.512,0.196,0.585,0.708,0.585h0.525c0.512,0,1.167-0.073,1.167-0.585V179.56C474.4,179.048,473.64,178.667,473.127,178.667z"/>
+</g>
+<g>
+	<path fill="#FF2300" d="M644.782,178.669l-6.679-0.776l-6.763,0.776c-0.512,0-0.939,0.38-0.939,0.893v10.871
+		c0,0.512,0.511,0.584,1.023,0.584h0.621c0.512,0,0.755-0.071,0.755-0.584v-7.842c0-0.512,0.23-0.544,0.379-0.544
+		s0.227,0.056,0.326,0.544l1.05,5.793l-3.541,9.833h2.586v8.988c0,0.512,0.339,0.612,0.852,0.612h0.854
+		c0.512,0,0.694-0.1,0.694-0.612v-8.988h2.14H640v8.988c0,0.512,0.461,0.612,0.974,0.612h0.854c0.513,0,0.572-0.1,0.572-0.612
+		v-8.988h2.866l-3.568-9.833l1.023-5.895c0.099-0.488,0.09-0.493,0.24-0.493s0.24,0.082,0.24,0.595v7.842
+		c0,0.512,0.523,0.584,1.035,0.584h0.621c0.512,0,0.744-0.071,0.744-0.584v-10.871C645.6,179.049,645.294,178.669,644.782,178.669z"
+		/>
+	<path fill="#FF2300" d="M638.023,177.175c0.026,0,0.039-0.001,0.116-0.002c0.078,0.001,0.09,0.002,0.116,0.002
+		c2.064,0,3.738-1.674,3.738-3.738c0-2.064-1.674-3.738-3.738-3.738c-0.026,0-0.039,0.001-0.116,0.002
+		c-0.078-0.001-0.09-0.002-0.116-0.002c-2.064,0-3.738,1.674-3.738,3.738C634.285,175.501,635.959,177.175,638.023,177.175z"/>
+</g>
+<rect x="15.6" y="20.216" fill="#F2F2F2" stroke="#CCCCCC" stroke-miterlimit="10" width="301.6" height="35.2"/>
+<rect x="15.6" y="55.416" fill="#FFFFFF" stroke="#CCCCCC" stroke-miterlimit="10" width="301.6" height="54.4"/>
+<rect x="15.6" y="109.816" fill="#FFFFFF" stroke="#CCCCCC" stroke-miterlimit="10" width="301.6" height="51.2"/>
+<rect x="15.6" y="161.016" fill="#FFFFFF" stroke="#CCCCCC" stroke-miterlimit="10" width="301.6" height="52.8"/>
+<rect x="15.6" y="213.816" fill="#FFFFFF" stroke="#CCCCCC" stroke-miterlimit="10" width="301.6" height="52.8"/>
+<rect x="15.6" y="266.616" fill="#FFFFFF" stroke="#CCCCCC" stroke-miterlimit="10" width="301.6" height="52.8"/>
+<rect x="15.6" y="319.416" fill="#FFFFFF" stroke="#CCCCCC" stroke-miterlimit="10" width="301.6" height="52.8"/>
+<rect x="15.6" y="372.216" fill="#FFFFFF" stroke="#CCCCCC" stroke-miterlimit="10" width="301.6" height="52.8"/>
+<text transform="matrix(1 0 0 1 73.9263 81.0351)"><tspan x="0" y="0" font-family="'MicrosoftJhengHeiRegular'"  a:adobe-font-script="chineseTraditional" font-size="14.4">中華電信</tspan><tspan x="0" y="52.8" font-family="'MicrosoftJhengHeiRegular'"  a:adobe-font-script="chineseTraditional" font-size="14.4">台灣大</tspan><tspan x="0" y="105.6" font-family="'MicrosoftJhengHeiRegular'"  a:adobe-font-script="chineseTraditional" font-size="14.4">亞太電信</tspan><tspan x="0" y="158.4" font-family="'MicrosoftJhengHeiRegular'"  a:adobe-font-script="chineseTraditional" font-size="14.4">威寶電信</tspan><tspan x="0" y="211.2" font-family="'MicrosoftJhengHeiRegular'"  a:adobe-font-script="chineseTraditional" font-size="14.4">遠傳電信</tspan><tspan x="0" y="264" font-family="'MicrosoftJhengHeiRegular'"  a:adobe-font-script="chineseTraditional" font-size="14.4">大眾電信</tspan><tspan x="0" y="316.8" font-family="'MicrosoftJhengHeiRegular'"  a:adobe-font-script="chineseTraditional" font-size="14.4">其他業者</tspan></text>
+<text transform="matrix(1 0 0 1 59.6446 44.0278)" fill="#333333" font-family="'MicrosoftJhengHeiBold'"  a:adobe-font-script="chineseTraditional" font-size="14.4">電信系統商</text>
+<text transform="matrix(1 0 0 1 239.5558 44.0278)" fill="#0064DC" font-family="'MicrosoftJhengHeiBold'"  a:adobe-font-script="chineseTraditional" font-size="14.4">男</text>
+<text transform="matrix(1 0 0 1 282.7559 44.0278)" fill="#FF2300" font-family="'MicrosoftJhengHeiBold'"  a:adobe-font-script="chineseTraditional" font-size="14.4">女</text>
+<text transform="matrix(1 0 0 1 609.4337 342.8131)" fill="#333333" font-family="'MicrosoftJhengHeiBold'"  a:adobe-font-script="chineseTraditional" font-size="12.8">41-60</text>
+<line fill="none" stroke="#CCCCCC" stroke-miterlimit="10" x1="353.6" y1="229.816" x2="784" y2="229.816"/>
+<line fill="none" stroke="#CCCCCC" stroke-miterlimit="10" x1="353.6" y1="309.816" x2="784" y2="309.816"/>
+<line fill="none" stroke="#CCCCCC" stroke-miterlimit="10" x1="353.6" y1="149.816" x2="784" y2="149.816"/>
+<line fill="none" stroke="#CCCCCC" stroke-miterlimit="10" x1="353.6" y1="93.016" x2="784" y2="93.016"/>
+<text transform="matrix(1 0 0 1 351.7578 176.3696)" fill="#333333" font-family="'MicrosoftJhengHeiRegular'"  a:adobe-font-script="chineseTraditional" font-size="16.8">性 別</text>
+<text transform="matrix(1 0 0 1 351.7578 257.0094)" fill="#333333" font-family="'MicrosoftJhengHeiRegular'"  a:adobe-font-script="chineseTraditional" font-size="16.8">手機系統</text>
+<text transform="matrix(1 0 0 1 394.4189 479.4898)" fill="#333333" font-family="'MicrosoftJhengHeiRegular'"  a:adobe-font-script="chineseTraditional" font-size="16.8">所有</text>
+<text transform="matrix(1 0 0 1 539.2003 479.4898)" fill="#333333" font-family="'MicrosoftJhengHeiRegular'"  a:adobe-font-script="chineseTraditional" font-size="16.8">男性</text>
+<text transform="matrix(1 0 0 1 687.218 479.4898)" fill="#333333" font-family="'MicrosoftJhengHeiRegular'"  a:adobe-font-script="chineseTraditional" font-size="16.8">女性</text>
+<text transform="matrix(1 0 0 1 681.4336 342.813)" fill="#333333" font-family="'MicrosoftJhengHeiBold'"  a:adobe-font-script="chineseTraditional" font-size="12.8">61-80</text>
+<text transform="matrix(1 0 0 1 536.3624 342.813)" fill="#333333" font-family="'MicrosoftJhengHeiBold'"  a:adobe-font-script="chineseTraditional" font-size="12.8">21-40</text>
+<text transform="matrix(1 0 0 1 724.383 411.4166)" fill="#333333" font-family="'Helvetica-Narrow-Bold'" font-size="14.4">30%</text>
+<text transform="matrix(1 0 0 1 692.2014 447.3239)" fill="#333333" font-family="'Helvetica-Narrow-Bold'" font-size="14.4">46%</text>
+<text transform="matrix(1 0 0 1 663.4015 406.2163)" fill="#333333" font-family="'Helvetica-Narrow-Bold'" font-size="14.4">20%</text>
+<text transform="matrix(1 0 0 1 689.8858 378.1373)" fill="#333333" font-family="'Helvetica-Narrow-Bold'" font-size="14.4">4%</text>
+<text transform="matrix(1 0 0 1 578.7647 411.4166)" fill="#333333" font-family="'Helvetica-Narrow-Bold'" font-size="14.4">40%</text>
+<text transform="matrix(1 0 0 1 546.5842 447.3239)" fill="#333333" font-family="'Helvetica-Narrow-Bold'" font-size="14.4">35%</text>
+<text transform="matrix(1 0 0 1 518.5842 402.2163)" fill="#333333" font-family="'Helvetica-Narrow-Bold'" font-size="14.4">22%</text>
+<text transform="matrix(1 0 0 1 544.2677 378.1373)" fill="#333333" font-family="'Helvetica-Narrow-Bold'" font-size="14.4">3%</text>
+<text transform="matrix(0.9887 0 0 1 433.6221 411.4156)" fill="#333333" font-family="'Helvetica-Narrow-Bold'" font-size="14.4">39%</text>
+<text transform="matrix(1 0 0 1 402.2413 447.3239)" fill="#333333" font-family="'Helvetica-Narrow-Bold'" font-size="14.4">40%</text>
+<text transform="matrix(1 0 0 1 376.6413 394.2164)" fill="#333333" font-family="'Helvetica-Narrow-Bold'" font-size="14.4">20%</text>
+<text transform="matrix(1 0 0 1 399.925 378.1373)" fill="#333333" font-family="'Helvetica-Narrow-Bold'" font-size="14.4">1%</text>
+<g>
+	<path fill="#0064DC" d="M230.291,33.624c0.847-0.017,1.536-0.713,1.536-1.568c0-0.856-0.689-1.551-1.536-1.568
+		c-0.847,0.017-1.536,0.713-1.536,1.568C228.755,32.911,229.444,33.607,230.291,33.624z"/>
+	<path fill="#0064DC" d="M233.112,34.252l-2.795-0.326l-2.732,0.326c-0.215,0-0.385,0.16-0.385,0.375v4.563
+		c0,0.215-0.163,0.626,0.052,0.626h0.196c0.215,0,0.552-0.411,0.552-0.626v-3.292c0-0.215-0.068-0.228-0.006-0.228
+		S228,35.683,228,35.898V46.23c0,0.215,0.579-0.014,0.794-0.014h0.359c0.215,0,0.448,0.229,0.448,0.014v-4.742
+		c0-0.215,0.12-0.072,0.335-0.072h0.342h0.342c0.215,0,0.581-0.143,0.581,0.072v4.742c0,0.215-0.014-0.014,0.201-0.014h0.359
+		c0.215,0,0.24,0.229,0.24,0.014V35.898c0-0.215,0.337-0.228,0.4-0.228s0.4,0.013,0.4,0.228v3.292c0,0.215-0.033,0.626,0.182,0.626
+		h0.22c0.215,0,0.398-0.411,0.398-0.626v-4.563C233.6,34.412,233.327,34.252,233.112,34.252z"/>
+</g>
+<g>
+	<path fill="#FF2300" d="M276.596,34.253l-2.734-0.326l-2.953,0.326c-0.215,0-0.509,0.16-0.509,0.375v4.563
+		c0,0.215,0.512,0.625,0.727,0.625h0.261c0.215,0,0.612-0.41,0.612-0.625v-3.292c0-0.215-0.051-0.228,0.012-0.228
+		s0.021,0.023,0.063,0.228l0.404,2.311l-1.523,4.007H272v4.015c0,0.215,0.183-0.015,0.399-0.015h0.359
+		c0.215,0,0.043,0.23,0.043,0.015v-4.015h1.147h0.453v4.015c0,0.215,0.521-0.015,0.736-0.015h0.359c0.215,0,0.505,0.23,0.505,0.015
+		v-4.015h0.938l-1.498-4.007l0.43-2.414c0.042-0.205,0.002-0.177,0.065-0.177S276,35.684,276,35.899v3.292
+		c0,0.215,0.29,0.625,0.505,0.625h0.261c0.215,0,0.034-0.41,0.034-0.625v-4.563C276.8,34.412,276.811,34.253,276.596,34.253z"/>
+	<path fill="#FF2300" d="M273.898,33.626c0.011,0,0.016-0.001,0.049-0.001c0.033,0,0.038,0.001,0.049,0.001
+		c0.867,0,1.569-0.702,1.569-1.569c0-0.867-0.702-1.569-1.569-1.569c-0.011,0-0.016,0.001-0.049,0.001
+		c-0.033,0-0.038-0.001-0.049-0.001c-0.867,0-1.569,0.702-1.569,1.569C272.329,32.923,273.031,33.626,273.898,33.626z"/>
+</g>
+<text transform="matrix(1 0 0 1 460.0001 131.878)"><tspan x="0" y="0" fill="#333333" font-family="'MicrosoftJhengHeiRegular'"  a:adobe-font-script="chineseTraditional" font-size="28.8">2,236</tspan><tspan x="73.406" y="0" fill="#333333" font-family="'MicrosoftJhengHeiRegular'"  a:adobe-font-script="chineseTraditional" font-size="33.6"> </tspan><tspan x="81.807" y="0" fill="#333333" font-family="'MicrosoftJhengHeiRegular'"  a:adobe-font-script="chineseTraditional" font-size="16.8">人</tspan></text>
+<g>
+	<path fill="#F2F2F2" d="M62,94.416c0,2.75-2.25,5-5,5H33.4c-2.75,0-5-2.25-5-5v-23.6c0-2.75,2.25-5,5-5H57c2.75,0,5,2.25,5,5
+		V94.416z"/>
+	<path fill="none" stroke="#E6E6E6" stroke-miterlimit="10" d="M62,94.416c0,2.75-2.25,5-5,5H33.4c-2.75,0-5-2.25-5-5v-23.6
+		c0-2.75,2.25-5,5-5H57c2.75,0,5,2.25,5,5V94.416z"/>
+</g>
+<g>
+	<path fill="#F2F2F2" d="M62,147.216c0,2.75-2.25,5-5,5H33.4c-2.75,0-5-2.25-5-5v-23.6c0-2.75,2.25-5,5-5H57c2.75,0,5,2.25,5,5
+		V147.216z"/>
+	<path fill="none" stroke="#E6E6E6" stroke-miterlimit="10" d="M62,147.216c0,2.75-2.25,5-5,5H33.4c-2.75,0-5-2.25-5-5v-23.6
+		c0-2.75,2.25-5,5-5H57c2.75,0,5,2.25,5,5V147.216z"/>
+</g>
+<g>
+	<path fill="#F2F2F2" d="M62,199.216c0,2.75-2.25,5-5,5H33.4c-2.75,0-5-2.25-5-5v-23.6c0-2.75,2.25-5,5-5H57c2.75,0,5,2.25,5,5
+		V199.216z"/>
+	<path fill="none" stroke="#E6E6E6" stroke-miterlimit="10" d="M62,199.216c0,2.75-2.25,5-5,5H33.4c-2.75,0-5-2.25-5-5v-23.6
+		c0-2.75,2.25-5,5-5H57c2.75,0,5,2.25,5,5V199.216z"/>
+</g>
+<g>
+	<path fill="#F2F2F2" d="M62,252.016c0,2.75-2.25,5-5,5H33.4c-2.75,0-5-2.25-5-5v-23.6c0-2.75,2.25-5,5-5H57c2.75,0,5,2.25,5,5
+		V252.016z"/>
+	<path fill="none" stroke="#E6E6E6" stroke-miterlimit="10" d="M62,252.016c0,2.75-2.25,5-5,5H33.4c-2.75,0-5-2.25-5-5v-23.6
+		c0-2.75,2.25-5,5-5H57c2.75,0,5,2.25,5,5V252.016z"/>
+</g>
+<g>
+	<path fill="#F2F2F2" d="M62,304.549c0,2.75-2.25,5-5,5H33.4c-2.75,0-5-2.25-5-5v-23.6c0-2.75,2.25-5,5-5H57c2.75,0,5,2.25,5,5
+		V304.549z"/>
+	<path fill="none" stroke="#E6E6E6" stroke-miterlimit="10" d="M62,304.549c0,2.75-2.25,5-5,5H33.4c-2.75,0-5-2.25-5-5v-23.6
+		c0-2.75,2.25-5,5-5H57c2.75,0,5,2.25,5,5V304.549z"/>
+</g>
+<g>
+	<path fill="#F2F2F2" d="M62,357.083c0,2.75-2.25,5-5,5H33.4c-2.75,0-5-2.25-5-5v-23.6c0-2.75,2.25-5,5-5H57c2.75,0,5,2.25,5,5
+		V357.083z"/>
+	<path fill="none" stroke="#E6E6E6" stroke-miterlimit="10" d="M62,357.083c0,2.75-2.25,5-5,5H33.4c-2.75,0-5-2.25-5-5v-23.6
+		c0-2.75,2.25-5,5-5H57c2.75,0,5,2.25,5,5V357.083z"/>
+</g>
+<g>
+	<path fill="#F2F2F2" d="M62,409.616c0,2.75-2.25,5-5,5H33.4c-2.75,0-5-2.25-5-5v-23.6c0-2.75,2.25-5,5-5H57c2.75,0,5,2.25,5,5
+		V409.616z"/>
+	<path fill="none" stroke="#E6E6E6" stroke-miterlimit="10" d="M62,409.616c0,2.75-2.25,5-5,5H33.4c-2.75,0-5-2.25-5-5v-23.6
+		c0-2.75,2.25-5,5-5H57c2.75,0,5,2.25,5,5V409.616z"/>
+</g>
+<text transform="matrix(1 0 0 1 264.6646 79.4156)"><tspan x="0" y="0" fill="#0064DC" font-family="'MicrosoftJhengHeiBold'"  a:adobe-font-script="chineseTraditional" font-size="14.4">31%</tspan><tspan x="0" y="52.24" fill="#0064DC" font-family="'MicrosoftJhengHeiBold'"  a:adobe-font-script="chineseTraditional" font-size="14.4">26%</tspan><tspan x="0" y="104.48" fill="#0064DC" font-family="'MicrosoftJhengHeiBold'"  a:adobe-font-script="chineseTraditional" font-size="14.4">20%</tspan><tspan x="0" y="156.72" fill="#0064DC" font-family="'MicrosoftJhengHeiBold'"  a:adobe-font-script="chineseTraditional" font-size="14.4">15%</tspan><tspan x="0" y="208.96" fill="#0064DC" font-family="'MicrosoftJhengHeiBold'"  a:adobe-font-script="chineseTraditional" font-size="14.4">10%</tspan><tspan x="8.578" y="261.2" fill="#0064DC" font-family="'MicrosoftJhengHeiBold'"  a:adobe-font-script="chineseTraditional" font-size="14.4">3%</tspan><tspan x="8.578" y="313.44" fill="#0064DC" font-family="'MicrosoftJhengHeiBold'"  a:adobe-font-script="chineseTraditional" font-size="14.4">0%</tspan></text>
+<text transform="matrix(1 0 0 1 264.6646 99.2536)"><tspan x="0" y="0" fill="#FF2300" font-family="'MicrosoftJhengHeiBold'"  a:adobe-font-script="chineseTraditional" font-size="14.4">29%</tspan><tspan x="0" y="52.24" fill="#FF2300" font-family="'MicrosoftJhengHeiBold'"  a:adobe-font-script="chineseTraditional" font-size="14.4">24%</tspan><tspan x="0" y="104.48" fill="#FF2300" font-family="'MicrosoftJhengHeiBold'"  a:adobe-font-script="chineseTraditional" font-size="14.4">18%</tspan><tspan x="0" y="156.72" fill="#FF2300" font-family="'MicrosoftJhengHeiBold'"  a:adobe-font-script="chineseTraditional" font-size="14.4">12%</tspan><tspan x="0" y="208.96" fill="#FF2300" font-family="'MicrosoftJhengHeiBold'"  a:adobe-font-script="chineseTraditional" font-size="14.4">20%</tspan><tspan x="8.578" y="261.2" fill="#FF2300" font-family="'MicrosoftJhengHeiBold'"  a:adobe-font-script="chineseTraditional" font-size="14.4">1%</tspan><tspan x="8.578" y="313.44" fill="#FF2300" font-family="'MicrosoftJhengHeiBold'"  a:adobe-font-script="chineseTraditional" font-size="14.4">0%</tspan></text>
+<text transform="matrix(1 0 0 1 193.0801 79.4156)"><tspan x="0" y="0" fill="#0064DC" font-family="'MicrosoftJhengHeiBold'"  a:adobe-font-script="chineseTraditional" font-size="14.4">264</tspan><tspan x="8.578" y="52.24" fill="#0064DC" font-family="'MicrosoftJhengHeiBold'"  a:adobe-font-script="chineseTraditional" font-size="14.4">86</tspan><tspan x="8.578" y="104.48" fill="#0064DC" font-family="'MicrosoftJhengHeiBold'"  a:adobe-font-script="chineseTraditional" font-size="14.4">24</tspan><tspan x="8.578" y="156.72" fill="#0064DC" font-family="'MicrosoftJhengHeiBold'"  a:adobe-font-script="chineseTraditional" font-size="14.4">17</tspan><tspan x="0" y="208.96" fill="#0064DC" font-family="'MicrosoftJhengHeiBold'"  a:adobe-font-script="chineseTraditional" font-size="14.4">165</tspan><tspan x="8.578" y="261.2" fill="#0064DC" font-family="'MicrosoftJhengHeiBold'"  a:adobe-font-script="chineseTraditional" font-size="14.4">16</tspan><tspan x="17.156" y="313.44" fill="#0064DC" font-family="'MicrosoftJhengHeiBold'"  a:adobe-font-script="chineseTraditional" font-size="14.4">0</tspan></text>
+<text transform="matrix(1 0 0 1 74.7261 101.0157)"><tspan x="0" y="0" fill="#42210B" font-family="'MicrosoftJhengHeiRegular'"  a:adobe-font-script="chineseTraditional" font-size="14.4">391</tspan><tspan x="0" y="52.24" fill="#42210B" font-family="'MicrosoftJhengHeiRegular'"  a:adobe-font-script="chineseTraditional" font-size="14.4">154</tspan><tspan x="0" y="104.48" fill="#42210B" font-family="'MicrosoftJhengHeiRegular'"  a:adobe-font-script="chineseTraditional" font-size="14.4">54</tspan><tspan x="0" y="156.72" fill="#42210B" font-family="'MicrosoftJhengHeiRegular'"  a:adobe-font-script="chineseTraditional" font-size="14.4">46</tspan><tspan x="0" y="208.96" fill="#42210B" font-family="'MicrosoftJhengHeiRegular'"  a:adobe-font-script="chineseTraditional" font-size="14.4">282</tspan><tspan x="0" y="261.2" fill="#42210B" font-family="'MicrosoftJhengHeiRegular'"  a:adobe-font-script="chineseTraditional" font-size="14.4">27</tspan><tspan x="0" y="313.44" fill="#42210B" font-family="'MicrosoftJhengHeiRegular'"  a:adobe-font-script="chineseTraditional" font-size="14.4">0</tspan></text>
+<text transform="matrix(1 0 0 1 193.0801 99.2536)"><tspan x="0" y="0" fill="#FF2300" font-family="'MicrosoftJhengHeiBold'"  a:adobe-font-script="chineseTraditional" font-size="14.4">127</tspan><tspan x="8.578" y="52.24" fill="#FF2300" font-family="'MicrosoftJhengHeiBold'"  a:adobe-font-script="chineseTraditional" font-size="14.4">68</tspan><tspan x="8.578" y="104.48" fill="#FF2300" font-family="'MicrosoftJhengHeiBold'"  a:adobe-font-script="chineseTraditional" font-size="14.4">30</tspan><tspan x="8.578" y="156.72" fill="#FF2300" font-family="'MicrosoftJhengHeiBold'"  a:adobe-font-script="chineseTraditional" font-size="14.4">29</tspan><tspan x="0" y="208.96" fill="#FF2300" font-family="'MicrosoftJhengHeiBold'"  a:adobe-font-script="chineseTraditional" font-size="14.4">117</tspan><tspan x="8.578" y="261.2" fill="#FF2300" font-family="'MicrosoftJhengHeiBold'"  a:adobe-font-script="chineseTraditional" font-size="14.4">11</tspan><tspan x="17.156" y="313.44" fill="#FF2300" font-family="'MicrosoftJhengHeiBold'"  a:adobe-font-script="chineseTraditional" font-size="14.4">0</tspan></text>
+<path fill-rule="evenodd" clip-rule="evenodd" fill="#4D4D4D" d="M47.689,44.531c-0.698,0-1.263-0.565-1.263-1.263V29.794
+	c0-0.698,0.565-1.263,1.263-1.263s1.263,0.565,1.263,1.263v13.474C48.952,43.966,48.387,44.531,47.689,44.531 M42.636,44.531
+	c-0.698,0-1.263-0.565-1.263-1.263V33.163c0-0.698,0.565-1.263,1.263-1.263s1.263,0.565,1.263,1.263v10.105
+	C43.9,43.966,43.334,44.531,42.636,44.531 M37.584,44.531c-0.698,0-1.263-0.565-1.263-1.263v-6.737c0-0.698,0.565-1.263,1.263-1.263
+	c0.698,0,1.263,0.565,1.263,1.263v6.737C38.847,43.966,38.282,44.531,37.584,44.531 M32.531,44.531
+	c-0.698,0-1.263-0.565-1.263-1.263v-3.368c0-0.698,0.565-1.263,1.263-1.263c0.698,0,1.263,0.565,1.263,1.263v3.368
+	C33.794,43.966,33.229,44.531,32.531,44.531"/>
+<g>
+	<path fill="#FFFFFF" d="M365.541,35.752c0,1.65-1.35,3-3,3h-10c-1.65,0-3-1.35-3-3v-10c0-1.65,1.35-3,3-3h10c1.65,0,3,1.35,3,3
+		V35.752z"/>
+	<path fill="none" stroke="#CCCCCC" stroke-width="2" stroke-miterlimit="10" d="M365.541,35.752c0,1.65-1.35,3-3,3h-10
+		c-1.65,0-3-1.35-3-3v-10c0-1.65,1.35-3,3-3h10c1.65,0,3,1.35,3,3V35.752z"/>
+</g>
+<g>
+	
+		<text transform="matrix(1 0 0 1 375.2002 37.3692)" fill="#333333" font-family="'MicrosoftJhengHeiRegular'"  a:adobe-font-script="chineseTraditional" font-size="16.8">基隆市</text>
+</g>
+<path fill-rule="evenodd" clip-rule="evenodd" fill="#39B54A" d="M370.832,24.896L370.832,24.896L360.68,35.047
+	c-0.24,0.24-0.571,0.388-0.936,0.388c-0.366,0-0.697-0.148-0.937-0.388l-5.738-5.738c-0.24-0.24-0.387-0.571-0.387-0.936
+	c0-0.731,0.593-1.324,1.324-1.324c0.366,0,0.697,0.148,0.936,0.387l4.802,4.802l9.215-9.216c0.24-0.24,0.571-0.387,0.937-0.387
+	c0.731,0,1.324,0.593,1.324,1.324C371.22,24.325,371.072,24.656,370.832,24.896"/>
+<g>
+	<path fill="#FFFFFF" d="M465.541,35.752c0,1.65-1.35,3-3,3h-10c-1.65,0-3-1.35-3-3v-10c0-1.65,1.35-3,3-3h10c1.65,0,3,1.35,3,3
+		V35.752z"/>
+	<path fill="none" stroke="#CCCCCC" stroke-width="2" stroke-miterlimit="10" d="M465.541,35.752c0,1.65-1.35,3-3,3h-10
+		c-1.65,0-3-1.35-3-3v-10c0-1.65,1.35-3,3-3h10c1.65,0,3,1.35,3,3V35.752z"/>
+</g>
+<g>
+	
+		<text transform="matrix(1 0 0 1 477.4629 37.3692)" fill="#333333" font-family="'MicrosoftJhengHeiRegular'"  a:adobe-font-script="chineseTraditional" font-size="16.8">新北市</text>
+</g>
+<path fill-rule="evenodd" clip-rule="evenodd" fill="#39B54A" d="M470.832,24.896L470.832,24.896L460.68,35.047
+	c-0.24,0.24-0.571,0.388-0.936,0.388c-0.366,0-0.697-0.148-0.937-0.388l-5.738-5.738c-0.24-0.24-0.387-0.571-0.387-0.936
+	c0-0.731,0.593-1.324,1.324-1.324c0.366,0,0.697,0.148,0.936,0.387l4.802,4.802l9.215-9.216c0.24-0.24,0.571-0.387,0.937-0.387
+	c0.731,0,1.324,0.593,1.324,1.324C471.22,24.325,471.072,24.656,470.832,24.896"/>
+<g>
+	<path fill="#FFFFFF" d="M565.541,35.752c0,1.65-1.35,3-3,3h-10c-1.65,0-3-1.35-3-3v-10c0-1.65,1.35-3,3-3h10c1.65,0,3,1.35,3,3
+		V35.752z"/>
+	<path fill="none" stroke="#CCCCCC" stroke-width="2" stroke-miterlimit="10" d="M565.541,35.752c0,1.65-1.35,3-3,3h-10
+		c-1.65,0-3-1.35-3-3v-10c0-1.65,1.35-3,3-3h10c1.65,0,3,1.35,3,3V35.752z"/>
+</g>
+<g>
+	
+		<text transform="matrix(1 0 0 1 577.5411 37.3692)" fill="#333333" font-family="'MicrosoftJhengHeiRegular'"  a:adobe-font-script="chineseTraditional" font-size="16.8">台北市</text>
+</g>
+<path fill-rule="evenodd" clip-rule="evenodd" fill="#39B54A" d="M570.832,24.896L570.832,24.896L560.68,35.047
+	c-0.24,0.24-0.571,0.388-0.936,0.388c-0.366,0-0.697-0.148-0.937-0.388l-5.738-5.738c-0.24-0.24-0.388-0.571-0.388-0.936
+	c0-0.731,0.593-1.324,1.324-1.324c0.365,0,0.697,0.148,0.936,0.387l4.802,4.802l9.215-9.216c0.24-0.24,0.571-0.387,0.937-0.387
+	c0.731,0,1.324,0.593,1.324,1.324C571.22,24.325,571.072,24.656,570.832,24.896"/>
+<g>
+	<path fill="#FFFFFF" d="M465.541,68.552c0,1.65-1.35,3-3,3h-10c-1.65,0-3-1.35-3-3v-10c0-1.65,1.35-3,3-3h10c1.65,0,3,1.35,3,3
+		V68.552z"/>
+	<path fill="none" stroke="#CCCCCC" stroke-width="2" stroke-miterlimit="10" d="M465.541,68.552c0,1.65-1.35,3-3,3h-10
+		c-1.65,0-3-1.35-3-3v-10c0-1.65,1.35-3,3-3h10c1.65,0,3,1.35,3,3V68.552z"/>
+</g>
+<g>
+	
+		<text transform="matrix(1 0 0 1 477.4629 70.169)" fill="#333333" font-family="'MicrosoftJhengHeiRegular'"  a:adobe-font-script="chineseTraditional" font-size="16.8">苗栗市</text>
+</g>
+<path fill-rule="evenodd" clip-rule="evenodd" fill="#39B54A" d="M470.832,57.696L470.832,57.696L460.68,67.847
+	c-0.24,0.24-0.571,0.388-0.936,0.388c-0.366,0-0.697-0.148-0.937-0.388l-5.738-5.738c-0.24-0.24-0.387-0.571-0.387-0.936
+	c0-0.731,0.593-1.324,1.324-1.324c0.366,0,0.697,0.148,0.936,0.387l4.802,4.802l9.215-9.216c0.24-0.24,0.571-0.387,0.937-0.387
+	c0.731,0,1.324,0.593,1.324,1.324C471.22,57.125,471.072,57.456,470.832,57.696"/>
+<g>
+	<path fill="#FFFFFF" d="M565.541,68.552c0,1.65-1.35,3-3,3h-10c-1.65,0-3-1.35-3-3v-10c0-1.65,1.35-3,3-3h10c1.65,0,3,1.35,3,3
+		V68.552z"/>
+	<path fill="none" stroke="#CCCCCC" stroke-width="2" stroke-miterlimit="10" d="M565.541,68.552c0,1.65-1.35,3-3,3h-10
+		c-1.65,0-3-1.35-3-3v-10c0-1.65,1.35-3,3-3h10c1.65,0,3,1.35,3,3V68.552z"/>
+</g>
+<g>
+	
+		<text transform="matrix(1 0 0 1 577.5411 70.169)" fill="#333333" font-family="'MicrosoftJhengHeiRegular'"  a:adobe-font-script="chineseTraditional" font-size="16.8">台中市</text>
+</g>
+<path fill-rule="evenodd" clip-rule="evenodd" fill="#39B54A" d="M570.832,57.696L570.832,57.696L560.68,67.847
+	c-0.24,0.24-0.571,0.388-0.936,0.388c-0.366,0-0.697-0.148-0.937-0.388l-5.738-5.738c-0.24-0.24-0.388-0.571-0.388-0.936
+	c0-0.731,0.593-1.324,1.324-1.324c0.365,0,0.697,0.148,0.936,0.387l4.802,4.802l9.215-9.216c0.24-0.24,0.571-0.387,0.937-0.387
+	c0.731,0,1.324,0.593,1.324,1.324C571.22,57.125,571.072,57.456,570.832,57.696"/>
+<g>
+	<path fill="#FFFFFF" d="M672.741,68.552c0,1.65-1.35,3-3,3h-10c-1.65,0-3-1.35-3-3v-10c0-1.65,1.35-3,3-3h10c1.65,0,3,1.35,3,3
+		V68.552z"/>
+	<path fill="none" stroke="#CCCCCC" stroke-width="2" stroke-miterlimit="10" d="M672.741,68.552c0,1.65-1.35,3-3,3h-10
+		c-1.65,0-3-1.35-3-3v-10c0-1.65,1.35-3,3-3h10c1.65,0,3,1.35,3,3V68.552z"/>
+</g>
+<g>
+	
+		<text transform="matrix(1 0 0 1 684.7412 70.169)" fill="#333333" font-family="'MicrosoftJhengHeiRegular'"  a:adobe-font-script="chineseTraditional" font-size="16.8">雲林市</text>
+</g>
+<path fill-rule="evenodd" clip-rule="evenodd" fill="#39B54A" d="M678.032,57.696L678.032,57.696L667.88,67.847
+	c-0.24,0.24-0.571,0.388-0.936,0.388c-0.366,0-0.697-0.148-0.937-0.388l-5.738-5.738c-0.24-0.24-0.388-0.571-0.388-0.936
+	c0-0.731,0.593-1.324,1.324-1.324c0.365,0,0.697,0.148,0.936,0.387l4.802,4.802l9.215-9.216c0.24-0.24,0.571-0.387,0.937-0.387
+	c0.731,0,1.324,0.593,1.324,1.324C678.42,57.125,678.271,57.456,678.032,57.696"/>
+<g>
+	<path fill="#FFFFFF" d="M672.741,35.752c0,1.65-1.35,3-3,3h-10c-1.65,0-3-1.35-3-3v-10c0-1.65,1.35-3,3-3h10c1.65,0,3,1.35,3,3
+		V35.752z"/>
+	<path fill="none" stroke="#CCCCCC" stroke-width="2" stroke-miterlimit="10" d="M672.741,35.752c0,1.65-1.35,3-3,3h-10
+		c-1.65,0-3-1.35-3-3v-10c0-1.65,1.35-3,3-3h10c1.65,0,3,1.35,3,3V35.752z"/>
+</g>
+<g>
+	
+		<text transform="matrix(1 0 0 1 679.8633 37.3692)" fill="#333333" font-family="'MicrosoftJhengHeiRegular'"  a:adobe-font-script="chineseTraditional" font-size="16.8">桃園市</text>
+</g>
+<g>
+	<path fill="#FFFFFF" d="M365.541,68.552c0,1.65-1.35,3-3,3h-10c-1.65,0-3-1.35-3-3v-10c0-1.65,1.35-3,3-3h10c1.65,0,3,1.35,3,3
+		V68.552z"/>
+	<path fill="none" stroke="#CCCCCC" stroke-width="2" stroke-miterlimit="10" d="M365.541,68.552c0,1.65-1.35,3-3,3h-10
+		c-1.65,0-3-1.35-3-3v-10c0-1.65,1.35-3,3-3h10c1.65,0,3,1.35,3,3V68.552z"/>
+</g>
+<g>
+	
+		<text transform="matrix(1 0 0 1 372.6631 70.169)" fill="#333333" font-family="'MicrosoftJhengHeiRegular'"  a:adobe-font-script="chineseTraditional" font-size="16.8">新竹市</text>
+</g>
+<g>
+	<path fill="#FFFFFF" d="M784.4,68.401c0,3.85-3.15,7-7,7h-18c-3.85,0-7-3.15-7-7v-42c0-3.85,3.15-7,7-7h18c3.85,0,7,3.15,7,7
+		V68.401z"/>
+	<path fill="none" stroke="#999999" stroke-width="0.5" stroke-miterlimit="10" d="M784.4,68.401c0,3.85-3.15,7-7,7h-18
+		c-3.85,0-7-3.15-7-7v-42c0-3.85,3.15-7,7-7h18c3.85,0,7,3.15,7,7V68.401z"/>
+</g>
+<polyline fill="none" stroke="#999999" stroke-linecap="round" stroke-miterlimit="10" points="763.289,44.201 768.313,50.601 
+	773.337,44.201 "/>
+</svg>

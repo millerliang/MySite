@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en" class="translated-ltr"><head>
+		<meta charset="utf-8">
+		<title>後台管理登錄頁面</title>
+
+		<meta name="description" content="User login page">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- basic styles -->
+
+		<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+
+		<!--[if IE 7]>
+		  <link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css" />
+		<![endif]-->
+
+		<!-- page specific plugin styles -->
+
+		<!-- fonts -->
+
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300">
+
+		<!-- ace styles -->
+
+		<link rel="stylesheet" href="assets/css/ace.min.css">
+		<link rel="stylesheet" href="assets/css/ace-rtl.min.css">
+
+		<!--[if lte IE 8]>
+		  <link rel="stylesheet" href="assets/css/ace-ie.min.css" />
+		<![endif]-->
+
+		<!-- inline styles related to this page -->
+
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+
+		<!--[if lt IE 9]>
+		<script src="assets/js/html5shiv.js"></script>
+		<script src="assets/js/respond.min.js"></script>
+		<![endif]-->
+		<link href="assets/css/animate.css" rel="stylesheet" type="text/css">
+		<script type="text/javascript"> 
+			var totalCount = 10;
+			function ChangeIt() 
+			{
+			var num = Math.ceil( Math.random() * totalCount );
+			document.body.background = 'assets/images/login_bg'+num+'.jpg';
+			//document.body.style.backgroundRepeat = "repeat";// Background repeat
+			}
+		</script>
+
+	<body class="login-layout" style="background-color: #56B8FF">
+		<div class="main-container">
+			<div class="main-content">
+				<div class="row">
+					<div class="col-sm-10 col-sm-offset-1">
+						<div class="login-container">
+							<!-- <div class="center white bounceIn animated">
+								<h1><i class="icon-mobile bigger-110"></i> BMC Voice</h1>
+								<div>後台管理系統 &copy; 2015 by jyt-inc</div>
+							</div> -->
+
+							<div class="space-12"></div>
+
+							<div class="position-relative animated fadeInDown" style="-webkit-animation-delay: 1s; animation-delay: 1s;">
+								<div id="login-box" class="login-box widget-box no-border visible animated" style="background-color:rgba(0, 80, 160, 0.3);border-radius:7px;">
+									<div class="widget-body" style="background-color:rgba(255,255,255,0.8);">
+										<div class="widget-main" style="padding-bottom:0;">
+											<center>
+												<p><img src="assets/images/applogo.png"/></p>
+												<h4 style="color:#A0ADB5;">Welcome 後台管理系統</h4>
+											</center>
+											<h4 class="header blue lighter bigger">
+												<i class="icon-key blue"></i>
+												請輸入您的帳號密碼
+											</h4>
+
+											<div class="space-6"></div>
+
+											<form>
+												<fieldset>
+													<label class="block clearfix">
+														<span class="block input-icon input-icon-right">
+															<input type="text" class="form-control" placeholder="Username">
+															<i class="icon-user"></i>
+														</span>
+													</label>
+
+													<label class="block clearfix">
+														<span class="block input-icon input-icon-right">
+															<input type="password" class="form-control" placeholder="Password">
+															<i class="icon-lock"></i>
+														</span>
+													</label>
+
+													<div class="space"></div>
+
+													<div class="clearfix">
+														<label class="inline">
+															<input type="checkbox" class="ace">
+															<span class="lbl"> 記住我</span>
+														</label>
+
+														<button type="button" class="width-35 pull-right btn btn-sm btn-default" onclick="location.href='index.html'">
+															<i class="icon-sign-in bigger-110"></i>
+															登 入
+														</button>
+													</div>
+
+												</fieldset>
+											</form>
+											
+											<small class="row" style="color:#999;"><hr>
+												Copyright &copy; 2015 by jyt-inc 
+												<div class="pull-right text-right"><a href="#">使用條款</a> <a href="#">隱私權政策</a></div>
+											</small>
+
+										</div><!-- /widget-main -->
+
+										<div class="toolbar clearfix">
+											<div>
+												<a href="#" onclick="show_box('forgot-box'); return false;" class="forgot-password-link no-underline">
+													<i class="icon-arrow-left"></i>
+													忘記密碼
+												</a>
+											</div>
+
+											<div>
+												<a href="#" onclick="ChangeIt()" class="user-signup-link no-underline" style="color:#BFD8E5;">
+													Change BG
+													<i class="icon-refresh"></i>
+												</a>
+											</div>
+											<!-- <div>
+												<a href="#" onclick="show_box('signup-box'); return false;" class="user-signup-link no-underline">
+													註冊新帳號
+													<i class="icon-arrow-right"></i>
+												</a>
+											</div> -->
+										</div>
+									</div><!-- /widget-body -->
+								</div><!-- /login-box -->
+
+								<div id="forgot-box" class="forgot-box widget-box no-border animated" style="background-color:rgba(250, 0, 0, 0.3);border-radius:7px;">
+									<div class="widget-body" style="background-color:rgba(255,255,255,0.9);">
+										<div class="widget-main">
+											<h4 class="header red lighter bigger">
+												<i class="icon-key"></i>
+												找回密碼
+											</h4>
+
+											<div class="space-6"></div>
+											<p>輸入您註冊時的電子郵件</p>
+
+											<form>
+												<fieldset>
+													<label class="block clearfix">
+														<span class="block input-icon input-icon-right">
+															<input type="email" class="form-control" placeholder="Email">
+															<i class="icon-envelope"></i>
+														</span>
+													</label>
+
+													<div class="clearfix">
+														<button type="button" class="width-35 pull-right btn btn-sm btn-danger">
+															<i class="icon-lightbulb"></i>
+															寄給我！
+														</button>
+													</div>
+												</fieldset>
+											</form>
+										</div><!-- /widget-main -->
+
+										<div class="toolbar center">
+											<a href="#" onclick="show_box('login-box'); return false;" class="back-to-login-link no-underline">
+												返回到登錄
+												<i class="icon-arrow-right"></i>
+											</a>
+										</div>
+									</div><!-- /widget-body -->
+								</div><!-- /forgot-box -->
+
+								<div id="signup-box" class="signup-box widget-box no-border">
+									<div class="widget-body">
+										<div class="widget-main">
+											<h4 class="header green lighter bigger">
+												<i class="icon-group blue"></i>
+												新用戶註冊
+											</h4>
+
+											<div class="space-6"></div>
+											<p> 請輸入您的註冊資料： </p>
+
+											<form>
+												<fieldset>
+													<label class="block clearfix">
+														<span class="block input-icon input-icon-right">
+															<input type="email" class="form-control" placeholder="Email">
+															<i class="icon-envelope"></i>
+														</span>
+													</label>
+
+													<label class="block clearfix">
+														<span class="block input-icon input-icon-right">
+															<input type="text" class="form-control" placeholder="Username">
+															<i class="icon-user"></i>
+														</span>
+													</label>
+
+													<label class="block clearfix">
+														<span class="block input-icon input-icon-right">
+															<input type="password" class="form-control" placeholder="Password">
+															<i class="icon-lock"></i>
+														</span>
+													</label>
+
+													<label class="block clearfix">
+														<span class="block input-icon input-icon-right">
+															<input type="password" class="form-control" placeholder="Repeat password">
+															<i class="icon-retweet"></i>
+														</span>
+													</label>
+
+													<label class="block">
+														<input type="checkbox" class="ace">
+														<span class="lbl">
+															我已閱讀並同意
+															 <a href="#">用戶協議</a>
+														</span>
+													</label>
+
+													<div class="space-24"></div>
+
+													<div class="clearfix">
+														<button type="reset" class="width-30 pull-left btn btn-sm">
+															<i class="icon-refresh"></i>
+															清除
+														</button>
+
+														<button type="button" class="width-65 pull-right btn btn-sm btn-success">
+															送出註冊
+															<i class="icon-arrow-right icon-on-right"></i>
+														</button>
+													</div>
+												</fieldset>
+											</form>
+										</div>
+
+										<div class="toolbar center">
+											<a href="#" onclick="show_box('login-box'); return false;" class="back-to-login-link">
+												<i class="icon-arrow-left"></i>
+												返回到登錄
+											</a>
+										</div>
+									</div><!-- /widget-body -->
+								</div><!-- /signup-box -->
+							</div><!-- /position-relative -->
+						</div>
+					</div><!-- /.col -->
+				</div><!-- /.row -->
+			</div>
+		</div><!-- /.main-container -->
+
+		<!-- basic scripts -->
+
+		<!--[if !IE]> -->
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+		<!-- <![endif]-->
+
+		<!--[if IE]>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<![endif]-->
+
+		<!--[if !IE]> -->
+
+		<script type="text/javascript">
+			window.jQuery || document.write("<script src='assets/js/jquery-2.0.3.min.js'>"+"<"+"/script>");
+		</script>
+
+		<!-- <![endif]-->
+
+		<!--[if IE]>
+<script type="text/javascript">
+ window.jQuery || document.write("<script src='assets/js/jquery-1.10.2.min.js'>"+"<"+"/script>");
+</script>
+<![endif]-->
+
+		<script type="text/javascript">
+			if("ontouchend" in document) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+		</script>
+
+		<!-- inline scripts related to this page -->
+
+		<script type="text/javascript">
+			function show_box(id) {
+			 jQuery('.widget-box.visible').addClass('flipOutY').removeClass('visible');
+			 jQuery('#'+id).removeClass('flipOutY').addClass('flipInX visible');
+			}
+			ChangeIt();
+		</script>	
+
+</body></html>

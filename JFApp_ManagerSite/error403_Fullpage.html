@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<title>系統管理員群組 - 後台管理系統 Error 500</title>
+
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- basic styles -->
+<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+<link href="assets/css/ace.min.css" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+<style>
+.e403 {
+	font-size:48pt;
+	color:#fff;
+	text-shadow: 0 1px 0 #ccc,
+	0 2px 0 #c9c9c9,
+	0 3px 0 #bbb,
+	0 4px 0 #b9b9b9,
+	0 5px 0 #aaa,
+	0 6px 1px rgba(0,0,0,.1),
+	0 0 5px rgba(0,0,0,.1),
+	0 1px 3px rgba(0,0,0,.3),
+	0 3px 5px rgba(0,0,0,.2),
+	0 5px 10px rgba(0,0,0,.25),
+	0 10px 10px rgba(0,0,0,.2),
+	0 20px 20px rgba(0,0,0,.15);
+}
+</style>
+
+</head>
+
+<body>
+	<div class="col-xs-12">
+		<!-- PAGE CONTENT BEGINS -->
+
+		<div class="error-container">
+			<div class="well">
+				<h1 class="lighter smaller">
+					<span class="bigger-125">
+						<i class="blue icon-exclamation-triangle"></i>
+						<span class="e403">403</span>
+					</span>
+					錯誤 - 禁止訪問 (Forbidden)
+				</h1>
+
+				<hr>
+				<h3 class="lighter smaller">
+					Oops, an error has occurred. Forbidden!
+				</h3>
+				
+				<p>您的 Web 服務器認為，客戶端(例如您的瀏覽器或我們的 CheckUpDown 機器人 )發送的 HTTP 數據流正確，但由於某種原因，禁止訪問網址所指的內容。</p>
+				<p>這表明一個根本的進入問題，也許難解決，因為 HTTP 協議在沒提供任何原因的情況下，允許 Web 服務器給出該響應。因此 403 錯誤相當於您的 Web 服務器無條件拒絕，並且不允許進一步探討。</p>
+				<p>生成這類錯誤最普遍的原因是目錄瀏覽為網站所禁止。多數網站想讓您用網址 (URLs) 瀏覽網站上的網頁。他們通常不允許您瀏覽網站的文件目錄結構。<br>例如，嘗試以下網址(然後在您的瀏覽器中點擊『Go Back/返回『 按鈕返回本頁 )：</p>
+
+				<div class="space"></div>
+
+				<p>401 Unauthorized, the HTTP status code for authentication errors. And that's just it: it's for authentication, not authorization. Receiving a 401 response is the server telling you, 「you aren't authenticated–either not authenticated at all or authenticated incorrectly–but please reauthenticate and try again.」 To help you out, it will always include a WWW-Authenticate header that describes how to authenticate.</p>
+				<p>This is a response generally returned by your web server, not your web application.</p>
+				<p>It's also something very temporary; the server is asking you to try again.</p>
+				<p>So, for authorization I use the 403 Forbidden response. It's permanent, it's tied to my application logic, and it's a more concrete response than a 401.</p>
+				<p>Receiving a 403 response is the server telling you, 「I'm sorry. I know who you are–I believe who you say you are–but you just don't have permission to access this resource. Maybe if you ask the system administrator nicely, you'll get permission. But please don't bother me again until your predicament changes.」</p>
+				<p>In summary, a 401 Unauthorized response should be used for missing or bad authentication, and a 403 Forbidden response should be used afterwards, when the user is authenticated but isn't authorized to perform the requested operation on the given resource.</p>
+
+				<div class="space"></div>
+				<hr>
+
+				<div>
+					<h4 class="lighter smaller">Meanwhile, try one of the following:</h4>
+
+					<ul class="list-unstyled spaced inline bigger-110 margin-15">
+						<li>
+							<i class="icon-hand-o-right blue"></i>
+							Read the faq
+						</li>
+
+						<li>
+							<i class="icon-hand-o-right blue"></i>
+							Give us more info on how this specific error occurred!
+						</li>
+					</ul>
+				</div>
+
+				<hr>
+				<div class="space"></div>
+
+				<div class="center">
+					<button href="#" class="btn btn-grey" onclick="history.go(-1)">
+						<i class="icon-arrow-left"></i>
+						Go Back
+					</button>
+
+					<a href="index.html" class="btn btn-primary">
+						<i class="icon-home"></i>
+						Home Page
+					</a>
+				</div>
+			</div>
+		</div>
+
+	</div><!-- col-xs-12 ENDs -->
+</body>
+</html>

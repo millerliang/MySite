@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jalendar</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../css/jalendar.css" type="text/css" />
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script><!--jQuery-->
+	<script type="text/javascript" src="../js/jalendar.min.js"></script>
+	<style>
+		body {padding:0;margin:0;background: -webkit-linear-gradient(top, #3aa4d1, #3aa4d1);}
+	</style>
+</head>
+<body>
+	<div id="your_jalendar" class="jalendar">
+		<div class="added-event" data-link="../" data-date="2016-5-30" data-title="打卡 x2, 表單 x3"></div>
+		<div class="added-event" data-link="/" data-date="2016-5-30" data-title="user name 工作表單-pass"></div>
+		<div class="added-event" data-link="/" data-date="2016-5-30" data-title="user name 工作表單-notyeays"></div>
+		<div class="added-event" data-link="/" data-date="2016-6-1" data-title="Tarkan İstanbul Concert on Harbiye Açık Hava Tiyatrosu"></div>
+	</div>
+</div>
+<script>
+$('#your_jalendar').jalendar({
+    //color: '#23baff', // Unlimited
+    //color2: '#46a0a2', // Unlimited
+	dateType: 'yyyy-mm-dd',
+    titleColor: '#ffffff',
+    weekColor: '#d2f7fe',
+    //todayColor: '#ffff00',
+    lang: 'ZH',
+	sundayStart: true
+});
+</script>
+</body>
+</html>

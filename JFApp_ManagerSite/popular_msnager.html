@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>公告訊息 - 後台管理系統</title>
+
+		<meta name="description" content="" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- basic styles -->
+
+		<link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+
+		<!--[if IE 7]>
+		  <link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css" />
+		<![endif]-->
+
+		<!-- page specific plugin styles -->
+		<link rel="stylesheet" href="assets/css/daterangepicker.css" />
+
+		<!-- fonts -->
+
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" />
+
+		<!-- ace styles -->
+
+		<link rel="stylesheet" href="assets/css/ace.min.css" />
+		<link rel="stylesheet" href="assets/css/ace-rtl.min.css" />
+		<link rel="stylesheet" href="assets/css/ace-skins.min.css" />
+
+		<!--[if lte IE 8]>
+		  <link rel="stylesheet" href="assets/css/ace-ie.min.css" />
+		<![endif]-->
+
+		<!-- inline styles related to this page -->
+
+		<!-- ace settings handler -->
+
+		<script src="assets/js/ace-extra.min.js"></script>
+
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+
+		<!--[if lt IE 9]>
+		<script src="assets/js/html5shiv.js"></script>
+		<script src="assets/js/respond.min.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<div class="navbar navbar-default" id="navbar">
+
+			<script type="text/javascript">
+				try{ace.settings.check('navbar' , 'fixed')}catch(e){}
+			</script>
+
+
+			<div class="navbar-container" id="navbar-container">
+				<div class="navbar-header pull-left logo">
+					<a href="index.html" class="navbar-brand">
+						<small>
+							後台管理系統
+						</small>
+					</a><!-- /.brand -->
+				</div><!-- /.navbar-header -->
+
+				<div class="navbar-header pull-right" role="navigation">
+					<ul class="nav ace-nav">
+						<li class="color">
+							<a data-toggle="dropdown" class="dropdown-toggle" href="#">
+								<i class="icon-envelope icon-animated-vertical"></i>
+								<span class="badge badge-important">12</span>
+							</a>
+
+							<ul class="pull-right dropdown-navbar navbar-pink dropdown-menu dropdown-caret dropdown-times">
+								<li>
+									<a href="user_feedback.html">
+										<div class="clearfix">
+											<span class="pull-left">
+												<i class="btn btn-xs no-hover btn-success icon-user"></i>
+												客服管理
+											</span>
+											<span class="pull-right badge badge-success">+8</span>
+										</div>
+									</a>
+								</li>
+
+								<li>
+									<a href="user_feedback.html">
+										查看所有通知
+										<i class="icon-arrow-right"></i>
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li class="light-blue">
+							<a data-toggle="dropdown" href="#" class="dropdown-toggle">
+								<img class="nav-user-photo" src="assets/avatars/avatar4.png" alt="Jason's Photo" />
+								<span class="user-info">
+									<small>您好, 歡迎</small>
+									超級管理員
+								</span>
+
+								<i class="icon-caret-down"></i>
+							</a>
+
+							<ul class="user-menu pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
+								<li>
+									<a href="admin_profile.html">
+										<i class="icon-user"></i>
+										個人資料
+									</a>
+								</li>
+
+								<li class="divider"></li>
+
+								<li>
+									<a href="login.html">
+										<i class="icon-power-off"></i>
+										登 出
+									</a>
+								</li>
+							</ul>
+						</li>
+					</ul><!-- /.ace-nav -->
+				</div><!-- /.navbar-header -->
+			</div><!-- /.container -->
+		</div>
+
+		<div class="main-container" id="main-container">
+			<script type="text/javascript">
+				try{ace.settings.check('main-container' , 'fixed')}catch(e){}
+			</script>
+
+			<div class="main-container-inner">
+				<a class="menu-toggler" id="menu-toggler" href="#">
+					<span class="menu-text"></span>
+				</a>
+
+				<div class="sidebar" id="sidebar">
+					<script type="text/javascript">
+						try{ace.settings.check('sidebar' , 'fixed')}catch(e){}
+					</script>
+
+					<ul class="nav nav-list">
+						<li>
+							<a href="index.html">
+								<i class="icon-home"></i>
+								<span class="menu-text">首 頁</span>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-th"></i>
+								<span class="menu-text">主題管理</span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li class="active">
+									<a href="slideshow_manager.html">
+										<i class="icon-double-angle-right"></i>
+										廣告列表
+									</a>
+								</li>
+								<li>
+									<a href="witness_manager.html">
+										<i class="icon-double-angle-right"></i>
+										見證列表
+									</a>
+								</li>
+								<li>
+									<a href="#.html">
+										<i class="icon-double-angle-right"></i>
+										參數設定
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li class="active">
+							<a href="popular_msnager.html">
+								<i class="icon-heart-o"></i>
+								<span class="menu-text">熱門禱告管理</span>
+							</a>
+						</li>
+
+						<li>
+							<a href="ban_msnager.html">
+								<i class="icon-ban"></i>
+								<span class="menu-text">檢舉管理</span>
+							</a>
+						</li>
+
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-leanpub"></i>
+								<span class="menu-text">教導管理</span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="#.html">
+										<i class="icon-double-angle-right"></i>
+										教導總覽
+									</a>
+								</li>
+								<li>
+									<a href="#.html">
+										<i class="icon-double-angle-right"></i>
+										新增文章
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="sys_postnews.html">
+								<i class="icon-laptop"></i>
+								<span class="menu-text">公告管理</span>
+							</a>
+						</li>
+
+					</ul><!-- /.nav-list -->
+
+					<div class="sidebar-collapse" id="sidebar-collapse">
+						<i class="icon-angle-double-left" data-icon1="icon-angle-double-left" data-icon2="icon-angle-double-right"></i>
+					</div>
+
+					<script type="text/javascript">
+						try{ace.settings.check('sidebar' , 'collapsed')}catch(e){}
+					</script>
+				</div>
+
+				<div class="main-content">
+					<div class="breadcrumbs" id="breadcrumbs">
+						<script type="text/javascript">
+							try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
+						</script>
+
+						<ul class="breadcrumb">
+							<li>
+								<i class="icon-home home-icon"></i>
+								<a href="index.html">Home</a>
+							</li>
+							<li class="active">熱門禱告管理</li>
+						</ul><!-- .breadcrumb -->
+
+						<div class="nav-search" id="nav-search">
+							<form class="form-search">
+								<span class="input-icon">
+									<input type="text" placeholder="搜尋 ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
+									<i class="icon-search nav-search-icon"></i>
+								</span>
+							</form>
+						</div><!-- #nav-search -->
+					</div>
+
+					<div class="page-content">	
+
+						<div class="pull-right inline">
+							<a href="#edit-form" class="btn btn-purple" data-toggle="modal">
+								<i class="icon-search align-top bigger-125"></i>
+								搜尋禱告
+							</a>
+						</div>
+
+                        <div class="page-header">
+							<h1>
+								熱門禱告管理
+								<small>
+									<i class="icon-angle-double-right"></i>
+								    禱告顯示排序管理
+								</small>
+							</h1>
+						</div>
+
+						<div class="row">
+							<div class="col-sm-12">
+								<!-- PAGE CONTENT BEGINS -->
+
+								<style>
+									.thumbnail {overflow:hidden;height__:400px;position:relative;background-image:url(assets/images/image.svg);background-repeat:no-repeat;background-position:center 28%;margin-bottom:0.6em;}
+									.thumbnail:hover {border:1px solid #aaa;overflow: inherit;}
+									#disabled_list .thumbnail, .modal-body .thumbnail {_min-height:355px;}
+									
+									.thumbnail .btn-block {font-size:120%;display:none;background-color:rgba(0,0,0,1);text-shadow:1px 1px 1px rgba(0,0,0,.7)!important;}
+									.thumbnail:hover .btn-block {display:block;position:absolute;top:0px;left:0px;height:40%;background-color:rgba(0,0,0,.6)!important;border:2px solid rgba(166,76,255,.75);}
+									.thumbnail:hover .btn-block .btn {position:relative;top:0px;left:0px;width:100%;margin:0.2em 0;box-shadow:0px 0px 5px rgba(0,0,0,.7)!important;}
+									#edit-form .thumbnail .btn-block {padding-top:4em;}
+									#disabled_list .thumbnail:hover .btn-block {font-size:120%;background-color:rgba(0,127,255,.25)!important;border:2px solid rgba(0,64,255,.75);}
+									.caption {position:absolute;bottom:0;font-size_:75%;width100%;left:0px;right:2px;background-color:rgba(255,255,255,.85);}
+									.caption p {height:60px;overflow-x:hidden;}
+									.caption .row {border-top:1px solid #eee;padding-top:7px;}
+									.thumbnail:hover .btn_tools {display:block;}
+									.btn_tools {display:none;text-align:right;position:absolute;width:97%;/*background-color:rgba(0,0,0,.15);*/}
+									.btn_tools .btn-danger {float:right;}
+									#tasks li {width:100%;float:left;min-height: 1px;webkit-box-sizing: border-box;moz-box-sizing: border-box;box-sizing: border-box;    display: list-item;text-align: -webkit-match-parent;}
+									@media (min-width: 768px){
+										#tasks li {width:33.3333%;}
+										.thumbnail {height:380px;}
+									}
+									@media (min-width: 1000px){
+										#tasks li {width:25%;}
+										.thumbnail {height:350px;}
+									}
+									@media (min-width: 1280px){
+										.thumbnail {height:400px;}
+										.col-lg-2 .thumbnail {height:320px;}
+									}
+									@media (min-width: 1500px){
+										.thumbnail {height:450px;}
+									}
+									@media (max-width: 480px){
+										.thumbnail {height:480px;}
+									}
+									.tooltip {white-space:nowrap;}
+									.daterangepicker {z-index:2000!important;}
+									.name-time {width:100%;padding-left:10px;position:absolute;top:0;left:0;background:rgba(0,0,0,0.25);color:#fff;text-shadow:0px 0px 5px rgba(0,0,0,.7);}
+								</style>
+
+								<div class="tabbable">
+									<ul class="nav nav-tabs">
+										<li class="active">
+											<a data-toggle="tab" href="#status">
+												<i class="green icon-arrows-v bigger-110 hidden-480"></i>
+												熱門禱告排序
+												<span class="badge badge-success">3</span>
+											</a>
+										</li>
+
+										<li class="">
+											<a data-toggle="tab" href="#disabled_list">
+												<i class="icon-ban"></i>
+												不顯示名單
+												<span class="badge">2</span>
+											</a>
+										</li>
+
+									</ul>
+
+									<div class="tab-content">
+									
+										<div id="status" class="tab-pane active">
+
+											<h4 class="smaller lighter pink">
+												<small class="pull-right"><button class="btn btn-xs btn-primary">套用排序</button></sup></small>
+												<i class="icon-arrows"></i>
+												自定熱門禱告排序 <small><i class="icon-angle-double-right"></i>(可拖曳移動排序)</small>
+											</h4>
+
+											<div class="row" style="min-height:360px;">
+											
+												<div id="task-tab" class="tab-pane">
+
+													<ul id="tasks" class="item-list ui-sortable">
+
+														<li>
+															<div class="thumbnail">
+																<div class="name-time">潘世勳<br><small>09/22 16:30</small></div>
+																<div class="btn_tools">
+																	<a class="btn btn-xs btn-danger tooltip-error" data-rel="tooltip" title="" data-original-title="移除"><i class="icon-close"></i></a>
+																</div>
+																<img class="img-responsive" src="被火紋身的女孩.jpg">
+																<div class="caption">
+																	<p>在這裡每間房間都是海景，而且因為是在山坡上，所以可是居高臨下的無敵海景。在這裡每間房間都是海景，而且因為是在山坡上，所以可是居高臨下的無敵海景。在這裡每間房間都是海景，而且因為是在山坡上，所以可是居高臨下的無敵海景。在這裡每間房間都是海景，而且因為是在山坡上，所以可是居高臨下的無敵海景。在這裡每間房間都是海景，而且因為是在山坡上，所以可是居高臨下的無敵海景。在這裡每間房間都是海景，而且因為是在山坡上，所以可是居高臨下的無敵海景。在這裡每間房間都是海景，而且因為是在山坡上，所以可是居高臨下的無敵海景。</p>
+																	<div class="row">
+																		<span class="col-sm-6 center">6.2k 禱告</span>
+																		<span class="col-sm-6 center">219 回應</span>
+																	</div>
+																</div>
+															</div>
+														</li>
+
+														<li>
+															<div class="thumbnail">
+																<div class="name-time">臭摩摩<br><small>09/22 13:03</small></div>
+																<div class="btn_tools">
+																	<a class="btn btn-xs btn-danger tooltip-error" data-rel="tooltip" title="" data-original-title="移除"><i class="icon-close"></i> </a>
+																</div>
+																<img class="img-responsive" src="assets/images/ipray_def1.jpg">
+																<div class="caption">
+																	<p>在這裡每間房間都是海景，而且因為是在山坡上，所以可是居高臨下的無敵海景。</p>
+																	<div class="row">
+																		<span class="col-sm-6 center">6.2k 禱告</span>
+																		<span class="col-sm-6 center">219 回應</span>
+																	</div>
+																</div>
+															</div>
+														</li>
+
+														<li>
+															<div class="thumbnail">
+																<div class="name-time">Ning<br><small>09/22 20:25</small></div>
+																<div class="btn_tools">
+																	<a class="btn btn-xs btn-danger tooltip-error" data-rel="tooltip" title="" data-original-title="移除"><i class="icon-close"></i> </a>
+																</div>
+																<img class="img-responsive" src="颱風.jpg">
+																<div class="caption">
+																	<p>颱風來了～快禱告！</p>
+																	<div class="row">
+																		<span class="col-sm-6 center">1.1k 禱告</span>
+																		<span class="col-sm-6 center">123 回應</span>
+																	</div>
+																</div>
+															</div>
+														</li>
+
+														<li>
+															<div class="thumbnail">
+																<div class="name-time">Yokohama<br><small>09/21 11:42</small></div>
+																<div class="btn_tools">
+																	<a class="btn btn-xs btn-danger tooltip-error" data-rel="tooltip" title="" data-original-title="移除"><i class="icon-close"></i> </a>
+																</div>
+																<img class="img-responsive" src="witness_imgs/羅文裕張平.jpg">
+																<div class="caption">
+																	<p>羅文裕張平</p>
+																	<div class="row">
+																		<span class="col-sm-6 center">3.2k 禱告</span>
+																		<span class="col-sm-6 center">64 回應</span>
+																	</div>
+																</div>
+															</div>
+														</li>
+
+														<li>
+															<div class="thumbnail">
+																<div class="name-time">Bluse Lee<br><small>09/21 12:12</small></div>
+																<div class="btn_tools">
+																	<a class="btn btn-xs btn-danger tooltip-error" data-rel="tooltip" title="" data-original-title="移除"><i class="icon-close"></i> </a>
+																</div>
+																<img class="img-responsive" src="witness_imgs/任容萱.jpg">
+																<div class="caption">
+																	<p>任容萱</p>
+																	<div class="row">
+																		<span class="col-sm-6 center">6.5k 禱告</span>
+																		<span class="col-sm-6 center">325 回應</span>
+																	</div>
+																</div>
+															</div>
+														</li>
+
+													</ul>
+												</div><!-- /#task-tab -->
+
+											</div>
+
+											<div class="row">
+												<div class="col-sm-12">
+													<hr>
+													<h4 class="smaller lighter blue">
+														<small class="pull-right"><sup>設定顯示： <input type="text" value="5" style="width:50px;"> 則熱門禱告 <button class="btn btn-xs btn-primary">設 定</button></sup></small>
+														<i class="icon-desktop"></i>
+														系統自動排序 <sub>(電腦撿的)</sub>
+													</h4>
+													<hr>
+												</div>
+
+												<div class="col-sm-3">
+													<div class="thumbnail">
+														<div class="name-time">高圓圓<br><small>09/14 09:37</small></div>
+														<div class="btn_tools">
+															<a class="btn btn-xs btn-danger tooltip-error" data-rel="tooltip" title="" data-original-title="不顯示"><i class="icon-ban"></i></a>
+														</div>
+														<img class="img-responsive" src="被火紋身的女孩.jpg">
+														<div class="caption">
+															<p>在這裡每間房間都是海景，而且因為是在山坡上，所以可是居高臨下的無敵海景。在這裡每間房間都是海景，而且因為是在山坡上，所以可是居高臨下的無敵海景。在這裡每間房間都是海景，而且因為是在山坡上，所以可是居高臨下的無敵海景。在這裡每間房間都是海景，而且因為是在山坡上，所以可是居高臨下的無敵海景。在這裡每間房間都是海景，而且因為是在山坡上，所以可是居高臨下的無敵海景。在這裡每間房間都是海景，而且因為是在山坡上，所以可是居高臨下的無敵海景。</p>
+															<div class="row">
+																<span class="col-sm-6 center">6.2k 禱告</span>
+																<span class="col-sm-6 center">219 回應</span>
+															</div>
+														</div>
+													</div>
+												</div><!-- /.col-sm-3 -->
+
+												<div class="col-sm-3">
+													<div class="thumbnail">
+														<div class="name-time">強納森<br><small>09/02 19:43</small></div>
+														<div class="btn_tools">
+															<a class="btn btn-xs btn-danger tooltip-error" data-rel="tooltip" title="" data-original-title="不顯示"><i class="icon-ban"></i></a>
+														</div>
+														<img class="img-responsive" src="assets/images/ipray_def1.jpg">
+														<div class="caption">
+															<p>hahahah Yoyoyoyo</p>
+															<div class="row">
+																<span class="col-sm-6 center">964 禱告</span>
+																<span class="col-sm-6 center">48 回應</span>
+															</div>
+														</div>
+													</div>
+												</div><!-- /.col-sm-3 -->
+
+											</div><!-- /.row -->
+
+										</div><!-- /#status -->
+
+										<div id="disabled_list" class="tab-pane">
+
+											<div class="row">
+
+												<ul class="item-list">
+													<li class="col-xs-12 col-sm-4 col-lg-2">
+														<div class="thumbnail">
+															<img class="img-responsive" src="颱風.jpg">
+															<div class="caption">
+																<p>在這裡每間房間都是海景，而且因為是在山坡上，所以可是居高臨下的無敵海景。在這裡每間房間都是海景，而且因為是在山坡上，所以可是居高臨下的無敵海景。在這裡每間房間都是海景，而且因為是在山坡上，所以可是居高臨下的無敵海景。在這裡每間房間都是海景，而且因為是在山坡上，所以可是居高臨下的無敵海景。在這裡每間房間都是海景，而且因為是在山坡上，所以可是居高臨下的無敵海景。在這裡每間房間都是海景，而且因為是在山坡上，所以可是居高臨下的無敵海景。在這裡每間房間都是海景，而且因為是在山坡上，所以可是居高臨下的無敵海景。在這裡每間房間都是海景，而且因為是在山坡上，所以可是居高臨下的無敵海景。</p>
+																<div class="row">
+																	<span class="col-sm-6 center">2.0k 禱告</span>
+																	<span class="col-sm-6 center">241 回應</span>
+																</div>
+															</div>
+															<button class="btn btn-block" type="button" data-dismiss="modal"><i class="icon-ban"></i>解除隱藏</button>
+														</div>
+													</li><!-- /li-1 -->
+
+													<li class="col-xs-12 col-sm-4 col-lg-2">
+														<div class="thumbnail">
+															<img class="img-responsive" src="assets/images/ipray_def1.jpg">
+															<div class="caption">
+																<p>無敵海景佛跳牆～</p>
+																<div class="row">
+																	<span class="col-sm-6 center">988k 禱告</span>
+																	<span class="col-sm-6 center">124 回應</span>
+																</div>
+															</div>
+															<button class="btn btn-block" type="button" data-dismiss="modal"><i class="icon-ban"></i>解除隱藏</button>
+														</div>
+													</li><!-- /li-2 -->
+													
+												</ul>
+
+											</div>
+										</div>
+
+									</div>
+								</div>
+
+                                <div class="hr hr32 hr-dotted"></div>
+								
+								<div id="edit-form" class="modal" tabindex="-1">
+									<div class="modal-dialog" style="min-width:88%">
+										<div class="modal-content">
+											<div class="modal-header" style="padding: 6px 16px">
+												<button type="button" class="close" data-dismiss="modal">&times;</button>
+												<h4 class="blue bigger">
+												<i class="icon-search"></i>
+												搜尋禱告
+												</h4>
+											</div>
+
+											<div class="modal-body overflow-visible">
+												<div class="row">
+													<form class="form-horizontal">
+														
+														<!-- <div class="form-group">
+															<label class="col-sm-2 control-label text-right"><b class="red">*</b> 時間範圍 </label>
+															<div class="col-xs-3">
+																<select class="form-control">
+																	<option value="">時間範圍</option>
+																	<option value="1">7天</option>
+																	<option value="2">30天</option>
+																	<option value="3">60天</option>
+																</select>
+															</div>
+														</div> --><!-- A or B -->
+
+														<div class="form-group">
+															<!-- <label class="col-sm-2 control-label text-right"><b class="red">*</b> 搜尋條件 </label> -->
+															<div class="col-xs-3">
+																<div class="input-group">
+																	<span class="input-group-addon">
+																		<i class="icon-calendar bigger-110"></i>
+																	</span>
+																	<input type="text" name="date-range-picker" class="form-control" placeholder="時間範圍">
+																</div><!-- A DatePicker -->
+															</div>
+
+															<!-- <label class="col-sm-2 control-label text-right"><b class="red">*</b> 搜尋姓名 </label> -->
+															<div class="col-xs-3">
+																<input type="text" class="search-query form-control" placeholder="搜尋姓名(必填)">
+															</div>
+
+															<!-- <label class="col-sm-2 control-label text-right">搜尋關鍵詞 </label> -->
+															<div class="col-xs-3">
+																<input type="text" class="search-query form-control" placeholder="關鍵詞...">
+															</div>
+
+															<div class="col-xs-3">
+																<button type="button" class="btn btn-purple btn-sm">
+																	搜 尋
+																	<i class="icon-search icon-on-right bigger-110"></i>
+																</button>
+															</div><!-- /btn-Search -->
+														</div>
+
+													</form>
+
+													<div class="col-sm-12">
+
+														<h4 class="lighter">
+															<i class="icon-star orange"></i>
+															搜尋結果 <small>(共 <span>12</span> 筆資料)</small>
+														</h4>
+
+														<div class="row">
+
+															<div class="col-sm-2">
+																<div class="thumbnail">
+																	<img class="img-responsive" src="被火紋身的女孩.jpg">
+																	<div class="caption">
+																		<p>在這裡每間房間都是海景，而且因為是在山坡上，所以可是居高臨下的無敵海景。在這裡每間房間都是海景，而且因為是在山坡上，所以可是居高臨下的無敵海景。在這裡每間房間都是海景，而且因為是在山坡上，所以可是居高臨下的無敵海景。在這裡每間房間都是海景，而且因為是在山坡上，所以可是居高臨下的無敵海景。在這裡每間房間都是海景，而且因為是在山坡上，所以可是居高臨下的無敵海景。在這裡每間房間都是海景，而且因為是在山坡上，所以可是居高臨下的無敵海景。在這裡每間房間都是海景，而且因為是在山坡上，所以可是居高臨下的無敵海景。</p>
+																		<div class="row">
+																			<span class="col-sm-6 center">6.2k 禱告</span>
+																			<span class="col-sm-6 center">219 回應</span>
+																		</div>
+																	</div>
+																	<div class="btn-block">
+																		<button class="btn btn-primary" type="submit" data-dismiss="modal"><i class="icon-check"></i> 選擇此禱告</button>
+																		<button class="btn btn-danger" type="submit"><i class="icon-ban"></i> Ban 此禱告</button>
+																	</div>
+																</div>
+															</div><!-- /col-sm-2 -->
+
+															<div class="col-sm-2">
+																<div class="thumbnail">
+																	<img class="img-responsive" src="assets/images/ipray_def1.jpg">
+																	<div class="caption">
+																		<p>在這裡每間房間都是海景，而且因為是在山坡上，所以可是居高臨下的無敵海景。</p>
+																		<div class="row">
+																			<span class="col-sm-6 center">1.1k 禱告</span>
+																			<span class="col-sm-6 center">63 回應</span>
+																		</div>
+																	</div>
+																	<div class="btn-block">
+																		<button class="btn btn-primary" type="submit" data-dismiss="modal"><i class="icon-check"></i> 選擇此禱告</button>
+																		<button class="btn btn-danger" type="submit"><i class="icon-ban"></i> Ban 此禱告</button>
+																	</div>
+																</div>
+															</div><!-- /col-sm-2 -->
+
+															<div class="col-sm-2">
+																<div class="thumbnail">
+																	<img class="img-responsive" src="颱風.jpg">
+																	<div class="caption">
+																		<p>在這裡每間房間都是海景，而且因為是在山坡上，所以可是居高臨下的無敵海景。</p>
+																		<div class="row">
+																			<span class="col-sm-6 center">2.0k 禱告</span>
+																			<span class="col-sm-6 center">241 回應</span>
+																		</div>
+																	</div>
+																	<div class="btn-block">
+																		<button class="btn btn-primary" type="submit" data-dismiss="modal"><i class="icon-check"></i> 選擇此禱告</button>
+																		<button class="btn btn-danger" type="submit"><i class="icon-ban"></i> Ban 此禱告</button>
+																	</div>
+																</div>
+															</div><!-- /col-sm-2 -->
+
+														</div>
+													</div>
+
+												</div>
+											</div><!-- /.modal-body -->
+
+											<div class="modal-footer">
+												<button class="btn btn-sm" data-dismiss="modal">
+													<i class="icon-times"></i>
+													關 閉
+												</button>
+												<!-- <button class="btn btn-sm btn-primary">
+													<i class="icon-check"></i>
+													確 定
+												</button> -->
+											</div>
+										</div>
+									</div>
+								</div>
+                                
+								<!-- PAGE CONTENT ENDS -->
+							</div><!-- /.col -->
+						</div><!-- /.row -->
+					</div><!-- /.page-content -->
+				</div><!-- /.main-content -->
+
+			</div><!-- /.main-container-inner -->
+
+			<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+				<i class="icon-angle-double-up icon-only bigger-110"></i>
+			</a>
+		</div><!-- /.main-container -->
+
+		<!-- basic scripts -->
+
+		<!--[if !IE]> -->
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+		<!-- <![endif]-->
+
+		<!--[if IE]>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<![endif]-->
+
+		<!--[if !IE]> -->
+
+		<script type="text/javascript">
+			window.jQuery || document.write("<script src='assets/js/jquery-2.0.3.min.js'>"+"<"+"/script>");
+		</script>
+
+		<!-- <![endif]-->
+
+		<!--[if IE]>
+		<script type="text/javascript">
+		 window.jQuery || document.write("<script src='assets/js/jquery-1.10.2.min.js'>"+"<"+"/script>");
+		</script>
+		<![endif]-->
+
+		<script type="text/javascript">
+			if("ontouchend" in document) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+		</script>
+		<script src="assets/js/bootstrap.min.js"></script>
+		<script src="assets/js/typeahead-bs2.min.js"></script>
+
+		<!-- page specific plugin scripts -->
+
+		<script src="assets/js/jquery.nestable.min.js"></script>
+		<script src="assets/js/date-time/bootstrap-datepicker.min.js"></script>
+		<script src="assets/js/date-time/bootstrap-timepicker.min.js"></script>
+		<script src="assets/js/date-time/moment.min.js"></script>
+		<script src="assets/js/date-time/daterangepicker.min.js"></script>
+		
+		<!--[if lte IE 8]>
+		  <script src="assets/js/excanvas.min.js"></script>
+		<![endif]-->
+
+		<script src="assets/js/jquery-ui-1.10.3.custom.min.js"></script>
+
+		<!-- ace scripts -->
+
+		<script src="assets/js/ace-elements.min.js"></script>
+		<script src="assets/js/ace.min.js"></script>
+
+		<!-- inline scripts related to this page -->
+		<script type="text/javascript">
+			jQuery(function($) {
+				//Android's default browser somehow is confused when tapping on label which will lead to dragging the task
+				//so disable dragging when clicking on label
+				var agent = navigator.userAgent.toLowerCase();
+				if("ontouchstart" in document && /applewebkit/.test(agent) && /android/.test(agent))
+				  $('#tasks').on('touchstart', function(e){
+					var li = $(e.target).closest('#tasks li');
+					if(li.length == 0)return;
+					var label = li.find('label.inline').get(0);
+					if(label == e.target || $.contains(label, e.target)) e.stopImmediatePropagation() ;
+				});
+			
+				$('#tasks').sortable({
+					opacity:0.8,
+					revert:true,
+					forceHelperSize:true,
+					placeholder: 'draggable-placeholder',
+					forcePlaceholderSize:true,
+					tolerance:'pointer',
+					stop: function( event, ui ) {//just for Chrome!!!! so that dropdowns on items don't appear below other items after being moved
+						$(ui.item).css('z-index', 'auto');
+					}
+					}
+				);
+				
+				$('[data-rel="tooltip"]').tooltip();
+
+				/// DatePicker Dialog 日期區間選擇 ///
+
+				$('input[name=date-range-picker]').daterangepicker().prev().on(ace.click_event, function(){
+					$(this).next().focus();
+				});
+				
+			});
+		</script>
+	</body>
+</html>

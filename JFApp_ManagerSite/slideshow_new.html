@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>首頁 - 後台管理系統</title>
+
+		<meta name="description" content="" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- basic styles -->
+
+		<link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+
+		<!--[if IE 7]>
+		  <link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css" />
+		<![endif]-->
+
+		<!-- page specific plugin styles -->
+		<link rel="stylesheet" href="assets/css/daterangepicker.css" />
+
+		<!-- fonts -->
+
+		<!-- <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" /> -->
+
+		<!-- ace styles -->
+
+		<link rel="stylesheet" href="assets/css/ace.min.css" />
+		<link rel="stylesheet" href="assets/css/ace-rtl.min.css" />
+		<link rel="stylesheet" href="assets/css/ace-skins.min.css" />
+
+		<!--[if lte IE 8]>
+		  <link rel="stylesheet" href="assets/css/ace-ie.min.css" />
+		<![endif]-->
+
+		<!-- inline styles related to this page -->
+
+		<!-- ace settings handler -->
+
+		<script src="assets/js/ace-extra.min.js"></script>
+
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+
+		<!--[if lt IE 9]>
+		<script src="assets/js/html5shiv.js"></script>
+		<script src="assets/js/respond.min.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<div class="navbar navbar-default" id="navbar">
+
+			<script type="text/javascript">
+				try{ace.settings.check('navbar' , 'fixed')}catch(e){}
+			</script>
+
+
+			<div class="navbar-container" id="navbar-container">
+				<div class="navbar-header pull-left logo">
+					<a href="index.html" class="navbar-brand">
+						<small>
+							後台管理系統
+						</small>
+					</a><!-- /.brand -->
+				</div><!-- /.navbar-header -->
+
+				<div class="navbar-header pull-right" role="navigation">
+					<ul class="nav ace-nav">
+						<li class="color">
+							<a data-toggle="dropdown" class="dropdown-toggle" href="#">
+								<i class="icon-envelope icon-animated-vertical"></i>
+								<span class="badge badge-important">12</span>
+							</a>
+
+							<ul class="pull-right dropdown-navbar navbar-pink dropdown-menu dropdown-caret dropdown-times">
+								<li>
+									<a href="user_feedback.html">
+										<div class="clearfix">
+											<span class="pull-left">
+												<i class="btn btn-xs no-hover btn-success icon-user"></i>
+												客服管理
+											</span>
+											<span class="pull-right badge badge-success">+8</span>
+										</div>
+									</a>
+								</li>
+
+								<li>
+									<a href="user_feedback.html">
+										查看所有通知
+										<i class="icon-arrow-right"></i>
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li class="light-blue">
+							<a data-toggle="dropdown" href="#" class="dropdown-toggle">
+								<img class="nav-user-photo" src="assets/avatars/avatar4.png" alt="Jason's Photo" />
+								<span class="user-info">
+									<small>您好, 歡迎</small>
+									超級管理員
+								</span>
+
+								<i class="icon-caret-down"></i>
+							</a>
+
+							<ul class="user-menu pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-times">
+								<li>
+									<a href="admin_profile.html">
+										<i class="icon-user"></i>
+										個人資料
+									</a>
+								</li>
+
+								<li class="divider"></li>
+
+								<li>
+									<a href="login.html">
+										<i class="icon-power-off"></i>
+										登 出
+									</a>
+								</li>
+							</ul>
+						</li>
+					</ul><!-- /.ace-nav -->
+				</div><!-- /.navbar-header -->
+			</div><!-- /.container -->
+		</div>
+
+		<div class="main-container" id="main-container">
+			<script type="text/javascript">
+				try{ace.settings.check('main-container' , 'fixed')}catch(e){}
+			</script>
+
+			<div class="main-container-inner">
+				<a class="menu-toggler" id="menu-toggler" href="#">
+					<span class="menu-text"></span>
+				</a>
+
+				<div class="sidebar" id="sidebar">
+					<script type="text/javascript">
+						try{ace.settings.check('sidebar' , 'fixed')}catch(e){}
+					</script>
+
+					<ul class="nav nav-list">
+						<li>
+							<a href="index.html">
+								<i class="icon-home"></i>
+								<span class="menu-text">首 頁</span>
+							</a>
+						</li>
+						<li class="active">
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-th"></i>
+								<span class="menu-text">主題管理</span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li class="active">
+									<a href="slideshow_manager.html">
+										<i class="icon-double-angle-right"></i>
+										廣告列表
+									</a>
+								</li>
+								<li>
+									<a href="witness_manager.html">
+										<i class="icon-double-angle-right"></i>
+										見證列表
+									</a>
+								</li>
+								<li>
+									<a href="#.html">
+										<i class="icon-double-angle-right"></i>
+										參數設定
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="popular_msnager.html">
+								<i class="icon-heart-o"></i>
+								<span class="menu-text">熱門禱告管理</span>
+							</a>
+						</li>
+
+						<li>
+							<a href="ban_msnager.html">
+								<i class="icon-ban"></i>
+								<span class="menu-text">檢舉管理</span>
+							</a>
+						</li>
+
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-leanpub"></i>
+								<span class="menu-text">教導管理</span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="#.html">
+										<i class="icon-double-angle-right"></i>
+										教導總覽
+									</a>
+								</li>
+								<li>
+									<a href="#.html">
+										<i class="icon-double-angle-right"></i>
+										新增文章
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="sys_postnews.html">
+								<i class="icon-laptop"></i>
+								<span class="menu-text">公告管理</span>
+							</a>
+						</li>
+
+					</ul><!-- /.nav-list -->
+
+					<div class="sidebar-collapse" id="sidebar-collapse">
+						<i class="icon-angle-double-left" data-icon1="icon-angle-double-left" data-icon2="icon-angle-double-right"></i>
+					</div>
+
+					<script type="text/javascript">
+						try{ace.settings.check('sidebar' , 'collapsed')}catch(e){}
+					</script>
+				</div>
+
+				<div class="main-content">
+					<div class="breadcrumbs" id="breadcrumbs">
+						<script type="text/javascript">
+							try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
+						</script>
+
+						<ul class="breadcrumb">
+							<li>
+								<i class="icon-home home-icon"></i>
+								<a href="index.html">Home</a>
+							</li>
+							<li>
+								<a href="slideshow_manager.html">廣告列表</a>
+							</li>
+							<li>新增廣告</li>
+						</ul><!-- .breadcrumb -->
+
+						<div class="nav-search" id="nav-search">
+							<form class="form-search">
+								<span class="input-icon">
+									<input type="text" placeholder="搜尋 ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
+									<i class="icon-search nav-search-icon"></i>
+								</span>
+							</form>
+						</div><!-- #nav-search -->
+					</div>
+
+					<div class="page-content">
+						<div class="page-header">
+							<h1>
+								<i class="icon-file-o"></i>
+								新增 Slideshow 廣告
+							</h1>
+						</div>
+
+						<div class="row">
+							<div class="col-sm-12">
+								<!-- PAGE CONTENT BEGINS -->
+
+								<form class="form-horizontal" role="form">
+
+									<div class="form-group">
+										<label class="col-sm-2 control-label no-padding-right"><b class="red">*</b> 刊登日期</label>
+										<div class="col-sm-9">
+											<div class="input-group">
+												<span class="input-group-addon">
+													<i class="icon-calendar bigger-110"></i>
+												</span>
+												<input class="form-control" type="text" name="date-range-picker">
+											</div><!-- DatePicker -->
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="col-sm-2 control-label no-padding-right"><b class="red">*</b> 標題名稱</label>
+										<div class="col-sm-9">
+											<input type="text" placeholder="請輸入廣告名稱" class="form-control">
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="col-sm-2 control-label no-padding-right"><b class="red">*</b> 上傳圖片</label>
+										<div class="col-sm-9">
+											<input type="file" id="id-input-file-3"/><!-- 上傳圖片 -->
+											<div class="space-4"></div>
+											<blockquote>
+												<span class="red">活動版面圖示圖片尺寸：720 x 400 像素，限制 100kb 以下，請使用 .jpg 或 .png 格式。</span>
+											</blockquote>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="col-sm-2 control-label no-padding-right">
+											<input name="form-field-radio" type="radio" class="ace" checked>
+											<span class="lbl"> URL 連結</span>
+										</label>
+										<div class="col-sm-9">
+											<input class="form-control" type="text" placeholder="連結網頁位址">
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="col-sm-2 control-label no-padding-right">
+											<input name="form-field-radio" type="radio" class="ace">
+											<span class="lbl"> 自定檢視</span>
+										</label>
+										<div class="col-sm-9">
+											<textarea class="form-control" maxlength="250" rows="12" placeholder="在此處將使用 TINYMCE 網頁編輯器"></textarea>
+										</div>
+									</div>
+
+									<div class="clearfix form-actions center">
+											<button class="btn" type="button" onclick="history.go(-1)">
+												<i class="icon-times bigger-110"></i>
+												取 消
+											</button>
+											&nbsp;
+											<button class="btn btn-info" type="button">
+												<i class="icon-check bigger-110"></i>
+												儲存新增
+											</button>
+									</div><!-- button submit -->
+
+								</form><!-- /.form-horizontal -->
+
+								<div class="hr hr32 hr-dotted"></div>
+
+								<!-- PAGE CONTENT ENDS -->
+							</div><!-- /.col -->
+						</div><!-- /.row -->
+					</div><!-- /.page-content -->
+				</div><!-- /.main-content -->
+
+			</div><!-- /.main-container-inner -->
+
+			<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+				<i class="icon-angle-double-up icon-only bigger-110"></i>
+			</a>
+		</div><!-- /.main-container -->
+
+		<!-- basic scripts -->
+
+		<!--[if !IE]> -->
+
+		<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script> -->
+
+		<!-- <![endif]-->
+
+		<!--[if IE]>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<![endif]-->
+
+		<!--[if !IE]> -->
+
+		<script type="text/javascript">
+			window.jQuery || document.write("<script src='assets/js/jquery-2.0.3.min.js'>"+"<"+"/script>");
+		</script>
+
+		<!-- <![endif]-->
+
+		<!--[if IE]>
+		<script type="text/javascript">
+		 window.jQuery || document.write("<script src='assets/js/jquery-1.10.2.min.js'>"+"<"+"/script>");
+		</script>
+		<![endif]-->
+
+		<script type="text/javascript">
+			if("ontouchend" in document) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+		</script>
+		<script src="assets/js/bootstrap.min.js"></script>
+		<script src="assets/js/typeahead-bs2.min.js"></script>
+
+		<!-- page specific plugin scripts -->
+
+		<!--[if lte IE 8]>
+		  <script src="assets/js/excanvas.min.js"></script>
+		<![endif]-->
+
+		<script src="assets/js/jquery-ui-1.10.3.custom.min.js"></script>
+
+		<script src="assets/js/date-time/bootstrap-datepicker.min.js"></script>
+		<script src="assets/js/date-time/bootstrap-timepicker.min.js"></script>
+		<script src="assets/js/date-time/moment.min.js"></script>
+		<script src="assets/js/date-time/daterangepicker.min.js"></script>
+		<!-- <script src="assets/js/jquery.autosize.min.js"></script> -->
+		<script src="tinymce/jquery.tinymce.min.js"></script>
+		<script src="tinymce/tinymce.min.js"></script>
+
+		<!-- ace scripts -->
+
+		<script src="assets/js/ace-elements.min.js"></script>
+		<script src="assets/js/ace.min.js"></script>
+
+		<!-- inline scripts related to this page -->
+		<script type="text/javascript">
+
+		$(document).ready(function(){
+			
+			/// DatePicker Dialog 日期區間選擇 ///
+			$('input[name=date-range-picker]').daterangepicker().prev().on(ace.click_event, function(){
+				$(this).next().focus();
+			});
+			
+			// 圖片上傳
+			$('#id-input-file-3').ace_file_input({
+				style:'well',
+				btn_choose:'圖片拖曳到這裡或點擊選取圖片',
+				btn_change:null,
+				no_icon:'icon-cloud-upload',
+				droppable:true,
+				thumbnail:'large'//small | large | fit
+				//,icon_remove:null//set null, to hide remove/reset button
+				/**,before_change:function(files, dropped) {
+					//Check an example below
+					//or examples/file-upload.html
+					return true;
+				}*/
+				/**,before_remove : function() {
+					return true;
+				}*/
+				,
+				preview_error : function(filename, error_code) {
+					//name of the file that failed
+					//error_code values
+					//1 = 'FILE_LOAD_FAILED',
+					//2 = 'IMAGE_LOAD_FAILED',
+					//3 = 'THUMBNAIL_FAILED'
+					//alert(error_code);
+				}
+		
+			}).on('change', function(){
+				//console.log($(this).data('ace_input_files'));
+				//console.log($(this).data('ace_input_method'));
+			});
+			
+			/// TextArea
+			//$('textarea[class*=autosize]').autosize({append: "\n"});
+			//$('textarea.limited').inputlimiter({
+			//	remText: '%n 字已輸入，斷行不會扣除',
+			//	limitText: '本文可輸入: %n 個字'
+			//});
+
+		});
+		</script>
+		<script type="text/javascript">
+		tinymce.init({
+			selector: "textarea",
+			menubar: false,
+			language: "zh_TW",
+			theme: "modern",
+			fontsize_formats: "8pt 10pt 12pt 14pt 16pt 18pt 24pt 36pt 48pt 56pt",
+			//content_css: "content.css",
+			plugins: [
+				"advlist autolink lists link image charmap preview hr anchor pagebreak",
+				"searchreplace wordcount visualblocks visualchars code fullscreen",
+				"insertdatetime media nonbreaking table contextmenu",
+				"template textcolor colorpicker textpattern imagetools"
+			],
+			toolbar1: "undo redo | forecolor backcolor | formatselect fontselect fontsizeselect | bold italic hr | charmap removeformat preview source",
+			toolbar2: "table | alignleft aligncenter alignright | bullist numlist outdent indent | link unlink image media | insertdatetime code fullscreen",
+			image_advtab: true
+		});
+		</script>
+	</body>
+</html>

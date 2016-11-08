@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>商城商品管理 - 後台管理系統</title>
+
+		<meta name="description" content="" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- basic styles -->
+
+		<link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+
+		<!--[if IE 7]>
+		  <link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css" />
+		<![endif]-->
+
+		<!-- page specific plugin styles -->
+
+		<!-- fonts -->
+
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" />
+
+		<!-- ace styles -->
+
+		<link rel="stylesheet" href="assets/css/ace.min.css" />
+		<link rel="stylesheet" href="assets/css/ace-rtl.min.css" />
+		<link rel="stylesheet" href="assets/css/ace-skins.min.css" />
+
+		<!--[if lte IE 8]>
+		  <link rel="stylesheet" href="assets/css/ace-ie.min.css" />
+		<![endif]-->
+
+		<!-- inline styles related to this page -->
+
+		<!-- ace settings handler -->
+
+		<script src="assets/js/ace-extra.min.js"></script>
+
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+
+		<!--[if lt IE 9]>
+		<script src="assets/js/html5shiv.js"></script>
+		<script src="assets/js/respond.min.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<div class="navbar navbar-default" id="navbar">
+
+			<script type="text/javascript">
+				try{ace.settings.check('navbar' , 'fixed')}catch(e){}
+			</script>
+
+
+			<div class="navbar-container" id="navbar-container">
+				<div class="navbar-header pull-left logo">
+					<a href="index.html" class="navbar-brand">
+						<small>
+							後台管理系統
+						</small>
+					</a><!-- /.brand -->
+				</div><!-- /.navbar-header -->
+
+				<div class="navbar-header pull-right" role="navigation">
+					<ul class="nav ace-nav">
+						<li class="color">
+							<a data-toggle="dropdown" class="dropdown-toggle" href="#">
+								<i class="icon-envelope icon-animated-vertical"></i>
+								<span class="badge badge-important">12</span>
+							</a>
+
+							<ul class="pull-right dropdown-navbar navbar-pink dropdown-menu dropdown-caret dropdown-times">
+								<li>
+									<a href="user_feedback.html">
+										<div class="clearfix">
+											<span class="pull-left">
+												<i class="btn btn-xs no-hover btn-success icon-user"></i>
+												客服管理
+											</span>
+											<span class="pull-right badge badge-success">+8</span>
+										</div>
+									</a>
+								</li>
+
+								<li>
+									<a href="user_feedback.html">
+										查看所有通知
+										<i class="icon-arrow-right"></i>
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li class="light-blue">
+							<a data-toggle="dropdown" href="#" class="dropdown-toggle">
+								<img class="nav-user-photo" src="assets/avatars/avatar4.png" alt="Jason's Photo" />
+								<span class="user-info">
+									<small>您好, 歡迎</small>
+									超級管理員
+								</span>
+
+								<i class="icon-caret-down"></i>
+							</a>
+
+							<ul class="user-menu pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
+								<li>
+									<a href="admin_profile.html">
+										<i class="icon-user"></i>
+										個人資料
+									</a>
+								</li>
+
+								<li class="divider"></li>
+
+								<li>
+									<a href="login.html">
+										<i class="icon-power-off"></i>
+										登 出
+									</a>
+								</li>
+							</ul>
+						</li>
+					</ul><!-- /.ace-nav -->
+				</div><!-- /.navbar-header -->
+			</div><!-- /.container -->
+		</div>
+
+		<div class="main-container" id="main-container">
+			<script type="text/javascript">
+				try{ace.settings.check('main-container' , 'fixed')}catch(e){}
+			</script>
+
+			<div class="main-container-inner">
+				<a class="menu-toggler" id="menu-toggler" href="#">
+					<span class="menu-text"></span>
+				</a>
+
+				<div class="sidebar" id="sidebar">
+					<script type="text/javascript">
+						try{ace.settings.check('sidebar' , 'fixed')}catch(e){}
+					</script>
+
+					<ul class="nav nav-list">
+						<li>
+							<a href="index.html">
+								<i class="icon-home"></i>
+								<span class="menu-text"> 首 頁 </span>
+							</a>
+						</li>
+
+						<li>
+							<a href="admin_group.html">
+								<i class="icon-user-md"></i>
+								<span class="menu-text"> 系統管理員群組 </span>
+							</a>
+						</li>
+
+						<li class="active open">
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-th"></i>
+								<span class="menu-text"> 商城商品管理 </span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li class="active">
+									<a href="market_manager.html">
+										<i class="icon-double-angle-right"></i>
+										商品總覽
+									</a>
+								</li>
+								<li>
+									<a href="market_orderlist.html">
+										<i class="icon-double-angle-right"></i>
+										訂單管理
+									</a>
+								</li>
+                                <li>
+									<a href="market_new.html">
+										<i class="icon-double-angle-right"></i>
+										新增商品
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-cloud-upload"></i>
+								<span class="menu-text"> 廣告管理 </span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="ad_manager.html">
+										<i class="icon-double-angle-right"></i>
+										廣告總覽
+									</a>
+								</li>
+                                <li>
+									<a href="ad_new.html">
+										<i class="icon-double-angle-right"></i>
+										新增廣告
+									</a>
+								</li>
+								<li>
+									<a href="ad_type.html">
+										<i class="icon-double-angle-right"></i>
+										廣告類別管理
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="#" class="dropdown-toggle"> 
+								<i class="icon-codepen"></i> <span class="menu-text"> 序號管理 </span> 
+								<b class="arrow icon-angle-down"></b>
+							</a>
+							<ul class="submenu">
+								<li>
+									<a href="sn_list.html"> <i class="icon-double-angle-right"></i> 序號總覽</a>
+								</li>
+								<li>
+									<a href="sn_create.html"> <i class="icon-double-angle-right"></i> 新增序號</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-users"></i>
+								<span class="menu-text"> 會員管理 </span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="user_group.html">
+										<i class="icon-double-angle-right"></i>
+										會員總覽
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-rocket"></i>
+								<span class="menu-text"> 商家管理 </span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="sell_manager.html">
+										<i class="icon-double-angle-right"></i>
+										商家總覽
+									</a>
+								</li>
+								<li>
+									<a href="sell_new.html">
+										<i class="icon-double-angle-right"></i>
+										新增商家
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="user_feedback.html">
+								<i class="icon-wechat"></i>
+								<span class="menu-text"> 客服管理 </span>
+							</a>
+						</li>
+
+						<li>
+							<a href="sys_postnews.html">
+								<i class="icon-laptop"></i>
+								<span class="menu-text"> 公告管理 </span>
+							</a>
+						</li>
+
+						<li>
+							<a href="sys_announcement.html">
+								<i class="icon-bullhorn"></i>
+								<span class="menu-text"> 消息管理 </span>
+							</a>
+						</li>
+
+                        <li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-bar-chart-o"></i>
+								<span class="menu-text"> 數據分析 </span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="analysis_isp.html">
+										<i class="icon-double-angle-right"></i>
+										基本分析
+									</a>
+								</li>
+
+								<li>
+									<a href="analysis_local.html">
+										<i class="icon-double-angle-right"></i>
+										依地區地域分布
+									</a>
+								</li>
+
+                                <li>
+									<a href="analysis_trend.html">
+										<i class="icon-double-angle-right"></i>
+										APP 使用次數趨勢圖
+									</a>
+								</li>
+                                <li>
+									<a href="analysis_boot.html">
+										<i class="icon-double-angle-right"></i>
+										開機次數趨勢圖
+									</a>
+								</li>
+							</ul>
+						</li>
+						
+                        <li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-adn"></i>
+								<span class="menu-text"> APP 類別管理 </span>
+                                <b class="arrow icon-angle-down"></b>
+							</a>
+                            
+                            <ul class="submenu">
+								<li>
+									<a href="app_catalog.html">
+										<i class="icon-double-angle-right"></i>
+										APP 類型歸類對應
+									</a>
+								</li>
+
+								<li>
+									<a href="mobile_device.html">
+										<i class="icon-double-angle-right"></i>
+										手機型號裝置對應
+									</a>
+								</li>
+							</ul>
+						</li>
+					</ul><!-- /.nav-list -->
+
+					<div class="sidebar-collapse" id="sidebar-collapse">
+						<i class="icon-angle-double-left" data-icon1="icon-angle-double-left" data-icon2="icon-angle-double-right"></i>
+					</div>
+
+					<script type="text/javascript">
+						try{ace.settings.check('sidebar' , 'collapsed')}catch(e){}
+					</script>
+				</div>
+
+				<div class="main-content">
+					<div class="breadcrumbs" id="breadcrumbs">
+						<script type="text/javascript">
+							try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
+						</script>
+
+						<ul class="breadcrumb">
+							<li>
+								<i class="icon-home home-icon"></i>
+								<a href="index.html">Home</a>
+							</li>
+							<li><a href="market_manager.html">商品總覽</a></li>
+							<li class="active">PINCODE 匯入檢視</li>
+						</ul><!-- .breadcrumb -->
+
+						<div class="nav-search" id="nav-search">
+							<form class="form-search">
+								<span class="input-icon">
+									<input type="text" placeholder="搜尋 ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
+									<i class="icon-search nav-search-icon"></i>
+								</span>
+							</form>
+						</div><!-- #nav-search -->
+					</div><!-- breadcrumbs -->
+
+					<div class="page-content">
+
+						<div class="pull-right inline">
+							<a href="market_manager.html" class="btn">
+								<i class="icon-arrow-left align-top bigger-125"></i>
+								返 回
+							</a>
+						</div>
+
+						<div class="page-header">
+							<h1>
+								<i class="icon-file-excel-o"></i>
+								PINCODE 匯入檢視
+							</h1>
+						</div>
+
+						<blockquote>
+							<p style="font-size: 11pt;"><i class="icon-bar-chart-o"></i>
+							匯入總數：<span class="purple" style="font-size: 18pt;">1,234,567</span> 筆資料</p>
+							<p style="font-size: 11pt;"><i class="icon-clock-o"></i>
+							匯入日期：<span>2014-11-12 14:30</span></p>
+						</blockquote>
+
+						<!-- <div class="hr hr16 hr-dotted"></div> -->
+						
+						<style>
+							.numlist {margin:0 0 1em 0;padding:0 0 0.5em 0.3em;border-bottom: 1px dotted #e2e2e2;line-height: 2;/*-moz-column-count:5;-webkit-column-count:5;column-count:5;*/}
+							.numlist li {float: left;margin: 4px 0px 4px 1em;width: 10%;}
+							.li_red li {color: #DD4D4D;}
+							.li_green li {color: #558E45;}
+							@media screen and (max-width: 1280px){
+								.numlist li {width: 11%;}
+							}
+							@media screen and (max-width: 1080px){
+								.numlist li {width: 15%;}
+							}
+							@media screen and (max-width: 720px){
+								.numlist li {width: 18%;}
+							}
+							@media screen and (max-width: 620px){
+								.numlist li {width: 30%;}
+							}
+							@media screen and (max-width: 410px){
+								.numlist li {width: 46%;}
+							}
+						</style>
+
+						<div class="row">
+							<div class="col-xs-12">
+									<!-- PAGE CONTENT BEGINS -->
+
+									<div class="tabbable">
+										<ul class="nav nav-tabs">
+											<li class="active">
+												<a data-toggle="tab" href="#error">
+													<i class="red icon-times bigger-120 hidden-480"></i>錯誤
+													<span class="badge badge-danger">333</span>
+												</a>
+											</li>
+
+											<li>
+												<a data-toggle="tab" href="#status">
+													<i class="green icon-check-circle-o bigger-120 hidden-480"></i>正確
+													<span class="badge badge-success">12345</span>
+												</a>
+											</li>
+
+										</ul>
+
+										<div class="tab-content">
+										
+											<div id="status" class="tab-pane">
+												<ul class="numlist li_green clearfix">
+													<li>SN000245201</li>
+													<li>SN000245202</li>
+													<li>SN000245203</li>
+													<li>SN000245204</li>
+													<li>SN000245205</li>
+													<li>SN000245206</li>
+													<li>SN000245207</li>
+													<li>SN000245208</li>
+													<li>SN000245209</li>
+													<li>SN000245210</li>
+													<li>SN000245211</li>
+													<li>SN000245212</li>
+													<li>SN000245213</li>
+													<li>SN000245214</li>
+													<li>SN000245215</li>
+													<li>SN000245216</li>
+													<li>SN000245217</li>
+													<li>SN000245218</li>
+													<li>SN000245219</li>
+													<li>SN000245220</li>
+													<li>SN000245221</li>
+													<li>SN000245222</li>
+													<li>SN000245223</li>
+													<li>SN000245224</li>
+													<li>SN000245225</li>
+													<li>SN000245226</li>
+													<li>SN000245227</li>
+													<li>SN000245228</li>
+													<li>SN000245229</li>
+													<li>SN000245230</li>
+													<li>SN000245231</li>
+													<li>SN000245232</li>
+													<li>SN000245233</li>
+													<li>SN000245234</li>
+													<li>SN000245235</li>
+													<li>SN000245236</li>
+													<li>SN000245237</li>
+													<li>SN000245238</li>
+													<li>SN000245239</li>
+													<li>SN000245240</li>
+													<li>SN000245241</li>
+													<li>SN000245242</li>
+													<li>SN000245243</li>
+													<li>SN000245244</li>
+													<li>SN000245245</li>
+													<li>SN000245246</li>
+													<li>SN000245247</li>
+													<li>SN000245248</li>
+													<li>SN000245249</li>
+													<li>SN000245250</li>
+													<li>SN000245251</li>
+													<li>SN000245252</li>
+													<li>SN000245253</li>
+													<li>SN000245254</li>
+													<li>SN000245255</li>
+													<li>SN000245256</li>
+													<li>SN000245257</li>
+													<li>SN000245258</li>
+													<li>SN000245259</li>
+													<li>SN000245260</li>
+													<li>SN000245261</li>
+													<li>SN000245262</li>
+													<li>SN000245263</li>
+													<li>SN000245264</li>
+													<li>SN000245265</li>
+													<li>SN000245266</li>
+													<li>SN000245267</li>
+													<li>SN000245268</li>
+													<li>SN000245269</li>
+													<li>SN000245270</li>
+													<li>SN000245271</li>
+													<li>SN000245272</li>
+													<li>SN000245273</li>
+													<li>SN000245274</li>
+													<li>SN000245275</li>
+													<li>SN000245276</li>
+													<li>SN000245277</li>
+													<li>SN000245278</li>
+													<li>SN000245279</li>
+													<li>SN000245280</li>
+													<li>SN000245281</li>
+													<li>SN000245282</li>
+													<li>SN000245283</li>
+													<li>SN000245284</li>
+													<li>SN000245285</li>
+													<li>SN000245286</li>
+													<li>SN000245287</li>
+													<li>SN000245288</li>
+												</ul>
+
+												<div class="row">
+												  <div class="col-sm-6">
+													<div class="dataTables_info">共 <span class="green">12345</span> 筆資料，目前在第 1 頁。</div>
+												  </div>
+												  <div class="col-sm-6">
+													<div class="dataTables_paginate paging_bootstrap">
+													  <ul class="pagination">
+														<li class="prev disabled"><a href="#"><i class="icon-angle-double-left"></i></a></li>
+														<li class="active"><a href="#">1</a></li>
+														<li><a href="#">2</a></li>
+														<li class="next"><a href="#"><i class="icon-angle-double-right"></i></a></li>
+													  </ul>
+													</div>
+												  </div>
+												</div>
+											</div>
+											
+											<div id="error" class="tab-pane active">
+												<ul class="numlist li_red clearfix">
+													<li>SN000245001</li>
+													<li>SN000245002</li>
+													<li>SN000245003</li>
+													<li>SN000245004</li>
+													<li>SN000245005</li>
+													<li>SN000245006</li>
+													<li>SN000245007</li>
+													<li>SN000245008</li>
+													<li>SN000245009</li>
+													<li>SN000245010</li>
+													<li>SN000245011</li>
+													<li>SN000245012</li>
+													<li>SN000245013</li>
+													<li>SN000245014</li>
+													<li>SN000245015</li>
+													<li>SN000245016</li>
+													<li>SN000245017</li>
+													<li>SN000245018</li>
+													<li>SN000245019</li>
+													<li>SN000245020</li>
+													<li>SN000245021</li>
+													<li>SN000245022</li>
+													<li>SN000245023</li>
+													<li>SN000245024</li>
+													<li>SN000245025</li>
+													<li>SN000245026</li>
+													<li>SN000245027</li>
+													<li>SN000245028</li>
+													<li>SN000245029</li>
+													<li>SN000245030</li>
+													<li>SN000245031</li>
+													<li>SN000245032</li>
+													<li>SN000245033</li>
+													<li>SN000245034</li>
+													<li>SN000245035</li>
+													<li>SN000245036</li>
+													<li>SN000245037</li>
+													<li>SN000245038</li>
+													<li>SN000245039</li>
+													<li>SN000245040</li>
+													<li>SN000245041</li>
+													<li>SN000245042</li>
+													<li>SN000245043</li>
+													<li>SN000245044</li>
+													<li>SN000245045</li>
+													<li>SN000245046</li>
+													<li>SN000245047</li>
+													<li>SN000245048</li>
+													<li>SN000245049</li>
+													<li>SN000245050</li>
+													<li>SN000245051</li>
+													<li>SN000245052</li>
+													<li>SN000245053</li>
+													<li>SN000245054</li>
+													<li>SN000245055</li>
+													<li>SN000245056</li>
+													<li>SN000245057</li>
+													<li>SN000245058</li>
+													<li>SN000245059</li>
+													<li>SN000245060</li>
+													<li>SN000245061</li>
+													<li>SN000245062</li>
+													<li>SN000245063</li>
+													<li>SN000245064</li>
+													<li>SN000245065</li>
+													<li>SN000245066</li>
+													<li>SN000245067</li>
+													<li>SN000245068</li>
+													<li>SN000245069</li>
+													<li>SN000245070</li>
+													<li>SN000245071</li>
+													<li>SN000245072</li>
+													<li>SN000245073</li>
+													<li>SN000245074</li>
+													<li>SN000245075</li>
+													<li>SN000245076</li>
+													<li>SN000245077</li>
+													<li>SN000245078</li>
+													<li>SN000245079</li>
+													<li>SN000245080</li>
+													<li>SN000245081</li>
+													<li>SN000245082</li>
+													<li>SN000245083</li>
+													<li>SN000245084</li>
+													<li>SN000245085</li>
+													<li>SN000245086</li>
+													<li>SN000245087</li>
+													<li>SN000245088</li>
+													<li>SN000245089</li>
+													<li>SN000245090</li>
+													<li>SN000245091</li>
+													<li>SN000245092</li>
+													<li>SN000245093</li>
+													<li>SN000245094</li>
+													<li>SN000245095</li>
+													<li>SN000245096</li>
+													<li>SN000245097</li>
+													<li>SN000245098</li>
+													<li>SN000245099</li>
+													<li>SN000245100</li>
+													<li>SN000245101</li>
+													<li>SN000245102</li>
+													<li>SN000245103</li>
+													<li>SN000245104</li>
+													<li>SN000245105</li>
+													<li>SN000245106</li>
+													<li>SN000245107</li>
+													<li>SN000245108</li>
+													<li>SN000245109</li>
+													<li>SN000245110</li>
+													<li>SN000245111</li>
+													<li>SN000245112</li>
+													<li>SN000245113</li>
+													<li>SN000245114</li>
+													<li>SN000245115</li>
+													<li>SN000245116</li>
+													<li>SN000245117</li>
+													<li>SN000245118</li>
+													<li>SN000245119</li>
+													<li>SN000245120</li>
+													<li>SN000245121</li>
+													<li>SN000245122</li>
+													<li>SN000245123</li>
+												</ul>
+
+												<div class="row">
+												  <div class="col-sm-6">
+													<div class="dataTables_info">共 <span class="red">333</span> 筆資料，目前在第 1 頁。</div>
+												  </div>
+												  <div class="col-sm-6">
+													<div class="dataTables_paginate paging_bootstrap">
+													  <ul class="pagination">
+														<li class="prev disabled"><a href="#"><i class="icon-angle-double-left"></i></a></li>
+														<li class="active"><a href="#">1</a></li>
+														<li><a href="#">2</a></li>
+														<li><a href="#">3</a></li>
+														<li><a href="#">4</a></li>
+														<li class="next"><a href="#"><i class="icon-angle-double-right"></i></a></li>
+													  </ul>
+													</div>
+												  </div>
+												</div>
+											</div>
+
+										</div>
+
+										<div class="clearfix form-actions center">
+												<button class="btn" type="button" onclick="location.href='market_manager.html'">
+													<i class="icon-arrow-left bigger-110"></i>
+													返 回
+												</button>
+										</div>
+
+									</div><!-- tabbable -->
+
+								<div class="hr hr32 hr-dotted"></div>
+
+								<!-- PAGE CONTENT ENDS -->
+							</div><!-- /.col -->
+						</div><!-- /.row -->
+					</div><!-- /.page-content -->
+				</div><!-- /.main-content -->
+
+			</div><!-- /.main-container-inner -->
+
+			<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+				<i class="icon-angle-double-up icon-only bigger-110"></i>
+			</a>
+		</div><!-- /.main-container -->
+
+		<!-- basic scripts -->
+
+		<!--[if !IE]> -->
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+		<!-- <![endif]-->
+
+		<!--[if IE]>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<![endif]-->
+
+		<!--[if !IE]> -->
+
+		<script type="text/javascript">
+			window.jQuery || document.write("<script src='assets/js/jquery-2.0.3.min.js'>"+"<"+"/script>");
+		</script>
+
+		<!-- <![endif]-->
+
+		<!--[if IE]>
+<script type="text/javascript">
+ window.jQuery || document.write("<script src='assets/js/jquery-1.10.2.min.js'>"+"<"+"/script>");
+</script>
+<![endif]-->
+
+		<script type="text/javascript">
+			if("ontouchend" in document) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+		</script>
+		<script src="assets/js/bootstrap.min.js"></script>
+		<script src="assets/js/typeahead-bs2.min.js"></script>
+
+		<!-- page specific plugin scripts -->
+
+		<script src="assets/js/bootbox.min.js"></script>
+
+		<!-- ace scripts -->
+
+		<script src="assets/js/ace-elements.min.js"></script>
+		<script src="assets/js/ace.min.js"></script>
+
+		<!-- inline scripts related to this page -->
+		<script type="text/javascript">
+			jQuery(function($) {
+
+				$('[data-rel=tooltip]').tooltip();
+
+                /// Confirm Dialog///
+					
+				$(".bootbox-confirm").on(ace.click_event, function() {
+					bootbox.confirm("確定刪除？", function(result) {
+						if(result) {
+							//
+						}
+					});
+				});
+
+			})
+		</script>
+
+	</body>
+</html>

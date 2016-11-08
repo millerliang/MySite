@@ -1,0 +1,463 @@
+{
+	"SelItemCliene" : [{
+			"title" : "忠泰建設"
+		},{
+			"title" : "桃大建設"
+		},{
+			"title" : "華固建設"
+		},{
+			"title" : "元利建設"
+		},{
+			"title" : "台灣川普"
+		},{
+			"title" : "寶路開發建設"
+		},{
+			"title" : "昭揚建設"
+		},{
+			"title" : "光㨕營造"
+		},{
+			"title" : "台灣大林組"
+		},{
+			"title" : "新潤建設"
+		},{
+			"title" : "麗寶建設"
+		},{
+			"title" : "德鑫建設"
+		},{
+			"title" : "中悅建設"
+		},{
+			"title" : "連億建設"
+		},{
+			"title" : "馥華建設"
+		},{
+			"title" : "興富發建設"
+		},{
+			"title" : "亞昕建設"
+		},{
+			"title" : "長虹建設"
+		},{
+			"title" : "華熊建設"
+		},{
+			"title" : "太平洋建設"
+		},{
+			"title" : "維多利亞建設"
+		},{
+			"title" : "揚潤建設"
+		},{
+			"title" : "亞青建設"
+		},{
+			"title" : "國揚建設"
+		},{
+			"title" : "勝陽建設"
+		},{
+			"title" : "新富都"
+		},{
+			"title" : "華威聯合"
+		},{
+			"title" : "台元科技園區"
+		},{
+			"title" : "樂揚建設"
+		}
+	],
+	"imgsItemList" : [{
+			"date" : "忠泰建設機構在國際思維與創新作為的驅策下，致力於追求當代新趨勢、新品味、新技術，一路向前推進，讓每棟建築都擁有無可取代的獨特性格，不只改寫了台灣住宅的發展趨勢，也奠定了豪宅的新標竿，而忠泰也成為頂級豪宅的代名詞。",
+			"type_txt" : "熱銷",
+			"status" : "hot",
+			"loc" : "taipei",
+			"title" : "忠泰建設",
+			"img" : "items_img/Anewresult_01.jpg"
+		}, {
+			"date" : "建築就像生命，是一種不斷學習的過程。我們堅持的是一種簡單的概念，針對每個建案不同的屬性，在每一個環節用心，對每一個細節挑剔，我們相信生活的樣貌，取決於與城市的互動和默契，而桃大企圖詮釋的正是這種嶄新的生活方式。",
+			"type_txt" : "熱銷",
+			"status" : "hot",
+			"loc" : "taoyuan",
+			"title" : "桃大建設",
+			"img" : "items_img/Anewresult_02.jpg"
+		}, {
+			"date" : "2016-04-19",
+			"type_txt" : "近期",
+			"status" : "recent",
+			"loc" : "taipei",
+			"title" : "華固建設",
+			"img" : "items_img/Bnewresult_01.jpg"
+		}, {
+			"date" : "2016-04-19",
+			"type_txt" : "近期",
+			"status" : "recent",
+			"loc" : "taipei",
+			"title" : "元利建設",
+			"img" : "items_img/Bnewresult_02.jpg"
+		}, {
+			"date" : "",
+			"type_txt" : "",
+			"status" : "",
+			"loc" : "newTaipei",
+			"title" : "華固建設",
+			"img" : "items_img/Bnewresult_03.jpg"
+		}, {
+			"date" : "",
+			"type_txt" : "",
+			"status" : "",
+			"loc" : "newTaipei",
+			"title" : "台灣川普",
+			"img" : "items_img/Bnewresult_04.jpg"
+		}, {
+			"date" : "",
+			"type_txt" : "",
+			"status" : "近期",
+			"loc" : "newTaipei",
+			"title" : "寶路開發建設",
+			"img" : "items_img/Bnewresult_05.jpg"
+		}, {
+			"date" : "",
+			"type_txt" : "",
+			"status" : "",
+			"loc" : "taoyuan",
+			"title" : "昭揚建設",
+			"img" : "items_img/Bnewresult_06.jpg"
+		}, {
+			"date" : "",
+			"type_txt" : "",
+			"status" : "",
+			"loc" : "changhua",
+			"title" : "光㨕營造",
+			"img" : "items_img/Cnewresult_01.jpg"
+		}, {
+			"date" : "",
+			"type_txt" : "",
+			"status" : "近期",
+			"loc" : "newTaipei",
+			"title" : "台灣大林組",
+			"img" : "items_img/Cnewresult_02.jpg"
+		}, {
+			"date" : "",
+			"type_txt" : "",
+			"status" : "",
+			"loc" : "taipei",
+			"title" : "元利建設",
+			"img" : "items_img/Cnewresult_03.jpg"
+		}, {
+			"date" : "",
+			"type_txt" : "",
+			"status" : "",
+			"loc" : "taoyuan",
+			"title" : "新潤建設",
+			"img" : "items_img/Cnewresult_04.jpg"
+		}, {
+			"date" : "",
+			"type_txt" : "",
+			"status" : "",
+			"loc" : "taoyuan",
+			"title" : "新潤建設",
+			"img" : "items_img/Cnewresult_05.jpg"
+		}, {
+			"date" : "",
+			"type_txt" : "",
+			"status" : "",
+			"loc" : "taipei",
+			"title" : "麗寶建設",
+			"img" : "items_img/Cnewresult_06.jpg"
+		}, {
+			"date" : "",
+			"type_txt" : "",
+			"status" : "",
+			"loc" : "taipei",
+			"title" : "華固建設",
+			"img" : "items_img/Cnewresult_07.jpg"
+		}, {
+			"date" : "",
+			"type_txt" : "",
+			"status" : "",
+			"loc" : "taipei",
+			"title" : "台灣川普",
+			"img" : "items_img/oldresultA_01.jpg"
+		}, {
+			"date" : "",
+			"type_txt" : "",
+			"status" : "",
+			"loc" : "taipei",
+			"title" : "新潤建設",
+			"img" : "items_img/oldresultA_02.jpg"
+		}, {
+			"date" : "",
+			"type_txt" : "",
+			"status" : "",
+			"loc" : "taoyuan",
+			"title" : "昭揚建設",
+			"img" : "items_img/oldresultA_03.jpg"
+		}, {
+			"date" : "",
+			"type_txt" : "",
+			"status" : "",
+			"loc" : "taoyuan",
+			"title" : "昭揚建設",
+			"img" : "items_img/oldresultA_04.jpg"
+		}, {
+			"date" : "",
+			"type_txt" : "",
+			"status" : "",
+			"loc" : "taoyuan",
+			"title" : "昭揚建設",
+			"img" : "items_img/oldresultA_05.jpg"
+		}, {
+			"date" : "",
+			"type_txt" : "",
+			"status" : "",
+			"loc" : "hsinchu",
+			"title" : "德鑫建設",
+			"img" : "items_img/oldresultA_06.jpg"
+		}, {
+			"date" : "",
+			"type_txt" : "",
+			"status" : "",
+			"loc" : "hsinchu",
+			"title" : "德鑫建設",
+			"img" : "items_img/oldresultA_07.jpg"
+		}, {
+			"date" : "",
+			"type_txt" : "",
+			"status" : "",
+			"loc" : "taoyuan",
+			"title" : "中悅建設",
+			"img" : "items_img/oldresultA_08.jpg"
+		}, {
+			"date" : "",
+			"type_txt" : "",
+			"status" : "",
+			"loc" : "newTaipei",
+			"title" : "麗寶建設",
+			"img" : "items_img/oldresultA_09.jpg"
+		}, {
+			"date" : "",
+			"type_txt" : "",
+			"status" : "",
+			"loc" : "taoyuan",
+			"title" : "連億建設",
+			"img" : "items_img/oldresultA_10.jpg"
+		}, {
+			"date" : "",
+			"type_txt" : "",
+			"status" : "",
+			"loc" : "newTaipei",
+			"title" : "馥華建設",
+			"img" : "items_img/oldresultA_11.jpg"
+		}, {
+			"date" : "",
+			"type_txt" : "",
+			"status" : "",
+			"loc" : "newTaipei",
+			"title" : "興富發建設",
+			"img" : "items_img/oldresultA_12.jpg"
+		}, {
+			"date" : "",
+			"type_txt" : "",
+			"status" : "",
+			"loc" : "newTaipei",
+			"title" : "亞昕建設",
+			"img" : "items_img/oldresultA_13.jpg"
+		}, {
+			"date" : "",
+			"type_txt" : "",
+			"status" : "",
+			"loc" : "taipei",
+			"title" : "興富發建設",
+			"img" : "items_img/oldresultA_14.jpg"
+		}, {
+			"date" : "",
+			"type_txt" : "",
+			"status" : "",
+			"loc" : "newTaipei",
+			"title" : "長虹建設",
+			"img" : "items_img/oldresultA_15.jpg"
+		}, {
+			"date" : "",
+			"type_txt" : "",
+			"status" : "",
+			"loc" : "taipei",
+			"title" : "華熊建設",
+			"img" : "items_img/oldresultA_16.jpg"
+		}, {
+			"date" : "",
+			"type_txt" : "",
+			"status" : "",
+			"loc" : "hsinchu",
+			"title" : "華固建設",
+			"img" : "items_img/oldresultA_17.jpg"
+		}, {
+			"date" : "",
+			"type_txt" : "",
+			"status" : "",
+			"loc" : "taipei",
+			"title" : "太平洋建設",
+			"img" : "items_img/oldresultA_18.jpg"
+		}, {
+			"date" : "",
+			"type_txt" : "",
+			"status" : "",
+			"loc" : "taipei",
+			"title" : "維多利亞建設",
+			"img" : "items_img/oldresultA_19.jpg"
+		}, {
+			"date" : "",
+			"type_txt" : "",
+			"status" : "",
+			"loc" : "newTaipei",
+			"title" : "揚潤建設",
+			"img" : "items_img/oldresultA_20.jpg"
+		}, {
+			"date" : "",
+			"type_txt" : "",
+			"status" : "",
+			"loc" : "taipei",
+			"title" : "亞青建設",
+			"img" : "items_img/oldresultA_21.jpg"
+		}, {
+			"date" : "",
+			"type_txt" : "",
+			"status" : "",
+			"loc" : "hsinchu",
+			"title" : "中悅建設",
+			"img" : "items_img/oldresultA_22.jpg"
+		}, {
+			"date" : "",
+			"type_txt" : "",
+			"status" : "",
+			"loc" : "taipei",
+			"title" : "國揚建設",
+			"img" : "items_img/oldresultA_23.jpg"
+		}, {
+			"date" : "",
+			"type_txt" : "",
+			"status" : "",
+			"loc" : "taipei",
+			"title" : "勝陽建設",
+			"img" : "items_img/oldresultA_24.jpg"
+		}, {
+			"date" : "",
+			"type_txt" : "",
+			"status" : "",
+			"loc" : "taipei",
+			"title" : "華固建設",
+			"img" : "items_img/oldresultA_25.jpg"
+		}, {
+			"date" : "",
+			"type_txt" : "",
+			"status" : "",
+			"loc" : "taipei",
+			"title" : "元利建設",
+			"img" : "items_img/oldresultA_26.jpg"
+		}, {
+			"date" : "",
+			"type_txt" : "",
+			"status" : "",
+			"loc" : "newTaipei",
+			"title" : "元利建設",
+			"img" : "items_img/oldresultA_27.jpg"
+		}, {
+			"date" : "",
+			"type_txt" : "",
+			"status" : "",
+			"loc" : "taoyuan",
+			"title" : "中悅建設",
+			"img" : "items_img/oldresultA_28.jpg"
+		}, {
+			"date" : "",
+			"type_txt" : "",
+			"status" : "",
+			"loc" : "newTaipei",
+			"title" : "新富都",
+			"img" : "items_img/oldresultA_29.jpg"
+		}, {
+			"date" : "",
+			"type_txt" : "",
+			"status" : "",
+			"loc" : "newTaipei",
+			"title" : "麗寶建設",
+			"img" : "items_img/oldresultA_30.jpg"
+		}, {
+			"date" : "",
+			"type_txt" : "",
+			"status" : "",
+			"loc" : "newTaipei",
+			"title" : "元利建設",
+			"img" : "items_img/oldresultA_31.jpg"
+		}, {
+			"date" : "",
+			"type_txt" : "",
+			"status" : "",
+			"loc" : "taipei",
+			"title" : "元利建設",
+			"img" : "items_img/oldresultA_32.jpg"
+		}, {
+			"date" : "",
+			"type_txt" : "",
+			"status" : "",
+			"loc" : "taipei",
+			"title" : "太平洋建設",
+			"img" : "items_img/oldresultA_33.jpg"
+		}, {
+			"date" : "",
+			"type_txt" : "",
+			"status" : "",
+			"loc" : "newTaipei",
+			"title" : "麗寶建設",
+			"img" : "items_img/oldresultA_34.jpg"
+		}, {
+			"date" : "",
+			"type_txt" : "",
+			"status" : "",
+			"loc" : "taipei",
+			"title" : "華固建設",
+			"img" : "items_img/oldresultA_35.jpg"
+		}, {
+			"date" : "",
+			"type_txt" : "",
+			"status" : "",
+			"loc" : "taipei",
+			"title" : "華威聯合",
+			"img" : "items_img/oldresultA_36.jpg"
+		}, {
+			"date" : "",
+			"type_txt" : "",
+			"status" : "",
+			"loc" : "hsinchu",
+			"title" : "台元科技園區",
+			"img" : "items_img/oldresultA_37.jpg"
+		}, {
+			"date" : "",
+			"type_txt" : "",
+			"status" : "",
+			"loc" : "taoyuan",
+			"title" : "中悅建設",
+			"img" : "items_img/oldresultB_01.jpg"
+		}, {
+			"date" : "",
+			"type_txt" : "",
+			"status" : "",
+			"loc" : "newTaipei",
+			"title" : "中悅建設",
+			"img" : "items_img/oldresultB_02.jpg"
+		}, {
+			"date" : "",
+			"type_txt" : "",
+			"status" : "",
+			"loc" : "taipei",
+			"title" : "樂揚建設",
+			"img" : "items_img/oldresultB_03.jpg"
+		}, {
+			"date" : "",
+			"type_txt" : "",
+			"status" : "",
+			"loc" : "taoyuan",
+			"title" : "連億建設",
+			"img" : "items_img/oldresultB_04.jpg"
+		}, {
+			"date" : "",
+			"type_txt" : "",
+			"status" : "",
+			"loc" : "newTaipei",
+			"title" : "馥華建設",
+			"img" : "items_img/oldresultB_05.jpg"
+		}
+	]
+}

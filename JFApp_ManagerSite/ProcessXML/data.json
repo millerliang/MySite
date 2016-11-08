@@ -1,0 +1,36 @@
+{
+    "dataset":[
+        "Nexus 5 Japan",
+        "奇美 4K 電視",
+        "Xbox one",
+        "滾筒洗衣機",
+        "豪宅",
+        "空軍一號"
+    ],
+	"boolean": true,
+	"null": null,
+	"number": 123,
+	"object":[
+		"aa",
+		"bb",
+		"cc"
+	],
+	"string": "Hello World",
+
+  "orderID": 12345,
+  "shopperName": "John Smith",
+  "shopperEmail": "johnsmith@example.com",
+  "contents": [
+    {
+      "productID": 34,
+      "productName": "SuperWidget",
+      "quantity": 1
+    },
+    {
+      "productID": 56,
+      "productName": "WonderWidget",
+      "quantity": 3
+    }
+  ],
+  "orderCompleted": true
+}

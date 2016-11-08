@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Page title</title>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=1200, initial-scale=1">
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+	<link rel="stylesheet" href="files/main.css">
+	<style>
+		body {background-image: url("http://2.bp.blogspot.com/-PysU0_frhw8/UI28zuFhf7I/AAAAAAAABkI/wgHjLJRYpEg/s1600/fondos%20de%20pantalla%20%20leopard.jpg");background-repeat: no-repeat;background-size: 100% 100%;background-position: center top;background-attachment: fixed;height: 100%;width: 100%;position: relative;}
+		hr {border-top: 1px solid #eaeaea;}
+		.w_bg {background-color:rgba(255,255,255,.95);margin-bottom:4em;}
+		.row h3.title {border-left:3px solid #ff4000;padding-left:.25em;}
+
+		.newslist {position: relative;}
+		.newslist ul {list-style: none;width:100%;margin:0 auto;padding:0;}
+		.newslist ul li:nth-child(even) {background-color: #e9eaee;}
+		.newslist ul li a {display:block;color:#333;text-decoration: none;}
+		.newslist ul li a h1 {color:#262c31;font-size:21px;margin:0;padding:.3em 0;}
+		.newslist ul li a img {width: 260px;height:160px;float: left;margin-right: 1em;}
+		.newslist ul li a .bar {color: #999;padding-bottom:0.5em;}
+		.newslist ul li a .bar .time {margin-right:1em}
+		.newslist ul li a .bar .uiser {margin-right:1em;}
+		.newslist ul li a .bar .view {}
+		.newslist ul li a .text {font-size:16px;color: #555;padding: 0 1em 0 0;}
+		.newslist ul li a:hover h1 {color:#366df0;}
+		.newslist ul li a:hover .text {color:#999;}
+
+		/*清除浮動*/
+		.newslist ul li:before, .newslist ul li:after {content:"";display:table;}
+		.newslist ul li:after{clear:both;overflow:hidden;}
+		.newslist ul li{zoom:1;}
+		
+		.statistics {list-style: none;margin:0;padding:1em 0 0;;}
+		.statistics li {font-size:18px;margin-bottom:0.5em;border-bottom:1px solid #eaeaea;padding-bottom: 0.4em;}
+		.statistics li:before {position: relative;top:-.2em;content: '○';font-size:8px;color: #978F9E;margin-right:0.4em;}
+		.statistics li span {}
+		.luann {width:100%;min-height:250px;border: 1px solid #dadada;box-shadow: 1px 1px 3px #b3b3b3;border-top: 4px solid #F7C861;min-height: 250px;padding:0px;margin: 10px;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;}
+		.luann img {width:100%;max-height:450px;}
+		.luann .text {padding:10px;height:120px;overflow:auto;}
+		.luann h5 {color:#264855;padding:0 8px 10px;border-bottom:1px solid #eeeeee;}
+		.luann .time {color:#666;padding:10px;line-height:2}
+		.luann .status {text-align:right;}
+		.luann .status span {color:#fff;line-height:2;padding:2px 8px;margin-right:4px;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;}
+		.luann .status span.green {background-color:#5a9f1c;}
+		.luann .status span.grey {background-color:#aaa;}
+		.luann .status span.red {background-color:#cc0033;}
+		.luann_btn {width__:100%;}
+		.luann_btn {width:100%;margin:2px auto;border:0;position: relative;padding: 4px 10px;border-radius: 5px;font-size: 16px;color: #333;text-decoration: none;background-color: #e8e8e8;border-bottom: 5px solid #ddd;transition: all 0.1s;-webkit-transition: all 0.1s;}
+		.luann_btn:hover,.luann .luann_btn:focus {text-decoration: none;}
+		.luann_btn:active {transform: translate(0px,3px);-webkit-transform: translate(0px,3px);border-bottom: 1px solid;}
+		.blue_btn {color:#fff;background-color: #3498DB;border-bottom: 5px solid #2980B9;text-shadow: 0px -2px #2980B9;}
+		.green_btn {color:#fff;background-color: #99c050;border-bottom: 5px solid #89AB4B;text-shadow: 0px -2px #659555;}
+		.red_btn {color:#fff;background-color: #D04F39;border-bottom: 5px solid #A73A3A;text-shadow: 0px -2px #6F1E1E;}
+		
+		/* entire container, keeps perspective */
+		.flip-container {perspective: 1000px;}
+		.flipper img {max-width:100%;}
+		.flipper h5 {font-size: 16px;color:#ffbf00;padding: 0 8px 10px;border-bottom: 1px solid #333;}
+		.flipper .back h5 {margin:8px;border-left:4px solid #ff4000;padding-left:.3em;color:#fff;}
+		.flipper .info {padding:4px 10px;}
+		.flipper .row .col-sm-6 {background-color:#000;}
+		.flipper .row .col-sm-6 {text-align:center;}
+		.flipper .row p {margin:0;padding:4px 0 0;color:#C599FB;}
+		.flipper .row .col-sm-6 b {font-size:24px;color:#ffff00;}
+		/* flip the pane when hovered */
+		.flip-container:hover .flipper, .flip-container.hover .flipper {transform: rotateY(180deg);}
+		.flip-container, .front, .back {width:100%;min-height:370px;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;}
+		/* flip speed goes here */
+		.flipper {transition: 0.6s;transform-style: preserve-3d;position: relative;}
+		/* hide back of pane during swap */
+		.front, .back {background-color:#222;color:#fff;backface-visibility: hidden;position: absolute;top: 0;left: 0;box-shadow:0 3px 3px rgba(0,0,0,.25);overflow:hidden;}
+		/* front pane, placed above back */
+		.front .dark{color:#333!important;}
+		.front {z-index: 2;
+		/* for firefox 31 */
+		transform: rotateY(0deg);}
+		/* back, initially hidden pane */
+		.back {transform: rotateY(180deg);}
+
+		/* cd-popup style */
+		.cd-popup-container header {color:#fff;font-size:18px;padding:.6em 0;margin-bottom:1em;background: #F1C316;background: -webkit-linear-gradient(legacy-direction(to right), #F1C316, #A05900);background: linear-gradient(to right, #F1C316, #A05900);}
+		.cd-popup-container h4__ {font-weight: bold;}
+		.img-replace{display: inline-block;overflow: hidden;text-indent: 100%;color: transparent;white-space: nowrap}.cd-popup-trigger{display: block;width: 170px;height: 50px;line-height: 50px;margin: 3em auto;text-align: center;color: #FFF;font-size: 14px;font-size: 0.875rem;font-weight: bold;border-radius: 50em;background: #35a785;box-shadow: 0 3px 0 rgba(0, 0, 0, 0.07)}.cd-popup{position: fixed;z-index:1002;left: 0;top: 0;height: 100%;width: 100%;background-color: rgba(94, 110, 141, 0.9);opacity: 0;visibility: hidden;-webkit-transition: opacity 0.3s 0s, visibility 0s 0.3s;-moz-transition: opacity 0.3s 0s, visibility 0s 0.3s;transition: opacity 0.3s 0s, visibility 0s 0.3s}.cd-popup.is-visible{opacity: 1;visibility: visible;-webkit-transition: opacity 0.3s 0s, visibility 0s 0s;-moz-transition: opacity 0.3s 0s, visibility 0s 0s;transition: opacity 0.3s 0s, visibility 0s 0s}.cd-popup-container{position: relative;width: 90%;max-width: 400px;margin: 4em auto;background: #FFF;border-radius: .25em .25em .4em .4em;text-align: center;box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);-webkit-transform: translateY(-40px);-moz-transform: translateY(-40px);-ms-transform: translateY(-40px);-o-transform: translateY(-40px);transform: translateY(-40px);-webkit-backface-visibility: hidden;-webkit-transition-property: -webkit-transform;-moz-transition-property: -moz-transform;transition-property: transform;-webkit-transition-duration: 0.3s;-moz-transition-duration: 0.3s;transition-duration: 0.3s}.cd-popup-container p__{padding: 3em 1em}.cd-popup-container .cd-buttons{padding: 0}.cd-popup-container .cd-buttons:after{content: "";display: table;clear: both}.cd-popup-container .cd-buttons li{float: left;width: 50%;list-style: none}.cd-popup-container .cd-buttons a{display: block;height: 60px;line-height: 60px;text-transform: uppercase;color: #FFF;-webkit-transition: background-color 0.2s;-moz-transition: background-color 0.2s;transition: background-color 0.2s}.cd-popup-container .cd-buttons li:first-child a{font-size: large;text-shadow: 1px 1px 2px #333;background: #fc7169;border-radius: 0 0 0 .25em}.no-touch .cd-popup-container .cd-buttons li:first-child a:hover{background-color: #fc8982}.cd-popup-container .cd-buttons li:last-child a{background: #b6bece;border-radius: 0 0 .25em 0}.no-touch .cd-popup-container .cd-buttons li:last-child a:hover{background-color: #c5ccd8}.cd-popup-container .cd-popup-close{position: absolute;top: 8px;right: 8px;width: 30px;height: 30px}.cd-popup-container .cd-popup-close::before, .cd-popup-container .cd-popup-close::after{content: '';position: absolute;top: 12px;width: 14px;height: 3px;background-color:white}.cd-popup-container .cd-popup-close::before{-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);-ms-transform: rotate(45deg);-o-transform: rotate(45deg);transform: rotate(45deg);left: 8px}.cd-popup-container .cd-popup-close::after{-webkit-transform: rotate(-45deg);-moz-transform: rotate(-45deg);-ms-transform: rotate(-45deg);-o-transform: rotate(-45deg);transform: rotate(-45deg);right: 8px}.is-visible .cd-popup-container{-webkit-transform: translateY(0);-moz-transform: translateY(0);-ms-transform: translateY(0);-o-transform: translateY(0);transform: translateY(0)}@media only screen and (min-width: 1170px){.cd-popup-container{margin: 8em auto}}
+		
+		.rightTop {float:right;padding:0.5em 1em;}
+		.rightTop li {display:inline-block;color:#fff;}
+		.rightTop li a {color:#fff;}
+		.rightTop li a:hover {color:#4dd4ff;text-decoration: none;}
+		.rightTop li:nth-child(2) a:hover {color:#ffff4c;}
+		.rightTop li:first-child a:after {content: '｜';color:#9777ee;margin:0.3em;}
+		.rightTop li a .msg {fon-size:10pt;text-align:center;width:20px;height:20px;display:inline-block;background-color:#ff4000;-webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%;}
+		.rightTop li a .msg:hover {background-color:#ff8b25;}
+	</style>
+</head>
+<body>
+<div id="mainWrap">
+	<div class="menuToggle">
+		<button type="button" role="button" class="lines-button x2 active" data-toggle="click" data-target="#mainHeader,#mainFooter">
+		<span class="lines"></span>
+		</button>
+	</div>
+
+	<header id="mainHeader" class="active">
+		<nav>
+			<div class="logoWrap">
+				<a href="/">
+					<h1>新生命小組教會</h1>
+				</a>
+			</div>
+			<div id="newLifeNav">
+				<ul id="mainNav">
+					<li class="navItem ddmenu">
+						<a href="/">在線項目</a>
+						<ul class="subMenu">
+							<li class="navItem"><a href="/">我的投資</a></li>
+							<li class="navItem"><a href="/">我的項目</a></li>
+						</ul>
+					</li>
+					<li class="navItem ddmenu">
+						<a href="/">路演大廳</a>
+						<ul class="subMenu">
+							<li class="navItem"><a href="/">我的報名</a></li>
+							<li class="navItem"><a href="/">我的預約</a></li>
+							<li class="navItem"><a href="/">今日路演</a></li>
+						</ul>
+					</li>
+					<li class="navItem ddmenu">
+						<a href="/">最新消息</a>
+						<ul class="subMenu">
+							<li class="navItem"><a href="/">主日資訊</a></li>
+							<li class="navItem"><a href="/">教會活動</a></li>
+							<li class="navItem"><a href="/">裝備課程</a></li>
+							<li class="navItem"><a href="/">小組動態</a></li>
+							<li class="navItem"><a href="/">粉絲專頁</a></li>
+						</ul>
+					</li>
+					<li class="navItem ddmenu">
+						<a href="/">個人設置</a>
+						<ul class="subMenu">
+							<li class="navItem"><a href="/">講道信息</a></li>
+							<li class="navItem"><a href="/">教會週報</a></li>
+							<li class="navItem"><a href="/">生命故事</a></li>
+							<li class="navItem"><a href="/">敬拜音樂</a></li>
+							<li class="navItem"><a href="/">精彩節目</a></li>
+						</ul>
+					</li>
+					<li class="navItem">
+						<a href="/">新手教學</a>
+					</li>
+					<li class="navItem">
+						<a href="/">協議/合同</a>
+					</li>
+				</ul>
+			</div>
+			<div class="sideNavWrap">
+				<ul class="sideNav">
+					<li class="navItem ddmenu">
+						<a href="" style="color:#fff;">登入</a>
+					</li>
+					<li class="navItem ddmenu">
+						<a href="" style="color:#fff;">註冊</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+
+	<div class="contentBody">
+		<div class="rightTop" id="rightTopLogout">
+			<ul class="sideNav">
+				<li>
+					<a href=""><i class="fa fa-user"></i> Name</a>
+				</li>
+				<li>
+					<a href="pm_msg.html"><i class="fa fa-bell"></i> <span class="msg">2</span></a>
+				</li>
+				<li>
+					<a onclick="showUrl(this)" v="javascript:void(0)" href="../regist.html">註冊</a>｜
+				</li>
+				<li>
+					<a onclick="showUrl(this)" v="javascript:void(0)" href="../login.html">登入</a>
+				</li>
+			</ul>
+		</div>
+		<div class="pageHead skrollable skrollable-between">
+			<div class="innerNavigator clearfix container">
+				<div class="breadcrumbWrap skrollable skrollable-between" style="margin-top:1em;color:#fff;">
+					<ul class="breadcrumb clearfix">
+						<li><i class="fa fa-home"></i> <a href="/">Home</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="container w_bg">
+			<div class="row">
+				<div class="col-sm-9">
+					<h3 class="title">最新消息</h3><hr>
+					<div class="newslist">
+						<ul>
+							<li>
+								<a href="#">
+									<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRK7A4_R-TOcgdUdMlfw8w77wt46_ITSGG2MRP8LLTdJaWXPZ0">
+									<h1>News Title</h1>
+									<div class="bar">
+										<span class="time">30分前</span>
+										<span class="uiser">小編</span>
+										<span class="view">321 觀看</span>
+									</div>
+									<div class="text">三顾茅庐，方识茅庐真印象!目前已经拥有直营店的平台，10月18号将与平台投资人见面。</div>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<img src="http://cdn3.pcadvisor.co.uk/cmsdata/features/3587080/Best-free-parental-control-software_thumb800.jpg">
+									<h1>News Title</h1>
+									<div class="bar">
+										<span class="time">1小時前</span>
+										<span class="uiser">小編</span>
+										<span class="view">1.2k 觀看</span>
+									</div>
+									<div class="text">三顾茅庐，方识茅庐真印象!目前已经拥有直营店的平台，10月18号将与平台投资人见面。</div>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<img src="http://blog.digitaltavern.com/wp-content/uploads/2013/09/cover-FORKStheBook-Allan_Karl-300PX.jpg">
+									<h1>News Title</h1>
+									<div class="bar">
+										<span class="time">1.2小時前</span>
+										<span class="uiser">小編</span>
+										<span class="view">453 觀看</span>
+									</div>
+									<div class="text">三顾茅庐，方识茅庐真印象!目前已经拥有直营店的平台，10月18号将与平台投资人见面。</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-sm-3">
+					<h3 class="title">平台統計</h3>
+					<ul class="statistics">
+						<li>融資項目數</li>
+						<li>融資總金額</li>
+						<li>融資成功率</li>
+						<li>投資人總數</li>
+						<li>人均投資額</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-sm-12"><h3 class="title">推薦項目</h3><hr>
+					<img src="img3.png" style="max-width:100%;">
+					<a href="#0" class="cd-popup-trigger">cd-popup Btn</a>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-sm-12">
+					<h3 class="title">最新路演</h3><hr>
+					<div class="col-sm-3">
+						<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+							<div class="flipper">
+								<div class="front">
+									<!-- front content -->
+									<img src="img01.jpg">
+									<h5>title</h5>
+									<div class="info">
+										<p>【時間】2015/6/30  14:00-15:00</p>
+										<!-- <p>【地點】台北市大安區XXXXXX</p> -->
+										<p>【發會方】第一投顧</p>
+									</div>
+									<div class="row">
+										<div class="col-sm-6">
+											<p>預約收視</p>
+											<b>0</b>
+										</div>
+										<div class="col-sm-6">
+											<p>線下報名</p>
+											<b>1</b>
+										</div>
+									</div>
+								</div>
+								<div class="back">
+									<!-- back content -->
+									<h5>路演議程</h5>
+									<div class="info">
+										<p>XXX XX X XXXXXX X XXXXX XXXXXXX X XXXXX XXXXX X XXX XXX XXXX X X XXX XX</p>
+									</div>
+									<div style="padding:6px;position:fixed;bottom:0;width:100%;">
+										<button class="luann_btn green_btn">更多內容</button>
+										<button class="luann_btn blue_btn">線下報名</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-3">
+						<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+							<div class="flipper">
+								<div class="front">
+									<!-- front content -->
+									<img src="img02.jpg">
+									<h5>title</h5>
+									<div class="info">
+										<p>【時間】2015/6/30  14:00-15:00</p>
+										<!-- <p>【地點】台北市中正區XXXXXX</p> -->
+										<p>【發會方】第二投顧</p>
+									</div>
+									<div class="row">
+										<div class="col-sm-6">
+											<p>預約收視</p>
+											<b>0</b>
+										</div>
+										<div class="col-sm-6">
+											<p>線下報名</p>
+											<b>0</b>
+										</div>
+									</div>
+								</div>
+								<div class="back">
+									<!-- back content -->
+									<h5>路演議程</h5>
+									<div class="info">
+										<p>XXX XX X XXXXXX X XXXXX XXXXXXX X XXXXX XXXXX X XXX XXX XXXX X X XXX XX</p>
+									</div>
+									<div style="padding:6px;position:fixed;bottom:0;width:100%;">
+										<button class="luann_btn green_btn">更多內容</button>
+										<button class="luann_btn blue_btn">線下報名</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-3">
+						<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+							<div class="flipper">
+								<div class="front">
+									<!-- front content -->
+									<img src="img03.jpg">
+									<h5>title</h5>
+									<div class="info">
+										<p>【時間】2015/6/30  14:00-15:00</p>
+										<!-- <p>【地點】</p> -->
+										<p>【發會方】第三投顧</p>
+									</div>
+									<div class="row">
+										<div class="col-sm-6">
+											<p>預約收視</p>
+											<b>10</b>
+										</div>
+										<div class="col-sm-6">
+											<p class="dark">線下報名</p>
+											<b class="dark">6</b>
+										</div>
+									</div>
+								</div>
+								<div class="back">
+									<!-- back content -->
+									<h5>路演議程</h5>
+									<div class="info">
+										<p>XXX XX X XXXXXX X XXXXX XXXXXXX X XXXXX XXXXX X XXX XXX XXXX X X XXX XX</p>
+									</div>
+									<div style="padding:6px;position:fixed;bottom:0;width:100%;">
+										<button class="luann_btn green_btn">更多內容</button>
+										<button class="luann_btn blue_btn">線下報名</button>
+										<button class="luann_btn">你沒登入啊！老闆</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-3">
+						<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+							<div class="flipper">
+								<div class="front">
+									<!-- front content -->
+									<img src="img04.jpg">
+									<h5>title</h5>
+									<div class="info">
+										<p>【時間】2015/6/28  14:00-15:00</p>
+										<!-- <p>【地點】</p> -->
+										<p>【發會方】第三投顧</p>
+									</div>
+									<div class="row">
+										<div class="col-sm-6">
+											<p class="dark">預約收視</p>
+											<b class="dark">3</b>
+										</div>
+										<div class="col-sm-6">
+											<p class="dark">線下報名</p>
+											<b class="dark">0</b>
+										</div>
+									</div>
+								</div>
+								<div class="back">
+									<!-- back content -->
+									<h5>路演議程</h5>
+									<div class="info">
+										<p>XXX XX X XXXXXX X XXXXX XXXXXXX X XXXXX XXXXX X XXX XXX XXXX X X XXX XX</p>
+									</div>
+									<div style="padding:6px;position:fixed;bottom:0;width:100%;">
+										<button class="luann_btn green_btn">更多內容</button>
+										<button class="luann_btn blue_btn">線下報名</button>
+										<button class="luann_btn">你沒登入啊！老闆</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-sm-12">
+					<h3 class="title">今日路演</h3><hr>
+					<div class="col-sm-3">
+						<div class="luann">
+							<div class="row">
+								<div class="col-sm-6">
+									<span class="time">14:00 - 15:00</span>
+								</div>
+								<div class="col-sm-6 status">
+									<span class="green">放映中</span>
+								</div>
+							</div>
+							<img src="man-boat-china.jpg">
+							<h5>What's the Difference?</h5>
+							<!-- <div class="text">Fotografar é algo que parece tão simples, mas tão mágico ao mesmo tempo. Você tem personagens a sua frente a hora e no local que quiser, e às vezes, em horas impensáveis, de locais inimagináveis, pode sair um registro perfeito, que marcará aquele momento. Veja algumas fotos escolhidas pela National Geographic, como sendo, algumas das melhores fotos de 2015.</div> -->
+							<button class="luann_btn blue_btn">收視</button>
+							<button class="luann_btn green_btn">預約收視</button>
+						</div>
+					</div>
+					<div class="col-sm-3">
+						<div class="luann">
+							<div class="row">
+								<div class="col-sm-6">
+									<span class="time">14:00 - 15:00</span>
+								</div>
+								<div class="col-sm-6 status">
+									<span class="green">放映中</span>
+								</div>
+							</div>
+							<img src="img05.jpg">
+							<h5>Don't cow 8.</h5>
+							<!-- <div class="text">Fotografar é algo que parece tão simples, mas tão mágico ao mesmo tempo. Você tem personagens a sua frente a hora e no local que quiser, e às vezes, em horas impensáveis, de locais inimagináveis, pode sair um registro perfeito, que marcará aquele momento. Veja algumas fotos escolhidas pela National Geographic, como sendo, algumas das melhores fotos de 2015.</div> -->
+							<button class="luann_btn">預約收視</button>
+							<button class="luann_btn">席位客滿</button>
+						</div>
+					</div>
+					<div class="col-sm-3">
+						<div class="luann">
+							<div class="row">
+								<div class="col-sm-6">
+									<span class="time">18:00 - 19:00</span>
+								</div>
+								<div class="col-sm-6 status">
+									<span class="grey">即將放映</span>
+								</div>
+							</div>
+							<img src="img06.jpg">
+							<h5>What's the Difference?</h5>
+							<!-- <div class="text">Fotografar é algo que parece tão simples, mas tão mágico ao mesmo tempo. Você tem personagens a sua frente a hora e no local que quiser, e às vezes, em horas impensáveis, de locais inimagináveis, pode sair um registro perfeito, que marcará aquele momento. Veja algumas fotos escolhidas pela National Geographic, como sendo, algumas das melhores fotos de 2015.</div> -->
+							<button class="luann_btn">You text</button>
+							<button class="luann_btn">You text</button>
+						</div>
+					</div>
+					<div class="col-sm-3">
+						<div class="luann">
+							<div class="row">
+								<div class="col-sm-6">
+									<span class="time">10:00 - 12:00</span>
+								</div>
+								<div class="col-sm-6 status">
+									<span class="red">other</span>
+								</div>
+							</div>
+							<img src="img07.jpg">
+							<h5>What's the Difference?</h5>
+							<!-- <div class="text">Fotografar é algo que parece tão simples, mas tão mágico ao mesmo tempo. </div> -->
+							<button class="luann_btn red_btn">You text</button>
+							<button class="luann_btn">You text</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div style="display:block;height:60px;"></div>
+		</div>
+
+	</div><!-- /.contentBody -->
+
+	<footer id="mainFooter" class="clearfix active">
+		<!-- <div class="pull-left">
+			<div id="friendlyLinks" class="clearfix" style__="display:block;">
+				<div class="closeBtn" data-toggle="click" data-target="#friendlyLinks">
+					<i class="nl nl-close"></i>
+				</div>
+				<ul>
+					<li><a class="" href="">Links</a></li>
+					<li><a class="" href="">Links</a></li>
+					<li><a class="" href="">Links</a></li>
+					<li><a class="" href="">Links</a></li>
+					<li><a class="" href="">Links</a></li>
+				</ul>
+			</div>
+		</div> -->
+		<div class="pull-right">
+			<div id="newsLetterWrap">
+				<form method="post" id="subNews">
+				<input placeholder="請填寫Email" type="email" name="MailChimpEmail" id="MailChimpEmail">
+				<button type="submit" id="mailchimp_subscript">GO</button>
+					<input name="_token" type="hidden" value="UIFFp6YGPmCdGpQiSU4cBfgzQU5uJO9yLwDD5vAR">
+				</form>
+			</div>
+			<div id="subscriptionWrap" class="clearfix">
+				<div class="pull-right">
+					<span><i class="nl nl-newsletter"></i>電子週報</span>
+					<a href="/">線上閱讀</a>
+					<a data-toggle="click" data-target="#newsLetterWrap" href="/">立即訂閱</a>
+				</div>
+			</div>
+			<div id="disclaimWrap" class="clearfix">
+				<a href="/">| 網站地圖 |</a> Copyright c 2016 中華基督教新生命小組教會 
+				| 法律顧問：永信法律事務所、恩典法律事務所、華得聯合法律事務所 | 財務顧問：安侯建業聯合會計師事務所
+			</div>
+		</div>
+	</footer>
+</div>
+
+<div class="cd-popup" role="alert">
+	<div class="cd-popup-container">
+		<header>路演報名資料</header>
+		<h4>項目名稱 XXXXXXXXXXXX</h4>
+		<div style="padding:1em 1.6em 1em 1.2em;">
+			<form class="form-horizontal">
+				<div class="form-group">
+					<label for="user_name" class="col-sm-2 control-label">姓 名</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="user_name" placeholder="姓名">
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="sex" class="col-sm-2 control-label">性 别</label>
+					<div class="col-sm-10" style="text-align:left;">
+						<label class="radio-inline">
+							<input type="radio" name="user_sex" id="male" value="option1"> 男
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="user_sex" id="Female" value="option2"> 女
+						</label>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="company" class="col-sm-2 control-label">公 司</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="company" placeholder="公司">
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="jobTitle" class="col-sm-2 control-label">職 稱</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="jobTitle" placeholder="職稱">
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="phoneNum" class="col-sm-2 control-label">手 機</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="phoneNum" placeholder="手機">
+					</div>
+				</div>
+			</form>
+		</div>
+		<ul class="cd-buttons">
+			<li><a href="#">Yes</a></li>
+			<li><a href="#">No</a></li>
+		</ul>
+		<a href="#0" class="cd-popup-close img-replace">Close</a>
+	</div> <!-- cd-popup-container -->
+</div> <!-- cd-popup -->
+
+<script src="files/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="/js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+<!-- page vendors -->
+<script src="files/jquery.transit.min.js"></script>
+<script src="files/jquery.countdown.min.js"></script>
+<!-- core base -->
+<script src="files/plugins.js"></script>
+<script src="files/plugins-init.js"></script>
+<script>
+	jQuery(document).ready(function($){
+		//open popup
+		$('.cd-popup-trigger, .flip-container .blue_btn').on('click', function(event){
+			event.preventDefault();
+			$('.cd-popup').addClass('is-visible');
+		});
+		
+		//close popup
+		$('.cd-popup').on('click', function(event){
+			if( $(event.target).is('.cd-popup-close') || $(event.target).is('.cd-popup') ) {
+				event.preventDefault();
+				$(this).removeClass('is-visible');
+			}
+		});
+		//close popup when clicking the esc keyboard button
+		$(document).keyup(function(event){
+			if(event.which=='27'){
+				$('.cd-popup').removeClass('is-visible');
+			}
+		});
+	});
+</script>
+</body>
+</html>

@@ -1,0 +1,1173 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>APP 類別歸類管理 - 後台管理系統</title>
+
+		<meta name="description" content="" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- basic styles -->
+
+		<link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+
+		<!--[if IE 7]>
+		  <link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css" />
+		<![endif]-->
+
+		<!-- page specific plugin styles -->
+
+		<link rel="stylesheet" href="assets/css/chosen.css" />
+
+		<!-- fonts -->
+
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" />
+
+		<!-- ace styles -->
+
+		<link rel="stylesheet" href="assets/css/ace.min.css" />
+		<link rel="stylesheet" href="assets/css/ace-rtl.min.css" />
+		<link rel="stylesheet" href="assets/css/ace-skins.min.css" />
+
+		<!--[if lte IE 8]>
+		  <link rel="stylesheet" href="assets/css/ace-ie.min.css" />
+		<![endif]-->
+
+		<!-- inline styles related to this page -->
+
+		<!-- ace settings handler -->
+
+		<script src="assets/js/ace-extra.min.js"></script>
+
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+
+		<!--[if lt IE 9]>
+		<script src="assets/js/html5shiv.js"></script>
+		<script src="assets/js/respond.min.js"></script>
+		<![endif]-->
+		
+		<style type="text/css">
+		ol.clu2 {
+			column-count: 2!important;
+			-moz-column-count: 2!important;
+			-webkit-column-count: 2!important;
+			column-gap: 50px!important;
+			-moz-column-gap: 50px!important;
+			-webkit-column-gap: 50px!important;
+			/* column-rule: 1px solid #eaeaea!important;
+			-moz-column-rule: 1px solid #eaeaea!important;
+			-webkit-column-rule: 1px solid #eaeaea!important;*/
+			list-style-type:none;
+		}
+		ol.clu2 li {margin-bottom:0.5em;white-space: nowrap;border-bottom:1px solid #eaeaea;line-height:2;}
+		ol.clu2 li span.badge {float:right!important;}
+
+		.app_icon ol li {display:inline;width:50%;float:left;}
+		.app_icon ol li b {color:#333;font-weight: normal;}
+		.app_icon ol li small {margin:0 0 0 6px;color:#98A900;}
+		.app_icon ol li img {width:48px;margin:6px}
+		</style>
+	</head>
+
+	<body>
+		<div class="navbar navbar-default" id="navbar">
+
+			<script type="text/javascript">
+				try{ace.settings.check('navbar' , 'fixed')}catch(e){}
+			</script>
+
+
+			<div class="navbar-container" id="navbar-container">
+				<div class="navbar-header pull-left logo">
+					<a href="index.html" class="navbar-brand">
+						<small>
+							後台管理系統
+						</small>
+					</a><!-- /.brand -->
+				</div><!-- /.navbar-header -->
+
+				<div class="navbar-header pull-right" role="navigation">
+					<ul class="nav ace-nav">
+						<li class="color">
+							<a data-toggle="dropdown" class="dropdown-toggle" href="#">
+								<i class="icon-envelope icon-animated-vertical"></i>
+								<span class="badge badge-important">12</span>
+							</a>
+
+							<ul class="pull-right dropdown-navbar navbar-pink dropdown-menu dropdown-caret dropdown-times">
+								<li>
+									<a href="user_feedback.html">
+										<div class="clearfix">
+											<span class="pull-left">
+												<i class="btn btn-xs no-hover btn-success icon-user"></i>
+												客服管理
+											</span>
+											<span class="pull-right badge badge-success">+8</span>
+										</div>
+									</a>
+								</li>
+
+								<li>
+									<a href="user_feedback.html">
+										查看所有通知
+										<i class="icon-arrow-right"></i>
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li class="light-blue">
+							<a data-toggle="dropdown" href="#" class="dropdown-toggle">
+								<img class="nav-user-photo" src="assets/avatars/avatar4.png" alt="Jason's Photo" />
+								<span class="user-info">
+									<small>您好, 歡迎</small>
+									超級管理員
+								</span>
+
+								<i class="icon-caret-down"></i>
+							</a>
+
+							<ul class="user-menu pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
+								<li>
+									<a href="admin_profile.html">
+										<i class="icon-user"></i>
+										個人資料
+									</a>
+								</li>
+
+								<li class="divider"></li>
+
+								<li>
+									<a href="login.html">
+										<i class="icon-power-off"></i>
+										登 出
+									</a>
+								</li>
+							</ul>
+						</li>
+					</ul><!-- /.ace-nav -->
+				</div><!-- /.navbar-header -->
+			</div><!-- /.container -->
+		</div>
+
+		<div class="main-container" id="main-container">
+			<script type="text/javascript">
+				try{ace.settings.check('main-container' , 'fixed')}catch(e){}
+			</script>
+
+			<div class="main-container-inner">
+				<a class="menu-toggler" id="menu-toggler" href="#">
+					<span class="menu-text"></span>
+				</a>
+
+				<div class="sidebar" id="sidebar">
+					<script type="text/javascript">
+						try{ace.settings.check('sidebar' , 'fixed')}catch(e){}
+					</script>
+
+					<ul class="nav nav-list">
+						<li>
+							<a href="index.html">
+								<i class="icon-home"></i>
+								<span class="menu-text"> 首 頁 </span>
+							</a>
+						</li>
+
+						<li>
+							<a href="admin_group.html">
+								<i class="icon-user-md"></i>
+								<span class="menu-text"> 系統管理員群組 </span>
+							</a>
+						</li>
+
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-th"></i>
+								<span class="menu-text"> 商城商品管理 </span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="market_manager.html">
+										<i class="icon-double-angle-right"></i>
+										商品總覽
+									</a>
+								</li>
+								<li>
+									<a href="market_orderlist.html">
+										<i class="icon-double-angle-right"></i>
+										訂單管理
+									</a>
+								</li>
+                                <li>
+									<a href="market_new.html">
+										<i class="icon-double-angle-right"></i>
+										新增商品
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-cloud-upload"></i>
+								<span class="menu-text"> 廣告管理 </span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="ad_manager.html">
+										<i class="icon-double-angle-right"></i>
+										廣告總覽
+									</a>
+								</li>
+                                <li>
+									<a href="ad_new.html">
+										<i class="icon-double-angle-right"></i>
+										新增廣告
+									</a>
+								</li>
+								<li>
+									<a href="ad_type.html">
+										<i class="icon-double-angle-right"></i>
+										廣告類別管理
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="#" class="dropdown-toggle"> 
+								<i class="icon-codepen"></i> <span class="menu-text"> 序號管理 </span> 
+								<b class="arrow icon-angle-down"></b>
+							</a>
+							<ul class="submenu">
+								<li>
+									<a href="sn_list.html"> <i class="icon-double-angle-right"></i> 序號總覽</a>
+								</li>
+								<li>
+									<a href="sn_create.html"> <i class="icon-double-angle-right"></i> 新增序號</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-users"></i>
+								<span class="menu-text"> 會員管理 </span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="user_group.html">
+										<i class="icon-double-angle-right"></i>
+										會員總覽
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-rocket"></i>
+								<span class="menu-text"> 商家管理 </span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="sell_manager.html">
+										<i class="icon-double-angle-right"></i>
+										商家總覽
+									</a>
+								</li>
+								<li>
+									<a href="sell_new.html">
+										<i class="icon-double-angle-right"></i>
+										新增商家
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="user_feedback.html">
+								<i class="icon-wechat"></i>
+								<span class="menu-text"> 客服管理 </span>
+							</a>
+						</li>
+
+						<li>
+							<a href="sys_postnews.html">
+								<i class="icon-laptop"></i>
+								<span class="menu-text"> 公告管理 </span>
+							</a>
+						</li>
+
+						<li>
+							<a href="sys_announcement.html">
+								<i class="icon-bullhorn"></i>
+								<span class="menu-text"> 消息管理 </span>
+							</a>
+						</li>
+
+                        <li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-bar-chart-o"></i>
+								<span class="menu-text"> 數據分析 </span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="analysis_isp.html">
+										<i class="icon-double-angle-right"></i>
+										基本分析
+									</a>
+								</li>
+
+								<li>
+									<a href="analysis_local.html">
+										<i class="icon-double-angle-right"></i>
+										依地區地域分布
+									</a>
+								</li>
+
+                                <li>
+									<a href="analysis_trend.html">
+										<i class="icon-double-angle-right"></i>
+										APP 使用次數趨勢圖
+									</a>
+								</li>
+                                <li>
+									<a href="analysis_boot.html">
+										<i class="icon-double-angle-right"></i>
+										開機次數趨勢圖
+									</a>
+								</li>
+							</ul>
+						</li>
+						
+                        <li class="active open">
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-adn"></i>
+								<span class="menu-text"> APP 類別管理 </span>
+                                <b class="arrow icon-angle-down"></b>
+							</a>
+                            
+                            <ul class="submenu">
+								<li class="active">
+									<a href="app_catalog.html">
+										<i class="icon-double-angle-right"></i>
+										APP 類型歸類對應
+									</a>
+								</li>
+
+								<li>
+									<a href="mobile_device.html">
+										<i class="icon-double-angle-right"></i>
+										手機型號裝置對應
+									</a>
+								</li>
+							</ul>
+						</li>
+					</ul><!-- /.nav-list -->
+
+					<div class="sidebar-collapse" id="sidebar-collapse">
+						<i class="icon-angle-double-left" data-icon1="icon-angle-double-left" data-icon2="icon-angle-double-right"></i>
+					</div>
+
+					<script type="text/javascript">
+						try{ace.settings.check('sidebar' , 'collapsed')}catch(e){}
+					</script>
+				</div>
+
+				<div class="main-content">
+					<div class="breadcrumbs" id="breadcrumbs">
+						<script type="text/javascript">
+							try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
+						</script>
+
+						<ul class="breadcrumb">
+							<li>
+								<i class="icon-home home-icon"></i>
+								<a href="index.html">Home</a>
+							</li>
+							<li class="active">APP 類別歸類管理</li>
+						</ul><!-- .breadcrumb -->
+
+						<div class="nav-search" id="nav-search">
+							<form class="form-search">
+								<span class="input-icon">
+									<input type="text" placeholder="搜尋 ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
+									<i class="icon-search nav-search-icon"></i>
+								</span>
+							</form>
+						</div><!-- #nav-search -->
+					</div>
+
+					<div class="page-content">
+
+                        <div class="page-header">
+							<h1>
+								APP 類別歸類管理
+								<small>
+									<i class="icon-angle-double-right"></i>
+								    Top 100 APP 類別歸類
+								</small>
+							</h1>
+						</div>
+
+						<div class="row">
+							<div class="col-sm-12">
+								<!-- PAGE CONTENT BEGINS -->
+
+								<div class="col-xs-12 col-sm-6 app_icon">
+
+									<div class="tabbable">
+										<ul class="nav nav-tabs">
+											<li class="active">
+												<a data-toggle="tab" href="#uncategorized">
+													<i class="green icon-cube bigger-110 hidden-480"></i>
+													未歸類 APP 項目
+													<span class="badge badge-success">3</span>
+												</a>
+											</li>
+
+											<li class="">
+												<a data-toggle="tab" href="#establish">
+													已建立的項目
+													<span class="badge badge-danger">50</span>
+												</a>
+											</li>
+
+										</ul>
+
+										<div class="tab-content">
+										
+											<div id="uncategorized" class="tab-pane active">
+
+												<form class="form-horizontal">
+
+													<div class="form-group">
+														<label class="col-sm-3 control-label text-right"> 尚未歸類項目 </label>
+														<div class="col-sm-9">
+															<select class="form-control input-large">
+																<option value="0">請選擇 APP ...</option>
+																<option value="1">Super Penguins</option>
+																<option value="2">蒼穹之翼：戰爭機器</option>
+																<option value="3">砸罐子3</option>
+															</select>
+														</div>
+													</div>
+
+													<div class="form-group">
+														<label class="col-sm-3 control-label text-right purple"><b class="red">*</b> 分類 Tag </label>
+														<div class="col-sm-9">
+															<select multiple="" class="width-70 chosen-select" data-placeholder="請選擇類別...">
+																<option>1.交通運輸</option>
+																<option>2.個人化</option>
+																<option>3.健康塑身</option>
+																<option>4.動態桌布</option>
+																<option>5.商業</option>
+																<option>6.圖書與參考資源</option>
+																<option>7.天氣</option>
+																<option>8.娛樂</option>
+																<option>9.媒體與影片</option>
+																<option>10.小工具</option>
+																<option>11.工具</option>
+																<option>12.攝影</option>
+																<option>13.教育</option>
+																<option>14.新聞與雜誌</option>
+																<option>15.旅遊與地方資訊</option>
+																<option>16.漫畫</option>
+																<option>17.生活品味</option>
+																<option>18.生產應用</option>
+																<option>19.社交</option>
+																<option>20.實用</option>
+																<option>21.財經</option>
+																<option>22.購物</option>
+																<option>23.通訊</option>
+																<option>24.運動</option>
+																<option>25.醫療</option>
+																<option>26.音樂與音效</option>
+																<option>27.遊戲</option>
+																<option>28.休閒</option>
+																<option>29.冒險</option>
+																<option>30.動作</option>
+																<option>31.動態桌布</option>
+																<option>32.博奕</option>
+																<option>33.家庭片</option>
+																<option>34.小工具</option>
+																<option>35.拼字</option>
+																<option>36.教育</option>
+																<option>37.棋類遊戲</option>
+																<option>38.模擬</option>
+																<option>39.益智</option>
+																<option>40.策略</option>
+																<option>41.紙牌</option>
+																<option>42.街機</option>
+																<option>43.角色扮演</option>
+																<option>44.解謎</option>
+																<option>45.賽車遊戲</option>
+																<option>46.音樂</option>
+																<option>47.體育競技</option>
+															</select>
+														</div>
+													</div>
+
+													<div class="form-group">
+														<label class="col-sm-3 control-label text-right"> APP 名稱 </label>
+														<div class="col-sm-9">
+															<label>	
+																<input type="checkbox" name="local" class="ace">
+																<span class="lbl"> 同上方未歸類名稱 </span>
+															</label>
+														</div>
+													</div>
+
+													<div class="form-group">
+														<label class="col-sm-3 control-label text-right"> 自定義名稱 </label>
+														<div class="col-sm-9">
+															<label class="block">
+																<input type="text" class="form-control" placeholder="請輸入APP名稱">
+															</label>
+														</div>
+													</div>
+
+													<div class="form-group">
+														<label class="col-sm-3 control-label text-right"><b class="red">*</b> 圖片連結 </label>
+														<div class="col-sm-9">
+															<label class="block">
+																<span class="block input-icon input-icon-right">
+																	<input type="text" class="form-control" placeholder="請貼上 Googleplay 商店圖片網址連結">
+																	<i class="icon-link"></i>
+																</span>
+															</label>
+														</div>
+													</div>
+
+													<div class="form-group">
+														<label class="col-sm-3 control-label text-right"> APP 系統 </label>
+														<div class="col-sm-9">
+															<label>
+																<input type="radio" name="sex" class="ace" checked="">
+																<span class="lbl">  兩者 </span>
+															</label>
+															<label>
+																<input type="radio" name="sex" class="ace">
+																<span class="lbl"> Android </span>
+															</label>
+															<label>	
+																<input type="radio" name="sex" class="ace">
+																<span class="lbl"> Apple </span>
+															</label>
+														</div>
+													</div>
+
+													<div class="form-actions center">
+														<button class="btn no-border" type="button">
+															<i class="icon-refresh bigger-110"></i>
+															清 除
+														</button>
+														&nbsp;
+														<button class="btn btn-info no-border" type="button">
+															<i class="icon-check bigger-110"></i>
+															建 立
+														</button>
+													</div>
+
+												</form>
+
+											</div><!-- /#uncategorized -->
+
+											<div id="establish" class="tab-pane">
+											
+												<div class="row">
+													<div class="pull-right inline">
+														<label class="col-sm-3 control-label text-right"> 排序 </label>
+														<div class="col-sm-9">
+															<select class="form-control input-medium">
+																<option value="hot">最近新增</option>
+																<option value="popular">熱門</option>
+																<option value="new">A~Z</option>
+																<option value="old">Z~A</option>
+															</select>
+														</div>
+													</div>
+												</div>
+
+												<div class="hr hr12 hr-dotted"></div>
+
+												<div class="alert alert-warning">
+													<button type="button" class="close" data-dismiss="alert">
+														<i class="icon-times"></i>
+													</button>
+													<strong>提示！</strong>
+													目前還沒有未建立的 APP。
+													<br>
+												</div>
+
+												<div class="alert alert-info">
+													<button type="button" class="close" data-dismiss="alert">
+														<i class="icon-times"></i>
+													</button>
+													<strong>提示！</strong>
+													Googleplay 商店圖片.webp 格式 For Google Chome 瀏覽器專用。
+													<br>
+												</div>
+
+												<ol class="clearfix">
+													<li>
+														<img title="LINE" src="https://lh5.ggpht.com/Lh_sznkrDDduQxN3ytGwfXisy7RF2YX4jhQsOULusWZJDe5OCr7elhPbzPONk7abwQ=w170-rw">
+														<a href="#edit-form" data-toggle="modal" role="button">Line</a>
+														<small>(通訊)</small>
+													</li>
+													<li>
+														<img title="2048" src="https://lh4.ggpht.com/tnPMNQZ4vyFjflXlb-VaggJ0mw4ncnrYzgOgi2nVPuQEPmANDqH_uGPWc5KqfW77kQ=w170-rw">
+														<a href="#edit-form" data-toggle="modal" role="button">2048</a>
+														<small>(遊戲)</small>
+													</li>
+													<li>
+														<img title="LINE Pokopang" src="https://lh6.ggpht.com/UeftxZ2ZlKC2daMY46g9QBzRsVYcGnTLS9_L7Y7v8xr4vIEIJ0TzRND5nsCx4n1wbLWU=w170-rw">
+														<a href="#edit-form" data-toggle="modal" role="button">Line Game</a>
+														<small>(遊戲)</small>
+													</li>
+													<li>
+														<img title="大話西遊" src="https://lh4.ggpht.com/NnoxFWGijqqzXUrbqUalskYI6LyvVoHif0WpDdanU4aD1UYnOO_zJSEK4lFdsmxIv2mW=w170-rw">
+														<a href="#edit-form" data-toggle="modal" role="button">大話西遊</a>
+														<small>(遊戲)</small>
+													</li>
+													<li>
+														<img title="真三國牌牌戰" src="https://lh6.ggpht.com/HgdxFr7RVu7vLHVekyCBYiAz5k0xq6Ibes-UGM93JvKpReSjwpHvYoW_k0KqzXTH5qU=w170-rw">
+														<a href="#edit-form" data-toggle="modal" role="button">真三國牌牌戰</a>
+														<small>(遊戲)</small>
+													</li>
+													<li>
+														<img title="Candy Crush" src="https://lh5.ggpht.com/yRUw11DbeZ-XgJG-a1lBViQxH7UjwBsy8QhH0ur9VejpLZK6tNLLarpuRqestCiB6W4=w170-rw">
+														<a href="#edit-form" data-toggle="modal" role="button">Candy Crush</a>
+														<small>(遊戲)</small>
+													</li>
+													<li>
+														<img title="導航 Papago" src="https://lh6.ggpht.com/yRgkaRTCia1VXCm0VLnp55_Z3yzQMnN0qqQhK2S6CZl7dYQUdeh43LjXBxj1M4d7lA=w170-rw">
+														<a href="#edit-form" data-toggle="modal" role="button">導航 Papago</a>
+														<small>(實用)</small>
+													</li>
+													<li>
+														<img title="樂客導航王N3 Pro" src="https://lh4.ggpht.com/wk3xnSg0p-bTvptjZapx2YGUyL1Ae7M4nLrdZWucVgibD4ALRE3qmAEixRJfRHwOew=w170-rw">
+														<a href="#edit-form" data-toggle="modal" role="button">樂客導航王N3</a>
+														<small>(實用)</small>
+													</li>
+													<li>
+														<img title="蜘蛛人驚奇再起2" src="https://lh5.ggpht.com/WEfwbqAck4G_c33X2KOKkEDVfOAGjdJOXVDNeTiTKXAFA6ZbbpBpf2lLKDyNofWetzg=w170-rw">
+														<a href="#edit-form" data-toggle="modal" role="button">蜘蛛人驚奇再起2</a>
+														<small>(遊戲)</small>
+													</li>
+													<li>
+														<img title="三國名將：天地を喰らう 獣神到来" src="https://lh6.ggpht.com/Ua20CZuo3jl6hff8GI90gGDyZwfajIlA9k0SY6F_DFtaDVTGKxYFlazCuljauy2dqcw=w170-rw">
+														<a href="#edit-form" data-toggle="modal" role="button">三國名將</a>
+														<small>(遊戲)</small>
+													</li>
+													<li>
+														<img title="部落冲突" src="https://lh4.ggpht.com/tzSgW5BBkkafvEwS8UWiazrs55bhZJSdAz9Hg749FJ9Xgs-a8Lw-LKHg4KJWoqwH2rFw=w170-rw">
+														<a href="#edit-form" data-toggle="modal" role="button">部落冲突</a>
+														<small>(遊戲)</small>
+													</li>
+													<li>
+														<img title="大話神仙-神仙道" src="https://lh4.ggpht.com/RkeLBJVjHZ7x3QAJ9kjNJBeXADVOP_JpIEPxSHY6F-VTXnetyieVYyu5NysXlL5AtCFM=w170-rw">
+														<a href="#edit-form" data-toggle="modal" role="button">大話神仙-神仙道</a>
+														<small>(遊戲)</small>
+													</li>
+													<li>
+														<img title="鱷魚小頑皮愛洗澡" src="https://lh5.ggpht.com/pGfCabDDLDWTNYnl0PWixnOh8xctXax_19M4rr3TCjiAFYJOAxW_sl9SorSOfEZfMvQ=w170-rw">
+														<a href="#edit-form" data-toggle="modal" role="button">鱷魚小頑皮愛洗澡</a>
+														<small>(遊戲)</small>
+													</li>
+													<li>
+														<img title="紀念碑谷" src="https://lh4.ggpht.com/ML9hDSANiWtnb4jNjdM1pGh9bQFAezqjTzty71NrgEb89u-6--QOUPy5GI0iCK1PFQ84=w170-rw">
+														<a href="#edit-form" data-toggle="modal" role="button">紀念碑谷</a>
+														<small>(遊戲)</small>
+													</li>
+													<li>
+														<img title="鬼武傳-東方暗黑行動版" src="https://lh3.ggpht.com/L_k3zKRStEIbUd31TBj144FDYRcYhKa5RlnqqnU3JjNzJp3nc0qP57IxHUfgTLvPSWom=w170-rw">
+														<a href="#edit-form" data-toggle="modal" role="button">鬼武傳</a>
+														<small>(遊戲)</small>
+													</li>
+													<li>
+														<img title="Poweramp Full Version Unlocker" src="https://lh6.ggpht.com/JtmGlij_b1dEzQ_yUGQKfwA3mhq1YJWjW0S7yvdlOEQLOlsg8S710WFjfP8fSjRZhQ=w170-rw">
+														<a href="#edit-form" data-toggle="modal" role="button">Poweramp</a>
+														<small>(遊戲)</small>
+													</li>
+													<li>
+														<img title="LINE camera" src="https://lh4.ggpht.com/YRQv-FErXAp2CyRso_zD1G61mS560a5qWTDJXceV792hNh5tDPrGYjYg8APQE_VtdyU=w170-rw">
+														<a href="#edit-form" data-toggle="modal" role="button">LINE camera</a>
+														<small>(攝影)</small>
+													</li>
+													<li>
+														<img title="電視連續劇" src="https://lh4.ggpht.com/ne0b-XGXDX4d13c7aa3wv6D2tfv6irvAuRfavGJd5kgsUzhsPDrbKyv_vgRw1N2ICj03=w170-rw">
+														<a href="#edit-form" data-toggle="modal" role="button">電視連續劇</a>
+														<small>(實用)</small>
+													</li>
+													<li>
+														<img title="LINE 跑跑薑餅人" src="https://lh3.ggpht.com/bocoziHM6t08uUEH2GhGgizhhq9plBABHrDDL9IXJXdlljJhAX8cVP7lnU8M2mWYgsI=w170-rw">
+														<a href="#edit-form" data-toggle="modal" role="button">跑跑薑餅人</a>
+														<small>(遊戲)</small>
+													</li>
+													<li>
+														<img title="Facebook" src="https://lh5.ggpht.com/_XklY7dK6yGsYt53X15RIp7-tbdjWMwQwl_iUAcW-uSq_8zAprmywdn5DQfBHvxZurs1=w170-rw">
+														<a href="#edit-form" data-toggle="modal" role="button">Facebook</a>
+														<small>(社交)</small>
+													</li>
+													<li>
+														<img title="神鬼幻想" src="https://lh6.ggpht.com/_28L_d1t4P2dT9g6Eo_XH3_WUe46NZjTvImwgcTqlh63jbCTyIPECKUzA6AmK37-K-U=w170-rw">
+														<a href="#edit-form" data-toggle="modal" role="button">神鬼幻想</a>
+														<small>(遊戲)</small>
+													</li>
+													<li>
+														<img title="神魔之塔" src="https://lh6.ggpht.com/69Hhu8UkHsWy-xkSqy6_VPMtaNtpdYjLgpZMRbebM5wIkvwDujnnXk5rK9ro8GNcGw=w170-rw">
+														<a href="#edit-form" data-toggle="modal" role="button">神魔之塔</a>
+														<small>(遊戲)</small>
+													</li>
+													<li>
+														<img title="台灣360手機衛士" src="https://lh4.ggpht.com/7rf0OQOfoFLvEmWlIRDKYf2uH4KPapHcXpEpk93fVMA1rEetYSy-HaSwNYFd0wAIHw=w170-rw">
+														<a href="#edit-form" data-toggle="modal" role="button">台灣360手機衛士</a>
+														<small>(遊戲)</small>
+													</li>
+													<li>
+														<img title="BeeTalk" src="https://lh5.ggpht.com/lEG3Qt-334acogjK7wIb5yK18g2E2yf06cOZCLgN11akuNxgWiZj4l1rQ7XOJWTQHN8=w170-rw">
+														<a href="#edit-form" data-toggle="modal" role="button">BeeTalk</a>
+														<small>(社交)</small>
+													</li>
+													<li>
+														<img title="怪物彈珠" src="https://lh5.ggpht.com/jyoZRVM1Pw_kRXx8zp89WPgfGJ7iRdFqu3vbu5tvWNreTz3YhE10paS5-xa0933vO2fx=w170-rw">
+														<a href="#edit-form" data-toggle="modal" role="button">怪物彈珠</a>
+														<small>(遊戲)</small>
+													</li>
+													<li>
+														<img title="WeChat" src="https://lh5.ggpht.com/6Vgc-DkcEZbMbDVLx35dZRb5AmtBnKYSaBEUb-3r-KP6xu4MGMsuvsaECrM-jiXy-7E=w170-rw">
+														<a href="#edit-form" data-toggle="modal" role="button">WeChat</a>
+														<small>(社交)</small>
+													</li>
+													<li>
+														<img title="主題更換器" src="https://lh6.ggpht.com/Am-MAJJzFx8NWuRbFUXAgeOJy62Q7TU4XfdEWyIAIVRhiOLRXyJBwAP-4ICutwcryhM=w170-rw">
+														<a href="#edit-form" data-toggle="modal" role="button">主題更換器</a>
+														<small>(實用)</small>
+													</li>
+													<li>
+														<img title="金山電池醫生" src="https://lh4.ggpht.com/cz9lA4HH9JvO9JVAcINIO68pTdaSc3whWwtAUsuOnVUbaY-CUf6hIaYbrnPOE4Ma6A=w170-rw">
+														<a href="#edit-form" data-toggle="modal" role="button">金山電池醫生</a>
+														<small>(實用)</small>
+													</li>
+													<li>
+														<img title="台灣蘋果日報" src="https://lh4.ggpht.com/9kF8Ve_l67vbrTI847Q4rA_NXEJIPkxJ0BnSF4m_IktfTDjcSekKspUbd4gcxFL6SQ=w170-rw">
+														<a href="#edit-form" data-toggle="modal" role="button">台灣蘋果日報</a>
+														<small>(新聞)</small>
+													</li>
+													<li>
+														<img title="麥當勞鬧鐘" src="https://lh3.ggpht.com/-nuw_TkkTj9GTyMWJW1ks5sNLRYFRLNNvGe_oUABNRdzv0kDvzd1Dk4HsZjuBTnz1Wkk=w170-rw">
+														<a href="#edit-form" data-toggle="modal" role="button">麥當勞鬧鐘</a>
+														<small>(實用)</small>
+													</li>
+													<li>
+														<img title="格鬥江湖" src="https://lh3.ggpht.com/ZBiucmB9QUE50ZCq8R0zwJLv-EVG-VnHJ9HROeU-KIhbeFyGpo8sRyf3c3F3OtwLxb_M=w170-rw">
+														<a href="#edit-form" data-toggle="modal" role="button">格鬥江湖</a>
+														<small>(遊戲)</small>
+													</li>
+													<li>
+														<img title="Camera360" src="https://lh3.ggpht.com/WAJYKP81iTX5ExpXUrQ8S8FK5RxXAv8Pi6rpErJ3SuS4m4Cle7H_zl59cpCicr0uag=w170-rw">
+														<a href="#edit-form" data-toggle="modal" role="button">Camera360</a>
+														<small>(攝影)</small>
+													</li>
+													<li>
+														<img title="三國志拼圖大戰" src="https://lh6.ggpht.com/W405DhXbnP1dMCYWC6tZN9JoNfwbYgrfrAv9Tac3Ghh1TMHwVd4d3ESk5ssWeEWtpA=w170-rw">
+														<a href="#edit-form" data-toggle="modal" role="button">三國志拼圖大戰</a>
+														<small>(遊戲)</small>
+													</li>
+													<li>
+														<img title="叫我掌門" src="https://lh5.ggpht.com/iQntqOMMETSglTS7w-bd48TRZNE0uZwdpubYvtjMXyRxO9zp1Vg9gdReumNzJq0lZg=w170-rw">
+														<a href="#edit-form" data-toggle="modal" role="button">叫我掌門</a>
+														<small>(遊戲)</small>
+													</li>
+													<li>
+														<img title="藍色光濾波器" src="https://lh3.ggpht.com/Vz4SgwPen8HHG2UpMFqto8LzXEMYKy0g0ulmmpbhKSFUBmXYIiHOCoZRrZSPCdngmVU=w170-rw">
+														<a href="#edit-form" data-toggle="modal" role="button">藍色光濾波器</a>
+														<small>(工具)</small>
+													</li>
+													<li>
+														<img title="Google 翻譯" src="https://lh3.ggpht.com/wH-yekvV9f1E7EEAojR_W3UW_UIO2JmqAQCh8jfZ7p-V2CmakCyRx023CU5X7l1xPg=w170-rw">
+														<a href="#edit-form" data-toggle="modal" role="button">Google 翻譯</a>
+														<small>(工具)</small>
+													</li>
+													<li>
+														<img title="LINE DECO" src="https://lh6.ggpht.com/AVjS5EBoFkL_q-AGHmlniFR-bOvix4MeXAZHP1Z1ENICYD0Yt9SfA_-aLU9rL00rU74=w170-rw">
+														<a href="#edit-form" data-toggle="modal" role="button">LINE DECO</a>
+														<small>(遊戲)</small>
+													</li>
+													<li>
+														<img title="Instagram" src="https://lh3.ggpht.com/vFpQP39LB60dli3n-rJnVvTM07dsvIzxrCL5xMiy1V4GV4unC1ifXkUExQ4N-DBCKwI=w170-rw">
+														<a href="#edit-form" data-toggle="modal" role="button">Instagram</a>
+														<small>(攝影)</small>
+													</li>
+													<li>
+														<img title="DropeeE" src="https://lh3.ggpht.com/8onJXXBtdXVvE-21JvIOtYoQgKkKSyeaxFMwL4pjEZEHCc5W7DCCdfY2z3jFqsz6pw=w170-rw">
+														<a href="#edit-form" data-toggle="modal" role="button">DropeeE</a>
+														<small>(遊戲)</small>
+													</li>
+													<li>
+														<img title="LINE whoscall" src="https://lh6.ggpht.com/dCI7tzsoQS2uXZZ7PFlK9qP03Im3hzfS2N7oq1G5_-Ld7OHoPpRqs_FPLv4LHQGcKK0=w170-rw">
+														<a href="#edit-form" data-toggle="modal" role="button">LINE whoscall</a>
+														<small>(通訊)</small>
+													</li>
+													<li>
+														<img title="樂透刮刮樂遊戲" src="https://lh6.ggpht.com/UzB99-Jt-xdZqcb_4bwCbag7WsF24KTubAazM_dJcOIwCZHckfCoEopPN4p3K6v1U5Y=w170-rw">
+														<a href="#edit-form" data-toggle="modal" role="button">樂透刮刮樂遊戲</a>
+														<small>(遊戲)</small>
+													</li>
+													<li>
+														<img title="Skype" src="https://lh5.ggpht.com/1CxNUEdzrREikWZoaHIU5J63x2gOxTb7R-ZIbJd51uPBFt0jUj8AX2bMOhKiIBcuAqtH=w170-rw">
+														<a href="#edit-form" data-toggle="modal" role="button">Skype</a>
+														<small>(通訊)</small>
+													</li>
+													<li>
+														<img title="MLB Perfect Inning" src="https://lh6.ggpht.com/-eJYodHqF9BuxrvNql04BplXprBJ-Y9OgoEflrRy3NKP6Bc1pMBgVrvqbGAQJ5aTt-w=w170-rw">
+														<a href="#edit-form" data-toggle="modal" role="button">MLB Perfect Inning</a>
+														<small>(遊戲)</small>
+													</li>
+													<li>
+														<img title="釣魚發燒友" src="https://lh3.ggpht.com/5MfUlPonBxYvLQC-e5GQgSVIqTBCqbiH1Uh4ZdzPbxmLDptDo7N6UKS0082XYhZ9Eg=w170-rw">
+														<a href="#edit-form" data-toggle="modal" role="button">魚發燒友</a>
+														<small>(遊戲)</small>
+													</li>
+													<li>
+														<img title="Photo Grid" src="https://lh4.ggpht.com/PeONYyB4NtzVVIEaBWeQhA_mpWHi7HDPCNTXZX-AZPWONgrFqx2YCdLN1x4NFKX6e8c=w170-rw">
+														<a href="#edit-form" data-toggle="modal" role="button">Photo Grid</a>
+														<small>(遊戲)</small>
+													</li>
+													<li>
+														<img title="千尋影視HD" src="https://lh5.ggpht.com/wra9-Y5s1iBQr98mXXLT5zgwtLwr2apKOLJ8GuPI0QJO12JCIb9_O8ENKPrj-VI0WQ=w170-rw">
+														<a href="#edit-form" data-toggle="modal" role="button">千尋影視HD</a>
+														<small>(遊戲)</small>
+													</li>
+													<li>
+														<img title="美图秀秀" src="https://lh4.ggpht.com/71azAyq6BXYRIRvAfxMB5NZ7_piz80qZle6vgFa8l-dViaQrW5UP6a_VG1OBgibFMiw=w170-rw">
+														<a href="#edit-form" data-toggle="modal" role="button">美图秀秀</a>
+														<small>(遊戲)</small>
+													</li>
+													<li>
+														<img title="超亮手電筒" src="https://lh6.ggpht.com/POKqqdaXjDqk-84U-3PjIRip78I_As54FGYMFKVu-T3t0OxuXdV7oslBIJjpXCEkQA8n=w170-rw">
+														<a href="#edit-form" data-toggle="modal" role="button">超亮手電筒</a>
+														<small>(遊戲)</small>
+													</li>
+													<li>
+														<img title="戰九天" src="https://lh4.ggpht.com/r4odx20W3ZiNH5q7epduhc6gqG4vbLW-sWIzwNbXlDOXUywBXDgxL9ygDv8IfVgfOSI=w170-rw">
+														<a href="#edit-form" data-toggle="modal" role="button">戰九天</a>
+														<small>(遊戲)</small>
+													</li>
+													<li>
+														<img title="Yahoo 電子信箱" src="https://lh6.ggpht.com/yzhSae3SIKlwv9lBzpCWaexNKgpLHXvwnxyEE7_oW3SdMv604v-YtUcQnGCyAUpX1lcm=w170-rw">
+														<a href="#edit-form" data-toggle="modal" role="button">Yahoo 電子信箱</a>
+														<small>(遊戲)</small>
+													</li>
+												</ol>
+
+											</div><!-- /#establish -->
+
+										</div><!-- /.tab-content -->
+									</div>
+
+								</div><!-- /.col-sm-6 -->
+
+								<div class="col-xs-12 col-sm-6">
+									<h4 class="header purple">
+										<i class="icon-cube"></i>
+										APP 類別 Tag
+										<!-- <div class="pull-right inline">
+										<a href="#" class="no-underline bigger-110"><i class="icon-plus"></i></a>
+										</div> -->
+									</h4>
+									<ol class="clu2">
+										<li><span class="badge">0</span>1.交通運輸</li>
+										<li><span class="badge">0</span>2.個人化</li>
+										<li><span class="badge">0</span>3.健康塑身</li>
+										<li><span class="badge">0</span>4.動態桌布</li>
+										<li><span class="badge">0</span>5.商業</li>
+										<li><span class="badge">0</span>6.圖書與參考資源</li>
+										<li><span class="badge">0</span>7.天氣</li>
+										<li><span class="badge">0</span>8.娛樂</li>
+										<li><span class="badge">0</span>9.媒體與影片</li>
+										<li><span class="badge">0</span>10.小工具</li>
+										<li><span class="badge badge-yellow">2</span>11.工具</li>
+										<li><span class="badge badge-yellow">3</span>12.攝影</li>
+										<li><span class="badge">0</span>13.教育</li>
+										<li><span class="badge badge-yellow">1</span>14.新聞與雜誌</li>
+										<li><span class="badge">0</span>15.旅遊與地方資訊</li>
+										<li><span class="badge">0</span>16.漫畫</li>
+										<li><span class="badge">0</span>17.生活品味</li>
+										<li><span class="badge">0</span>18.生產應用</li>
+										<li><span class="badge badge-yellow">3</span>19.社交</li>
+										<li><span class="badge badge-yellow">6</span>20.實用</li>
+										<li><span class="badge">0</span>21.財經</li>
+										<li><span class="badge">0</span>22.購物</li>
+										<li><span class="badge badge-yellow">3</span>23.通訊</li>
+										<li><span class="badge">0</span>24.運動</li>
+										<li><span class="badge">0</span>25.醫療</li>
+										<li><span class="badge">0</span>26.音樂與音效</li>
+										<li><span class="badge badge-yellow">33</span>27.遊戲</li>
+										<li><span class="badge">0</span>28.休閒</li>
+										<li><span class="badge">0</span>29.冒險</li>
+										<li><span class="badge">0</span>30.動作</li>
+										<li><span class="badge">0</span>31.動態桌布</li>
+										<li><span class="badge">0</span>32.博奕</li>
+										<li><span class="badge">0</span>33.家庭片</li>
+										<li><span class="badge">0</span>34.小工具</li>
+										<li><span class="badge">0</span>35.拼字</li>
+										<li><span class="badge">0</span>36.教育</li>
+										<li><span class="badge">0</span>37.棋類遊戲</li>
+										<li><span class="badge">0</span>38.模擬</li>
+										<li><span class="badge">0</span>39.益智</li>
+										<li><span class="badge">0</span>40.策略</li>
+										<li><span class="badge">0</span>41.紙牌</li>
+										<li><span class="badge">0</span>42.街機</li>
+										<li><span class="badge">0</span>43.角色扮演</li>
+										<li><span class="badge">0</span>44.解謎</li>
+										<li><span class="badge">0</span>45.賽車遊戲</li>
+										<li><span class="badge">0</span>46.音樂</li>
+										<li><span class="badge">0</span>47.體育競技</li>
+									</ol>
+								</div>
+                                
+								<div id="edit-form" class="modal" tabindex="-1">
+									<div class="modal-dialog">
+										<div class="modal-content">
+											<div class="modal-header" style="padding: 6px 16px">
+												<button type="button" class="close" data-dismiss="modal">&times;</button>
+												<h4 class="blue bigger">
+												<i class="icon-cube"></i>
+												編輯 APP 類別
+												</h4>
+											</div>
+
+											<div class="modal-body overflow-visible">
+												<div class="row">
+
+													<div class="form-group">
+														<label class="col-sm-3 control-label text-right"> APP 名稱 </label>
+														<div class="col-sm-9">
+															<label><p>Line</p></label>
+														</div>
+													</div>
+
+													<div class="form-group">
+														<label class="col-sm-3 control-label text-right"><b class="red">*</b> 分類 Tag </label>
+														<div class="col-sm-9">
+															<label>
+																<select class="form-control" data-placeholder="請選擇類別...">
+																	<option>1.交通運輸</option>
+																	<option>2.個人化</option>
+																	<option>3.健康塑身</option>
+																	<option>4.動態桌布</option>
+																	<option>5.商業</option>
+																	<option>6.圖書與參考資源</option>
+																	<option>7.天氣</option>
+																	<option>8.娛樂</option>
+																	<option>9.媒體與影片</option>
+																	<option>10.小工具</option>
+																	<option>11.工具</option>
+																	<option>12.攝影</option>
+																	<option>13.教育</option>
+																	<option>14.新聞與雜誌</option>
+																	<option>15.旅遊與地方資訊</option>
+																	<option>16.漫畫</option>
+																	<option>17.生活品味</option>
+																	<option>18.生產應用</option>
+																	<option>19.社交</option>
+																	<option>20.實用</option>
+																	<option>21.財經</option>
+																	<option>22.購物</option>
+																	<option>23.通訊</option>
+																	<option>24.運動</option>
+																	<option>25.醫療</option>
+																	<option>26.音樂與音效</option>
+																	<option>27.遊戲</option>
+																	<option>28.休閒</option>
+																	<option>29.冒險</option>
+																	<option>30.動作</option>
+																	<option>31.動態桌布</option>
+																	<option>32.博奕</option>
+																	<option>33.家庭片</option>
+																	<option>34.小工具</option>
+																	<option>35.拼字</option>
+																	<option>36.教育</option>
+																	<option>37.棋類遊戲</option>
+																	<option>38.模擬</option>
+																	<option>39.益智</option>
+																	<option>40.策略</option>
+																	<option>41.紙牌</option>
+																	<option>42.街機</option>
+																	<option>43.角色扮演</option>
+																	<option>44.解謎</option>
+																	<option>45.賽車遊戲</option>
+																	<option>46.音樂</option>
+																	<option>47.體育競技</option>
+																</select>
+															</label>
+														</div>
+													</div>
+
+													<div class="form-group">
+														<label class="col-sm-3 control-label text-right"> 變更 APP 名稱 </label>
+														<div class="col-sm-9">
+															<label class="block">
+																<input type="text" class="form-control" placeholder="Line">
+															</label>
+														</div>
+													</div>
+
+													<div class="form-group">
+														<label class="col-sm-3 control-label text-right"><b class="red">*</b> 圖片連結 </label>
+														<div class="col-sm-9">
+															<label class="block">
+																<input type="text" class="form-control" placeholder="https://lh5.ggpht.com/Lh_sznkrDDduQxN3ytGwfXisy7RF2YX4jhQsOULusWZJDe5OCr7elhPbzPONk7abwQ=w170-rw">
+															</label>
+														</div>
+													</div>
+													
+													<div class="form-group">
+														<label class="col-sm-3 control-label text-right"> APP 系統 </label>
+														<div class="col-sm-9">
+															<label>
+																<input type="radio" name="sex" class="ace" checked="">
+																<span class="lbl">  兩者 </span>
+															</label>
+															<label>
+																<input type="radio" name="sex" class="ace">
+																<span class="lbl"> Android </span>
+															</label>
+															<label>	
+																<input type="radio" name="sex" class="ace">
+																<span class="lbl"> Apple </span>
+															</label>
+														</div>
+													</div>
+
+												</div>
+											</div>
+
+											<div class="modal-footer">
+												<button class="btn btn-sm btn-danger">
+													<i class="icon-trash-o"></i>
+													刪 除
+												</button>
+
+												<button class="btn btn-sm" data-dismiss="modal">
+													<i class="icon-times"></i>
+													取 消
+												</button>
+
+												<button class="btn btn-sm btn-primary">
+													<i class="icon-check"></i>
+													儲 存
+												</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								
+								<!-- PAGE CONTENT ENDS -->
+							</div><!-- /.col -->
+						</div><!-- /.row -->
+					</div><!-- /.page-content -->
+				</div><!-- /.main-content -->
+
+			</div><!-- /.main-container-inner -->
+
+			<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+				<i class="icon-angle-double-up icon-only bigger-110"></i>
+			</a>
+		</div><!-- /.main-container -->
+
+		<!-- basic scripts -->
+
+		<!--[if !IE]> -->
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+		<!-- <![endif]-->
+
+		<!--[if IE]>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<![endif]-->
+
+		<!--[if !IE]> -->
+
+		<script type="text/javascript">
+			window.jQuery || document.write("<script src='assets/js/jquery-2.0.3.min.js'>"+"<"+"/script>");
+		</script>
+
+		<!-- <![endif]-->
+
+		<!--[if IE]>
+		<script type="text/javascript">
+		 window.jQuery || document.write("<script src='assets/js/jquery-1.10.2.min.js'>"+"<"+"/script>");
+		</script>
+		<![endif]-->
+
+		<script type="text/javascript">
+			if("ontouchend" in document) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+		</script>
+		<script src="assets/js/bootstrap.min.js"></script>
+		<script src="assets/js/typeahead-bs2.min.js"></script>
+
+		<!-- page specific plugin scripts -->
+		
+		<!--[if lte IE 8]>
+		  <script src="assets/js/excanvas.min.js"></script>
+		<![endif]-->
+
+		<script src="assets/js/chosen.jquery.min.js"></script>
+
+		<!-- ace scripts -->
+
+		<script src="assets/js/ace-elements.min.js"></script>
+		<script src="assets/js/ace.min.js"></script>
+
+		<!-- inline scripts related to this page -->
+		
+		<script type="text/javascript">
+			jQuery(function($) {
+
+				$(".chosen-select").chosen(); 
+				$('#chosen-multiple-style').on('click', function(e){
+					var target = $(e.target).find('input[type=radio]');
+					var which = parseInt(target.val());
+					if(which == 2) $('#form-field-select-4').addClass('tag-input-style');
+					 else $('#form-field-select-4').removeClass('tag-input-style');
+				});
+
+				//we could just set the data-provide="tag" of the element inside HTML, but IE8 fails!
+				var tag_input = $('#form-field-tags');
+				if(! ( /msie\s*(8|7|6)/.test(navigator.userAgent.toLowerCase())) ) 
+				{
+					tag_input.tag(
+					  {
+						placeholder:tag_input.attr('placeholder'),
+						//enable typeahead by specifying the source array
+						source: ace.variable_US_STATES,//defined in ace.js >> ace.enable_search_ahead
+					  }
+					);
+				}
+				else {
+					//display a textarea for old IE, because it doesn't support this plugin or another one I tried!
+					tag_input.after('<textarea id="'+tag_input.attr('id')+'" name="'+tag_input.attr('name')+'" rows="3">'+tag_input.val()+'</textarea>').remove();
+					//$('#form-field-tags').autosize({append: "\n"});
+				}
+			
+			});
+		</script>
+
+	</body>
+</html>

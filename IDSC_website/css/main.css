@@ -1,0 +1,187 @@
+@CHARSET "ISO-8859-1";
+/* Reset CSS
+ * --------------------------------------- */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
+form,fieldset,input,textarea,p,blockquote,th,td {padding: 0;margin: 0;}
+a{text-decoration:none;}
+table {border-spacing: 0;}
+fieldset,img {border: 0;}
+address,caption,cite,code,dfn,em,strong,th,var {font-weight: normal;font-style: normal;}
+strong{font-weight: bold;}
+ol,ul {list-style: none;margin:0;padding:0;}
+caption,th {text-align: left;
+}
+h1,h2,h3,h4,h5,h6 {font-weight: normal;font-size: 100%;margin:0;padding:0;color:#444;}
+q:before,q:after {content:'';}
+abbr,acronym { border: 0;}
+
+/* Custom CSS
+ * --------------------------------------- */
+body{font-family: arial,helvetica;color: #333;color: rgba(0,0,0,0.5);}
+.wrap{margin-left: auto;	margin-right: auto;	width: 960px;	position: relative;}
+_h1{font-size: 6em;}
+_p{font-size: 2em;}
+.intro p{width: 50%;margin: 0 auto;font-size: 1.5em;color: #fff;}
+.section{text-align:center;}
+
+/* Style for our header texts
+* --------------------------------------- */
+_h1{font-size: 2.5em;font-family: arial,helvetica;color: #fff;margin:0;}
+#section0 {overflow:hidden;}
+#section0 h1{font-size: 2em;padding:0.5em 1em;background-color:rgba(0,0,0,.35);text-align:left;}
+
+/* Centered texts in each section
+* --------------------------------------- */
+
+#myVideo{
+position: absolute;
+right: 0;
+bottom: 0;
+top:0;
+right:0;
+width: 100%;
+height: 100%;
+background-size: 100% 100%;
+background-color: black; /* in case the video doesn't fit the whole page*/
+background-image: /* our video */;
+background-position: center center;
+background-size: contain;
+object-fit: cover; /*cover video background */
+z-index:3;
+}
+
+/* Defining each section background and styles
+* --------------------------------------- */
+#section0{
+/*background: -webkit-gradient(linear, top left, bottom left, from(#4bbfc3), to(#7baabe));
+background: -webkit-linear-gradient(#4BBFC3, #7BAABE);
+background: linear-gradient(#4BBFC3,#7BAABE);
+background-size:cover;*/
+background-size:auto 100%;
+background:url(../imgs/product_outline.jpg) center top no-repeat;
+}
+.section img {max-width:100%;}
+.section h2 {color:#fff;font-family:'微軟正黑體';margin:0.5em 0 0 1em;padding:0.5em 1em;font-size:2em;width:36%;position:relative;background-color:rgba(0,0,0,.75);text-align:left;border-left:3px solid #00FF00;}
+.section p {color:#fff;margin:1em 0 0 1.4em;padding:0.5em 1em;font-size:1.5em;line-height:1.4;width:30%;position:absolute;text-align:left;background-color:rgba(255,255,255,.15);z-index:3;}
+#section0 img {margin-top:2em;position:_absolute;top:0%;right:0%;}
+#section0 h2 {margin-top:1.6em;}
+
+#section1 p {max-width:360px;}
+
+#section2{
+background: -webkit-gradient(linear, top left, bottom left, from(#000), to(#4B65A7));
+background: -webkit-linear-gradient(#000, #4B65A7);
+background: linear-gradient(#000,#4B65A7);
+/*background-attachment: fixed;
+background-size:auto 100%;*/
+_background-size:100% auto;
+_background: url(../imgs/real_cf.png) #F57272 center center repeat;
+_background: url(../imgs/planet_img.jpg) #F57272 center center no-repeat;
+}
+#section3{
+background-size:100% auto;
+background: url(../imgs/index_bg.jpg) #F57272 center center repeat;
+}
+.block_radius {-webkit-border-radius: 8px;-moz-border-radius: 8px;border-radius: 8px;}
+
+/* Fixed header and footer.
+* --------------------------------------- */
+#header {
+__display:none;
+color:#BCAFD1;
+position: fixed;
+z-index: 200;
+width: 100%;
+font-family: arial,helvetica;
+background-color:rgba(0,0,0,.35);
+background-color: #49a09d;
+background: -webkit-linear-gradient(left, rgba(73,160,157,.65) 0%, rgba(96,44,130,.5) 100%);
+background: linear-gradient(to right, rgba(73,160,157,.65) 0%, rgba(96,44,130,.5) 100%);
+-webkit-box-shadow: 0px 1px 8px 0px rgba(0,0,0,0.35);
+-moz-box-shadow: 0px 1px 8px 0px rgba(0,0,0,0.35);
+box-shadow: 0px 1px 8px 0px rgba(0,0,0,0.35);
+}
+#header h1 {
+color:white;
+font-family:'微軟正黑體';
+padding:0.2em 0 0.2em 180px;font-size: 150%;
+text-shadow: 0 1px 0 #ccc,
+0 2px 0 #C4C4C4,
+0 3px 0 #B6B6B6,
+0 6px 1px rgba(0,0,0,.1),
+0 0 5px rgba(0,0,0,.1),
+0 1px 3px rgba(0,0,0,.3),
+0 3px 5px rgba(0,0,0,.2),
+0 5px 10px rgba(0,0,0,.25);
+}
+#header h1 small{font-size: 80%;}
+#header img{position:absolute;width:160px;left:10px;top:4px;}
+#header .language {display:none_;float:right;margin-right:1em;line-height:2.5;}
+#header .language a {color:rgba(255,255,255,.5);margin:0 6px;}
+#header .language a:hover,#header .language a.active {color:rgba(0,217,108,1);}
+
+#footer{
+position:fixed;
+line-height:2;
+display:block;
+width: 100%;
+background: #333;
+z-index:9;
+text-align:center;
+color: #f2f2f2;
+padding:0.6em 0;
+bottom:0px;
+/* text-align:left; */
+-webkit-box-shadow:inset  0px 3px 8px 0px rgba(0,0,0,0.5);
+-moz-box-shadow:inset  0px 3px 8px 0px rgba(0,0,0,0.5);
+box-shadow:inset  0px 3px 8px 0px rgba(0,0,0,0.5);
+background: url(../imgs/real_cf.png) #F57272 center center repeat;
+}
+#footer a {color:#fff;}
+
+/* Layer with position absolute in order to have it over the video
+* --------------------------------------- */
+.layer{position: absolute;z-index: 4;width: 100%;left: 0;top: 0%;height: 100%;}
+
+/*Adding background for the slides
+* --------------------------------------- */
+#slide1{
+background: -webkit-gradient(linear, top left, bottom left, from(#7baabe), to(#969ac6));
+background: -webkit-linear-gradient(#7BAABE, #969AC6);
+background: linear-gradient(#7BAABE,#969AC6);
+}
+#slide2{
+background: -webkit-gradient(linear, top left, bottom left, from(#92a1ca), to(#76c2bd));
+background: -webkit-linear-gradient(#92a1ca, #76c2bd);
+background: linear-gradient(#92a1ca,#76c2bd);
+}
+#slide3{
+background: -webkit-gradient(linear, top left, bottom left, from(#92CAC2), to(#76A2C2));
+background: -webkit-linear-gradient(#92CAC2, #76A2C2);
+background: linear-gradient(#92CAC2,#76A2C2);
+}
+#slide4{
+background: -webkit-gradient(linear, top left, bottom left, from(#92CABD), to(#76C2C2));
+background: -webkit-linear-gradient(#92CABD, #76C2C2);
+background: linear-gradient(#92CABD,#76C2C2);
+}
+
+/*contect btn Style*/
+.mt {float:right;}
+.btn {margin-right: 30px;color: #666!important;}
+.btn-custom {
+background-color:rgba(255,255,255,.75);border: 1px solid #212121;border-radius: 0;
+__padding: 20px 40px;
+font-size: 0.8em;
+padding: 6px 12px;color: #212121;position: relative;-webkit-transition: all 0.5s ease-out;-moz-transition: all 0.5s ease-out;-o-transition: all 0.55s ease-out;transition: all 0.5s ease-out;}
+.r {position: absolute;width: 8px;height: 8px;display: inline-block;background: #212121;-webkit-transition: all 0.5s ease-out;-moz-transition: all 0.5s ease-out;-o-transition: all 0.55s ease-out;transition: all 0.5s ease-out;}
+.r1 {top: -4px;left: -4px;}
+.r2 {bottom: -4px;left: -4px;}
+.r3 {top: -4px;right: -4px;}
+.r4 {bottom: -4px;right: -4px;}
+.btn-custom.style1:hover {background: #3598db;color: #fff!important;border-color: #fff;}
+.btn-custom.style1:hover .r {background: #fff;}
+.btn-custom.style1:hover .r1 {top: 0;left: 0;}
+.btn-custom.style1:hover .r2 {bottom: 0;left: 0;}
+.btn-custom.style1:hover .r3 {top: 0;right: 0;}
+.btn-custom.style1:hover .r4 {bottom: 0;right: 0;}

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- <script src="Scripts/jquery-1.7.2.min.js" type="text/javascript"></script> -->
+<script>
+function loadXMLDoc(filename)
+{
+if (window.ActiveXObject)
+  {
+  xhttp = new ActiveXObject("Msxml2.XMLHTTP");
+  }
+else 
+  {
+  xhttp = new XMLHttpRequest();
+  }
+xhttp.open("GET", filename, false);
+try {xhttp.responseType = "msxml-document"} catch(err) {} // Helping IE11
+xhttp.send("");
+return xhttp.responseXML;
+}
+
+function displayResult()
+{
+xml = loadXMLDoc("cdcatalog.xml");
+xsl = loadXMLDoc("cdcatalog.xsl");
+// code for IE
+if (window.ActiveXObject || xhttp.responseType == "msxml-document")
+  {
+  ex = xml.transformNode(xsl);
+  document.getElementById("example").innerHTML = ex;
+  }
+// code for Chrome, Firefox, Opera, etc.
+else if (document.implementation && document.implementation.createDocument)
+  {
+  xsltProcessor = new XSLTProcessor();
+  xsltProcessor.importStylesheet(xsl);
+  resultDocument = xsltProcessor.transformToFragment(xml, document);
+  document.getElementById("example").appendChild(resultDocument);
+  }
+}
+</script>
+<script>
+$(document).ready(function(){
+    $(".btn1").click(function(){
+        $("#div1").load("test1.txt");
+    });
+	$(".btn2").click(function(){
+        $("#div1 p:first").load("test2.txt #h2");
+    });
+	$(".btn3").click(function(){
+        $("#dvContent li:first").load("test3.txt");
+    });
+	$(".btn4").click(function(){
+        $("#dvContent li:first").empty();
+    });
+	$(".btn5").click(function(){
+        $("#theList").append("<li>Add item</li>");
+    });
+	$(".btn6").click(function(){
+		$('#theList li:last-child').remove();
+    });
+	$(".btn7").click(function(){
+        $("#theList").empty();
+    });
+
+	$("#dvContent").append("<ul></ul>");
+	$.ajax({
+		type: "get",
+		url: "BookList.xml",
+		dataType: "xml",
+		success: function(xml){
+			$(xml).find('Book').each(function(){
+			var sTitle = $(this).find('Title').text();
+			var sNumber = $(this).find('number').text();
+			var sPublisher = $(this).find('Publisher').text();
+			$("<li></li>").html(sTitle + "：" + sPublisher + " - " +sNumber + " 本").appendTo("#dvContent ul");
+		});
+		},
+		error: function() {
+			alert("發生錯誤因為找不到 XML 檔案。");
+		}
+	});
+});    
+</script>
+
+</head>
+<body onload="displayResult()">
+<div id="example"></div>
+
+<div id="div1">
+	<h2>Let jQuery AJAX Change This Text</h2>
+	<P>TEXT1 TEXT1 TEXT1 TEXT1 TEXT1 TEXT1 TEXT1 TEXT1 TEXT1 TEXT1.</P>
+	<P>TEXT2 TEXT2 TEXT2 TEXT2 TEXT2 TEXT2 TEXT2 TEXT2 TEXT2 TEXT2.</P>
+</div>
+<button class="btn1">Get .Txt Content1</button>
+<button class="btn2">Get .Txt Content2</button>
+
+<p><br></p>
+
+<form id="form1" runat="server">
+	<span>Get .xml File</span>
+	<div id="dvContent"></div>
+</form>
+<button class="btn3">Get .Txt Content3</button>
+<button class="btn4">Remove Txt Content3</button>
+
+<p><br></p>
+
+<button class="btn5"> + </button>
+<button class="btn6"> - </button>
+<button class="btn7">Clear</button>
+<ul id="theList">
+    <li>Here's 1</li>
+    <li>Here's 2</li>
+</ul>
+
+<p><br></p>
+
+<p><button id="send">jQuery Get Json</button></p>
+<ol id="jason_data">JASON Data：</ol>
+
+<p><br></p>
+
+<h4>Wines Jason data</h4>
+<form method="post" action="">
+	<button value="all" type="submit">Get All Wines!</button>
+	<button value="red" type="submit">Get Red Wines!</button>
+	<button value="white" type="submit">Get White Wines!</button>
+</form>
+
+<div id="wines">
+	<!-- Javascript will print data in here when we have finished the page -->
+</div>
+
+<style>
+	#dvContent ul {margin:0 0 1.5em 0;border:1px solid #ccc;}
+	#dvContent ul li {margin:0.5em 0;color:#003366;}
+	table {width:96%;margin:auto;background-color:#A7C764;}
+	table th {background-color:#9acd32;color:#fff;padding:4px;white-space:nowrap;text-shadow: 1px 2px 2px rgba(0,0,0,0.15);}
+	table td {padding:3px 6px;background-color:#FCFFFB;color:#004020;}
+	table td input {display:block;border:1px solid transparent;background-color:transparent;padding:4px;}
+	table td input:hover {border:1px solid #ccc;background-color:#fff;}
+	table th:nth-child(odd) {background-color:#A6D930;}
+	table tr:nth-child(odd) td {background-color:#DFFFBF;}
+</style>
+
+<script>
+$("#send").click(function(){
+    $.getJSON("data.json", function(result){
+        $.each(result, function(i, field){
+            $("#jason_data").append('<li>' + field + '</li>');
+        });
+    });
+});
+</script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $(':submit').on('click', function() { // This event fires when a button is clicked
+    var button = $(this).val();
+    $.ajax({ // ajax call starts
+      url: 'data2.json', // JQuery loads serverside.php
+      data: 'button=' + $(this).val(), // Send value of the clicked button
+      dataType: 'json', // Choosing a JSON datatype
+	  //success: function(Jdata) { // 顯示成功或錯誤
+		//alert("成功讀取!!!");
+	  //},
+	  //error: function() {
+		//alert("錯誤!!!");
+	  //}
+    })
+    .done(function(data) { // Variable data contains the data we get from serverside
+      $('#wines').html(''); // Clear #wines div
+				
+      if (button == 'all') { // If clicked buttons value is all, we post every wine
+        for (var i in data.red) {
+          $('#wines').append('Red wine: ' + data.red[i] + '<br/>');
+        }
+        for (var i in data.white) {
+          $('#wines').append('White wine: ' + data.white[i] + '<br/>');
+        }
+      }
+      else if (button == 'red') { // If clicked buttons value is red, we post only red wines
+        for (var i in data) {
+          $('#wines').append('Red wine: ' + data[i] + '<br/>');
+        }
+      }
+      else if (button == 'white') { // If clicked buttons value is white, we post only white wines
+        for (var i in data) {
+          $('#wines').append('White wine: ' + data[i] + '<br/>');
+        }
+      }
+    });
+    return false; // keeps the page from not refreshing 
+  });
+});
+</script>
+</body>
+</html>

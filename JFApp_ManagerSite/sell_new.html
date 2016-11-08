@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>新增廠商商家 - 後台管理系統</title>
+
+		<meta name="description" content="" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- basic styles -->
+
+		<link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+
+		<!--[if IE 7]>
+		  <link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css" />
+		<![endif]-->
+
+		<!-- page specific plugin styles -->
+		<link rel="stylesheet" href="assets/css/daterangepicker.css" />
+		<link rel="stylesheet" href="assets/css/jquery-ui-1.10.3.custom.min.css" />
+		<link rel="stylesheet" href="assets/css/jquery.gritter.css" />
+		<link rel="stylesheet" href="assets/css/select2.css" />
+		<link rel="stylesheet" href="assets/css/bootstrap-editable.css" />
+
+		<!-- fonts -->
+
+		<!-- <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" /> -->
+
+		<!-- ace styles -->
+
+		<link rel="stylesheet" href="assets/css/ace.min.css" />
+		<link rel="stylesheet" href="assets/css/ace-rtl.min.css" />
+		<link rel="stylesheet" href="assets/css/ace-skins.min.css" />
+
+		<!--[if lte IE 8]>
+		  <link rel="stylesheet" href="assets/css/ace-ie.min.css" />
+		<![endif]-->
+
+		<!-- inline styles related to this page -->
+
+		<!-- ace settings handler -->
+
+		<script src="assets/js/ace-extra.min.js"></script>
+
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+
+		<!--[if lt IE 9]>
+		<script src="assets/js/html5shiv.js"></script>
+		<script src="assets/js/respond.min.js"></script>
+		<![endif]-->
+		
+		<style type="text/css">
+			/*.form-horizontal input,.form-horizontal select, .form-horizontal textarea {color:#333;border:0px solid #fff!important;}
+			.form-horizontal input:-moz-read-only { background-color: white!important;}
+			.form-horizontal input:read-only {background-color: white!important;}*/
+			.form-horizontal textarea {min-height: 88px;}
+		</style>
+	</head>
+
+	<body>
+		<div class="navbar navbar-default" id="navbar">
+
+			<script type="text/javascript">
+				try{ace.settings.check('navbar' , 'fixed')}catch(e){}
+			</script>
+
+			<div class="navbar-container" id="navbar-container">
+				<div class="navbar-header pull-left logo">
+					<a href="index.html" class="navbar-brand">
+						<small>
+							後台管理系統
+						</small>
+					</a><!-- /.brand -->
+				</div><!-- /.navbar-header -->
+
+				<div class="navbar-header pull-right" role="navigation">
+					<ul class="nav ace-nav">
+						<li class="color">
+							<a data-toggle="dropdown" class="dropdown-toggle" href="#">
+								<i class="icon-envelope icon-animated-vertical"></i>
+								<span class="badge badge-important">12</span>
+							</a>
+
+							<ul class="pull-right dropdown-navbar navbar-pink dropdown-menu dropdown-caret dropdown-times">
+								<li>
+									<a href="user_feedback.html">
+										<div class="clearfix">
+											<span class="pull-left">
+												<i class="btn btn-xs no-hover btn-success icon-user"></i>
+												客服管理
+											</span>
+											<span class="pull-right badge badge-success">+8</span>
+										</div>
+									</a>
+								</li>
+
+								<li>
+									<a href="user_feedback.html">
+										查看所有通知
+										<i class="icon-arrow-right"></i>
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li class="light-blue">
+							<a data-toggle="dropdown" href="#" class="dropdown-toggle">
+								<img class="nav-user-photo" src="assets/avatars/avatar4.png" alt="Jason's Photo" />
+								<span class="user-info">
+									<small>您好, 歡迎</small>
+									超級管理員
+								</span>
+
+								<i class="icon-caret-down"></i>
+							</a>
+
+							<ul class="user-menu pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
+								<li>
+									<a href="admin_profile.html">
+										<i class="icon-user"></i>
+										個人資料
+									</a>
+								</li>
+
+								<li class="divider"></li>
+
+								<li>
+									<a href="login.html">
+										<i class="icon-power-off"></i>
+										登 出
+									</a>
+								</li>
+							</ul>
+						</li>
+					</ul><!-- /.ace-nav -->
+				</div><!-- /.navbar-header -->
+			</div><!-- /.container -->
+		</div>
+
+		<div class="main-container" id="main-container">
+			<script type="text/javascript">
+				try{ace.settings.check('main-container' , 'fixed')}catch(e){}
+			</script>
+
+			<div class="main-container-inner">
+				<a class="menu-toggler" id="menu-toggler" href="#">
+					<span class="menu-text"></span>
+				</a>
+
+				<div class="sidebar" id="sidebar">
+					<script type="text/javascript">
+						try{ace.settings.check('sidebar' , 'fixed')}catch(e){}
+					</script>
+
+					<ul class="nav nav-list">
+						<li>
+							<a href="index.html">
+								<i class="icon-home"></i>
+								<span class="menu-text"> 首 頁 </span>
+							</a>
+						</li>
+
+						<li>
+							<a href="admin_group.html">
+								<i class="icon-user-md"></i>
+								<span class="menu-text"> 系統管理員群組 </span>
+							</a>
+						</li>
+
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-th"></i>
+								<span class="menu-text"> 商城商品管理 </span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="market_manager.html">
+										<i class="icon-double-angle-right"></i>
+										商品總覽
+									</a>
+								</li>
+								<li>
+									<a href="market_orderlist.html">
+										<i class="icon-double-angle-right"></i>
+										訂單管理
+									</a>
+								</li>
+                                <li>
+									<a href="market_new.html">
+										<i class="icon-double-angle-right"></i>
+										新增商品
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-cloud-upload"></i>
+								<span class="menu-text"> 廣告管理 </span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="ad_manager.html">
+										<i class="icon-double-angle-right"></i>
+										廣告總覽
+									</a>
+								</li>
+                                <li>
+									<a href="ad_new.html">
+										<i class="icon-double-angle-right"></i>
+										新增廣告
+									</a>
+								</li>
+								<li>
+									<a href="ad_type.html">
+										<i class="icon-double-angle-right"></i>
+										廣告類別管理
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="#" class="dropdown-toggle"> 
+								<i class="icon-codepen"></i> <span class="menu-text"> 序號管理 </span> 
+								<b class="arrow icon-angle-down"></b>
+							</a>
+							<ul class="submenu">
+								<li>
+									<a href="sn_list.html"> <i class="icon-double-angle-right"></i> 序號總覽</a>
+								</li>
+
+								<li>
+									<a href="sn_create.html"> <i class="icon-double-angle-right"></i> 新增序號</a>
+								</li>
+
+							</ul>
+						</li>
+
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-users"></i>
+								<span class="menu-text"> 會員管理 </span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="user_group.html">
+										<i class="icon-double-angle-right"></i>
+										會員總覽
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li class="active open">
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-rocket"></i>
+								<span class="menu-text"> 商家管理 </span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="sell_manager.html">
+										<i class="icon-double-angle-right"></i>
+										商家總覽
+									</a>
+								</li>
+								<li class="active">
+									<a href="sell_new.html">
+										<i class="icon-double-angle-right"></i>
+										新增商家
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="user_feedback.html">
+								<i class="icon-wechat"></i>
+								<span class="menu-text"> 客服管理 </span>
+							</a>
+						</li>
+
+						<li>
+							<a href="sys_postnews.html">
+								<i class="icon-laptop"></i>
+								<span class="menu-text"> 公告管理 </span>
+							</a>
+						</li>
+
+						<li>
+							<a href="sys_announcement.html">
+								<i class="icon-bullhorn"></i>
+								<span class="menu-text"> 消息管理 </span>
+							</a>
+						</li>
+
+                        <li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-bar-chart-o"></i>
+								<span class="menu-text"> 數據分析 </span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="analysis_isp.html">
+										<i class="icon-double-angle-right"></i>
+										基本分析
+									</a>
+								</li>
+
+								<li>
+									<a href="analysis_local.html">
+										<i class="icon-double-angle-right"></i>
+										依地區地域分布
+									</a>
+								</li>
+								
+                                <li>
+									<a href="analysis_trend.html">
+										<i class="icon-double-angle-right"></i>
+										APP 使用次數趨勢圖
+									</a>
+								</li>
+                                <li>
+									<a href="analysis_boot.html">
+										<i class="icon-double-angle-right"></i>
+										開機次數趨勢圖
+									</a>
+								</li>
+							</ul>
+						</li>
+						
+                        <li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-adn"></i>
+								<span class="menu-text"> APP 類別管理 </span>
+                                <b class="arrow icon-angle-down"></b>
+							</a>
+                            
+                            <ul class="submenu">
+								<li>
+									<a href="app_catalog.html">
+										<i class="icon-double-angle-right"></i>
+										APP 類型歸類對應
+									</a>
+								</li>
+
+								<li>
+									<a href="mobile_device.html">
+										<i class="icon-double-angle-right"></i>
+										手機型號裝置對應
+									</a>
+								</li>
+							</ul>
+						</li>
+					</ul><!-- /.nav-list -->
+
+					<div class="sidebar-collapse" id="sidebar-collapse">
+						<i class="icon-angle-double-left" data-icon1="icon-angle-double-left" data-icon2="icon-angle-double-right"></i>
+					</div>
+
+					<script type="text/javascript">
+						try{ace.settings.check('sidebar' , 'collapsed')}catch(e){}
+					</script>
+				</div>
+
+				<div class="main-content">
+					<div class="breadcrumbs" id="breadcrumbs">
+						<script type="text/javascript">
+							try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
+						</script>
+
+						<ul class="breadcrumb">
+							<li>
+								<i class="icon-home home-icon"></i>
+								<a href="index.html">Home</a>
+							</li>
+							<li><a href="sell_manager.html">商家總覽</a></li>
+							<li class="active">新增廠商 / 商家</li>
+						</ul><!-- .breadcrumb -->
+
+						<div class="nav-search" id="nav-search">
+							<form class="form-search">
+								<span class="input-icon">
+									<input type="text" placeholder="搜尋 ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
+									<i class="icon-search nav-search-icon"></i>
+								</span>
+							</form>
+						</div><!-- #nav-search -->
+					</div>
+
+					<div class="page-content">
+						
+						<div class="page-header">
+							<h1>
+								<i class="icon-file-o"></i>
+								新增廠商 / 商家
+								<small>
+									<i class="icon-angle-double-right"></i>
+								    新增建立基本資料
+								</small>
+							</h1>
+						</div>
+
+						<div class="row">
+							<div class="col-xs-12">
+								<!-- PAGE CONTENT BEGINS -->
+
+								<form class="form-horizontal" role="form">
+
+									<h5 class="text-primary"><i class="icon-angle-right"></i><i class="icon-trello"></i> 廠商基本資料</h5>
+
+									<div class="form-group">
+										<label class="col-sm-2 control-label no-padding-right"><b class="red">*</b> 廠商 / 商家名稱</label>
+										<div class="col-sm-4">
+											<input type="text" placeholder="請填寫本廠商 / 商家名稱" class="col-xs-12 col-sm-12">
+										</div>
+										<label class="col-sm-2 control-label no-padding-right"><b class="red">*</b> 行業類別</label>
+										<div class="col-sm-4">
+											<select><option value="A">01. 農、林、牧、漁業</option><option value="B">02. 採礦業</option><option value="C">03. 製造業</option><option value="D">04. 電力、然氣及水的生產和供應業</option><option value="E">05. 建築業</option><option value="F">06. 交通運輸、倉儲和郵政業</option><option value="G">07. 資訊傳輸、電腦服務和軟體業</option><option value="H">08. 批發和零售業</option><option value="I">09. 住宿和餐飲業</option><option value="J">10. 金融業</option><option value="K">11. 房地產業</option><option value="L">12. 租賃和商務服務業</option><option value="M">13. 科學研究、技術服務和地質勘查業</option><option value="N">14. 水利、環境和公共設施管理業</option><option value="O">15. 居民服務和其他服務業</option><option value="P">16. 教育</option><option value="Q">17. 衛生、社會保障和社會福利業</option><option value="R">18. 文化、體育和娛樂業</option><option value="S">19. 公共管理與社會組織</option><option value="T">20. 國際組織</option></select>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="col-sm-2 control-label no-padding-right"><b class="red">*</b> 聯絡電話</label>
+										<div class="col-sm-4">
+											<span class="input-icon">
+												<input type="text" placeholder="請填寫聯絡電話 (市話)">
+												<i class="icon-phone"></i>
+											</span>
+										</div>
+										<label class="col-sm-2 col-xs-12 control-label no-padding-right"> 統一編號</label>
+										<div class="col-sm-4">
+											<input type="text" placeholder="請填寫統一編號" class="col-xs-10 col-sm-10">
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="col-sm-2 control-label no-padding-right"> 傳真電話</label>
+										<div class="col-sm-4">
+											<span class="input-icon">
+												<input type="text" placeholder="請填寫傳真電話">
+												<i class="icon-fax"></i>
+											</span>
+										</div>
+										<label class="col-sm-2 col-xs-12 control-label no-padding-right"><i class="icon-link"></i>網站網址</label>
+										<div class="col-sm-4">
+											<input type="text" placeholder="請填寫網頁網址" class="col-xs-10 col-sm-10">
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="col-sm-2 control-label no-padding-right"><b class="red">*</b> 廠商地址</label>
+										<div class="col-sm-9">
+											<select><option value="01">台灣省</option><option value="02">廣東省</option><option value="03">四川省</option></select>
+											<select><option value="02">台北市(02)</option><option value="03">台北縣(03)</option><option value="04">桃園縣(04)</option><option value="05">新竹市(05)</option><option value="06">新竹縣(06)</option><option value="07">苗栗縣(07)</option><option value="08">台中市(08)</option><option value="09">台中縣(09)</option><option value="10">彰化縣(10)</option><option value="11">南投縣(11)</option><option value="12">雲林縣(12)</option><option value="13">嘉義市(13)</option><option value="14">嘉義縣(14)</option><option value="15">台南市(15)</option><option value="16">台南縣(16)</option><option value="17">高雄市(17)</option><option value="18">高雄縣(18)</option><option value="19">屏東縣(19)</option><option value="20">宜蘭縣(20)</option><option value="21">花蓮縣(21)</option><option value="22">台東縣(22)</option><option value="23">澎湖縣(23)</option><option value="24">連江縣(24)</option><option value="25">金門縣(25)</option></select>
+											<select><option value="100">中正區(100)</option><option value="103">大同區(103)</option><option value="104">中山區(104)</option><option value="105">松山區(105)</option><option value="106">大安區(106)</option><option value="108">萬華區(108)</option><option value="110">信義區(110)</option><option value="111">士林區(111)</option><option value="112">北投區(112)</option><option value="114">內湖區(114)</option><option value="115">南港區(115)</option><option value="116">文山區(116)</option></select>
+											<div class="space-2"></div>
+											<input type="text" placeholder="請填寫地址" class="col-xs-12">
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="col-sm-2 control-label no-padding-right"><b class="red">*</b> 帳號啟用</label>
+										<div class="col-sm-4">
+											<label>
+												<input name="switch-field" class="ace ace-switch ace-switch-5" type="checkbox" checked="checked">
+												<span class="lbl"></span>
+											</label>
+											<label>
+												<input name="form-field-checkbox" class="ace ace-checkbox-2" type="checkbox">
+												<span class="lbl"> 進行電郵驗證後啟用</span>
+											</label>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="col-sm-2 control-label no-padding-right"><b class="red">*</b> 登入帳號</label>
+										<div class="col-sm-4">
+											<span class="input-icon">
+												<input type="text" placeholder="登入帳號">
+												<i class="icon-user"></i>
+											</span>
+										</div>
+										<label class="col-sm-2 control-label no-padding-right"><b class="red">*</b> 密碼提示</label>
+										<div class="col-sm-4">
+											<input type="text" placeholder="密碼提示" class="col-xs-10 col-sm-10">
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="col-sm-2 control-label no-padding-right"><b class="red">*</b> 登入密碼</label>
+										<div class="col-sm-4">
+											<span class="input-icon">
+												<input type="password" placeholder="六位數含以上英數混合">
+												<i class="icon-unlock-alt"></i>
+											</span>
+											<a href="#"> <i class="icon-refresh"></i>隨機產生</a>
+										</div>
+									</div>
+									
+									<div class="space-20"></div>
+									<h5 class="text-primary"><i class="icon-angle-right"></i><i class="icon-male"></i> 聯絡人資料</h5>
+
+									<div class="form-group">
+										<label class="col-sm-2 control-label no-padding-right"><b class="red">*</b> 聯絡人 / 負責人</label>
+										<div class="col-sm-4">
+											<input type="text" placeholder="請填寫聯絡人 / 負責人稱謂" class="col-xs-10 col-sm-10">
+										</div>
+										<label class="col-sm-2 col-xs-10 control-label no-padding-right"><b class="red">*</b> 聯絡電話</label>
+										<div class="col-sm-4">
+											<span class="input-icon">
+												<input class="input-large" type="text" placeholder="請填寫聯絡電話">
+												<i class="icon-phone"></i>
+											</span>
+											<label>
+												<input name="form-field-checkbox" class="ace ace-checkbox-2" type="checkbox">
+												<span class="lbl"> 同廠商電話</span>
+											</label>
+										</div>
+									</div>
+									
+									<div class="form-group">
+										<label class="col-sm-2 col-xs-10 control-label no-padding-right"> 職務名稱</label>
+										<div class="col-sm-4">
+											<input type="text" placeholder="請填寫職務名稱" class="col-xs-10 col-sm-10">
+										</div>
+										<label class="col-sm-2 col-xs-10 control-label no-padding-right"> 分機號碼</label>
+										<div class="col-sm-4">
+											<input type="text" placeholder="分機號碼" class="col-xs-10 col-sm-4">
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="col-sm-2 col-xs-10 control-label no-padding-right"><b class="red">*</b> 行動電話</label>
+										<div class="col-sm-4">
+											<span class="input-icon">
+												<input class="input-xlarge" type="text" placeholder="請填寫行動電話(一)">
+												<i class="icon-mobile"></i>
+											</span>
+											<div class="space-2"></div>
+											<span class="input-icon">
+												<input class="input-xlarge" type="text" placeholder="請填寫行動電話(二)">
+												<i class="icon-mobile"></i>
+											</span>
+											<div class="space-2"></div>
+											<span class="input-icon">
+												<input class="input-xlarge" type="text" placeholder="請填寫行動電話(三)">
+												<i class="icon-mobile"></i>
+											</span>
+										</div>
+										<label class="col-sm-2 control-label no-padding-right">社群 & IM</label>
+										<div class="col-sm-4">
+											<span class="input-icon">
+												<input type="text" placeholder="Facebook">
+												<i class="icon-facebook"></i>
+											</span>
+											<div class="space-2"></div>
+											<span class="input-icon">
+												<input type="text" placeholder="Google+">
+												<i class="icon-google-plus"></i>
+											</span>
+											<div class="space-2"></div>
+											<span class="input-icon">
+												<input type="text" placeholder="Line">
+												<i class="icon-linkedin"></i>
+											</span>
+											<div class="space-2"></div>
+											<span class="input-icon">
+												<input type="text" placeholder="Twitter">
+												<i class="icon-twitter"></i>
+											</span>
+											<div class="space-2"></div>
+											<span class="input-icon">
+												<input type="text" placeholder="Skype">
+												<i class="icon-skype"></i>
+											</span>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="col-sm-2 control-label no-padding-right"><b class="red">*</b> 電子郵件</label>
+										<div class="col-sm-4">
+											<span class="input-icon">
+												<input class="input-xlarge" type="text" placeholder="請填寫電子郵件(必填)">
+												<i class="icon-envelope-o"></i>
+											</span>
+											<div class="space-2"></div>
+											<span class="input-icon">
+												<input class="input-xlarge" type="text" placeholder="請填寫電子郵件(選填)">
+												<i class="icon-envelope-o"></i>
+											</span>
+										</div>
+										<!-- <label class="col-sm-2 control-label no-padding-right"> 圖片上傳</label>
+										<div class="col-sm-4">
+											<input type="file">
+											<span class="row"><blockquote>檔案大小請勿超過 100kb<small>圖片尺寸 120px X 120px</small></blockquote></span>
+										</div> -->
+									</div>
+
+									<div class="form-group">
+										<label class="col-sm-2 control-label no-padding-right">職務代理人</label>
+										<div class="col-sm-5">
+											<div class="widget-box transparent collapsed">
+												<div>
+													<a href="#" data-action="collapse">
+														<i class="icon-chevron-down"></i>
+														展開
+													</a>
+												</div>
+
+												<div class="widget-body">
+													<div class="widget-main no-padding-left no-padding-right">
+														<input type="text" placeholder="代理人姓名" class="col-xs-12 col-sm-5">
+														<input type="text" placeholder="代理人電話" class="col-xs-12 col-sm-offset-1 col-sm-5">
+														<br><br>
+														<input type="text" placeholder="代理人郵件" class="col-xs-12 col-sm-5">
+														<input type="text" placeholder="其他" class="col-xs-12 col-sm-offset-1 col-sm-5">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="space-20"></div>
+									<h5 class="text-primary"><i class="icon-angle-right"></i><i class="icon-building-o"></i> 公司介紹</h5>
+
+									<div class="form-group">
+										<label class="col-sm-2 control-label no-padding-right">公司介紹</label>
+										<div class="col-sm-9">
+											<textarea id="form-field-11" placeholder="請填寫文字敘述" class="autosize-transition form-control"></textarea>
+										</div>
+									</div>
+
+									<div class="clearfix form-actions center">
+											<button class="btn" type="button" onclick="history.go(-1)">
+												<i class="icon-times bigger-110"></i>
+												取 消
+											</button>
+											&nbsp;
+											<button class="btn" type="reset">
+												<i class="icon-refresh bigger-110"></i>
+												清除重填
+											</button>
+											&nbsp;
+											<button class="btn btn-info" type="button" onclick="location.href='sell_view.html'">
+												<i class="icon-check bigger-110"></i>
+												儲存新增
+											</button>
+									</div><!-- button submit -->
+
+								</form><!-- /.form-horizontal -->
+
+								<div class="hr hr32 hr-dotted"></div>
+
+								<!-- PAGE CONTENT ENDS -->
+							</div><!-- /.col -->
+						</div><!-- /.row -->
+					</div><!-- /.page-content -->
+				</div><!-- /.main-content -->
+
+			</div><!-- /.main-container-inner -->
+
+			<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+				<i class="icon-angle-double-up icon-only bigger-110"></i>
+			</a>
+		</div><!-- /.main-container -->
+
+		<!-- basic scripts -->
+
+		<!--[if !IE]> -->
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+		<!-- <![endif]-->
+
+		<!--[if IE]>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<![endif]-->
+
+		<!--[if !IE]> -->
+
+		<script type="text/javascript">
+			window.jQuery || document.write("<script src='assets/js/jquery-2.0.3.min.js'>"+"<"+"/script>");
+		</script>
+
+		<!-- <![endif]-->
+
+		<!--[if IE]>
+<script type="text/javascript">
+ window.jQuery || document.write("<script src='assets/js/jquery-1.10.2.min.js'>"+"<"+"/script>");
+</script>
+<![endif]-->
+
+		<script type="text/javascript">
+			if("ontouchend" in document) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+		</script>
+		<script src="assets/js/bootstrap.min.js"></script>
+		<script src="assets/js/typeahead-bs2.min.js"></script>
+
+		<!-- page specific plugin scripts -->
+
+		<script src="assets/js/jquery.nestable.min.js"></script>
+		<!--[if lte IE 8]>
+		  <script src="assets/js/excanvas.min.js"></script>
+		<![endif]-->
+		<script src="assets/js/jquery-ui-1.10.3.custom.min.js"></script>
+
+		<script src="assets/js/date-time/bootstrap-datepicker.min.js"></script>
+		<script src="assets/js/date-time/bootstrap-timepicker.min.js"></script>
+		<script src="assets/js/date-time/moment.min.js"></script>
+		<script src="assets/js/date-time/daterangepicker.min.js"></script>
+		<script src="assets/js/jquery.autosize.min.js"></script>
+
+		<!-- ace scripts -->
+
+		<script src="assets/js/ace-elements.min.js"></script>
+		<script src="assets/js/ace.min.js"></script>
+
+		<!-- inline scripts related to this page -->
+		<script type="text/javascript">
+
+		$(document).ready(function(){
+			//$(".form-horizontal").find("input").prop("readonly", true);
+			
+			/// TextArea
+			$('textarea[class*=autosize]').autosize({append: "\n"});
+			//$('textarea.limited').inputlimiter({
+			//	remText: '%n 字已輸入，斷行不會扣除',
+			//	limitText: '本文可輸入: %n 個字'
+			//});
+
+		});
+		</script>
+
+	</body>
+</html>

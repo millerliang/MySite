@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>商家廣告審核 - 後台管理系統</title>
+
+		<meta name="description" content="" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- basic styles -->
+
+		<link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+
+		<!--[if IE 7]>
+		  <link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css" />
+		<![endif]-->
+
+		<!-- page specific plugin styles -->
+
+		<!-- fonts -->
+
+		<!-- <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" /> -->
+
+		<!-- ace styles -->
+
+		<link rel="stylesheet" href="assets/css/ace.min.css" />
+		<link rel="stylesheet" href="assets/css/ace-rtl.min.css" />
+		<link rel="stylesheet" href="assets/css/ace-skins.min.css" />
+
+		<!--[if lte IE 8]>
+		  <link rel="stylesheet" href="assets/css/ace-ie.min.css" />
+		<![endif]-->
+
+		<!-- inline styles related to this page -->
+
+		<!-- ace settings handler -->
+
+		<script src="assets/js/ace-extra.min.js"></script>
+
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+
+		<!--[if lt IE 9]>
+		<script src="assets/js/html5shiv.js"></script>
+		<script src="assets/js/respond.min.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<div class="navbar navbar-default" id="navbar">
+
+			<script type="text/javascript">
+				try{ace.settings.check('navbar' , 'fixed')}catch(e){}
+			</script>
+
+
+			<div class="navbar-container" id="navbar-container">
+				<div class="navbar-header pull-left logo">
+					<a href="index.html" class="navbar-brand">
+						<small>
+							後台管理系統
+						</small>
+					</a><!-- /.brand -->
+				</div><!-- /.navbar-header -->
+
+				<div class="navbar-header pull-right" role="navigation">
+					<ul class="nav ace-nav">
+						<li class="color">
+							<a data-toggle="dropdown" class="dropdown-toggle" href="#">
+								<i class="icon-envelope icon-animated-vertical"></i>
+								<span class="badge badge-important">12</span>
+							</a>
+
+							<ul class="pull-right dropdown-navbar navbar-pink dropdown-menu dropdown-caret dropdown-times">
+								<li>
+									<a href="user_feedback.html">
+										<div class="clearfix">
+											<span class="pull-left">
+												<i class="btn btn-xs no-hover btn-success icon-user"></i>
+												客服管理
+											</span>
+											<span class="pull-right badge badge-success">+8</span>
+										</div>
+									</a>
+								</li>
+
+								<li>
+									<a href="user_feedback.html">
+										查看所有通知
+										<i class="icon-arrow-right"></i>
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li class="light-blue">
+							<a data-toggle="dropdown" href="#" class="dropdown-toggle">
+								<img class="nav-user-photo" src="assets/avatars/avatar4.png" alt="Jason's Photo" />
+								<span class="user-info">
+									<small>您好, 歡迎</small>
+									超級管理員
+								</span>
+
+								<i class="icon-caret-down"></i>
+							</a>
+
+							<ul class="user-menu pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
+								<li>
+									<a href="admin_profile.html">
+										<i class="icon-user"></i>
+										個人資料
+									</a>
+								</li>
+
+								<li class="divider"></li>
+
+								<li>
+									<a href="login.html">
+										<i class="icon-power-off"></i>
+										登 出
+									</a>
+								</li>
+							</ul>
+						</li>
+					</ul><!-- /.ace-nav -->
+				</div><!-- /.navbar-header -->
+			</div><!-- /.container -->
+		</div>
+
+		<div class="main-container" id="main-container">
+			<script type="text/javascript">
+				try{ace.settings.check('main-container' , 'fixed')}catch(e){}
+			</script>
+
+			<div class="main-container-inner">
+				<a class="menu-toggler" id="menu-toggler" href="#">
+					<span class="menu-text"></span>
+				</a>
+
+				<div class="sidebar" id="sidebar">
+					<script type="text/javascript">
+						try{ace.settings.check('sidebar' , 'fixed')}catch(e){}
+					</script>
+
+					<ul class="nav nav-list">
+						<li class="active">
+							<a href="index.html">
+								<i class="icon-home"></i>
+								<span class="menu-text"> 首 頁 </span>
+							</a>
+						</li>
+
+						<li>
+							<a href="admin_group.html">
+								<i class="icon-user-md"></i>
+								<span class="menu-text"> 系統管理員群組 </span>
+							</a>
+						</li>
+
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-th"></i>
+								<span class="menu-text"> 商城商品管理 </span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="market_manager.html">
+										<i class="icon-double-angle-right"></i>
+										商品總覽
+									</a>
+								</li>
+								<li>
+									<a href="market_orderlist.html">
+										<i class="icon-double-angle-right"></i>
+										訂單管理
+									</a>
+								</li>
+                                <li>
+									<a href="market_new.html">
+										<i class="icon-double-angle-right"></i>
+										新增商品
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-cloud-upload"></i>
+								<span class="menu-text"> 廣告管理 </span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="ad_manager.html">
+										<i class="icon-double-angle-right"></i>
+										廣告總覽
+									</a>
+								</li>
+                                <li>
+									<a href="ad_new.html">
+										<i class="icon-double-angle-right"></i>
+										新增廣告
+									</a>
+								</li>
+								<li>
+									<a href="ad_type.html">
+										<i class="icon-double-angle-right"></i>
+										廣告類別管理
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="#" class="dropdown-toggle"> 
+								<i class="icon-codepen"></i> <span class="menu-text"> 序號管理 </span> 
+								<b class="arrow icon-angle-down"></b>
+							</a>
+							<ul class="submenu">
+								<li>
+									<a href="sn_list.html"> <i class="icon-double-angle-right"></i> 序號總覽</a>
+								</li>
+
+								<li>
+									<a href="sn_create.html"> <i class="icon-double-angle-right"></i> 新增序號</a>
+								</li>
+
+							</ul>
+						</li>
+
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-users"></i>
+								<span class="menu-text"> 會員管理 </span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="user_group.html">
+										<i class="icon-double-angle-right"></i>
+										會員總覽
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-rocket"></i>
+								<span class="menu-text"> 商家管理 </span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="sell_manager.html">
+										<i class="icon-double-angle-right"></i>
+										商家總覽
+									</a>
+								</li>
+								<li>
+									<a href="sell_new.html">
+										<i class="icon-double-angle-right"></i>
+										新增商家
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="user_feedback.html">
+								<i class="icon-wechat"></i>
+								<span class="menu-text"> 客服管理 </span>
+							</a>
+						</li>
+
+						<li>
+							<a href="sys_postnews.html">
+								<i class="icon-laptop"></i>
+								<span class="menu-text"> 公告管理 </span>
+							</a>
+						</li>
+
+						<li>
+							<a href="sys_announcement.html">
+								<i class="icon-bullhorn"></i>
+								<span class="menu-text"> 消息管理 </span>
+							</a>
+						</li>
+
+                        <li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-bar-chart-o"></i>
+								<span class="menu-text"> 數據分析 </span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="analysis_isp.html">
+										<i class="icon-double-angle-right"></i>
+										基本分析
+									</a>
+								</li>
+
+								<li>
+									<a href="analysis_local.html">
+										<i class="icon-double-angle-right"></i>
+										依地區地域分布
+									</a>
+								</li>
+
+                                <li>
+									<a href="analysis_trend.html">
+										<i class="icon-double-angle-right"></i>
+										APP 使用次數趨勢圖
+									</a>
+								</li>
+                                <li>
+									<a href="analysis_boot.html">
+										<i class="icon-double-angle-right"></i>
+										開機次數趨勢圖
+									</a>
+								</li>
+							</ul>
+						</li>
+						
+                        <li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-adn"></i>
+								<span class="menu-text"> APP 類別管理 </span>
+                                <b class="arrow icon-angle-down"></b>
+							</a>
+                            
+                            <ul class="submenu">
+								<li>
+									<a href="app_catalog.html">
+										<i class="icon-double-angle-right"></i>
+										APP 類型歸類對應
+									</a>
+								</li>
+
+								<li>
+									<a href="mobile_device.html">
+										<i class="icon-double-angle-right"></i>
+										手機型號裝置對應
+									</a>
+								</li>
+							</ul>
+						</li>
+					</ul><!-- /.nav-list -->
+
+					<div class="sidebar-collapse" id="sidebar-collapse">
+						<i class="icon-angle-double-left" data-icon1="icon-angle-double-left" data-icon2="icon-angle-double-right"></i>
+					</div>
+
+					<script type="text/javascript">
+						try{ace.settings.check('sidebar' , 'collapsed')}catch(e){}
+					</script>
+				</div>
+
+				<div class="main-content">
+					<div class="breadcrumbs" id="breadcrumbs">
+						<script type="text/javascript">
+							try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
+						</script>
+
+						<ul class="breadcrumb">
+							<li>
+								<i class="icon-home home-icon"></i>
+								<a href="index.html">Home</a>
+							</li>
+							<li class="active">廣告審核</li>
+						</ul><!-- .breadcrumb -->
+
+						<div class="nav-search" id="nav-search">
+							<form class="form-search">
+								<span class="input-icon">
+									<input type="text" placeholder="搜尋 ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
+									<i class="icon-search nav-search-icon"></i>
+								</span>
+							</form>
+						</div><!-- #nav-search -->
+					</div>
+
+					<div class="page-content">
+
+						<div class="page-header">
+							<h1>
+								首頁
+								<small>
+									<i class="icon-angle-double-right"></i>
+									廣告 &amp; 商城商品審核
+								</small>
+							</h1>
+						</div>
+						<div class="space-8"></div>
+
+						<div class="row">
+							<div class="col-sm-12">
+									<!-- PAGE CONTENT BEGINS -->
+
+									<div class="tabbable">
+										<ul class="nav nav-tabs">
+											<li class="active">
+												<a data-toggle="tab" href="#check">
+													<i class="pink icon-cloud-upload bigger-110 hidden-480"></i>
+													待審核廣告
+													<span class="badge badge-warning">4</span>
+												</a>
+											</li>
+
+											<li>
+												<a data-toggle="tab" href="#check_sell">
+													<i class="pink icon-th bigger-110 hidden-480"></i>
+													待審核商品
+													<span class="badge badge-primary">5</span>
+												</a>
+											</li>
+
+										</ul>
+
+										<div class="tab-content">
+											<div class="form-group">
+												<div class="input-group">
+
+													查詢：
+													<input type="text" class="search-query input-xlarge" placeholder="搜尋關鍵字">
+													&nbsp;
+													<select>
+														<option value="type">類別</option>
+														<option value="cpa">CPA</option>
+														<option value="cpm">CPM</option>
+													</select>
+													&nbsp;
+													<select>
+														<option value="a">排序</option>
+														<option value="b">時間</option>
+														<option value="c">筆劃</option>
+													</select>
+													&nbsp;
+													<button type="button" class="btn btn-purple btn-sm">
+														搜尋
+														<i class="icon-search icon-on-right bigger-110"></i>
+													</button>
+												</div>
+											</div><!-- Search bar -->
+
+											<div class="message-toolbar">
+												<label class="inline middle">
+													<input type="checkbox" class="ace">
+													<span class="lbl"> All </span>
+												</label>
+												&nbsp;
+												<div class="inline position-relative align-left">
+													<a href="#" class="btn-message btn btn-xs dropdown-toggle" data-toggle="dropdown">
+														<i class="icon-wrench"></i>
+														<span class="bigger-110">功能</span>
+														<i class="icon-caret-down icon-on-right"></i>
+													</a>
+													<ul class="dropdown-menu dropdown-lighter dropdown-caret dropdown-125">
+														<li>
+															<a class="bootbox-confirm" href="#">
+																<i class="icon-check green"></i>
+																&nbsp; 通過審核
+															</a>
+														</li>
+														<li>
+															<a class="bootbox-regular" href="#">
+																<i class="icon-refresh pink"></i>
+																&nbsp; 重新整理
+															</a>
+														</li>
+														<li class="divider"></li>
+														<li>
+															<a href="#">
+																<i class="icon-trash-o grey bigger-110"></i>
+																&nbsp; 刪除
+															</a>
+														</li>
+													</ul>
+												</div>
+												<a href="#" class="btn btn-xs btn-message  bootbox-confirm">
+													<i class="icon-check green"></i>
+													通過審核
+												</a>
+												<a href="#" class="btn btn-xs btn-message  bootbox-regular">
+													<i class="icon-ban red"></i>
+													否決申請
+												</a>
+												<a href="#" class="btn btn-xs btn-message">
+													<i class="icon-refresh"></i>
+													重新整理
+												</a>
+												<!-- <a href="#" class="btn btn-xs btn-message">
+													<i class="icon-refresh bigger-125"></i>
+													<span class="bigger-110">Reload</span>
+												</a>
+												&nbsp; 
+												<button class="btn btn-xs btn-message"><i class="icon-undo"></i></button>
+												<button class="btn btn-xs btn-message"><i class="icon-list-ol"></i></button>
+												<button class="btn btn-xs btn-message"><i class="icon-text-height"></i></button> -->
+												
+											</div><!-- Message-toolbar -->
+
+											<div class="space-8"></div>
+
+											<div id="check" class="tab-pane active">
+											
+												<div class="row">
+													<div class="col-xs-12">
+
+														<ul class="ace-thumbnails">
+															<li>
+																<a href="#">
+																	<img style="width:160px;" src="ad_imgs/ad_shiseido.jpg">
+																	<div class="text">
+																		<div class="inner">
+																			<p>中國電視公司<br>郝立強</p>
+																			<p><small>2015/01/30~2015/02/28</small></p>
+																			<p>
+																				<i class="icon-download bigger-120"></i>
+																				<i class="icon-globe bigger-120"></i>
+																				<i class="icon-map-marker bigger-120"></i>
+																				<i class="icon-facebook-square bigger-120"></i>
+																				<i class="icon-download bigger-120"></i>
+																				<i class="icon-thumbs-o-up bigger-120"></i>
+																				<i class="icon-calendar bigger-120"></i>
+																				<i class="icon-youtube-play bigger-120"></i>
+																				<i class="icon-ticket bigger-120"></i>
+																				<i class="icon-file-text-o bigger-120"></i>
+																			</p>
+																		</div>
+																	</div>
+																	<div class="tags">
+																		<span style="position:absolute;left:4px;">
+																			<input type="checkbox" class="ace">
+																			<span class="lbl"></span>
+																		</span>
+																		<span class="label-holder">
+																			<span class="label label-info arrowed line-height-normal">CPA</span>
+																		</span>
+																	</div>
+																</a>
+
+																<div class="tools tools-bottom">
+																	<a class="tooltip-info" href="ad_view.html" target="_blank" data-rel="tooltip" data-placement="top" data-original-title="檢視廣告">
+																		<i class="icon-link blue"></i>
+																	</a>
+																	<a class="tooltip-success bootbox-confirm" href="#.html" data-rel="tooltip" data-placement="top" data-original-title="通過審核">
+																		<i class="icon-check green"></i>
+																	</a>
+																	<a class="bootbox-regular tooltip-warning" href="#" data-rel="tooltip" data-placement="top" data-original-title="否決申請">
+																		<i class="icon-ban red"></i>
+																	</a>
+																</div>
+															</li>
+															<li>
+																<a href="#">
+																	<img style="width:160px;" src="ad_imgs/ad_skii.jpg">
+																	<div class="text">
+																		<div class="inner">
+																			<p>中央衛星電視台<br>蘇強</p>
+																			<p><small>2015/01/30~2015/02/28</small></p>
+																			<!-- <p>
+																				<i class="icon-download bigger-120"></i>
+																				<i class="icon-globe bigger-120"></i>
+																				<i class="icon-map-marker bigger-120"></i>
+																				<i class="icon-facebook-square bigger-120"></i>
+																				<i class="icon-download bigger-120"></i>
+																				<i class="icon-thumbs-o-up bigger-120"></i>
+																				<i class="icon-calendar bigger-120"></i>
+																				<i class="icon-youtube-play bigger-120"></i>
+																				<i class="icon-ticket bigger-120"></i>
+																				<i class="icon-file-text-o bigger-120"></i>
+																			</p> -->
+																		</div>
+																	</div>
+																	<div class="tags">
+																		<span style="position:absolute;left:4px;">
+																			<input type="checkbox" class="ace">
+																			<span class="lbl"></span>
+																		</span>
+																		<span class="label-holder">
+																			<span class="label label-purple arrowed line-height-normal">CPM</span>
+																		</span>
+																	</div>
+																</a>
+
+																<div class="tools tools-bottom">
+																	<a class="tooltip-info" href="ad_view.html" target="_blank" data-rel="tooltip" data-placement="top" data-original-title="檢視廣告">
+																		<i class="icon-link blue"></i>
+																	</a>
+																	<a class="tooltip-success bootbox-confirm" href="#.html" data-rel="tooltip" data-placement="top" data-original-title="通過審核">
+																		<i class="icon-check green"></i>
+																	</a>
+																	<a class="bootbox-regular tooltip-warning" href="#" data-rel="tooltip" data-placement="top" data-original-title="否決申請">
+																		<i class="icon-ban red"></i>
+																	</a>
+																</div>
+															</li>
+															<li>
+																<a href="#">
+																	<img style="width:160px;" src="ad_imgs/ad_panasonic.jpg">
+																	<div class="text">
+																		<div class="inner">
+																			<p>奧美廣告<br>吳博亦</p>
+																			<p><small>2015/01/30~2015/02/28</small></p>
+																			<p>
+																				<i class="icon-globe bigger-120"></i>
+																				<i class="icon-facebook-square bigger-120"></i>
+																				<i class="icon-download bigger-120"></i>
+																			</p>
+																		</div>
+																	</div>
+																	<div class="tags">
+																		<span style="position:absolute;left:4px;">
+																			<input type="checkbox" class="ace">
+																			<span class="lbl"></span>
+																		</span>
+																		<span class="label-holder">
+																			<span class="label label-info arrowed line-height-normal">CPA</span>
+																		</span>
+																	</div>
+																</a>
+
+																<div class="tools tools-bottom">
+																	<a class="tooltip-info" href="ad_view.html" target="_blank" data-rel="tooltip" data-placement="top" data-original-title="檢視廣告">
+																		<i class="icon-link blue"></i>
+																	</a>
+																	<a class="tooltip-success bootbox-confirm" href="#.html" data-rel="tooltip" data-placement="top" data-original-title="通過審核">
+																		<i class="icon-check green"></i>
+																	</a>
+																	<a class="bootbox-regular tooltip-warning" href="#" data-rel="tooltip" data-placement="top" data-original-title="否決申請">
+																		<i class="icon-ban red"></i>
+																	</a>
+																</div>
+															</li>
+															<li>
+																<a href="#">
+																	<img style="width:160px;" src="ad_imgs/ad_heysoung.jpg">
+																	<div class="text">
+																		<div class="inner">
+																			<p>中天電視台<br>江明明</p>
+																			<p><small>2015/01/30~2015/02/28</small></p>
+																			<p>
+																				<i class="icon-download bigger-120"></i>
+																				<i class="icon-globe bigger-120"></i>
+																			</p>
+																		</div>
+																	</div>
+																	<div class="tags">
+																		<span style="position:absolute;left:4px;">
+																			<input type="checkbox" class="ace">
+																			<span class="lbl"></span>
+																		</span>
+																		<span class="label-holder">
+																			<span class="label label-info arrowed line-height-normal">CPA</span>
+																		</span>
+																	</div>
+																</a>
+
+																<div class="tools tools-bottom">
+																	<a class="tooltip-info" href="ad_view.html" target="_blank" data-rel="tooltip" data-placement="top" data-original-title="檢視廣告">
+																		<i class="icon-link blue"></i>
+																	</a>
+																	<a class="tooltip-success bootbox-confirm" href="#.html" data-rel="tooltip" data-placement="top" data-original-title="通過審核">
+																		<i class="icon-check green"></i>
+																	</a>
+																	<a class="bootbox-regular tooltip-warning" href="#" data-rel="tooltip" data-placement="top" data-original-title="否決申請">
+																		<i class="icon-ban red"></i>
+																	</a>
+																</div>
+															</li>
+														</ul>
+													</div>
+												</div><!-- row -->
+
+												<hr>
+
+												<div class="row">
+												  <div class="col-sm-6">
+													<div class="dataTables_info"><i class="icon-info-circle light-orange"></i>共 4 筆資料。</div>
+												  </div>
+												</div>
+											</div>
+											
+											<div id="check_sell" class="tab-pane">
+
+												<div class="row">
+													<div class="col-xs-12">
+														<div class="alert alert-warning">
+															<!-- <i class="icon-hand-o-right"></i> -->
+															<button class="close" data-dismiss="alert">
+																<i class="icon-times"></i>
+															</button>
+															<p class="center"><img src="analytics_pngs/row-img-cart.png">Hey, Not yet.</p>
+														</div>
+														<ul class="ace-thumbnails">
+															<li>
+																<a href="#">
+																	<img alt="120x120" src="assets/images/gallery/thumb-3.jpg">
+																	<div class="text">
+																		<div class="inner">
+																			<p>治威湯遜廣告<br>郝益柏</p>
+																			<p><small>起：2015/01/30<br>迄：2015/02/28</small></p>
+																		</div>
+																	</div>
+																	<div class="tags">
+																		<span style="position:absolute;left:4px;">
+																			<input type="checkbox" class="ace">
+																			<span class="lbl"></span>
+																		</span>
+																	</div>
+																</a>
+
+																<div class="tools tools-bottom">
+																	<a class="tooltip-info" href="market_view.html" target="_blank" data-rel="tooltip" data-placement="top" data-original-title="檢視商品">
+																		<i class="icon-link blue"></i>
+																	</a>
+																	<a class="tooltip-success bootbox-confirm" href="#.html" data-rel="tooltip" data-placement="top" data-original-title="通過審核">
+																		<i class="icon-check green"></i>
+																	</a>
+																	<a class="bootbox-regular tooltip-warning" href="#" data-rel="tooltip" data-placement="top" data-original-title="否決申請">
+																		<i class="icon-ban red"></i>
+																	</a>
+																</div>
+															</li>
+															<li>
+																<a href="#">
+																	<img alt="120x120" src="kitty.gif">
+																	<div class="text">
+																		<div class="inner">
+																			<p>電通揚雅廣告<br>徐佩玟</p>
+																			<p><small>起：2015/01/30<br>迄：2015/02/28</small></p>
+																		</div>
+																	</div>
+																	<div class="tags">
+																		<span style="position:absolute;left:4px;">
+																			<input type="checkbox" class="ace">
+																			<span class="lbl"></span>
+																		</span>
+																	</div>
+																</a>
+
+																<div class="tools tools-bottom">
+																	<a class="tooltip-info" href="market_view.html" target="_blank" data-rel="tooltip" data-placement="top" data-original-title="檢視商品">
+																		<i class="icon-link blue"></i>
+																	</a>
+																	<a class="tooltip-success bootbox-confirm" href="#.html" data-rel="tooltip" data-placement="top" data-original-title="通過審核">
+																		<i class="icon-check green"></i>
+																	</a>
+																	<a class="bootbox-regular tooltip-warning" href="#" data-rel="tooltip" data-placement="top" data-original-title="否決申請">
+																		<i class="icon-ban red"></i>
+																	</a>
+																</div>
+															</li>
+															<li>
+																<a href="#">
+																	<img alt="120x120" src="assets/images/gallery/thumb-1.jpg">
+																	<div class="text">
+																		<div class="inner">
+																			<p>中華汽車<br>蔣 政</p>
+																			<p><small>起：2015/01/30<br>迄：2015/02/28</small></p>
+																		</div>
+																	</div>
+																	<div class="tags">
+																		<span style="position:absolute;left:4px;">
+																			<input type="checkbox" class="ace">
+																			<span class="lbl"></span>
+																		</span>
+																	</div>
+																</a>
+
+																<div class="tools tools-bottom">
+																	<a class="tooltip-info" href="market_view.html" target="_blank" data-rel="tooltip" data-placement="top" data-original-title="檢視商品">
+																		<i class="icon-link blue"></i>
+																	</a>
+																	<a class="tooltip-success bootbox-confirm" href="#.html" data-rel="tooltip" data-placement="top" data-original-title="通過審核">
+																		<i class="icon-check green"></i>
+																	</a>
+																	<a class="bootbox-regular tooltip-warning" href="#" data-rel="tooltip" data-placement="top" data-original-title="否決申請">
+																		<i class="icon-ban red"></i>
+																	</a>
+																</div>
+															</li>
+															<li>
+																<a href="#">
+																	<img alt="120x120" src="ad_imgs/eschick_120x120.jpg">
+																	<div class="text">
+																		<div class="inner">
+																			<p>領導公關公司<br>王淑慧</p>
+																			<p><small>起：2015/01/30<br>迄：2015/02/28</small></p>
+																		</div>
+																	</div>
+																	<div class="tags">
+																		<span style="position:absolute;left:4px;">
+																			<input type="checkbox" class="ace">
+																			<span class="lbl"></span>
+																		</span>
+																	</div>
+																</a>
+
+																<div class="tools tools-bottom">
+																	<a class="tooltip-info" href="market_view.html" target="_blank" data-rel="tooltip" data-placement="top" data-original-title="檢視商品">
+																		<i class="icon-link blue"></i>
+																	</a>
+																	<a class="tooltip-success bootbox-confirm" href="#.html" data-rel="tooltip" data-placement="top" data-original-title="通過審核">
+																		<i class="icon-check green"></i>
+																	</a>
+																	<a class="bootbox-regular tooltip-warning" href="#" data-rel="tooltip" data-placement="top" data-original-title="否決申請">
+																		<i class="icon-ban red"></i>
+																	</a>
+																</div>
+															</li>
+															<li>
+																<a href="#">
+																	<img alt="120x120" src="ad_imgs/fubon_120x120.jpg">
+																	<div class="text">
+																		<div class="inner">
+																			<p>華視電視公司<br>林春美</p>
+																			<p><small>起：2015/01/30<br>迄：2015/02/28</small></p>
+																		</div>
+																	</div>
+																	<div class="tags">
+																		<span style="position:absolute;left:4px;">
+																			<input type="checkbox" class="ace">
+																			<span class="lbl"></span>
+																		</span>
+																	</div>
+																</a>
+
+																<div class="tools tools-bottom">
+																	<a class="tooltip-info" href="market_view.html" target="_blank" data-rel="tooltip" data-placement="top" data-original-title="檢視商品">
+																		<i class="icon-link blue"></i>
+																	</a>
+																	<a class="tooltip-success bootbox-confirm" href="#.html" data-rel="tooltip" data-placement="top" data-original-title="通過審核">
+																		<i class="icon-check green"></i>
+																	</a>
+																	<a class="bootbox-regular tooltip-warning" href="#" data-rel="tooltip" data-placement="top" data-original-title="否決申請">
+																		<i class="icon-ban red"></i>
+																	</a>
+																</div>
+															</li>
+														</ul>
+													</div>
+												</div><!-- row -->
+												
+												<hr>
+
+												<div class="row">
+												  <div class="col-sm-6">
+													<div class="dataTables_info"><i class="icon-info-circle light-orange"></i>共 5 筆資料。</div>
+												  </div>
+												</div>
+											</div>
+
+										</div>
+									</div>
+
+								<div class="hr hr32 hr-dotted"></div>
+
+								<!-- PAGE CONTENT ENDS -->
+							</div><!-- /.col -->
+						</div><!-- /.row -->
+					</div><!-- /.page-content -->
+				</div><!-- /.main-content -->
+
+			</div><!-- /.main-container-inner -->
+
+			<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+				<i class="icon-angle-double-up icon-only bigger-110"></i>
+			</a>
+		</div><!-- /.main-container -->
+
+		<!-- basic scripts -->
+
+		<!--[if !IE]> -->
+
+		<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script> -->
+
+		<!-- <![endif]-->
+
+		<!--[if IE]>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<![endif]-->
+
+		<!--[if !IE]> -->
+
+		<script type="text/javascript">
+			window.jQuery || document.write("<script src='assets/js/jquery-2.0.3.min.js'>"+"<"+"/script>");
+		</script>
+
+		<!-- <![endif]-->
+
+		<!--[if IE]>
+<script type="text/javascript">
+ window.jQuery || document.write("<script src='assets/js/jquery-1.10.2.min.js'>"+"<"+"/script>");
+</script>
+<![endif]-->
+
+		<script type="text/javascript">
+			if("ontouchend" in document) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+		</script>
+		<script src="assets/js/bootstrap.min.js"></script>
+		<script src="assets/js/typeahead-bs2.min.js"></script>
+
+		<!-- page specific plugin scripts -->
+
+		<script src="assets/js/bootbox.min.js"></script>
+
+		<!-- ace scripts -->
+
+		<script src="assets/js/ace-elements.min.js"></script>
+		<script src="assets/js/ace.min.js"></script>
+
+		<!-- inline scripts related to this page -->
+		<script type="text/javascript">
+			jQuery(function($) {
+
+				$('[data-rel=tooltip]').tooltip();
+
+                /// Confirm Dialog///
+					
+				$(".bootbox-confirm").on(ace.click_event, function() {
+					bootbox.confirm("<i class='icon-check bigger-120 green'></i> 確定通過審核上架？", function(result) {
+						if(result) {
+							//
+						}
+					});
+				});
+				
+				$(".bootbox-regular").on(ace.click_event, function() {
+					bootbox.prompt("<i class='icon-warning orange'></i> 審核不通過，請填寫原因。", function(result) {
+						if (result === null) {
+							//Example.show("Prompt dismissed");
+						} else {
+							//Example.show("Hi <b>"+result+"</b>");
+						}
+					});
+				});
+
+			})
+		</script>
+
+	</body>
+</html>

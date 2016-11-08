@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>客服管理 - 後台管理系統</title>
+
+		<meta name="description" content="" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- basic styles -->
+
+		<link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+
+		<!--[if IE 7]>
+		  <link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css" />
+		<![endif]-->
+
+		<!-- page specific plugin styles -->
+
+		<!-- fonts -->
+
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" />
+
+		<!-- ace styles -->
+
+		<link rel="stylesheet" href="assets/css/ace.min.css" />
+		<link rel="stylesheet" href="assets/css/ace-rtl.min.css" />
+		<link rel="stylesheet" href="assets/css/ace-skins.min.css" />
+
+		<!--[if lte IE 8]>
+		  <link rel="stylesheet" href="assets/css/ace-ie.min.css" />
+		<![endif]-->
+
+		<!-- inline styles related to this page -->
+
+		<!-- ace settings handler -->
+
+		<script src="assets/js/ace-extra.min.js"></script>
+
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+
+		<!--[if lt IE 9]>
+		<script src="assets/js/html5shiv.js"></script>
+		<script src="assets/js/respond.min.js"></script>
+		<![endif]-->
+		<style type="text/css">
+			.imgshow a img {
+				max-height:48px;
+				max-width:440px;
+				-webkit-transition: all 0.5s ease-in-out 0s;
+				-moz-transition: all 0.5s ease-in-out 0s;
+				-ms-transition: all 0.5s ease-in-out 0s;
+				-o-transition: all 0.5s ease-in-out 0s;
+				transition: all 0.5s ease-in-out 0s;
+			}
+			.imgshow a:hover img {
+				max-height:100%;
+				max-width:440px;
+				-webkit-transition: all 0.5s ease-in-out 0s;
+				-moz-transition: all 0.5s ease-in-out 0s;
+				-ms-transition: all 0.5s ease-in-out 0s;
+				-o-transition: all 0.5s ease-in-out 0s;
+				transition: all 0.5s ease-in-out 0s;
+				}
+		</style>
+	</head>
+
+	<body>
+		<div class="navbar navbar-default" id="navbar">
+
+			<script type="text/javascript">
+				try{ace.settings.check('navbar' , 'fixed')}catch(e){}
+			</script>
+
+
+			<div class="navbar-container" id="navbar-container">
+				<div class="navbar-header pull-left logo">
+					<a href="index.html" class="navbar-brand">
+						<small>
+							後台管理系統
+						</small>
+					</a><!-- /.brand -->
+				</div><!-- /.navbar-header -->
+
+				<div class="navbar-header pull-right">
+					<ul class="nav ace-nav">
+						<li class="color">
+							<a data-toggle="dropdown" class="dropdown-toggle" href="#">
+								<i class="icon-envelope icon-animated-vertical"></i>
+								<span class="badge badge-important">12</span>
+							</a>
+
+							<ul class="pull-right dropdown-navbar navbar-pink dropdown-menu dropdown-caret dropdown-times">
+								<li>
+									<a href="user_feedback.html">
+										<div class="clearfix">
+											<span class="pull-left">
+												<i class="btn btn-xs no-hover btn-success icon-user"></i>
+												客服管理
+											</span>
+											<span class="pull-right badge badge-success">+8</span>
+										</div>
+									</a>
+								</li>
+
+								<li>
+									<a href="user_feedback.html">
+										查看所有通知
+										<i class="icon-arrow-right"></i>
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li class="light-blue">
+							<a data-toggle="dropdown" href="#" class="dropdown-toggle">
+								<img class="nav-user-photo" src="assets/avatars/avatar4.png" alt="Jason's Photo" />
+								<span class="user-info">
+									<small>您好, 歡迎</small>
+									超級管理員
+								</span>
+
+								<i class="icon-caret-down"></i>
+							</a>
+
+							<ul class="user-menu pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
+								<li>
+									<a href="admin_profile.html">
+										<i class="icon-user"></i>
+										個人資料
+									</a>
+								</li>
+
+								<li class="divider"></li>
+
+								<li>
+									<a href="login.html">
+										<i class="icon-power-off"></i>
+										登 出
+									</a>
+								</li>
+							</ul>
+						</li>
+					</ul><!-- /.ace-nav -->
+				</div><!-- /.navbar-header -->
+			</div><!-- /.container -->
+		</div>
+
+		<div class="main-container" id="main-container">
+			<script type="text/javascript">
+				try{ace.settings.check('main-container' , 'fixed')}catch(e){}
+			</script>
+
+			<div class="main-container-inner">
+				<a class="menu-toggler" id="menu-toggler" href="#">
+					<span class="menu-text"></span>
+				</a>
+
+				<div class="sidebar" id="sidebar">
+					<script type="text/javascript">
+						try{ace.settings.check('sidebar' , 'fixed')}catch(e){}
+					</script>
+
+					<ul class="nav nav-list">
+						<li>
+							<a href="index.html">
+								<i class="icon-home"></i>
+								<span class="menu-text"> 首 頁 </span>
+							</a>
+						</li>
+
+						<li>
+							<a href="admin_group.html">
+								<i class="icon-user-md"></i>
+								<span class="menu-text"> 系統管理員群組 </span>
+							</a>
+						</li>
+
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-th"></i>
+								<span class="menu-text"> 商城商品管理 </span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="market_manager.html">
+										<i class="icon-double-angle-right"></i>
+										商品總覽
+									</a>
+								</li>
+								<li>
+									<a href="market_orderlist.html">
+										<i class="icon-double-angle-right"></i>
+										訂單管理
+									</a>
+								</li>
+                                <li>
+									<a href="market_new.html">
+										<i class="icon-double-angle-right"></i>
+										新增商品
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-cloud-upload"></i>
+								<span class="menu-text"> 廣告管理 </span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="ad_manager.html">
+										<i class="icon-double-angle-right"></i>
+										廣告總覽
+									</a>
+								</li>
+                                <li>
+									<a href="ad_new.html">
+										<i class="icon-double-angle-right"></i>
+										新增廣告
+									</a>
+								</li>
+								<li>
+									<a href="ad_type.html">
+										<i class="icon-double-angle-right"></i>
+										廣告類別管理
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="#" class="dropdown-toggle"> 
+								<i class="icon-codepen"></i> <span class="menu-text"> 序號管理 </span> 
+								<b class="arrow icon-angle-down"></b>
+							</a>
+							<ul class="submenu">
+								<li>
+									<a href="sn_list.html"> <i class="icon-double-angle-right"></i> 序號總覽</a>
+								</li>
+								<li>
+									<a href="sn_create.html"> <i class="icon-double-angle-right"></i> 新增序號</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-users"></i>
+								<span class="menu-text"> 會員管理 </span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="user_group.html">
+										<i class="icon-double-angle-right"></i>
+										會員總覽
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-rocket"></i>
+								<span class="menu-text"> 商家管理 </span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="sell_manager.html">
+										<i class="icon-double-angle-right"></i>
+										商家總覽
+									</a>
+								</li>
+								<li>
+									<a href="sell_new.html">
+										<i class="icon-double-angle-right"></i>
+										新增商家
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li class="active">
+							<a href="user_feedback.html">
+								<i class="icon-wechat"></i>
+								<span class="menu-text"> 客服管理 </span>
+							</a>
+						</li>
+
+						<li>
+							<a href="sys_postnews.html">
+								<i class="icon-laptop"></i>
+								<span class="menu-text"> 公告管理 </span>
+							</a>
+						</li>
+
+						<li>
+							<a href="sys_announcement.html">
+								<i class="icon-bullhorn"></i>
+								<span class="menu-text"> 消息管理 </span>
+							</a>
+						</li>
+
+                        <li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-bar-chart-o"></i>
+								<span class="menu-text"> 數據分析 </span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="analysis_isp.html">
+										<i class="icon-double-angle-right"></i>
+										基本分析
+									</a>
+								</li>
+
+								<li>
+									<a href="analysis_local.html">
+										<i class="icon-double-angle-right"></i>
+										依地區地域分布
+									</a>
+								</li>
+
+                                <li>
+									<a href="analysis_trend.html">
+										<i class="icon-double-angle-right"></i>
+										APP 使用次數趨勢圖
+									</a>
+								</li>
+                                <li>
+									<a href="analysis_boot.html">
+										<i class="icon-double-angle-right"></i>
+										開機次數趨勢圖
+									</a>
+								</li>
+							</ul>
+						</li>
+						
+                        <li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-adn"></i>
+								<span class="menu-text"> APP 類別管理 </span>
+                                <b class="arrow icon-angle-down"></b>
+							</a>
+                            
+                            <ul class="submenu">
+								<li>
+									<a href="app_catalog.html">
+										<i class="icon-double-angle-right"></i>
+										APP 類型歸類對應
+									</a>
+								</li>
+
+								<li>
+									<a href="mobile_device.html">
+										<i class="icon-double-angle-right"></i>
+										手機型號裝置對應
+									</a>
+								</li>
+							</ul>
+						</li>
+					</ul><!-- /.nav-list -->
+
+					<div class="sidebar-collapse" id="sidebar-collapse">
+						<i class="icon-angle-double-left" data-icon1="icon-angle-double-left" data-icon2="icon-angle-double-right"></i>
+					</div>
+
+					<script type="text/javascript">
+						try{ace.settings.check('sidebar' , 'collapsed')}catch(e){}
+					</script>
+				</div>
+
+				<div class="main-content">
+					<div class="breadcrumbs" id="breadcrumbs">
+						<script type="text/javascript">
+							try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
+						</script>
+
+						<ul class="breadcrumb">
+							<li>
+								<i class="icon-home home-icon"></i>
+								<a href="index.html">Home</a>
+							</li>
+							<li class="active"><span class="menu-text"> 客服管理 </span></li>
+						</ul><!-- .breadcrumb -->
+
+						<div class="nav-search" id="nav-search">
+							<form class="form-search">
+								<span class="input-icon">
+									<input type="text" placeholder="搜尋 ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
+									<i class="icon-search nav-search-icon"></i>
+								</span>
+							</form>
+						</div><!-- #nav-search -->
+					</div>
+
+					<div class="page-content">
+
+                        <div class="page-header">
+							<h1><span class="menu-text"> 客服管理 </span><small><i class="icon-angle-double-right"></i>回覆會員反饋問題</small></h1>
+						</div>
+
+						<div class="row">
+							<div class="col-xs-12 col-sm-12">
+								<!-- PAGE CONTENT BEGINS -->
+								
+								<form id="search">
+
+									<div class="input-group">
+										<select>
+											<option value="0">全 部</option>
+											<option value="1">未回覆意見</option>
+											<option value="2">已回覆意見</option>
+										</select>
+										&nbsp;
+										<select>
+											<option value="0">時間範圍</option>
+											<option value="1week">一週</option>
+											<option value="3week">三週</option>
+											<option value="1mon">一個月</option>
+											<option value="3mon">三個月</option>
+											<option value="6mon">半年</option>
+										</select>
+										&nbsp;
+										<select>
+											<option value="0">提問類別</option>
+											<option value="A">點數問題</option>
+											<option value="B">任務問題</option>
+											<option value="C">其他問題</option>
+										</select>
+										&nbsp;
+										<input type="text" class="search-query input-xlarge" placeholder="請在此處輸入關鍵字">
+										<span class="input-group-btn">
+											<button type="button" class="btn btn-purple btn-sm">
+												送出搜尋
+												<i class="icon-search icon-on-right bigger-110"></i>
+											</button>
+											&nbsp;
+											<button type="button" class="btn btn-sm">
+												回復預設
+												<i class="icon-refresh icon-on-right bigger-110"></i>
+											</button>
+										</span>
+									</div>
+
+								</form><!-- /form -->
+								
+								<div class="hr hr-dotted hr16"></div>
+
+								<h4 class="blue"><i class="icon-comments-o"></i> 未回覆意見</h4>
+								
+								<div id="status" class="tab-pane active">
+									<table class="table table-striped table-bordered table-hover">
+									  <thead>
+										<tr>
+										  <th class="hidden-480">會員頭像</th>
+										  <th>暱 稱</th>
+										  <th class="hidden-480">性 別</th>
+										  <th>提問編號</th>
+										  <th class="hidden-480"><i class="icon-clock-o bigger-110"></i> 發生時間</th>
+										  <th><i class="icon-clock-o bigger-110 hidden-480"></i> 提問時間</th>
+										  <th>提問類別</th>
+										  <th class="hidden-480">提問內容</th>
+										  <th class="hidden-480">系統</th>
+										  <th>工 具</th>
+										</tr>
+									  </thead>
+									  <tbody>
+										<tr>
+										  <td class="hidden-480"><img src="assets/avatars/avatar1.png"></td>
+										  <td><a href="user_profile.html" class="tooltip-info" data-rel="tooltip" data-placement="top" data-original-title="檢視會員">羅斯‧多伊</a></td>
+										  <td class="hidden-480">女</td>
+										  <td>#123456789</td>
+										  <td class="hidden-480">2014/11/18 20:46</td>
+										  <td>2014/11/18 20:46</td>
+										  <td>點數問題</td>
+										  <td class="hidden-480">提問文字內容</td>
+										  <td class="hidden-480"><i class="icon-android bigger-120 green"></i></td>
+										  <td>
+											<div class="action-buttons">
+												<a href="#repost-form" data-toggle="modal" class="blue tooltip-info" data-rel="tooltip" title="" data-placement="top" data-original-title="回應問題">
+													<i class="icon-comments-o bigger-150"></i>
+												</a>
+											</div>
+										  </td>
+										</tr>
+										<tr>
+										  <td class="hidden-480"><i class="icon-picture-o bigger-200 grey"></i></td>
+										  <td><a href="user_profile.html" class="tooltip-info" data-rel="tooltip" data-placement="top" data-original-title="檢視會員">糖果‧多伊</a></td>
+										  <td class="hidden-480">女</td>
+										  <td>#987654321</td>
+										  <td class="hidden-480">2014/11/22 18:26</td>
+										  <td>2014/11/22 18:26</td>
+										  <td>其他問題</td>
+										  <td class="hidden-480">提問文字內容</td>
+										  <td class="hidden-480"><i class="icon-android bigger-120 green"></i></td>
+										  <td>
+											<div class="action-buttons">
+												<a href="#repost-form" data-toggle="modal" class="blue tooltip-info" data-rel="tooltip" title="" data-placement="top" data-original-title="回應問題">
+													<i class="icon-comments-o bigger-150"></i>
+												</a>
+											</div>
+										  </td>
+										</tr>
+										<tr>
+										  <td class="hidden-480"><img src="assets/avatars/avatar3.png"></td>
+										  <td><a href="user_profile.html" class="tooltip-info" data-rel="tooltip" data-placement="top" data-original-title="檢視會員">愛蜜莉‧多伊</a></td>
+										  <td class="hidden-480">女</td>
+										  <td>#147258369</td>
+										  <td class="hidden-480">2014/11/14 14:30</td>
+										  <td>2014/11/14 14:30</td>
+										  <td>點數問題</td>
+										  <td class="hidden-480">提問文字內容</td>
+										  <td class="hidden-480"><i class="icon-android bigger-120 green"></i></td>
+										  <td>
+											<div class="action-buttons">
+												<a href="#repost-form" data-toggle="modal" class="blue tooltip-info" data-rel="tooltip" title="" data-placement="top" data-original-title="回應問題">
+													<i class="icon-comments-o bigger-150"></i>
+												</a>
+											</div>
+										  </td>
+										</tr>
+										<tr>
+										  <td class="hidden-480"><img src="assets/avatars/user.jpg" /></td>
+										  <td><a href="user_profile.html" class="tooltip-info" data-rel="tooltip" data-placement="top" data-original-title="檢視會員">保柏‧多伊</a></td>
+										  <td class="hidden-480">男</td>
+										  <td>#963852741</td>
+										  <td class="hidden-480">2014/11/15 11:12</td>
+										  <td>2014/11/15 11:12</td>
+										  <td>任務問題</td>
+										  <td class="hidden-480">提問文字內容</td>
+										  <td class="hidden-480"><i class="icon-apple bigger-120 light-grey"></i></td>
+										  <td>
+											<div class="action-buttons">
+												<a href="#repost-form" data-toggle="modal" class="blue tooltip-info" data-rel="tooltip" title="" data-placement="top" data-original-title="回應問題">
+													<i class="icon-comments-o bigger-150"></i>
+												</a>
+											</div>
+										  </td>
+										</tr>
+									  </tbody>
+									</table><!-- /table1 -->
+
+									<div class="row">
+									  <div class="col-sm-6">
+										<div class="dataTables_info">共 4 筆資料，目前在第 1 頁。</div>
+									  </div>
+									  <div class="col-sm-6">
+										<div class="dataTables_paginate paging_bootstrap">
+										  <ul class="pagination">
+											<li class="prev disabled"><a href="#"><i class="icon-angle-double-left"></i></a></li>
+											<li class="active"><a href="#">1</a></li>
+											<li><a href="#">2</a></li>
+											<li><a href="#">3</a></li>
+											<li class="next"><a href="#"><i class="icon-angle-double-right"></i></a></li>
+										  </ul>
+										</div>
+									  </div>
+									</div>
+								</div>
+
+								<div class="hr hr32 hr-dotted"></div>
+								
+								<div id="repost-form" class="modal" tabindex="-1">
+									<div class="modal-dialog">
+										<div class="modal-content">
+											<div class="modal-header" style="padding: 6px 16px">
+												<button type="button" class="close" data-dismiss="modal">&times;</button>
+												<h4 class="blue bigger">
+												<i class="icon-comment-o"></i>
+												會員問題回應
+												</h4>
+											</div>
+
+											<div class="modal-body overflow-visible">
+
+												<div class="timeline-container timeline-style2">
+													<span class="badge badge-danger">提問編號：#123456789</span>
+													<div class="space-10"></div>
+
+													<div class="timeline-items">
+														<div class="timeline-item clearfix">
+															<div class="timeline-info">
+																<span class="timeline-date">06/02 9:00</span>
+
+																<i class="timeline-indicator btn btn-success no-hover"></i>
+															</div>
+
+															<div class="widget-box transparent">
+																<div class="widget-body">
+																	<div class="widget-main no-padding">
+																	
+																		<div class="clearfix">
+																			<div class="pull-left">
+																				<span class="green">羅斯‧多伊</span>
+
+																				我有點數問題請教
+																			</div>
+
+																			<div class="pull-right imgshow">
+																				<a href="#img"><img src="assets/images/gallery/image-6.jpg"/></a>
+																			</div>
+																		</div>
+
+																	</div>
+																</div>
+															</div>
+														</div>
+
+														<div class="timeline-item clearfix">
+															<div class="timeline-info">
+																<span class="timeline-date">06/02 9:01</span>
+
+																<i class="timeline-indicator btn btn-success no-hover"></i>
+															</div>
+
+															<div class="widget-box transparent">
+																<div class="widget-body">
+																	<div class="widget-main no-padding">
+																		<span class="blue">喬·多伊</span> 
+																		可否詳加敘述
+																	</div>
+																</div>
+															</div>
+														</div>
+
+														<div class="timeline-item clearfix">
+															<div class="timeline-info">
+																<span class="timeline-date">06/02 9:02</span>
+
+																<i class="timeline-indicator btn btn-success no-hover"></i>
+															</div>
+
+															<div class="widget-box transparent">
+																<div class="widget-body">
+																	
+																	<div class="widget-main no-padding">
+																		
+																		<div class="clearfix">
+																			<div class="pull-left">
+																				<span class="green">羅斯‧多伊</span>
+
+																				我的點數全部都變成零了。
+																			</div>
+
+																			<div class="pull-right imgshow">
+																				<a href="#img"><img src="coupon.jpg"/></a>
+																			</div>
+																		</div>
+
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div><!-- /.timeline-items -->
+												</div><!-- /.timeline-container -->
+												<div class="row">
+													<textarea class="form-control autosize-transition" style="min-height:160px" placeholder="請在此處填寫您的回覆....."></textarea>
+												</div>
+											</div><!-- /.modal-body -->
+
+											<div class="modal-footer">
+												<button class="btn" type="button">
+													<i class="icon-refresh bigger-110"></i>
+													清 除
+												</button>
+												&nbsp;
+												<button class="btn btn-info" type="button">
+													<i class="icon-check bigger-110"></i>
+													送 出
+												</button>
+											</div>
+										</div>
+									</div>
+								</div><!-- /#repost-form -->
+
+								<!-- PAGE CONTENT ENDS -->
+							</div><!-- /.col -->
+						</div><!-- /.row -->
+					</div><!-- /.page-content -->
+				</div><!-- /.main-content -->
+
+			</div><!-- /.main-container-inner -->
+
+			<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+				<i class="icon-angle-double-up icon-only bigger-110"></i>
+			</a>
+		</div><!-- /.main-container -->
+
+		<!-- basic scripts -->
+
+		<!--[if !IE]> -->
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+		<!-- <![endif]-->
+
+		<!--[if IE]>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<![endif]-->
+
+		<!--[if !IE]> -->
+
+		<script type="text/javascript">
+			window.jQuery || document.write("<script src='assets/js/jquery-2.0.3.min.js'>"+"<"+"/script>");
+		</script>
+
+		<!-- <![endif]-->
+
+		<!--[if IE]>
+<script type="text/javascript">
+ window.jQuery || document.write("<script src='assets/js/jquery-1.10.2.min.js'>"+"<"+"/script>");
+</script>
+<![endif]-->
+
+		<script type="text/javascript">
+			if("ontouchend" in document) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+		</script>
+		<script src="assets/js/bootstrap.min.js"></script>
+		<script src="assets/js/typeahead-bs2.min.js"></script>
+
+		<!-- page specific plugin scripts -->
+
+		<!-- ace scripts -->
+
+		<script src="assets/js/ace-elements.min.js"></script>
+		<script src="assets/js/ace.min.js"></script>
+
+		<!-- inline scripts related to this page -->
+		<script type="text/javascript">
+			jQuery(function($) {
+			
+				$('[data-rel=tooltip]').tooltip();
+			
+			});
+		</script>
+	</body>
+</html>

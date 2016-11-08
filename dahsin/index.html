@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>User login</title>
+	<link rel="stylesheet" href="https://daneden.github.io/animate.css/animate.min.css"><!-- animate inpute -->
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script><!-- jQuery inpute -->
+	<link rel="stylesheet" href="css/pure-min.css"><!-- pure stylesheet -->
+	<link rel="stylesheet" href="css/form_style.css"><!-- The page stylesheet -->
+	<style>
+	body {background-color:#fff;}
+	.wrap {-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none;background-color: transparent;}
+	form {position: absolute;width: 100%;bottom: 2em;}
+	</style>
+</head>
+<body>
+<div class="wrap">
+	<!-- <div class="header g_color"><a href="//uupon.tw/"><img src="imgs/topbar_logo.svg"></a></div> --><!-- Logo -->
+	<p style="position:relative;top:5em;text-align:center;padding:1em 0 2em;margin:0 0 2em;border-bottom:1px solid #fff;">
+		<a href="home.html"><img src="http://www.dahsin.com.tw/logo_85_white_extra.jpg"></a>
+	</p>
+
+	<!-- <h1 class="title">登入<small>Sub title</small></h1> -->
+
+	<form class="pure-form pure-form-aligned animated fadeIn" style="margin-top:17em;">
+		<fieldset class="page-1 form_sty">
+
+			<div class="pure-control-group pure-u-1">
+				<label for="name">登入帳戶</label>
+				<input id="id_mobile" class="pure-u-2-3 inp_auto" type="tel" placeholder="ID Number">
+			</div>
+
+			<div class="pure-control-group pure-u-1" style="position:relative;">
+				<label for="name">登入密碼</label>
+				<input id="id_password" class="pure-u-2-3" type="password" placeholder="Password"/>
+				<span class="show_password"><input type="checkbox" id="togglePassword" /><label for="togglePassword">顯示密碼</label></span>
+			</div>
+
+			<!-- <div class="pure-checkbox">
+				<input id="id_trem" type="checkbox"><label for="id_trem"><span></span>我已閱讀並同意 <a class="trem" href="#">UUPON 會員條款與個人資料保護政策</a></label>
+			</div> -->
+
+		</fieldset>
+
+		<div class="sing_btn">
+			<button type="button" class="pure-button pure-button-primary btn-sty" onclick="nextPage()">登 入</button>
+		</div>
+
+	</form>
+
+	<!-- <div class="footer g_color">
+		<address>
+		<small>© 2017 大信防水. All Rights Reserved.</small>
+		</address>
+	</div> -->
+
+</div><!-- /.wrap -->
+
+<div class="overflow">
+	<div class="dialog-box animated shake fadeInUp">
+		<h2>提 示</h2>
+		<div class="cont" id="id_dialog"></div>
+		<a class="close-btn pure-button button-success">關 閉</a>
+	</div>
+</div>
+
+<!-- iframe 改連結官網條款 URL -->
+<!-- <div class="show_trem"><iframe src="個人及隱私條款_2016-05-04.html"></iframe></div>
+<div class="trem_btn"><a class="close-btn pure-button">關 閉</a></div> -->
+
+<script src="js/main.js"></script><!-- Resource jQuery -->
+<script>
+function nextPage(){
+	if(validatePage()){
+		location.href="home.html";
+	}
+}
+function showMsg(errMsg){
+	$("#id_dialog").empty().append(errMsg);
+	$('.overflow').fadeIn();
+}
+function validatePage(){
+	var errMsg = '';
+	if(!checkValidate($("#id_mobile"),"required")){
+		errMsg += '<p align="center">請輸入手機號碼</p>';
+		showMsg(errMsg);
+		return false;
+	}
+	
+	if(!checkValidate($("#id_mobile"),"mobile") || !checkValidate($("#id_mobile"),"minSize",10)){
+		errMsg += '<p align="center">手機號碼格式錯誤</p>';
+		showMsg(errMsg);
+		return false;
+	}
+
+	if(!checkValidate($("#id_password"),"required")){
+		errMsg += '<p align="center">請輸入密碼</p>';
+		showMsg(errMsg);
+		return false;
+	}
+	
+	if(!checkValidate($("#id_password"),"onlyLetterNumber") || !checkValidate($("#id_password"),"minSize",6) || !checkValidate($("#id_password"),"mzxSize",16)){
+		errMsg += '<p align="center">密碼格式錯誤，請輸入6~16位英數混合密碼，英文注意區分大小寫</p>';
+		showMsg(errMsg);
+		return false;
+	}
+	
+	//if(!checkValidate($("#id_trem"),"required")){
+	//	errMsg += '<p align="center">請勾選已詳閱並同意UUPON會員條款與個人資料保護政策</p>';
+	//	showMsg(errMsg);
+	//	return false;
+	//}
+	return true;
+}
+
+// 切換顯示和隱藏密碼
+$(function(){
+	$('#id_password').togglePassword({
+		el: '#togglePassword'
+	});
+});
+
+(function ( $ ) {
+    $.fn.togglePassword = function( options ) {
+        var s = $.extend( $.fn.togglePassword.defaults, options ),
+        input = $( this );
+
+        $( s.el ).bind( s.ev, function() {
+            "password" == $( input ).attr( "type" ) ?
+                $( input ).attr( "type", "text" ) :
+                $( input ).attr( "type", "password" );
+        });
+    };
+
+    $.fn.togglePassword.defaults = {
+        ev: "click"
+    };
+}( jQuery ));
+</script>
+</body>
+</html>

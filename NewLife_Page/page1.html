@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Page 1</title>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+	<script src="https://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="files/main.css">
+	<style>
+		body {background-image: url("http://2.bp.blogspot.com/-PysU0_frhw8/UI28zuFhf7I/AAAAAAAABkI/wgHjLJRYpEg/s1600/fondos%20de%20pantalla%20%20leopard.jpg");background-repeat: no-repeat;background-size: cover;background-position: center top;background-attachment: fixed;height: 100%;width: 100%;position: relative;}
+		hr {border-top: 1px solid #eaeaea;}
+		.w_bg {background-color:#222;margin:4em auto;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;background: url("http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/footer_lodyas.png");}
+		h4 {border-left: 3px solid #ff4000;padding-left: .25em;border-bottom___:1px solid #eaeaea;}
+		h4:hover {color:#ff4000;}
+		h5 i {color:#999;}
+		button:hover {transform: scale(1.05);}
+		.p_20px {height:20px;display:block;}
+		.text_contect {min-height:120px;display:block;padding:0 0 2em;}
+		.show_info .row {margin:0 0 1em 0;font-size:18px;}
+		.show_info .row .col-sm-6 strong {font-size:medium;color:#9AB7C0;display:block;}
+		.show_info .row .col-sm-6:last-child {text-align:right;}
+		.show_info .row:hover, .my_vote li:hover {color:#f2c40f;}
+		.show_info .row:hover strong, .my_vote li:hover span.money {color:#00d9a3;}
+
+		.my_vote {padding:0 0 0 1em;list-style: none;}
+		.my_vote li {border-bottom:1px dotted #5d5d5d;padding:0.8em 0;}
+		.my_vote li:before {font-family:'Glyphicons Halflings';content:"\e258";font-size:8px;position:relative;color:#ffbf00;left:-6px;}
+		.my_vote li button {position:relative;float:right;top:-6px;margin-right:1em;}
+		.my_vote li .btn-link {color:#f2c40f;}
+		.my_vote li span.money {color:#ffffbf;margin-left:6px;}
+		
+		.comment_wrap {position:relative;padding:2em;}
+		.commentArea {padding: 0 16px 3em;min-height:530px}
+		.commentArea .user-info {}
+		.commentArea .user-name:after {content: "｜";color: #dddddd;margin:0 0.2em;}
+		.commentArea .user-name {color: #2A94C7;}
+		.commentArea .post-time {color: #777;font-size:small;}
+		.commentArea .row {-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;display: table;clear: both;margin-bottom:2em;}
+
+		.commentArea .bubbledLeft,.bubbledRight {margin-top: 0.5em;padding: 1em;clear: both;position: relative;}
+		.commentArea .bubbledLeft img,.bubbledRight img {max-width:100%;}
+		.commentArea .bubbledLeft{float: left;margin-right: auto;-webkit-border-radius:8px;-moz-border-radius: 8px;-o-border-radius: 8px;-ms-border-radius: 8px;border-radius: 8px;background-color: #D8E5E6;color: #1F4242;}
+		.commentArea .bubbledLeft:before {border-bottom: 9px solid #D8E5E6;border-right: 9px solid rgba(0, 0, 0, 0);border-left: 9px solid rgba(0, 0, 0, 0);position: absolute;top: -6px;left: 10px;content: "";}
+		.commentArea .bubbledRight{margin-left: auto;-webkit-border-radius: 8px 0px 8px 8px;-moz-border-radius: 8px 0px 8px 8px;-o-border-radius: 8px 0px 8px 8px;-ms-border-radius: 8px 0px 8px 8px;border-radius: 8px 0px 8px 8px;background-color: #07D;color: white;}
+		.commentArea .bubbledRight:before {border-top: 9px solid #07D;border-right: 9px solid rgba(0, 0, 0, 0);position: absolute;top: 0;right: -8px;content: "";}
+
+		.commentArea .btn {display: inline-block;padding: 6px 12px;margin-bottom: 0;font-size: 14px;font-weight: 400;line-height: 1.42857143;text-align: center;white-space: nowrap;vertical-align: middle;-ms-touch-action: manipulation;touch-action: manipulation;cursor: pointer;-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;background-image: none;border: 1px solid transparent;border-radius: 4px;}
+		.commentArea .btn-warning:active {color: #fff;background-color: #ec971f;border-color: #d58512;background-image: none;outline: 0;-webkit-box-shadow: inset 0 3px 5px rgba(0,0,0,.125);box-shadow: inset 0 3px 5px rgba(0,0,0,.125);}
+		.commentArea .btn-warning:hover {color: #fff;background-color: #ec971f;border-color: #d58512;}
+		.commentArea .btn-warning {color: #fff;background-color: #f0ad4e;border-color: #eea236;}
+
+		.commentArea footer {position: absolute;z-index:500;display:block;width: 100%;left: 0;bottom: 0;border-top: 1px solid #ddd;background-color:#ededed;padding:1em 0;text-align:center;}
+		.commentArea footer form input {width:50%;padding: 6px 12px;font-size: 14px;line-height: 1.6;color: #555;background-color: #fff;background-image: none;border: 1px solid #ccc;border-radius: 4px;-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);box-shadow: inset 0 1px 1px rgba(0,0,0,.075);}
+		.commentArea footer form input:focus {border-color: #66afe9;outline: 0;-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);}
+		
+		.time_line {position:relative;margin:0;padding:0;list-style: none;margin-top:3em;}
+		.time_line:before {content:"";position:absolute;width:4px;background-color:#ddd;height:90%;left:2.3em;top:5%;}
+		.time_line li {font-size: 18px;position:relative;background-color:#fff;border:1px solid #ccc;padding:1em;margin-bottom:1em;z-index:5;-webkit-border-radius:35px;-moz-border-radius:35px;border-radius:35px;box-shadow: 0 2px 3px #ddd;-webkit-box-shadow: 0 2px 3px #ddd;-moz-box-shadow: 0 2px 3px #ddd;}
+		.time_line li:hover {background-color:#EFF2F2;}
+		.time_line li i {margin-right: 0.3em;color:#fff;background-color:#bbb;-webkit-border-radius:25px;-moz-border-radius:25px;border-radius:25px;padding:6px;}
+		.time_line li.green i {background-color:#B5D377;}
+		.time_line li.pink i{background-color:#E87A9E;}
+		.time_line li.blue i{background-color:#6da6e4;}
+		
+		.time_line .dateTime {position: absolute;top: -10px;left: 50px;padding: 2px 6px;color: #446886;background-color: white;font-size: small;background-color: white;}
+		.time_line li b {font-size:21px;float:right;color:#3B356A;margin-right:0.5em;text-shadow:2px 2px 1px #C9C9C9;-moz-text-shadow:1px 1px 1px #ddd;-webkit-text-shadow:2px 2px 1px #C9C9C9;}
+		
+		.tab-pane {min-height:1365px;}
+		.box {padding:1em;margin-bottom:2em;}
+		.box_bg {background-color:rgba(0,0,0,.25);}
+		.box hr {border-top: 1px solid #333333;}
+		.box h4:hover {color:#f0ad4e;}
+
+		.nav-tabs>li>a{font-size:16px;}
+		.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {background-color:#366A9E;color:#fff;}
+		
+		.function_btn {background-color:rgba(29,23,33,.75);text-align:center;margin:1.5em 0 2em 0;}
+		.function_btn button {color:#333;width:45%;margin: 4px;font-size:21px;box-shadow__:0 6px 2px #000;}
+		.function_btn button:hover {color:#fff;background-color:#00a3d9;box-shadow:0 0 12px #46ffff;border:1px solid #73ffff;}
+		/* Type */
+		#t1 h2 + ul {padding:8px 0;margin:0;list-style: none;}
+		#t1 h2 + ul li {padding:0;margin:0;list-style: none;display:inline-block;}
+		#t1 h2 + ul li:after {content:"|";position:relative;color:#ccc;margin:0 4px;}
+		#t1 h2 + ul li:last-child:after {content:"";margin:0;}
+		#t1 h2 + ul li i {color:#819DB9;}
+
+		.table-bordered {background-color:#fff;}
+		.table-bordered th {color:#fff;background-color: #2067AE;}
+		.table-bordered tr:hover td {background-color: #FAFBEF;color: #000;}
+		
+		.time_limit {color: #ff5500;text-align:center;padding:.5em 0;background-color:rgba(255,255,255,.12);margin: 2.5em auto 0;width:85%;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;}
+		
+		.user_card {padding:0.5em 0.3em 0.5em 0;border:1px solid #eaeaea;margin-bottom: 1em;position: relative;background: none repeat scroll 0 0 #FFFFFF;border-radius: 4px;color: #444444;box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.14);-moz-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.14);}
+		.user_card .avatar {padding: 0.5em 0 0 1.5em;text-align:center;}
+		.user_card .avatar img {max-width:72px;border: 3px solid #e4e4e4;display:inline-block;-webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%;-moz-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);-webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);}
+		.user_card .avatar img:hover {position:relative;top:-1px;border: 3px solid #edb81a;}
+		.user_card .col-sm-10 .t_info {color: #7a1c89;font-size: medium;margin-top:0.5em;padding-left: 0.6em;}
+		.user_card .col-sm-10 .t_info small {color:#999;margin-left:0.5em;font-style: italic;}
+
+		.user_card .col-sm-10 p strong {font-size__:14px;}
+		.user_card .col-sm-10 p {margin:0 0 0 0.3em;line-height:1.8;}
+		.user_card .col-sm-10 .sel_btns {margin-top:0.3em;padding: 0.6em 0;border-top:1px solid #b460c2;}
+		.user_card .col-sm-10 .sel_btns .btn-xs {padding:0.2em 1em;}
+		.user_card .col-sm-10 .sel_btns .btn-xs i {color:#a58cad;}
+		
+		.announcement small {color:#666;}
+		.announcement p {font-size:large;}
+	</style>
+</head>
+<body>
+
+<div class="container w_bg">
+	<div class="row">
+		<center style="background-color:#000;">
+			<img class="img-responsive" src="http://www.decayfilm.com/static/images/Decay-Amy-Wallpaper-16:9_mid.jpg">
+		</center>
+	</div>
+	<div class="row">
+		<div class="col-sm-8" style="background-color:#fff;background-image: url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/confectionary.png);">
+
+			<!-- Nav tabs -->
+			<ul class="nav nav-tabs" role="tablist" style="margin-top:2em;">
+				<li role="presentation" class="active"><a href="#t1" aria-controls="home" role="tab" data-toggle="tab">項目</a></li>
+				<li role="presentation"><a href="#t2" aria-controls="profile" role="tab" data-toggle="tab">投資人</a></li>
+				<li role="presentation"><a href="#t3" aria-controls="messages" role="tab" data-toggle="tab">留言</a></li>
+				<li role="presentation"><a href="#t4" aria-controls="examine" role="tab" data-toggle="tab">審查</a></li>
+				<li role="presentation"><a href="#t5" aria-controls="status" role="tab" data-toggle="tab">入資狀態(發起人頁)</a></li>
+				<li role="presentation"><a href="#t6" aria-controls="status" role="tab" data-toggle="tab">入資狀態(投資人頁)</a></li>
+			</ul>
+			<!-- Tab panes -->
+			<div class="tab-content">
+				<div role="tabpanel" class="tab-pane active" id="t1">
+					<h2>項目名稱XXXXXXXXXXXX</h2>
+					<ul>
+						<li><i class="glyphicon glyphicon-tag"></i> 科技類</li>
+						<li><i class="glyphicon glyphicon-th-large"></i> B輪</li>
+						<li><i class="glyphicon glyphicon-time"></i> 2016/5/15~2016/7/31</li>
+						<li><i class="glyphicon glyphicon-usd"></i> 開放融資</li>
+					</ul>
+					<iframe width="100%" height="450" src="https://www.youtube.com/embed/uUzoEQJb8xE" frameborder="0" allowfullscreen></iframe>
+					<div class="p_20px"></div>
+					<h4>項目簡介</h4><hr>
+					<div class="text_contect"></div>
+					<h4>項目摘要</h4><hr>
+					<div class="text_contect"></div>
+					<h4>項目計劃書</h4><hr>
+					<div class="text_contect"></div>
+					<h4>法人訊息</h4><hr>
+					<div class="text_contect">
+						<p>【企業名稱】JYT</p>
+						<p>【所在城市】台北</p>
+						<p>【員工人數】10</p>
+						<p>【成立日期】2008/2/15</p>
+						<p>【辦公地址】台北市XXXXXXXXXXXX</p>
+					</div>
+					<h4>領投人介紹</h4><hr>
+					<div class="text_contect">
+
+						<div class="user_card">
+							<div class="row">
+								<div class="col-sm-2 avatar">
+									<a href="page3.html">
+										<img class="img-responsive" src="http://demos.creative-tim.com/images/rotating_card_profile.png">
+									</a>
+								</div>
+								<div class="col-sm-10">
+									<p>【公司名稱】<strong>碁曄科技</strong></p>
+									<p>【職務名稱】行銷經理</p>
+									<p>【姓名】Alices</p>
+									<!-- <p><i class="fa fa-clock-o"></i> <small>2016-05-20  加入</small></p> -->
+									<div class="t_info">簡介<small>Introduction</small></div>
+
+									<div class="sel_btns">
+										<!-- <button class="btn btn-default btn-xs"><i class="fa fa-usd"></i> 融資者</button>
+										<button class="btn btn-default btn-xs"><i class="fa fa-usd"></i> 機構投資</button>
+										<button class="btn btn-default btn-xs"><i class="fa fa-usd"></i> 個人投資</button> -->
+										<p>xxx xx xxx xx xxx xx xxxxx xx x xx xx xxx xxx xxx</p>
+									</div>
+
+								</div>
+							</div>
+						</div><!-- /.user_card -->
+
+					</div>
+				</div>
+				<div role="tabpanel" class="tab-pane" id="t2">
+					<div class="p_20px"></div>
+					<div class="col-sm-12">
+						<h5><i class="glyphicon glyphicon-user"></i> 領投人:1</h5>
+						<div class="table-responsive">
+							<table class="table table-bordered table-striped">
+								<thead>
+								  <tr>
+									<th>領投人</th>
+									<th>領投時間</th>
+									<th>領投人機構名稱</th>
+									<th>領投金額</th>
+									<th>融資額占比</th>
+								  </tr>
+								</thead>
+								<tbody>
+								  <tr>
+									<td>張碩海</td>
+									<td>2016/5/01</td>
+									<td>第一投顧金融控股公司</td>
+									<td>100.0萬</td>
+									<td>20%</td>
+								  </tr>
+								  <tr>
+									<td>&nbsp;</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								  </tr>
+								</tbody>
+							  </table>
+						</div>
+						<h5><i class="glyphicon glyphicon-user"></i> 跟投人:2</h5>
+						<div class="table-responsive">
+							<table class="table table-bordered table-striped">
+								<thead>
+								  <tr>
+									<th>跟投人</th>
+									<th>跟投時間</th>
+									<th>服務機構名稱</th>
+									<th>跟投金額</th>
+									<th>融資額占比</th>
+								  </tr>
+								</thead>
+								<tbody>
+								  <tr>
+									<td>林寧</td>
+									<td>2016/5/18</td>
+									<td>碁曄科技</td>
+									<td>10.00萬</td>
+									<td>2%</td>
+								  </tr>
+								  <tr>
+									<td>潘世勳</td>
+									<td>2016/5/19</td>
+									<td>台中軟體製造公司</td>
+									<td>20.00萬</td>
+									<td>4%</td>
+								  </tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				<div role="tabpanel" class="tab-pane" id="t3">
+
+					<div class="comment_wrap">
+						<div class="commentArea" id="commentArea">
+				
+								<div class="row">
+									<div class="user-info"><span class="user-name">ale</span><span class="post-time">2016-05-19 16:28:22</span></div>
+									<div class="bubbledLeft">
+									Messenger Text
+									</div>
+								</div>
+							
+								<div class="row">
+									<div class="user-info"><span class="user-name">ale</span><span class="post-time">2016-05-19 16:28:25</span></div>
+									<div class="bubbledLeft">
+									Messenger Text
+									</div>
+								</div>
+								
+								<footer>
+									<form>
+										<input type="text" id="content" placeholder="在此处反馈">
+										<input type="hidden" id="sourceId" value="543">
+										<button type="button" class="btn btn-warning" onclick="addComment()">反饋</button>
+									</form>
+								</footer>
+						</div>
+					</div>
+
+				</div>
+				<div role="tabpanel" class="tab-pane" id="t4">
+					<ul class="time_line">
+						<li class=""><i class="glyphicon glyphicon-record"></i> [B輪] 開始打款</li>
+						<li class="blue"><i class="glyphicon glyphicon-record"></i> [B輪] 融資結束</li>
+						<li class=""><i class="glyphicon glyphicon-record"></i> 路演日</li>
+						<li class=""><i class="glyphicon glyphicon-record"></i> <span class="dateTime"><small class="glyphicon glyphicon-time"></small> 2016/5/24 16:00</span>公告路演<b>20萬</b></li>
+						<li class="pink"><i class="glyphicon glyphicon-record"></i> 領投人發布盡職報告</li>
+						<li class="green"><i class="glyphicon glyphicon-record"></i> [B輪] 融資上線</li>
+					</ul>
+				</div>
+				<div role="tabpanel" class="tab-pane" id="t5">
+					<div class="p_20px"></div>
+					<!-- <h4>發起人頁</h4> -->
+					<div class="table-responsive">
+						<table class="table table-striped">
+							<thead>
+							  <tr>
+								<th>投資總金額</th>
+								<th>入資總金額</th>
+								<th>入資達成率</th>
+								<th>入資截止日</th>
+								<th>投資總人數</th>
+							  </tr>
+							</thead>
+							<tbody>
+							  <tr>
+								<td>1000萬</td>
+								<td>500萬</td>
+								<td>50%</td>
+								<td>2016/07/13</td>
+								<td>4</td>
+							  </tr>
+							</tbody>
+						</table>
+						
+						<table class="table table-bordered table-striped">
+							<thead>
+								<tr>
+									<th>投資姓名</th>
+									<th>投資種類</th>
+									<th>投資總金額(萬)</th>
+									<th>投資占比%</th>
+									<th>繳款日期</th>
+									<th>繳款狀況</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Ale004</td>
+									<td>跟投</td>
+									<td>200</td>
+									<td>40%</td>
+									<td>2016/07/05</td>
+									<td><span class="text-success">已繳</span></td>
+								</tr>
+								<tr>
+									<td>林寧</td>
+									<td>跟投</td>
+									<td>50</td>
+									<td>10%</td>
+									<td>2016/07/05</td>
+									<td><span class="text-success">已繳</span></td>
+								</tr>
+								<tr>
+									<td>ale</td>
+									<td>跟投</td>
+									<td>100</td>
+									<td>20%</td>
+									<td>2016/07/05</td>
+									<td><span class="text-muted">待確認</span></td>
+								</tr>
+								<tr>
+									<td>JASSIC</td>
+									<td>跟投</td>
+									<td>150</td>
+									<td>30%</td>
+									<td></td>
+									<td><span class="text-danger">未繳</span></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					
+					<div class="item_status">
+						<span class="label label-success"><i class="fa fa-calendar-check-o"></i> 繳款進行中</span>
+						<span class="label label-danger"><i class="fa fa-calendar-times-o"></i> 繳款已截止</span>
+					</div>
+					<div class="p_20px"></div>
+					<h4>入資公告</h4>
+					<div class="announcement">
+						<ul>
+							<li><small>2016/07/12 AM 09:00</small><p>xxx xxx xxx xxx xxx xxx xxx xxx xxx xxx xxx.</p></li>
+							<li><small>2016/07/10 PM 16:31</small><p>xxx xxx xxx xxx xxx xxx xxx.</p></li>
+							<li><small>2016/07/07 AM 10:33</small><p>xxx xxx xxx xxx xxx.</p></li>
+							<li><small>2016/07/03 PM 22:54</small><p>xxx xxx xxx xxx xxx xxx xxx xxx xxx.</p></li>
+						</ul>
+					</div>
+				</div>
+				
+				<div role="tabpanel" class="tab-pane" id="t6">
+					<div class="p_20px"></div>
+					<h4>入資達成率</h4>
+					<div class="progress">
+						<div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:50%;">50%</div>
+					</div>
+					<div class="table-responsive">
+						<table class="table table-striped">
+							<thead>
+							  <tr>
+								<th>投資總金額</th>
+								<th>入資總金額</th>
+								<th>入資達成率</th>
+								<th>入資截止日</th>
+								<th>我的投資金額</th>
+								<th>我的繳款狀態</th>
+								<th>繳款方式</th>
+							  </tr>
+							</thead>
+							<tbody>
+							  <tr>
+								<td>1000萬</td>
+								<td>500萬</td>
+								<td>50%</td>
+								<td>2016/07/13</td>
+								<td>243萬</td>
+								<td>已通知繳交</td>
+								<td>銀行轉帳</td>
+							  </tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="item_status">
+						<div class="pull-right">
+							<button type="button" id="btnID_a" class="btn btn-default">線上繳款</button>
+							<button type="button" id="btnID_b" class="btn btn-default"data-toggle="modal" data-target="#myModal">銀行轉帳通知</button>
+							<!-- <button type="button" class="btn btn-default">問題反饋</button> -->
+						</div>
+						<span class="label label-success"><i class="fa fa-calendar-check-o"></i> 繳款進行中</span>
+						<span class="label label-danger"><i class="fa fa-calendar-times-o"></i> 繳款已截止</span>
+					</div>
+					<div class="p_20px"></div>
+					<hr>
+					<h4>入資公告</h4>
+					<div class="announcement">
+						<ul>
+							<li><small>2016/07/12</small><p>xxx xxx xxx xxx xxx xxx xxx xxx xxx xxx xxx.</p></li>
+							<li><small>2016/07/10</small><p>xxx xxx xxx xxx xxx xxx xxx.</p></li>
+							<li><small>2016/07/07</small><p>xxx xxx xxx xxx xxx.</p></li>
+							<li><small>2016/07/03</small><p>xxx xxx xxx xxx xxx xxx xxx xxx xxx.</p></li>
+						</ul>
+					</div>
+
+					<hr>
+					<h4>留言</h4>
+					<div class="comment_wrap" style="padding: 1em 1em 2em;">
+						<div class="commentArea" id="commentArea" style="min-height:auto">
+				
+								<div class="row">
+									<div class="user-info"><span class="user-name">Alen</span><span class="post-time">2016-05-19 16:28:22</span></div>
+									<div class="bubbledLeft">
+									Messenger Text
+									</div>
+								</div>
+							
+								<div class="row">
+									<div class="user-info"><span class="user-name">Alex Wang</span><span class="post-time">2016-05-19 16:28:25</span></div>
+									<div class="bubbledLeft">
+									Messenger Text
+									</div>
+								</div>
+								
+								<footer>
+									<form>
+										<input type="text" id="content" placeholder="在此处反馈">
+										<input type="hidden" id="sourceId" value="543">
+										<button type="button" class="btn btn-warning" onclick="addComment()">反饋</button>
+									</form>
+								</footer>
+						</div>
+					</div><!-- /.comment_wrap -->
+
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-4" style="color:#fff;">
+			<div class="row">
+				<div class="box">
+					<h4>融資信息</h4><hr>
+					<div class="show_info">
+						<div class="row">
+							<div class="col-sm-6">
+								500.00萬元
+								<strong>目標融資</strong>
+							</div>
+							<div class="col-sm-6">
+								10%
+								<strong>出讓股權</strong>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-6">
+								300.00萬元
+								<strong>已認投</strong>
+							</div>
+							<div class="col-sm-6">
+								60%
+								<strong>融資進度</strong>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-6">
+								2000.00萬元
+								<strong>項目估值</strong>
+							</div>
+							<div class="col-sm-6">
+								25 人
+								<strong>確認投資人</strong>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-6">
+								100.00萬元
+								<strong>冷靜期金額</strong>
+							</div>
+							<div class="col-sm-6">
+								5人
+								<strong>冷靜期人數</strong>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-sm-12">
+						<button type="button" class="btn btn-primary btn-block">起投金額:10.00萬</button>
+					</div>
+				</div><!-- /.box -->
+				<div class="time_limit">項目截止時間：2016年06月30日10時32分</div>
+			</div>
+			
+			<div class="row">
+				<div class="box function_btn">
+					<button type="button" class="btn"><i class="glyphicon glyphicon-star"></i> 收藏</button>
+					<button type="button" class="btn"><i class="glyphicon glyphicon-usd"></i> 投資</button>
+					<button type="button" class="btn"><i class="glyphicon glyphicon-thumbs-up"></i> 給讚</button>
+					<button type="button" class="btn"><i class="glyphicon glyphicon-comment"></i> 留言</button>
+					<hr>
+					<button type="button" class="btn"><i class="glyphicon glyphicon-edit"></i> 編輯</button>
+					<button type="button" class="btn"><i class="glyphicon glyphicon-trash"></i> 刪除</button>
+					<button type="button" class="btn"><i class="fa fa-calendar-check-o"></i> 路演</button>
+					<button type="button" class="btn"><i class="fa fa-wpforms"></i> 審查</button>
+				</div><!-- /.box -->
+			</div><!-- /.box -->
+
+			<div class="row">
+				<div class="box box_bg">
+					<h4>我的投資</h4><hr>
+					<ul class="my_vote">
+						<li><button type="button" class="btn btn-default btn-sm">取消</button>2016/5/24 16:00 <span class="money">20萬</span></li>
+						<li><button type="button" class="btn btn-link btn-sm readonly">已確認</button>2016/5/15 09:00 <span class="money">10萬</span></li>
+					</ul>
+					<div class="temp">
+						<button type="button" class="btn btn-primary btn-block">確認投資額:20萬</button>
+					</div>
+					<!-- <form class="form-inline">
+						<button type="submit" class="btn btn-primary">確認投資額</button>
+						<div class="form-group">
+							<label class="sr-only" for="exampleInput">Email address</label>
+							<input type="text" class="form-control" id="exampleInput" placeholder="20萬">
+						</div>
+					</form> -->
+				</div><!-- /.box -->
+			</div>
+
+			<div class="row">
+				<div class="box">
+					<h4>領投人資訊</h4><hr>
+					<div class="col-sm-3">
+						<img class="img-circle img-responsive" src="https://icons.iconarchive.com/icons/graphicloads/colorful-long-shadow/256/User-icon.png">
+					</div>
+					<div class="col-sm-9">
+						<p>領投人名稱</p>
+						<p>領投機構名稱</p>
+						<p>領投人職稱</p>
+					</div>
+					<div class="row">
+						<div class="col-sm-12">
+							<button type="button" class="btn btn-primary btn-block">領投額: 120.00萬元</button>
+						</div>
+					</div>
+				</div><!-- /.box -->
+			</div>
+
+			<div class="row">
+				<div class="box box_bg">
+					<h4>近期路演公告</h4><hr>
+					<p><i class="glyphicon glyphicon-time"></i> 時間：2016/6/30 12:00-14:00</p>
+					<p><i class="glyphicon glyphicon-map-marker"></i> 地點：台北市大安區仁愛路四段101號4樓之2</p>
+					<div class="row" style="text-align:center;">
+						<button type="button" class="btn btn-success">預約收視</button>
+						<button type="button" class="btn btn-success">預約收視</button>
+					</div>
+				</div><!-- /.box -->
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- modal content -->
+<div id="myModal" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+				<h4 class="modal-title" id="myModalLabel">銀行轉帳通知</h4>
+			</div>
+			<div class="modal-body">
+				<form class="form-horizontal">
+
+					<div class="form-group">
+						<label class="col-sm-2 control-label">轉帳日期</label>
+						<div class="col-sm-10">
+							<input type="date" class="form-control" id="inputDate" placeholder="轉帳日期">
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="col-sm-2 control-label">轉出銀行</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="inputDate" placeholder="轉出銀行名稱">
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="col-sm-2 control-label">轉出帳號</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="" placeholder="轉出銀行帳號">
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="col-sm-2 control-label">入資金額</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="" placeholder="顯示投資者的投資總額">
+						</div>
+					</div>
+
+				</form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+				<button type="button" class="btn btn-primary">通知已繳款</button>
+			</div>
+
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div>
+
+<script>
+	jQuery(document).ready(function($){
+		
+	});
+</script>
+</body>
+</html>

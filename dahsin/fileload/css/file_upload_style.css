@@ -1,0 +1,36 @@
+@charset "UTF-8";
+body {font-family:"微軟正黑體";padding-top: 55px;background-color: #ececec;}
+*:focus {outline: none;}
+.btn-primary {background-color: #569fde;border-color: #2971af;width__: 100%;}
+.btn-warning {color: #fff;background-color: #d1ae7e;border-color: #b09877;width__: 100%;}
+.table {margin-bottom: 5em;background-color:#fff;}
+.table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {vertical-align: inherit;text-align: center;}
+.fileupload-buttonbar {background-color:#abb3b6;padding:.7em 0 .2em;}
+.menu_bar {position:fixed;z-index:20;top:0;left:0;width:100%;box-shadow:0 2px 4px rgba(0,0,0,.35);
+background-color:rgba(0,70,140,1);
+background: -moz-linear-gradient(left, rgba(52,138,219,1) 0%, rgba(0,70,140,1) 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(52,138,219,1)), color-stop(100%, rgba(0,70,140,1)));
+background: -webkit-linear-gradient(left, rgba(52,138,219,1) 0%, rgba(0,70,140,1) 100%);
+background: -o-linear-gradient(left, rgba(52,138,219,1) 0%, rgba(0,70,140,1) 100%);
+background: -ms-linear-gradient(left, rgba(52,138,219,1) 0%, rgba(0,70,140,1) 100%);
+background: linear-gradient(to right, rgba(52,138,219,1) 0%, rgba(0,70,140,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#348adb', endColorstr='#00468c', GradientType=1 );
+}
+.menu_bar a {color:#fff;line-height:2;padding:0 8px;margin-left:1em;display:inline-block;text-decoration: none;border:1px solid rgba(255,255,255,.25);-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;}
+.menu_bar h3 {font-size: 1.17em;display:inline-block;color:#fff;margin:1.2em 1em;}
+.fileinput-button {
+position: fixed!important;
+font-size: 18px;
+background-color:rgba(201,48,44,.9);
+bottom: 1em;
+right: 1em;
+border-radius: 40px;
+padding: .5em 1em;
+line-height: 1.4;
+border: 3px solid #aa3b3b;
+z-index: 500;
+}
+/* 預設表單樣式 */
+.default_ipt {padding:.5em;margin-bottom:1em;}
+.default_ipt label {margin-right:.5em;font-size:small;color:#999;line-height:1.6;}
+.default_ipt select {width:80%;border: 0px solid #fff;border-bottom: 1px solid #dedede;background-color: transparent;padding: .7em 0;text-transform: none;color: inherit;font: inherit;margin: 0;}

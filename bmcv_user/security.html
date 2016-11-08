@@ -1,0 +1,70 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<title>Welcome BMCV</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link rel="stylesheet" href="css/ionic.min.css">
+<link rel="stylesheet" href="css/ionicons.min.css">
+<script type="text/javascript" src="js/ionic.bundle.min.js"></script>
+<script type="text/javascript" src="js/ionic.min.js"></script>
+<script type="text/javascript" src="js/ionic-angular.min.js"></script>
+</head>
+
+<body style="background-color:#F4F8FC;">
+
+	<div class="bar bar-header bar-assertive">
+		<button onclick="history.go(-1)" class="button icon-left ion-chevron-left">Back</button>
+		<div class="h1 title">密碼與帳號安全</div>
+		<button class="button">登入記錄</button>
+	</div>
+
+	<div class="content has-header">
+		<div class="list">
+			<label class="item item-input">
+			<span class="input-label">原始密碼</span>
+			<input type="password" placeholder="請輸入目前登入密碼">
+			</label>
+			<label class="item item-input">
+			<span class="input-label">變更密碼</span>
+			<input type="password" value="">
+			</label>
+			<label class="item item-input">
+			<span class="input-label">再次輸入密碼</span>
+			<input type="password" value="">
+			</label>
+		</div>
+		<div class="list">
+			<label class="item item-input item-select">
+				<div class="input-label">
+				安全提問
+				</div>
+				<select>
+					<option value="0">安全提問 (可選用)</option>
+					<option value="1">母親的名字</option>
+					<option value="2">爺爺的名字</option>
+					<option value="3">父親出生的城市</option>
+					<option value="4">您其中一位老師的名字</option>
+					<option value="5">您的個人電腦的型號</option>
+					<option value="6">您最喜歡的餐館名稱</option>
+					<option value="7">駕駛執照最後四位數字</option>
+				</select>
+			</label>
+
+			<label class="item item-input">
+				<span class="input-label">問題回答</span>
+				<input type="text" placeholder="安全提問答案">
+			</label>
+			<p class="padding">請您記住 BMCV ID 安全問題的答案。如果您連續回答錯誤太多次，將會暫時無法存取帳號，但是您可以在等待期間結束後嘗試重置問題。</p>
+		</div>
+	
+		<div class="padding">
+			<button onclick="history.go(-1)" class="button button-block button-positive">變 更</button>
+		</div>
+	</div>
+	<p><br></p>
+
+</body>
+</html> 

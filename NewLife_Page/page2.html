@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Page 2</title>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+	<script src="https://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="files/main.css">
+	<style>
+		body {background-image: url("http://www.newlife.org.tw/img/base/backImg.jpg");background-repeat: no-repeat;background-size: 100% 100%;background-position: center top;background-attachment: fixed;height: 100%;width: 100%;position: relative;}
+		hr {border-top: 1px solid #eaeaea;}
+		.w_bg {background-color:#222;margin-top:6em;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;background: url("http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/footer_lodyas.png");}
+		.w_bg div .left_bg {background-color:#fff;background-image: url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/confectionary.png);}
+		h4 {border-left: 3px solid #ff4000;padding-left: .25em;}
+		h4:hover {color:#ff4000;}
+	
+		.box {padding:1em;margin-bottom___:2em;}
+		.box_bg {background-color:rgba(0,0,0,.2);}
+		.box hr {border-top: 1px solid #333333;}
+		.box h4:hover {color:#f0ad4e;}
+
+		/* cline user */
+		.cline_user {min-height:720px;}
+		.cline_user ul {padding:4px 0;margin:0;list-style: none;}
+		.cline_user ul li {padding:0;margin:0;list-style: none;display:inline-block;white-space:nowrap;}
+		.cline_user ul li input {display:none;}
+		.cline_user ul li label {padding:.4em .8em .4em .5em;background-color___:#ccc;border: 1px solid #ccc;color:#333;cursor: pointer;transition:all 1s;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;}
+		.cline_user ul li .fa-check {color:rgba(0,0,0,.15);;display__:none;margin:0 4px 0 0;}
+		.cline_user ul li label:hover {position:relative;top:-2px;}
+		.cline_user ul li input:checked + label{background-color:#8d4bc0;color:#fff;border: 1px solid #fff;}
+		.cline_user ul li input:checked + label i.fa-check {display__:inline-block;color:rgba(255,255,255,1)}
+
+		.cline_user ul.label_colo2 {margin-bottom:1.6em;}
+		.cline_user ul.label_colo2 li input:checked + label{background-color: #5acdd9;}
+
+		.cline_user ul li strong {font-size:16px;color:#333;}
+		.cline_user ul li i {color:#819DB9;margin:0 5px 0 6px;position:relative;top:-2px;}
+
+		.cline_user .text_contect {min-height:120px;display:block;}
+		
+		.user_card {border:1px solid #eaeaea;margin-bottom: 1em;position: relative;background: none repeat scroll 0 0 #FFFFFF;border-radius: 4px;color: #444444;box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.14);-moz-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.14);}
+		.user_card .avatar {padding: 0.5em 0 0 1.5em;text-align:center;}
+		.user_card .avatar img {border: 3px solid #e4e4e4;display:inline-block;-webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%;-moz-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);-webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);}
+		.user_card .avatar img:hover {position:relative;top:-1px;border: 3px solid #edb81a;}
+
+		.user_card .col-sm-9 p strong {font-size__:14px;}
+		.user_card .col-sm-9 p {margin:0 0 0 0.3em;line-height:1.8;}
+		.user_card .col-sm-9 .sel_btns {margin-top:0.3em;padding: 0.6em 0;border-top:1px solid #b460c2;}
+		.user_card .col-sm-9 .sel_btns .btn-xs {padding:0.2em 1em;}
+		.user_card .col-sm-9 .sel_btns .btn-xs i {color:#a58cad;}
+		
+		.right-slide {color:#fff;}
+		.right-slide .user_card {background-color:#444;border: 1px solid #333;color: #bbb;}
+		.right-slide .user_card:hover {background-color:#555;}
+		.right-slide .user_card .avatar img {border: 2px solid #666;-webkit-border-radius:12px;-moz-border-radius:12px;border-radius:12px;box-shadow: 0 2px 5px 0 rgba(0,0,0,.5);-webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,.5);-moz-box-shadow: 0 2px 5px 0 rgba(0,0,0,.5);}
+		.right-slide .user_card .sel_btns {border-top: 1px solid #9d986a;}
+	</style>
+</head>
+<body>
+
+<div class="container w_bg">
+	<div class="row">
+		<div class="col-sm-8 left_bg">
+
+			<div class="cline_user">
+				<h3>:: Multiple TAG Select ::</h3>
+				<ul>
+					<li><strong>類型</strong><i class="fa fa-angle-double-right"></i></li>
+					<li><input type="checkbox" id="tag11"><label for="tag11"><i class="fa fa-check"></i>機構投資</label></li>
+					<li><input type="checkbox" id="tag12"><label for="tag12"><i class="fa fa-check"></i>個人投資</label></li>
+					<li><input type="checkbox" id="tag13"><label for="tag13"><i class="fa fa-check"></i>一般用戶</label></li>
+					<li><input type="checkbox" id="tag14"><label for="tag14"><i class="fa fa-check"></i>融資人</label></li>
+				</ul>
+				<ul class="label_colo2">
+					<li><strong>興趣</strong><i class="fa fa-angle-double-right"></i></li>
+					<li><input type="checkbox" id="tag21"><label for="tag21"><i class="fa fa-check"></i>科技</label></li>
+					<li><input type="checkbox" id="tag22"><label for="tag22"><i class="fa fa-check"></i>電信</label></li>
+					<li><input type="checkbox" id="tag23"><label for="tag23"><i class="fa fa-check"></i>互聯網</label></li>
+				</ul>
+
+				<h4>會員名單</h4><hr>
+				<div class="row" style="background-color: #eee;padding:1em 0em;">
+					<div class="col-sm-6">
+						<div class="user_card">
+							<div class="row">
+								<div class="col-sm-3 avatar">
+									<a href="page3.html">
+										<img class="img-responsive" src="http://demos.creative-tim.com/images/rotating_card_profile.png">
+									</a>
+								</div>
+								<div class="col-sm-9">
+									<p><i class="fa fa-angle-right"></i> <strong>碁曄科技</strong></p>
+									<p><i class="fa fa-angle-right"></i> 行銷經理</p>
+									<p><i class="fa fa-clock-o"></i> <small>2016-05-20  加入</small></p>
+
+									<div class="sel_btns">
+										<button class="btn btn-default btn-xs"><i class="fa fa-usd"></i> 融資者</button>
+										<button class="btn btn-default btn-xs"><i class="fa fa-usd"></i> 機構投資</button>
+										<button class="btn btn-default btn-xs"><i class="fa fa-usd"></i> 個人投資</button>
+									</div>
+
+								</div>
+							</div>
+						</div><!-- /.user_card -->
+					</div>
+					<div class="col-sm-6">
+						<div class="user_card">
+								<div class="row">
+									<div class="col-sm-3 avatar">
+										<a href="page3.html">
+											<img class="img-responsive" src="http://demos.creative-tim.com/images/rotating_card_profile2.png">
+										</a>
+									</div>
+									<div class="col-sm-9">
+										<p><i class="fa fa-angle-right"></i> <strong>碁曄科技</strong></p>
+										<p><i class="fa fa-angle-right"></i> 行銷經理</p>
+										<p><i class="fa fa-clock-o"></i> <small>2016-05-20  加入</small></p>
+
+										<div class="sel_btns">
+											<button class="btn btn-default btn-xs"><i class="fa fa-usd"></i> 融資者</button>
+											<button class="btn btn-default btn-xs"><i class="fa fa-usd"></i> 機構投資</button>
+											<button class="btn btn-default btn-xs"><i class="fa fa-usd"></i> 個人投資</button>
+										</div>
+
+									</div>
+								</div>
+						</div><!-- /.user_card -->
+					</div>
+					<div class="col-sm-6">
+						<div class="user_card">
+							<div class="row">
+								<div class="col-sm-3 avatar">
+									<a href="page3.html">
+										<img class="img-responsive" src="http://demos.creative-tim.com/images/rotating_card_profile3.png">
+									</a>
+								</div>
+								<div class="col-sm-9">
+									<p><i class="fa fa-angle-right"></i> <strong>碁曄科技</strong></p>
+									<p><i class="fa fa-angle-right"></i> 行銷經理</p>
+									<p><i class="fa fa-clock-o"></i> <small>2016-05-20  加入</small></p>
+
+									<div class="sel_btns">
+										<button class="btn btn-default btn-xs"><i class="fa fa-usd"></i> 融資者</button>
+										<button class="btn btn-default btn-xs"><i class="fa fa-usd"></i> 機構投資</button>
+										<button class="btn btn-default btn-xs"><i class="fa fa-usd"></i> 個人投資</button>
+									</div>
+
+								</div>
+							</div>
+						</div><!-- /.user_card -->
+					</div>
+				</div><!-- /.row -->
+			</div>
+
+		</div>
+		<div class="col-sm-4 right-slide">
+			<div class="row">
+
+				<div class="box">
+					<h4>融資最新</h4><hr>
+					<div class="user_card">
+						<div class="row">
+							<div class="col-sm-3 avatar">
+								<img class="img-responsive" src="http://demos.creative-tim.com/images/rotating_card_profile.png">
+							</div>
+							<div class="col-sm-9">
+								<p><i class="fa fa-angle-right"></i> <strong>碁曄科技</strong></p>
+								<p><i class="fa fa-angle-right"></i> 行銷經理</p>
+								<p><i class="fa fa-clock-o"></i> <small>2016-05-20  加入</small></p>
+
+								<div class="sel_btns">
+									<button class="btn btn-default btn-xs"><i class="fa fa-usd"></i> 融資者</button>
+									<button class="btn btn-default btn-xs"><i class="fa fa-usd"></i> 機構投資</button>
+									<button class="btn btn-default btn-xs"><i class="fa fa-usd"></i> 個人投資</button>
+								</div>
+
+							</div>
+						</div>
+					</div><!-- /.user_card -->
+
+				</div><!-- /.box -->
+
+				<div class="box box_bg">
+					<h4>個人投資最新</h4><hr>
+					<div class="user_card">
+						<div class="row">
+							<div class="col-sm-3 avatar">
+								<img class="img-responsive" src="http://demos.creative-tim.com/images/rotating_card_profile2.png">
+							</div>
+							<div class="col-sm-9">
+								<p><i class="fa fa-angle-right"></i> <strong>碁曄科技</strong></p>
+								<p><i class="fa fa-angle-right"></i> 行銷經理</p>
+								<p><i class="fa fa-clock-o"></i> <small>2016-05-20  加入</small></p>
+
+								<div class="sel_btns">
+									<button class="btn btn-default btn-xs"><i class="fa fa-usd"></i> 融資者</button>
+									<button class="btn btn-default btn-xs"><i class="fa fa-usd"></i> 機構投資</button>
+									<button class="btn btn-default btn-xs"><i class="fa fa-usd"></i> 個人投資</button>
+								</div>
+
+							</div>
+						</div>
+					</div><!-- /.user_card -->
+
+				</div><!-- /.box -->
+
+				<div class="box">
+					<h4>機構投資最新</h4><hr>
+					<div class="user_card">
+						<div class="row">
+							<div class="col-sm-3 avatar">
+								<img class="img-responsive" src="http://demos.creative-tim.com/images/rotating_card_profile3.png">
+							</div>
+							<div class="col-sm-9">
+								<p><i class="fa fa-angle-right"></i> <strong>碁曄科技</strong></p>
+								<p><i class="fa fa-angle-right"></i> 行銷經理</p>
+								<p><i class="fa fa-clock-o"></i> <small>2016-05-20  加入</small></p>
+
+								<div class="sel_btns">
+									<button class="btn btn-default btn-xs"><i class="fa fa-usd"></i> 融資者</button>
+									<button class="btn btn-default btn-xs"><i class="fa fa-usd"></i> 機構投資</button>
+									<button class="btn btn-default btn-xs"><i class="fa fa-usd"></i> 個人投資</button>
+								</div>
+
+							</div>
+						</div>
+					</div><!-- /.user_card -->
+
+				</div><!-- /.box -->
+			</div>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,502 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>New_form</title>
+<link rel="stylesheet" href="css/pure-min.css"><!-- pure stylesheet -->
+<style>
+body {font-family: 'Lato,sans-serif',"微軟正黑體";padding:0;margin:0;color:#333;background-color:#CFD7D8;}
+.clearfix:before,.clearfix:after {content: "";display: table;}
+.clearfix:after {clear: both;}
+.clearfix {*zoom: 1;}
+*:focus {outline: none;}
+.wrap {padding:4.6em .6em 1em .6em;background-color:#CFD7D8;box-shadow:none;-webkit-box-shadow:none;}
+
+/* 導航列樣式 */
+.menu_bar {position:fixed;top:0;left:0;z-index:3;width:100%;box-shadow:0 2px 4px rgba(0,0,0,.35);
+background-color:rgba(0,70,140,1);
+background: -moz-linear-gradient(left, rgba(52,138,219,1) 0%, rgba(0,70,140,1) 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(52,138,219,1)), color-stop(100%, rgba(0,70,140,1)));
+background: -webkit-linear-gradient(left, rgba(52,138,219,1) 0%, rgba(0,70,140,1) 100%);
+background: -o-linear-gradient(left, rgba(52,138,219,1) 0%, rgba(0,70,140,1) 100%);
+background: -ms-linear-gradient(left, rgba(52,138,219,1) 0%, rgba(0,70,140,1) 100%);
+background: linear-gradient(to right, rgba(52,138,219,1) 0%, rgba(0,70,140,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#348adb', endColorstr='#00468c', GradientType=1 );
+}
+.menu_bar h3 {display:inline-block;color:#fff;margin-left:1em;}
+.menu_bar a {color:#fff;line-height:2;padding:0 8px;margin-left:1em;display:inline-block;text-decoration: none;border:1px solid rgba(255,255,255,.25);-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;}
+.menu_bar a:last-child {float:right;margin: 1em 1em 0 0;border: 0px solid #fff;}
+.menu_bar a:last-child:hover {color:#ffff00;;}
+
+/* 卡片外觀樣式 */
+.card_cont {
+text-decoration: none;
+display: block;
+background-color: #fff;
+line-height: 1.2;
+margin-bottom: 8px;
+padding__:0.5em 0;
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+border-radius: 4px;
+background-image: url('../imgs/doc_ic.png');
+background-repeat: no-repeat;
+background-position: 8px 13px;
+background-size: 22px;
+box-shadow: 0 1px 4px rgba(0,0,0,0.12);
+}
+.card_cont .infomaction {padding:0.5em;margin-bottom:.3em;border-bottom: 1px solid #eaeaea;}
+.card_cont .infomaction img {float:left;width:48px;margin-right:0.5em;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;}
+.card_cont .infomaction small,.back small {color:#7F9194;}
+.card_cont .infomaction h3 {margin:0;color: #C564BE;display: inline-block;}
+.card_cont header {background-color: #E6ECEC;color: #7D9FB5;padding:0.5em;-webkit-border-radius: 4px 4px 0 0;-moz-border-radius: 4px 4px 0 0;border-radius: 4px 4px 0 0;}
+
+/* 卡片翻轉樣式 */
+.flip-container {perspective: 1000px;}
+.flipper img {max-width:100%;}
+.flipper .back {z-index:11;padding:.8em 0 2em;font-size:14px;}
+.flipper .back input {margin: .5em 1em;}
+
+.flip-container:hover .flipper, .flip-container.hover .flipper {transform: rotateX(180deg);}
+.flip-container:hover .flipper .front .btn_action {visibility: visible;background-color:transparent;}
+
+.flip-container, .front, .back {width:100%;min-height__:60px;-webkit-border-radius:0 0 4px 4px;-moz-border-radius:0 0 4px 4px;border-radius:0 0 4px 4px;}
+
+.flipper {transition: 0.6s;transform-style: preserve-3d;position: relative;}
+
+.front__, .back {background-color:rgba(0,0,0,.9);;color:#fff;backface-visibility: hidden;position: absolute;top: 0;left: 0;box-shadow:0 3px 3px rgba(0,0,0,.25);overflow:hidden;}
+
+.front {transform: rotateX(0deg);}
+.back {transform: rotateX(180deg);}
+
+.front .btn_action {font-size:14px;text-align__:right;padding:1em 0.5em;display:block;background-color:#F2F4F4;border-top: 1px solid #eaeaea;border-bottom: 1px solid #eaeaea;-webkit-border-radius__:0 0 4px 4px;-moz-border-radius__:0 0 4px 4px;border-radius__:0 0 4px 4px;}
+
+/* 顯示隱藏 */
+.new_card {display:none;}
+.showhide {display:block!important;}
+
+/* 預設表單樣式 */
+.default_ipt {padding:.5em;}
+.default_ipt div {margin-bottom:1em;}
+.default_ipt label {margin-right:.5em;font-size:small;color:#999;line-height:1.6;}
+.default_ipt select, .default_ipt input[type="datetime-local"] {
+width:100%;
+display:block;
+border: 0px solid #fff;
+border-bottom: 1px solid #eaeaea;
+background-color: #fff;
+padding: .5em .6em;
+box-shadow__: inset 0 1px 3px #ddd;
+border-radius__: 4px;
+text-transform: none;
+color: inherit;
+font: inherit;
+margin: 0;
+}
+.default_ipt input[type="datetime-local"] {width:95%;}
+.default_ipt textarea, .btn-sty {width:100%;border: 0px solid #fff;border-bottom: 1px solid #eaeaea;}
+
+/* 表單拖曳 Range 樣式 */
+#the-range input___ {height: 50px;}
+#the-range output {margin-left:0.5em;font-size:120%;color:#75B166;}
+
+#the-range input[type=range] {
+  -webkit-appearance: none;
+  margin: 30px 0;
+  width: 100%;
+}
+#the-range input[type=range]:focus {
+  outline: none;
+}
+#the-range input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow__: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: #559abf;
+  border-radius: 1.3px;
+  border__: 0.2px solid #010101;
+}
+#the-range input[type=range]::-webkit-slider-thumb {
+  box-shadow:0px 1px 4px rgba(0,0,0,.5);
+  border: 1px solid #025998;
+  height: 38px;
+  width: 38px;
+  border-radius:38px;
+  background: #fff;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -16px;
+}
+#the-range input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #559abf;
+}
+#the-range input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow__: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: #3071a9;
+  border-radius: 1.3px;
+  border: 0.2px solid #010101;
+}
+#the-range input[type=range]::-moz-range-thumb {
+  box-shadow:0px 1px 4px rgba(0,0,0,.5);
+  border: 1px solid #025998;
+  height: 38px;
+  width: 38px;
+  border-radius:38px;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+#the-range input[type=range]::-ms-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: transparent;
+  border-color: transparent;
+  border-width: 16px 0;
+  color: transparent;
+}
+#the-range input[type=range]::-ms-fill-lower {
+  background: #2a6495;
+  border__: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow__: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+#the-range input[type=range]::-ms-fill-upper {
+  background: #559abf;
+  border_: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow__: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+#the-range input[type=range]::-ms-thumb {
+  box-shadow:0px 1px 4px rgba(0,0,0,.5);
+  border: 1px solid #025998;
+  height: 32px;
+  width: 32px;
+  border-radius:32px;
+  background: #ffffff;
+  cursor: pointer;
+}
+#the-range input[type=range]:focus::-ms-fill-lower {
+  background: #559abf;
+}
+#the-range input[type=range]:focus::-ms-fill-upper {
+  background: #367ebd;
+}
+
+/* switch btn */
+.switch {
+	position: relative;
+	display: block;
+	vertical-align: top;
+	width: 80px;
+	height: 30px;
+	padding: 3px;
+	margin: 0;
+	background: linear-gradient(to bottom, #eeeeee, #FFFFFF 25px);
+	background-image: -webkit-linear-gradient(top, #eeeeee, #FFFFFF 25px);
+	border-radius: 18px;
+	box-shadow: inset 0 -1px white, inset 0 1px 1px rgba(0, 0, 0, 0.05);
+	cursor: pointer;
+}
+.switch-input {
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+}
+.switch-label {
+	position: relative;
+	display: block;
+	height: inherit;
+	font-size: 14px;
+	text-transform: uppercase;
+	background: #eceeef;
+	border-radius: inherit;
+	box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.12), inset 0 0 2px rgba(0, 0, 0, 0.15);
+}
+.switch-label:before, .switch-label:after {
+	position: absolute;
+	top: 50%;
+	margin-top: -.5em;
+	line-height: 1;
+	-webkit-transition: inherit;
+	-moz-transition: inherit;
+	-o-transition: inherit;
+	transition: inherit;
+}
+.switch-label:before {
+	content: attr(data-off);
+	right: 11px;
+	color: #aaaaaa;
+	text-shadow: 0 1px rgba(255, 255, 255, 0.5);
+}
+.switch-label:after {
+	content: attr(data-on);
+	left: 11px;
+	color: #FFFFFF;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.2);
+	opacity: 0;
+}
+.switch-input:checked ~ .switch-label {
+	background: #E1B42B;
+	box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15), inset 0 0 3px rgba(0, 0, 0, 0.2);
+}
+.switch-input:checked ~ .switch-label:before {
+	opacity: 0;
+}
+.switch-input:checked ~ .switch-label:after {
+	opacity: 1;
+}
+.switch-handle {
+	position: absolute;
+	top: 4px;
+	left: 4px;
+	width: 28px;
+	height: 28px;
+	background: linear-gradient(to bottom, #FFFFFF 40%, #f0f0f0);
+	background-image: -webkit-linear-gradient(top, #FFFFFF 40%, #f0f0f0);
+	border-radius: 100%;
+	box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+.switch-handle:before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -6px 0 0 -6px;
+	width: 12px;
+	height: 12px;
+	background: linear-gradient(to bottom, #eeeeee, #FFFFFF);
+	background-image: -webkit-linear-gradient(top, #eeeeee, #FFFFFF);
+	border-radius: 6px;
+	box-shadow: inset 0 1px rgba(0, 0, 0, 0.02);
+}
+.switch-input:checked ~ .switch-handle {
+	left: 54px;
+	box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+ 
+/* Transition
+========================== */
+.switch-label, .switch-handle, .point_work {
+	transition: All 0.3s ease;
+	-webkit-transition: All 0.3s ease;
+	-moz-transition: All 0.3s ease;
+	-o-transition: All 0.3s ease;
+}
+.switch-input:checked ~ .point_work {height:auto;padding:0.5em .4em;}
+.switch-input:checked ~ div input {display:block;}
+
+.infomaction .right_slide {float:right;margin-top:-14px;}
+.infomaction .right_slide input {display:none;padding: .4em 1em .4em .6em;border: 2px solid #a5dce0;background-color: #e7fcfd;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;}
+.infomaction .right_slide .point_work {height:0%;position:absolute;right:0;}
+</style>
+</head>
+<body>
+<div class="menu_bar"><a href="home.html">← Back</a><h3>新增表單</h3><a href="home.html">Save</a></div>
+<div class="wrap">
+	<div class="card_cont">
+		<div class="infomaction clearfix">
+			<img src="imgs/user-icon.jpg">
+			<div><small>05/25 - 17:30:42</small></div>
+			<h3>Jessica</h3> - <small>工頭</small>
+			<div class="right_slide">
+				<label class="switch">
+					<input class="switch-input" type="checkbox" value="on">
+					<span class="switch-label" data-on="點工" data-off="一般"></span> <span class="switch-handle"></span>
+					<div class="point_work"><input type="number" placeholder="請輸入點工號碼"></div>
+				</label>
+			</div>
+		</div>
+
+		<div class="default_ipt">
+
+			<div class="">
+				<label for="name">申請人</label>
+				<select>
+					<option value="">請選擇申請人</option>
+					<option value="">Jessica</option>
+					<option value="">Jason Wu</option>
+					<option value="">王大強</option>
+					<option value="">李鳴銘</option>
+					<option value="">陳建國</option>
+					<option value="">汪橋銘</option>
+					<option value="">蔣天養</option>
+					<option value="">陳浩男</option>
+					<option value="">張天生</option>
+					<option value="">林木蒞</option>
+					<option value="">趙僑凌</option>
+				</select>
+			</div>
+
+			<div class="">
+				<label for="name">工作日期</label>
+				<input class="" type="datetime-local" name="startdate" min="2016-01-01" max="2016-12-31" placeholder="日期">
+			</div>
+
+			<div class="">
+				<label for="name">工作地點</label>
+				<select>
+					<option value="">工作地點</option>
+					<option value="">基隆市</option>
+					<option value="">台北市</option>
+					<option value="">新北市</option>
+					<option value="">桃園市</option>
+					<option value="">中壢市</option>
+					<option value="">新竹市</option>
+					<option value="">台南市 - 維冠大樓</option>
+					<option value="">高雄市</option>
+				</select>
+			</div>
+
+			<div id="the-range">
+				<label for="name">工作時數</label>
+				<span style="float:right;color:#0079D9;margin:.3em .5em 0;">可申請時數：8hr</span>
+				<output for="range" id="output">請選擇時數</output>
+				<input type="range" id="range" step="0.5" name="range" min="1" max="8" value="1">
+			</div>
+		</div>
+	</div>
+	<div class="card_cont">
+		<header>工作項目 1</header>
+		<div class="default_ipt">
+			<div class="">
+				<label for="name21">工作種類</label>
+				<select>
+					<option value="">種類1</option>
+					<option value="">種類2</option>
+					<option value="">種類3</option>
+					<option value="">種類4</option>
+					<option value="">種類5</option>
+				</select>
+			</div>
+			<div class="">
+				<label for="name22">工作項目</label>
+				<select>
+					<option value="">項目1</option>
+					<option value="">項目2</option>
+					<option value="">項目3</option>
+					<option value="">項目4</option>
+					<option value="">項目5</option>
+				</select>
+			</div>
+			<div class="">
+				<label for="name23">加給選項</label>
+				<select>
+					<option value="">選項1</option>
+					<option value="">選項2</option>
+					<option value="">選項3</option>
+					<option value="">選項4</option>
+					<option value="">選項5</option>
+				</select>
+			</div>
+			<div class="">
+				<label for="note">備註</label>
+				<textarea rows="3"></textarea>
+			</div>
+			<div class="flip-container">
+				<div class="flipper">
+					<div class="front">
+						<!-- front content -->
+						<div class="btn_action">+ 附加照片</div>
+					</div>
+					<div class="back">
+						<!-- back content -->
+						<input type="file">
+						<input type="file">
+						<input type="file">
+						<input type="file">
+						<input type="file">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="card_cont new_card">
+		<header>工作項目 2</header>
+		<div class="default_ipt">
+			<div class="">
+				<label for="name31">工作種類</label>
+				<select>
+					<option value="">種類1</option>
+					<option value="">種類2</option>
+					<option value="">種類3</option>
+					<option value="">種類4</option>
+					<option value="">種類5</option>
+				</select>
+			</div>
+			<div class="">
+				<label for="name32">工作項目</label>
+				<select>
+					<option value="">項目1</option>
+					<option value="">項目2</option>
+					<option value="">項目3</option>
+					<option value="">項目4</option>
+					<option value="">項目5</option>
+				</select>
+			</div>
+			<div class="">
+				<label for="name33">加給選項</label>
+				<select>
+					<option value="">選項1</option>
+					<option value="">選項2</option>
+					<option value="">選項3</option>
+					<option value="">選項4</option>
+					<option value="">選項5</option>
+				</select>
+			</div>
+			<div class="">
+				<label for="note">備註</label>
+				<textarea rows="3"></textarea>
+			</div>
+			<div class="flip-container">
+				<div class="flipper">
+					<div class="front">
+						<!-- front content -->
+						<div class="btn_action">+ 附加照片</div>
+					</div>
+					<div class="back">
+						<!-- back content -->
+						<input type="file">
+						<input type="file">
+						<input type="file">
+						<input type="file">
+						<input type="file">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div style="padding:0.5em 0;">
+		<button class="btn pure-button pure-button-primary btn-sty">+ 新增工作項目</button>
+	</div>
+</div>
+
+<script src="js/jquery-latest.min.js"></script>
+<script>
+$(".btn").click(function() {
+	$('.new_card').toggleClass( "showhide" );
+});
+
+(function () {
+	var theForm = document.getElementById("the-range");
+	if ("oninput" in theForm) {
+		theForm.addEventListener("input", function () {
+			output.value = range.value + "hr";
+		}, false);
+	}
+})();
+</script>
+
+</body>
+</html>
