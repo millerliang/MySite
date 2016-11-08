@@ -1,127 +1,192 @@
-﻿<html lang="en">
+<!doctype html>
+<html lang="en">
 <head>
-	<title>TimeCircles Date Countdown</title>
-	<meta charset="utf-8" />
-	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
-	<link rel='stylesheet' href='asset/css/main.css'>
+	<meta charset="UTF-8">
+	<title>TWMAC</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="cleartype" content="on">
+    <meta name="MobileOptimized" content="320">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-<div class="container">
-	<article>
-		<section>
-			<h1>即將開幕，敬請期待</h1>
-			<img class="pic_top" src="asset/imgs/top.png">
-			<img class="pic_L" src="asset/imgs/left.png">
-			<img class="pic_R" src="asset/imgs/right.png">
-			<div id="DateCountdown" data-timer="11"></div>
-		</section>
-		<footer>
-			<a id="round" href="#" class="action-button shadow animate red"><i class="fa fa-users"></i> 放入人名</a>
-			<a id="clear" href="#" class="action-button shadow animate blue"><i class="fa fa-trash"></i> Clear</a>
-			<a id="roundshadows" href="#" class="action-button shadow animate green"><i class="fa fa-circle-thin"></i> Rounded Shadows</a>
-			<a id="imagebut" href="#" class="action-button shadow animate yellow"><i class="fa fa-picture-o"></i> Images</a>
-			<a href="#" class="action-button shadow animate default full_btn"><i class="fa fa-arrows-alt"></i> Full</a>
-		</footer>
-	</article>
+<div class="navbar-collapse collapse inverse" id="navbar-header">
+	<div class="container-fluid" style="background-color: #ececec;">
+		<div class="about">
+			<h4>About</h4>
+			<p class="text-muted">Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.</p>
+		</div>
+		<div class="social">
+			<h4>Contact</h4>
+			<ul class="list-unstyled">
+				<li><a href="#"><i class="fa fa-facebook-square"></i> Like on Facebook</a></li>
+				<li><a href="#"><i class="fa fa-twitter-square"></i> Follow on Twitter</a></li>
+				<li><a href="#"><i class="fa fa-envelope-o"></i> Email me</a></li>
+			</ul>
+		</div>
+	</div>
 </div>
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script src="asset/TC/TimeCircles.js"></script>
-<link rel="stylesheet" href="asset/TC/TimeCircles.css">
-<script src="asset/js/snowfall.min.js"></script>
+<div class="navbar navbar-static-top navbar-dark bg-inverse">
+	<div class="container -fluid">
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-header" aria-controls="navbar-header" aria-expanded="false" aria-label="Toggle navigation"></button>
+		<a href="#" class="navbar-brand">TWMAC</a>
+	</div>
+</div>
 
-<script type='text/javascript'>  
-$(document).ready(function(){
+<section class="jumbotron text-xs-center">
+	<div class="container">
+		<h1 class="jumbotron-heading">JYT-inc project example</h1>
+		<p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don't simply skip over it entirely.</p>
+		<p>
+			<a href="//www.jyt-inc.com" target="_blank" class="btn btn-primary"><i class="fa fa-globe"></i> Company website</a>
+			<a href="//google.com" target="_blank" class="btn btn-secondary"><i class="fa fa-google text-danger"></i> Google</a>
+			<a href="//github.com" target="_blank" class="btn btn-secondary"><i class="fa fa-github"></i> Github</a>
+		</p>
+	</div>
+</section>
 
-	snowFall.snow(document.body, {round : true, minSize: 5, maxSize:8});
-	snowFall.snow(document.body, "clear");
+<div class="album text-muted">
+	<div class="container">
 
-	document.getElementById("clear").addEventListener("click", function(){
-		snowFall.snow(document.body, "clear");
-	});
+		<article class="row">
 
-	document.getElementById("round").addEventListener("click", function(){
-	//	document.body.className  = "darkBg";
-		snowFall.snow(document.body, "clear");
-		snowFall.snow(document.body, {round : true, minSize: 5, maxSize:8});
-	});
+			<section class="col-sm-6 col-md-4 col-lg-3">
+				<div class="card">
+					<a href="opening/index.html" target="_blank">
+						<div class="img-size">
+							<img src="imgs/openner.jpg">
+						</div>
+						<header>
+							<time><i class="fa fa-calendar"></i> 2016/11/08</time>
+							<h1>開幕布簾</h1>
+						</header>
+					</a>
+				</div>
+			</section>
 
-	//document.getElementById("shadows").addEventListener("click", function(){
-	//	document.body.className  = "lightBg";
-	//	snowFall.snow(document.body, "clear");
-	//	snowFall.snow(document.body, {shadow : true, flakeCount:200});
-	//});
+			<section class="col-sm-6 col-md-4 col-lg-3">
+				<div class="card">
+					<a href="luann/index.html" target="_blank">
+						<div class="img-size">
+							<img src="imgs/luann.png">
+						</div>
+						<header>
+							<time><i class="fa fa-calendar"></i> 2016/11/08</time>
+							<h1>路演大廳 mobile web</h1>
+						</header>
+					</a>
+				</div>
+			</section>
 
-	document.getElementById("roundshadows").addEventListener("click", function(){
-		//document.body.className  = "lightBg";
-		snowFall.snow(document.body, "clear");
-		snowFall.snow(document.body, {round : true, shadow : true, minSize: 5, maxSize:8});
-	});
-	
-	document.getElementById("imagebut").addEventListener("click", function(){
-		//document.body.className  = "darkBg";
-		snowFall.snow(document.body, "clear");
-		snowFall.snow(document.body, {image : "asset/imgs/huaban.png", minSize: 10, maxSize:32});
-	});
+			<section class="col-sm-6 col-md-4 col-lg-3">
+				<div class="card">
+					<a href="luann/index.html" target="_blank">
+						<div class="img-size">
+							<img src="http://placehold.it/356x280">
+						</div>
+						<header>
+							<time><i class="fa fa-calendar"></i> 2016/11/08</time>
+							<h1>item title</h1>
+						</header>
+					</a>
+				</div>
+			</section>
 
-});
+			<section class="col-sm-6 col-md-4 col-lg-3">
+				<div class="card">
+					<a href="luann/index.html" target="_blank">
+						<div class="img-size">
+							<img src="http://placehold.it/356x280">
+						</div>
+						<header>
+							<time><i class="fa fa-calendar"></i> 2016/11/08</time>
+							<h1>item title</h1>
+						</header>
+					</a>
+				</div>
+			</section>
 
-// Full Container Size
-$(".full_btn").click(function() {
-	$('body').toggleClass( "container_fluid" );
-});
+			<section class="col-sm-6 col-md-4 col-lg-3">
+				<div class="card">
+					<a href="luann/index.html" target="_blank">
+						<div class="img-size">
+							<img src="http://placehold.it/356x280">
+						</div>
+						<header>
+							<time><i class="fa fa-calendar"></i> 2016/11/08</time>
+							<h1>item title</h1>
+						</header>
+					</a>
+				</div>
+			</section>
 
-// Check Countdown BtnAct
-$(".container section").click(function() {
-	$(this).toggleClass( "curtain" );
-	if ($(this).hasClass('curtain')){
-		$("#DateCountdown").TimeCircles().start();
-	}else {
-		$("#DateCountdown").TimeCircles().restart().stop();
+			<section class="col-sm-6 col-md-4 col-lg-3">
+				<div class="card">
+					<a href="luann/index.html" target="_blank">
+						<div class="img-size">
+							<img src="http://placehold.it/356x280">
+						</div>
+						<header>
+							<time><i class="fa fa-calendar"></i> 2016/11/08</time>
+							<h1>item title</h1>
+						</header>
+					</a>
+				</div>
+			</section>
+
+		</article>
+
+	</div><!-- /.container -->
+</div>
+
+<footer class="main text-muted">
+	<div class="container">
+		<!-- <p class="float-xs-right">
+			<a href="#">Back to top</a>
+		</p> -->
+		<p>Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
+		<p>New to Bootstrap? <a href="">Visit the homepage</a> or read our <a href="">getting started guide</a>.</p>
+	</div>
+	<a href="#0" class="cd-top"><div class="jSlider"><span></span></div></a>
+</footer>
+
+<!-- Jquery core JavaScript =================== -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" crossorigin="anonymous"></script>
+<!-- Bootstrap core JavaScript =================== -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
+
+<script>
+// .jSlider Scroll to top
+// browser window scroll (in pixels) after which the "back to top" link is shown
+var offset = 150,
+//browser window scroll (in pixels) after which the "back to top" link opacity is reduced
+offset_opacity = 1200,
+//duration of the top scrolling animation (in ms)
+scroll_top_duration = 700,
+//grab the "back to top" link
+$back_to_top = $('.jSlider');
+
+//hide or show the "back to top" link
+$(window).scroll(function(){
+	( $(this).scrollTop() > offset ) ? $back_to_top.addClass('cd-is-visible') : $back_to_top.removeClass('cd-is-visible cd-fade-out');
+	if( $(this).scrollTop() > offset_opacity ) { 
+		$back_to_top.addClass('cd-fade-out');
 	}
 });
 
-// TimeCircles Setting
-$("#DateCountdown").TimeCircles({
-	"start": false,
-    "animation": "ticks",
-    "bg_width": 1,
-    "fg_width": 0.1,
-	"refresh_interval": 1,
-    "count_past_zero": false,
-    "circle_bg_color": "rgba(255,255,255,.08)",
-    "time": {
-        "Days": {
-            //"text": "Days",
-            "color": "#FFCC66",
-            "show": false
-        },
-        "Hours": {
-            //"text": "Hours",
-            "color": "#99CCFF",
-            "show": false
-        },
-        "Minutes": {
-            //"text": "Minutes",
-            "color": "#BBFFBB",
-            "show": false
-        },
-        "Seconds": {
-            //"text": "Seconds",
-            //"color": "#e80202",
-            "color": "rgba(255,255,255,.1)",
-            "show": true
-        }
-    }
-}).addListener(countdownComplete);
-
-function countdownComplete(unit, value, total){
-    if(total<=0){
-        $(this).fadeOut('slow').replaceWith("<h2>Time's Up!</h2>");
-		snowFall.snow(document.body, {image : "asset/imgs/huaban.png", minSize: 10, maxSize:32});
-    }
-};
+// Smooth scroll to top
+$back_to_top.on('click', function(event){
+	event.preventDefault();
+	$('body,html').animate({
+		scrollTop: 0 ,
+		}, scroll_top_duration
+	);
+});
 </script>
-
 </body>
 </html>

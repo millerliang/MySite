@@ -312,11 +312,21 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#421380', end
  * Large Screens
  */
 @media all and (min-width: 54em) {
-  .box {
-    width__: 70%;
-    max-width__: 1200px;
-    margin: 25px auto;
-  }
+	.box {
+		width__: 70%;
+		max-width__: 1200px;
+		margin: 25px auto;
+	}
+	/* for iPad */
+	.rwd_item {
+		display:flex;
+		display:inline-flex;
+		display:-webkit-flex;
+		-webkit-flex-direction: row;
+		flex-direction:row;
+		margin-bottom:1em;
+	}
+	.rwd_item section {flex:1;margin: 8px 5px;}
 }
 
 .fixed {
