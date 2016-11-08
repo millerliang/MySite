@@ -53,16 +53,15 @@
 <div class="album text-muted">
 	<div class="container">
 
-		<article class="row">
+		<!-- Preloader 等待載入圖片動畫 -->
+		<div id="loading" style="text-align:center;">
+			<img src="dahsin_site/preloader.gif"/>
+		</div>
 
-			<!-- Preloader 等待載入圖片動畫 -->
-			<div id="loading" style="text-align:center;">
-				<img src="dahsin_site/preloader.gif"/>
-			</div>
-			<!-- items lists -->
-			<div id="items-containter"></div>
+		<!-- items lists -->
+		<article id="items-containter" class="row">
 			
-			<section class="col-sm-6 col-md-4 col-lg-3">
+			<!-- <section class="col-sm-6 col-md-4 col-lg-3">
 				<div class="card">
 					<a href="#" target="_blank">
 						<div class="img-size">
@@ -76,7 +75,7 @@
 				</div>
 			</section>
 
-			<!-- <section class="col-sm-6 col-md-4 col-lg-3">
+			<section class="col-sm-6 col-md-4 col-lg-3">
 				<div class="card">
 					<a href="opening/index.html" target="_blank">
 						<div class="img-size">
@@ -276,22 +275,9 @@
 
 <!-- Jquery core JavaScript =================== -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" crossorigin="anonymous"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> -->
 <!-- Bootstrap core JavaScript =================== -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
-
-<section class="col-sm-6 col-md-4 col-lg-3">
-	<div class="card">
-		<a href="#" target="_blank">
-			<div class="img-size">
-				<img src="http://placehold.it/356x280">
-			</div>
-			<header>
-				<time><i class="fa fa-calendar"></i> 2016/01/01</time>
-				<h1>item title</h1>
-			</header>
-		</a>
-	</div>
-</section>
 
 <script>
 $(document).ready(function () {
@@ -308,11 +294,11 @@ $(document).ready(function () {
 		data: param
 	})
 	.success(function (data) {
-		$.each(data.imgsItemList, function (index, d) {
+		$.each(data.projectItemList, function (index, d) {
 			item_lists = "<section class='col-sm-6 col-md-4 col-lg-3'>";
 			item_lists += "<div class='card'><a href='" + d.url + "' target='_blank'>";
 			item_lists += "<div class='img-size'><img src='" + d.img + "'></div>";
-			item_lists += "<header><time><i class='fa fa-calendar'></i> '" + d.date + "'</time><h1>" + d.title + "</h1></header></a>";
+			item_lists += "<header><time><i class='fa fa-calendar'></i> " + d.date + "</time><h1>" + d.title + "</h1></header></a>";
 			item_lists += "</div></section>";
 			$('#items-containter').append(item_lists);
 		});
