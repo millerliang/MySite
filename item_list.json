@@ -40,6 +40,11 @@
 			"title" : "瀚吶音頻",
 			"img" : "imgs/hannah.jpg"
 		}, {
+			"date" : "2016/03/09",
+			"url" : "LuAnn_ManagerSite/index.html",
+			"title" : "LuAnn 後台管理",
+			"img" : "imgs/LuAnn_ManagerSite.jpg"
+		}, {
 			"date" : "2016/09/21",
 			"url" : "new_IDSC/index.html",
 			"title" : "IDSC 英達思康 (new)",
@@ -67,23 +72,28 @@
 		}, {
 			"date" : "2015/04/15",
 			"url" : "uupon_point/index.html",
-			"title" : "UUPON 點數交換 AppWeb",
+			"title" : "UUPON 點數交換 WebApp",
 			"img" : "imgs/uupon_point.jpg"
 		}, {
 			"date" : "2015/04/07",
 			"url" : "uupon_fix_phone/index.html",
-			"title" : "UUPON 註冊送好禮 AppWeb",
+			"title" : "UUPON 註冊送好禮 WebApp",
 			"img" : "imgs/uupon_fix_phone.jpg"
 		}, {
 			"date" : "2015/04/07",
 			"url" : "uupon_fix_q/index.html",
-			"title" : "UUPON 問卷抽獎 AppWeb",
+			"title" : "UUPON 問卷抽獎 WebApp",
 			"img" : "imgs/uupon_fix_q.jpg"
 		}, {
 			"date" : "2015/01/08",
 			"url" : "uupon_fb_share/index.html",
 			"title" : "UUPON FB 分享",
 			"img" : "imgs/uupon_fb_share.jpg"
+		}, {
+			"date" : "2015/08/12",
+			"url" : "QA_theme/index.html",
+			"title" : "問答QA_Theme",
+			"img" : "imgs/qa_theme.jpg"
 		}, {
 			"date" : "2014/12/01",
 			"url" : "fontello/index.html",
