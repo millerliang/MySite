@@ -1,0 +1,11 @@
+p { 
+  color: #00FF00;
+} 
+
+p.normal {
+  color: #000000;
+}
+
+strong {
+  font-size:20px;
+}

@@ -1,0 +1,28 @@
+body {
+	/* width: 650px; */
+	line-height: 1.5;
+	background-image: url(../images/body_bg.png);
+	font-family: "微軟正黑體", "Microsoft JhengHei", "新細明體", "PMingLiU", AppleGothic, Dotum, Lucida Grande, Verdana Sans-serif;
+}
+h1 {
+	line-height: 1;
+	margin-bottom: 1.5em;
+	COLOR: #3B5527;
+}
+p {
+	margin-bottom: 2em;
+}
+#myform {
+	width: 600px;
+	margin: 28px auto;
+}
+#myform fieldset {
+	background-attachment: scroll;
+	background-image: url(../images/content_bg.gif);
+	background-repeat: no-repeat;
+	background-position: center -36%;
+	padding-left: 3.5em;
+}
+#submit {
+	margin-left: 170px;
+}

@@ -1,0 +1,123 @@
+<html lang="zh-tw">
+
+<!-- Mirrored from www.1keydata.com/css-tutorial/tw/margin.php by HTTrack Website Copier/3.x [XR&CO'2013], Thu, 22 Aug 2013 15:42:07 GMT -->
+<head>
+<title>CSS 邊界 (Margin)CSS 語法教學 </title>
+<meta name="description" content="列出與邊界 (margin) 有關的 CSS 屬性。">
+<link rel="canonical" href="margin.html" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel=stylesheet type="text/css" href="css-tutorial.css">
+</head>
+<body>
+<center><table border=0 bgcolor="FFA900" width=960 cellspacing=0 cellpadding=0><tr valign=top><td><h2> CSS 邊界 </h2>
+</td><td align=right>
+</td></tr></table>
+<table border="0" cellspacing="0" cellpadding="0" width="960" bgcolor="FFFFFF">
+<tr><td height=1 width=190 bgcolor=6600FF></td><td rowspan=2 valign=top width=690 valign=top>
+<table border=0 cellspacing=5 class=main><tr><td valign="top"><h6><a href="index.html">CSS 教學</a> &nbsp;&gt;&nbsp; 邊界</h6>
+<center>
+
+</center><p>如我們在<a href="box-model.html">盒子模式</a>那一頁看到的，邊界 (margin) 是在邊框之外，並且是用來設定各個元素之間的距離。一個盒子有四個邊，所以我們可以對這四個邊逐一設定： </p>
+
+<p><li>margin-top (上邊界)
+<br><li>margin-right (右邊界)
+<br><li>margin-bottom (下邊界)
+<br><li>margin-left (左邊界)
+
+<p>第五個屬性，<a href="#margin">margin</a>，是用來作為同時設定四個邊的捷徑屬性。
+
+<p>有三種方式可以設定邊界，分別為長度、百分比、以及 'auto'。我們來看以下的例子：
+
+<p><table border=0 width=300 class=main cellpadding=10>
+<tr><td bgcolor=DDDDDD>
+<p>#container {
+<br> margin-top:5px;
+<br> margin-left:10%;
+<br> margin-right:auto;
+<br> margin-bottom:20px;
+<br> border: 1px solid 000000;
+<br>}
+</td></tr></table>
+
+<p>以下的 HTML 碼，
+
+<p><table border=0 width=300 class=main cellpadding=10>
+<tr><td bgcolor=DDDDDD>
+<p>&lt;div id="container"&gt;
+<br>這是邊界的例子。
+<br>&lt;/div&gt;
+</td></tr></table>
+
+<p>會顯示為，
+
+<p><table border=0 width=400 class=main cellpadding=10>
+<tr><td bgcolor=CCFFCC>
+<p><div style='margin-top:5px; margin-left:10%; margin-right:auto; margin-bottom:20px; border: 1px solid #000000;'>
+這是邊界的例子。
+</div>
+</td></tr></table>
+
+<p>在這裡，上邊界為 5px，左邊界為 10%，下邊界為 20px。
+
+<a name="margin"></a>
+<p><h3>邊界捷徑</h3>
+
+<p>所有四個邊的邊界可以同時由 <b>margin</b> 屬性設定。它的語法如下：
+
+<p><font color="#006600">margin: [上面邊界值] [右邊邊界值] [下面邊界值] [左邊邊界值]</font>
+
+<p>在這裡，順序非常重要。第一個值一定是上邊界的值，第二個值一定是右邊界的值，第三個值一定是下邊界的值，而第四個值一定是左邊界的值。
+
+<p><center>下一頁： <a href="border.html">CSS 邊框</a></center>
+
+
+</td>
+
+﻿
+</tr></table>
+
+</td></tr><tr valign=top>
+
+        <td valign="top" width="190" nowrap vlink="#000000" bgcolor=6600FF>
+		<table border=0 cellpadding=8>
+		<tr><td>
+<br>
+
+<font size="-1" face="Verdana, Arial, Helvetica, sans-serif">
+<a class=nav href="index.html">CSS 語法教學</a><br>
+
+<a class=nav href="syntax.html">CSS 語法</a><br>
+<a class=nav href="apply.html">CSS 套用方式</a><br>
+<a class=nav href="media-types.html">CSS  媒體類別</a><br>
+<a class=nav href="cascade.html">CSS 串接</a><br>
+<a class=nav href="inheritance.html">CSS 繼承</a><br>
+<a class=nav href="class-id.html">CSS Class 與 ID</a><br>
+<a class=nav href="div-span.html">CSS Div 與 Span</a><br>
+<a class=nav href="length-units.html">CSS 長度單位</a><br><br>
+
+<a class=nav href="box-model.html">CSS 盒子模式</a><br>
+<a class=nav href="margin.html">CSS 邊界 (Margin)</a><br>
+<a class=nav href="border.html">CSS 邊框 (Border)</a><br>
+<a class=nav href="padding.html">CSS 留白 (Padding)</a><br>
+<a class=nav href="background.html">CSS 背景 (Background)</a><br>
+<a class=nav href="color.html">CSS 顏色</a><br>
+<a class=nav href="font.html">CSS 字體</a><br>
+<a class=nav href="link.html">CSS 連接</a><br>
+<a class=nav href="list.html">CSS 清單 (List)</a><br>
+<a class=nav href="table.html">CSS 表格 (Table)</a><br>
+<a class=nav href="position.html">CSS 位置 (Position)</a><br>
+<a class=nav href="text.html">CSS 文字 (Text)</a><br>
+<a class=nav href="float.html">CSS 浮動 (Float)</a><br>
+<a class=nav href="clear.html">CSS 清除 (Clear)</a><br>
+<a class=nav href="cursor.html">CSS 滑鼠游標圖案</a><br><br>
+
+<a class=nav href="codes.html">CSS 樣式</a><br><br>
+		</td></tr></table></td>
+        </td>
+      </tr>
+    </table>
+  </center>
+</body>
+
+<!-- Mirrored from www.1keydata.com/css-tutorial/tw/margin.php by HTTrack Website Copier/3.x [XR&CO'2013], Thu, 22 Aug 2013 15:42:07 GMT -->
+</html>

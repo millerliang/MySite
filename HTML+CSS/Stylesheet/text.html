@@ -1,0 +1,353 @@
+<html lang="zh-tw">
+
+
+<head>
+<title>CSS 文字 (Text)CSS 語法教學 </title>
+<meta name="description" content="列出與文字 (text) 有關的 CSS 屬性。">
+<link rel="canonical" href="text.html" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel=stylesheet type="text/css" href="css-tutorial.css">
+</head>
+<body>
+<center><table border=0 bgcolor="FFA900" width=960 cellspacing=0 cellpadding=0><tr valign=top><td><h2> CSS 文字 </h2>
+</td><td align=right>
+</td></tr></table>
+<table border="0" cellspacing="0" cellpadding="0" width="960" bgcolor="FFFFFF">
+<tr><td height=1 width=190 bgcolor=6600FF></td><td rowspan=2 valign=top width=690 valign=top>
+<table border=0 cellspacing=5 class=main><tr><td valign="top"><h6><a href="index.html">CSS 教學</a> &nbsp;&gt;&nbsp; 文字</h6>
+<center>
+
+</center><p>以下是幾個最常被用到與文字樣式有關的 CSS 屬性。 </p>
+
+<p><li><a href="#direction">direction</a>
+<li><a href="#letterspacing">letter-spacing</a>
+<li><a href="#lineheight">line-height</a>
+<li><a href="#textalign">text-align</a>
+<li><a href="#textdecoration">text-decoration</a>
+<li><a href="#textindent">text-indent</a>
+<li><a href="#texttransform">text-transform</a>
+<li><a href="#wordspacing">word-spacing</a>
+
+<a name="direction"></a>
+<h3>direction</h3>
+
+<p><b>direction</b> 屬性是用來設定文字的方向。可能的值為 'ltr' 及 'rtl'。
+
+<p>舉例來說，若 CSS 宣告是，
+
+<p><table border=0 width=400 class=main cellpadding=10>
+<tr><td bgcolor=DDDDDD>
+<p>p {
+<br> &nbsp; direction:ltr;
+<br>}
+</td></tr></table>
+
+<p>那以下的 HTML 碼， 
+
+<p><table border=0 width=400 class=main cellpadding=10>
+<tr><td bgcolor=DDDDDD>
+&lt;p&gt;LTR 方向&lt;/p&gt;
+</td></tr></table>
+
+<p>就會顯現
+
+<p><table border=0 width=400 class=main cellpadding=10>
+<tr><td bgcolor=CCFFCC>
+<p style='direction:ltr;'>LTR 方向</p>
+</td></tr></table>
+
+<p>若 CSS 宣告是，
+
+<p><table border=0 width=400 class=main cellpadding=10>
+<tr><td bgcolor=DDDDDD>
+<p>p {
+<br> &nbsp; direction:rtl;
+<br>}
+</td></tr></table>
+
+<p>那以下的 HTML 碼， 
+
+<p><table border=0 width=400 class=main cellpadding=10>
+<tr><td bgcolor=DDDDDD>
+&lt;p&gt;RTL 方向&lt;/p&gt;
+</td></tr></table>
+
+<p>就會顯現
+
+<p><table border=0 width=400 class=main cellpadding=10>
+<tr><td bgcolor=CCFFCC>
+<p style='direction:rtl;'>RTL 方向</p>
+</td></tr></table>
+
+<a name=letterspacing></a>
+<h3>letter-spacing</h3>
+
+<p><b>letter-spacing</b> 屬性是用來設定每一個字母之間的空間。舉例來說，若 CSS 宣告是，
+
+<p><table border=0 width=400 class=main cellpadding=10>
+<tr><td bgcolor=DDDDDD>
+<p>p {
+<br> &nbsp; letter-spacing:8px;
+<br>}
+</td></tr></table>
+
+<p>那以下的 HTML 碼， 
+
+<p><table border=0 width=400 class=main cellpadding=10>
+<tr><td bgcolor=DDDDDD>
+&lt;p&gt;8px between letters&lt;/p&gt;
+</td></tr></table>
+
+<p>就會顯現
+
+<p><table border=0 width=400 class=main cellpadding=10>
+<tr><td bgcolor=CCFFCC>
+<p style='letter-spacing:8px;'>8px between letters</p>
+</td></tr></table>
+
+<a name=lineheight></a>
+<h3>line-height</h3>
+
+<b>line-height</b> 屬性是用來設定每一行之間的空間。舉例來說，若 CSS 宣告是，
+
+<p><table border=0 width=400 class=main cellpadding=10>
+<tr><td bgcolor=DDDDDD>
+<p>p {
+<br> &nbsp; line-height:40px;
+<br>}
+</td></tr></table>
+
+<p>那以下的 HTML 碼， 
+
+<p><table border=0 width=400 class=main cellpadding=10>
+<tr><td bgcolor=DDDDDD>
+&lt;p&gt;第一行和第二行之間&lt;br&gt;相隔 40px。&lt;/p&gt;
+</td></tr></table>
+
+<p>就會顯現
+
+<p><table border=0 width=400 class=main cellpadding=10>
+<tr><td bgcolor=CCFFCC>
+<p style='line-height:40px;'>第一行和第二行之間<br>相隔 40px。</p>
+</td></tr></table>
+
+
+<a name=textalign></a>
+<h3>text-align</h3>
+
+<p><b>text-align</b> 屬性是用來設定文字是如何對齊。可能的值包括：
+
+<p><li><b>left</b>： 靠左對齊
+<li><b>right</b>： 靠右對齊
+<li><b>center</b>： 向中間對齊
+<li><b>justified</b>：  左右對齊
+
+<p>請看以下的例子：
+
+<p><table border=1 cellspacing=0 cellpadding=5 class=main width=410><tr><td width=200>CSS 樣式</td><td width=210>顯現結果</td></tr>
+<tr><td>
+<p>p {
+<br> &nbsp; text-align:left;
+<br>}
+</td><td>
+<p style='text-align:left;'>這一段句子，是靠左對齊的例子。</p>
+</td></tr>
+<tr><td>
+<p>p {
+<br> &nbsp; text-align:right;
+<br>}
+</td><td>
+<p style='text-align:right;'>這一段句子，是靠右對齊的例子。</p>
+</td></tr>
+<tr><td>
+<p>p {
+<br> &nbsp; text-align:center;
+<br>}
+</td><td>
+<p style='text-align:center;'>這一段句子，是向中間對齊的例子。</p>
+</td></tr>
+<tr><td>
+<p>p {
+<br> &nbsp; text-align:justify;
+<br>}
+</td><td> 
+<p style='text-align:justify;'>這一段句子，是左右兩邊都對齊的例子。</p>
+</td></tr>
+</table>
+
+<a name=textdecoration></a>
+<h3>text-decoration</h3>
+
+<p><b>text-decoration</b> 屬性是用來設定文字上有什麼裝飾。可能的值包括：
+
+<p><li><b>underline</b>:  文字下加上一條線。
+<li><b>overline</b>:  文字上加上一條線。
+<li><b>line-through</b>:  文字中間加上一條線劃過去。
+<li><b>blink</b>:  讓文字閃爍。
+
+<p>請看以下的例子：
+
+<p><table border=1 cellspacing=0 cellpadding=5 class=main><tr><td width=200>CSS 樣式</td><td width=210>顯現結果</td></tr>
+<tr><td>
+<p>p {
+<br> &nbsp; text-decoration:underline;
+<br>}
+</td><td>
+<p style='text-decoration:underline;'>文字下加一條線</p>
+</td></tr>
+<tr><td>
+<p>p {
+<br> &nbsp; text-decoration:overline;
+<br>}
+</td><td>
+<p style='text-decoration:overline;'>文字上加上一條線</p>
+</td></tr>
+<tr><td>
+<p>p {
+<br> &nbsp; text-decoration:line-through;
+<br>}
+</td><td>
+<p style='text-decoration:line-through;'>文字中間加上一條線劃過去</p>
+</td></tr>
+</table>
+
+<a name=textindent></a>
+<h3>text-indent</h3>
+
+<p><b>text-indent</b> 屬性是用來設定每一段的第一行前面要留多少空間。可設定的值包括百分比以及長度。舉例來說，若有以下的 CSS 宣告，
+
+<p><table border=0 width=400 class=main cellpadding=10>
+<tr><td bgcolor=DDDDDD>
+<p>p {
+<br> &nbsp; text-indent:15px;
+<br>}
+</td></tr></table>
+
+<p>那以下的 HTML 碼， 
+
+<p><table border=0 width=400 class=main cellpadding=10>
+<tr><td bgcolor=DDDDDD>
+&lt;p&gt;這一段第一行的最前面會留 15px 的空間。之後的行數就沒有留任和空間了。&lt;/p&gt;
+</td></tr></table>
+
+<p>就會顯現，
+
+<p><table border=0 width=400 class=main cellpadding=10>
+<tr><td bgcolor=CCFFCC>
+<p style='text-indent:15px;'>這一段第一行的最前面會留 15px 的空間。之後的行數就沒有留任和空間了。</p>
+</td></tr></table>
+
+<a name=texttransform></a>
+<h3>text-transform</h3>
+
+<p><b>text-transform</b> 屬性是用來控制大小寫是如何展現的。可能的值包括：
+<p><li><b>capitalize</b>：  每一個字的第一個字母都以大寫顯現，其他的字母則不改變。
+<li><b>uppercase</b>： 所有的字母都以大寫顯現。
+<li><b>lowercase</b>：  所有的字母都以小寫顯現。
+<li><b>none</b>：  大小寫不做任何改變。
+
+<p>舉例來說，用以上這幾個值用在 "this is a LAWYER" 這幾個字上，我們回得到以下的結果：
+
+<p><table border=1 cellspacing=0 cellpadding=5 class=main><tr><td width=200>CSS 樣式</td><td width=210>顯現結果</td></tr>
+<tr><td>
+<p>p {
+<br> &nbsp; text-transform:capitalize;
+<br>}
+</td><td>
+<p style='text-transform:capitalize;'>this is a LAWYER</p>
+</td></tr>
+<tr><td>
+<p>p {
+<br> &nbsp; text-transform:uppercase;
+<br>}
+</td><td>
+<p style='text-transform:uppercase;'>this is a LAWYER</p>
+</td></tr>
+<tr><td>
+<p>p {
+<br> &nbsp; text-transform:lowercase;
+<br>}
+</td><td>
+<p style='text-transform:lowercase;'>this is a LAWYER</p>
+</td></tr>
+</table>
+
+<a name=wordspacing></a>
+<h3>word-spacing</h3>
+
+<p><b>word-spacing</b> 屬性是用來設定每個字與每個字之間的距離。舉例來說，若 CSS 宣告是，
+
+<p><table border=0 width=400 class=main cellpadding=10>
+<tr><td bgcolor=DDDDDD>
+<p>p {
+<br> &nbsp; word-spacing:5px;
+<br>}
+</td></tr></table>
+
+<p>那以下的 HTML 碼， 
+
+<p><table border=0 width=400 class=main cellpadding=10>
+<tr><td bgcolor=DDDDDD>
+&lt;p&gt;Words here are separated by 5px.&lt;/p&gt;
+</td></tr></table>
+
+<p>就會顯現，
+
+<p><table border=0 width=400 class=main cellpadding=10>
+<tr><td bgcolor=CCFFCC>
+<p style='word-spacing:5px;'>Words here are separated by 5px.</p></p>
+</td></tr></table>
+
+<p><center>下一頁： <a href="float.html">CSS 浮動</a></center>
+
+
+</td>
+
+﻿
+</tr></table>
+
+</td></tr><tr valign=top>
+
+        <td valign="top" width="190" nowrap vlink="#000000" bgcolor=6600FF>
+		<table border=0 cellpadding=8>
+		<tr><td>
+<br>
+
+<font size="-1" face="Verdana, Arial, Helvetica, sans-serif">
+<a class=nav href="index.html">CSS 語法教學</a><br>
+
+<a class=nav href="syntax.html">CSS 語法</a><br>
+<a class=nav href="apply.html">CSS 套用方式</a><br>
+<a class=nav href="media-types.html">CSS  媒體類別</a><br>
+<a class=nav href="cascade.html">CSS 串接</a><br>
+<a class=nav href="inheritance.html">CSS 繼承</a><br>
+<a class=nav href="class-id.html">CSS Class 與 ID</a><br>
+<a class=nav href="div-span.html">CSS Div 與 Span</a><br>
+<a class=nav href="length-units.html">CSS 長度單位</a><br><br>
+
+<a class=nav href="box-model.html">CSS 盒子模式</a><br>
+<a class=nav href="margin.html">CSS 邊界 (Margin)</a><br>
+<a class=nav href="border.html">CSS 邊框 (Border)</a><br>
+<a class=nav href="padding.html">CSS 留白 (Padding)</a><br>
+<a class=nav href="background.html">CSS 背景 (Background)</a><br>
+<a class=nav href="color.html">CSS 顏色</a><br>
+<a class=nav href="font.html">CSS 字體</a><br>
+<a class=nav href="link.html">CSS 連接</a><br>
+<a class=nav href="list.html">CSS 清單 (List)</a><br>
+<a class=nav href="table.html">CSS 表格 (Table)</a><br>
+<a class=nav href="position.html">CSS 位置 (Position)</a><br>
+<a class=nav href="text.html">CSS 文字 (Text)</a><br>
+<a class=nav href="float.html">CSS 浮動 (Float)</a><br>
+<a class=nav href="clear.html">CSS 清除 (Clear)</a><br>
+<a class=nav href="cursor.html">CSS 滑鼠游標圖案</a><br><br>
+
+<a class=nav href="codes.html">CSS 樣式</a><br><br>
+		</td></tr></table></td>
+        </td>
+      </tr>
+    </table>
+  </center>
+</body>
+
+
+</html>

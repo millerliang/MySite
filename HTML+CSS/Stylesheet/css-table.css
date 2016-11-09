@@ -1,0 +1,19 @@
+table {
+  border: 0;
+  font-family: arial;
+  font-size:14px;
+}
+th {
+  background-color:yellow;
+}
+td.sample {
+  border-bottom:1 solid #000000;
+}
+.fail {
+  color:#FF0000;
+  border-bottom:1 solid #000000;
+}
+table.collapse {
+  border-collapse:collapse;
+  width:200px;
+}

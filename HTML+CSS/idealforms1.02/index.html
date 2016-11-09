@@ -1,0 +1,155 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>HTML5 + CSS3 報名表單設計</title>
+<link href="css/normalize.css" rel="stylesheet"/>
+<link href="css/idealforms/idealforms.css" rel="stylesheet"/>
+<link href="css/master.css" rel="stylesheet" media="screen"/>
+</head>
+<body>
+	<form id="myform">
+
+		<fieldset>
+			<h1>HTML5 + CSS3 報名表單設計</h1>
+
+			<div>
+				<label class="required">姓 氏：</label>
+				<input type="text" size="50" />
+			</div>
+
+			<div>
+				<label class="required">姓 名：</label>
+				<input type="text" size="50" />
+			</div>
+			
+			<div>
+				<label class="required">性 別：</label>
+				<select>
+					<option>男</option>
+					<option>女</option>
+				</select>
+			</div>
+			
+			<div>
+				<label class="required">手 機：</label>
+				<input type="text" size="50" />
+			</div>
+			
+			<div>
+				<label class="required">電子郵件：</label>
+				<input type="text" size="50" />
+			</div>
+			
+			<div>
+				<label class="required">密 碼：</label>
+				<input type="password" size="50"/>
+			</div>
+			
+			<div>
+				<label class="required">再次輸入密碼：</label>
+				<input type="password" size="50"/>
+			</div>
+			
+			<div>
+				<label>作業系統：</label>
+				<ul>
+					<li><label><input type="checkbox"/>Windows</label></li>
+					<li><label><input type="checkbox"/>Mac OSX</label></li>
+					<li><label><input type="checkbox"/>Ubuntu</label></li>
+					<li><label><input type="checkbox"/>Fedora</label></li>
+				</ul>
+			</div>
+
+			<div>
+				<label>縣 市：</label>
+				<select id="select">
+					<option selected="selected" value="100">台北市</option>
+					<option value="200">基隆市</option>
+					<option value="207">新北市</option>
+					<option value="209">連江縣</option>
+					<option value="260">宜蘭縣</option>
+					<option value="300">新竹市</option>
+					<option value="302">新竹縣</option>
+					<option value="320">桃園縣</option>
+					<option value="350">苗栗縣</option>
+					<option value="400">台中市</option>
+					<option value="500">彰化縣</option>
+					<option value="540">南投縣</option>
+					<option value="600">嘉義市</option>
+					<option value="602">嘉義縣</option>
+					<option value="630">雲林縣</option>
+					<option value="700">台南市</option>
+					<option value="800">高雄市</option>
+					<option value="817">南海島</option>
+					<option value="880">澎湖縣</option>
+					<option value="890">金門縣</option>
+					<option value="900">屏東縣</option>
+					<option value="950">台東縣</option>
+					<option value="970">花蓮縣</option>
+				</select>
+			</div>
+			
+			<div>
+				<label>區 域：</label>
+				<select id="area">
+					<option selected="selected" value="100">100 中正區</option>
+					<option value="103">103 大同區</option>
+					<option value="104">104 中山區</option>
+					<option value="105">105 松山區</option>
+					<option value="106">106 大安區</option>
+					<option value="108">108 萬華區</option>
+					<option value="110">110 信義區</option>
+					<option value="111">111 士林區</option>
+					<option value="112">112 北投區</option>
+					<option value="114">114 內湖區</option>
+					<option value="115">115 南港區</option>
+					<option value="116">116 文山區</option>
+				</select>
+			</div>
+			
+			<div>
+				<label>住 址：</label>
+				<input type="text" size="50" />
+			</div>
+			
+			<div>
+				<label class="required">報名人數：</label>
+				<select>
+					<option>1人</option>
+					<option>2人</option>
+					<option>3人</option>
+					<option>4人</option>
+					<option>5人</option>
+				</select>
+			</div>
+
+			<div>
+				<label class="required">參加課程：</label>
+				<ul>
+					<li><label><input type="radio" name="radios" checked />網頁設計</label></li>
+					<li><label><input type="radio" name="radios"/>動畫設計</label></li>
+					<li><label><input type="radio" name="radios"/>影片剪接</label></li>
+					<li><label><input type="radio" name="radios"/>平面設計</label></li>
+				</ul>
+			</div>
+
+			<div>
+				<label>留 言：</label>
+				<textarea cols="50" rows="10"></textarea>
+			</div>
+
+			<div>
+				<label>&nbsp;</label>
+				<button>取 消</button>
+				<button>送 出</button>
+				<input style="display:none;" type="submit" value="送 出"/>
+			</div>
+		</fieldset>
+	</form>
+
+<script src="JS/jquery.min.js"></script>
+<script src="js/jquery.idealforms.js"></script>
+<script src="js/scripts.js"></script>
+</body>
+</html>

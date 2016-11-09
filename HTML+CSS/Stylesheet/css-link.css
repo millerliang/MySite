@@ -1,0 +1,4 @@
+a:link.page1 {color:#FF0000; text-decoration:none;}
+a:visited.page1 {color:#0000FF; text-decoration:none;}
+a:hover.page1 {font-size:20; color:#00FF00; text-decoration:underline;}
+a:active.page1 {color:#FF00FF; text-decoration:underline;}

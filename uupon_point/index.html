@@ -1,0 +1,159 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<title>UUPON Exchang Point</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="css/ionic.min.css">
+<link rel="stylesheet" href="css/ionicons.min.css">
+<link rel="stylesheet" href="css/animate.css">
+<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+<!-- <script type="text/javascript" src="js/ionic.min.js"></script>
+<script type="text/javascript" src="js/ionic-angular.min.js"></script>
+<script type="text/javascript" src="js/ionic-angular.min.js"></script> -->
+<style>
+	body {background-color:#d9d9d9;padding-top:0.5em;}
+	.custom a:active {background-color:#E1EAEC;}
+	.custom a:active span {color:#333 !important;}
+	.custom a {vertical-align:middle;height:64px;font-size:14pt;padding-left:72px;background-repeat:no-repeat;background-size:auto 100%;background-position:4px center;}
+	.custom a span {color:#4AB9B2;line-height:1;}
+	.custom a i {color:#CACACA;}
+	.custom a.item1 {background-image:url('imgs/hp_logo.jpg');-webkit-animation-delay:0.2s;animation-delay:0.2s;}
+	.custom a.item2 {background-image:url('imgs/taishin_icon.jpg');-webkit-animation-delay:0.3s;animation-delay:0.3s;}
+	.custom a.item3 {background-image:url('imgs/ctbc_icon.jpg');-webkit-animation-delay:0.4s;animation-delay:0.4s;}
+	.custom a.item4 {background-image:url('imgs/fubon_icon.jpg');-webkit-animation-delay:0.5s;animation-delay:0.5s;}
+	.custom a.item5 {background-image:url('imgs/senao.jpg');-webkit-animation-delay:0.6s;animation-delay:0.6s;}
+	.custom a.item6 {background-image:url('imgs/uupon_icon.jpg');-webkit-animation-delay:0.7s;animation-delay:0.7s;}
+	.custom a.item7 {background-image:url('imgs/uupon_icon.jpg');-webkit-animation-delay:0.8s;animation-delay:0.8s;}
+	
+/*custom font - roboto*/
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed);
+/*basic reset*/
+* {margin:0; padding: 0;}
+/*forcing the body to take 100% height*/
+html, body {min-height: 100%;}
+/*a nice BG*/
+body {
+	/* background: #d9d9d9; */ /*fallback*/
+	background: linear-gradient(#d9d9d9, #556);
+}
+
+/*Thumbnail Background*/
+.thumb {
+	width: 246px; height: 121px; margin: 30px auto;
+	perspective: 600px;
+	-webkit-animation-delay:1.4s;animation-delay:1.4s;
+}
+.thumb a {
+	display: block; width: 100%; height: 100%;
+	/*double layered BG for lighting effect*/
+	background: 
+		linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+		/* url("http://thecodeplayer.com/u/m/i1.png"); */
+		url("https://uupon.tw/upload/banner/180833285c000000c6e0234890c9c368.png");
+	/*disabling the translucent black bg on the main image*/
+	background-size: 0, cover;
+	/*3d space for children*/
+	transform-style: preserve-3d;
+	transition: all 0.5s;
+}
+.thumb:hover a {transform: rotateX(80deg); transform-origin: bottom;}
+/*bottom surface */
+.thumb a:after {
+	/*36px high element positioned at the bottom of the image*/
+	content: ''; position: absolute; left: 0; bottom: 0; 
+	width: 100%; height: 32px;
+	/*inherit the main BG*/
+	background: inherit; background-size: cover, cover;
+	/*draw the BG bottom up*/
+	background-position: bottom;
+	/*rotate the surface 90deg on the bottom axis*/
+	transform: rotateX(90deg); transform-origin: bottom;
+}
+/*label style*/
+.thumb a span {
+	color: white; text-transform: uppercase;
+	position: absolute; top: 100%; left: 0; width: 100%;
+	font-family: 'Roboto Condensed', sans-serif;
+	font: bold 16px/36px 微軟正黑體; text-align: center;
+	/*the rotation is a bit less than the bottom surface to avoid flickering*/
+	transform: rotateX(-89.99deg); transform-origin: top;
+	z-index: 1;
+}
+/*shadow*/
+.thumb a:before {
+	content: ''; position: absolute; top: 0; left: 0;
+	width: 100%; height: 100%;
+	background: rgba(0, 0, 0, 0.5); 
+	box-shadow: 0 0 100px 50px rgba(0, 0, 0, 0.5);
+	transition: all 0.5s; 
+	/*by default the shadow will be almost flat, very transparent, scaled down with a large blur*/
+	opacity: 0.15;
+	transform: rotateX(95deg) translateZ(-30px) scale(0.75);
+	transform-origin: bottom;
+}
+.thumb:hover a:before {
+	opacity: 1;
+	/*blurred effect using box shadow as filter: blur is not supported in all browsers*/
+	box-shadow: 0 0 25px 25px rgba(0, 0, 0, 0.5);
+	/*pushing the shadow down and scaling it down to size*/
+	transform: rotateX(0) translateZ(-34px) scale(0.85);
+}
+</style>
+</head>
+
+<body>
+
+	<div class="content">
+
+		<div class="list custom">
+			<!-- <a class="item item-icon-right fadeInUp animated" href="#">
+				<img style="vertical-align:middle;" src="imgs/taishin_icon.jpg" width="52px">
+				<span style="position:absolute;margin:0 56px 0 4px;color:#4AB9B2;font-size:21px;height:60px;vertical-align:middle;">台新點數換 UUPON 點數點數點數點數點數</span>
+				<i class="icon ion-ios-arrow-right"></i>
+			</a> -->
+			<a class="item item-icon-right fadeInUp animated item1" href="exchange_cht.html">
+				<span>中華電信歡樂點換 UUPON</span>
+				<i class="icon ion-ios-arrow-right"></i>
+			</a>
+			<a class="item item-icon-right fadeInUp animated item2" href="exchange_taishin.html">
+				<span>台新信用卡紅利點數換 UUPON</span>
+				<i class="icon ion-ios-arrow-right"></i>
+			</a>
+			<a class="item item-icon-right fadeInUp animated item3" href="exchange_ctbc.html">
+				<span>中國信託紅利點數換 UUPON</span>
+				<i class="icon ion-ios-arrow-right"></i>
+			</a>
+			<a class="item item-icon-right fadeInUp animated item4" href="exchange_fubon.html">
+				<span>富邦信用卡紅點數換 UUPON</span>
+				<i class="icon ion-ios-arrow-right"></i>
+			</a>
+			<a class="item item-icon-right fadeInUp animated item5" href="exchange_senao.html">
+				<span>神腦紅利點數換 UUPON</span>
+				<i class="icon ion-ios-arrow-right"></i>
+			</a>
+			<a class="item item-icon-right fadeInUp animated item6" href="transfer_cht.html">
+				<span>UUPON 換中華電信歡樂點</span>
+				<i class="icon ion-ios-arrow-right"></i>
+			</a>
+			<a class="item item-icon-right fadeInUp animated item7" href="transfer_senao.html">
+				<span>UUPON 換神腦紅利點數</span>
+				<i class="icon ion-ios-arrow-right"></i>
+			</a>
+		</div>
+
+    </div>
+	<!-- Container -->
+	<div class="thumb fadeInUp animated">
+		<!-- Image -->
+		<a href="#http://event.family.com.tw/uupon/">
+			<!-- Label -->
+			<span>UUPON 會員獨享優惠</span>
+		</a>
+	</div>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+
+</body>
+</html> 

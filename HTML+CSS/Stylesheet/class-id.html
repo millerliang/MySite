@@ -1,0 +1,211 @@
+<html lang="zh-tw">
+
+<!-- Mirrored from www.1keydata.com/css-tutorial/tw/class-id.php by HTTrack Website Copier/3.x [XR&CO'2013], Thu, 22 Aug 2013 15:42:06 GMT -->
+<head>
+<title>CSS Class 與 CSS IDCSS 語法教學</title>
+<meta name="description" content="解釋 CSS 中的  Class 與 ID 選擇器，以及這兩者之間的不同。">
+<link rel=stylesheet type="text/css" href="classid.css">
+<link rel="canonical" href="class-id.html" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel=stylesheet type="text/css" href="css-tutorial.css">
+</head>
+<body>
+<center><table border=0 bgcolor="FFA900" width=960 cellspacing=0 cellpadding=0><tr valign=top><td><h2> CSS Class 與 CSS ID </h2>
+</td><td align=right>
+</td></tr></table>
+<table border="0" cellspacing="0" cellpadding="0" width="960" bgcolor="FFFFFF">
+<tr><td height=1 width=190 bgcolor=6600FF></td><td rowspan=2 valign=top width=690 valign=top>
+<table border=0 cellspacing=5 class=main><tr><td valign="top"><h6><a href="index.html">CSS 教學</a> &nbsp;&gt;&nbsp; CSS Class 與 CSS ID</h6>
+<center>
+
+</center><p>在 <a href="syntax.html">CSS 語法</a>那一頁中, 我們有提到，Class 及 ID 都是使用者設定的選擇器 (selector)。以下分別介紹：  
+
+<h3>Class</h3>
+
+<p>Class 的宣告法，是先放一個句點 (.)，之後再列出選擇器名稱。設定一個 Class 選擇器的語法如下：
+
+<p><font color="006600">.【Class 名稱】{
+<br> &nbsp;  屬性：設定值；
+<br> &nbsp;  ...
+<br>}
+</font>
+
+<p>舉例來說，
+
+<p><table border=0 width=300 class=main cellpadding=10>
+<tr><td bgcolor=DDDDDD>
+<p>.navbar {
+<br>  color:#0000FF;
+<br>}
+</td></tr></table>
+
+<p>要將以上的樣式套用在 HTML 內，我們用以下的 HTML 碼：
+
+<p><table border=0 width=500 class=main cellpadding=10>
+<tr><td bgcolor=DDDDDD>
+<p>&lt;p class="navbar"&gt;這是用 Class 選擇器的例子。&lt;/p&gt;
+</td></tr></table>
+
+<p>以上的 HTML 碼會顯現出：
+
+<p><table border=0 width=300 class=main cellpadding=10>
+<tr><td bgcolor=CCFFCC>
+<p class="navbar">這是用 Class 選擇器的例子。</p>
+</td></tr></table>
+
+<p>一個  Class 選擇器可以同時有好幾個不同的物件 (instance)。這是靠以下的語法：
+
+<p><font color="006600">【型類選擇器】.【選擇器名稱】{
+<br> &nbsp;  屬性：設定值；
+<br> &nbsp;  ...
+<br>}
+</font>
+
+<p>舉例來說，若有以下的 CSS 宣告，
+
+<p><table border=0 width=500 class=main cellpadding=10>
+<tr><td bgcolor=DDDDDD>
+<p>b.special {
+<br> &nbsp; color:#0000FF;
+<br>}
+<p>i.special {
+<br> &nbsp; color:#FF0000;
+<br>}
+</td></tr></table>
+
+<p>以下的 HTML 碼，
+
+<p><table border=0 width=500 class=main cellpadding=10>
+<tr><td bgcolor=DDDDDD>
+<p>這個例子顯示出 &lt;b class="special"&gt;同一個選擇器&lt;/b&gt;可以&lt;i class="special"&gt;有不同的 instance。&lt;/i&gt;.
+</td></tr></table>
+
+<p>就位顯現出，
+
+<p><table border=0 width=500 class=main cellpadding=10>
+<tr><td bgcolor=CCFFCC>
+<p>這個例子顯示出<b class="special">同一個選擇器</b>可以<i class="special">有不同的 instance。</i>.
+</td></tr></table>
+
+<h3>多重 Class</h3>
+
+<p>我們也可以同時套用數個 class。舉例來說，若我們有以下的 CSS 宣告，
+
+<p><table border=0 width=500 class=main cellpadding=10>
+<tr><td bgcolor=DDDDDD>
+<p>.applylarge {
+<br> &nbsp; font-size:20px;
+<br>}
+<p>.applyred {
+<br> &nbsp; color:#FF0000;
+<br>}
+</td></tr></table>
+
+<p>那以下的 HTML 碼，
+
+<p><table border=0 width=500 class=main cellpadding=10>
+<tr><td bgcolor=DDDDDD>
+<p>&lt;p class="applylarge applyred"&gt;這是多重 Class 的例子。&lt;/p&gt;
+</td></tr></table>
+
+<p>就會顯現出，
+
+<p><table border=0 width=500 class=main cellpadding=10>
+<tr><td bgcolor=CCFFCC>
+<p style='font-size:20px; color:#FF0000;'>這是多重 Class 的例子。</p>
+</td></tr></table>
+
+<h3>ID</h3>
+
+<p>ID 的宣告法，是先放一個井字號 (#)，之後再列出選擇器名稱。設定一個 ID 選擇器的語法如下：
+
+<p><font color="006600">#【ID 名稱】{
+<br> &nbsp;  屬性：設定值；
+<br> &nbsp;  ...
+<br>}
+</font>
+
+<p>舉例來說，
+
+<p><table border=0 width=300 class=main cellpadding=10>
+<tr><td bgcolor=DDDDDD>
+<p>#footer {
+<br>  color:#FF00FF;
+<br>}
+</td></tr></table>
+
+<p>要將以上的樣式套用在 HTML 內，我們用以下的 HTML 碼：
+
+<p><table border=0 width=500 class=main cellpadding=10>
+<tr><td bgcolor=DDDDDD>
+<p>&lt;p id="footer"&gt;這是用 ID 選擇器的例子。&lt;/p&gt;
+</td></tr></table>
+
+<p>顯現出的結果為，
+
+<p><table border=0 width=300 class=main cellpadding=10>
+<tr><td bgcolor=CCFFCC>
+<p id="footer">這是用 ID 選擇器的例子。</p>
+</td></tr></table>
+
+<h3>Class 跟 ID 的比較</h3>
+
+<p>這兩者最大的不同，是在於 ID 選擇器在一個 HTML 文件中只能被使用一次，而 Class 選擇器在一個 HTML 文件中可以被使用多次。第二個不同的地方，是 ID 選擇器可以被 Javascript 中的 GetElementByID 函數所運用，而 Class 選擇器無法被 Javascript 運用到。
+
+<p>並沒有什麼固定的規則，來決定什麼時候要用 ID 及什麼時候要用 Class。我們的建議是盡量用 Class，因為這樣子最靈活 (同一個 HTML 文件可以利用這類的選擇器多次)。唯一的例外，是當你要用 Javascript 的 GetElementByID 函數時。在這個情況下，你就應該要用 ID。
+
+<p>Class 名稱及 ID 名稱都是對大小寫敏感的。舉例來說，.classone 及 .ClassOne 是代表兩個不同的 Class 選擇器。
+
+<p><center>下一頁： <a href=div-span.html>CSS Div 與 CSS Span</a></center>
+
+
+</td>
+
+﻿
+</tr></table>
+
+</td></tr><tr valign=top>
+
+        <td valign="top" width="190" nowrap vlink="#000000" bgcolor=6600FF>
+		<table border=0 cellpadding=8>
+		<tr><td>
+<br>
+
+<font size="-1" face="Verdana, Arial, Helvetica, sans-serif">
+<a class=nav href="index.html">CSS 語法教學</a><br>
+
+<a class=nav href="syntax.html">CSS 語法</a><br>
+<a class=nav href="apply.html">CSS 套用方式</a><br>
+<a class=nav href="media-types.html">CSS  媒體類別</a><br>
+<a class=nav href="cascade.html">CSS 串接</a><br>
+<a class=nav href="inheritance.html">CSS 繼承</a><br>
+<a class=nav href="class-id.html">CSS Class 與 ID</a><br>
+<a class=nav href="div-span.html">CSS Div 與 Span</a><br>
+<a class=nav href="length-units.html">CSS 長度單位</a><br><br>
+
+<a class=nav href="box-model.html">CSS 盒子模式</a><br>
+<a class=nav href="margin.html">CSS 邊界 (Margin)</a><br>
+<a class=nav href="border.html">CSS 邊框 (Border)</a><br>
+<a class=nav href="padding.html">CSS 留白 (Padding)</a><br>
+<a class=nav href="background.html">CSS 背景 (Background)</a><br>
+<a class=nav href="color.html">CSS 顏色</a><br>
+<a class=nav href="font.html">CSS 字體</a><br>
+<a class=nav href="link.html">CSS 連接</a><br>
+<a class=nav href="list.html">CSS 清單 (List)</a><br>
+<a class=nav href="table.html">CSS 表格 (Table)</a><br>
+<a class=nav href="position.html">CSS 位置 (Position)</a><br>
+<a class=nav href="text.html">CSS 文字 (Text)</a><br>
+<a class=nav href="float.html">CSS 浮動 (Float)</a><br>
+<a class=nav href="clear.html">CSS 清除 (Clear)</a><br>
+<a class=nav href="cursor.html">CSS 滑鼠游標圖案</a><br><br>
+
+<a class=nav href="codes.html">CSS 樣式</a><br><br>
+		</td></tr></table></td>
+        </td>
+      </tr>
+    </table>
+  </center>
+</body>
+
+<!-- Mirrored from www.1keydata.com/css-tutorial/tw/class-id.php by HTTrack Website Copier/3.x [XR&CO'2013], Thu, 22 Aug 2013 15:42:07 GMT -->
+</html>

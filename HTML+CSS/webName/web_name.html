@@ -1,0 +1,247 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>常用的CSS命名規則</title>
+<style type="text/css">
+body {
+	color: #333;
+	background-color: #F5F5F5;
+	font-family: "微軟正黑體", "Times New Roman", Times, serif;
+}
+h1 {
+	border-bottom-width: 1pt;
+	border-bottom-style: dashed;
+	border-bottom-color: #999;
+	line-height: 2;
+	margin: 0px;
+	text-indent: 0.5em;
+	font-family: "標楷體";
+	position:relative;
+	
+	animation:mymove 0.8s infinite 1s;
+	-webkit-animation:mymove 0.8s infinite 1s; /* Safari and Chrome 參數 過場時間 動畫曲線 延遲*/
+	
+	animation-iteration-count:4;
+	-webkit-animation-iteration-count:4; /* Safari and Chrome 播放次數*/
+	
+	animation-direction:alternate;
+	-webkit-animation-direction:alternate; /* Safari and Chrome 倒回動作 */ 
+}
+h2 {
+	text-indent: 1em;
+	color: #369;
+	line-height: 2;
+	margin: 0px;
+}
+h3 {
+	color: #999;
+	line-height: 1.8;
+	margin: 0px;
+	font-family: "標楷體";
+	border-top-width: 1pt;
+	border-bottom-width: 1pt;
+	border-top-style: dotted;
+	border-bottom-style: dotted;
+	border-top-color: #CCC;
+	border-bottom-color: #CCC;
+	background-color: #FAFAFA;
+	text-indent: 1em;
+	
+	transform:rotate(-1deg);
+	-ms-transform:rotate(-1deg); /* IE 9 */
+	-webkit-transform:rotate(-1deg); /* Safari and Chrome */
+}
+p {
+	line-height: 1.5;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-left: 0px;
+}
+.wrap {
+	width: 900px;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: #FFF;
+	padding-top: 1em;
+	padding-right: 2em;
+	padding-bottom: 1em;
+	padding-left: 2em;
+}
+
+.this2 {
+	-moz-column-count:2; /* Firefox */
+	-webkit-column-count:2; /* Safari and Chrome */
+	column-count:2;
+}
+.this3 {
+	-moz-column-count: 3; /* Firefox */
+	-webkit-column-count: 3; /* Safari and Chrome */
+	column-count: 3;
+}
+.indent {
+	text-indent: -1em;
+	margin-left: 3em;
+}
+
+/* CSS3 動畫時間軸 */
+@keyframes mymove
+{
+	0%   {color:#555;top: 0px;}
+	50% {color:red;}
+	100% {color:#555;top: -8px;line-height: 1;}
+}
+
+@-webkit-keyframes mymove /* Safari and Chrome */
+{
+	0%   {color:#555;top: 0px;}
+	50% {color:red;}
+	100% {color:#555;top: -8px;line-height: 1;}
+}
+</style>
+</head>
+
+<body>
+<div class="wrap">
+
+<h1>常用的CSS命名規則</h1>
+<ul class="this3">
+  <li>頭：header</li>
+  <li>內容：content/container</li>
+  <li>腳：footer</li>
+  <li>導航：nav</li>
+  <li>側欄：sidebar</li>
+  <li>欄目：column</li>
+  <li>整體佈局寬度：wrapper</li>
+  <li>左右中：left right center</li>
+  <li>登錄條：loginbar</li>
+  <li>標誌：logo</li>
+  <li>廣告：banner</li>
+  <li>頁面主體：main</li>
+  <li>熱點：hot</li>
+  <li>新聞：news</li>
+  <li>下載：download</li>
+  <li>子導航：subnav</li>
+  <li>菜單：menu</li>
+  <li>子菜單：submenu</li>
+  <li>搜索：search</li>
+  <li>友情鏈接：friendlink</li>
+  <li>頁腳：footer</li>
+  <li>版權：copyright</li>
+  <li>滾動：scroll</li>
+  <li>內容：content</li>
+  <li>標籤頁：tab</li>
+  <li>文章列表：list</li>
+  <li>提示信息：msg</li>
+  <li>小技巧：tips</li>
+  <li>欄目標題：title</li>
+  <li>加入：joinus</li>
+  <li>指南：guild</li>
+  <li>服務：service</li>
+  <li>註冊：regsiter</li>
+  <li>狀態：status</li>
+  <li>投票：vote</li>
+  <li>合作夥伴：partner</li>
+</ul>
+<blockquote>
+  <p>註釋的寫法: /* Footer */<br>
+    內容區 /* End Footer */</p>
+</blockquote>
+<h1>id的命名:</h1>
+<h2>(1)頁面結構</h2>
+<ul class="this2">
+  <li>容器: container</li>
+  <li>頁頭：header</li>
+  <li>內容：content/container</li>
+  <li>頁面主體：main</li>
+  <li>頁尾：footer</li>
+  <li>導航：nav</li>
+  <li>側欄：sidebar</li>
+  <li>欄目：column</li>
+  <li>頁面外圍控制整體佈局寬度：wrapper</li>
+  <li>左右中：left right center</li>
+</ul>
+<h2>(2)導航</h2>
+<ul class="this2">
+  <li>導航：nav</li>
+  <li>主導航：mainbav</li>
+  <li>子導航：subnav</li>
+  <li>頂導航：topnav</li>
+  <li>邊導航：sidebar</li>
+  <li>左導航：leftsidebar</li>
+  <li>右導航：rightsidebar</li>
+  <li>菜單：menu</li>
+  <li>子菜單：submenu</li>
+  <li>標題: title</li>
+  <li>摘要: summary</li>
+</ul>
+<h2>(3)功能</h2>
+<ul class="this3">
+  <li>標誌：logo</li>
+  <li>廣告：banner</li>
+  <li>登入：login</li>
+  <li>登入條：loginbar</li>
+  <li>註冊：regsiter</li>
+  <li>搜索：search</li>
+  <li>功能區：shop</li>
+  <li> 標題：title</li>
+  <li>加入：joinus</li>
+  <li>狀態：status</li>
+  <li>按鈕：btn</li>
+  <li>滾動：scroll</li>
+  <li>標籤頁：tab</li>
+  <li>文章列表：list</li>
+  <li>提示信息：msg</li>
+  <li>當前的: current</li>
+  <li>小技巧：tips</li>
+  <li>圖標: icon</li>
+  <li>註釋：note</li>
+  <li>指南：guild</li>
+  <li>服務：service</li>
+  <li>熱點：hot</li>
+  <li>新聞：news</li>
+  <li>下載：download</li>
+  <li>投票：vote</li>
+  <li>合作夥伴：partner</li>
+  <li>友情鏈接：link</li>
+  <li>版權：copyright</li>
+</ul>
+<h3> class的命名:</h3>
+<div class="this2 indent">
+<p>(1)顏色:使用顏色的名稱或者16進制代碼,如<br>
+  .red { color: red; }<br>
+  .f60 { color: #f60; }<br>
+.ff8600 { color: #ff8600; }</p>
+<p>(2)字體大小,直接使用&quot;font+字體大小&quot;作為名稱,如<br>
+  .font12px { font-size: 12px; }<br>
+.font9pt {font-size: 9pt; }</p>
+<p>(3)對齊樣式,使用對齊目標的英文名稱,如<br>
+  .left { float:left; }<br>
+.bottom { float:bottom; }</p>
+<p>(4)標題欄樣式,使用&quot;類別+功能&quot;的方式命名,如<br>
+  .barnews { }<br>
+  .barproduct { }</p>
+</div>
+<h3>* 注意事項:</h3>
+<ol>
+  <li>一律小寫。</li>
+  <li>盡量用英文。</li>
+  <li>盡量不縮寫，除非一看就明白的單詞。</li>
+</ol>
+<h3>@ 樣式名稱範例:</h3>
+<ul class="this2">
+  <li>主要的 master.css</li>
+  <li>模塊 module.css</li>
+  <li>基本共用 base.css</li>
+  <li>佈局，版面 layout.css</li>
+  <li>主題 themes.css</li>
+  <li>專欄 columns.css</li>
+  <li>文字 font.css</li>
+  <li>表單 forms.css</li>
+  <li>修正 mend.css</li>
+  <li>列印 print.css</li>
+</ul>
+
+</div>
+</body>
+</html>

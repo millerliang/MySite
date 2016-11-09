@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="Author" content="UUPON Inc." />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>UUPON - 填問卷送點數幸運兒</title>
+	<link rel="stylesheet" href="bootstrap.min.css">
+
+	<style>
+		body {font-family: Arial, Helvetica, sans-serif, 微軟正黑體;background-image: url("img/body_bg.png");color: #444;margin: 0;padding: 0;background-color: #eee;overflow-x:hidden;}
+		.wrap {background-color: #fff;margin:1em auto 0em auto;max-width: 620px;;padding: 8px 12px;border:solid 1px #ddd;
+		-webkit-box-shadow: 0px 0px 5px #ddd;
+		-moz-box-shadow: 0px 0px 5px #ddd;
+		box-shadow: 0px 0px 5px #ddd;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		border-radius: 5px;
+		}
+		a {color:#fff !important;text-decoration:none !important;}
+		h2 {font-size: 14pt;color:#000;padding-left: 0.3em;}
+		.top_benner {background-image:url("img/shine.gif");background-repeat:no-repeat;background-size:cover;}
+		.f14 {font-size: 14pt;}
+		p {line-height: 1.5;margin-left: 0.6em;}
+		hr {border: 1px solid #eee;}
+		.red {color:red;}
+		/* Send btn */
+		.send_btn {margin:1.2em 0;}
+		/* Copyright */
+		footer {font-size: 9pt;color: #999;text-align: center;line-height: 3;}
+		.hidden {display: none;}
+		@media screen and (max-width: 640px) {
+			.wrap {margin: 0;}
+		}
+		
+	/* Send Btn Style */
+	.a_demo_four {
+		text-shadow: 1px 1px 2px #000;
+		display: block;
+		font-size: 16pt;
+		text-align: center;
+		background-color:#3bb3e0;
+		position:relative;
+		padding:10px;
+		padding-right:50px;
+		background-image: linear-gradient(bottom, rgb(44,160,202) 0%, rgb(62,184,229) 100%);
+		background-image: -o-linear-gradient(bottom, rgb(44,160,202) 0%, rgb(62,184,229) 100%);
+		background-image: -moz-linear-gradient(bottom, rgb(44,160,202) 0%, rgb(62,184,229) 100%);
+		background-image: -webkit-linear-gradient(bottom, rgb(44,160,202) 0%, rgb(62,184,229) 100%);
+		background-image: -ms-linear-gradient(bottom, rgb(44,160,202) 0%, rgb(62,184,229) 100%);
+		background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0, rgb(44,160,202)),
+		color-stop(1, rgb(62,184,229))
+		);
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		-o-border-radius: 5px;
+		border-radius: 5px;
+		-webkit-box-shadow: inset 0px 1px 0px #2ab7ec, 0px 5px 0px 0px #156785, 0px 10px 5px #999;
+		-moz-box-shadow: inset 0px 1px 0px #2ab7ec, 0px 5px 0px 0px #156785, 0px 10px 5px #999;
+		-o-box-shadow: inset 0px 1px 0px #2ab7ec, 0px 5px 0px 0px #156785, 0px 10px 5px #999;
+		box-shadow: inset 0px 1px 0px #2ab7ec, 0px 5px 0px 0px #156785, 0px 10px 5px #999;
+	}
+	.a_demo_four:active {
+		top:3px;
+		background-image: linear-gradient(bottom, rgb(62,184,229) 0%, rgb(44,160,202) 100%);
+		background-image: -o-linear-gradient(bottom, rgb(62,184,229) 0%, rgb(44,160,202) 100%);
+		background-image: -moz-linear-gradient(bottom, rgb(62,184,229) 0%, rgb(44,160,202) 100%);
+		background-image: -webkit-linear-gradient(bottom, rgb(62,184,229) 0%, rgb(44,160,202) 100%);
+		background-image: -ms-linear-gradient(bottom, rgb(62,184,229) 0%, rgb(44,160,202) 100%);
+		background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0, rgb(62,184,229)),
+		color-stop(1, rgb(44,160,202))
+		);
+		-webkit-box-shadow: inset 0px 1px 0px #2ab7ec, 0px 2px 0px 0px #156785, 0px 5px 3px #999;
+		-moz-box-shadow: inset 0px 1px 0px #2ab7ec, 0px 2px 0px 0px #156785, 0px 5px 3px #999;
+		-o-box-shadow: inset 0px 1px 0px #2ab7ec, 0px 2px 0px 0px #156785, 0px 5px 3px #999;
+		box-shadow: inset 0px 1px 0px #2ab7ec, 0px 2px 0px 0px #156785, 0px 5px 3px #999;
+	}
+	.a_demo_four::before {
+		background-color:#2591b4;
+		background-image:url(img/right_arrow.png);
+		background-repeat:no-repeat;
+		background-position:center center;
+		content:"";
+		width:20px;
+		height:20px;
+		position:absolute;
+		right:15px;
+		top:50%;
+		margin-top:-9px;
+		-webkit-border-radius: 50%;
+		-moz-border-radius: 50%;
+		-o-border-radius: 50%;
+		border-radius: 50%;
+		-webkit-box-shadow: inset 0px 1px 0px #052756, 0px 1px 0px #60c9f0;
+		-moz-box-shadow: inset 0px 1px 0px #052756, 0px 1px 0px #60c9f0;
+		-o-box-shadow: inset 0px 1px 0px #052756, 0px 1px 0px #60c9f0;
+		box-shadow: inset 0px 1px 0px #052756, 0px 1px 0px #60c9f0;
+	}
+	.a_demo_four:active::before {
+		top:50%;
+		margin-top:-12px;
+		-webkit-box-shadow: inset 0px 1px 0px #60c9f0, 0px 3px 0px #0e3871, 0px 6px 3px #1a80a6;
+		-moz-box-shadow: inset 0px 1px 0px #60c9f0, 0px 3px 0px #0e3871, 0px 6px 3px #1a80a6;
+		-o-box-shadow: inset 0px 1px 0px #60c9f0, 0px 3px 0px #0e3871, 0px 6px 3px #1a80a6;
+		box-shadow: inset 0px 1px 0px #60c9f0, 0px 3px 0px #0e3871, 0px 6px 3px #1a80a6;
+	}
+	</style>
+</head>
+<body>
+	<div class="wrap container">
+		<img src="img/top_title.png" style="max-width: 100%;">
+		<div class="top_benner"><img src="img/top_benner.png" style="max-width: 100%;"></div>
+		<h2>活動說明：</h2>
+		<p>恭喜您，在 UUPON 三萬名會員中，你是 5％ 被抽中的幸運兒，只要您在本網頁正確提交您的資料和回答問題，就有<b class="red f14"> 15 </b>點好禮相送喔！</p>
+		<p>為了確認您是我們選中的幸運兒，請先回答您的身分驗證題，再進行用戶體驗調查。</p>
+		<hr>
+
+		<div class="row_">
+			<form class="form-horizontal">
+
+				<h4 class="col-xs-10 col-xs-offset-1 red"># 為確保您的身分，請回答以下您註冊時留存的資料。</h4>
+
+				<div class="form-group">
+					<label class="col-xs-10 col-xs-offset-1"><span class="red">*</span> 1. 請輸入身分證字號後四碼</label>
+					<div class="col-xs-10 col-xs-offset-1"><input type="text" class="form-control" placeholder="請填入四位數阿拉伯數字"></div>
+				</div>
+				<div class="form-group">
+					<label class="col-xs-10 col-xs-offset-1"><span class="red">*</span> 2. 請問您有幾個兄弟姊妹 <small>(含自己在內)</small></label>
+					<div class="col-xs-10 col-xs-offset-1"><input type="text" class="form-control" placeholder="請填入阿拉伯數字"></div>
+				</div>
+				<small class="col-xs-offset-1 red">* 必填欄位</small>
+
+				<hr>
+				<h4 class="col-xs-10 col-xs-offset-1 red">Q.目前 UUPON 會員以悠遊卡進行會員卡綁卡後，再利用悠遊卡進行小額消費，有哪一種好康提供呢？</h4>
+
+				<div class="form-group">
+					<div class="col-xs-10 col-xs-offset-1">
+						<select class="form-control">
+							<option>1. 消費累積滿 500 元送 50 點</option>
+							<option>2. 消費累積滿 500 元送 100 點</option>
+							<option>3. 消費累積滿 500 元送 500 點</option>
+						</select>
+					</div>
+				</div>
+
+			</form>
+		</div>
+
+		<hr>
+		<div class="send_btn">
+			<a class="a_demo_four" href="#">送 出</a>
+		</div>
+		
+	</div>
+	<footer>Copyright © 2015 UUPON Inc. 保留一切權利。</footer>
+</body>
+</html>

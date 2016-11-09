@@ -1,0 +1,226 @@
+﻿body {
+	margin: 0px;
+	padding: 0px;
+	background-color: rgba(245,245,245,1);
+	background-image: url(../images/paper_fibers.png);
+	font-family: Georgia, "微軟正黑體", "Times New Roman", Times, serif;
+}
+h1.title {
+	background-attachment: scroll;
+	background-image: url(../HTML5_PPT/images/logo-small.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	height: 90px;
+	display: block;
+	/*border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: rgba(153,153,153,1);*/
+	background-color: rgba(255,255,255,1);
+	padding: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 1px;
+	margin-left: 0px;
+}
+.uk-navbar {
+	/*text-align: center;*/
+	/*padding: 4px 0px 4px 0px;*/
+	margin-bottom: 1em;
+}
+.uk-navbar ul.fix {
+	float: none;
+	width: 720px;
+	margin-right: auto;
+	margin-left: auto;
+}
+a {
+	color: rgba(51,102,255,1);
+}
+a:hover {
+	color: rgba(255,102,0,1);
+	text-decoration: underline;
+}
+a:visited {
+	color: rgba(102,51,204,1);
+}
+a:active {
+	color: rgba(255,0,0,1);
+}
+.clear {
+	clear: both;
+}
+.site_link {
+	line-height: 2;
+	color: rgba(255,255,255,1);
+	background-color: rgba(47,94,204,0.8);
+	text-align: center;
+	font-family: Verdana, Geneva, sans-serif;
+	margin-bottom: 1em;
+	display: none;
+}
+
+/* 區塊內容 */
+.wrap {
+	width: 780px;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: rgba(255,255,255,1);
+	-moz-box-shadow: 0px 0px 5px #999999;
+	-webkit-box-shadow: 0px 0px 5px #999999;
+	box-shadow: 0px 0px 5px #999999;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	padding-top: 12px;
+	padding-right: 8px;
+	padding-bottom: 8px;
+	padding-left: 10px;
+	margin-bottom: 2em;
+	min-height: 450px;
+}
+.wrap .nav {
+	float: right;
+	width: 200px;
+	font-family: "Times New Roman", Times, serif;
+}
+.wrap .nav .subMenu {
+	color: rgba(80,99,118,1);
+	background-color: rgba(210,219,223,1);
+	line-height: 2;
+	letter-spacing: 2px;
+	font-weight: bold;
+	background-attachment: scroll;
+	background-image: url(../images/Whitedots_icon.png);
+	background-repeat: no-repeat;
+	background-position: 103% center;
+	background-size: 12px auto;
+	padding-left: 10px;
+}
+.wrap .nav ol, .wrap .nav ul {
+	margin-top: 0px;
+	margin-bottom: 2em;
+	list-style-type: none;
+	margin-right: 0px;
+	margin-left: 0px;
+	padding: 0px;
+}
+/*.wrap .nav ul {
+	list-style-type: none;
+}
+.wrap .nav ul li {
+	background-attachment: scroll;
+	background-image: url(../images/Arrow_iconsmll.png);
+	background-repeat: no-repeat;
+	background-position: 4px center;
+}*/
+.wrap .nav ol li, .wrap .nav ul li {
+	border-bottom-width: 1px;
+	border-bottom-style: dashed;
+	border-bottom-color: rgba(204,204,204,1);
+	margin: 0px;
+	padding: 0px;
+}
+.wrap .nav ol li a, .wrap .nav ul li a {
+	text-decoration: none;
+	line-height: 2.5;
+	display: block;
+	padding-left: 20px;
+	background-attachment: scroll;
+	background-image: url(../images/Arrow_iconBack.png);
+	background-repeat: no-repeat;
+	background-position: 4px center;
+	background-size: 10px auto;
+	-webkit-transition: all 0.3s ease-in-out 0s;
+	-moz-transition: all 0.3s ease-in-out 0s;
+	-ms-transition: all 0.3s ease-in-out 0s;
+	-o-transition: all 0.3s ease-in-out 0s;
+	transition: all 0.3s ease-in-out 0s;
+}
+/*.wrap .nav ul li a {
+	padding-left: 16px;
+}*/
+.wrap .nav ol li a:hover, .wrap .nav ul li a:hover {
+	background-color: rgba(240,240,240,1);
+	-webkit-transition: all 0.3s ease-in-out 0s;
+	-moz-transition: all 0.3s ease-in-out 0s;
+	-ms-transition: all 0.3s ease-in-out 0s;
+	-o-transition: all 0.3s ease-in-out 0s;
+	transition: all 0.3s ease-in-out 0s;
+}
+.wrap .cont {
+	width: 530px;
+	float: left;
+	display: block;
+	min-height: 350px;
+	border-right-width: 1px;
+	border-right-style: dotted;
+	border-right-color: rgba(151,185,185,1);
+	padding: 4px 20px 4px 16px;
+}
+.wrap .cont .dl {
+	margin-left: 1em;
+}
+.wrap .cont .dl img {
+	vertical-align: middle;
+	width: 28px;
+}
+.wrap .cont .dl a strong {
+	font-size: small;
+	color: rgba(102,102,102,1);
+	text-decoration: none;
+	margin-left: 8px;
+}
+.wrap .cont .dl a:hover {
+	
+}
+.wrap .cont p.zoom img {
+	width: 48px;
+	-webkit-transition: all 0.3s ease-in-out 0s;
+	-moz-transition: all 0.3s ease-in-out 0s;
+	-ms-transition: all 0.3s ease-in-out 0s;
+	-o-transition: all 0.3s ease-in-out 0s;
+	transition: all 0.3s ease-in-out 0s;
+	cursor: pointer;
+}
+.wrap .cont p.zoom img:hover {
+	width: 64px;
+	-webkit-transition: all 0.3s ease-in-out 0s;
+	-moz-transition: all 0.3s ease-in-out 0s;
+	-ms-transition: all 0.3s ease-in-out 0s;
+	-o-transition: all 0.3s ease-in-out 0s;
+	transition: all 0.3s ease-in-out 0s;
+	border: 1pt solid rgba(100,100,100,1);
+	/*-moz-box-shadow: 0px 0px 4px #555;
+	-webkit-box-shadow: 0px 0px 4px #555;
+	box-shadow: 0px 0px 4px #555;*/
+}
+
+/* 頁腳 */
+.foot {
+	text-align: center;
+	font-size: small;
+	color: rgba(51,51,51,1);
+	width: 100%;
+	background-color: rgba(255,255,255,1);
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: rgba(204,204,204,1);
+	position: fixed;
+	bottom: 0
+}
+.foot a {
+	color: #0066CC;
+	text-decoration: none;
+	line-height: 3;
+}
+.foot a:hover {
+	color: #FF9900;
+}
+
+/* 高度低於 600px 像素時 */
+@media screen and (max-height: 600px){
+	.foot {
+	position: static;
+	bottom: auto;
+	}
+}

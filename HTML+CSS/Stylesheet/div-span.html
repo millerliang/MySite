@@ -1,0 +1,131 @@
+<html lang="zh-tw">
+
+<!-- Mirrored from www.1keydata.com/css-tutorial/tw/div-span.php by HTTrack Website Copier/3.x [XR&CO'2013], Thu, 22 Aug 2013 15:42:07 GMT -->
+<head>
+<title>CSS DIV 與 CSS SpanCSS 語法教學</title>
+<meta name="description" content="解釋 CSS 中的  DIV 與 SPAN 標籤，以及這兩者之間的不同。">
+<link rel="canonical" href="div-span.html" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel=stylesheet type="text/css" href="css-tutorial.css">
+</head>
+<body>
+<center><table border=0 bgcolor="FFA900" width=960 cellspacing=0 cellpadding=0><tr valign=top><td><h2> CSS Div 與 CSS Span </h2>
+</td><td align=right>
+</td></tr></table>
+<table border="0" cellspacing="0" cellpadding="0" width="960" bgcolor="FFFFFF">
+<tr><td height=1 width=190 bgcolor=6600FF></td><td rowspan=2 valign=top width=690 valign=top>
+<table border=0 cellspacing=5 class=main><tr><td valign="top"><h6><a href="index.html">CSS 教學</a> &nbsp;&gt;&nbsp; CSS Div 與 CSS Span</h6>
+<center>
+
+</center><h3>Div</h3>
+<p>Div 這個標籤目的是將內容分為不同的區域，而每一個區域可以根據 CSS 中的宣告而有自己的樣式。Div 是一個區塊級容器 (block-level container)，這代表在 &lt;/div&gt; 標籤後會換行。 </p>
+
+<p>舉例來說，如果我們有以下的 CSS 樣式：
+
+<p><table border=0 width=300 class=main cellpadding=10>
+<tr><td bgcolor=DDDDDD>
+<p>.large {
+<br> &nbsp; color: #00FF00;
+<br> &nbsp; font-family:arial;
+<br> &nbsp; font-size: 4pt;
+<br>}
+</td></tr></table>
+
+<p>以下的 HTML 碼，
+
+<p><table border=0 width=300 class=main cellpadding=10>
+<tr><td bgcolor=DDDDDD>
+<p>&lt;div class="large"&gt;
+<br> &nbsp; 這是 DIV 範例。
+<br>&lt;/div&gt;
+</td></tr></table>
+
+<p>就會顯現為，
+
+<p><table border=0 width=500 class=main cellpadding=10>
+<tr><td>
+<p><font face=arial; size=4pt; color=#00FF00>這是 DIV 範例。</font>
+</td></tr></table>
+
+<h3>Span</h3>
+
+<p>Span 跟 Div 類似的地方是，這兩個標籤的目的都是將內容分為不同的區域。不同的是，Span 可以涵蓋更細層的元素。所以，我們甚至可以用 &lt;span&gt; 來調整單一文字的樣式。另外，在 &lt;/span&gt 之後並不會換行。
+
+<p>舉例來說，如果我們有以下的 CSS 樣式：
+
+<p><table border=0 width=300 class=main cellpadding=10>
+<tr><td bgcolor=DDDDDD>
+<p>.largefont {
+<br> &nbsp; color: #0066FF;
+<br> &nbsp; font-family:arial;
+<br> &nbsp; font-size: 6px;
+<br>}
+</td></tr></table>
+
+<p>以下的 HTML 碼，
+
+<p><table border=0 width=500 class=main cellpadding=10>
+<tr><td bgcolor=DDDDDD>
+<p>Span 不是&lt;span class="largefont"&gt;區塊級的&lt;/span&gt;. 
+</td></tr></table>
+
+<p>就會顯現為，
+
+<p><table border=0 width=500 class=main cellpadding=10>
+<tr><td>
+<p>Span 不是<font face=arial; size=6px; color=#0066FF>區塊級的</font>.
+</td></tr></table>
+
+<p><center>下一頁： <a href="length-units.html">CSS 長度單位</a></center>
+
+
+</td>
+
+﻿
+</tr></table>
+
+</td></tr><tr valign=top>
+
+        <td valign="top" width="190" nowrap vlink="#000000" bgcolor=6600FF>
+		<table border=0 cellpadding=8>
+		<tr><td>
+<br>
+
+<font size="-1" face="Verdana, Arial, Helvetica, sans-serif">
+<a class=nav href="index.html">CSS 語法教學</a><br>
+
+<a class=nav href="syntax.html">CSS 語法</a><br>
+<a class=nav href="apply.html">CSS 套用方式</a><br>
+<a class=nav href="media-types.html">CSS  媒體類別</a><br>
+<a class=nav href="cascade.html">CSS 串接</a><br>
+<a class=nav href="inheritance.html">CSS 繼承</a><br>
+<a class=nav href="class-id.html">CSS Class 與 ID</a><br>
+<a class=nav href="div-span.html">CSS Div 與 Span</a><br>
+<a class=nav href="length-units.html">CSS 長度單位</a><br><br>
+
+<a class=nav href="box-model.html">CSS 盒子模式</a><br>
+<a class=nav href="margin.html">CSS 邊界 (Margin)</a><br>
+<a class=nav href="border.html">CSS 邊框 (Border)</a><br>
+<a class=nav href="padding.html">CSS 留白 (Padding)</a><br>
+<a class=nav href="background.html">CSS 背景 (Background)</a><br>
+<a class=nav href="color.html">CSS 顏色</a><br>
+<a class=nav href="font.html">CSS 字體</a><br>
+<a class=nav href="link.html">CSS 連接</a><br>
+<a class=nav href="list.html">CSS 清單 (List)</a><br>
+<a class=nav href="table.html">CSS 表格 (Table)</a><br>
+<a class=nav href="position.html">CSS 位置 (Position)</a><br>
+<a class=nav href="text.html">CSS 文字 (Text)</a><br>
+<a class=nav href="float.html">CSS 浮動 (Float)</a><br>
+<a class=nav href="clear.html">CSS 清除 (Clear)</a><br>
+<a class=nav href="cursor.html">CSS 滑鼠游標圖案</a><br><br>
+
+<a class=nav href="codes.html">CSS 樣式</a><br><br>
+		</td></tr></table></td>
+        </td>
+      </tr>
+    </table>
+  </center>
+</body>
+
+<!-- Mirrored from www.1keydata.com/css-tutorial/tw/div-span.php by HTTrack Website Copier/3.x [XR&CO'2013], Thu, 22 Aug 2013 15:42:07 GMT -->
+</html>

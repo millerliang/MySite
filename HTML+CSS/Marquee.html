@@ -1,0 +1,245 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>跑馬燈</title>
+<style type="text/css">
+.marquee {
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-left-style: solid;
+	border-top-color: rgba(204,204,204,1);
+	border-right-color: rgba(204,204,204,1);
+	border-left-color: rgba(204,204,204,1);
+	width: 780px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.marquee th {
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: rgba(204,204,204,1);
+	vertical-align: top;
+	background-color: rgba(235,239,241,1);
+}
+.marquee td {
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: rgba(204,204,204,1);
+}
+</style>
+</head>
+
+<body>
+<table class="marquee" border="0" cellpadding="6" cellspacing="0">
+<tbody>
+<tr>
+	<td colspan="2"><span style="font-size: 12pt;">◆<span style="font-size: 7pt;"> </span><strong>跑馬燈的基本語法</strong></span><span style="font-size: 10pt;"><span style="font-size: 12pt;"><strong>＆執行預覽</strong></span></span><span style="font-size: 10pt;"><span style="font-size: 12pt;"><strong>：</strong></span><br /><span style="color: #003366;">&lt;marquee&gt;顯示內容&lt;/marquee&gt;</span></span></td>
+</tr>
+<tr>
+<td colspan="2"><span style="font-size: 10pt;"><span style="font-size: 12pt;">&nbsp;◆<span style="font-size: 7pt;"> </span></span><span style="font-size: 12pt;"><strong>全部屬性的使用說明＆執行預覽：</strong></span></span><br /></td>
+</tr>
+<tr>
+<th style="width: 50px;"><span style="color: #003366;"><span style="font-size: 10pt;">（1）</span></span></th>
+<td><span style="color: #003366;"><span style="font-size: 10pt;">WIDTH="數值"</span></span></td>
+</tr>
+<tr>
+<th><span style="font-size: 10pt;">說明：</span></th>
+<td><span style="font-size: 10pt;">設定跑馬燈的寬度（單位：像素／px），若不指定則預設為版面寬度</span></td>
+</tr>
+<tr>
+<th><span style="font-size: 10pt;">預覽：</span></th>
+<td><span style="font-size: 10pt;">1.不加屬性「<span style="color: #003300;"><strong>WIDTH=" "</strong></span><span style="font-size: 10pt;">」<br /><marquee bgcolor="#f9f7b3"><span style="color: #1A73E1;">跑馬燈範例</span></marquee><br /><span style="color: #ffffff;">1.</span><br />2.設定屬性「</span><span style="font-size: 10pt;"><span style="color: #003300;"><strong><span style="color: #333300;">WIDTH="500"</span></strong></span></span><span style="font-size: 10pt;">」</span><span style="font-size: 10pt;"><br /><marquee bgcolor="#f9f7b3" width="500"><span style="color: #1A73E1;">跑馬燈範例</span></marquee><br /><br /></span></span></td>
+</tr>
+<tr>
+<th style="width: 40px;"><span style="color: #003366;"><span style="font-size: 10pt;">（2）</span></span></th>
+<td><span style="color: #003366;"><span style="font-size: 10pt;">HEIGHT="數值"</span></span></td>
+</tr>
+<tr>
+<th><span style="font-size: 10pt;">說明：</span></th>
+<td><span style="font-size: 10pt;">設定跑馬燈的高度（</span><span style="font-size: 10pt;">單位：像素／px</span><span style="font-size: 10pt;">）</span><span style="font-size: 10pt;">，若不指定則預設為顯示內容的高度</span></td>
+</tr>
+<tr>
+<th><span style="font-size: 10pt;">預覽：</span></th>
+<td><span style="font-size: 10pt;">1.不加屬性「</span><span style="font-size: 10pt;"><span style="color: #003300;"><strong>HEIGHT=" </strong>"</span></span><span style="font-size: 10pt;">」 <br /><marquee bgcolor="#f9f7b3" width="500"><span style="color: #1A73E1;">跑馬燈範例</span></marquee><br /><br />2.設定屬性「</span><span style="font-size: 10pt;"><span style="color: #003300;"><strong>HEIGHT="30</strong>"</span></span><span style="font-size: 10pt;">」</span><span style="font-size: 10pt;"><br /><marquee bgcolor="#f9f7b3" height="30" width="500"><span style="color: #1A73E1;">跑馬燈範例</span></marquee><br /><br /></span></td>
+</tr>
+<tr>
+<th style="width: 40px;"><span style="color: #003366;"><span style="font-size: 10pt;">（3）</span></span></th>
+<td><span style="color: #003366;"><span style="font-size: 10pt;">BEHAVIOR="屬性"</span></span></td>
+</tr>
+<tr>
+<th><span style="font-size: 10pt;">說明：</span></th>
+<td><span style="font-size: 10pt;">顯示內容的移動方式（省略時的預設值：SCROLL）<br /></span><span style="font-size: 10pt;">共有：不斷的由右循環至左／SCROLL、不斷的在左、右之間來回／ALTERNATE 以及 <br /><span style="color: #ffffff;">共有：</span>由右滑動至左（一次）／SLIDE 這三種方式</span></td>
+</tr>
+<tr>
+<th><span style="font-size: 10pt;">預覽：</span></th>
+<td><span style="font-size: 10pt;">1.不加屬性「</span><span style="font-size: 10pt;"><span style="color: #003300;"><strong>BEHAVIOR=" "</strong></span></span><span style="font-size: 10pt;">」 <br /><marquee bgcolor="#f9f7b3" width="500"><span style="color: #1A73E1;">跑馬燈範例</span></marquee><br /><br />2.設定屬性「</span><span style="font-size: 10pt;"><span style="color: #003300;"><span style="color: #333300;"><strong><span style="color: #003300;">BEHAVIOR=</span></strong><strong>"SCROLL"</strong></span></span></span><span style="font-size: 10pt;">」</span><span style="font-size: 10pt;"><br /><marquee behavior="SCROLL" bgcolor="#f9f7b3" width="500"><span style="color: #1A73E1;">跑馬燈範例</span></marquee>
+<br /><br />3.設定屬性「</span><span style="font-size: 10pt;"><span style="color: #003300;"><span style="color: #333300;"><strong>BEHAVIOR=</strong><strong>"ALTERNATE"</strong></span></span></span><span style="font-size: 10pt;">」</span><span style="font-size: 10pt;"><br /><marquee behavior="ALTERNATE" bgcolor="#f9f7b3" width="500"><span style="color: #1A73E1;">跑馬燈範例</span></marquee>
+<br /><br />4.設定屬性「</span><span style="font-size: 10pt;"><span style="color: #003300;"><span style="color: #333300;"><strong>BEHAVIOR=</strong><strong>"SLIDE"</strong></span></span></span><span style="font-size: 10pt;">」 </span><span style="font-size: 10pt;"><br /><marquee behavior="SLIDE" bgcolor="#f9f7b3" width="500"><span style="color: #1A73E1;">跑馬燈範例</span></marquee>
+<br /><br /></span></td>
+</tr>
+<tr>
+<th style="width: 40px;"><span style="color: #003366;"><span style="font-size: 10pt;">（4）</span></span></th>
+<td><span style="color: #003366;"><span style="font-size: 10pt;">DIRECTION="屬性"</span></span></td>
+</tr>
+<tr>
+<th><span style="font-size: 10pt;">說明：</span></th>
+<td><span style="font-size: 10pt;">顯示內容的移動方向（省略時的預設值：LEFT）<br /></span><span style="font-size: 10pt;">共有：往上／UP、往下／DOWN、往左／LEFT 以及 往右／RIGHT 這四個方向</span></td>
+</tr>
+<tr>
+<th><span style="font-size: 10pt;">預覽：</span></th>
+<td>
+<table style="width: 500px;" border="0">
+<tbody>
+<tr>
+<td style="height: 26px; width: 500px;" colspan="3" valign="top"><span style="font-size: 10pt;">1.不加屬性「</span><span style="font-size: 10pt;"><span style="color: #003300;"><strong>DIRECTION=" "</strong></span></span><span style="font-size: 10pt;">」 </span><br /><marquee bgcolor="#f9f7b3" width="500"><span style="font-size: 10pt;"><span style="color: #1A73E1;">跑馬燈範例</span></span></marquee><br /><br /></td>
+</tr>
+<tr>
+<td style="height: 48px; width: 500px;" colspan="3" align="left" valign="top"><span style="font-size: 10pt;">2.分別設定屬性「</span><span style="font-size: 10pt;"><span style="color: #003300;"><strong>DIRECTION="</strong></span></span><strong><span style="font-size: 10pt;">UP、DOWN、LEFT、RIGHT</span></strong><span style="font-size: 10pt;"><span style="color: #003300;"><strong>"</strong></span></span><span style="font-size: 10pt;">」</span><br /><marquee bgcolor="#f9f7b3" direction="LEFT" width="500"><span style="font-size: 10pt;"><span style="color: #1A73E1;">往左</span></span></marquee></td>
+</tr>
+<tr>
+<td style="width: 20px; height: 70px;" align="left" valign="middle"><marquee bgcolor="#f9f7b3" direction="DOWN" height="70" width="16"><span style="font-size: 10pt;"><span style="color: #1A73E1;">往下</span></span></marquee></td>
+<td style="height: 70px; width: 460px;">&nbsp;<span style="color: #ffffff;">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</span></td>
+<td style="height: 70px; width: 20px;" align="right" valign="middle"><marquee bgcolor="#f9f7b3" direction="UP" height="70" width="16"><span style="font-size: 10pt;"><span style="color: #1A73E1;">往上</span></span></marquee></td>
+</tr>
+<tr>
+<td style="height: 26px;" colspan="3" valign="bottom"><marquee bgcolor="#f9f7b3" direction="RIGHT" width="500"><span style="font-size: 10pt;"><span style="color: #1A73E1;">往右</span></span></marquee></td>
+</tr>
+</tbody>
+</table>
+<br />
+</td>
+</tr>
+<tr>
+<th><span style="color: #003366;"><span style="font-size: 10pt;">（5）</span></span></th>
+<td><span style="color: #003366;"><span style="font-size: 10pt;">SCROLLAMOUNT="數值"</span></span></td>
+</tr>
+<tr>
+<th><span style="font-size: 10pt;">說明：</span></th>
+<td><span style="font-size: 10pt;">顯示內容每次的移動距離（省略時的預設值：6px）</span></td>
+</tr>
+<tr>
+<th><span style="font-size: 10pt;">預覽：</span></th>
+<td><span style="font-size: 10pt;">1.不加屬性「</span><span style="color: #003300;"><strong><span style="font-size: 10pt;">SCROLLAMOUNT</span><span style="font-size: 10pt;">=" "</span></strong></span><span style="font-size: 10pt;">」 <br /><marquee bgcolor="#f9f7b3" width="500"><span style="color: #1A73E1;">跑馬燈範例</span></marquee><br /><br />2.設定屬性「</span><strong><span style="color: #003300;"><span style="font-size: 10pt;">SCROLLAMOUNT</span><span style="font-size: 10pt;">="6"</span></span></strong><span style="font-size: 10pt;">」</span><span style="font-size: 10pt;"><br /><marquee scrollamount="6" bgcolor="#f9f7b3" width="500"><span style="color: #1A73E1;">跑馬燈範例</span></marquee><br /><br />3.設定屬性「</span><strong><span style="color: #003300;"><span style="font-size: 10pt;">SCROLLAMOUNT</span><span style="font-size: 10pt;">="0"</span></span></strong><span style="font-size: 10pt;">」</span><span style="font-size: 10pt;">（設為0的話，跑馬燈就完全不會移動了！）<br /><marquee scrollamount="0" bgcolor="#f9f7b3" width="500"><span style="color: #1A73E1;">跑馬燈範例</span></marquee><br /><br />4.設定屬性「</span><strong><span style="color: #003300;"><span style="font-size: 10pt;">SCROLLAMOUNT</span><span style="font-size: 10pt;">="30"</span></span></strong><span style="font-size: 10pt;">」</span><span style="font-size: 10pt;"><br /><marquee scrollamount="30" bgcolor="#f9f7b3" width="500"><span style="color: #1A73E1;">跑馬燈範例</span></marquee><br /><br /></span></td>
+</tr>
+<tr>
+<th><span style="color: #003366;"><span style="font-size: 10pt;">（6）</span></span></th>
+<td><span style="color: #003366;"><span style="font-size: 10pt;">SCROLLDELAY="數值"</span></span></td>
+</tr>
+<tr>
+<th><span style="font-size: 10pt;">說明：</span></th>
+<td><span style="font-size: 10pt;">顯示內容每次移動的間隔時間（省略時的預設值：85毫秒／ms）</span></td>
+</tr>
+<tr>
+<th><span style="font-size: 10pt;">預覽：</span></th>
+<td><span style="font-size: 10pt;">1.不加屬性「</span><strong><span style="color: #003300;"><span style="font-size: 10pt;">SCROLLDELAY</span><span style="font-size: 10pt;">=" "</span></span></strong><span style="font-size: 10pt;">」 <br /><marquee bgcolor="#f9f7b3" scrolldelay=" " width="500"><span style="color: #1A73E1;">跑馬燈範例</span></marquee><br /><br />2.設定屬性「</span><strong><span style="color: #003300;"><span style="font-size: 10pt;">SCROLLDELAY</span><span style="font-size: 10pt;">="85"</span></span></strong><span style="font-size: 10pt;">」</span><span style="font-size: 10pt;"><br /><marquee scrollamount="6" bgcolor="#f9f7b3" scrolldelay="85" width="500"><span style="color: #1A73E1;">跑馬燈範例</span></marquee><br /><br />3.設定屬性「</span><strong><span style="color: #003300;"><span style="font-size: 10pt;">SCROLLDELAY</span><span style="font-size: 10pt;">="300"</span></span></strong><span style="font-size: 10pt;">」</span><span style="font-size: 10pt;"><br /><marquee scrollamount="30" bgcolor="#f9f7b3" scrolldelay="300" width="500"><span style="color: #1A73E1;">跑馬燈範例</span></marquee><br /><br />4.設定屬性「</span><strong><span style="color: #003300;"><span style="font-size: 10pt;">SCROLLDELAY</span><span style="font-size: 10pt;">="500"</span></span></strong><span style="font-size: 10pt;">」</span><span style="font-size: 10pt;"><br /><marquee scrollamount="30" bgcolor="#f9f7b3" scrolldelay="500" width="500"><span style="color: #1A73E1;">跑馬燈範例</span></marquee><br /><br /></span></td>
+</tr>
+<tr>
+<th><span style="color: #003366;"><span style="font-size: 10pt;">（7）</span></span></th>
+<td><span style="color: #003366;"><span style="font-size: 10pt;">LOOP="次數"</span></span></td>
+</tr>
+<tr>
+<th><span style="font-size: 10pt;">說明：</span></th>
+<td><span style="font-size: 10pt;">顯示內容的執行次數（省略時的預設值：無限多次）</span><span style="font-size: 10pt;">，輸入「0」即代表執行無限多次</span></td>
+</tr>
+<tr>
+<th><span style="font-size: 10pt;">預覽：</span></th>
+<td><span style="font-size: 10pt;">1.不加屬性「</span><span style="color: #003300;"><span style="font-size: 10pt;"><strong>LOOP</strong></span><strong><span style="font-size: 10pt;">=" "</span></strong></span><span style="font-size: 10pt;">」 <br /><marquee loop=" " bgcolor="#f9f7b3" width="500"><span style="color: #1A73E1;">跑馬燈範例</span></marquee><br /><br />2.設定屬性「</span><strong><span style="color: #003300;"><span style="font-size: 10pt;">LOOP</span><span style="font-size: 10pt;">="0"</span></span></strong><span style="font-size: 10pt;">」</span><span style="font-size: 10pt;"><br /><marquee scrollamount="6" loop="0" bgcolor="#f9f7b3" width="500"><span style="color: #1A73E1;">跑馬燈範例</span></marquee><br /><br />3.設定屬性「</span><strong><span style="color: #003300;"><span style="font-size: 10pt;">LOOP</span><span style="font-size: 10pt;">="1"</span></span></strong><span style="font-size: 10pt;">」</span><span style="font-size: 10pt;"><br /><marquee loop="1" bgcolor="#f9f7b3" width="500"><span style="color: #1A73E1;">跑馬燈範例</span></marquee><br /><br /></span></td>
+</tr>
+<tr>
+<th><span style="color: #003366;"><span style="font-size: 10pt;">（8）</span></span></th>
+<td><span style="color: #003366;"><span style="font-size: 10pt;">ALIGN="屬性"</span></span></td>
+</tr>
+<tr>
+<th><span style="font-size: 10pt;">說明：</span></th>
+<td><span style="font-size: 10pt;">顯示內容的對齊位置（省略時的預設值：BOTTOM）<br /></span><span style="font-size: 10pt;">共有：置頂／TOP、置中／MIDDLE 以及 底部／BOTTOM 這三個位置</span></td>
+</tr>
+<tr>
+<th><span style="font-size: 10pt;">預覽：</span></th>
+<td><span style="font-size: 10pt;">1.不加屬性「<strong>ALIGN</strong></span><span style="color: #003300;"><strong><span style="font-size: 10pt;">=" "</span></strong></span><span style="font-size: 10pt;">」 <br /><marquee bgcolor="#f9f7b3" align=" " height="30" width="500"><span style="color: #1A73E1;">跑馬燈範例</span></marquee><br /><br />2.設定屬性「</span><strong><span style="color: #003300;"><span style="font-size: 10pt;">ALIGN</span><span style="font-size: 10pt;">="BOTTOM"</span></span></strong><span style="font-size: 10pt;">」</span><span style="font-size: 10pt;"><br /><marquee bgcolor="#f9f7b3" align="bottom" height="30" width="500"><span style="color: #1A73E1;">跑馬燈範例</span></marquee><br /><br />3.設定屬性「</span><strong><span style="color: #003300;"><span style="font-size: 10pt;">ALIGN</span><span style="font-size: 10pt;">="MIDDLE"</span></span></strong><span style="font-size: 10pt;">」</span><span style="font-size: 10pt;"><br /><marquee bgcolor="#f9f7b3" align="MIDDLE" height="30" width="500"><span style="color: #1A73E1;">跑馬燈範例</span></marquee><br /></span><span style="font-size: 10pt;"><br />4.設定屬性「</span><strong><span style="color: #003300;"><span style="font-size: 10pt;">ALIGN</span><span style="font-size: 10pt;">="TOP"</span></span></strong><span style="font-size: 10pt;">」</span><span style="font-size: 10pt;"><br /><marquee bgcolor="#f9f7b3" align="TOP" height="30" width="500"><span style="color: #1A73E1;">跑馬燈範例</span></marquee><br /></span><span style="font-size: 10pt;"><br />註：因為ALIGN屬性無法適用於全部的瀏覽器，故建議最好直接在顯示內容上作設定！<br /><br /></span></td>
+</tr>
+<tr>
+<th><span style="color: #003366;"><span style="font-size: 10pt;">（9）</span></span></th>
+<td><span style="color: #003366;"><span style="font-size: 10pt;">HSPACE="數值"</span></span></td>
+</tr>
+<tr>
+<th><span style="font-size: 10pt;">說明：</span></th>
+<td><span style="font-size: 10pt;">左、右邊緣的空白空間（</span><span style="font-size: 10pt;">單位：像素／px</span><span style="font-size: 10pt;">）</span><span style="font-size: 10pt;">，若不指定則預設為0px</span></td>
+</tr>
+<tr>
+<th><span style="font-size: 10pt;">預覽：</span></th>
+<td><span style="font-size: 10pt;">1.不加屬性「<span style="color: #003300;"><strong>HSPACE=" "</strong></span></span><span style="font-size: 10pt;">」<br /><marquee bgcolor="#f9f7b3" hspace=" " width="500"><span style="color: #1A73E1;">跑馬燈範例</span></marquee><br /><br />2.設定屬性「</span><span style="font-size: 10pt;"><span style="color: #003300;"><strong>HSPACE</strong></span><span style="color: #003300;"><strong><span style="color: #333300;">="0"</span></strong></span>」</span><span style="font-size: 10pt;"><br /><marquee bgcolor="#f9f7b3" hspace="0" width="500"><span style="color: #1A73E1;">跑馬燈範例</span></marquee><br /><br />3.設定屬性「<span style="font-size: 10pt;"><span style="color: #003300;"><strong>HSPACE</strong></span><span style="color: #003300;"><strong><span style="color: #333300;">="30"</span></strong></span>」</span><br />
+<table style="background-color: #dddb92;" border="0">
+<tbody>
+<tr>
+<td style="background-color: #d85df3;"><marquee bgcolor="#f9f7b3" hspace="30" width="500"><span style="color: #1A73E1;"><span style="font-size: 10pt;">跑馬燈範例</span></span></marquee></td>
+</tr>
+</tbody>
+</table>
+<br /></span></td>
+</tr>
+<tr>
+<th><span style="color: #003366;"><span style="font-size: 10pt;">（10）</span></span></th>
+<td><span style="color: #003366;"><span style="font-size: 10pt;">VSPACE="數值"</span></span></td>
+</tr>
+<tr>
+<th><span style="font-size: 10pt;">說明：</span></th>
+<td><span style="font-size: 10pt;">上、下邊緣的空白空間（</span><span style="font-size: 10pt;">單位：像素／px</span><span style="font-size: 10pt;">）</span><span style="font-size: 10pt;">，若不指定則預設為0px</span></td>
+</tr>
+<tr>
+<th><span style="font-size: 10pt;">預覽：</span></th>
+<td><span style="font-size: 10pt;">1.不加屬性「<span style="color: #003300;"><strong>VSPACE=" "</strong></span></span><span style="font-size: 10pt;">」<br /><marquee bgcolor="#f9f7b3" vspace=" " width="500"><span style="color: #1A73E1;">跑馬燈範例</span></marquee><br /><br />2.設定屬性「</span><span style="font-size: 10pt;"><span style="color: #003300;"><strong>VSPACE</strong><strong>="0"</strong></span>」</span><span style="font-size: 10pt;"><br /><marquee bgcolor="#f9f7b3" vspace="0" width="500"><span style="color: #1A73E1;">跑馬燈範例</span></marquee><br /><br />3.設定屬性「<span style="font-size: 10pt;"><span style="color: #003300;"><strong>VSPACE</strong><strong>="30"</strong></span>」</span><br />
+<table style="background-color: #dddb92;" border="0">
+<tbody>
+<tr>
+<td style="background-color: #d85df3;"><marquee bgcolor="#f9f7b3" vspace="30" width="500"><span style="color: #1A73E1;"><span style="font-size: 10pt;">跑馬燈範例</span></span></marquee></td>
+</tr>
+</tbody>
+</table>
+<br /></span></td>
+</tr>
+<tr>
+<th><span style="color: #003366;"><span style="font-size: 10pt;">（11）</span></span></th>
+<td><span style="color: #003366;"><span style="font-size: 10pt;">BGCOLOR="顏色代碼"</span></span></td>
+</tr>
+<tr>
+<th><span style="font-size: 10pt;">說明：</span></th>
+<td><span style="font-size: 10pt;">設定跑馬燈的背景顏色（預設為白色／#FFFFFF 或 WHITE）<br /></span></td>
+</tr>
+<tr>
+<th><span style="font-size: 10pt;">預覽：</span></th>
+<td><span style="font-size: 10pt;">1.不加屬性「</span><span style="font-size: 10pt;"><span style="color: #003300;"><strong>BGCOLOR=" "</strong></span></span><span style="font-size: 10pt;">」 <br /><marquee width="500"><span style="color: #1A73E1;">跑馬燈範例</span></marquee><br /><br />2.設定屬性「</span><span style="font-size: 10pt;"><span style="color: #003300;"><span style="color: #333300;"><strong><span style="color: #003300;">BGCOLOR=</span></strong><strong>"#FFFFFF"</strong></span></span></span><span style="font-size: 10pt;">」</span><span style="font-size: 10pt;"><br /><marquee bgcolor="#ffffff" width="500"><span style="color: #1A73E1;">跑馬燈範例</span></marquee>
+<br /><br />3.設定屬性「</span><span style="font-size: 10pt;"><span style="color: #003300;"><span style="color: #333300;"><strong>BGCOLOR=</strong><strong>"#f9f7b3"</strong></span></span></span><span style="font-size: 10pt;">」</span><span style="font-size: 10pt;"><br /><marquee bgcolor="#f9f7b3" width="500"><span style="color: #1A73E1;">跑馬燈範例</span></marquee>
+<br /><br /></span></td>
+</tr>
+<tr>
+<th><span style="font-size: 10pt;">備註：</span></th>
+<td><span style="font-size: 10pt;">跑馬燈的預設背景及空白空間顏色皆為「白色」，而顯示內容的文字部份則為「黑色」<br />上方的預覽是為了強調而特意加以更改！！<br /></span></td>
+</tr>
+<tr>
+<td colspan="2">
+	<p style="font-size: 10pt;">您除了可以如文章最上方的跑馬燈一般，在顯示內容的地方加上文字、連結以及圖片之外<br />還可以將整個跑馬燈的程式碼套入表格之中來加以美化，作法如下：<br />1. 先下載或自己製作一張與跑馬燈大小相符合的邊框圖片<br />2. 將圖片裁剪成上、下、左、右四個部份<br />3. 如下面的表格將跑馬燈以及上、下、左、右邊框的圖片分別插入表格之中就可以囉～</p>
+    <table border="0">
+    <tbody>
+    <tr>
+    <td style="border: 1px solid #a09ba1; height: 30px;" colspan="3" align="center" valign="middle"><span style="font-size: 10pt;">插入上框</span><br /></td>
+    </tr>
+    <tr>
+    <td style="border: 1px solid #a09ba1; width: 60px; height: 26px;" align="center" valign="middle"><span style="font-size: 10pt;">插入左框</span><br /></td>
+    <td style="border: 1px solid #a09ba1; height: 30px; width: 100px;" align="center" valign="middle"><span style="font-size: 10pt;">插入跑馬燈</span><br /></td>
+    <td style="border: 1px solid #a09ba1; width: 60px;" align="center" valign="middle"><span style="font-size: 10pt;">插入右框</span> <br /></td>
+    </tr>
+    <tr>
+    <td style="border: 1px solid #a09ba1; height: 30px;" colspan="3" align="center" valign="middle"><span style="font-size: 10pt;">插入下框</span></td>
+    </tr>
+    </tbody>
+    </table>
+</td>
+</tr>
+</tbody>
+</table>
+</body>
+</html>

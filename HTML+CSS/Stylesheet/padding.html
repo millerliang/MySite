@@ -1,0 +1,123 @@
+<html lang="zh-tw">
+
+<!-- Mirrored from www.1keydata.com/css-tutorial/tw/padding.php by HTTrack Website Copier/3.x [XR&CO'2013], Thu, 22 Aug 2013 15:42:07 GMT -->
+<head>
+<title>CSS 留白 (Padding)CSS 語法教學 </title>
+<meta name="description" content="列出與留白 (padding) 有關的 CSS 屬性。">
+<link rel="canonical" href="padding.html" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel=stylesheet type="text/css" href="css-tutorial.css">
+</head>
+<body>
+<center><table border=0 bgcolor="FFA900" width=960 cellspacing=0 cellpadding=0><tr valign=top><td><h2> CSS 留白 </h2>
+</td><td align=right>
+</td></tr></table>
+<table border="0" cellspacing="0" cellpadding="0" width="960" bgcolor="FFFFFF">
+<tr><td height=1 width=190 bgcolor=6600FF></td><td rowspan=2 valign=top width=690 valign=top>
+<table border=0 cellspacing=5 class=main><tr><td valign="top"><h6><a href="index.html">CSS 教學</a> &nbsp;&gt;&nbsp; 留白</h6>
+<center>
+
+</center><p>我們從盒子模式那一頁看到，留白 (padding) 是在內容外，邊框內的部分。一個盒子有四個邊，所以我們可以對這四個邊的留白逐一設定： </p>
+
+<p><li>padding-top (上)
+<br><li>padding-right (右)
+<br><li>padding-bottom (下)
+<br><li>padding-left (左)
+
+<p>第五個屬性，<a href="#padding">padding</a>，是用來作為同時設定四個邊留白的捷徑屬性。
+
+<p>有三種方式可以設定留白，分別為長度、百分比、以及 'auto'。我們來看以下的例子：
+
+<p><table border=0 width=300 class=main cellpadding=10>
+<tr><td bgcolor=DDDDDD>
+<p>#container {
+<br> &nbsp; padding-top:15px;
+<br> &nbsp; padding-left:10px;
+<br> &nbsp; padding-right:30px;
+<br> &nbsp; padding-bottom:40px;
+<br> &nbsp; border: 1px solid 000000;
+<br>}
+</td></tr></table>
+
+<p>以下的 HTML碼，
+
+<p><table border=0 width=300 class=main cellpadding=10>
+<tr><td bgcolor=DDDDDD>
+<p>&lt;div id="container"&gt;
+<br>這是留白的例子。這裡對了上、下、左、右的留白空間都有設定。
+<br>&lt;/div&gt;
+</td></tr></table>
+
+<p>會顯示出，
+
+<p><table border=0 width=300 class=main>
+<tr><td bgcolor=CCFFCC>
+<p><div style='padding-top:15px; padding-left:10px; padding-right:30px; padding-bottom:40px; border: 1px solid #000000;'>
+這是留白的例子。這裡對了上、下、左、右的留白空間都有設定。
+</div>
+</td></tr></table>
+
+<p>在這裡，上面的留白為 15px，左邊的留白為 10px，右面的留白為 30px，而下面的留白為 40px。
+
+<a name="padding"></a>
+<p><h3>留白捷徑</h3>
+
+<p>所有四個邊的留白可以同時由 <b>padding</b> 屬性設定。它的語法如下：
+
+<p><font color="#006600">padding: [上面留白值] [右邊留白值] [下面留白值] [左邊留白值]</font>
+
+<p>在這裡，順序非常重要。第一個值一定是上面留白的值，第二個值一定是右邊留白的值，第三個值一定是下面留白的值，而第四個值一定是左邊留白的值。
+
+<p><center>下一頁： <a href="background.html">CSS 背景</a></center>
+
+
+</td>
+
+﻿
+</tr></table>
+
+</td></tr><tr valign=top>
+
+        <td valign="top" width="190" nowrap vlink="#000000" bgcolor=6600FF>
+		<table border=0 cellpadding=8>
+		<tr><td>
+<br>
+
+<font size="-1" face="Verdana, Arial, Helvetica, sans-serif">
+<a class=nav href="index.html">CSS 語法教學</a><br>
+
+<a class=nav href="syntax.html">CSS 語法</a><br>
+<a class=nav href="apply.html">CSS 套用方式</a><br>
+<a class=nav href="media-types.html">CSS  媒體類別</a><br>
+<a class=nav href="cascade.html">CSS 串接</a><br>
+<a class=nav href="inheritance.html">CSS 繼承</a><br>
+<a class=nav href="class-id.html">CSS Class 與 ID</a><br>
+<a class=nav href="div-span.html">CSS Div 與 Span</a><br>
+<a class=nav href="length-units.html">CSS 長度單位</a><br><br>
+
+<a class=nav href="box-model.html">CSS 盒子模式</a><br>
+<a class=nav href="margin.html">CSS 邊界 (Margin)</a><br>
+<a class=nav href="border.html">CSS 邊框 (Border)</a><br>
+<a class=nav href="padding.html">CSS 留白 (Padding)</a><br>
+<a class=nav href="background.html">CSS 背景 (Background)</a><br>
+<a class=nav href="color.html">CSS 顏色</a><br>
+<a class=nav href="font.html">CSS 字體</a><br>
+<a class=nav href="link.html">CSS 連接</a><br>
+<a class=nav href="list.html">CSS 清單 (List)</a><br>
+<a class=nav href="table.html">CSS 表格 (Table)</a><br>
+<a class=nav href="position.html">CSS 位置 (Position)</a><br>
+<a class=nav href="text.html">CSS 文字 (Text)</a><br>
+<a class=nav href="float.html">CSS 浮動 (Float)</a><br>
+<a class=nav href="clear.html">CSS 清除 (Clear)</a><br>
+<a class=nav href="cursor.html">CSS 滑鼠游標圖案</a><br><br>
+
+<a class=nav href="codes.html">CSS 樣式</a><br><br>
+		</td></tr></table></td>
+        </td>
+      </tr>
+    </table>
+  </center>
+</body>
+
+<!-- Mirrored from www.1keydata.com/css-tutorial/tw/padding.php by HTTrack Website Copier/3.x [XR&CO'2013], Thu, 22 Aug 2013 15:42:07 GMT -->
+</html>

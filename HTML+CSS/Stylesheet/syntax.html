@@ -1,0 +1,133 @@
+<html lang="zh-tw">
+
+<!-- Mirrored from www.1keydata.com/css-tutorial/tw/syntax.php by HTTrack Website Copier/3.x [XR&CO'2013], Thu, 22 Aug 2013 15:42:06 GMT -->
+<head>
+<title>CSS 語法 </title>
+<meta name="description" content="列出 CSS 的基本語法。">
+<link rel="canonical" href="syntax.html" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel=stylesheet type="text/css" href="css-tutorial.css">
+</head>
+<body>
+<center><table border=0 bgcolor="FFA900" width=960 cellspacing=0 cellpadding=0><tr valign=top><td><h2> CSS 語法 </h2>
+</td><td align=right>
+</td></tr></table>
+<table border="0" cellspacing="0" cellpadding="0" width="960" bgcolor="FFFFFF">
+<tr><td height=1 width=190 bgcolor=6600FF></td><td rowspan=2 valign=top width=690 valign=top>
+<table border=0 cellspacing=5 class=main><tr><td valign="top"><h6><a href="index.html">CSS 教學</a> &nbsp;&gt;&nbsp; 語法</h6>
+<center>
+
+</center><p>宣告 CSS 樣式的語法如下： </p>
+
+<p><font color="006600">選擇器 {
+<br> &nbsp;  屬性：設定值；
+<br> &nbsp;  ...
+<br>}
+</font>
+
+<p>在一個選擇器 (Selector) 中，可以設定的屬性數目沒有限制。
+
+<p>選擇器主要有三種：型類 (Type) 選擇器、Class 選擇器、和 ID 選擇器。
+
+<p>型類選擇器是 (X)HTML 標籤，如  &lt;body&gt; 和 &lt;h1&gt;。Class 和 ID 選擇器是使用者自訂的選擇器。我們會在<a href="class-id.html">之後</a>討論這兩類的選擇器。
+
+<p>樣式是以『屬性：設定值』的方式來制定。舉例來說，若我們要設定一個元素內的文字是黃色的，那就用以下的『屬性：設定值』：
+
+<p><table border=0 width=300 class=main cellpadding=10>
+<tr><td bgcolor=DDDDDD>
+<p>color:yellow;
+</td></tr></table>
+
+<p>在以上的宣告內，color 是屬性，而 yellow 是設定值。
+
+<p>在某些時候，一個屬性可能會有好幾個設定值。這些通常都是因為屬性是一個捷徑。舉例來說，<b>margin</b> 屬性可能會有 4 個設定值，而每一個值代表每一邊的邊界長度。
+
+<h3>Grouping</h3>
+
+<p>如果有數個選擇器享有同樣的樣式，它們可以同時被宣告。這叫做 "grouping"。舉例來說，如果 &lt;h1&gt;, &lt;h2&gt;, and &lt;h3&gt; 都會有相同的樣式，那它們就可以用以下的方式被宣告：
+
+<p><table border=0 width=300 class=main cellpadding=10>
+<tr><td bgcolor=DDDDDD>
+<p>h1 h2 h3 {
+<br> &nbsp;  屬性：設定值；
+<br> &nbsp;  ...
+<br>}
+</td></tr></table>
+
+<h3>後代選擇器 (Descendant Selectors)</h3>
+
+<p>我們可以設定說，只有當甲元素在乙元素之內時，甲元素才會用某個樣式。若甲元素不在乙元素內的話，那甲元素就可以有其他的樣式。要達到這個目標，我們就要利用後代選擇器的方式。
+
+<p>後代選擇器宣告的語法是： 
+<p><font color="006600">【父選擇器】【子選擇器】{
+<br> &nbsp;  屬性：設定值；
+<br> &nbsp;  ...
+<br>}
+</font>
+
+<p>在以上的宣告中，只有當子選擇器是在父選擇器之內時，樣式才會被用到。這一類的語法可以包括好幾代的選擇器，而不是只有兩代而已。
+
+<p>舉例來說，以下的宣告，
+
+<p><table border=0 width=300 class=main cellpadding=10>
+<tr><td bgcolor=DDDDDD>
+<p>li b {
+<br> &nbsp; color:yellow;
+<br>}
+</td></tr></table>
+
+<p>代表在 &lt;li&gt; &lt;b&gt; 之內的文字是黃色的。不是在 &lt;li&gt; 之內的 &lt;b&gt 中的文字，就不會套用黃色字體這個樣式。
+
+<p><center>下一頁： <a href=apply.html>CSS 套用方式</a></center>
+
+
+</td>
+
+﻿
+</tr></table>
+
+</td></tr><tr valign=top>
+
+        <td valign="top" width="190" nowrap vlink="#000000" bgcolor=6600FF>
+		<table border=0 cellpadding=8>
+		<tr><td>
+<br>
+
+<font size="-1" face="Verdana, Arial, Helvetica, sans-serif">
+<a class=nav href="index.html">CSS 語法教學</a><br>
+
+<a class=nav href="syntax.html">CSS 語法</a><br>
+<a class=nav href="apply.html">CSS 套用方式</a><br>
+<a class=nav href="media-types.html">CSS  媒體類別</a><br>
+<a class=nav href="cascade.html">CSS 串接</a><br>
+<a class=nav href="inheritance.html">CSS 繼承</a><br>
+<a class=nav href="class-id.html">CSS Class 與 ID</a><br>
+<a class=nav href="div-span.html">CSS Div 與 Span</a><br>
+<a class=nav href="length-units.html">CSS 長度單位</a><br><br>
+
+<a class=nav href="box-model.html">CSS 盒子模式</a><br>
+<a class=nav href="margin.html">CSS 邊界 (Margin)</a><br>
+<a class=nav href="border.html">CSS 邊框 (Border)</a><br>
+<a class=nav href="padding.html">CSS 留白 (Padding)</a><br>
+<a class=nav href="background.html">CSS 背景 (Background)</a><br>
+<a class=nav href="color.html">CSS 顏色</a><br>
+<a class=nav href="font.html">CSS 字體</a><br>
+<a class=nav href="link.html">CSS 連接</a><br>
+<a class=nav href="list.html">CSS 清單 (List)</a><br>
+<a class=nav href="table.html">CSS 表格 (Table)</a><br>
+<a class=nav href="position.html">CSS 位置 (Position)</a><br>
+<a class=nav href="text.html">CSS 文字 (Text)</a><br>
+<a class=nav href="float.html">CSS 浮動 (Float)</a><br>
+<a class=nav href="clear.html">CSS 清除 (Clear)</a><br>
+<a class=nav href="cursor.html">CSS 滑鼠游標圖案</a><br><br>
+
+<a class=nav href="codes.html">CSS 樣式</a><br><br>
+		</td></tr></table></td>
+        </td>
+      </tr>
+    </table>
+  </center>
+</body>
+
+<!-- Mirrored from www.1keydata.com/css-tutorial/tw/syntax.php by HTTrack Website Copier/3.x [XR&CO'2013], Thu, 22 Aug 2013 15:42:06 GMT -->
+</html>

@@ -1,0 +1,195 @@
+<html lang="zh-tw">
+
+<!-- Mirrored from www.1keydata.com/css-tutorial/tw/font.php by HTTrack Website Copier/3.x [XR&CO'2013], Thu, 22 Aug 2013 15:42:11 GMT -->
+<head>
+<title> CSS 字體CSS 語法教學 </title>
+<meta name="description" content="列出與字體 (font) 有關的 CSS 屬性。">
+<link rel="canonical" href="font.html" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel=stylesheet type="text/css" href="css-tutorial.css">
+</head>
+<body>
+<center><table border=0 bgcolor="FFA900" width=960 cellspacing=0 cellpadding=0><tr valign=top><td><h2> CSS 字體 </h2>
+</td><td align=right>
+</td></tr></table>
+<table border="0" cellspacing="0" cellpadding="0" width="960" bgcolor="FFFFFF">
+<tr><td height=1 width=190 bgcolor=6600FF></td><td rowspan=2 valign=top width=690 valign=top>
+<table border=0 cellspacing=5 class=main><tr><td valign="top"><h6><a href="index.html">CSS 教學</a> &nbsp;&gt;&nbsp; 字體</h6>
+<center>
+
+</center><p>在 CSS 中常見的字體 (font) 屬性有以下幾種： </p>
+
+<p><li><a href="#family">font-family</a>
+<li><a href="#size">font-size</a>
+<li><a href="#weight">font-weight</a>
+<li><a href="#style">font-style</a>
+<li><a href="#variant">font-variant</a>
+
+<p>每一個屬性在以下會有詳細地介紹：
+
+<a name=family></a><h3>font-family</h3>
+
+<p><b>font-family</b> 屬性是用來設定字體的類別。
+
+<p><table border=1 cellspacing=0 cellpadding=5 class=main><tr><td>CSS 樣式</td><td>顯現結果</td></tr>
+<tr><td>
+<p>p {font-family: verdana;}
+</td><td><p style='font-family: verdana;'>Font Family Verdana.
+</td></tr>
+<tr><td>
+<p>p {font-family: arial;}
+</td><td>
+<p style='font-family: arial;'>Font Family Arial.
+</td></tr>
+<tr><td>
+<p>p {font-family: impact;}
+</td><td>
+<p style='font-family: impact;'>Font Family Impact.
+</td></tr>
+</table>
+
+<a name=size></a><h3>font-size</h3>
+
+<p><b>font-size</b> 屬性是用來設定字體的大小。大小可以是以數字顯現 (絕對的或是相較的均可)，或是以下其中之一的值："xx-large"、 "x-large"、 "large"、 "medium"、 "small"、 "x-small"、和 "xx-small"。
+
+<p><table border=1 cellspacing=0 cellpadding=5 class=main><tr><td>CSS 樣式</td><td>顯現結果</td></tr>
+<tr><td>
+<p>p {font-size:9px;}
+</td><td><p style='font-size: 9px;'>字體大小為 9px。
+</td></tr>
+<tr><td>
+<p>p {font-size:150%;}
+</td><td>
+<p style='font-size:150%;'>字體大小為 150%。
+</td></tr>
+<tr><td>
+<p>p {font-size:0.8cm;}
+</td><td>
+<p style='font-size:0.8cm;'>字體大小為 0.8 cm。
+</td></tr>
+<tr><td>
+<p>p {font-size:small;}
+</td><td>
+<p style='font-size:small;'>字體大小為 small。
+</td></tr>
+<tr><td>
+<p>p {font-size:large;}
+</td><td>
+<p style='font-size:large;'>字體大小為 large。
+</td></tr>
+</table>
+
+<a name=weight></a><h3>font-weight</h3>
+
+<p><b>font-weight</b> 屬性是用來設定字體的厚度。厚度的設定值可以從 100 到 900 (900 是最厚的)。另外，我們也可以將厚度設定為 bold (厚)、bolder (更厚)、及 normal (正常)。
+
+<p>以下舉幾個例子：
+
+<p><table border=1 cellspacing=0 cellpadding=5 class=main><tr><td>CSS 樣式</td><td>顯現結果</td></tr>
+<tr><td>
+<p>p {font-weight: 100;}
+</td><td><p style='font-weight:100;'>這是厚度 100。
+</td></tr>
+<tr><td>
+<p>p {font-weight: 900;}
+</td><td>
+<p style='font-weight:900;'>這是厚度 900。
+</td></tr>
+<tr><td>
+<p>p {font-weight: bold;}
+</td><td>
+<p style='font-weight:bold;'>這是 bold 厚度。
+</td></tr>
+</table>
+
+<a name=style></a><h3>font-style</h3>
+
+<p><b>font-style</b> 屬性是用來設定字體是否為斜體字 (italic 或 oblique)。
+
+<p><table border=1 cellspacing=0 cellpadding=5 class=main><tr><td>CSS 樣式</td><td>顯現結果</td></tr>
+<tr><td>
+<p>p {font-style: italic;}
+</td><td><p style='font-style:italic;'>這是斜體字。
+</td></tr>
+</table>
+
+<a name="variant"></a><h3>font-variant</h3>
+
+<p><b>font-variant</b> 屬性是用來設定文字是不是要以小型大寫 (small caps) 字體顯現。在小型大寫字體中，所有的字母都是大寫，可是字體是比一般大寫來得小。可能的值為 "small-caps" 和 "normal"。來看下面的例子：
+
+<p>CSS 宣告，
+
+<p><table border=0 width=300 class=main cellpadding=10>
+<tr><td bgcolor=DDDDDD>
+<p>span {
+<br> &nbsp; font-variant:small-caps;
+<br>}
+</td></tr></table>
+
+<p>以下的 HTML 碼，
+
+<p><table border=0 width=500 class=main cellpadding=10>
+<tr><td bgcolor=DDDDDD>
+<p>&lt;span&gt;initial in small caps&lt;/span&gt; AND LATER IN LARGE CAPS.
+</td></tr></table>
+
+<p>就會顯現出，
+
+<p><p><table border=0 width=400 class=main cellpadding=10>
+<tr><td bgcolor=CCFFCC>
+<p><span style='font-variant:small-caps;'>initial in small caps</span> AND LATER IN LARGE CAPS.
+</td></tr></table>
+
+<p><center>下一頁： <a href="link.html">CSS 連接</a></center>
+
+
+</td>
+
+﻿
+</tr></table>
+
+</td></tr><tr valign=top>
+
+        <td valign="top" width="190" nowrap vlink="#000000" bgcolor=6600FF>
+		<table border=0 cellpadding=8>
+		<tr><td>
+<br>
+
+<font size="-1" face="Verdana, Arial, Helvetica, sans-serif">
+<a class=nav href="index.html">CSS 語法教學</a><br>
+
+<a class=nav href="syntax.html">CSS 語法</a><br>
+<a class=nav href="apply.html">CSS 套用方式</a><br>
+<a class=nav href="media-types.html">CSS  媒體類別</a><br>
+<a class=nav href="cascade.html">CSS 串接</a><br>
+<a class=nav href="inheritance.html">CSS 繼承</a><br>
+<a class=nav href="class-id.html">CSS Class 與 ID</a><br>
+<a class=nav href="div-span.html">CSS Div 與 Span</a><br>
+<a class=nav href="length-units.html">CSS 長度單位</a><br><br>
+
+<a class=nav href="box-model.html">CSS 盒子模式</a><br>
+<a class=nav href="margin.html">CSS 邊界 (Margin)</a><br>
+<a class=nav href="border.html">CSS 邊框 (Border)</a><br>
+<a class=nav href="padding.html">CSS 留白 (Padding)</a><br>
+<a class=nav href="background.html">CSS 背景 (Background)</a><br>
+<a class=nav href="color.html">CSS 顏色</a><br>
+<a class=nav href="font.html">CSS 字體</a><br>
+<a class=nav href="link.html">CSS 連接</a><br>
+<a class=nav href="list.html">CSS 清單 (List)</a><br>
+<a class=nav href="table.html">CSS 表格 (Table)</a><br>
+<a class=nav href="position.html">CSS 位置 (Position)</a><br>
+<a class=nav href="text.html">CSS 文字 (Text)</a><br>
+<a class=nav href="float.html">CSS 浮動 (Float)</a><br>
+<a class=nav href="clear.html">CSS 清除 (Clear)</a><br>
+<a class=nav href="cursor.html">CSS 滑鼠游標圖案</a><br><br>
+
+<a class=nav href="codes.html">CSS 樣式</a><br><br>
+		</td></tr></table></td>
+        </td>
+      </tr>
+    </table>
+  </center>
+</body>
+
+<!-- Mirrored from www.1keydata.com/css-tutorial/tw/font.php by HTTrack Website Copier/3.x [XR&CO'2013], Thu, 22 Aug 2013 15:42:11 GMT -->
+</html>

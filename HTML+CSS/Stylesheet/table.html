@@ -1,0 +1,190 @@
+<html lang="zh-tw">
+
+<!-- Mirrored from www.1keydata.com/css-tutorial/tw/table.php by HTTrack Website Copier/3.x [XR&CO'2013], Thu, 22 Aug 2013 15:42:13 GMT -->
+<head>
+<title>CSS 表格 (Table)CSS 語法教學 </title>
+<meta name="description" content="列出與表格 (table) 有關的 CSS 屬性。">
+<link rel=stylesheet type="text/css" href="css-table.css">
+<link rel="canonical" href="table.html" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel=stylesheet type="text/css" href="css-tutorial.css">
+</head>
+<body>
+<center><table border=0 bgcolor="FFA900" width=960 cellspacing=0 cellpadding=0><tr valign=top><td><h2> CSS 表格 </h2>
+</td><td align=right>
+</td></tr></table>
+<table border="0" cellspacing="0" cellpadding="0" width="960" bgcolor="FFFFFF">
+<tr><td height=1 width=190 bgcolor=6600FF></td><td rowspan=2 valign=top width=690 valign=top>
+<table border=0 cellspacing=5 class=main><tr><td valign="top"><h6><a href="index.html">CSS 教學</a> &nbsp;&gt;&nbsp; 表格</h6>
+<center>
+
+</center><p>在 HTML 中，常看到 &lt;table&gt; 之內加了 border、cellpadding、及 cellspacing 的屬性。如果我們有透過 CSS 來制定表格的樣式，那就不需要在 HTML 之內用到這些屬性了。 </p>
+
+<p><b>table</b>、<b>th</b>、<b>tr</b>、及 <b>td</b> 這幾個選擇器可以使用許多在這個教學中有提到的 CSS 屬性，例如 <b><a href="text.html">文字</a></b>、<b><a href="font.html">字體</a></b>、<b><a href="border.html">邊框</a></b>、<b><a href="color.html">顏色</a></b>、以及 <b><a href="background.html">背景</a></b>。
+
+<p>來看個例子。假設我們想要把以下的樣式加入表格內：
+
+<p><li>表格： 沒有邊框，字體是 arial，字的大小是 14px。
+<li>標題：  背景是黃色。
+<li>格子：  每個格子的下面有一條黑色實線。
+<li>低於 60 的分數欄內，字體是紅色的。
+
+<p>我們就會使用以下的樣式表：
+
+<p><table border=0 width=500 class=main cellpadding=10>
+<tr><td bgcolor=DDDDDD>
+<p>table {
+<br> &nbsp;  border: 0;
+<br> &nbsp;   font-family: arial;
+<br> &nbsp;   font-size:14px;
+<br>}
+<br>th {
+<br> &nbsp;   background-color:yellow;
+<br>}
+<br>td {
+<br> &nbsp;   border-bottom:1 solid #000000;
+<br>}
+<br>.fail {
+<br> &nbsp;   color:#FF0000;
+<br>}
+</td></tr></table>
+
+<p>以下的 HTML 碼，
+
+<p><table border=0 width=500 class=main cellpadding=10>
+<tr><td bgcolor=DDDDDD>
+<p>&lt;table&gt;
+<br> &nbsp; &lt;tr&gt;
+<br> &nbsp; &nbsp; &lt;th&gt;學生&lt;/th&gt;
+<br> &nbsp; &nbsp; &lt;th&gt;分數&lt;/th&gt;
+<br> &nbsp; &lt;/tr&gt;
+<br> &nbsp; &lt;tr&gt;
+<br> &nbsp; &nbsp; &lt;td&gt;Stella&lt;/td&gt;
+<br> &nbsp; &nbsp; &lt;td&gt;85&lt;/td&gt;
+<br> &nbsp; &lt;/tr&gt;
+<br> &nbsp; &lt;tr&gt;
+<br> &nbsp; &nbsp; &lt;td&gt;Sophie&lt;/td&gt;
+<br> &nbsp; &nbsp; &lt;td&gt;95&lt;/td&gt;
+<br> &nbsp; &lt;/tr&gt;
+<br> &nbsp; &lt;tr&gt;
+<br> &nbsp; &nbsp; &lt;td&gt;Alice&lt;/td&gt;
+<br> &nbsp; &nbsp; &lt;td class="fail"&gt;55&lt;/td&gt;
+<br> &nbsp; &lt;/tr&gt;
+<br>&lt;/table&gt;
+</td></tr></table>
+
+<p>就會顯現出，
+
+<p><table>
+<tr>
+<th>學生</th>
+<th>分數</th>
+</tr>
+<tr>
+<td class="sample">Stella</td>
+<td class="sample">85</td>
+</tr>
+<tr>
+<td class="sample">Sophie</td>
+<td class="sample">95</td>
+</tr>
+<tr>
+<td class="sample">Alice</td>
+<td class="fail">55</td>
+</tr>
+</table>
+
+<a name="collapse"></a>
+<h3>border-collapse</h3>
+
+<p>在這裡我們要特別提到一個跟表格有關的 CSS 屬性，那就是 <b>border-collapse</b>。基本上，這個屬性可以直接代替 cellspacing=0 的宣告。我門來看看下面的例子：
+
+<p>CSS 宣告如下，
+
+<p><table border=0 width=500 class=main cellpadding=10>
+<tr><td bgcolor=DDDDDD>
+table {
+<br> &nbsp;  border:0;
+<br> &nbsp;  border-collpase:collpase;
+<br> &nbsp;  width:200px;
+<br>}
+<br>
+<br>tr {
+<br> &nbsp;  border-bottom:1px solid #000;
+<br>}
+</td></tr></table>
+
+<p>以下的 HTML 碼，
+
+<p><table border=0 width=500 class=main cellpadding=10>
+<tr><td bgcolor=DDDDDD>
+<p>&lt;table&gt;
+<br> &nbsp; &lt;tr&gt;&lt;td&gt;年度&lt;/td&gt;&lt;td&gt;收入&lt;/td&gt;&lt;/tr&gt;
+<br> &nbsp; &lt;tr&gt;&lt;td&gt;2006&lt;/td&gt;&lt;td&gt;35.2M&lt;/td&gt;&lt;/tr&gt;
+<br> &nbsp; &lt;tr&gt;&lt;td&gt;2007&lt;/td&gt;&lt;td&gt;40.1M&lt;/td&gt;&lt;/tr&gt;
+<br>&lt;/table&gt;
+</td></tr></table>
+
+<p>就會顯現出，
+
+<p><table class=collapse>
+<tr><td class="sample">年度</td><td class="sample">收入</td></tr>
+<tr><td class="sample">2006</td><td class="sample">35.2M</td></tr>
+<tr><td class="sample">2007</td><td class="sample">40.1M</td></tr>
+</table>
+
+<p>請注意到，年度攔及收入欄的下劃線中間並沒有空隙。這就是 <b>border-collapse:collapse</b> 的作用。
+
+<p><center>下一頁： <a href="position.html">CSS 位置</a></center>
+
+
+</td>
+
+﻿
+</tr></table>
+
+</td></tr><tr valign=top>
+
+        <td valign="top" width="190" nowrap vlink="#000000" bgcolor=6600FF>
+		<table border=0 cellpadding=8>
+		<tr><td>
+<br>
+
+<font size="-1" face="Verdana, Arial, Helvetica, sans-serif">
+<a class=nav href="index.html">CSS 語法教學</a><br>
+
+<a class=nav href="syntax.html">CSS 語法</a><br>
+<a class=nav href="apply.html">CSS 套用方式</a><br>
+<a class=nav href="media-types.html">CSS  媒體類別</a><br>
+<a class=nav href="cascade.html">CSS 串接</a><br>
+<a class=nav href="inheritance.html">CSS 繼承</a><br>
+<a class=nav href="class-id.html">CSS Class 與 ID</a><br>
+<a class=nav href="div-span.html">CSS Div 與 Span</a><br>
+<a class=nav href="length-units.html">CSS 長度單位</a><br><br>
+
+<a class=nav href="box-model.html">CSS 盒子模式</a><br>
+<a class=nav href="margin.html">CSS 邊界 (Margin)</a><br>
+<a class=nav href="border.html">CSS 邊框 (Border)</a><br>
+<a class=nav href="padding.html">CSS 留白 (Padding)</a><br>
+<a class=nav href="background.html">CSS 背景 (Background)</a><br>
+<a class=nav href="color.html">CSS 顏色</a><br>
+<a class=nav href="font.html">CSS 字體</a><br>
+<a class=nav href="link.html">CSS 連接</a><br>
+<a class=nav href="list.html">CSS 清單 (List)</a><br>
+<a class=nav href="table.html">CSS 表格 (Table)</a><br>
+<a class=nav href="position.html">CSS 位置 (Position)</a><br>
+<a class=nav href="text.html">CSS 文字 (Text)</a><br>
+<a class=nav href="float.html">CSS 浮動 (Float)</a><br>
+<a class=nav href="clear.html">CSS 清除 (Clear)</a><br>
+<a class=nav href="cursor.html">CSS 滑鼠游標圖案</a><br><br>
+
+<a class=nav href="codes.html">CSS 樣式</a><br><br>
+		</td></tr></table></td>
+        </td>
+      </tr>
+    </table>
+  </center>
+</body>
+
+<!-- Mirrored from www.1keydata.com/css-tutorial/tw/table.php by HTTrack Website Copier/3.x [XR&CO'2013], Thu, 22 Aug 2013 15:42:13 GMT -->
+</html>

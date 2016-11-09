@@ -1,0 +1,223 @@
+<html lang="zh-tw">
+
+<!-- Mirrored from www.1keydata.com/css-tutorial/tw/position.php by HTTrack Website Copier/3.x [XR&CO'2013], Thu, 22 Aug 2013 15:42:13 GMT -->
+<head>
+<title>CSS Position 位置CSS 語法教學 </title>
+<meta name="description" content="列出與位置 (position) 有關的 CSS 屬性。">
+<link rel="canonical" href="position.html" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel=stylesheet type="text/css" href="css-tutorial.css">
+</head>
+<body>
+<center><table border=0 bgcolor="FFA900" width=960 cellspacing=0 cellpadding=0><tr valign=top><td><h2> CSS Position 位置</h2>
+</td><td align=right>
+</td></tr></table>
+<table border="0" cellspacing="0" cellpadding="0" width="960" bgcolor="FFFFFF">
+<tr><td height=1 width=190 bgcolor=6600FF></td><td rowspan=2 valign=top width=690 valign=top>
+<table border=0 cellspacing=5 class=main><tr><td valign="top"><h6><a href="index.html">CSS 教學</a> &nbsp;&gt;&nbsp; 位置</h6>
+<center>
+
+</center><p>在 CSS 中常見的位置 (position) 屬性有以下幾種： </p>
+
+<p><li><a href="#position">position</a>
+<li><a href="#top">top</a>
+<li><a href="#top">right</a>
+<li><a href="#top">left</a>
+<li><a href="#top">bottom</a>
+<li><a href="#overflow">overflow</a>
+<li><a href="#z-index">z-index</a>
+
+<a name="position"></a>
+<h3>position</h3>
+
+<p><b>position</b> 屬性制定出要用哪一類的位置。可能的值有：
+
+<ul><li><b>static (預設值)</b>:  這代表元素會被放在預設的地方。如果 <b>position</b> 的值是被設定為 statics 的話，那 top、bottom、left、和 right 的值就都沒有意義了。
+
+<p><li><b>absolute</b>:  這代表元素會被放在瀏覽器內的某個位置 (依 top、bottom、left、和 right 的值而定)。當使用者將網頁往下拉時，元素也會跟著改變位置。
+
+<p><li><b>relative</b>:  這代表元素被放的地方將會與預設的地方有所不同。不同的程度是依照  top、bottom、left、和 right 的值而定。
+<p><li><b>fixed</b>:  這代表元素會被放在瀏覽器內的某個位置 (依 top、bottom、left、和 right 的值而定)。當使用者將網頁往下拉時，元素的位置不會改變。
+</ul>
+
+<a name="top"></a>
+<h3>top, right, bottom, left</h3>
+
+<p>每一個方向 (<b>top</b>, <b>right</b>, <b>bottom</b>, <b>left</b>) 的位置值可以是長度、百分比、或是 auto。
+
+<p>讓我們來看個例子：
+
+<p>CSS 碼：
+
+<p><table border=0 width=400 class=main cellpadding=10>
+<tr><td bgcolor=DDDDDD>
+<p>div {
+<br> &nbsp; background-color:#FF00FF; 
+<br> &nbsp; width:500px; 
+<br> &nbsp; height:60px;
+<br>}
+<p>p {
+<br> &nbsp; position:relative; 
+<br> &nbsp; top:10px; 
+<br> &nbsp; left:50px;
+<br>}
+</td></tr></table>
+
+<p>在這哩，以下的 HTML 碼， 
+
+<p><table border=0 width=400 class=main cellpadding=10>
+<tr><td bgcolor=DDDDDD>
+&lt;div&gt;
+<br> &nbsp; &lt;p&gt;舉例文字。
+<br>&lt;/div&gt;
+</td></tr></table>
+
+<p>會顯示出，
+
+<p><div style='background-color:#FF00FF; width:500px; height:60px'>
+  <p style='position:relative; top:10px; left:50px;'>舉例文字。
+</div>
+
+<p>請注意以上文字的位置：它是在離粉紅色方塊上面 10px，及左邊 50px 的地方。
+
+<a name="overflow"></a>
+<h3>overflow</h3>
+
+<p><b>overflow</b> 屬性是用來設定當內容放不下時的處理方式。可能的值包括：
+
+<ul>
+<li><b>visible</b>:  內容完全呈現，不管放得下放不下。
+
+<li><b>hidden</b>:  放不下的內容就不顯示出來。
+
+<li><b>scroll</b>:  無論內容放得下放不下，都加入上下捲軸及左右捲軸的功能。
+
+<li><b>auto</b>:  當內容放不下時，加上捲軸的功能。
+</ul>
+
+<p>以上這四個值的例子如下：
+
+<table border=0 class="main" cellpadding=10>
+<tr><td>
+<center><b>auto</b></center>
+<div style='width:200px; height:70px; border:1px solid #999; overflow:auto;'>
+我們用這一區來看不同的 overflow 值展現出來會有什麼不一樣。<p>這裡展現的值是 auto。 
+</div>
+</td><td>
+<center><b>hidden</b></center>
+<div style='width:200px; height:70px; border:1px solid #999; overflow:hidden;'>
+我們用這一區來看不同的 overflow 值展現出來會有什麼不一樣。<p>這裡展現的值是 hidden。 
+</div>
+</td></tr>
+<tr><td>
+<center><b>visible</b></center>
+<div style='width:200px; height:70px; border:1px solid #999; overflow:visible;'>
+我們用這一區來看不同的 overflow 值展現出來會有什麼不一樣。<p>這裡展現的值是 visible。 
+</div>
+</td><td valign=top>
+<center><b>scroll</b></center>
+<div style='width:200px; height:70px; border:1px solid #999; overflow:scroll;'>
+我們用這一區來看不同的 overflow 值展現出來會有什麼不一樣。<p>這裡展現的值是 scroll。 
+</div>
+</td></tr></table>
+
+<a name="z-index"></a>
+<h3>z-index</h3>
+
+<p><b>z-index</b> 屬性是用來決定元素重疊的順序。換言之，當兩個元素有重疊的情況時，z-index 值將會決定哪一個元素在上面。z-index 值比較大個元素會被放在上面。
+
+<p>舉例來說，假設我們有以下的 CSS 碼：
+
+<p><table border=0 width=400 class=main cellpadding=10>
+<tr><td bgcolor=DDDDDD>
+<p>#redblock {
+<br> &nbsp; z-index: 1; 
+<br> &nbsp; position: 
+<br> &nbsp; absolute; 
+<br> &nbsp; width:80px; 
+<br> &nbsp; height:100px; 
+<br> &nbsp; top:20px; 
+<br> &nbsp; left:20px; 
+<br> &nbsp; border: 1px solid #FFF; 
+<br> &nbsp; background-color: #FF0000;
+<br>}
+
+<br><br>#pinkblock {
+<br> &nbsp; z-index: 2; 
+<br> &nbsp; position: absolute; 
+<br> &nbsp; width:100px; 
+<br> &nbsp; height:80px; 
+<br> &nbsp; top:50px; 
+<br> &nbsp; left:50px; 
+<br> &nbsp; border: 1px solid #FFF; 
+<br> &nbsp; background-color: #FF00FF;
+<br>}
+</td></tr></table>
+
+<p>以下的 HTML 碼，
+
+<p><table border=0 width=400 class=main cellpadding=10>
+<tr><td bgcolor=DDDDDD>
+&lt;div id="redblock"&gt;&lt;/div&gt;
+<br>&lt;div id="pinkblock"&gt;&lt;/div&gt;
+</td></tr></table>
+
+<p>會顯示出，
+
+<p><iframe width=250 height=180 src="z-index.html"></iframe>
+
+<p>從以上可見，粉紅色方塊 (pinkblock) 的 z-index 值 (2) 比紅色方塊 (redblock) 的 z-index 值 (1) 高，因此粉紅色方塊在上面。
+
+<p><center>下一頁： <a href="text.html">CSS 文字</a></center>
+
+
+</td>
+
+﻿
+</tr></table>
+
+</td></tr><tr valign=top>
+
+        <td valign="top" width="190" nowrap vlink="#000000" bgcolor=6600FF>
+		<table border=0 cellpadding=8>
+		<tr><td>
+<br>
+
+<font size="-1" face="Verdana, Arial, Helvetica, sans-serif">
+<a class=nav href="index.html">CSS 語法教學</a><br>
+
+<a class=nav href="syntax.html">CSS 語法</a><br>
+<a class=nav href="apply.html">CSS 套用方式</a><br>
+<a class=nav href="media-types.html">CSS  媒體類別</a><br>
+<a class=nav href="cascade.html">CSS 串接</a><br>
+<a class=nav href="inheritance.html">CSS 繼承</a><br>
+<a class=nav href="class-id.html">CSS Class 與 ID</a><br>
+<a class=nav href="div-span.html">CSS Div 與 Span</a><br>
+<a class=nav href="length-units.html">CSS 長度單位</a><br><br>
+
+<a class=nav href="box-model.html">CSS 盒子模式</a><br>
+<a class=nav href="margin.html">CSS 邊界 (Margin)</a><br>
+<a class=nav href="border.html">CSS 邊框 (Border)</a><br>
+<a class=nav href="padding.html">CSS 留白 (Padding)</a><br>
+<a class=nav href="background.html">CSS 背景 (Background)</a><br>
+<a class=nav href="color.html">CSS 顏色</a><br>
+<a class=nav href="font.html">CSS 字體</a><br>
+<a class=nav href="link.html">CSS 連接</a><br>
+<a class=nav href="list.html">CSS 清單 (List)</a><br>
+<a class=nav href="table.html">CSS 表格 (Table)</a><br>
+<a class=nav href="position.html">CSS 位置 (Position)</a><br>
+<a class=nav href="text.html">CSS 文字 (Text)</a><br>
+<a class=nav href="float.html">CSS 浮動 (Float)</a><br>
+<a class=nav href="clear.html">CSS 清除 (Clear)</a><br>
+<a class=nav href="cursor.html">CSS 滑鼠游標圖案</a><br><br>
+
+<a class=nav href="codes.html">CSS 樣式</a><br><br>
+		</td></tr></table></td>
+        </td>
+      </tr>
+    </table>
+  </center>
+</body>
+
+<!-- Mirrored from www.1keydata.com/css-tutorial/tw/position.php by HTTrack Website Copier/3.x [XR&CO'2013], Thu, 22 Aug 2013 15:42:13 GMT -->
+</html>

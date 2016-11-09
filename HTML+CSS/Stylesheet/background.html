@@ -1,0 +1,204 @@
+<html lang="zh-tw">
+
+<!-- Mirrored from www.1keydata.com/css-tutorial/tw/background.php by HTTrack Website Copier/3.x [XR&CO'2013], Thu, 22 Aug 2013 15:42:07 GMT -->
+<head>
+<title>CSS 背景屬性 (Background)CSS 語法教學 </title>
+<meta name="description" content="列出與背景 (background) 有關的 CSS 屬性。">
+<link rel="canonical" href="background.html" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel=stylesheet type="text/css" href="css-tutorial.css">
+</head>
+<body>
+<center><table border=0 bgcolor="FFA900" width=960 cellspacing=0 cellpadding=0><tr valign=top><td><h2> CSS 背景屬性 </h2>
+</td><td align=right>
+</td></tr></table>
+<table border="0" cellspacing="0" cellpadding="0" width="960" bgcolor="FFFFFF">
+<tr><td height=1 width=190 bgcolor=6600FF></td><td rowspan=2 valign=top width=690 valign=top>
+<table border=0 cellspacing=5 class=main><tr><td valign="top"><h6><a href="index.html">CSS 教學</a> &nbsp;&gt;&nbsp; 背景屬性</h6>
+<center>
+
+</center><p>在 CSS 中常見的背景 (background) 屬性有以下幾種： </p>
+
+<p><li><a href=#color>background-color</a>
+<li><a href=#image>background-image</a>
+<li><a href=#repeat>background-repeat</a>
+<li><a href=#attachment>background-attachment</a>
+<li><a href=#position>background-position</a>
+
+<p>每一個屬性在以下會有詳細地介紹：
+
+<a name=color></a>
+<h3>background-color</h3>
+
+<p><b>background-color</b> 屬性是用來指定背景的顏色。
+
+<p><table border=1 cellspacing=0 cellpadding=0 class=main><tr><td>&nbsp; CSS 樣式</td><td>&nbsp; 顯現結果</td></tr>
+<tr><td>
+<p>&nbsp; p {background-color: 00FF00;} &nbsp;
+</td><td><p style='background-color: 00FF00;'><br> &nbsp; 綠色背景 &nbsp; <br><br>
+</td></tr>
+<tr><td>
+<p>&nbsp; p {background-color: red;} &nbsp;
+</td><td>
+<p style='background-color: red;'><br> &nbsp; 紅色背景 &nbsp; <br><br>
+</td></tr>
+</table>
+
+<a name=image></a>
+<h3>background-image</h3>
+
+<p><b>background-image</b> 屬性是用來指定用什麼圖案來當做背景。
+
+<p><table border=1 cellspacing=0 cellpadding=5 class=main><tr><td>CSS 樣式</td><td>顯現結果</td></tr>
+<tr><td>
+<p>p {background-image:url(yp.jpg);}
+</td><td><p style='background-image:url(yp.html); background-repeat: no-repeat;'>有背景圖案<br><br><br>
+</td></tr>
+</table>
+
+<a name=repeat></a>
+<h3>background-repeat</h3>
+
+<p><b>background-repeat</b> 屬性是用來指定背景圖案重不重複。預設值是 "repeat"，代表此背景圖案將在 x- 及 y-方向都會重覆。其他的值為 x-repeat (x-方向重複)、y-repeat (y-方向重複)、以及 no-repeat (不重複)。
+
+<p>舉例如下：
+
+<p><table border=1 cellspacing=0 cellpadding=5 class=main><tr><td>CSS 樣式</td><td>顯現結果</td></tr>
+<tr><td>
+<p>p {
+<br> &nbsp; background-image:url(yp.jpg);
+<br> &nbsp; background-repeat: no-repeat;
+<br>}
+</td><td><p style='background-image:url(yp.html); background-repeat: no-repeat;'>背景圖案不重複。<br><br><br>
+</td></tr>
+<tr><td>
+<p>p {
+<br> &nbsp; background-image:url(yp.jpg);
+<br> &nbsp; background-repeat: repeat-x;
+<br>}
+</td><td><p style='background-image:url(yp.html); background-repeat: repeat-x;'>背景圖案在 x-方向重複。<br><br><br>
+</td></tr>
+<tr><td>
+<p>p {
+<br> &nbsp; background-image:url(yp.jpg);
+<br> &nbsp; background-repeat: repeat-y;
+<br>}
+</td><td><p style='background-image:url(yp.html); background-repeat: repeat-y;'>背景圖案在 y-方向重複。<br><br><br>
+</td></tr>
+<tr><td>
+<p>p {
+<br> &nbsp; background-image:url(yp.jpg);
+<br> &nbsp; background-repeat: repeat;
+<br>}
+</td><td><p style='background-image:url(yp.html); background-repeat: repeat;'>背景圖案在 x- 及 y-方向重複。<br><br><br>
+</td></tr>
+</table>
+
+<a name=attachment></a>
+<h3>background-attachment</h3>
+
+<p><b>background-attachment</b> 屬性是用來指定背景圖案是否在螢幕上固定。這個屬性可能的值為 "fixed" (當網頁捲動時，背景圖案固定不動) 以及 "scroll" (當網頁捲動時，背景圖案會跟著移動)。
+
+<p>以下是兩個例子：
+
+<table border=0 cellpadding=10 cellspacing=10>
+<tr><td><font size=2 face=arial>
+body {background-attachment: fixed;
+<br> &nbsp;  background-image: url("yp.jpg");
+<br> &nbsp;  background-repeat: no-repeat;
+<br>}
+</td><td><font size=2 face=arial>
+body {background-attachment: scroll;
+<br> &nbsp;  background-image: url("yp.jpg");
+<br> &nbsp;  background-repeat: no-repeat;
+<br>}
+</td></tr>
+<tr><td>
+<iframe width=200 height=150 src="fixed-sample.html"></iframe>
+</td><td>
+<iframe width=200 height=150 src="not-fixed-sample.html"></iframe>
+</td></tr></table>
+
+<a name=position></a>
+<h3>background-position</h3>
+
+<p><b>background-position</b> 屬性是用來指定背景圖案的位置。它的值可以是：
+<ul>
+<li>兩個字：第一個字為 [top,center,bottom] 中三選一，而第二個字由 [left,center,right] 中三選一。
+<li>兩個百分比：第一個百分比為 x-軸的百分比，第二個為 y-軸的百分比。
+<li>兩個數目：第一個數目為 x-軸的位置，第二個數目為 y-軸的位置。
+</ul>
+
+<p>舉例如下：
+
+<table border=0 cellpadding=10 cellspacing=10>
+<tr><td><font size=2 face=arial>
+body { background-image: url("yp.jpg");
+<br> &nbsp;  background-repeat: no-repeat;
+<br> &nbsp;  background-position: center center;
+<br>}
+</td><td><font size=2 face=arial>
+body { background-image: url("yp.jpg");
+<br> &nbsp;  background-repeat: no-repeat;
+<br> &nbsp;  background-position: 20% 20%;
+<br>}
+</td></tr>
+<tr><td>
+<iframe width=200 height=200 src="center-center.html"></iframe>
+</td><td>
+<iframe width=200 height=200 src="2020.html"></iframe>
+</td></tr></table>
+
+<p><center>下一頁： <a href="color.html">CSS 顏色</a></center>
+
+
+</td>
+
+﻿
+</tr></table>
+
+</td></tr><tr valign=top>
+
+        <td valign="top" width="190" nowrap vlink="#000000" bgcolor=6600FF>
+		<table border=0 cellpadding=8>
+		<tr><td>
+<br>
+
+<font size="-1" face="Verdana, Arial, Helvetica, sans-serif">
+<a class=nav href="index.html">CSS 語法教學</a><br>
+
+<a class=nav href="syntax.html">CSS 語法</a><br>
+<a class=nav href="apply.html">CSS 套用方式</a><br>
+<a class=nav href="media-types.html">CSS  媒體類別</a><br>
+<a class=nav href="cascade.html">CSS 串接</a><br>
+<a class=nav href="inheritance.html">CSS 繼承</a><br>
+<a class=nav href="class-id.html">CSS Class 與 ID</a><br>
+<a class=nav href="div-span.html">CSS Div 與 Span</a><br>
+<a class=nav href="length-units.html">CSS 長度單位</a><br><br>
+
+<a class=nav href="box-model.html">CSS 盒子模式</a><br>
+<a class=nav href="margin.html">CSS 邊界 (Margin)</a><br>
+<a class=nav href="border.html">CSS 邊框 (Border)</a><br>
+<a class=nav href="padding.html">CSS 留白 (Padding)</a><br>
+<a class=nav href="background.html">CSS 背景 (Background)</a><br>
+<a class=nav href="color.html">CSS 顏色</a><br>
+<a class=nav href="font.html">CSS 字體</a><br>
+<a class=nav href="link.html">CSS 連接</a><br>
+<a class=nav href="list.html">CSS 清單 (List)</a><br>
+<a class=nav href="table.html">CSS 表格 (Table)</a><br>
+<a class=nav href="position.html">CSS 位置 (Position)</a><br>
+<a class=nav href="text.html">CSS 文字 (Text)</a><br>
+<a class=nav href="float.html">CSS 浮動 (Float)</a><br>
+<a class=nav href="clear.html">CSS 清除 (Clear)</a><br>
+<a class=nav href="cursor.html">CSS 滑鼠游標圖案</a><br><br>
+
+<a class=nav href="codes.html">CSS 樣式</a><br><br>
+		</td></tr></table></td>
+        </td>
+      </tr>
+    </table>
+  </center>
+</body>
+
+<!-- Mirrored from www.1keydata.com/css-tutorial/tw/background.php by HTTrack Website Copier/3.x [XR&CO'2013], Thu, 22 Aug 2013 15:42:11 GMT -->
+</html>

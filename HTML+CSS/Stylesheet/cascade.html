@@ -1,0 +1,90 @@
+<html lang="zh-tw">
+
+<!-- Mirrored from www.1keydata.com/css-tutorial/tw/cascade.php by HTTrack Website Copier/3.x [XR&CO'2013], Thu, 22 Aug 2013 15:42:06 GMT -->
+<head>
+<title>CSS 串接CSS 語法教學 </title>
+<meta name="description" content="解釋 CSS 中的串接 (cascade) 概念。">
+<link rel="canonical" href="cascade.html" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel=stylesheet type="text/css" href="css-tutorial.css">
+</head>
+<body>
+<center><table border=0 bgcolor="FFA900" width=960 cellspacing=0 cellpadding=0><tr valign=top><td><h2> CSS 串接 </h2>
+</td><td align=right>
+</td></tr></table>
+<table border="0" cellspacing="0" cellpadding="0" width="960" bgcolor="FFFFFF">
+<tr><td height=1 width=190 bgcolor=6600FF></td><td rowspan=2 valign=top width=690 valign=top>
+<table border=0 cellspacing=5 class=main><tr><td valign="top"><h6><a href="index.html">CSS 教學</a> &nbsp;&gt;&nbsp; 串接</h6>
+<center>
+
+</center><p>CSS 的全名為 Cascading Style Sheets。如果只有一個樣式表，那『串接』(cascade) 這個部分就不重要。若一個 HTML 文件中包含有多個樣式表，那串接這個概念就非常重要了。 </p>
+
+<p>串接是指當不同樣式表中對相同屬性有不同定義時，應該要用哪一個樣式表中的定義的規則。</p>
+
+<p>最基本的規則是，越接近 HTML 本身的樣式越有優先權。因此，內行套用的樣式通常會有最高的優先權，因為它最接近 HTML 的元素。接下來的是嵌入套用的樣式表；這一類的樣式表是在 &lt;head&gt; 內宣告的。再下來是匯入套用的樣式表。若有多個樣式表被匯入，越後被匯入的越有優先權。優先權最低的是外部連接套用的樣式表。若有多個外部樣式表被連接，越後被匯入的越有優先權。</p>
+
+<p>另外，每一個瀏覽器也都有自己的樣式表 (這就是為什麼超連接文字通常會是藍色，而且下面有一條線)。這一類的樣式表優先權比以上的幾種都低。</p>
+
+<p>所以，從最高優先權到最低優先權的排名如下：</p>
+
+<ul>
+<li>內行套用的樣式表 (Inline stylesheet)
+<li>嵌入套用的樣式表 (Embedded stylesheet)
+<li>匯入套用的樣式表 (Imported stylesheet)
+<li>外部連接套用的樣式表 (Linked stylesheet)
+<li>瀏覽器本身的樣式表 (Browser's own stylesheet)
+</ul>
+
+<p><center>下一頁： <a href=inheritance.html>CSS 繼承</a></center>
+
+
+</td>
+
+﻿
+</tr></table>
+
+</td></tr><tr valign=top>
+
+        <td valign="top" width="190" nowrap vlink="#000000" bgcolor=6600FF>
+		<table border=0 cellpadding=8>
+		<tr><td>
+<br>
+
+<font size="-1" face="Verdana, Arial, Helvetica, sans-serif">
+<a class=nav href="index.html">CSS 語法教學</a><br>
+
+<a class=nav href="syntax.html">CSS 語法</a><br>
+<a class=nav href="apply.html">CSS 套用方式</a><br>
+<a class=nav href="media-types.html">CSS  媒體類別</a><br>
+<a class=nav href="cascade.html">CSS 串接</a><br>
+<a class=nav href="inheritance.html">CSS 繼承</a><br>
+<a class=nav href="class-id.html">CSS Class 與 ID</a><br>
+<a class=nav href="div-span.html">CSS Div 與 Span</a><br>
+<a class=nav href="length-units.html">CSS 長度單位</a><br><br>
+
+<a class=nav href="box-model.html">CSS 盒子模式</a><br>
+<a class=nav href="margin.html">CSS 邊界 (Margin)</a><br>
+<a class=nav href="border.html">CSS 邊框 (Border)</a><br>
+<a class=nav href="padding.html">CSS 留白 (Padding)</a><br>
+<a class=nav href="background.html">CSS 背景 (Background)</a><br>
+<a class=nav href="color.html">CSS 顏色</a><br>
+<a class=nav href="font.html">CSS 字體</a><br>
+<a class=nav href="link.html">CSS 連接</a><br>
+<a class=nav href="list.html">CSS 清單 (List)</a><br>
+<a class=nav href="table.html">CSS 表格 (Table)</a><br>
+<a class=nav href="position.html">CSS 位置 (Position)</a><br>
+<a class=nav href="text.html">CSS 文字 (Text)</a><br>
+<a class=nav href="float.html">CSS 浮動 (Float)</a><br>
+<a class=nav href="clear.html">CSS 清除 (Clear)</a><br>
+<a class=nav href="cursor.html">CSS 滑鼠游標圖案</a><br><br>
+
+<a class=nav href="codes.html">CSS 樣式</a><br><br>
+		</td></tr></table></td>
+        </td>
+      </tr>
+    </table>
+  </center>
+</body>
+
+<!-- Mirrored from www.1keydata.com/css-tutorial/tw/cascade.php by HTTrack Website Copier/3.x [XR&CO'2013], Thu, 22 Aug 2013 15:42:06 GMT -->
+</html>

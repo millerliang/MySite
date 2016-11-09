@@ -1,0 +1,174 @@
+﻿<!DOCTYPE html>
+
+<!--
+  Google HTML5 slide template
+
+  Authors: Luke Mahé (code)
+           Marcin Wichary (code and design)
+           
+           Dominic Mazzoni (browser compatibility)
+           Charles Chen (ChromeVox support)
+
+  URL: http://code.google.com/p/html5slides/
+-->
+
+<html>
+  <head>
+    <title>html5 Slides</title>
+
+    <meta charset='utf-8'>
+    <script src='js/slides.js'></script>
+  </head>
+ 
+  <style>
+    body {
+		font-family:"Times New Roman","微軟正黑體", Georgia,Serif;
+	}
+  img.lee {
+	-webkit-box-shadow: 0px 0px 4px 1px #666666;
+	box-shadow: 0px 0px 4px 1px #666666;
+	padding-right: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 5px;
+	background-color: #FFFFFF;
+}
+  </style>
+
+<body style='display: none'>
+
+    <section class='slides layout-regular template-default'>
+     
+      <!-- Your slides (<article>s) go here. Delete or comment out the
+           slides below. -->
+
+      <article class='biglogo'>
+      </article>
+
+      <article>
+        <h1>
+          HTML 的概述<br>HTML 標籤介紹<br/>Adobe Dreamware 介紹
+        </h1>
+        <p>
+          主講人：梁智勇 Miller Liang
+          <br>
+          8月19日, 2013
+        </p>
+      </article>
+
+      <article>
+        <h3>
+          概述html
+        </h3>
+		<p align="center"><img src="images/Tim_Berners-Lee.jpg" class="lee"></p>
+        <p>
+        1980 年，蒂姆·伯納斯-李 (Tim Berners-Lee) 為使世界各地的物理學家能夠方便的進行合作研究，建立了使用於其系統的 HTML。</p>
+        <p> Tim Berners-Lee 設計的 HTML 以純文字格式為基礎，可以使用任何文字編輯器處理，最初僅有少量標記（TAG）而易於掌握運用。
+        </p>
+      </article>
+	  
+	  <article>
+        <h3>
+          概述html
+        </h3>
+		<p>
+         A.<br/>HTML 的全名是 <span class='red'>H</span>yper<span class='red'>T</span>ext <span class='red'>M</span>arkup <span class='red'>L</span>anguage，是編寫網頁的基本語言，而它並不是一個程式， 只是一些插在普通文件內的碼( code )，這些碼可以控制我們的瀏覽器要怎樣把文件顯示出來，就是你現在所看到的頁面就是用HTML來控制的，它可控制字體的大小，也可以插入連結或圖像。
+        </p>
+      </article>
+	  
+	  <article>
+        <h3>
+          概述html
+        </h3>
+        <p>
+         B.<br/>一個 HTML 檔稱為 HTML document，存檔的副檔名為 htm 或 html，編寫的方式有很多種， 最原始的方法是用 windows 內的記事本或各種文書編輯軟體，而現在大部分使用者編寫 HTML 碼都採用 Adobe Dreamweaver 編輯軟體，編寫完成後記得儲存成 *.htm 或 *.html 即可。 
+        </p>
+      </article>
+	  
+	  <article>
+        <h3>
+          概述html
+        </h3>
+		<p>
+         C.<br/>一份標準的 HTML 文件是由元素所組成的，元素是由標籤 (<span class='red'>Tag</span>) 以及文件內容所組成。文件內容可以是文字、圖形、甚至是影像、聲音等等。<br/><br/>而標籤又是啥東東呢？？ 一個開始標籤 (<span class='red'>< ></span>) 是由一個小於符號 (<)和一個大於符號(>) 所構成的一個起始標籤中加一道斜線 "<span class='red'>/</span>" 就構成了結束標籤 (<span class='red'>< / ></span>) 而一對標籤是由一個起始標籤和一個結束標籤所構成的。
+        </p>
+      </article>
+     
+      <article>
+        <h3>
+        TAG 標籤範例
+        </h3>
+        <section>
+<pre>
+	&lt;html&gt;
+	&lt;head&gt;
+	&lt;meta http-equiv="Content-Type" content="text/html;
+	charset=utf-8" /&gt;
+	&lt;title&gt;網頁標題文字&lt;/title&gt;
+	&lt;/head&gt;	
+	&lt;body&gt;
+		&lt;p&gt;在瀏覽器顯示的內容&lt;/p&gt;
+		&lt;h1&gt;在瀏覽器顯示的內容&lt;/h1&gt;
+		&lt;marquee&gt;在瀏覽器顯示的內容&lt;/marquee&gt;
+		&lt;em&gt;在瀏覽器顯示的內容&lt;/em&gt;
+		&lt;strong&gt;在瀏覽器顯示的內容&lt;/strong&gt;
+		&lt;q&gt;在瀏覽器顯示的內容&lt;/q&gt;
+		&lt;/body&gt;
+	&lt;/html&gt;
+</pre>
+		</section>
+      </article>
+
+      <article>
+        <h3>
+          <p>網頁瀏覽器的發展史</p>
+		  <div style="height: 500px; overflow-y:auto;"><img src='images/IG-Browser-Evo-2-600px.jpg'></div>
+        </h3>
+        <div class='source'>
+          出處: <a href="http://http://www.testking.com/techking/">Tech King</a>
+        </div>
+      </article>
+
+      <article>
+        <h3>
+          多媒體及外掛 Plugin
+        </h3>
+        <p align="center"><img src='images/swf.png'><img src='images/pdf.png'><img src='images/mp3.png'><img src='images/midi.png'><img src='images/youtube.png'><img src='images/java.png'></p>
+        <p align="center"><h3>IE Activex</h3><img src='images/activex.png'></p>
+      </article>
+
+      <article class='fill'>
+        <h3>
+          HTML 常用基本標籤介紹
+        </h3>
+        <p>
+          <img src='images/example-cat.jpg'>
+        </p>
+      </article>
+     
+      <article>
+        <h3>
+         <img src='images/Tag.png' style="a"> w3 School 在線教程
+        </h3>
+       
+        <ul>
+          <!-- <li><a href="http://www.jyt-inc.com" target="_blank">www.jyt-inc.com</a></li> -->
+          <li><a href="http://www.w3school.com.cn" target="_blank">http://www.w3school.com.cn</a></li>
+          <li><a href="http://www.powmo.com/" target="_blank">http://www.powmo.com/</a></li>
+          <li><a href="http://m7.dfps.tp.edu.tw/chen/main5/ahtml/01.asp" target="_blank">HTML 教學</a></li>
+          <li><a href="http://www.csie.nctu.edu.tw/~jglee/teacher/content.htm" target="_blank">HTML</a></li>
+        </ul>
+      </article>
+		
+        <article>
+        <p><img src='images/Adobe.png'> <img src='images/Dreamware.png'></p>
+        <h1>
+          Adobe Dreamware<br/>網頁編輯軟體介紹
+        </h1>
+        
+      </article>
+        
+    </section>
+
+  </body>
+</html>
