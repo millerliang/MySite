@@ -1,0 +1,291 @@
+/* Reset CSS */
+html, body, h1, form, fieldset, legend, ol, li {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+:focus {
+    outline: 0;
+}
+/* Reset CSS */
+
+/* terms & PRIVACY */
+.wrap {
+    max-width: 80%;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 0.5em 1.5em;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    box-shadow: 0px 3px 5px rgba(0,0,0,.25);
+    -moz-box-shadow: 0px 3px 5px rgba(0,0,0,.25);
+    -webkit-box-shadow: 0px 3px 5px rgba(0,0,0,.25);
+}
+
+    .wrap .page_title {
+        border-bottom: 3px solid #ED4093;
+        padding-bottom: 10px;
+    }
+
+        .wrap .page_title .txt_cht {
+            font-size: 24px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        .wrap .page_title .txt_eng {
+            font-size: 18px;
+            color: #999;
+            border-left: 1px solid #999;
+            padding-left: 10px;
+        }
+
+    .wrap ul {
+        padding: 10px;
+    }
+
+        .wrap ul li {
+            line-height: 1.6em;
+            margin: 5px;
+        }
+
+    .wrap .pd10 {
+        padding: 10px;
+    }
+
+    .wrap .mgb10 {
+        margin-bottom: 10px;
+    }
+
+    .wrap .pdl20 {
+        padding-left: 20px;
+    }
+
+    .wrap .fw_bd {
+        font-weight: bold;
+    }
+/* terms & PRIVACY */
+
+body {
+    line-height: 1;
+    color: #111111;
+    font-family: "Microsoft Yahei", Times, Georgia, serif;
+    padding: 20px;
+    /*background-color: #ecf0f1;*/
+    background-image: url('../img/noise.png');
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#234160), color-stop(100%,#728EAA));
+    background: linear-gradient(to bottom, #234160 0%,#728EAA 100%);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* h1 {font-size: 28px;margin-bottom: 20px;color: #728EAA;} */
+h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #728EAA;
+
+    /*font-size: 32pt;
+    margin-bottom: 20px;
+    color: #fff;
+    text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);*/
+}
+
+.from_bg {
+    height: 140px;
+    background: no-repeat top right url(https://cdn3.iconfinder.com/data/icons/interface-8/128/InterfaceExpendet-10-256.png);
+}
+
+.reg {
+    background-position: 112% -60px;
+}
+
+.log {
+    background-image: url(https://cdn2.iconfinder.com/data/icons/bitsies/128/Enter-128.png);
+}
+
+    .log h1 {
+        margin-top: 1em;
+    }
+
+form.dataForm {
+    background: #c9d0de;
+    border: 2px solid #e1e1e1;
+    /*background: #9cbc2c;*/
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    /*-khtml-border-radius: 5px;*/
+    border-radius: 5px;
+    counter-reset: fieldsets;
+    padding: 10px 20px;
+    max-width: 650px;
+    margin: 0 auto;
+    box-shadow: 0px 3px 5px rgba(0,0,0,.25);
+    -moz-box-shadow: 0px 3px 5px rgba(0,0,0,.25);
+    -webkit-box-shadow: 0px 3px 5px rgba(0,0,0,.25);
+}
+
+    form.dataForm fieldset {
+        border: none;
+        margin-bottom: 10px;
+    }
+
+        form.dataForm fieldset:last-of-type {
+            margin-bottom: 0;
+        }
+
+    form.dataForm legend {
+        color: #384313;
+        font-size: 18px;
+        font-weight: bold;
+        padding-bottom: 10px;
+        text-shadow: 0 1px 1px #c0d576;
+    }
+
+    form.dataForm > fieldset > legend:before {
+        content: "Step " counter(fieldsets) ": ";
+        counter-increment: fieldsets;
+    }
+
+    form.dataForm fieldset fieldset legend {
+        color: #111111;
+        font-size: 16px;
+        font-weight: normal;
+        padding-bottom: 0;
+    }
+
+    form.dataForm ol li {
+        /* background: #b9cf6a; */
+        background: rgba(255,255,255,.3);
+        /* border-color: #e3ebc3; */
+        /* border:2px solid rgba(255,255,255,.6); */
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+        /*-khtml-border-radius: 5px;*/
+        border-radius: 5px;
+        line-height: 30px;
+        list-style: none;
+        padding: 5px 10px;
+        margin-bottom: 2px;
+    }
+
+    form.dataForm ol ol li {
+        background: none;
+        border: none;
+        float: left;
+    }
+
+    form.dataForm label {
+        float: left;
+        font-size: 16px;
+        width: 220px;
+    }
+
+    form.dataForm fieldset fieldset label {
+        background: none no-repeat left 50%;
+        line-height: 20px;
+        /*padding: 0 0 0 30px;*/
+        width: auto;
+    }
+
+    form.dataForm label[for=visa] {
+        background-image: url(visa.gif);
+    }
+
+    form.dataForm label[for=amex] {
+        background-image: url(amex.gif);
+    }
+
+    form.dataForm label[for=mastercard] {
+        background-image: url(mastercard.gif);
+    }
+
+    form.dataForm fieldset fieldset label:hover {
+        /*cursor: pointer;*/
+    }
+
+    form.dataForm input:not([type=radio]),
+    form.dataForm textarea {
+        background: #ffffff;
+        border: none;
+        -moz-border-radius: 3px;
+        -webkit-border-radius: 3px;
+        /*-khtml-border-radius: 3px;*/
+        border-radius: 3px;
+        font: 16px "Microsoft Yahei", Georgia, Times, serif;
+        outline: none;
+        padding: 5px;
+        width: 60%;
+    }
+
+    /*form.dataForm input:not([type=radio]):focus,
+form.dataForm textarea:focus {
+background: #ffffff;
+}*/
+
+    form.dataForm select {
+        background: #ffffff;
+        border: none;
+        border-radius: 3px;
+        width: 210px;
+        font: 16px "Microsoft Yahei", Georgia, Times, serif;
+        outline: none;
+        padding: 5px;
+    }
+
+    form.dataForm input:not([type=submit]):focus,
+    form.dataForm textarea:focus {
+        background: #eaeaea;
+    }
+
+    form.dataForm input[type=radio] {
+        float: left;
+        margin-right: 5px;
+        transform: scale(1.5);
+        cursor: pointer;
+    }
+
+    form.dataForm button {
+        /*background: #384313;*/
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#718DA9), color-stop(100%,#415D79));
+        /*border: none;*/
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+        /*-khtml-border-radius: 20px;*/
+        border-radius: 5px;
+        color: #ffffff;
+        display: block;
+        font: 18px "Microsoft Yahei", Georgia, Times, serif;
+        letter-spacing: 1px;
+        margin: 0.6em auto 0;
+        padding: 10px 36px;
+        text-shadow: 0 1px 1px #000000;
+        text-transform: uppercase;
+        border: 1px solid #556f8c;
+        cursor: pointer;
+    }
+
+        form.dataForm button:hover {
+            background: #718DA9;
+            cursor: pointer;
+        }
+
+#formName {
+    text-align: center;
+}
+
+.ui-tooltip {
+    /* background:transparent url(images/black_arrow.png);*/
+    color: #FFF;
+    background: #B24926;
+}

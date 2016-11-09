@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>首頁 - 後台管理系統</title>
+
+		<meta name="description" content="" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- basic styles -->
+
+		<link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+		<!--[if IE 7]>
+		  <link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css" />
+		<![endif]-->
+
+		<!-- page specific plugin styles -->
+
+		<!-- fonts -->
+
+		<!-- <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" /> -->
+
+		<!-- ace styles -->
+
+		<link rel="stylesheet" href="assets/css/ace.min.css" />
+		<link rel="stylesheet" href="assets/css/ace-rtl.min.css" />
+		<link rel="stylesheet" href="assets/css/ace-skins.min.css" />
+
+		<!--[if lte IE 8]>
+		  <link rel="stylesheet" href="assets/css/ace-ie.min.css" />
+		<![endif]-->
+
+		<!-- inline styles related to this page -->
+
+		<!-- ace settings handler -->
+
+		<script src="assets/js/ace-extra.min.js"></script>
+
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+
+		<!--[if lt IE 9]>
+		<script src="assets/js/html5shiv.js"></script>
+		<script src="assets/js/respond.min.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<div class="navbar navbar-default" id="navbar">
+
+			<script type="text/javascript">
+				try{ace.settings.check('navbar' , 'fixed')}catch(e){}
+			</script>
+
+
+			<div class="navbar-container" id="navbar-container">
+				<div class="navbar-header pull-left logo">
+					<a href="index.html" class="navbar-brand">
+						<small>
+							XXXX後台管理系統
+						</small>
+					</a><!-- /.brand -->
+				</div><!-- /.navbar-header -->
+
+				<div class="navbar-header pull-right" role="navigation">
+					<ul class="nav ace-nav">
+						<li class="color">
+							<a data-toggle="dropdown" class="dropdown-toggle" href="#">
+								<i class="icon-envelope icon-animated-vertical"></i>
+								<span class="badge badge-important">12</span>
+							</a>
+
+							<ul class="pull-right dropdown-navbar navbar-pink dropdown-menu dropdown-caret dropdown-times">
+								<li>
+									<a href="user_feedback.html">
+										<div class="clearfix">
+											<span class="pull-left">
+												<i class="btn btn-xs no-hover btn-success icon-user"></i>
+												客服管理
+											</span>
+											<span class="pull-right badge badge-success">+8</span>
+										</div>
+									</a>
+								</li>
+
+								<li>
+									<a href="user_feedback.html">
+										查看所有通知
+										<i class="icon-arrow-right"></i>
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li class="light-blue">
+							<a data-toggle="dropdown" href="#" class="dropdown-toggle">
+								<img class="nav-user-photo" src="assets/avatars/avatar4.png" alt="Jason's Photo" />
+								<span class="user-info">
+									<small>您好, 歡迎</small>
+									超級管理員
+								</span>
+
+								<i class="icon-caret-down"></i>
+							</a>
+
+							<ul class="user-menu pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-times">
+								<li>
+									<a href="admin_profile.html">
+										<i class="icon-user"></i>
+										個人資料
+									</a>
+								</li>
+
+								<li class="divider"></li>
+
+								<li>
+									<a href="login.html">
+										<i class="icon-power-off"></i>
+										登 出
+									</a>
+								</li>
+							</ul>
+						</li>
+					</ul><!-- /.ace-nav -->
+				</div><!-- /.navbar-header -->
+			</div><!-- /.container -->
+		</div>
+
+		<div class="main-container" id="main-container">
+			<script type="text/javascript">
+				try{ace.settings.check('main-container' , 'fixed')}catch(e){}
+			</script>
+
+			<div class="main-container-inner">
+				<a class="menu-toggler" id="menu-toggler" href="#">
+					<span class="menu-text"></span>
+				</a>
+
+				<div class="sidebar" id="sidebar">
+					<script type="text/javascript">
+						try{ace.settings.check('sidebar' , 'fixed')}catch(e){}
+					</script>
+
+					<ul class="nav nav-list">
+						<li class="active">
+							<a href="index.html">
+								<i class="icon-home"></i>
+								<span class="menu-text">首 頁</span>
+							</a>
+						</li>
+
+						<li>
+							<a href="#.html">
+								<i class="icon-user-md"></i>
+								<span class="menu-text">管理員群組</span>
+							</a>
+						</li>
+
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-yelp"></i>
+								<span class="menu-text">路演管理</span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="roadshow_list.html">
+										<i class="icon-double-angle-right"></i>
+										路演清單
+									</a>
+								</li>
+								<li>
+									<a href="roadshow_meeting.html">
+										<i class="icon-double-angle-right"></i>
+										會議室管理
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="roadshow_funds.html">
+								<i class="icon-usd"></i>
+								<span class="menu-text">入資管理</span>
+							</a>
+						</li>
+
+						<li>
+							<a href="queue/listAction.sxml">
+								<i class="icon-question-circle"></i>
+								<span class="menu-text">QA管理</span>
+							</a>
+						</li>
+
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-sitemap"></i>
+								<span class="menu-text">檔案管理</span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="fileInfo/listAction.sxml">
+										<i class="icon-double-angle-right"></i>
+										檔案列表
+									</a>
+								</li>
+								<li>
+									<a href="http://heart2true.com:8088/roadshowadmin/fileInfo/listResumeAction.sxml" target="_blank">
+										<i class="icon-double-angle-right"></i>
+										PDF or PPT檔案上傳
+									</a>
+								</li>
+								<li>
+									<a href="http://heart2true.com:8088/roadshowadmin/resumeUpload/uploadAction.sxml" target="_blank">
+										<i class="icon-double-angle-right"></i>
+										HTML上傳
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-laptop"></i>
+								<span class="menu-text">项目管理</span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="roadshow_noyet.html">
+										<i class="icon-double-angle-right"></i>
+										待審查項目
+									</a>
+								</li>
+							</ul>
+						</li>
+
+                        <li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-bar-chart-o"></i>
+								<span class="menu-text">統計分析</span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="#.html">
+										<i class="icon-double-angle-right"></i>
+										區間統計分析
+									</a>
+								</li>
+								<li>
+									<a href="#.html">
+										<i class="icon-double-angle-right"></i>
+										地區地域分布
+									</a>
+								</li>
+                                <li>
+									<a href="#.html">
+										<i class="icon-double-angle-right"></i>
+										流量及數據分析
+									</a>
+								</li>
+							</ul>
+						</li>
+
+					</ul><!-- /.nav-list -->
+
+					<div class="sidebar-collapse" id="sidebar-collapse">
+						<i class="icon-angle-double-left" data-icon1="icon-angle-double-left" data-icon2="icon-angle-double-right"></i>
+					</div>
+
+					<script type="text/javascript">
+						try{ace.settings.check('sidebar' , 'collapsed')}catch(e){}
+					</script>
+				</div>
+
+				<div class="main-content">
+					<div class="breadcrumbs" id="breadcrumbs">
+						<script type="text/javascript">
+							try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
+						</script>
+
+						<ul class="breadcrumb">
+							<li class="active">
+								<i class="icon-home home-icon"></i>
+								<a href="index.html">Home</a>
+							</li>
+						</ul><!-- .breadcrumb -->
+
+						<div class="nav-search" id="nav-search">
+							<form class="form-search">
+								<span class="input-icon">
+									<input type="text" placeholder="搜尋 ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
+									<i class="icon-search nav-search-icon"></i>
+								</span>
+							</form>
+						</div><!-- #nav-search -->
+					</div>
+
+					<div class="page-content">
+						<div class="page-header">
+							<h1>
+								首頁
+								<small>
+									<i class="icon-angle-double-right"></i>
+									系統狀態
+								</small>
+							</h1>
+						</div><!-- /.page-header -->
+
+						<div class="row">
+							<div class="col-xs-12">
+								<!-- PAGE CONTENT BEGINS -->
+
+								<div class="space-4"></div>
+
+								<div class="row">
+
+									<div class="col-xs-12 col-sm-8">
+										<div class="btn_bar">
+											<a href="#" class="btn btn-sm btn-primary"><i class="icon-file"></i> 新增項目</a>
+											<a href="#" class="btn btn-sm btn-purple"><i class="icon-upload"></i> 上傳檔案</a>
+											<a href="#" class="btn btn-sm btn-warning"><i class="icon-video-camera"></i> 上傳影片</a>
+											<a href="#" class="btn btn-sm btn-danger"><i class="icon-file-pdf-o"></i> PDF 上傳</a>
+											<a href="#" class="btn btn-sm btn-info"><i class="icon-file-powerpoint-o"></i> PPT 上傳</a>
+											<a href="#" class="btn btn-sm btn-link"><i class="icon-html5"></i> HTML 上傳</a>
+										</div>
+										<hr>
+										<div class="row">
+											<div class="col-xs-12 col-sm-6">
+												<div class="widget-box">
+													<div class="widget-header">
+														<h4 class="smaller">
+															APK 下載
+															<small>for Android</small>
+															<div class="pull-right">
+																<button class="btn btn-xs btn-white">歷史版本</button>
+																&nbsp;
+															</div>
+														</h4>
+													</div>
+
+													<div class="widget-body">
+														<div class="widget-main">
+															<ol>
+																<li><a href="http://120.55.194.171:8088/rc/RoadShow_debug20160224.apk" class="btn btn-link"><i class="icon-cloud-download"></i> Android 版本 2016.02.24</a></li>
+																<li><a href="http://120.55.194.171:8088/rc/RoadShow_debug20160224.apk" class="btn btn-link"><i class="icon-cloud-download"></i> Android 版本 2016.02.23</a></li>
+																<li><a href="http://120.55.194.171:8088/rc/RoadShow_debug20160224.apk" class="btn btn-link"><i class="icon-cloud-download"></i> Android 版本 2016.02.22</a></li>
+															</ol>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="col-xs-12 col-sm-6">
+												<div class="widget-box">
+													<div class="widget-header">
+														<h4 class="smaller">
+															Apple 下載
+															<small>for IOS</small>
+															<div class="pull-right">
+																<button class="btn btn-xs btn-white">歷史版本</button>
+																&nbsp;
+															</div>
+														</h4>
+													</div>
+
+													<div class="widget-body">
+														<div class="widget-main">
+															<ul>
+																<li><a href="#"><i class="icon-cloud-download"></i> IOS 版本 2016.01.28</a></li>
+																<li><a href="#"><i class="icon-cloud-download"></i> IOS 版本 2016.01.25</a></li>
+															</ul>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div><!-- /.row -->
+
+									</div><!-- Left/.col-sm-8 -->
+
+									<div class="col-xs-12 col-sm-4 hidden-sm hidden-xs">
+										<div class="widget-box">
+											<div class="widget-header">
+												<h4 class="smaller">
+													<i class="icon-pie-chart"></i> 概況
+													<!-- <small>操作說明</small> -->
+													<div class="pull-right">
+														<button class="btn btn-xs btn-white">詳細資訊</button>
+														&nbsp;
+													</div>
+												</h4>
+											</div>
+
+											<div class="widget-body">
+												<div class="widget-main">
+													<h6 class="text-muted"><i class="icon-server"></i> 作業系統狀態</h6>
+													<p class="muted">【處理器負載】　32%</p>
+													<p class="muted">【已使用空間】　21.36GB</p>
+													<p class="muted">【實體記憶體】　16GB</p>
+													<p class="muted">【虛擬記憶體】　8GB</p>
+													<hr>
+													<p class="text-success_">
+														<i class="icon-user"></i> 會 員 ： 3,041 人<br>
+														<i class="icon-users"></i> 群組：16
+													</p>
+													<hr>
+													<p class="text-muted">
+														<i class="icon-globe blue"></i> 在線人數：64,864<br>
+														<i class="icon-apple"></i> 蘋果：234<br>
+														<i class="icon-android green"></i> 安卓：3,631<br>
+														<i class="icon-male blue"></i> 男性：439<br>
+														<i class="icon-female text-danger"></i> 女性：605<br>
+													</p>
+													<hr>
+													<ul class="list-unstyled spaced">
+														<li>
+															<i class="icon-exclamation-triangle bigger-110 text-warning"></i>
+															<a href="#">0</a> 則通知
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div><!-- Right/.col-sm-3 -->
+
+								</div><!-- /.row -->
+								<div class="hr hr32 hr-dotted"></div>
+
+								<!-- PAGE CONTENT ENDS -->
+							</div><!-- /.col -->
+						</div><!-- /.row -->
+					</div><!-- /.page-content -->
+				</div><!-- /.main-content -->
+
+			</div><!-- /.main-container-inner -->
+
+			<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+				<i class="icon-angle-double-up icon-only bigger-110"></i>
+			</a>
+		</div><!-- /.main-container -->
+
+		<!-- basic scripts -->
+
+		<!--[if !IE]> -->
+
+		<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script> -->
+
+		<!-- <![endif]-->
+
+		<!--[if IE]>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<![endif]-->
+
+		<!--[if !IE]> -->
+
+		<script type="text/javascript">
+			window.jQuery || document.write("<script src='assets/js/jquery-2.0.3.min.js'>"+"<"+"/script>");
+		</script>
+
+		<!-- <![endif]-->
+
+		<!--[if IE]>
+		<script type="text/javascript">
+		 window.jQuery || document.write("<script src='assets/js/jquery-1.10.2.min.js'>"+"<"+"/script>");
+		</script>
+		<![endif]-->
+
+		<script type="text/javascript">
+			if("ontouchend" in document) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+		</script>
+		<script src="assets/js/bootstrap.min.js"></script>
+		<script src="assets/js/typeahead-bs2.min.js"></script>
+
+		<!-- page specific plugin scripts -->
+		<!-- <script src="assets/js/Chart.min.js"></script> -->
+		<script src="assets/js/bootbox.min.js"></script>
+		<link href="assets/css/animate.css" rel="stylesheet"/>
+
+		<!--[if lte IE 8]>
+		  <script src="assets/js/excanvas.min.js"></script>
+		<![endif]-->
+
+		<!-- ace scripts -->
+
+		<script src="assets/js/ace-elements.min.js"></script>
+		<script src="assets/js/ace.min.js"></script>
+		
+		<script type="text/javascript" src="assets/js/jquery-1.11.0.min.js"></script>
+		<script type="text/javascript" src="slick/slick.min.js"></script>
+
+		<!-- inline scripts related to this page -->
+		<script type="text/javascript">
+		
+		</script>
+	</body>
+</html>

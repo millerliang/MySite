@@ -1,0 +1,524 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Books Style Test</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://daneden.github.io/animate.css/animate.min.css">
+	<style>
+	html, body{min-height:1%;margin:0;padding:0;}
+	h1,h2,h3,h4,h5 {margin:0;padding:0;}
+	body{
+	background-image: -o-linear-gradient(bottom, #AABBD4 0%, #C6C7B1 100%);
+	background-image: -moz-linear-gradient(bottom, #AABBD4 0%, #C6C7B1 100%);
+	background-image: -webkit-linear-gradient(bottom, #AABBD4 0%, #C6C7B1 100%);
+	background-image: -ms-linear-gradient(bottom, #AABBD4 0%, #C6C7B1 100%);
+	background-image: linear-gradient(to bottom, #AABBD4 0%, #C6C7B1 100%);
+	background_: url("http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/ignasi_pattern_s.png");
+	}
+	ul,ol {padding:0;margin:0;list-style: none;}
+	ul.books li {
+		display: inline-block;
+		position: relative;
+		margin: 0 -2px 3em;
+		padding: 0 50px 1.5em;
+		/*border-bottom: 2px solid #b1c0cb;*/
+		border-bottom: 3px solid rgba(255,255,255,.1);
+	}
+	ul.books li small {text-align:left;display: block;}
+	.books h4 {overflow : hidden;text-overflow:ellipsis;white-space:nowrap;max-width:250px;margin-bottom:0.5em;text-align: left;}
+	.books {
+	text-align:center;
+	/*width:80%;*/
+	margin:0 auto;
+	padding:2em 0;
+	/*background-color:rgba(255,255,255,.2);
+	border:1px solid rgba(255,255,255,.65);*/
+	-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;
+	-moz-perspective: 100px;
+	-moz-transform-style: preserve-3d;
+	-webkit-transform-style: preserve-3d;
+	}
+
+	.books .book3d .tag {font-size:small;position:absolute;top:6px;left:-6px;z-index:100;max-width:50%;color:#fff;padding:2px 6px;white-space:nowrap;box-shadow: 2px 1px 1px rgba(0,0,0,.65);}
+	.books .book3d .tag_red {background-color:#ff0000;}
+	.books .book3d .tag_red:after {border-color: #ff0000 transparent #ff0000 #ff0000;}
+	
+	.books .book3d .tag_blue {background-color:#006cd9;}
+	.books .book3d .tag_blue:after {border-color: #006cd9 transparent #006cd9 #006cd9;}
+	
+	.books .book3d .tag_green {background-color:#008c00;}
+	.books .book3d .tag_green:after {border-color: #008c00 transparent #008c00 #008c00;}
+	
+	.books .book3d .tag_grey {background-color:#888888;}
+	.books .book3d .tag_grey:after {border-color: #888888 transparent #888888 #888888;}
+	
+	.books .book3d .tag_orange {background-color:#ff4000;}
+	.books .book3d .tag_orange:after {border-color: #ff4000 transparent #ff4000 #ff4000;}
+	
+	.books .book3d .tag_pink {background-color:#ff7396;}
+	.books .book3d .tag_pink:after {border-color: #ff7396 transparent #ff7396 #ff7396;}
+	
+	.books .book3d .tag_purple {background-color:#794cff;}
+	.books .book3d .tag_purple:after {border-color: #794cff transparent #794cff #794cff;}
+
+	.books .book3d .tag:after {
+	position:absolute;
+	content: "";
+	top:0;
+	right:-7px;
+	width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 7px 11px 0;}
+
+	.books .book3d {
+	display: inline-block;
+	box-shadow: 5px 5px 20px rgba(0,0,0,.33);
+	/*cursor:pointer;*/
+	}
+
+	.books .book3d {
+	position: relative;
+	-moz-perspective: 100px;
+	-moz-transform: rotateY(-3deg);
+	-webkit-transform: perspective(100) rotateY(-3deg);
+	outline: 1px solid transparent;
+	/* Helps smooth jagged edges in Firefox */
+	box-shadow: none;
+	margin: 1em;
+	
+	-webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+	}
+	
+	.books li:hover .book3d {
+	-moz-transform: rotateY(0deg);
+	-webkit-transform: rotateY(0deg);
+
+	-webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+	}
+
+	.books .book3d img {
+	/*vertical-align: middle;*/
+	position: relative;
+	width: 250px;
+	/*min-height: 150px;*/
+	}
+
+	.books .book3d:before,
+	.books .book3d:after {
+	position: absolute;
+	top: 2%;
+	height: 96%;
+	content: ' ';
+	z-index: -1;
+	}
+
+	.books .book3d:before {
+	width: 100%;
+	left: 7.5%;
+	background-color: #5a2d18;
+	box-shadow: 5px 5px 20px rgba(0,0,0,.33);
+	}
+
+	.books .book3d:after {
+	width: 5%;
+	left: 100%;
+	background-color: #EFEFEF;
+	box-shadow: inset 0px 0px 5px rgba(0,0,0,.75);
+	-moz-transform: rotateY(20deg);
+	-webkit-transform: perspective(100) rotateY(20deg);
+	}
+
+	.books li:hover .tools_bar {display:block;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;}
+	.books li:hover .tools_bar p {text-align:left;}
+	.books li:hover .heart {right:-25%;-webkit-transition: all .6s ease;-o-transition: all .6s ease;transition: all .6s ease;}
+	.books li .tools_bar {overflow-x:hidden;color:#fff;display:none;width:66%;max-height:100%;min-height:90%;margin:0 auto;padding:6px 8px;position:absolute;bottom:23%;background-color:rgba(25,40,80,.9);}
+	.books li .tools_bar hr {border:1px solid rgba(255,255,255,0.25);}
+	.books li .tools_bar a {display:inline-block;color:#fff;font-size:12pt;padding:4px 6px;margin:0 1px 4px;text-decoration:none;width:21.5%;background-color:#00a3d9;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;}
+	.books li .tools_bar a:hover,.books li .tools_bar a.active:hover {color:#ccff99;background-color:#0059b3;}
+	.books li .tools_bar a.active {color:#f0ff4c;background-color:#00b386;}
+
+	.tools_bar::-webkit-scrollbar {width: 6px;}
+	.tools_bar::-webkit-scrollbar-thumb {border-radius: 2px;background: #666;}
+	.tools_bar::-webkit-scrollbar-track {border-radius: 2px;background: rgba(0,0,0,0.85);}
+	
+	.progress {box-shadow: none;background: #e9e9e9;height: 8px;position: relative;}
+	.progress {
+		height: 8px;
+		margin-bottom: 10px;
+		background-color: #f5f5f5;
+		border-radius: 4px;
+		-webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
+		box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
+	}
+	.progress {overflow: hidden;}
+	
+	.progress .progress-bar {
+		-webkit-box-shadow: none;
+		box-shadow: none;
+		line-height: 8px;
+	}
+	.progress-bar {background-color: #2a91d8;}
+	.progress-bar {
+		float: left;
+		width: 0;
+		height: 100%;
+		font-size: 12px;
+		line-height: 8px;
+		color: #fff;
+		text-align: center;
+		background-color: #337ab7;
+		-webkit-box-shadow: inset 0 -1px 0 rgba(0,0,0,.15);
+		box-shadow: inset 0 -1px 0 rgba(0,0,0,.15);
+		-webkit-transition: width .6s ease;
+		-o-transition: width .6s ease;
+		transition: width .6s ease;
+		background-image: linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+	}
+	.progress-bar_red {background-color: #ff4c4d;}
+	.progress-bar_pink {background-color: #ff63b1;}
+	.progress-bar_green {background-color: #59b300;}
+	.progress-bar_grey {background-color: #888888;}
+	
+	header {position:fixed;left:0;width:100%;z-index:500;background-color:rgba(255,255,255,.75);padding:6px 0;-webkit-box-shadow: 0 1px 3px rgba(0,0,0,.2);box-shadow: 0 1px 3px rgba(0,0,0,.2);}
+	header .wrap {width:75%;margin:0 auto;}
+	header .wrap ul {position:absolute;top:8px;margin-left:88px;}
+	header .wrap ul li {display:inline-block;}
+	header .wrap ul li a {color:#666;font-size:small;text-decoration: none;padding:4px 0.5em;background-color:#f7f7f7;border:1px solid #ccc;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;}
+	header .wrap ul li a:hover, header .wrap ul li .active {color:#fff;background-color:#22ABA9;border:1px solid #1c8d8c;}
+	
+	ol.info {max-width:230px;}
+	ol.info li:nth-child(1),ol.info li:nth-child(4) {text-align:left;}
+	ol.info li:nth-child(3),ol.info li:nth-child(6) {text-align:right;}
+	ol.info li {font-size:11pt;width:31.5%;display: inline-block;margin: 0;padding:2px 0;border-bottom: 0px solid rgba(255,255,255,1);white-space: nowrap;}
+
+	.statistics {position: absolute;top:12px;left: 250px;text-align: left;color: #fff;z-index: 500;}
+	.statistics small {white-space:nowrap;margin-bottom:0.3em;background-color: #222;padding:2px 4px;-webkit-transition: all .3s ease;-o-transition: all .3s ease;transition: all .3s ease;}
+	.statistics small:hover, .heart:hover {background-color:#00a3d9;cursor:pointer;-webkit-transition: all .3s ease;-o-transition: all .3s ease;transition: all .3s ease;}
+	.books li .aa {display:none;}
+	.books li:hover .aa {display:block;}
+	
+	.heart {position:absolute;z-index:99;box-shadow: 1px 2px 2px rgba(0,0,0,.5);bottom:9%;right:-9%;display:inline-block;padding:0.5em;overflow:hidden;max-width:16px;max-height:16px;font-size:1em;color:#fff;background-color:#ff7396;-webkit-border-radius:100%;-moz-border-radius:100%;border-radius:100%;-webkit-transition: all .6s ease;-o-transition: all .6s ease;transition: all .6s ease;}
+	div.active {background-color:#ff2626;}
+
+	.statistics small.r_tag {}
+	.statistics small.r_tag:after {
+	position:absolute;
+	content: "";
+	right:-7px;
+	width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 7px 11px 0;
+	margin-top:-2px;}
+
+	.statistics small.r_tag_red {background-color:#6c00d9;}
+	.statistics small.r_tag_red:after {border-color: #6c00d9 transparent #6c00d9 #6c00d9;}
+	
+	.tools_bar .investment a.link {width: auto;padding: 0;font-size: smaller;margin: auto;color: #5BC1FF;display: inline;background-color: transparent;}
+	.tools_bar .investment p {font-size:small;margin:0 0 0.5em;}
+	.tools_bar .investment p b {color:#ff0000;margin-right:0.3em;}
+	.tools_bar .investment a {width:93%!important;}
+	.tools_bar .investment a:active {transform: translateY(2px);}
+	.tools_bar .investment a.btn_cancel {background-color:#aaa;box-shadow: 0 4px #999;}
+	.tools_bar .investment a.btn_cancel:hover {background-color:#666;box-shadow: 0 4px #555;}
+
+	.tools_bar .investment a.btn_send {background-color:#00468c;margin-top:0.3em;box-shadow: 0 4px #001a66;}
+
+	.tools_bar .investment a.btn_more {background-color:#ff99b3;margin-top:0.3em;box-shadow: 0 4px #ff7396;}
+	.tools_bar .investment a.btn_more:hover {background-color:#ff7396;margin-top:0.3em;box-shadow: 0 4px #ff517c;}
+	</style>
+</head>
+<body>
+
+<header>
+	<div class="wrap">
+		<h3>在線項目</h3>
+		<ul>
+			<li><a class="" href="#">領投</a></li>
+			<li><a class="active" href="#"><i class="fa fa-check"></i> 預熱中</a></li>
+			<li><a class="" href="#">新增</a></li>
+			<li><a class="" href="#">融資中</a></li>
+			<li><a class="active" href="#"><i class="fa fa-check"></i> 已成功</a></li>
+			<li><a class="" href="#">打款中</a></li>
+			<li><a class="" href="#">融資失敗</a></li>
+		</ul>
+	</div>
+</header>
+<ul class="books">
+	<li>
+		<div class="book3d">
+			<div class="tag tag_red">新增</div>
+			<div class="statistics">
+				<small><i class="fa fa-eye"></i> 502</small>
+				<small><i class="fa fa-comment"></i> 2</small>
+				<small><i class="fa fa-thumbs-up"></i> 1,103</small>
+			</div>
+			<div class="heart"><i class="fa fa-heart"></i></div>
+			<img src="http://www.codedevelopr.com/assets/uploads/2012/09/ProPHPSecurityFromApplicationSecurityPrinciples.jpg"/>
+		</div>
+		<h4>Pro PHP Security</h4>
+		<div class="progress">
+			<div class="progress-bar" style="width:66%;"></div>
+		</div>
+		<ol class="info">
+			<li class="">科技類</li>
+			<li class="">估值 500 万</li>
+			<li class="">剩餘75天</li>
+			<li class="">釋股50%</li>
+			<li class="">融資250萬</li>
+			<li class="">起投5萬</li>
+		</ol>
+		<div class="tools_bar flipInY animated">
+			<!-- <a class="" href="#">檢視</i></a> -->
+			<a class="active" href="#">檢視</a>
+			<!-- <a class="" href="#">提問</a>
+			<a class="" href="#">給讚</a> -->
+			<a class="" href="#">領投</a>
+			<a class="" href="#">投資</a>
+			<hr>
+			<p>他流大心的來之，平有可子動水兩個花配。建有排形不後來，部裡依下個聲方親？氣一情的沒象境拉後得命特歡自資亞康分原聲選相市容開以起自，之深條民生但致來工人人！</p>
+			<p>外性面局人到異望平遊滿漸，動成可他？洲功保條果，中多情壓八明口人遊直了任每初我體然只目賣球，長調教這快的建的書著國日了界可：候品成一同全下我毛出見的星！兒子朋公引步體費還結之府到真好變，難公下展學人巴不的歷評住經型你先美式見動毒觀。長無共久，了果構請專關心麼念怎……子初有一東告作特感也：合不車常我究下火他行一：西人友就友初小太手皮反，河上經呢見月善去際知香案眾國起。裡而家又活界排生身程條蘭樂不者和古他候無你化世方。</p>
+		</div>
+	</li>
+	<li>
+		<div class="book3d">
+			<div class="tag tag_blue">融資中</div>
+			<div class="statistics">
+				<small><i class="fa fa-eye"></i> 24</small>
+				<small><i class="fa fa-comment"></i> 0</small>
+				<small><i class="fa fa-thumbs-up"></i> 41</small>
+				<small style="background-color:#00b3b2;text-shadow: 1px 1px 1px rgba(0,0,0,.25);">科技類</small>
+				<small style="background-color:#86b300;text-shadow: 1px 1px 1px rgba(0,0,0,.25);">開發語言</small>
+				<!-- <small class="tag tag_red" style="text-shadow: 1px 1px 1px rgba(0,0,0,.25);">最新</small> -->
+			</div>
+			<div class="heart fadeInLeft animated aa"><i class="fa fa-heart"></i></div>
+			<img src="http://www.codedevelopr.com/assets/uploads/2012/09/PHP_Advanced_Object-Oriented.jpg"/>
+		</div>
+		<h4>PHP Advanced</h4>
+		<div class="progress">
+			<div class="progress-bar progress-bar_pink" style="width:33%;"></div>
+		</div>
+		<ol class="info">
+			<li class="">科技類</li>
+			<li class="">估值 500 万</li>
+			<li class="">剩餘75天</li>
+			<li class="">釋股50%</li>
+			<li class="">融資250萬</li>
+			<li class="">起投5萬</li>
+		</ol>
+		<div class="tools_bar flipInY animated">
+			<a class="" href="#"><i class="fa fa-eye"></i></a>
+			<!-- <a class="active" href="#"><i class="fa fa-star"></i></a>
+			<a class="" href="#"><i class="fa fa-comment"></i> 2</a>
+			<a class="" href="#"><i class="fa fa-thumbs-up"></i> 3</a> -->
+			<a class="" href="#"><i class="fa fa-legal"></i></a>
+			<a class="" href="#"><i class="fa fa-money"></i></a>
+			<hr>
+			<div class="investment">
+				<h4>我要投資表單</h4>
+				<!-- <p>項目名稱XXXXXXXXXXX</p> -->
+				<p>項目估值:500萬 RMB</p>
+				<p>釋出股份:5%</p>
+				<p>起投金額:5萬 RMB</p>
+				<p><input type="text" placeholder="填寫您要認購的金額" style="width:120px;"> 萬元</p>
+				<p><input type="checkbox" name="vehicle" value="Bike">我已知悉並同意<a class="link" href="#!">投資人協議</a>內容</p>
+				<p><b>*</b>確認投資意願後，您可在X天內撤銷投資表示或修改所要認購的金額。</p>
+				<a class="btn_cancel" href="#!">取消投資</a>
+				<a class="btn_send" href="#!">確認投資</a>
+			</div>
+		</div>
+	</li>
+	<li>
+		<div class="book3d">
+			<div class="tag tag_purple">預熱中</div>
+			<div class="statistics">
+				<small><i class="fa fa-eye"></i> 3.1k</small>
+				<small><i class="fa fa-comment"></i> 16</small>
+				<small><i class="fa fa-thumbs-up"></i> 1.1k</small>
+				<small style="background-color:#ffbf00;text-shadow: 1px 1px 1px rgba(0,0,0,.25);"><i class="fa fa-star"></i> 收藏</small>
+			</div>
+			<img src="http://www.codedevelopr.com/assets/uploads/2012/09/PHPforWebVisualQuickStartGuide.jpg"/>
+		</div>
+		<h4>PHP for the Web</h4>
+		<div class="progress">
+			<div class="progress-bar progress-bar_red" style="width:25%;"></div>
+		</div>
+		<ol class="info">
+			<li class="">科技類</li>
+			<li class="">估值 500 万</li>
+			<li class="">剩餘75天</li>
+			<li class="">釋股50%</li>
+			<li class="">融資250萬</li>
+			<li class="">起投5萬</li>
+		</ol>
+		<div class="tools_bar flipInY animated">
+			<a class="" href="#"><i class="fa fa-eye"></i></a>
+			<a class="" href="#"><i class="fa fa-star"></i></a>
+			<a class="" href="#"><i class="fa fa-comment"></i> 2</a>
+			<a class="" href="#"><i class="fa fa-thumbs-up"></i> 3</a>
+			<a class="" href="#"><i class="fa fa-legal"></i></a>
+			<a class="" href="#"><i class="fa fa-money"></i></a>
+			<hr>
+			<p>各大商场里的儿童乐园是孩子的天堂，但门票价格不菲、办会员卡又不那么划算</p>
+		</div>
+	</li>
+	<li>
+		<div class="book3d">
+			<div class="tag tag_pink"><i class="fa fa-check"></i> 打款中</div>
+			<div class="statistics fadeInLeft animated aa">
+				<small><i class="fa fa-eye"></i> 502</small>
+				<small><i class="fa fa-comment"></i> 2</small>
+				<small><i class="fa fa-thumbs-up"></i> 1,103</small>
+				<small class="r_tag r_tag_red">交友</small>
+			</div>
+			<div class="heart"><i class="fa fa-heart"></i></div>
+			<img src="http://120.55.194.171:8088/rc/newItemcoverImage/1456825780200_訊息.jpg"/>
+		</div>
+		<h4>百分百交友拍拖</h4>
+		<div class="progress">
+			<div class="progress-bar progress-bar_green" style="width:71%;"></div>
+		</div>
+		<ol class="info">
+			<li class="">科技類</li>
+			<li class="">估值 500 万</li>
+			<li class="">剩餘75天</li>
+			<li class="">釋股50%</li>
+			<li class="">融資250萬</li>
+			<li class="">起投5萬</li>
+		</ol>
+		<div class="tools_bar flipInY animated">
+			<a class="" href="#"><i class="fa fa-eye"></i></a>
+			<a class="" href="#"><i class="fa fa-star"></i></a>
+			<a class="" href="#"><i class="fa fa-comment"></i> 2</a>
+			<a class="" href="#"><i class="fa fa-thumbs-up"></i> 3</a>
+			<a class="" href="#"><i class="fa fa-legal"></i></a>
+			<a class="" href="#"><i class="fa fa-money"></i></a>
+			<hr>
+			<p>各大商场里的儿童乐园是孩子的天堂，但门票价格不菲、办会员卡又不那么划算</p>
+		</div>
+	</li>
+	<li>
+		<div class="book3d">
+			<div class="tag tag_grey">融資失敗</div>
+			<div class="statistics">
+				<small><i class="fa fa-eye"></i> 0</small>
+				<small><i class="fa fa-comment"></i> 0</small>
+				<small><i class="fa fa-thumbs-up"></i> 2</small>
+			</div>
+			<div class="heart fadeInLeft animated aa active"><i class="fa fa-heart"></i><i class="fa fa-check" style="position:absolute;color:#00d900;left:16px;top:11px;"></i></div>
+			<img src="http://120.55.194.171:8088/rc/newItemcoverImage/1457065594324_02a64633945b9079314c7cf739d8178873_800x600.jpg"/>
+		</div>
+		<h4>Book Title</h4>
+		<div class="progress">
+			<div class="progress-bar progress-bar_grey" style="width:65%;"></div>
+		</div>
+		<ol class="info">
+			<li class="">科技類</li>
+			<li class="">估值 500 万</li>
+			<li class="">剩餘75天</li>
+			<li class="">釋股50%</li>
+			<li class="">融資250萬</li>
+			<li class="">起投5萬</li>
+		</ol>
+		<div class="tools_bar flipInY animated">
+			<div class="investment">
+				<a class="btn_more" href="#!">檢視更多</a>
+			</div>
+			<hr>
+			<p>1 价格优 借助互联网教育传播，以量取胜； 2 内容优 传统文化无缝插入融入儿童喜爱的趣味故事中，真正的寓教于乐； 3 造型优 75个原创版权的可爱卡通造型，专门针对儿童设计，远超同类的任何产品； 4 循环优 以盛龙情景剧展示文化，网络课堂学习文化，衍生品推广文化，回馈信息再次循环到情景剧环节，推出新产品；线上教育产品和线下儿童乐园双循环，在强化文化普及效果同时强化自身品牌效应。1 价格优 借助互联网教育传播，以量取胜； 2 内容优 传统文化无缝插入融入儿童喜爱的趣味故事中，真正的寓教于乐； 3 造型优 75个原创版权的可爱卡通造型，专门针对儿童设计，远超同类的任何产品； 4 循环优 以盛龙情景剧展示文化，网络课堂学习文化，衍生品推广文化，回馈信息再次循环到情景剧环节，推出新产品；线上教育产品和线下儿童乐园双循环，在强化文化普及效果同时强化自身品牌效应。</p>
+		</div>
+	</li>
+	<li>
+		<div class="book3d">
+			<div class="tag tag_green">已成功</div>
+			<img src="http://www.codedevelopr.com/assets/uploads/2012/09/MongoDBandPHP.jpg"/>
+		</div>
+		<h4>Book Title</h4>
+		<div class="progress">
+			<div class="progress-bar progress-bar_green" style="width:25%;"></div>
+		</div>
+		<ol class="info">
+			<li class="">科技類</li>
+			<li class="">估值 500 万</li>
+			<li class="">剩餘75天</li>
+			<li class="">釋股50%</li>
+			<li class="">融資250萬</li>
+			<li class="">起投5萬</li>
+		</ol>
+		<div class="tools_bar flipInY animated" style="width:75%;">
+			<b>簡 介</b>
+			<hr>
+			<p>1 价格优 借助互联网教育传播，以量取胜； 2 内容优 传统文化无缝插入融入儿童喜爱的趣味故事中，真正的寓教于乐； 3 造型优 75个原创版权的可爱卡通造型，专门针对儿童设计，远超同类的任何产品； 4 循环优 以盛龙情景剧展示文化，网络课堂学习文化，衍生品推广文化，回馈信息再次循环到情景剧环节，推出新产品；线上教育产品和线下儿童乐园双循环，在强化文化普及效果同时强化自身品牌效应。</p>
+			<div class="investment">
+				<a class="btn_more" href="#!">檢視更多</a>
+			</div>
+		</div>
+	</li>
+	<li>
+		<div class="book3d">
+			<div class="tag tag_orange">融資中</div>
+			<img src="http://heart2true.com:8088/rc/newItemcoverImage/1456652054521_1.png"/>
+		</div>
+		<h4>Book Title</h4>
+		<div class="progress">
+			<div class="progress-bar" style="width:58%;"></div>
+		</div>
+		<ol class="info">
+			<li class="">科技類</li>
+			<li class="">估值 500 万</li>
+			<li class="">剩餘75天</li>
+			<li class="">釋股50%</li>
+			<li class="">融資250萬</li>
+			<li class="">起投5萬</li>
+		</ol>
+		<div class="tools_bar flipInY animated" style="width:75%;">
+			<a class="" href="#"><i class="fa fa-eye"></i></a>
+			<a class="" href="#"><i class="fa fa-star"></i></a>
+			<a class="" href="#"><i class="fa fa-comment"></i> 2</a>
+			<a class="" href="#"><i class="fa fa-thumbs-up"></i> 3</a>
+			<a class="" href="#"><i class="fa fa-legal"></i></a>
+			<a class="" href="#"><i class="fa fa-money"></i></a>
+			<hr>
+			<p>&nbsp;</p>
+		</div>
+	</li>
+	<li>
+		<div class="book3d">
+			<div class="tag tag_red">新增</div>
+			<div class="heart active"><i class="fa fa-heart"></i><i class="fa fa-check" style="position:absolute;color:#00d900;left:16px;top:11px;"></i></div>
+			<img src="http://heart2true.com:8088/rc/newItemcoverImage/1455850393414_1.jpg"/>
+		</div>
+		<h4>Book Title</h4>
+		<div class="progress">
+			<div class="progress-bar progress-bar_red" style="width:41%;"></div>
+		</div>
+		<ol class="info">
+			<li class="">科技類</li>
+			<li class="">估值 500 万</li>
+			<li class="">剩餘75天</li>
+			<li class="">釋股50%</li>
+			<li class="">融資250萬</li>
+			<li class="">起投5萬</li>
+		</ol>
+		<div class="tools_bar flipInY animated">
+			<a class="" href="#"><i class="fa fa-eye"></i></a>
+			<a class="" href="#"><i class="fa fa-star"></i></a>
+			<a class="" href="#"><i class="fa fa-comment"></i> 0</a>
+			<a class="" href="#"><i class="fa fa-thumbs-up"></i> 1</a>
+			<a class="" href="#"><i class="fa fa-legal"></i></a>
+			<a class="" href="#"><i class="fa fa-money"></i></a>
+			<hr>
+			<p>&nbsp;</p>
+		</div>
+	</li>
+</ul>
+
+</body>
+</html>

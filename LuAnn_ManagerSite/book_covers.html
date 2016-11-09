@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Books Style Test</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://daneden.github.io/animate.css/animate.min.css">
+	<style>
+	html, body{min-height:1%;margin:0;padding:0;}
+	h1,h2,h3,h4,h5 {margin:0;padding:0;}
+	body{
+	background-image: -o-linear-gradient(bottom, #AABBD4 0%, #C6C7B1 100%);
+	background-image: -moz-linear-gradient(bottom, #AABBD4 0%, #C6C7B1 100%);
+	background-image: -webkit-linear-gradient(bottom, #AABBD4 0%, #C6C7B1 100%);
+	background-image: -ms-linear-gradient(bottom, #AABBD4 0%, #C6C7B1 100%);
+	background-image: linear-gradient(to bottom, #AABBD4 0%, #C6C7B1 100%);
+	background_: url("http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/ignasi_pattern_s.png");
+	}
+	ul,ol {padding:0;margin:0;list-style: none;}
+	ul.books li {
+		display: inline-block;
+		position: relative;
+		margin: 0 -2px 3em;
+		padding: 0 40px 3em;
+		/*border-bottom: 2px solid #b1c0cb;*/
+		border-bottom: 3px solid rgba(255,255,255,.1);
+	}
+	ul.books li____ {display:inline-block;position: relative;margin:1em 2em;border-bottom:2px solid #003366;}
+	ul.books li small {text-align:left;display: block;}
+	.books h4 {overflow : hidden;text-overflow:ellipsis;white-space:nowrap;max-width:180px;margin-bottom:0.5em;}
+	.books {
+	text-align:center;
+	width:80%;
+	margin:0 auto;
+	padding:2em 0;
+	/*background-color:rgba(255,255,255,.2);
+	border:1px solid rgba(255,255,255,.65);*/
+	-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;
+	-moz-perspective: 100px;
+	-moz-transform-style: preserve-3d;
+	-webkit-transform-style: preserve-3d;
+	}
+
+	.books .book3d .tag {font-size:11pt;position:absolute;top:6px;left:-6px;z-index:100;max-width:50%;color:#fff;padding:2px 6px;box-shadow: 1px 1px 2px rgba(0,0,0,.75);}
+	.books .book3d .tag_red {background-color:#ff0000;}
+	.books .book3d .tag_blue {background-color:#006cd9;}
+	.books .book3d .tag_green {background-color:#008c00;}
+	.books .book3d .tag_grey {background-color:#888888;}
+	.books .book3d .tag_orange {background-color:#ff4000;}
+	.books .book3d .tag_pink {background-color:#ff7396;}
+	.books .book3d .tag_purple {background-color:#794cff;}
+
+	.books .book3d {
+	display: inline-block;
+	box-shadow: 5px 5px 20px rgba(0,0,0,.33);
+	cursor:pointer;
+	}
+
+	.books .book3d {
+	position: relative;
+	-moz-perspective: 100px;
+	-moz-transform: rotateY(-3deg);
+	-webkit-transform: perspective(100) rotateY(-3deg);
+	outline: 1px solid transparent;
+	/* Helps smooth jagged edges in Firefox */
+	box-shadow: none;
+	margin: 1em;
+	
+	-webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+	}
+	
+	.books li:hover .book3d {
+	-moz-transform: rotateY(0deg);
+	-webkit-transform: rotateY(0deg);
+
+	-webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+	}
+
+	.books .book3d img {
+	/*vertical-align: middle;*/
+	position: relative;
+	width: 160px;
+	/*max-width: 260px;
+	max-height: 200px;*/
+	}
+
+	.books .book3d:before,
+	.books .book3d:after {
+	position: absolute;
+	top: 2%;
+	height: 96%;
+	content: ' ';
+	z-index: -1;
+	}
+
+	.books .book3d:before {
+	width: 100%;
+	left: 7.5%;
+	background-color: #5a2d18;
+	box-shadow: 5px 5px 20px rgba(0,0,0,.33);
+	}
+
+	.books .book3d:after {
+	width: 5%;
+	left: 100%;
+	background-color: #EFEFEF;
+	box-shadow: inset 0px 0px 5px rgba(0,0,0,.75);
+	-moz-transform: rotateY(20deg);
+	-webkit-transform: perspective(100) rotateY(20deg);
+	}
+
+	.books li:hover .tools_bar {display:block;}
+	.books li .tools_bar {display:none;width:75%;margin:0 auto;padding:4px 0;position:absolute;bottom:35%;background-color:rgba(25,40,80,.5);}
+	.books li .tools_bar a {color:#fff;font-size:16pt;margin:0 10px;}
+	.books li .tools_bar a:hover {color:#ffff00;}
+	
+	.progress {
+		box-shadow: none;
+		background: #e9e9e9;
+		height: 8px;
+		position: relative;
+	}
+	.progress {
+		height: 8px;
+		margin-bottom: 10px;
+		background-color: #f5f5f5;
+		border-radius: 4px;
+		-webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
+		box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
+	}
+	.progress {
+		overflow: hidden;
+	}
+	
+	.progress .progress-bar {
+		-webkit-box-shadow: none;
+		box-shadow: none;
+		line-height: 8px;
+	}
+	.progress-bar {
+		background-color: #2a91d8;
+	}
+	.progress-bar {
+		float: left;
+		width: 0;
+		height: 100%;
+		font-size: 12px;
+		line-height: 8px;
+		color: #fff;
+		text-align: center;
+		background-color: #337ab7;
+		-webkit-box-shadow: inset 0 -1px 0 rgba(0,0,0,.15);
+		box-shadow: inset 0 -1px 0 rgba(0,0,0,.15);
+		-webkit-transition: width .6s ease;
+		-o-transition: width .6s ease;
+		transition: width .6s ease;
+		background-image: linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+	}
+	.progress-bar_red {
+		background-color: #ff4c4d;
+	}
+	.progress-bar_pink {
+		background-color: #ff63b1;
+	}
+	.progress-bar_green {
+		background-color: #59b300;
+	}
+	
+	header {position:fixed;left:0;width:100%;z-index:500;background-color:rgba(255,255,255,.75);padding:6px 0;-webkit-box-shadow: 0 1px 3px rgba(0,0,0,.2);box-shadow: 0 1px 3px rgba(0,0,0,.2);}
+	header .wrap {width:75%;margin:0 auto;}
+	header .wrap ul {position:absolute;top:8px;margin-left:88px;}
+	header .wrap ul li {display:inline-block;}
+	header .wrap ul li a {color:#666;font-size:small;text-decoration: none;padding:4px 0.5em;background-color:#f7f7f7;border:1px solid #ccc;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;}
+	header .wrap ul li a:hover {color:#fff;background-color:#22ABA9;border:1px solid #1c8d8c;}
+	</style>
+</head>
+<body>
+
+<header>
+	<div class="wrap">
+		<h3>我的項目</h3>
+		<ul>
+			<li><a class="" href="#">Tag 1</a></li>
+			<li><a class="" href="#">Tag 2</a></li>
+			<li><a class="" href="#">Tag 3</a></li>
+			<li><a class="" href="#">Tag 4</a></li>
+		</ul>
+	</div>
+</header>
+<ul class="books">
+	<li>
+		<div class="book3d">
+			<div class="tag tag_red">red</div>
+			<img src="http://www.codedevelopr.com/assets/uploads/2012/09/ProPHPSecurityFromApplicationSecurityPrinciples.jpg"/>
+		</div>
+		<h4>Book Title</h4>
+		<div class="progress">
+			<div class="progress-bar" style="width:66%;"></div>
+		</div>
+		<div class="tools_bar fadeInUp animated">
+			<a class="" href="#"><i class="fa fa fa-edit"></i></a>
+			<a class="" href="#"><i class="fa fa fa-eye"></i></a>
+			<a class="" href="#"><i class="fa fa fa-trash-o"></i></a>
+		</div>
+	</li>
+	<li>
+		<div class="book3d">
+			<div class="tag tag_blue">blue</div>
+			<img src="http://www.codedevelopr.com/assets/uploads/2012/09/PHP_Advanced_Object-Oriented.jpg"/>
+		</div>
+		<h4>Book Title Book Title Book Title</h4>
+		<div class="progress">
+			<div class="progress-bar progress-bar_pink" style="width:33%;"></div>
+		</div>
+		<div class="tools_bar fadeInUp animated">
+			<a class="" href="#"><i class="fa fa fa-edit"></i></a>
+			<a class="" href="#"><i class="fa fa fa-eye"></i></a>
+			<a class="" href="#"><i class="fa fa fa-trash-o"></i></a>
+		</div>
+	</li>
+	<li>
+		<div class="book3d">
+			<div class="tag tag_purple">purple</div>
+			<img src="http://www.codedevelopr.com/assets/uploads/2012/09/PHPforWebVisualQuickStartGuide.jpg"/>
+		</div>
+		<h4>Book Title</h4>
+		<div class="progress">
+			<div class="progress-bar progress-bar_red" style="width:25%;"></div>
+		</div>
+		<div class="tools_bar fadeInUp animated">
+			<a class="" href="#"><i class="fa fa fa-edit"></i></a>
+			<a class="" href="#"><i class="fa fa fa-eye"></i></a>
+			<a class="" href="#"><i class="fa fa fa-trash-o"></i></a>
+		</div>
+	</li>
+	<li>
+		<div class="book3d">
+			<div class="tag tag_pink">pink</div>
+			<img src="http://120.55.194.171:8088/rc/newItemcoverImage/1456825780200_訊息.jpg"/>
+		</div>
+		<h4>Book Title</h4>
+		<div class="progress">
+			<div class="progress-bar progress-bar_green" style="width:71%;"></div>
+		</div>
+		<div class="tools_bar fadeInUp animated">
+			<a class="" href="#"><i class="fa fa fa-edit"></i></a>
+			<a class="" href="#"><i class="fa fa fa-eye"></i></a>
+			<a class="" href="#"><i class="fa fa fa-trash-o"></i></a>
+		</div>
+	</li>
+	<li>
+		<div class="book3d">
+			<div class="tag tag_grey">grey</div>
+			<img src="http://120.55.194.171:8088/rc/newItemcoverImage/1457065594324_02a64633945b9079314c7cf739d8178873_800x600.jpg"/>
+		</div>
+		<h4>Book Title</h4>
+		<small>總額：7,500萬</small>
+		<div class="tools_bar fadeInUp animated">
+			<a class="" href="#"><i class="fa fa fa-edit"></i></a>
+			<a class="" href="#"><i class="fa fa fa-eye"></i></a>
+			<a class="" href="#"><i class="fa fa fa-trash-o"></i></a>
+		</div>
+	</li>
+	<li>
+		<div class="book3d">
+			<div class="tag tag_green">green</div>
+			<img src="http://www.codedevelopr.com/assets/uploads/2012/09/MongoDBandPHP.jpg"/>
+		</div>
+		<h4>Book Title</h4>
+		<small>總額：19,200萬</small>
+		<div class="tools_bar fadeInUp animated">
+			<a class="" href="#"><i class="fa fa fa-edit"></i></a>
+			<a class="" href="#"><i class="fa fa fa-eye"></i></a>
+			<a class="" href="#"><i class="fa fa fa-trash-o"></i></a>
+		</div>
+	</li>
+	<li>
+		<div class="book3d">
+			<div class="tag tag_orange">orange</div>
+			<img src="http://heart2true.com:8088/rc/newItemcoverImage/1456652054521_1.png"/>
+		</div>
+		<h4>Book Title</h4>
+		<small>總額：1,500萬</small>
+		<div class="tools_bar fadeInUp animated">
+			<a class="" href="#"><i class="fa fa fa-edit"></i></a>
+			<a class="" href="#"><i class="fa fa fa-eye"></i></a>
+			<a class="" href="#"><i class="fa fa fa-trash-o"></i></a>
+		</div>
+	</li>
+	<li>
+		<div class="book3d">
+			<div class="tag tag_red">red</div>
+			<img src="http://heart2true.com:8088/rc/newItemcoverImage/1455850393414_1.jpg"/>
+		</div>
+		<h4>Book Title</h4>
+		<small>總額：500萬</small>
+		<div class="tools_bar fadeInUp animated">
+			<a class="" href="#"><i class="fa fa fa-edit"></i></a>
+			<a class="" href="#"><i class="fa fa fa-eye"></i></a>
+			<a class="" href="#"><i class="fa fa fa-trash-o"></i></a>
+		</div>
+	</li>
+	<li>
+		<div class="book3d">
+			<div class="tag tag_red">red</div>
+			<img src="http://www.codedevelopr.com/assets/uploads/2012/09/ProPHPSecurityFromApplicationSecurityPrinciples.jpg"/>
+		</div>
+		<h4>Book Title</h4>
+		<div class="tools_bar fadeInUp animated">
+			<a class="" href="#"><i class="fa fa fa-edit"></i></a>
+			<a class="" href="#"><i class="fa fa fa-eye"></i></a>
+			<a class="" href="#"><i class="fa fa fa-trash-o"></i></a>
+		</div>
+	</li>
+	<li>
+		<div class="book3d">
+			<div class="tag tag_blue">blue</div>
+			<img src="http://www.codedevelopr.com/assets/uploads/2012/09/PHP_Advanced_Object-Oriented.jpg"/>
+		</div>
+		<h4>Book Title Book Title Book Title</h4>
+		<div class="tools_bar fadeInUp animated">
+			<a class="" href="#"><i class="fa fa fa-edit"></i></a>
+			<a class="" href="#"><i class="fa fa fa-eye"></i></a>
+			<a class="" href="#"><i class="fa fa fa-trash-o"></i></a>
+		</div>
+	</li>
+	<li>
+		<div class="book3d">
+			<div class="tag tag_purple">purple</div>
+			<img src="http://www.codedevelopr.com/assets/uploads/2012/09/PHPforWebVisualQuickStartGuide.jpg"/>
+		</div>
+		<h4>Book Title</h4>
+		<div class="tools_bar fadeInUp animated">
+			<a class="" href="#"><i class="fa fa fa-edit"></i></a>
+			<a class="" href="#"><i class="fa fa fa-eye"></i></a>
+			<a class="" href="#"><i class="fa fa fa-trash-o"></i></a>
+		</div>
+	</li>
+	<li>
+		<div class="book3d">
+			<div class="tag tag_pink">pink</div>
+			<img src="http://120.55.194.171:8088/rc/newItemcoverImage/1456825780200_訊息.jpg"/>
+		</div>
+		<h4>Book Title</h4>
+		<div class="tools_bar fadeInUp animated">
+			<a class="" href="#"><i class="fa fa fa-edit"></i></a>
+			<a class="" href="#"><i class="fa fa fa-eye"></i></a>
+			<a class="" href="#"><i class="fa fa fa-trash-o"></i></a>
+		</div>
+	</li>
+	<li>
+		<div class="book3d">
+			<div class="tag tag_grey">grey</div>
+			<img src="http://120.55.194.171:8088/rc/newItemcoverImage/1457065594324_02a64633945b9079314c7cf739d8178873_800x600.jpg"/>
+		</div>
+		<h4>Book Title</h4>
+		<div class="tools_bar fadeInUp animated">
+			<a class="" href="#"><i class="fa fa fa-edit"></i></a>
+			<a class="" href="#"><i class="fa fa fa-eye"></i></a>
+			<a class="" href="#"><i class="fa fa fa-trash-o"></i></a>
+		</div>
+	</li>
+	<li>
+		<div class="book3d">
+			<div class="tag tag_green">green</div>
+			<img src="http://www.codedevelopr.com/assets/uploads/2012/09/MongoDBandPHP.jpg"/>
+		</div>
+		<h4>Book Title</h4>
+		<div class="tools_bar fadeInUp animated">
+			<a class="" href="#"><i class="fa fa fa-edit"></i></a>
+			<a class="" href="#"><i class="fa fa fa-eye"></i></a>
+			<a class="" href="#"><i class="fa fa fa-trash-o"></i></a>
+		</div>
+	</li>
+	<li>
+		<div class="book3d">
+			<div class="tag tag_orange">orange</div>
+			<img src="http://heart2true.com:8088/rc/newItemcoverImage/1456652054521_1.png"/>
+		</div>
+		<h4>Book Title</h4>
+		<div class="tools_bar fadeInUp animated">
+			<a class="" href="#"><i class="fa fa fa-edit"></i></a>
+			<a class="" href="#"><i class="fa fa fa-eye"></i></a>
+			<a class="" href="#"><i class="fa fa fa-trash-o"></i></a>
+		</div>
+	</li>
+	<li>
+		<div class="book3d">
+			<div class="tag tag_red">red</div>
+			<img src="http://heart2true.com:8088/rc/newItemcoverImage/1455850393414_1.jpg"/>
+		</div>
+		<h4>Book Title</h4>
+		<div class="tools_bar fadeInUp animated">
+			<a class="" href="#"><i class="fa fa fa-edit"></i></a>
+			<a class="" href="#"><i class="fa fa fa-eye"></i></a>
+			<a class="" href="#"><i class="fa fa fa-trash-o"></i></a>
+		</div>
+	</li>
+</ul>
+
+</body>
+</html>

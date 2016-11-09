@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>首頁 - 後台管理系統</title>
+
+		<meta name="description" content="" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- basic styles -->
+
+		<link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+
+		<!--[if IE 7]>
+		  <link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css" />
+		<![endif]-->
+
+		<!-- page specific plugin styles -->
+		<link rel="stylesheet" href="assets/css/daterangepicker.css" />
+		<link rel="stylesheet" href="assets/css/animate.css" />
+
+		<!-- fonts -->
+
+		<!-- <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" /> -->
+
+		<!-- ace styles -->
+
+		<link rel="stylesheet" href="assets/css/ace.min.css" />
+		<link rel="stylesheet" href="assets/css/ace-rtl.min.css" />
+		<link rel="stylesheet" href="assets/css/ace-skins.min.css" />
+
+		<!--[if lte IE 8]>
+		  <link rel="stylesheet" href="assets/css/ace-ie.min.css" />
+		<![endif]-->
+
+		<!-- inline styles related to this page -->
+
+		<!-- ace settings handler -->
+
+		<script src="assets/js/ace-extra.min.js"></script>
+
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+
+		<!--[if lt IE 9]>
+		<script src="assets/js/html5shiv.js"></script>
+		<script src="assets/js/respond.min.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<div class="navbar navbar-default" id="navbar">
+
+			<script type="text/javascript">
+				try{ace.settings.check('navbar' , 'fixed')}catch(e){}
+			</script>
+
+
+			<div class="navbar-container" id="navbar-container">
+				<div class="navbar-header pull-left logo">
+					<a href="index.html" class="navbar-brand">
+						<small>
+							XXXX後台管理系統
+						</small>
+					</a><!-- /.brand -->
+				</div><!-- /.navbar-header -->
+
+				<div class="navbar-header pull-right" role="navigation">
+					<ul class="nav ace-nav">
+						<li class="color">
+							<a data-toggle="dropdown" class="dropdown-toggle" href="#">
+								<i class="icon-envelope icon-animated-vertical"></i>
+								<span class="badge badge-important">12</span>
+							</a>
+
+							<ul class="pull-right dropdown-navbar navbar-pink dropdown-menu dropdown-caret dropdown-times">
+								<li>
+									<a href="user_feedback.html">
+										<div class="clearfix">
+											<span class="pull-left">
+												<i class="btn btn-xs no-hover btn-success icon-user"></i>
+												客服管理
+											</span>
+											<span class="pull-right badge badge-success">+8</span>
+										</div>
+									</a>
+								</li>
+
+								<li>
+									<a href="user_feedback.html">
+										查看所有通知
+										<i class="icon-arrow-right"></i>
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li class="light-blue">
+							<a data-toggle="dropdown" href="#" class="dropdown-toggle">
+								<img class="nav-user-photo" src="assets/avatars/avatar4.png" alt="Jason's Photo" />
+								<span class="user-info">
+									<small>您好, 歡迎</small>
+									超級管理員
+								</span>
+
+								<i class="icon-caret-down"></i>
+							</a>
+
+							<ul class="user-menu pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-times">
+								<li>
+									<a href="admin_profile.html">
+										<i class="icon-user"></i>
+										個人資料
+									</a>
+								</li>
+
+								<li class="divider"></li>
+
+								<li>
+									<a href="login.html">
+										<i class="icon-power-off"></i>
+										登 出
+									</a>
+								</li>
+							</ul>
+						</li>
+					</ul><!-- /.ace-nav -->
+				</div><!-- /.navbar-header -->
+			</div><!-- /.container -->
+		</div>
+
+		<div class="main-container" id="main-container">
+			<script type="text/javascript">
+				try{ace.settings.check('main-container' , 'fixed')}catch(e){}
+			</script>
+
+			<div class="main-container-inner">
+				<a class="menu-toggler" id="menu-toggler" href="#">
+					<span class="menu-text"></span>
+				</a>
+
+				<div class="sidebar" id="sidebar">
+					<script type="text/javascript">
+						try{ace.settings.check('sidebar' , 'fixed')}catch(e){}
+					</script>
+
+					<ul class="nav nav-list">
+						<li>
+							<a href="index.html">
+								<i class="icon-home"></i>
+								<span class="menu-text">首 頁</span>
+							</a>
+						</li>
+
+						<li>
+							<a href="#.html">
+								<i class="icon-user-md"></i>
+								<span class="menu-text">管理員群組</span>
+							</a>
+						</li>
+
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-yelp"></i>
+								<span class="menu-text">路演管理</span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="roadshow_list.html">
+										<i class="icon-double-angle-right"></i>
+										路演清單
+									</a>
+								</li>
+								<li>
+									<a href="roadshow_meeting.html">
+										<i class="icon-double-angle-right"></i>
+										會議室管理
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li class="active">
+							<a href="roadshow_funds.html">
+								<i class="icon-usd"></i>
+								<span class="menu-text">入資管理</span>
+							</a>
+						</li>
+
+						<li>
+							<a href="queue/listAction.sxml">
+								<i class="icon-question-circle"></i>
+								<span class="menu-text">QA管理</span>
+							</a>
+						</li>
+
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-sitemap"></i>
+								<span class="menu-text">檔案管理</span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="fileInfo/listAction.sxml">
+										<i class="icon-double-angle-right"></i>
+										檔案列表
+									</a>
+								</li>
+								<li>
+									<a href="http://heart2true.com:8088/roadshowadmin/fileInfo/listResumeAction.sxml" target="_blank">
+										<i class="icon-double-angle-right"></i>
+										PDF or PPT檔案上傳
+									</a>
+								</li>
+								<li>
+									<a href="http://heart2true.com:8088/roadshowadmin/resumeUpload/uploadAction.sxml" target="_blank">
+										<i class="icon-double-angle-right"></i>
+										HTML上傳
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-laptop"></i>
+								<span class="menu-text">项目管理</span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="roadshow_noyet.html">
+										<i class="icon-double-angle-right"></i>
+										待審查項目
+									</a>
+								</li>
+							</ul>
+						</li>
+
+                        <li>
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-bar-chart-o"></i>
+								<span class="menu-text">統計分析</span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
+								<li>
+									<a href="#.html">
+										<i class="icon-double-angle-right"></i>
+										區間統計分析
+									</a>
+								</li>
+								<li>
+									<a href="#.html">
+										<i class="icon-double-angle-right"></i>
+										地區地域分布
+									</a>
+								</li>
+                                <li>
+									<a href="#.html">
+										<i class="icon-double-angle-right"></i>
+										流量及數據分析
+									</a>
+								</li>
+							</ul>
+						</li>
+
+					</ul><!-- /.nav-list -->
+
+					<div class="sidebar-collapse" id="sidebar-collapse">
+						<i class="icon-angle-double-left" data-icon1="icon-angle-double-left" data-icon2="icon-angle-double-right"></i>
+					</div>
+
+					<script type="text/javascript">
+						try{ace.settings.check('sidebar' , 'collapsed')}catch(e){}
+					</script>
+				</div>
+
+				<div class="main-content">
+					<div class="breadcrumbs" id="breadcrumbs">
+						<script type="text/javascript">
+							try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
+						</script>
+
+						<ul class="breadcrumb">
+							<li>
+								<i class="icon-home home-icon"></i>
+								<a href="index.html">Home</a>
+							</li>
+							<li>
+								<a href="roadshow_funds.html">入資列表</a>
+							</li>
+							<li class="active">入資明細</li>
+						</ul><!-- .breadcrumb -->
+
+						<div class="nav-search" id="nav-search">
+							<form class="form-search">
+								<span class="input-icon">
+									<input type="text" placeholder="搜尋 ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
+									<i class="icon-search nav-search-icon"></i>
+								</span>
+							</form>
+						</div><!-- #nav-search -->
+					</div>
+
+					<div class="page-content">
+						<!-- <div class="page-header">
+							<h1>
+								審查管理
+								<small>
+									<i class="icon-angle-double-right"></i>
+									說明敘述文字
+								</small>
+							</h1>
+						</div> --><!-- /.page-header -->
+
+						<div class="row">
+							<div class="col-xs-12">
+								<!-- PAGE CONTENT BEGINS -->
+
+								<h4 class="header blue"><i class="icon-info-circle"></i>入資明細</h4>
+
+								<div class="table-responsive">
+									<table class="table table-striped">
+										<thead>
+										  <tr>
+											<th>投資總金額</th>
+											<th>入資總金額</th>
+											<th>入資達成率</th>
+											<th>入資截止日</th>
+											<th>總投資人數</th>
+											<th>投資狀態</th>
+										  </tr>
+										</thead>
+										<tbody>
+										  <tr>
+											<td>1000萬</td>
+											<td>500萬</td>
+											<!-- <td>50%</td> -->
+											<td>
+												<div class="progress">
+													<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:50%;">50%</div>
+												</div>
+											</td>
+											<td>2016/07/13</td>
+											<td>12</td>
+											<td>
+												<span class="label label-success arrowed"><i class="fa fa-calendar-check-o"></i> 繳款進行中</span>
+												<span class="label label-danger arrowed"><i class="fa fa-calendar-times-o"></i> 繳款已截止</span>
+											</td>
+										  </tr>
+										</tbody>
+									</table>
+								</div>
+								<hr>
+
+								<div class="row_">
+									<div class="form-group">
+										<div class="input-group">
+											<select style="width:300px;">
+												<option value="0">繳款方式</option>
+												<option value="1">a</option>
+												<option value="2">b</option>
+												<option value="3">c</option>
+											</select>
+											&nbsp;
+											<button type="button" class="btn btn-primary">
+												確認
+											</button>
+										</div>
+									</div>
+								</div>
+								<hr>
+								
+								<div class="tabbable">
+									<ul class="nav nav-tabs">
+										<li class="active">
+											<a data-toggle="tab" href="#tab1">
+												投資人管理
+											</a>
+										</li>
+										<li>
+											<a data-toggle="tab" href="#tab2">
+												入資公告
+											</a>
+										</li>
+									</ul>
+
+									<div class="tab-content">
+
+										<div id="tab1" class="tab-pane active fadeIn animated">
+
+											<table class="table table-bordered table-expandable table-hover">
+												<thead>
+													<tr>
+														<th>投資人姓名</th>
+														<th>投資種類</th>
+														<th>投資筆數</th>
+														<th>投資佔比%</th>
+														<th>投資總金額(萬)</th>
+														<th>繳款筆數</th>
+														<th>繳款金額</th>
+														<th>繳款差額</th>
+														<th>繳款狀態</th>
+														<th>留言</th>
+														<th>操作方式</th>
+													</tr>
+												</thead>
+
+												<tbody>
+													<tr>
+														<td>ale004</td>
+														<td>跟投</td>
+														<td>2</td>
+														<td>40%</td>
+														<td>200</td>
+														<td class="sel_td">3<div class="table-expandable-arrow"></div></td>
+														<td>2,055,000</td>
+														<td><span class="text-primary">+55000</span></td>
+														<td><div class="text-primary text-center">溢繳</div></td>
+														<td>
+															20
+															<!-- <span class="badge badge-warning">New</span> -->
+														</td>
+														<td>
+															<div class="btn-group">
+																<a class="btn btn-primary btn-xs" href="#message-form" data-toggle="modal" role="button" data-rel="tooltip" data-original-title="留言">
+																	<i class="icon-comment-o"></i> 留言
+																</a>
+																<a class="btn btn-purple btn-xs" href="#check-form" data-toggle="modal" role="button" data-rel="tooltip" data-original-title="使用支票核銷">
+																	<i class="icon-usd"></i> 支票核銷
+																</a>
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td colspan="11" class="show_payment">
+															<table class="table table-hover">
+																<tr>
+																	<th>通知日期</th>
+																	<th>繳款方式</th>
+																	<th>實際到帳</th>
+																	<th>待確認金額</th>
+																	<th>差額</th>
+																	<th>說明</th>
+																	<th>操作</th>
+																</tr>
+																<tr>
+																	<td>2016/07/05</td>
+																	<td>微信支付</td>
+																	<td>10000,000</td>
+																	<td></td>
+																	<td>0</td>
+																	<td>訂單編號</td>
+																	<td></td>
+																</tr>
+																<tr>
+																	<td>2016/07/05</td>
+																	<td>支付寶</td>
+																	<td>50,000</td>
+																	<td></td>
+																	<td>0</td>
+																	<td>訂單編號</td>
+																	<td></td>
+																</tr>
+																<tr>
+																	<td>2016/07/05</td>
+																	<td>銀行轉帳</td>
+																	<td>50,000</td>
+																	<td></td>
+																	<td>0</td>
+																	<td>銀行：xxxx帳戶：xxxx戶名：xxxx</td>
+																	<td>
+																		<div class="btn-group">
+																			<a class="btn btn-link btn-xs" href="#cash-form" data-toggle="modal" role="button" data-rel="tooltip" data-original-title="銀行轉帳編輯">
+																				<i class="fa fa-pencil"></i> 銀行轉帳編輯
+																			</a>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td>2016/06/03</td>
+																	<td>銀行轉帳</td>
+																	<td>5,000</td>
+																	<td>6,000</td>
+																	<td>50000</td>
+																	<td>支票號碼：XXXXXXXXXX到期日：YYYY/MM/DD</td>
+																	<td>
+																		<div class="btn-group">
+																			<a class="btn btn-link btn-xs" href="#cash-form" data-toggle="modal" role="button" data-rel="tooltip" data-original-title="支票編輯">
+																				<i class="fa fa-pencil"></i> 支票編輯
+																			</a>
+																		</div>
+																	</td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+													<tr>
+														<td>林寧</td>
+														<td>跟投</td>
+														<td>1</td>
+														<td>10%</td>
+														<td>50</td>
+														<td class="sel_td">1<div class="table-expandable-arrow"></div></td>
+														<td>450,000</td>
+														<td><span class="text-danger">-5000</span></td>
+														<td><div class="text-danger text-center">欠繳</div></td>
+														<td></td>
+														<td>
+															<div class="btn-group">
+																<a class="btn btn-primary btn-xs" href="#message-form" data-toggle="modal" role="button" data-rel="tooltip" data-original-title="留言">
+																	<i class="icon-comment-o"></i> 留言
+																</a>
+																<a class="btn btn-purple btn-xs" href="#check-form" data-toggle="modal" role="button" data-rel="tooltip" data-original-title="使用支票核銷">
+																	<i class="icon-usd"></i> 支票核銷
+																</a>
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td colspan="11" class="show_payment">
+															<table class="table table-hover">
+																<tr>
+																	<th>通知日期</th>
+																	<th>繳款方式</th>
+																	<th>實際到帳</th>
+																	<th>待確認金額</th>
+																	<th>差額</th>
+																	<th>說明</th>
+																	<th>操作</th>
+																</tr>
+																<tr>
+																	<td>---</td>
+																	<td>---</td>
+																	<td>---</td>
+																	<td>---</td>
+																	<td>---</td>
+																	<td>---</td>
+																	<td>---</td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+													<tr>
+														<td>ale</td>
+														<td>跟投</td>
+														<td>1</td>
+														<td>20%</td>
+														<td>100</td>
+														<td class="sel_td">---<div class="table-expandable-arrow"></div></td>
+														<td>---</td>
+														<td>---</td>
+														<td></td>
+														<td></td>
+														<td>
+															<div class="btn-group">
+																<a class="btn btn-primary btn-xs" href="#message-form" data-toggle="modal" role="button" data-rel="tooltip" data-original-title="留言">
+																	<i class="icon-comment-o"></i> 留言
+																</a>
+																<a class="btn btn-purple btn-xs" href="#check-form" data-toggle="modal" role="button" data-rel="tooltip" data-original-title="使用支票核銷">
+																	<i class="icon-usd"></i> 支票核銷
+																</a>
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td colspan="11" class="show_payment">
+															<table class="table table-hover">
+																<tr>
+																	<th>通知日期</th>
+																	<th>繳款方式</th>
+																	<th>實際到帳</th>
+																	<th>待確認金額</th>
+																	<th>差額</th>
+																	<th>說明</th>
+																	<th>操作</th>
+																</tr>
+																<tr>
+																	<td>---</td>
+																	<td>---</td>
+																	<td>---</td>
+																	<td>---</td>
+																	<td>---</td>
+																	<td>---</td>
+																	<td>---</td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+													<tr>
+														<td>JASSIC</td>
+														<td>跟投</td>
+														<td>1</td>
+														<td>30%</td>
+														<td>150</td>
+														<td class="sel_td">1<div class="table-expandable-arrow"></div></td>
+														<td>1,500,000</td>
+														<td><span class="text-success">0</span></td>
+														<td><div class="text-success text-center">完成</div></td>
+														<td></td>
+														<td>
+															<div class="btn-group">
+																<a class="btn btn-primary btn-xs" href="#message-form" data-toggle="modal" role="button" data-rel="tooltip" data-original-title="留言">
+																	<i class="icon-comment-o"></i> 留言
+																</a>
+																<a class="btn btn-purple btn-xs" href="#check-form" data-toggle="modal" role="button" data-rel="tooltip" data-original-title="使用支票核銷">
+																	<i class="icon-usd"></i> 支票核銷
+																</a>
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td colspan="11" class="show_payment">
+															<table class="table table-hover">
+																<tr>
+																	<th>通知日期</th>
+																	<th>繳款方式</th>
+																	<th>實際到帳</th>
+																	<th>待確認金額</th>
+																	<th>差額</th>
+																	<th>說明</th>
+																	<th>操作</th>
+																</tr>
+																<tr>
+																	<td>---</td>
+																	<td>---</td>
+																	<td>---</td>
+																	<td>---</td>
+																	<td>---</td>
+																	<td>---</td>
+																	<td>---</td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+
+										</div><!-- /#tab1 -->
+										
+										<div id="tab2" class="tab-pane fadeIn animated">
+
+											<style>
+												/* Chat Style */
+												.commentArea {
+													/* font: 14px Arial;
+													margin-top: 20px;*/
+													padding: 0 16px;
+												}
+												.commentArea .row {margin-bottom:1.4em;}
+												.commentArea .col-sm-3 {text-align:right;}
+												.commentArea .col-sm-3 img.user-photo {border-radius: 100%;border: 2px solid #94bed2;max-width:48px;}
+												.commentArea .text-muted {font-size:small;}
+												.bubbledLeft {
+													margin-top: 4px;
+													padding: 1em 0.8em;
+													max-width: 100%;
+													clear: both;
+													position: relative;
+													-webkit-text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+													-moz-text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+													-o-text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+													-ms-text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+													text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+												}
+												.bubbledLeft{
+													float: left;
+													margin-right: auto;
+													-webkit-border-radius: 0px 8px 8px 8px;
+													-moz-border-radius: 0px 8px 8px 8px;
+													-o-border-radius: 0px 8px 8px 8px;
+													-ms-border-radius: 0px 8px 8px 8px;
+													border-radius: 0px 8px 8px 8px;
+													background-color: #869da2;
+													color: #ffffff;
+												}
+												.bubbledLeft:before {
+													border-top: 10px solid #869da2;
+													border-left: 9px solid rgba(0, 0, 0, 0);
+													position: absolute;
+													top: 0;
+													left: -8px;
+													content: "";
+												}
+												
+												<!-- Expand Table rows -->
+												table.table-expandable__ > tbody > tr:nth-child(odd) {cursor: pointer;}
+												table.table-expandable.table-hover > tbody > tr:nth-child(even) td {background-color: #ecfcff;}
+												table.table-expandable.table-hover > tbody > tr:nth-child(even):hover td {background-color: #edffe5;}
+												table.table-expandable > tbody > tr div.table-expandable-arrow {float: right;width: 0;margin-top:0.5em;height: 0;border-style: solid;border-width: 0 5px 8px 5px;border-color: transparent transparent #062e59 transparent;-webkit-transition: all .5s;-moz-transition: all .5s;-o-transition: all .5s;transition: all .5s;}
+												table.table-expandable > tbody > tr .active div {transform:rotate(180deg);border-color: transparent transparent #ff0040 transparent;}
+												table.table-expandable > tbody > tr .active {background-color:#eaf9e6;}
+												table.table-expandable td.show_payment {background-color:#e2e8eb!important;padding:2px 3px;}
+												table.table-expandable td.show_payment table th {background-color:#d2ebef;color:#105882;}
+											</style>
+
+											<div class="commentArea row">
+												<div class="row">
+													<div class="col-sm-3">
+														<img class="user-photo" src="assets/avatars/avatar4.png">
+														<div class="text-info">Jason, Aeo</div>
+													</div>
+													<div class="col-sm-8">
+														<span class="text-muted">2016-03-04 14:31 留言</span>
+														<div class="bubbledLeft">
+															xxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx.
+														</div>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-sm-3">
+														<img class="user-photo" src="assets/avatars/user.gif">
+														<div class="text-info">(Admin)</div>
+													</div>
+													<div class="col-sm-8">
+														<span class="text-muted">2016-03-02 16:09 留言</span>
+														<div class="bubbledLeft">
+															<p>xxx xxx xxx xxx xxx xxx xxx xxx xxx xxx xxx xxx xxx xxx xxx xxx xxx xxx xxx xxx.</p>
+															<p>xxx xxx xxx xxx xxx xxx xxx xxx xxx xxx xxx xxx xxx xxx xxx xxx xxx xxx xxx xxx xxx xxx xxx xxx xxx xxx.</p>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="space-20"></div>
+											<hr>
+
+											<div class="row">
+
+												<form class="form-horizontal">
+													<div class="form-group">
+														<div class="col-sm-8 col-sm-offset-2">
+															<input type="text" class="form-control input-xxlarge inline" placeholder="在此輸入訊息">
+															<button class="btn btn-info btn-sm">送 出</button>
+														</div>
+													</div>
+												</form>
+
+											</div>
+										</div><!-- /#tab2 -->
+
+									</div><!-- /.tab-content -->
+								</div><!-- /.tabbable -->
+
+								<div class="hr hr32 hr-dotted"></div>
+
+								<div id="message-form" class="modal" tabindex="-1">
+									<div class="modal-dialog pulse animated">
+										<div class="modal-content">
+											<div class="modal-header" style="padding: 6px 16px">
+												<button type="button" class="close" data-dismiss="modal">&times;</button>
+												<h4 class="blue bigger">
+													<i class="icon-comment-o"></i>留言
+												</h4>
+											</div>
+
+											<div class="modal-body overflow-visible">
+												<form class="form-horizontal">
+
+													<div class="form-group">
+														<div class="col-sm-12">
+															<textarea class="form-control" rows="6"></textarea>
+														</div>
+													</div>
+
+												</form>
+											</div><!-- /.modal-body -->
+
+											<div class="modal-footer">
+												<button class="btn btn-sm" data-dismiss="modal">
+													<i class="icon-times"></i>
+													取消
+												</button>
+												<button class="btn btn-primary btn-sm">
+													<i class="icon-check"></i>
+													送出
+												</button>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div id="cash-form" class="modal" tabindex="-1">
+									<div class="modal-dialog zoomIn animated">
+										<div class="modal-content">
+											<div class="modal-header" style="padding: 6px 16px">
+												<button type="button" class="close" data-dismiss="modal">&times;</button>
+												<h4 class="blue bigger">
+													<i class="icon-usd"></i>銀行轉帳編輯/支票編輯
+												</h4>
+											</div>
+
+											<div class="modal-body overflow-visible">
+												<form class="form-horizontal">
+
+													<div class="form-group">
+														<label class="col-sm-2 control-label">日期</label>
+														<div class="col-sm-10">
+															<p class="form-control-static">2016-06-03</p>
+														</div>
+													</div>
+
+													<div class="form-group">
+														<label class="col-sm-2 control-label">銀行</label>
+														<div class="col-sm-10">
+															<p class="form-control-static">中國信託</p>
+														</div>
+													</div>
+
+													<div class="form-group">
+														<label class="col-sm-2 control-label">分行</label>
+														<div class="col-sm-10">
+															<p class="form-control-static">敦南</p>
+														</div>
+													</div>
+
+													<div class="form-group">
+														<label class="col-sm-2 control-label">帳戶</label>
+														<div class="col-sm-10">
+															<p class="form-control-static">1633538859742</p>
+														</div>
+													</div>
+
+													<div class="form-group">
+														<label class="col-sm-2 control-label">戶名</label>
+														<div class="col-sm-10">
+															<p class="form-control-static">林寧</p>
+														</div>
+													</div>
+
+													<div class="form-group">
+														<label class="col-sm-2 control-label">金額</label>
+														<div class="col-sm-10">
+															<p class="form-control-static">60000</p>
+														</div>
+													</div>
+
+													<div class="form-group">
+														<label class="col-sm-2 control-label"><b class="red">*</b>收到金額</label>
+														<div class="col-sm-10">
+															<input type="number" name="number" class="form-control" id="id_number" placeholder="填寫金額">
+														</div>
+													</div>
+
+													<!-- <div class="form-group">
+														<label class="col-sm-2 control-label"><b class="red">*</b>備註</label>
+														<div class="col-sm-10">
+															<textarea class="form-control" rows="6"></textarea>
+														</div>
+													</div> -->
+
+												</form>
+											</div><!-- /.modal-body -->
+
+											<div class="modal-footer">
+												<button class="btn btn-sm" data-dismiss="modal">
+													<i class="icon-times"></i>
+													取消
+												</button>
+												<button class="btn btn-primary btn-sm">
+													<i class="icon-check"></i>
+													確認
+												</button>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div id="check-form" class="modal" tabindex="-1">
+									<div class="modal-dialog pulse animated">
+										<div class="modal-content">
+											<div class="modal-header" style="padding: 6px 16px">
+												<button type="button" class="close" data-dismiss="modal">&times;</button>
+												<h4 class="purple bigger">
+													<i class="icon-usd"></i>支票核銷
+												</h4>
+											</div>
+
+											<div class="modal-body overflow-visible">
+												<form class="form-horizontal">
+
+													<div class="form-group">
+														<label class="col-sm-2 control-label"><b class="red">*</b>發票銀行</label>
+														<div class="col-sm-10">
+															<input type="text" class="form-control" id="" placeholder="發票銀行">
+														</div>
+													</div>
+
+													<div class="form-group">
+														<label class="col-sm-2 control-label"><b class="red">*</b>到期日</label>
+														<div class="col-sm-10">
+															<input type="date" class="form-control" id="outDate" placeholder="到期日">
+														</div>
+													</div>
+
+													<div class="form-group">
+														<label class="col-sm-2 control-label"><b class="red">*</b>支票號碼</label>
+														<div class="col-sm-10">
+															<input type="text" class="form-control" id="" placeholder="支票號碼">
+														</div>
+													</div>
+
+													<div class="form-group">
+														<label class="col-sm-2 control-label"><b class="red">*</b>備註</label>
+														<div class="col-sm-10">
+															<textarea class="form-control" rows="6"></textarea>
+														</div>
+													</div>
+
+												</form>
+											</div><!-- /.modal-body -->
+
+											<div class="modal-footer">
+												<button class="btn btn-sm" data-dismiss="modal">
+													<i class="icon-times"></i>
+													取消
+												</button>
+												<button class="btn btn-purple btn-sm">
+													<i class="icon-check"></i>
+													確認核銷
+												</button>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<!-- PAGE CONTENT ENDS -->
+							</div><!-- /.col-12 -->
+						</div><!-- /.row -->
+					</div><!-- /.page-content -->
+				</div><!-- /.main-content -->
+
+			</div><!-- /.main-container-inner -->
+
+			<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+				<i class="icon-angle-double-up icon-only bigger-110"></i>
+			</a>
+		</div><!-- /.main-container -->
+
+		<!-- basic scripts -->
+
+		<!--[if !IE]> -->
+
+		<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script> -->
+
+		<!-- <![endif]-->
+
+		<!--[if IE]>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<![endif]-->
+
+		<!--[if !IE]> -->
+
+		<script type="text/javascript">
+			window.jQuery || document.write("<script src='assets/js/jquery-2.0.3.min.js'>"+"<"+"/script>");
+		</script>
+
+		<!-- <![endif]-->
+
+		<!--[if IE]>
+		<script type="text/javascript">
+		 window.jQuery || document.write("<script src='assets/js/jquery-1.10.2.min.js'>"+"<"+"/script>");
+		</script>
+		<![endif]-->
+
+		<script type="text/javascript">
+			if("ontouchend" in document) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+		</script>
+		<script src="assets/js/bootstrap.min.js"></script>
+		<script src="assets/js/typeahead-bs2.min.js"></script>
+
+		<!-- page specific plugin scripts -->
+
+		<script src="assets/js/date-time/bootstrap-datepicker.min.js"></script>
+		<script src="assets/js/date-time/bootstrap-timepicker.min.js"></script>
+		<script src="assets/js/date-time/moment.min.js"></script>
+		<script src="assets/js/date-time/daterangepicker.min.js"></script>
+
+		<!--[if lte IE 8]>
+		  <script src="assets/js/excanvas.min.js"></script>
+		<![endif]-->
+
+		<!-- ace scripts -->
+
+		<script src="assets/js/ace-elements.min.js"></script>
+		<script src="assets/js/ace.min.js"></script>
+
+		<!-- inline scripts related to this page -->
+		<script type="text/javascript">
+			jQuery(function($) {
+
+				$('[data-rel="tooltip"]').tooltip();
+
+				/// DatePicker Dialog 日期區間選擇 ///
+				$('input[name=date-range-picker]').daterangepicker().prev().on(ace.click_event, function(){
+					$(this).next().focus();
+				});
+
+			});
+			
+			// Expandable Table-Rows
+			(function ($) {
+				$(function () {
+					$('.table-expandable').each(function () {
+						var table = $(this);
+						//table.children('thead').children('tr').append('<th></th>');
+						table.children('tbody').children('tr').filter(':odd').hide();
+						table.children('tbody').children('tr').filter(':even').click(function () {
+							var element = $(this);
+							element.next('tr').toggle('slow');
+							element.find(".sel_td").toggleClass("active");
+							//element.find(".table-expandable-arrow").toggleClass("up");
+						});
+						//table.children('tbody').children('tr').filter(':even').each(function () {
+						//	var element = $(this);
+						//	element.append('<td><div class="table-expandable-arrow"></div></td>');
+						//});
+					});
+				});
+			})(jQuery);
+		</script>
+	</body>
+</html>
