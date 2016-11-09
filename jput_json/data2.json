@@ -2,13 +2,13 @@
     "topnav": [
         {
             "name": "kickstarter Lobby",
-            "h_link": "index_2.html",
+            "h_link": "#",
             "discover": "發 現",
-            "d_link": "discover.html",
+            "d_link": "#",
             "login": "登 入",
-            "l_link": "login.html",
+            "l_link": "#",
             "signup": "註 冊",
-            "s_link": "signup.html",
+            "s_link": "#",
             "f_footer": "Designed and built with all the love in the world by",
             "links": [
                 {
