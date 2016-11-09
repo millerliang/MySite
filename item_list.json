@@ -2,42 +2,42 @@
 	"projectItemList" : [{
 			"date" : "2016/05/26",
 			"url" : "opening/index.html",
-			"title" : "jQuery 倒數開幕布簾",
+			"title" : "jQuery 倒數開幕拉簾",
 			"img" : "imgs/openner.jpg"
 		}, {
 			"date" : "2016/10/07",
 			"url" : "luann/index.html",
-			"title" : "路演大廳 mobile web",
+			"title" : "路演大廳 for WebApp",
 			"img" : "imgs/luann.png"
 		}, {
 			"date" : "2016/05/17",
 			"url" : "NewLife_Page/index.html",
-			"title" : "左右逢源",
+			"title" : "左右逢源網站樣板",
 			"img" : "imgs/NewLife.jpg"
 		}, {
 			"date" : "2016/05/24",
 			"url" : "dahsin/index.html",
-			"title" : "大信 mobile web",
+			"title" : "大信防水 for WebApp",
 			"img" : "imgs/dahsin.png"
 		}, {
 			"date" : "2016/04/15",
 			"url" : "dahsin_site/exp-001.html",
-			"title" : "大信官網-工程實績 json",
+			"title" : "大信官網-工程實績改 json",
 			"img" : "imgs/dahsin_exp.jpg"
 		}, {
 			"date" : "2016/03/17",
 			"url" : "BMCsite/index.html",
-			"title" : "BMC Voice website",
+			"title" : "BMC Voice Website",
 			"img" : "imgs/bmc_voice.jpg"
 		}, {
 			"date" : "2016/01/14",
 			"url" : "bmcv_user/index.html",
-			"title" : "BMC Voice App web",
+			"title" : "BMC Voice for WebApp",
 			"img" : "imgs/BMC_voice_wap.jpg"
 		}, {
 			"date" : "2016/04/02",
 			"url" : "HannahSite/index.html",
-			"title" : "瀚吶音頻",
+			"title" : "瀚吶音頻網站",
 			"img" : "imgs/hannah.jpg"
 		}, {
 			"date" : "2016/03/09",
@@ -47,7 +47,7 @@
 		}, {
 			"date" : "2016/09/21",
 			"url" : "new_IDSC/index.html",
-			"title" : "IDSC 英達思康 (new)",
+			"title" : "IDSC 英達思康 (onePage)",
 			"img" : "imgs/new_idsc.jpg"
 		}, {
 			"date" : "2015/12/07",
@@ -57,7 +57,7 @@
 		}, {
 			"date" : "2014/12/23",
 			"url" : "xjy_site/index.html",
-			"title" : "芯碁晔",
+			"title" : "芯碁晔網站",
 			"img" : "imgs/xjy.jpg"
 		}, {
 			"date" : "2015/07/13",
@@ -87,7 +87,7 @@
 		}, {
 			"date" : "2015/01/08",
 			"url" : "uupon_fb_share/index.html",
-			"title" : "UUPON FB 分享",
+			"title" : "UUPON Facebook 分享",
 			"img" : "imgs/uupon_fb_share.jpg"
 		}, {
 			"date" : "2015/08/12",
