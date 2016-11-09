@@ -60,6 +60,11 @@
 			"title" : "芯碁晔網站",
 			"img" : "imgs/xjy.jpg"
 		}, {
+			"date" : "2015/09/09",
+			"url" : "jput_json/index.html",
+			"title" : "jput_json Demo",
+			"img" : "imgs/jput_json.jpg"
+		}, {
 			"date" : "2015/07/13",
 			"url" : "JFApp_ManagerSite/index.html",
 			"title" : "JF 後台管理",

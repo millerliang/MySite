@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>LuAnn Lobby json data TestPage</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!-- 新 Bootstrap 核心 CSS 文件 -->
+	<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+	<script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<!-- font icons -->
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<!-- jPut core JavaScript -->
+	<script src="js/jput.min.js"></script>
+	<!-- <script src="js/jput-2.js"></script> -->
+
+	<script>	
+	$(document).ready(function(){
+		//jPut Code
+		$('#main_div').jPut({
+			ajax_url:'data2.json',
+			name:'nav_bar',
+			dataName:'topnav',
+			error:function(e){
+				alert(e);
+			}
+		});
+
+		$('#slide_div').jPut({
+			ajax_url:'data1.json',
+			name:'slide_imgs',
+			dataName:'slideshow',
+			error:function(e){
+				alert(e);
+			}
+		});
+
+		$('#Thumbnail_div').jPut({
+			ajax_url:'data3.json',
+			name:'Thumbnail',
+			dataName:'thumbnail',
+			error:function(e){
+				alert(e);
+			}
+		});
+	});
+	</script>
+
+	<style>
+	body {background-color:#f7fafa;}
+	.navbar-default {border:0px solid transparent;border-bottom: 1px solid #e7e7e7;}
+	.navbar-default a {color:white;}
+	.navbar,.affix{border-radius:0px;-webkit-transition: all 1.2s ease-in-out;-moz-transition: all 1.2s ease-in-out;-o-transition: all 1.2s ease-in-out;transition: all 1.2s ease-in-out;}
+	.affix {box-shadow:0px 2px 5px rgba(0,0,0,.1);width:100%;z-index:1;background-color:rgba(255,255,255,.9);}
+
+	.thumbnail{min-height: 500px;}
+	#carousel-example-captions {box-shadow: 0px 5px 8px rgba(0,0,0,0.3);}
+	</style>
+</head>
+<body>
+	
+<!-- jput main nav_bar -->
+<div jPut="nav_bar">
+	<ul class="nav navbar-nav">
+		<li><a href="{{h_link}}">{{name}}</a></li>
+		<li><a href="{{d_link}}">{{discover}}</a></li>
+		<li><a href="{{l_link}}">{{login}}</a></li>
+		<li><a href="{{s_link}}">{{signup}}</a></li>
+		<li class="dropdown">
+			<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">下拉選單 <span class="caret"></span></a>
+			<!--dropdown details -->
+			<ul class="dropdown-menu" jrepeat="links"></ul>
+		</li>
+	</ul>
+</div>
+
+<!-- jput dropdown nav_bar -->
+<ul jPut="links">
+	<li><a href="{{url}}" target="_blank">{{sub_name}}</a></li>
+</ul>
+
+<!-- jput slideshow slide_imgs -->
+<div jPut="slide_imgs">
+	<div class="carousel-inner" role="listbox" jrepeat="slide_links"></div>
+</div>
+
+<!-- jput slideshow slide_imgs repeat -->
+<div jPut="slide_links">
+	<div class="item {{active}}">
+		<a class="img-responsive" href="{{url}}" target="_blank">
+			<img src="{{img_src}}" data-holder-rendered="true">
+		</a>
+		<div class="carousel-caption">
+			<h3>{{title}}</h3>
+			<p>{{p_text}}</p>
+		</div>
+	</div>
+</div>
+
+<nav class="navbar navbar-default" data-spy="affix" data-offset-top="2">
+	<div class="container">
+
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+		  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		  </button>
+		  <a class="navbar-brand" href="index.html">LuAnn</a>
+		</div>
+
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<div id="main_div"></div>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="index2.html">go to Page2</a></li>
+				<li><a href="#">language</a></li>
+			</ul>
+		</div>
+
+	</div><!-- /.container-fluid -->
+</nav>
+
+<div class="container">
+	
+	<div class="" data-example-id="carousel-with-captions">
+		<div id="carousel-example-captions" class="carousel slide" data-ride="carousel">
+			<ol class="carousel-indicators">
+				<li data-target="#carousel-example-captions" data-slide-to="0" class="active"></li>
+				<li data-target="#carousel-example-captions" data-slide-to="1" class=""></li>
+				<li data-target="#carousel-example-captions" data-slide-to="2" class=""></li>
+				<li data-target="#carousel-example-captions" data-slide-to="3" class=""></li>
+				<li data-target="#carousel-example-captions" data-slide-to="4" class=""></li>
+				<li data-target="#carousel-example-captions" data-slide-to="5" class=""></li>
+			</ol>
+
+			<div id="slide_div"></div>
+
+			<a class="left carousel-control" href="#carousel-example-captions" role="button" data-slide="prev">
+				<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+				<span class="sr-only">上一項</span>
+			</a>
+			<a class="right carousel-control" href="#carousel-example-captions" role="button" data-slide="next">
+				<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+				<span class="sr-only">下一項</span>
+			</a>
+		</div>
+	</div>
+
+	<div class="row_">
+		<div class="page-header">
+			<h1>
+				<span class="pull-right">
+					<a href="#" class="btn btn-default">more...</a>
+				</span>
+				What's Popular <small>Subtext for header</small>
+			</h1>
+		</div>
+	</div>
+	
+	<!-- jput Thumbnail ID -->
+	<div jPut="Thumbnail">
+		<div jrepeat="items"></div>
+	</div>
+	
+	<!-- jput Thumbnail repeat -->
+	<div jPut="items">
+		<div class="col-sm-6 col-md-4">
+			<div class="thumbnail">
+				<a href="{{url}}"><img class="img-responsive" src="{{img_src}}" data-holder-rendered="true"></a>
+				<div class="caption">
+					<h3>{{t_label}}</h3>
+					<p>{{p_text}}</p>
+					<p class="location"><i class="fa fa-map-marker"></i> {{loc}}</p>
+					<div class="progress">
+						<div class="progress-bar progress-bar-{{bar_color}} progress-bar-striped {{bar_active}}" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:{{bar_percen}};">
+						{{bar_percen}}
+						</div>
+					</div>
+					<p>
+						<a href="#" class="btn btn-primary" role="button">vote</a>
+						<a href="#" class="btn btn-default" role="button">view</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="Thumbnail_div" class="row"></div>
+
+	<!-- <div class="row">
+		<div class="col-sm-6 col-md-4">
+			<div class="thumbnail">
+				<a href="#"><img class="img-responsive" src="imgs/006.jpg" data-holder-rendered="true"></a>
+				<div class="caption">
+					<h3>{{Thumbnail label}}</h3>
+					<p>{{text text text text text text text.}}</p>
+					<p class="location"><i class="fa fa-map-marker"></i> {{纽约布鲁克林}}</p>
+					<div class="progress">
+						<div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:20%;">
+						{{20%}}
+						</div>
+					</div>
+					<p>
+						<a href="#" class="btn btn-primary" role="button">vote</a>
+						<a href="#" class="btn btn-default" role="button">view</a>
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-6 col-md-4">
+			<div class="thumbnail">
+				<a href="#"><img class="img-responsive" src="imgs/003.jpg" data-holder-rendered="true"></a>
+				<div class="caption">
+					<h3>Thumbnail label</h3>
+					<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+					<div class="progress">
+						<div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:40%;">
+						40%
+						</div>
+					</div>
+					<p><a href="#" class="btn btn-block btn-primary" role="button">Button</a> <a href="#" class="btn btn-block btn-default" role="button">Button</a></p>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-6 col-md-4">
+			<div class="thumbnail">
+				<a href="#"><img class="img-responsive" src="imgs/005.jpg" data-holder-rendered="true"></a>
+				<div class="caption">
+					<h3>Thumbnail label</h3>
+					<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+					<div class="progress">
+						<div class="progress-bar progress-bar-danger progress-bar-striped active" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+						60%
+						</div>
+					</div>
+					<p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+				</div>
+			</div>
+		</div>
+	</div> -->
+
+</div><!-- /container -->
+
+<footer>
+	<div class="container">
+		<hr/>
+		<p>{{f_footer}}Designed and built with all the love in the world by <a href="mailto:millerliang@jyt-inc.com;" target="_blank">@Mil</a> and <a href="http://www.jyt-inc.com" target="_blank">@JYT</a>.</p>
+	</div>
+	<p>&nbsp;</p>
+</footer>
+
+</body>
+</html>
