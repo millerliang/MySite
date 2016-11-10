@@ -59,6 +59,13 @@ a:hover,a:focus {text-decoration: none;}
 /**
  * Card list-item
  */
+.links {list-style: none;padding:0;text-align:left;}
+.links li {display:inline-block;margin-bottom:.35rem;}
+.links li a {}
+
+/**
+ * Card list-item
+ */
 .card  {-webkit-transition: all .6s;-moz-transition: all .6s;transition: all .6s;}
 .card  header {padding:.35rem .5rem;}
 .card  .img-size {min-height:10rem;max-height:10rem;background-color:#111;overflow:hidden;border-bottom:1px solid #ddd;}
