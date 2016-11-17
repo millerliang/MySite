@@ -33,6 +33,16 @@
 .back footer .green_btn {color:#fff;background-color: #99c050;border-bottom: 5px solid #89AB4B;text-shadow: 0px -2px #659555;}
 .back footer .red_btn {color:#fff;background-color: #D04F39;border-bottom: 5px solid #A73A3A;text-shadow: 0px -2px #6F1E1E;}
 
+/* front btns */
+.front .btnbar {display:flex;padding:.7rem 0;}
+.front .btnbar .luann_btn {width:100%;margin:2px auto;flex:1;margin:0 4px;border:0;position: relative;padding: 4px 10px;border-radius: 3px;font-size: 16px;color: #333;text-decoration: none;background-color: #e8e8e8;border-bottom: 5px solid #ddd;transition: all 0.1s;-webkit-transition: all 0.1s;}
+.front .btnbar .luann_btn:hover,.back footer .luann_btn:focus {text-decoration: none;}
+.front .btnbar .luann_btn:active {transform: translate(0px,3px);-webkit-transform: translate(0px,3px);border-bottom: 1px solid;}
+
+.front .btnbar .blue_btn {color:#fff;background-color: #3498DB;border-bottom: 5px solid #2980B9;text-shadow: 0px -2px #2980B9;}
+.front .btnbar .green_btn {color:#fff;background-color: #99c050;border-bottom: 5px solid #89AB4B;text-shadow: 0px -2px #659555;}
+.front .btnbar .red_btn {color:#fff;background-color: #D04F39;border-bottom: 5px solid #A73A3A;text-shadow: 0px -2px #6F1E1E;}
+
 /* card-list style */
 .card-list {text-align__:left;min-height:430px;margin:.4em 0 1em;width:100%;}
 .card-list img {max-height:260px;max-width:100%;}
@@ -90,10 +100,10 @@
 .card-new .back footer {position:static;flex-basis:2%;}
 .card-new .back h5 {font-size: 16px;border-bottom: 1px solid rgba(255,255,255,.35);padding:.4em 0;margin:8px .5em;border-left: 3px solid #ff4000;padding-left:.4em;}
 
-ul.flex_box {margin-top:1em;padding:.4em 0;background-color:#000;list-style: none;display: -webkit-box;display: -webkit-flex;display: -ms-flexbox;display: flex;-webkit-box-orient: horizontal;-webkit-box-direction: normal;-webkit-flex-direction: row;-ms-flex-direction: row;flex-direction: row;-webkit-flex-wrap: nowrap;-ms-flex-wrap: nowrap;flex-wrap: nowrap;}
+ul.flex_box {margin-top___:1em;padding:.4em 0;background-color:#000;list-style: none;display: -webkit-box;display: -webkit-flex;display: -ms-flexbox;display: flex;-webkit-box-orient: horizontal;-webkit-box-direction: normal;-webkit-flex-direction: row;-ms-flex-direction: row;flex-direction: row;-webkit-flex-wrap: nowrap;-ms-flex-wrap: nowrap;flex-wrap: nowrap;}
 ul.flex_box li {text-align: center;-webkit-box-flex: 1;box-flex: 1;-webkit-flex: 1;-ms-flex: 1;flex: 1;white-space: nowrap;}
 ul.flex_box li p {color: #C599FB;}
-ul.flex_box li b {font-size: 24px;color: #ffff00;}
+ul.flex_box li b {font-size: 18px;color: #ffff00;}
 </style>
 </head>
   <body>
@@ -213,6 +223,10 @@ ul.flex_box li b {font-size: 24px;color: #ffff00;}
 						<p>【时间】2016/10/14  00:00-23:55</p>
 						<p>【发会方】左右逢源</p>
 					</div>
+					<div class="btnbar">
+						<button class="luann_btn blue_btn" onclick="showReply(8)">Text</button>
+						<button class="luann_btn green_btn" onclick="showReply(9)">Text</button>
+					</div>
 					<ul class="flex_box">
 						<li>
 							<p class="dark">预约收视</p><b class="dark">1</b>
@@ -250,6 +264,11 @@ ul.flex_box li b {font-size: 24px;color: #ffff00;}
 					<div class="info">
 						<p>【时间】2016/10/14  00:00-23:55</p>
 						<p>【发会方】左右逢源</p>
+					</div>
+					<div class="btnbar">
+						<button class="luann_btn blue_btn" onclick="showReply(8)">Text</button>
+						<button class="luann_btn red_btn" onclick="showReply(9)">Text</button>
+						<button class="luann_btn green_btn" onclick="showReply(9)">Text</button>
 					</div>
 					<ul class="flex_box">
 						<li>
@@ -366,14 +385,14 @@ ul.flex_box li b {font-size: 24px;color: #ffff00;}
 	<script src="asset/js/main.js"></script>
 	<script>
 		// $(".card-list").flip();
-		$('.card-new img,.card-new h5,.card-new .info,.card-new .flex_box').click(function() {
-			//$(this).toggleClass('active');
-			$(this).parents('.card-new').addClass('active');
-		});
+		//$('.card-new img,.card-new h5,.card-new .info,.card-new .flex_box').click(function() {
+		//	//$(this).toggleClass('active');
+		//	$(this).parents('.card-new').addClass('active');
+		//});
 
-		$('.close_btn,.modal__close').click(function() {
-			$(this).parents('.card-new').removeClass('active');
-		});
+		//$('.close_btn,.modal__close').click(function() {
+		//	$(this).parents('.card-new').removeClass('active');
+		//});
 	</script>
 
   </body>

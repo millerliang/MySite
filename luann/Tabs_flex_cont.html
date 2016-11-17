@@ -37,16 +37,18 @@
 	.my_vote li .btn-link {color:#f2c40f;}
 	.my_vote li span.money {color:#d93600;margin-left:6px;}
 	.my_vote .purple_bg {background-color: #6b50a8!important;text-align:center;color:#fff;margin-top:.5em;}
+	.my_vote .blue_bg {background-color: #2067ae!important;text-align:center;color:#fff;margin-top:.5em;}
 
 	/* Table 表格 style */
+	.table {border:1px solid #ccc;}
 	.table-responsive {min-height: .01%;overflow-x: auto;overflow-y: hidden;}
 	.table {width:100%;margin-bottom:1rem;font-size: x-small;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
-	.table thead {color: #3d197e;text-align:center;}
-	.table thead tr {border-bottom: 1px solid #b1a1cf;}
+	.table thead {color__: #3d197e;text-align:center;background-color:#2067AE;color: #fff;}
+	.table thead tr {border-bottom__: 1px solid #b1a1cf;border-bottom: 1px solid #ddd;}
 	.table tbody {color:#000;text-align:center;}
 	.table tbody tr {border-bottom: 1px solid #e3e3e3;}
 	.table tbody tr td {padding:.2em .1em;}
-	.table_style2 thead {color: #222;border-bottom:1px solid #ececec;}/* Style2 */
+	.table_style2 thead {border-bottom:1px solid #ececec;}/* Style2 */
 	.table_style2 thead tr {border-bottom: 1px dotted #333;}
 	.table_style2 tbody tr {border:none}
 
@@ -68,6 +70,20 @@
 	}
 	.label-warning {background-color: #f0ad4e;}
 	.label-danger {background-color: #d9534f;}
+	
+	.lower__ {
+		line-height: 3.2;
+		position: absolute;
+		right: 1em;
+		top: 0;
+		color: #333;
+	}
+	.tabs-header {background: #f1f1f1;}
+	.tabs-header a {color:#333;}
+	.tabs-header li.active a {background-color:#356B9A;color:#fff;}
+	.tabs-content {background-image: url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/confectionary.png);}
+	.header-hamburger__ {border-bottom: 1px solid #ddd;background: none;background-color:rgba(255,255,255,.93);}
+	.header-hamburger__ h2 {color:#333;}
   </style>
   </head>
   <body>
@@ -75,6 +91,8 @@
 		<header class="slide_logo">
 			<a href="index.html"><img src="asset/images/slide_logo.png"></a>
 		</header>
+
+		<div class="slide_user"><img src="asset/croppie/demo/cat.jpg"><h3>Allen lee</h3><i class="fa fa-sign-out"></i></div>
 
 		<section class="menu-section">
 			<h3 class="menu-section-title"><i class="fa fa-home"></i> <a href="index.html">首頁 <small>Home</small></a></h3>
@@ -150,11 +168,15 @@
 			</ul>
 		</section>
 
+		<section class="menu-section">
+			<h3 class="menu-section-title"><i class="fa fa-android"></i> <a href="">APP下載 <small>Download</small></a></h3>
+		</section>
+
 	</nav>
 
 	<header class="header-hamburger fixed">
 		<a class="ninja-btn" title="menu"><span></span></a>
-		<h2>Tabs Flex Modal</h2>
+		<h2>Panel Title</h2>
 		<div class="tabs-header">
 			<center class="header_item transition-all">
 				<div class="time_limit transition-all"><i class="fa fa-clock-o"></i> 截止 06/16</div>
@@ -197,25 +219,71 @@
 				<div tab-id="1" class="tab first_d">
 
 					<section class="slider" style="margin: -12px -10px .5em;">
+						<div class="tool_bar clearfix">
+							<ul class="icons_btn">
+								<li><i class="fa fa-star active"></i>收 藏</li>
+								<li><i class="fa fa-thumbs-up"></i>按 讚</li>
+								<li><i class="fa fa-usd"></i>投 資</li>
+								<li><i class="fa fa-book"></i>電子書</li>
+								<li><i class="fa fa-edit"></i>編 輯</li>
+								<li><i class="fa fa-trash-o"></i>刪 除</li>
+							</ul>
+							<ul class="p_info">
+								<li><i class="fa fa-tag"></i> </li>
+								<li><i class="fa fa-th-large"></i> 天使輪</li>
+								<li class="date"><i class="fa fa-clock-o"></i> 2016-04-21～2017-04-01</li>
+								<li><i class="fa fa-usd"></i> 開放融資</li>
+							</ul>
+							<ul class="info_list clearfix">
+								<li>
+									<div>12345万元<strong>目标融资</strong></div>
+								</li>
+								<li>
+									<div>10%<strong>出让股权</strong></div>
+								</li>
+								<li>
+									<div>0万元<strong>已认投</strong></div>
+								</li>
+								<li>
+									<div>0%<strong>融资进度</strong></div>
+								</li>
+								<li>
+									<div>万元<strong>项目估值</strong></div>
+								</li>
+								<li>
+									<div>万元<strong>确认领投</strong></div>
+								</li>
+								<li>
+									<div>0万元<strong>确认领投额</strong></div>
+								</li>
+								<li>
+									<div>0万元<strong>预约领投</strong></div>
+								</li>
+							</ul>
+						</div>
 						<!-- Swiper -->
-						<div class="swiper-container">
+						<!-- <div class="swiper-container">
 							<div class="parallax-bg" style="background-image:url('asset/images/header-bg.jpg')" data-swiper-parallax="-23%"></div>
 							<div class="swiper-wrapper">
 								<div class="swiper-slide">
 									<ul class="user_info">
 										<li class="user_ico">
-											<div class="icons_btn">
-												<i class="fa fa-star active"></i>
-												<i class="fa fa-thumbs-up"></i>
-												<i class="fa fa-heart"></i> 
-											</div>
 											<img src="asset/images/liz-icon.jpg">
 											<div class="avoid">
 												<p>User name</p>
 												<p>Company</p>
 												<p>Job title</p>
-												<p><i class="fa fa-calendar"></i> 2016-06-01～2016-06-16</p>
 											</div>
+											<ul class="icons_btn">
+												<li><i class="fa fa-star active"></i>收 藏</li>
+												<li><i class="fa fa-thumbs-up"></i>按 讚</li>
+												<li><i class="fa fa-heart"></i>愛 心</li>
+												<li><i class="fa fa-usd"></i>投 資</li>
+												<li><i class="fa fa-book"></i>電子書</li>
+												<li><i class="fa fa-edit"></i>編 輯</li>
+												<li><i class="fa fa-trash-o"></i>刪 除</li>
+											</ul>
+											<p><i class="fa fa-calendar"></i> 2016-06-01～2016-06-16</p>
 										</li>
 										<li><i class="fa fa-tag"></i> 通信</li>
 										<li><i class="fa fa-th-large"></i> 天使輪</li>
@@ -254,29 +322,18 @@
 
 								</div>
 
-							</div>
+							</div> -->
 							<!-- Add Pagination -->
-							<div class="swiper-pagination"></div>
-						</div>
+							<!-- <div class="swiper-pagination"></div> -->
+						<!-- </div> -->
 					</section>
-					<div class="progress">
+					<!-- <div class="progress">
 						<div class="progress-bar" style="width:25%;">25%</div>
 					</div>
 					<div class="investment_up clearfix">
 						<label for="modal-0" class="btn"><i class="fa fa-usd"></i>投资</label>
 						<h3>起投金额: 12.23万</h3>
-					</div>
-					
-					<h4>我的跟投</h4>
-					<div class="my_vote clearfix" id="myItemsInvestArea">
-						<ul>
-							<li><button type="button" class="btn readonly">已確認</button>2016/07/15 08:05 <span class="money">10萬</span></li>
-							<li><button type="button" class="btn green_bg">待確認</button>2016/07/13 13:11 <span class="money">20萬</span></li>
-						</ul>
-						<div class="temp">
-							<button type="button" class="btn purple_bg">確認投資額:10萬</button>
-						</div>
-					</div>
+					</div> -->
 
 					<h4>项目简介</h4>
 					<div class="text_contect">
@@ -364,6 +421,17 @@
 							  </tr>
 							</tbody>
 						  </table>
+					</div>
+				
+					<h4>我的跟投</h4>
+					<div class="my_vote clearfix" id="myItemsInvestArea">
+						<ul>
+							<li><button type="button" class="btn readonly">已確認</button>2016/07/15 08:05 <span class="money">10萬</span></li>
+							<li><button type="button" class="btn green_bg">待確認</button>2016/07/13 13:11 <span class="money">20萬</span></li>
+						</ul>
+						<div class="temp">
+							<button type="button" class="btn blue_bg">確認投資額:10萬</button>
+						</div>
 					</div>
 
 				</div>
