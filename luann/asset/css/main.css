@@ -72,7 +72,7 @@ background-repeat: no-repeat; */
  */
 .slide_user {position:relative;background-color: #356b9a;padding:.8rem 1rem .8rem .6rem;;margin-top: 3rem;box-shadow: 0px 2px 6px rgba(0,0,0,.25);}
 .slide_user img {width:42px;height:42px;float: left;margin-right: .6rem;border: 2px solid #fff;border-radius: 50%;position:relative;margin-top:-.2rem;box-shadow: 0px 2px 6px rgba(0,0,0,.35);}
-.slide_user i {font-size: 21px;right: 1rem;top:.9rem;position: absolute;}
+.slide_user i {font-size: 21px;right: 1rem;top:.9rem;position: absolute;color:rgba(255,255,255,.75);}
 
 a {color: #2196F3;text-decoration: none;}
 
@@ -121,10 +121,10 @@ a {color: #2196F3;text-decoration: none;}
 .red {color:#e42959;}
 .blue {color:#0080ff;}
 .grey {color:#999;}
-.blue_bg {background-color:#0080ff;}
+.blue_bg {background-color:#2067ae;}
 .yellow_bg {background-color: #ffaf00;}
 .red_bg {background-color:#e42959;}
-.green_bg {background-color:#8BC34A;}
+.green_bg {background-color:#afce6d;}
 .grey_bg {background-color:#777;}
 
 /**
@@ -611,15 +611,15 @@ background-color:#00d9d9;
 /**
  * Form input Style
  */
-.form-style h4 {color: #3d197e;font-size: large;line-height:2;border-bottom: 1px solid #e5e5e5;margin-bottom:1em;}
+.form-style h4 {color: #356B9A;font-size: large;line-height:2;border-bottom: 1px solid #e5e5e5;margin-bottom:1em;}
 .form-style h4 small {color:red;margin-left:.3em;font-weight: normal;float: right;}
 .form-style .form-row {margin-bottom:1em;background-color:#fff;text-align:left;}
 .form-style .form-row label {font-size:small;}
 .form-style .form-row label b {color:red;margin-right:.25em;}
 .form-style .form-row input,.form-style div.form-row select ,.form-style div.form-row textarea {border-width:0;border-bottom:1px solid #e5e5e5;width:96%;outline: 0;padding:8px 6px;}
 .form-style .form-row select {width:100%;}
-.form-style .form-row input:focus{border-bottom:1px solid #4f25a0;outline: 0;}
-.form-style .form-row:hover label{color:#4f25a0;}
+.form-style .form-row input:focus{border-bottom:1px solid #2067ae;outline: 0;}
+.form-style .form-row:hover label{color:#2067ae;}
 
 .form-style .checkbox_list {list-style:none;padding:0;margin:0;}
 .form-style .checkbox_list li {display:inline-block;white-space:nowrap;width:22%;padding:7px 0px 4px 4px;}

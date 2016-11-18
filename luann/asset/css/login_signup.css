@@ -5,10 +5,12 @@
 .panel:hover .tab center img {max-width:46%;opacity:.25;-webkit-filter: blur(8px);filter: blur(8px);-webkit-transition: all 1s;-moz-transition: all 1s;transition: all 1s;}
 
 .transition-all {-webkit-transition: all 1s;-moz-transition: all 1s;transition: all 1s;}
-.header-hamburger h2 {background: #000 url('../images/slide_logo.png') center center no-repeat;background-size: auto 100%;text-indent: -9999px;}
+.header-hamburger h2 {background: #306089 url('../images/slide_logo.png') center center no-repeat;background-size: auto 100%;text-indent: -9999px;}
 .tabs-o {box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);}
-.tabs-header {background: #333;}
+.tabs-header___ {background: #333;}
 .tabs-header .border__ {background: #e1cc75;}
+
+.ninja-btn span, .ninja-btn span:before, .ninja-btn span:after {background-color: rgba(174, 251, 255, 0.75);}
 
 hr {
 height: 1px;
@@ -146,9 +148,9 @@ border-radius: 5px 0 0 5px;
 .btn-linkedin {background-color: #00a1db;}
 
 /* 忘記密碼 Help */
-.form-style .help {max-height:13rem;overflow-y: auto;padding:1em .8em .5em;margin:1em -16px 0;font-size: small;background-color:rgba(232,234,235,.75);box-shadow: inset 0 0 8px #dcdcdc;-webkit-box-shadow: inset 0 0 8px #dcdcdc;-moz-box-shadow: inset 0 0 8px #dcdcdc;}
+.form-style .help {max-height:13rem;overflow-y: auto;padding:1em .8em .5em;margin:1.5rem -16px 0;font-size: small;background-color:rgba(232,234,235,.75);box-shadow: inset 0 0 8px #dcdcdc;-webkit-box-shadow: inset 0 0 8px #dcdcdc;-moz-box-shadow: inset 0 0 8px #dcdcdc;}
 .form-style .help p {margin:0 0 .8em;}
-.lower label[for='modal-forget']{font-size:small;color:rgba(111,242,255,.75);}
+.lower label[for='modal-forget']{font-size:small;color:rgba(174, 251, 255, 0.75);}
 @media screen and (max-width: 320px) {
   .form-style .help {max-height:18rem;}
 }

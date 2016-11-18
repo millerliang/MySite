@@ -84,6 +84,10 @@
 	.tabs-content {background-image: url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/confectionary.png);}
 	.header-hamburger__ {border-bottom: 1px solid #ddd;background: none;background-color:rgba(255,255,255,.93);}
 	.header-hamburger__ h2 {color:#333;}
+	
+	/* 2016-11-18*/
+	#modal-iframe + div .modal__close {right:0;top:0;background-color:rgba(0,0,0,.85);padding:.5rem;z-index:2;}
+	#modal-iframe + div .modal__close:after,#modal-iframe + div .modal__close:before {top: 25%;}
   </style>
   </head>
   <body>
@@ -92,7 +96,7 @@
 			<a href="index.html"><img src="asset/images/slide_logo.png"></a>
 		</header>
 
-		<div class="slide_user"><img src="asset/croppie/demo/cat.jpg"><h3>Allen lee</h3><i class="fa fa-sign-out"></i></div>
+		<div class="slide_user"><img src="asset/croppie/demo/cat.jpg"><h3>Allen lee</h3><a href="login.html"><i class="fa fa-sign-out"></i></a></div>
 
 		<section class="menu-section">
 			<h3 class="menu-section-title"><i class="fa fa-home"></i> <a href="index.html">首頁 <small>Home</small></a></h3>
@@ -223,8 +227,8 @@
 							<ul class="icons_btn">
 								<li><i class="fa fa-star active"></i>收 藏</li>
 								<li><i class="fa fa-thumbs-up"></i>按 讚</li>
-								<li><i class="fa fa-usd"></i>投 資</li>
-								<li><i class="fa fa-book"></i>電子書</li>
+								<li><label for="modal-0"><i class="fa fa-usd"></i>投 資</label></li>
+								<li><label for="modal-iframe"><i class="fa fa-book"></i>電子書</label></li>
 								<li><i class="fa fa-edit"></i>編 輯</li>
 								<li><i class="fa fa-trash-o"></i>刪 除</li>
 							</ul>
@@ -422,7 +426,7 @@
 							</tbody>
 						  </table>
 					</div>
-				
+
 					<h4>我的跟投</h4>
 					<div class="my_vote clearfix" id="myItemsInvestArea">
 						<ul>
@@ -746,6 +750,15 @@
 			</div>
 		</footer>
 	  </div>
+	</div>
+
+	<input class="modal-state" id="modal-iframe" type="checkbox" />
+	<div class="modal">
+		<label class="modal__bg" for="modal-iframe"></label>
+		<label class="modal__close" for="modal-iframe"></label>
+		<div class="modal__inner" style="padding:0;overflow: hidden;background-color:#222;min-width:96%;min-height:92%;">
+		<iframe src="swiper-responsive.html" style="width: 100%;border: 0;height: 100%;"></iframe>
+		</div>
 	</div>
 
 	<script src="asset/js/index_slider.js"></script>
