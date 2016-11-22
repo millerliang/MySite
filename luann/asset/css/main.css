@@ -119,12 +119,14 @@ a {color: #2196F3;text-decoration: none;}
  * Colors
  */
 .red {color:#e42959;}
-.blue {color:#0080ff;}
+.blue {color:#0075d7;}
+.info {color:#5bbfd9;}
 .grey {color:#999;}
 .blue_bg {background-color:#2067ae;}
+.info_bg {color:#5bbfd9;}
 .yellow_bg {background-color: #ffaf00;}
 .red_bg {background-color:#e42959;}
-.green_bg {background-color:#afce6d;}
+.green_bg {background-color:#58b857;}
 .grey_bg {background-color:#777;}
 
 /**
@@ -297,7 +299,7 @@ background-color:rgba(255,255,255,.98);
 .box .tag i {font-size: 13px;}
 .box .tag_red {background-color: #ff0000;}
 .box .tag_blue {background-color: #00bfff;}
-.box .tag_green {background-color: #00b386;}
+.box .tag_green {background-color: #59b958;}
 .box .tag_grey {background-color: #666666;}
 
 /**

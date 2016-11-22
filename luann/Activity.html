@@ -1,0 +1,384 @@
+<!doctype html>
+<!--[if IE 8]><html class="ie8 lt-ie10"><![endif]-->
+<!--[if IE 9]><html class="ie9 lt-ie10"><![endif]-->
+<!--[if gt IE 9]><!--><html lang="en"><!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <title>Activity Page</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="cleartype" content="on">
+    <meta name="MobileOptimized" content="320">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="asset/css/main.css">
+	<link rel="stylesheet" href="asset/css/swiper.min.css">
+    <link rel="stylesheet" href="asset/css/tabs_modal.css">
+    <link rel="stylesheet" href="asset/css/items_view.css">
+<style>
+* {box-sizing: border-box;}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {margin: 0;padding: 0;border: 0;font-size: 100%;font: inherit;vertical-align: baseline;}
+html,body {height:100%;}
+body {font-family:Helvetica;color: #333;}
+article section {width: auto;float: none;margin: 0 auto;}
+
+.contact-source {position__: relative;background: #f1f1f1;padding:4rem 1rem 2rem;}
+.contact-source header {border-bottom:1px solid #e9e9e9;margin-bottom:.6rem;padding-bottom:.5rem;}
+.contact-source header h1 {font-size:1.4rem;line-height:1;margin-bottom:.5rem;}
+.contact-source header .time {font-size:small;}
+.contact-source p {line-height:1.4;}
+.contact-source img {max-width:100%;}
+/* 標頭 */
+.header-hamburger {position__: relative;box-shadow: 0 2px 6px rgba(0,0,0,.35);-webkit-box-shadow: 0 2px 6px rgba(0,0,0,.35);-moz-box-shadow: 0 2px 6px rgba(0,0,0,.35);}
+.header-hamburger h2 {overflow: hidden;text-overflow: ellipsis;white-space: nowrap;width: 73%;margin: auto;}
+
+/* 彈出視窗 */
+.modal__inner {box-shadow: 0 2px 12px rgba(0,0,0,.35);-webkit-box-shadow: 0 2px 12px rgba(0,0,0,.35);-moz-box-shadow: 0 2px 12px rgba(0,0,0,.35);}
+
+/* 2016-11-21 */
+.sign_up_title {
+font-weight: bold;
+font-size: 16px;
+background: #FFF;
+color: #2067ae;
+line-height: 30px;
+border: 1px solid #2067ae;
+text-align: center;}
+
+.form-style .row {border-bottom:1px solid #efefef;}
+.form-style input {display:block;border: 0;width:100%;padding:.5rem .3rem;}
+.form-style .btn {color:#fff;text-align:center;margin-top:.5rem;}
+
+.total {line-height: 30px; font-size: small;color:#2067ae;margin-top:.8rem;}
+.btable{background-color: #FFF; width: 100%; margin-bottom: 10px;}
+.btable tr {border: 1px solid #C4C4C4; height: 27px; line-height: 27px;}
+.btable td {padding:.1rem .3rem;}
+</style>
+</head>
+<body>
+<article>
+
+	<header class="header-hamburger">
+		<a class="ninja-btn ninja-back" title="menu" onclick="history.go(-1)"><span></span></a>
+		<h2>Title</h2>
+		<div class="lower">
+			<label for="modal-0"><i class="fa fa-ellipsis-v"></i></label>
+		</div>
+	</header>
+	<section class="contact-source">
+		<header>
+			<h1>愛心啟航：認購「發金一號」資產包，助力公益教育事業</h1>
+			<p class="time">報名期限：2017-02-05 00:19:12</p>
+		</header>
+		<img src="http://zjiay.com/public/attachment/201611/08/10/58213798c94aa.jpg">
+		<p>
+			<span style="color:#003399;font-size:18px;"><strong>项目概述：</strong><br />
+		<span style="font-size:14px;">此为苏州市吴中区八斤蟹业专业合作社推出的“發金一号”资产包——“八金牌”太湖大闸蟹收益权认购项目：2万元/份，共100斤，公蟹3.8～4两，母蟹3两以上。投资周期为三年，认购资产包的利润分红由认购方与八斤蟹业专业合作社五五分成，优先收益10%/年，预计年化收益率在30%-50%；若亏损也将以合作社实际控制人陈八斤和潘根妹夫妇以回购的形式保障投资人每年10%的收益率；也可提前以成本价提取部分或全部螃蟹，且无需退还既得收益。</span></span><span style="color:#003399;font-size:18px;"><span style="font-size:14px;"></span></span> 
+		</p>
+		<p>
+			<span style="color:#003399;font-size:18px;"><strong>项目介绍：</strong></span> 
+		</p>
+		<p>
+			<strong><span style="color:#003399;font-size:16px;">一、背景介绍</span></strong> 
+		</p>
+		<p>
+			“秋风响，蟹脚痒”，从寒露到立冬，正是太湖大闸蟹大量上市的季节。太湖大闸蟹生长于太湖水域，个大体重，蟹黄肥厚，肉质细嫩，腴美异常，“青壳、白肚、金爪、黄毛、体壮”是太湖大闸蟹的五大特征。
+		</p>
+		<p>
+			根据阳澄湖生态优化行动方案，至2016年末，阳澄湖网围面积缩减一半计划将全面落实，只剩下16000亩，阳澄湖大闸蟹的半幅减产，使太湖大闸蟹的涨价成为必然。提前认购未来三年的太湖大闸蟹收益权资产包是您明智而稳妥的选择！
+		</p>
+		<p>
+			苏州市吴中区八斤蟹业专业合作社郑重承诺，将捐献出此次发行的共计1000万人民币资产包中的1%给江苏省教育传媒基金会爱心专项助学基金，用于推动教育事业，助力公益慈善。
+		</p>
+		<p>
+			<strong><span style="color:#003399;">（一）2016年太湖大闸蟹市场行情</span></strong> 
+		</p>
+		<p>
+			小蟹：公3.3两以下，母2.3两以下，一斤70元/左右。
+		</p>
+		<p>
+			中蟹：公3.4-3.7两，母2.8两以下，一斤150元左右；
+		</p>
+		<p>
+			大蟹：公3.8-4两，母3两以上，一斤在260元左右。
+		</p>
+		<p>
+			<strong><span style="color:#003399;">（二）苏州市吴中区八斤蟹业专业合作社概况</span></strong> 
+		</p>
+		<p>
+			苏州市吴中区八斤蟹业专业合作社，从成立时30多位会员现发展到80多位社员，300多户渔民在理事长陈八斤带领下，从事太湖大闸蟹和各类鱼虾的养殖与销售，借太湖优势，点鱼成“金”，如今，他创办的苏州市吴中区八斤蟹业专业合作社年销售近亿元，销售范围涉及港澳台及部分海外市场。
+		</p>
+		<p>
+			太湖生态渔村的董事长陈八斤，便是土生土长的太湖渔民。太湖生态渔村拥有三千多亩水域，是集养殖、垂钓、休闲、吃住、环保等于一体的太湖度假村，是苏州太湖地区48村，第一家集渔业、餐饮全牌照经营机构，同时获得农业部门重点关注及大力支持，是中国农业部颁发全国休闲渔业示范基地，江苏省餐饮协会颁发的营养健康膳食建设基地。开业至今已经九年多，原汁原味的湖鲜美食和地道的太湖渔民风情，吸引了不少远近游客，被不少老客人赞做“江南湖鲜第一村”，渔村的最大特色便是湖鲜。非围网养殖，这里的所有食材均为野生，太湖生态渔村也是东太湖地区唯一一家保存原汁原味传统渔村特色的湖鲜美食基地。
+		</p>
+		<p>
+			<strong><span style="color:#003399;font-size:16px;">二、项目概况</span></strong> 
+		</p>
+		<p>
+			<strong><span style="color:#003399;">（一）项目概要</span></strong> 
+		</p>
+		<p>
+			1、项目名称：“發金一号”资产包——“八金牌”太湖大闸蟹收益权认购项目
+		</p>
+		<p>
+			2、项目发行方：“北京左右逢源创业投资有限公司”
+		</p>
+		<p>
+			3、项目标的方：“苏州市吴中区八斤蟹业专业合作社”
+		</p>
+		<p>
+			4、项目回购方：陈八斤、潘根妹
+		</p>
+		<p>
+			<img src="http://www.zjiay.com/public/attachment/201611/08/10/582137ae73357.jpg" /> 
+		</p>
+		<p>
+			<strong><span style="color:#003399;">（二）合作方概要</span></strong> 
+		</p>
+		<p>
+			1、北京左右逢源创业投资有限公司
+		</p>
+		<p>
+			2015年3月17日成立，是全国工商联EMBA联盟发起成立的以服务于会员(注册会员3万多名)企业为主的互联网投融资服务平台。
+		</p>
+		<p>
+			左右逢源创投平台将致力于为创业者提供优质的金融服务、品牌宣传推广、合伙人推荐、战略指导、创业培训、产品渠道等价值服务。为创业项目带来强大的资源支持，在融资、客户、资源、经验、人才、品牌、政府、资金、人脉、场地、战略、银行、激励等，尽可能的支持创业成功；为投资人提供专业的投资信息服务，通过内部投决委机制精选优质项目上线，并有强大的资源支持提升项目成功机率，提高投资收益。
+		</p>
+		<p>
+			从长远来看左右逢源创投平台让赚钱变得更加公平，帮助创业者及投资者实现梦想和实现收益。
+		</p>
+		<p>
+			2、苏州市吴中区八斤蟹业专业合作社
+		</p>
+		<p>
+			2007年8月28日成立，由太湖生态渔村理事长陈八斤带着太湖沿岸三十多家渔民共同创立，从成立时30多位会员现发展到80多位社员，300多户渔民在理事长陈八斤带领下，从事太湖大闸蟹和各类鱼虾的养殖与销售，借太湖优势，点鱼成“金”，如今，他创办的苏州市吴中区八斤蟹业专业合作社年销售近亿元，销售范围涉及港澳台及部分海外市场。
+		</p>
+		<p style="text-align:left;text-indent:28pt;">
+			<span style="color:#003399;font-size:16px;"><strong>三、项目方案</strong></span> 
+		</p>
+		<p>
+			<strong><span style="color:#003399;">（一）产品形式</span></strong> 
+		</p>
+		<p>
+			北京左右逢源创业投资有限公司为苏州市吴中区八斤蟹业专业合作社设计发行“八金牌”太湖大闸蟹收益权资产包，<strong>规划2万元/份，共计500份，合计1000万元人民币。</strong> 
+		</p>
+		<p>
+			<strong><span style="color:#003399;">（二）产品内容</span></strong> 
+		</p>
+		<p>
+			每份产品为100斤“八金牌”太湖大闸蟹，规格为：公蟹3.8～4两，母蟹3两以上，单价为200元/斤。
+		</p>
+		<p align="center">
+			<img src="http://zjiay.com/public/attachment/201611/08/10/58213854e3d46.jpg" /> 
+		</p>
+		<p>
+			<strong><span style="color:#003399;">（三）操作模式</span></strong> 
+		</p>
+		<p>
+			北京左右逢源创业投资有限公司帮助苏州市吴中区八斤蟹业专业合作社发行“八金牌”太湖大闸蟹收益权资产包，产品发行成功后，由参与本项目的产品认购方进行认购，认购成功后可进行两种模式的操作，一种是产品认购方可委托苏州市吴中区八斤蟹业专业合作社将产品继续在市场上进行流通；另一种是对认购产品提前进行实物交割。
+		</p>
+		<p>
+			<strong><span style="color:#003399;">（四）盈利情况</span></strong> 
+		</p>
+		<p>
+			该产品发行成功后，产品认购方可对本产品进行认购，认购成功后产品认购方可委托苏州市吴中区八斤蟹业专业合作社将产品继续在市场进行流通，苏州市吴中区八斤蟹业专业合作社需按照产品的市场价格进行销售，在认购方认购范围内，实际销售金额超过产品认购金额的部分，与产品认购方按双方各占50%的比例进行利润分红（产品认购方享受优先分红），且自认购方享有太湖大闸蟹收益权起每年的分红额不低于认购方认购金额的10%。若不足10%，不足部分则由回购方陈八斤、潘根妹负责补足。
+		</p>
+		<p>
+			<strong><span style="color:#003399;">（五）亏损情况下的回购承诺</span></strong> 
+		</p>
+		<p>
+			该产品发行成功后，产品认购方可对本产品进行认购，认购成功后产品认购方可委托苏州市吴中区八斤蟹业专业合作社将产品继续在市场进行流通，若苏州市吴中区八斤蟹业专业合作社遇不可抗力或经营不善导致该产品发生亏损，无法盈利的情况下，陈八斤、潘根妹承诺将回购产品认购方所持份额所有权，产品回购价格为产品的认购价格与认购之日起三年内每年10%分红的总和减去已支付给认购方的分红，即回购价格=P*（1+T*10%）－已支付给认购方的分红，（P为认购价格，T为年数，“年数”精确到月，如3个月=0.25年）。
+		</p>
+		<p>
+			<strong><span style="color:#003399;">（六）提前进行实物交割</span></strong> 
+		</p>
+		<p>
+			若产品认购方需要提前进行实物交割，按每份产品为100斤“八金牌”太湖大闸蟹，规格为：公蟹3.8～4两，母蟹3两以上，单价为200元/斤为标准，分为以下三种情况：（产品价格以280元/斤为限，P为市场价格）
+		</p>
+		<p>
+			<span style="font-size:10px;">（注：在进行实物交割前，产品认购方已取得的利润分红按本协议第三条第七款“优先分红原则”分配，不予退还给苏州市吴中区八斤蟹业专业合作社。若对产品进行部分实物交割，未交割完毕的部分由产品认购方默认委托苏州市吴中区八斤蟹业专业合作社继续在市场上进行流通，分红规则与回购规则不变。）</span> 
+		</p>
+		<p>
+			1、当年P≤200元/斤，产品认购方以200元/斤的价格交割规格内的大闸蟹100斤，亏损部分由产品认购方自行承担；
+		</p>
+		<p>
+			2、当年200元/斤&lt;P≤280元/斤之内，乙方以200元/斤的价格交割规格内的大闸蟹100斤，盈利部分为乙方所赚取；
+		</p>
+		<p>
+			3、当年P&gt;280元/斤，产品认购方可有两种交割方式：第一种方式为补差价，规格内的大闸蟹交割100斤，按市场价格280元/斤进行补差价，即（P<sub>1</sub>－280）×100=P<sub>2</sub>（P<sub>1</sub>为当年市场价格，P<sub>2</sub>为差价），认购方应支付苏州市吴中区八斤蟹业专业合作社上述差价部分P<sub>2</sub>；第二种方式为减斤数，按280元/斤，交割100斤规格内的大闸蟹，除以当年市场价格得出产品认购方实际交割得到的大闸蟹斤数，即（280×100÷P）=N（P为当年市场价格，N为最终得到斤数）。
+		</p>
+		<p>
+			<strong><span style="color:#003399;">（七）优先分红原则</span></strong> 
+		</p>
+		<p>
+			<strong>本产品认购期为3个月（自2016年11月04日～2017年02月04日止），</strong>存续期为3年。该产品为当年认购2017、2018、2019共三个年度的“八金牌”太湖大闸蟹收益权，每一年度的收益权由次年2月28日前结算，结算后产品认购方享受优先分红。
+		</p>
+		<p>
+			第一年度结算后认购款自动转为第二年度“八金牌”太湖大闸蟹收益权，第二年度结算后产品认购方享受优先分红；第二年度结算后认购款自动转为第三年度“八金牌”太湖大闸蟹收益权，第三年度结算后产品认购方享受优先分红并且苏州市吴中区八斤蟹业专业合作社将返还产品认购款。
+		</p>
+		<p>
+			苏州市吴中区八斤蟹业专业合作社承诺自认购之日起第一、第二年度的利润分红由次年2月28日之前，向产品认购方支付（至少占产品认购款的10%）。自产品认购之日起3年后，苏州市吴中区八斤蟹业专业合作社承诺将产品认购款及第三年度的利润分红全部支付返还给产品认购方，即2020年2月28日之前支付第三年的利润分红及产品认购款，自此本产品认购合作终止。
+		</p>
+		<p>
+			<span style="color:#003399;font-size:16px;"><strong>四、管理机制</strong></span> 
+		</p>
+		<p>
+			北京左右逢源创业投资有限公司作为“發金一号”资产包——“八金牌”太湖大闸蟹收益权认购项目的发行方，主要负责本项目产品的发行及操作过程中的监督管理，同时协助苏州市吴中区八斤蟹业专业合作社计算产品认购方实际权益，苏州市吴中区八斤蟹业专业合作社承诺基于上述项目产生的每年的净利润向产品认购方进行优先分红，以及三年期满后优先返还产品认购的产品认购款。
+		</p>
+		<p>
+			<span style="color:#003399;font-size:16px;"><strong>五、风险提示</strong></span> 
+		</p>
+		<p>
+			投资具有风险，并且资料所述内容既有较强的专业性，因此我们郑重提示潜在投资人应仔细阅读本资料等法律文件全部内容，了解风险收益特征，并根据自身的投资目的、投资期限、投资经验、资产状况等审慎做出投资决策。在做出投资决策后本项目产品的相应变化引致的投资风险由投资人自行承担。另本企业也将综合考虑潜在投资人的财务状况、专业知识及风险承受能力，做出是否能接受投资的决定。本企业保留不接受不符合有关资质的投资人之权利，并对以上所述信息保留最终解释权。
+		</p>
+		<p>
+			<span style="font-size:10px;">特别提示：我国商品期货交易，全部采用实物交割方式，即不允许提前进行现金交割，投资者需注意，谨慎决定是否认购本产品。</span> 
+		</p>
+		<p>
+			<strong><span style="color:#003399;">付款说明</span></strong>（意向认购可填表报名，工作人员会和您联系；咨询电话<span style="color:#E53333;">18021466691</span>；欢迎赴苏州太湖八斤蟹业实地考察）：
+		</p>
+		<p>
+			账户名称：苏州市吴中区八斤蟹业专业合作社
+		</p>
+		<p>
+			开户行：苏州银行临湖支行
+		</p>
+		<p>
+			账号：706660 1851120 179000772
+		</p>
+		<p>
+			支付宝账号：13218186388（陈国强）
+		</p>
+		<p>
+			由于平台暂时不支持直接支付，请用以上方式付款。
+		</p>
+		
+		<div class="total"><i class="fa fa-dot-circle-o"></i> 已有8人報名  限制500</div>
+		<table class="btable">
+            <tbody>
+			<tr>
+				<td>李松</td>
+			</tr>
+			<tr>
+				<td>朱鵬翱</td>
+			</tr>
+			<tr>
+				<td>潘承漢</td>
+			</tr>
+			<tr>
+				<td>毛俊同</td>
+			</tr>
+			<tr>
+				<td>張傑</td>
+			</tr>
+			<tr>
+				<td>陳學軍</td>
+			</tr>
+			<tr>
+				<td>盧輝</td>
+			</tr>
+			<tr>
+				<td>孟桂根</td>
+			</tr>
+				</tbody>
+			</table>
+
+		<h2 class="sign_up_title">活動報名</h2>
+		<form class="form-style">
+			<div class="row">
+				<input type="text" id="uname" name="uname" placeholder="请输入你的大名（必填）">
+			</div>
+			
+			<div class="row">
+				<input type="text" id="phone" name="phone" placeholder="请输入你的手机号（必填）"> 
+			</div>
+			
+			<div class="row">
+				<input type="text" id="weixin" name="weixin" placeholder="请输入你的微信号（必填）"> 
+			</div>
+			
+			<div class="row">
+				<input type="text" id="email" name="email" placeholder="请输入你的邮箱（必填）"> 
+			</div>
+			
+			<div class="row">
+				<input type="text" id="company" name="company" placeholder="请输入你的单位名称（必填）"> 
+			</div>
+			
+			<div class="row">
+				<input type="text" id="job" name="job" placeholder="请输入你的职务（必填）"> 
+			</div>
+							
+			<div class="row">
+					<input type="text" id="field1" name="field1" placeholder="请输入认购份数 (必填)"> 
+				</div>
+								
+			<div class="row">
+					<input type="text" id="field2" name="field2" placeholder="请输入邮寄地址 (必填)"> 
+			</div>
+
+			<div class="row">
+				<input class="btn blue_bg" type="button" id="bsubmit" class="bbutton" value="提 交">
+			</div>
+		</form>
+	</section>
+
+
+</article>
+
+<footer class="panel-footer">
+	<a target="_blank" href="http://www.miitbeian.gov.cn/">蘇ICP備15055858號 常州左右逢源股權投資有限公司版權所有</a>
+</footer>
+<a href="#0" class="cd-top"><div class="jSlider"><span></span></div></a>
+
+<input class="modal-state" id="modal-0" type="checkbox" />
+<div class="modal">
+  <label class="modal__bg" for="modal-0"></label>
+  <div class="modal__inner">
+	<label class="modal__close" for="modal-0"></label>
+	<h4>Modal Title</h4>
+	<footer>
+		<div>
+			<button type="button" class="btn blue_bg">Send</button>
+			<button type="button" class="btn default"><label for="modal-0">Cancel</label></button>
+		</div>
+	</footer>
+  </div>
+</div>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<!-- <script src="asset/js/main.js"></script> -->
+<script>
+// .jSlider Scroll to top
+// browser window scroll (in pixels) after which the "back to top" link is shown
+var offset = 150,
+//browser window scroll (in pixels) after which the "back to top" link opacity is reduced
+offset_opacity = 1200,
+//duration of the top scrolling animation (in ms)
+scroll_top_duration = 700,
+//grab the "back to top" link
+$back_to_top = $('.jSlider');
+$footer_item_bottom = $('.panel-footer');
+
+//hide or show the "back to top" link
+$(window).scroll(function(){
+	( $(this).scrollTop() > offset ) ? $back_to_top.addClass('cd-is-visible') : $back_to_top.removeClass('cd-is-visible cd-fade-out');
+	( $(this).scrollTop() > offset ) ? $footer_item_bottom.addClass('footer_hidden') : $footer_item_bottom.removeClass('footer_hidden');
+	if( $(this).scrollTop() > offset_opacity ) { 
+		$back_to_top.addClass('cd-fade-out');
+	}
+});
+
+// Smooth scroll to top
+$back_to_top.on('click', function(event){
+	event.preventDefault();
+	$('body,html').animate({
+		scrollTop: 0 ,
+		}, scroll_top_duration
+	);
+});
+</script>
+
+</body>
+</html>
