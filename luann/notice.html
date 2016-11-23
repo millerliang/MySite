@@ -18,13 +18,13 @@
 		#noticeArea .notice {padding:4px 5px;text-align:left;cursor:pointer;background-color:#eef1f2;}
 		#noticeArea .notice .panel-body {position:relative;overflow:hidden;padding:4px 7px 7px 8px;border:1px solid #b4c3d0;background-color:#fff;-moz-box-shadow: 0px 2px 1px rgba(0,0,0,.08);-webkit-box-shadow: 0px 2px 1px rgba(0,0,0,.08);box-shadow: 0px 2px 1px rgba(0,0,0,.08);-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;}
 		#noticeArea .notice small {display:block;color:#666;}
-		#noticeArea .notice small + i {color: #7c41d1;}
+		#noticeArea .notice small + i {color: #2067AE;}
 		.fa-clock-o {color:#bbb;font-size:13px;}
 		#noticeArea .notice * {-webkit-transition: all .3s;-moz-transition: all .3s;transition: all .3s;}
 		#noticeArea .notice .panel-body a {display: inline-block;vertical-align: middle;padding: 0 1.2em;background: red;color: white;position: absolute;height: 100%;right:-50%;top: 0;}
 		#noticeArea .notice .panel-body a:before{content: '';display: inline-block;vertical-align: middle;width: 0;height: 100%;}
 		#noticeArea .panel-body:hover a {right: 0%;}
-		#noticeArea .notice .read, #noticeArea .notice .read i.fa-bullhorn {color: #bdc0c3;}
+		#noticeArea .notice .read, #noticeArea .notice .read i.fa-bell-o {color: #bdc0c3;}
 	</style>
   </head>
   <body>
@@ -32,6 +32,8 @@
 		<header class="slide_logo">
 			<a href="index.html"><img src="asset/images/slide_logo.png"></a>
 		</header>
+
+		<div class="slide_user"><img src="asset/croppie/demo/cat.jpg"><h3>Allen lee</h3><a href="login.html"><i class="fa fa-sign-out"></i></a></div>
 
 		<section class="menu-section">
 			<h3 class="menu-section-title"><i class="fa fa-home"></i> <a href="index.html">首頁 <small>Home</small></a></h3>
@@ -63,8 +65,12 @@
 		</section>
 
 		<section class="menu-section">
-			<h3 class="menu-section-title"><i class="fa fa-bullhorn"></i> <a href="news.html">消息 <small>News</small></a>
+			<h3 class="menu-section-title"><i class="fa fa-bell-o"></i> <a href="news.html">消息 <small>News</small></a>
 			<span class="notice">0</span></h3>
+		</section>
+
+		<section class="menu-section">
+			<h3 class="menu-section-title"><i class="fa fa-calendar"></i> <a href="activity-list.html">活動 <small>Activity</small></a></h3>
 		</section>
 
 		<section class="menu-section">
@@ -107,6 +113,10 @@
 			</ul>
 		</section>
 
+		<section class="menu-section">
+			<h3 class="menu-section-title"><i class="fa fa-android"></i> <a href="">APP下載 <small>Download</small></a></h3>
+		</section>
+
 	</nav>
 
 	<header class="header-hamburger fixed">
@@ -132,13 +142,14 @@
 
 	<main id="panel" class="panel">
 
+		<!-- <p>0 筆未讀</p> -->
 		<div id="noticeArea">
 
 			<div class="notice" onclick="showDetail(34,2,544)">
 				<div class="panel-body">
 					<a href=""><i class="fa fa-trash-o"></i> Delect</a>
 					<small class="text-muted"><i class="fa fa-clock-o"></i> 2016-10-03 11:06:40</small>
-					<i class="fa fa-bullhorn"></i> 您的項目[測試項目16051302] 項目計畫書已有更新檔發佈。
+					<i class="fa fa-bell-o"></i> 您的項目[測試項目16051302] 項目計畫書已有更新檔發佈。
 				</div>
 			</div>
 
@@ -146,7 +157,7 @@
 				<div class="panel-body">
 					<a href=""><i class="fa fa-trash-o"></i> Delect</a>
 					<small class="text-muted"><i class="fa fa-clock-o"></i> 2016-10-03 11:06:40</small>
-					<i class="fa fa-bullhorn"></i> 您的項目[測試項目16051302] 項目計畫書已有更新檔發佈。
+					<i class="fa fa-bell-o"></i> 您的項目[測試項目16051302] 項目計畫書已有更新檔發佈。
 				</div>
 			</div>
 
@@ -154,7 +165,7 @@
 				<div class="panel-body">
 					<a href=""><i class="fa fa-trash-o"></i> Delect</a>
 					<small class="text-muted"><i class="fa fa-clock-o"></i> 2016-10-03 11:06:40</small>
-					<i class="fa fa-bullhorn"></i> 您的項目[測試項目160513] 項目計畫書已有更新檔發佈。
+					<i class="fa fa-bell-o"></i> 您的項目[測試項目160513] 項目計畫書已有更新檔發佈。
 				</div>
 			</div>
 
@@ -162,7 +173,7 @@
 				<div class="panel-body read">
 					<a href=""><i class="fa fa-trash-o"></i> Delect</a>
 					<small class="text-muted"><i class="fa fa-clock-o"></i> 2016-10-03 10:53:38</small>
-					<i class="fa fa-bullhorn"></i> 你的項目[測試項目160513]管理者留言給你，請查看審查紀錄。
+					<i class="fa fa-bell-o"></i> 你的項目[測試項目160513]管理者留言給你，請查看審查紀錄。
 				</div>
 			</div>
 
@@ -170,7 +181,7 @@
 				<div class="panel-body read">
 					<a href=""><i class="fa fa-trash-o"></i> Delect</a>
 					<small class="text-muted"><i class="fa fa-clock-o"></i> 2016-10-03 10:53:27</small>
-					<i class="fa fa-bullhorn"></i> 你的項目[測試項目16051302]管理者留言給你，請查看審查紀錄。
+					<i class="fa fa-bell-o"></i> 你的項目[測試項目16051302]管理者留言給你，請查看審查紀錄。
 				</div>
 			</div>
 
@@ -178,7 +189,7 @@
 				<div class="panel-body read">
 					<a href=""><i class="fa fa-trash-o"></i> Delect</a>
 					<small class="text-muted"><i class="fa fa-clock-o"></i> 2016-09-30 08:29:04</small>
-					<i class="fa fa-bullhorn"></i> 您的項目[青創賽在線啟動儀式 [靠譜創業]0] 項目計畫書已有更新檔發佈。
+					<i class="fa fa-bell-o"></i> 您的項目[青創賽在線啟動儀式 [靠譜創業]0] 項目計畫書已有更新檔發佈。
 				</div>
 			</div>
 
@@ -186,28 +197,28 @@
 				<div class="panel-body">
 					<a href=""><i class="fa fa-trash-o"></i> Delect</a>
 					<small class="text-muted"><i class="fa fa-clock-o"></i> 2016-09-30 00:12:31</small>
-					<i class="fa fa-bullhorn"></i> 你的項目[青創賽在線啟動儀式 [靠譜創業]0]管理者留言給你，請查看審查紀錄。
+					<i class="fa fa-bell-o"></i> 你的項目[青創賽在線啟動儀式 [靠譜創業]0]管理者留言給你，請查看審查紀錄。
 				</div>
 			</div>
 
 			<div class="notice" onclick="showDetail(7,5,9)">
 				<div class="panel-body">
 					<a href=""><i class="fa fa-trash-o"></i> Delect</a><small class="text-muted"><i class="fa fa-clock-o"></i> 2016-09-27 13:59:23</small>
-					<i class="fa fa-bullhorn"></i> 你的路演[青創賽在線啟動儀式 [靠譜創業]]已發佈上線，舉辦日為 2016-09-27 14:30 ~ 15:00
+					<i class="fa fa-bell-o"></i> 你的路演[青創賽在線啟動儀式 [靠譜創業]]已發佈上線，舉辦日為 2016-09-27 14:30 ~ 15:00
 				</div>
 			</div>
 
 			<div class="notice" onclick="showDetail(2,2,554)">
 				<div class="panel-body">
 					<a href=""><i class="fa fa-trash-o"></i> Delect</a><small class="text-muted"><i class="fa fa-clock-o"></i> 2016-09-27 13:39:46</small>
-					<i class="fa fa-bullhorn"></i> 你的項目[青創賽在線啟動儀式 [靠譜創業]]已審核通過發佈上線
+					<i class="fa fa-bell-o"></i> 你的項目[青創賽在線啟動儀式 [靠譜創業]]已審核通過發佈上線
 				</div>
 			</div>
 
 			<div class="notice" onclick="showDetail(1,3,553)">
 				<div class="panel-body read">
 					<a href=""><i class="fa fa-trash-o"></i> Delect</a><small class="text-muted"><i class="fa fa-clock-o"></i> 2016-09-27 13:38:28</small>
-					<i class="fa fa-bullhorn"></i> 你的項目[青創賽在線啟動儀式 [靠譜創業]0]管理者留言給你，請查看審查紀錄。
+					<i class="fa fa-bell-o"></i> 你的項目[青創賽在線啟動儀式 [靠譜創業]0]管理者留言給你，請查看審查紀錄。
 				</div>
 			</div>
 
@@ -215,7 +226,7 @@
 				<div class="panel-body read">
 					<a href=""><i class="fa fa-trash-o"></i> Delect</a>
 					<small class="text-muted"><i class="fa fa-clock-o"></i> 2016-09-27 13:17:49</small>
-					<i class="fa fa-bullhorn"></i> 你的項目[青創賽在線啟動儀式 [靠譜創業]0]管理者留言給你，請查看審查紀錄。
+					<i class="fa fa-bell-o"></i> 你的項目[青創賽在線啟動儀式 [靠譜創業]0]管理者留言給你，請查看審查紀錄。
 				</div>
 			</div>
 
@@ -223,7 +234,7 @@
 				<div class="panel-body">
 					<a href=""><i class="fa fa-trash-o"></i> Delect</a>
 					<small class="text-muted"><i class="fa fa-clock-o"></i> 2016-09-26 18:26:28</small>
-					<i class="fa fa-bullhorn"></i> 你的路演[青創賽在線啟動儀式 [靠譜創業]]已發佈上線，舉辦日為 2016-09-26 18:25 ~ 18:25
+					<i class="fa fa-bell-o"></i> 你的路演[青創賽在線啟動儀式 [靠譜創業]]已發佈上線，舉辦日為 2016-09-26 18:25 ~ 18:25
 				</div>
 			</div>
 
@@ -231,7 +242,7 @@
 				<div class="panel-body read">
 					<a href=""><i class="fa fa-trash-o"></i> Delect</a>
 					<small class="text-muted"><i class="fa fa-clock-o"></i> 2016-09-26 18:25:09</small>
-					<i class="fa fa-bullhorn"></i> 你的項目[青創賽在線啟動儀式 [靠譜創業]0]已審核通過發佈上線
+					<i class="fa fa-bell-o"></i> 你的項目[青創賽在線啟動儀式 [靠譜創業]0]已審核通過發佈上線
 				</div>
 			</div>
 
@@ -239,7 +250,7 @@
 				<div class="panel-body read">
 					<a href=""><i class="fa fa-trash-o"></i> Delect</a>
 					<small class="text-muted"><i class="fa fa-clock-o"></i> 2016-09-22 15:43:06</small>
-					<i class="fa fa-bullhorn"></i> 你的路演[產業級植保無人機]已發佈上線，舉辦日為 2016-09-22 18:00 ~ 19:00
+					<i class="fa fa-bell-o"></i> 你的路演[產業級植保無人機]已發佈上線，舉辦日為 2016-09-22 18:00 ~ 19:00
 				</div>
 			</div>
 
@@ -247,7 +258,7 @@
 				<div class="panel-body">
 					<a href=""><i class="fa fa-trash-o"></i> Delect</a>
 					<small class="text-muted"><i class="fa fa-clock-o"></i> 2016-09-22 15:40:58</small>
-					<i class="fa fa-bullhorn"></i> 你的項目[產業級植保無人機]已審核通過發佈上線
+					<i class="fa fa-bell-o"></i> 你的項目[產業級植保無人機]已審核通過發佈上線
 				</div>
 			</div>
 
@@ -255,7 +266,7 @@
 				<div class="panel-body">
 					<a href=""><i class="fa fa-trash-o"></i> Delect</a>
 					<small class="text-muted"><i class="fa fa-clock-o"></i> 2016-09-22 15:39:57</small>
-					<i class="fa fa-bullhorn"></i> 您的項目[產業級植保無人機] 項目計畫書已有更新檔發佈。
+					<i class="fa fa-bell-o"></i> 您的項目[產業級植保無人機] 項目計畫書已有更新檔發佈。
 				</div>
 			</div>
 
@@ -263,7 +274,7 @@
 				<div class="panel-body">
 					<a href=""><i class="fa fa-trash-o"></i> Delect</a>
 					<small class="text-muted"><i class="fa fa-clock-o"></i> 2016-09-22 15:39:57</small>
-					<i class="fa fa-bullhorn"></i> 您的項目[產業級植保無人機] 項目計畫書已有更新檔發佈。
+					<i class="fa fa-bell-o"></i> 您的項目[產業級植保無人機] 項目計畫書已有更新檔發佈。
 				</div>
 			</div>
 
@@ -271,7 +282,7 @@
 				<div class="panel-body">
 					<a href=""><i class="fa fa-trash-o"></i> Delect</a>
 					<small class="text-muted"><i class="fa fa-clock-o"></i> 2016-08-30 11:49:00</small>
-					<i class="fa fa-bullhorn"></i> 你已撤回項目[搭建農產品B2B批發平台]的線下路演報名。
+					<i class="fa fa-bell-o"></i> 你已撤回項目[搭建農產品B2B批發平台]的線下路演報名。
 				</div>
 			</div>
 
@@ -279,7 +290,7 @@
 				<div class="panel-body">
 					<a href=""><i class="fa fa-trash-o"></i> Delect</a>
 					<small class="text-muted"><i class="fa fa-clock-o"></i> 2016-08-30 11:48:55</small>
-					<i class="fa fa-bullhorn"></i> 你已報名項目[搭建農產品B2B批發平台]的線下路演。
+					<i class="fa fa-bell-o"></i> 你已報名項目[搭建農產品B2B批發平台]的線下路演。
 				</div>
 			</div>
 
@@ -287,7 +298,7 @@
 				<div class="panel-body">
 					<a href=""><i class="fa fa-trash-o"></i> Delect</a>
 					<small class="text-muted"><i class="fa fa-clock-o"></i> 2016-08-30 11:48:49</small>
-					<i class="fa fa-bullhorn"></i> 你已撤回項目[搭建農產品B2B批發平台]的線下路演報名。
+					<i class="fa fa-bell-o"></i> 你已撤回項目[搭建農產品B2B批發平台]的線下路演報名。
 				</div>
 			</div>
 
@@ -295,7 +306,7 @@
 				<div class="panel-body">
 					<a href=""><i class="fa fa-trash-o"></i> Delect</a>
 					<small class="text-muted"><i class="fa fa-clock-o"></i> 2016-08-30 10:51:51</small>
-					<i class="fa fa-bullhorn"></i> 你已报名项目[搭建农产品B2B批发平台]的线下路演。
+					<i class="fa fa-bell-o"></i> 你已报名项目[搭建农产品B2B批发平台]的线下路演。
 				</div>
 			</div>
 
@@ -303,7 +314,7 @@
 				<div class="panel-body read">
 					<a href=""><i class="fa fa-trash-o"></i> Delect</a>
 					<small class="text-muted"><i class="fa fa-clock-o"></i> 2016-08-30 10:51:02</small>
-					<i class="fa fa-bullhorn"></i> 你已撤回项目[搭建农产品B2B批发平台]的线下路演报名。
+					<i class="fa fa-bell-o"></i> 你已撤回项目[搭建农产品B2B批发平台]的线下路演报名。
 				</div>
 			</div>
 
@@ -311,7 +322,7 @@
 				<div class="panel-body read">
 					<a href=""><i class="fa fa-trash-o"></i> Delect</a>
 					<small class="text-muted"><i class="fa fa-clock-o"></i> 2016-08-30 10:50:25</small>
-					<i class="fa fa-bullhorn"></i> 你已报名项目[搭建农产品B2B批发平台]的线下路演。
+					<i class="fa fa-bell-o"></i> 你已报名项目[搭建农产品B2B批发平台]的线下路演。
 				</div>
 			</div>
 
@@ -319,7 +330,7 @@
 				<div class="panel-body">
 					<a href=""><i class="fa fa-trash-o"></i> Delect</a>
 					<small class="text-muted"><i class="fa fa-clock-o"></i> 2016-08-11 16:30:01</small>
-					<i class="fa fa-bullhorn"></i> 你的投资[测试项目16051302]融资期已结束，本项目融资失败。
+					<i class="fa fa-bell-o"></i> 你的投资[测试项目16051302]融资期已结束，本项目融资失败。
 				</div>
 			</div>
 
@@ -327,7 +338,7 @@
 				<div class="panel-body read">
 					<a href=""><i class="fa fa-trash-o"></i> Delect</a>
 					<small class="text-muted"><i class="fa fa-clock-o"></i> 2016-08-02 10:03:44</small>
-					<i class="fa fa-bullhorn"></i> 你已报名项目[融聚天下定增]的线下路演。
+					<i class="fa fa-bell-o"></i> 你已报名项目[融聚天下定增]的线下路演。
 				</div>
 			</div>
 
@@ -335,7 +346,7 @@
 				<div class="panel-body read">
 					<a href=""><i class="fa fa-trash-o"></i> Delect</a>
 					<small class="text-muted"><i class="fa fa-clock-o"></i> 2016-07-15 08:05:01</small>
-					<i class="fa fa-bullhorn"></i> 你的跟投[测试项目16051302]冷静期已结束，跟投申请已生效。
+					<i class="fa fa-bell-o"></i> 你的跟投[测试项目16051302]冷静期已结束，跟投申请已生效。
 				</div>
 			</div>
 
@@ -343,7 +354,7 @@
 				<div class="panel-body">
 					<a href=""><i class="fa fa-trash-o"></i> Delect</a>
 					<small class="text-muted"><i class="fa fa-clock-o"></i> 2016-07-15 08:05:01</small>
-					<i class="fa fa-bullhorn"></i> 你的项目[测试项目16051302]新增了一位跟投人 ale
+					<i class="fa fa-bell-o"></i> 你的项目[测试项目16051302]新增了一位跟投人 ale
 				</div>
 			</div>
 

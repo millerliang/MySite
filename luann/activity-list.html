@@ -4,7 +4,7 @@
 <!--[if gt IE 9]><!--><html lang="en"><!--<![endif]-->
   <head>
     <meta charset="utf-8">
-    <title>Tabs Modal</title>
+    <title>Home Page</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="cleartype" content="on">
     <meta name="MobileOptimized" content="320">
@@ -13,7 +13,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
     <link rel="stylesheet" href="asset/css/main.css">
-    <link rel="stylesheet" href="asset/css/tabs_modal.css">
+	<link rel="stylesheet" href="asset/css/swiper.min.css">
+<style>
+/* STAR .modal box */
+.modal__inner {min-height:90%;}
+.modal__inner header {font-size: medium;border-left: 2px solid #e42959;padding-left:.5em;margin-bottom:.8em;}
+
+#popContent {line-height: 1.4;}
+#popContent h3 {font-size:medium;}
+/* END .modal box */
+</style>
   </head>
   <body>
 	<nav id="menu" class="menu">
@@ -81,7 +90,7 @@
 			<h3 class="menu-section-title"><i class="fa fa-usd"></i> <a href="">投資者 <small>Investment</small></a></h3>
 		</section>
 
-		<!-- <section class="menu-section">
+		<section class="menu-section">
 			<label for="docs" class="menu-section-title">
 				<i class="fa fa-file-text-o"></i> 文件 <small>Docs</small>
 				<i class="fa fa-angle-right"></i>
@@ -99,10 +108,6 @@
 				<li><a href="股权转让协议.html">股权转让协议</a></li>
 				<li><a href="版权申明.html">版权申明</a></li>
 			</ul>
-		</section> -->
-
-		<section class="menu-section">
-			<h3 class="menu-section-title"><i class="fa fa-file-text-o"></i> <a href="doc_swiper.html">文件 <small>Docs</small></a></h3>
 		</section>
 
 		<section class="menu-section">
@@ -113,29 +118,23 @@
 
 	<header class="header-hamburger fixed">
 		<a class="ninja-btn" title="menu"><span></span></a>
-		<h2>Tabs Modal</h2>
-		<div class="tabs-header">
-			<div class="border"></div>
-			<ul>
-				<li class="active"><a href="#tab-1" tab-id="1" ripple="ripple" ripple-color="#FFF">Tab 1</a></li>
-				<li><a href="#tab-2" tab-id="2" ripple="ripple" ripple-color="#FFF">Tab 2</a></li>
-				<li><a href="#tab-3" tab-id="3" ripple="ripple" ripple-color="#FFF">Tab 3</a></li>
-				<li><a href="#tab-4" tab-id="4" ripple="ripple" ripple-color="#FFF">Tab 4</a></li>
-				<li><a href="#tab-5" tab-id="5" ripple="ripple" ripple-color="#FFF">Tab 5</a></li>
-			</ul>
-		</div>
+		<h2>Activity Title</h2>
+
 		<input type="checkbox" id="op">
 		<div class="lower">
 			<label for="bell" style="margin-right:.5em;"><i class="fa fa-bell-o"></i></label>
-			<label for="op"><i class="fa fa-gear"></i></label>
+			<label for="op"><i class="fa fa-ellipsis-v"></i></label>
 		</div>
-		<div class="overlay overlay-hugeinc overlay_b">
+		<div class="overlay overlay-hugeinc">
 			<label for="op"><i class="fa fa-times-circle"></i></label>
-			<nav class="opt">
+			<nav>
 				<ul>
-					<li><button class="btn default"><i class="fa fa-edit"></i> text</button></li>
-					<li><button class="btn blue_bg"><i class="fa fa-refresh"></i> Refresh</button></li>
-					<li><button class="btn red_bg"><i class="fa fa-trash"></i> Clear All</button></li>
+					<li><input type="checkbox" id="a1"><label for="a1"><i class="fa fa-check"></i> Check 1</label></li>
+					<li><input type="checkbox" id="a2"><label for="a2"><i class="fa fa-check"></i> Check 2</label></li>
+					<li><input type="checkbox" id="a3"><label for="a3"><i class="fa fa-check"></i> Check 3</label></li>
+					<li><input type="checkbox" id="a4"><label for="a4"><i class="fa fa-check"></i> Check 4</label></li>
+					<li><input type="checkbox" id="a5"><label for="a5"><i class="fa fa-check"></i> Check 5</label></li>
+					<li><input type="checkbox" id="a6"><label for="a6"><i class="fa fa-check"></i> Check 6</label></li>
 				</ul>
 			</nav>
 		</div>
@@ -143,26 +142,145 @@
 
 	<main id="panel" class="panel">
 
-		<div class="tabs-o">
-			<div class="tabs-content">
-				<div tab-id="1" class="tab active">1. Donec ullamcorper nulla non metus auctor fringilla. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Curabitur blandit tempus porttitor. Ellentesque ornare sem lacinia quam venenatis vestibulum. Curabitur blandit tempus porttitor. Donec ullamcorper nulla non metus auctor fringilla. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Curabitur blandit tempus porttitor. Donec ullamcorper nulla non metus auctor fringilla. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Curabitur blandit tempus porttitor.</div>
-				<div tab-id="2" class="tab">2. Donec ullamcorper nulla non metus auctor fringilla. Aenean eu leo quam.</div>
-				<div tab-id="3" class="tab">3. Donec ullamcorper nulla non metus auctor fringilla. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Curabitur blandit tempus porttitor.</div>
-				<div tab-id="4" class="tab">4. Donec ullamcorper nulla non metus auctor fringilla. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Curabitur blandit tempus porttitor. Maecenas faucibus mollis interdum. Donec ullamcorper nulla non metus auctor fringilla. Aenean lacinia bibendum nulla sed consectetur. Aenean lacinia bibendum nulla sed consectetur.</div>
-				<div tab-id="5" class="tab">5. Donec ullamcorper nulla non metus auctor fringilla. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Curabitur blandit tempus porttitor.Cras mattis consectetur purus sit amet fermentum. Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam quis risus eget urna mollis ornare vel eu leo. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Maecenas sed diam eget risus varius blandit sit amet non magna. Maecenas sed diam eget risus varius blandit sit amet non magna. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Vestibulum id ligula porta felis euismod semper. Aenean lacinia bibendum nulla sed consectetur. Donec id elit non mi porta gravida at eget metus. Donec id elit non mi porta gravida at eget metus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas faucibus mollis interdum. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Aenean lacinia bibendum nulla sed consectetur. Maecenas faucibus mollis interdum. Donec ullamcorper nulla non metus auctor fringilla. Aenean lacinia bibendum nulla sed consectetur. Aenean lacinia bibendum nulla sed consectetur.</div>
-			</div>
+		<div class="title">
+			<span class="tit-hd">Activity<small>activity list</small></span>
 		</div>
 
-    </main>
+		<section class="activity clearfix">
+			<label for="modal-0">
+				<div class="activity_content">
+					<h2>標 題</h2>
+					<time>活動日期 2016/05/27</time>
+					<p>報名期限</p>
+				</div>
+			</label>
+		</section>
 
+		<section class="activity clearfix">
+			<a href="Activity.html">
+				<div class="activity_content">
+					<h2>標 題</h2>
+					<time>活動日期 2016/05/27</time>
+					<p>報名期限</p>
+				</div>
+			</a>
+		</section>
+
+		<section class="activity clearfix">
+			<label for="modal-0">
+				<div class="activity_content">
+					<h2>標 題</h2>
+					<time>活動日期 2016/05/27</time>
+					<p>報名期限</p>
+				</div>
+			</label>
+		</section>
+
+		<section class="activity clearfix">
+			<label for="modal-0">
+				<div class="activity_content">
+					<h2>標 題</h2>
+					<time>活動日期 2016/05/27</time>
+					<p>報名期限</p>
+				</div>
+			</label>
+		</section>
+
+		<section class="activity clearfix">
+			<label for="modal-0">
+				<div class="activity_content">
+					<h2>標 題</h2>
+					<time>活動日期 2016/05/27</time>
+					<p>報名期限</p>
+				</div>
+			</label>
+		</section>
+
+		<section class="activity clearfix">
+			<label for="modal-0">
+				<div class="activity_content">
+					<h2>標 題</h2>
+					<time>活動日期 2016/05/27</time>
+					<p>報名期限</p>
+				</div>
+			</label>
+		</section>
+
+		<section class="activity clearfix">
+			<label for="modal-0">
+				<div class="activity_content">
+					<h2>標 題</h2>
+					<time>活動日期 2016/05/27</time>
+					<p>報名期限</p>
+				</div>
+			</label>
+		</section>
+
+		<section class="activity clearfix">
+			<label for="modal-0">
+				<div class="activity_content">
+					<h2>標 題</h2>
+					<time>活動日期 2016/05/27</time>
+					<p>報名期限</p>
+				</div>
+			</label>
+		</section>
+
+		<section class="activity clearfix">
+			<label for="modal-0">
+				<div class="activity_content">
+					<h2>標 題</h2>
+					<time>活動日期 2016/05/27</time>
+					<p>報名期限</p>
+				</div>
+			</label>
+		</section>
+
+    </main>
 	<footer class="panel-footer">
 		<a target="_blank" href="http://www.miitbeian.gov.cn/">蘇ICP備15055858號 常州左右逢源股權投資有限公司版權所有</a>
 	</footer>
 	<a href="#0" class="cd-top"><div class="jSlider"><span></span></div></a>
+	
+	<input class="modal-state" id="modal-0" type="checkbox" />
+	<div class="modal">
+	  <label class="modal__bg" for="modal-0"></label>
+	  <div class="modal__inner">
+		<label class="modal__close" for="modal-0"></label>
+		<header>Modal Title</header>
 
+		<div id="popContent">
+			<p>Text Text Text Text Text Text Text Text Text Text Text Text Text Text.</p>
+			<p>Text Text Text Text Text Text Text Text Text Text Text Text Text Text.</p>
+			<p>Text Text Text Text Text Text Text Text Text Text Text Text Text Text.</p>
+			<p>Text Text Text Text Text Text Text Text Text Text Text Text Text Text.</p>
+			<p>Text Text Text Text Text Text Text Text Text Text Text Text Text Text.</p>
+		</div><!-- #popContent End -->
+
+		<!-- <footer style="position: static;margin:0;">
+			<div style="padding:0;">
+				<button type="button" class="btn blue_bg">Send</button>
+				<button type="button" class="btn default"><label for="modal-0">Cancel</label></button>
+			</div>
+		</footer> -->
+	  </div>
+	</div>
+
+	<script src="asset/js/index_slider.js"></script>
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+	<!-- Swiper JS -->
     <script src="asset/js/slideout.min.js"></script>
-    <script src="asset/js/main.js"></script>
-    <script src="asset/js/tabs_modal.js"></script>
+	<script src="asset/js/main.js"></script>
+	<!-- Initialize Swiper -->
+	<script>
+	$(document).ready(function() {
+
+		var swiper = new Swiper('.swiper-container', {
+			pagination: '.swiper-pagination',
+			paginationClickable: true
+		});
+
+	});
+	</script>
   </body>
 </html>
