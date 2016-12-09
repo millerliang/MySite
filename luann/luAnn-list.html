@@ -5,36 +5,14 @@
 <head>
 <meta charset="utf-8">
 <title>LuAnn List</title>
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta http-equiv="cleartype" content="on">
-<meta name="MobileOptimized" content="320">
-<meta name="HandheldFriendly" content="True">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
-<link rel="stylesheet" href="asset/css/main.css">
 <style>
 .header-hamburger {box-shadow: 0 1px 5px rgba(0,0,0,0.35);}
-.now_stus {background-color:rgba(255,0,0,.75);color:#fff;position:absolute;font-size:xx-small;top:0.3em;left:0;padding:.1em .8em .1em .5em;margin-top:.4em;}
-.now_stus i {font-size:13px;}
 
 .row {margin-left: -15px;margin-right: -15px;}
-.row.fix_bottom {margin:0;position: absolute;width: 100%;bottom: 0;}
 .row:before, .row:after {content: " ";display: table;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;clear: both;}
 
-/* footer btns */
-.back footer {padding:6px 0;position:fixed;bottom:0;width:100%;}
-.back footer div {padding:0 .5em;}
-.back footer .luann_btn {width:100%;margin:2px auto;border:0;position: relative;padding: 4px 10px;border-radius: 3px;font-size: 16px;color: #333;text-decoration: none;background-color: #e8e8e8;border-bottom: 5px solid #ddd;transition: all 0.1s;-webkit-transition: all 0.1s;}
-.back footer .luann_btn:hover,.back footer .luann_btn:focus {text-decoration: none;}
-.back footer .luann_btn:active {transform: translate(0px,3px);-webkit-transform: translate(0px,3px);border-bottom: 1px solid;}
-
-.back footer .blue_btn {color:#fff;background-color: #3498DB;border-bottom: 5px solid #2980B9;text-shadow: 0px -2px #2980B9;}
-.back footer .green_btn {color:#fff;background-color: #99c050;border-bottom: 5px solid #89AB4B;text-shadow: 0px -2px #659555;}
-.back footer .red_btn {color:#fff;background-color: #D04F39;border-bottom: 5px solid #A73A3A;text-shadow: 0px -2px #6F1E1E;}
-
 /* front btns */
-.front .btnbar {display:flex;padding:.7rem 0;}
+.front .btnbar {display:flex;padding:.7rem 0;display:none;}
 .front .btnbar .luann_btn {width:100%;margin:2px auto;flex:1;margin:0 4px;border:0;position: relative;padding: 4px 10px;border-radius: 3px;font-size: 16px;color: #333;text-decoration: none;background-color: #e8e8e8;border-bottom: 5px solid #ddd;transition: all 0.1s;-webkit-transition: all 0.1s;}
 .front .btnbar .luann_btn:hover,.back footer .luann_btn:focus {text-decoration: none;}
 .front .btnbar .luann_btn:active {transform: translate(0px,3px);-webkit-transform: translate(0px,3px);border-bottom: 1px solid;}
@@ -43,28 +21,7 @@
 .front .btnbar .green_btn {color:#fff;background-color: #99c050;border-bottom: 5px solid #89AB4B;text-shadow: 0px -2px #659555;}
 .front .btnbar .red_btn {color:#fff;background-color: #D04F39;border-bottom: 5px solid #A73A3A;text-shadow: 0px -2px #6F1E1E;}
 
-/* card-list style */
-.card-list {text-align__:left;min-height:430px;margin:.4em 0 1em;width:100%;}
-.card-list img {max-height:260px;max-width:100%;}
-.card-list h5 {height:3rem;overflow:hidden;font-size: 16px;color:#ffbf00;padding: 0 8px;border-bottom: 1px solid #333;}
-.card-list .back h5 {height:auto;margin:8px;border-left:4px solid #ff4000;padding-left:.3em;color:#fff;}
-.card-list .info {text-align:left;padding:4px 10px;max-height: 260px;overflow: auto;font-size: small;}
-.card-list .row .col-sm-6 {background-color:#000;float: left;text-align:center;width: 50%;position: relative;min-height: 1px;padding-left: 15px;padding-right: 15px;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
-
-.card-list .row p {margin:0;padding:4px 0 0;color:#C599FB;}
-.card-list .row .col-sm-6 b {font-size:24px;color:#ffff00;display: block;padding-bottom: .4em;}
-
-.card-list .front,.card-list .back {width:100%;min-height:100%;background-color:#222;color:#fff;backface-visibility: hidden;position: absolute;top: 0;left: 0;box-shadow:0 3px 3px rgba(0,0,0,.25);overflow:hidden;}
-.card-list .back {background-color:#19032e;z-index: -1;}
-
-/* winsize */
-@media (min-width: 768px){
-	.card-list {text-align:center;min-height:430px;}
-	.card-list .info {text-align:left;}
-}
-
 /* Card New Style */
-.luann-list {width:auto;padding:.4em;}
 .card-new {margin:.4em 0 .8em;color:#fff;position: relative;width: 100%;float: none;overflow: hidden;text-align:left;-moz-box-shadow: 0px 2px 6px rgba(0,0,0,.6);-webkit-box-shadow: 0px 2px 6px rgba(0,0,0,.6);box-shadow: 0px 2px 6px rgba(0,0,0,.6);-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;}
 .card-new * {-webkit-transition: all .4s;-moz-transition: all .4s;transition: all .4s;}
 .card-new .front {background:#222;}
@@ -96,91 +53,24 @@
 .card-new:hover___ .back {bottom:0%;}
 .card-new.active .back {bottom:0%;}
 
+.card-new .front .info {color:#fff;padding-bottom:.5rem;}
+.card-new .front .info i {margin:0 .2rem 0 .5rem;color: #869aa2;}
 .card-new .back .info {padding:0 .8em;font-size__:small;overflow-x:hidden;flex-basis:85%;}
 .card-new .back footer {position:static;flex-basis:2%;}
 .card-new .back h5 {font-size: 16px;border-bottom: 1px solid rgba(255,255,255,.35);padding:.4em 0;margin:8px .5em;border-left: 3px solid #ff4000;padding-left:.4em;}
 
 ul.flex_box {margin-top___:1em;padding:.4em 0;background-color:#000;list-style: none;display: -webkit-box;display: -webkit-flex;display: -ms-flexbox;display: flex;-webkit-box-orient: horizontal;-webkit-box-direction: normal;-webkit-flex-direction: row;-ms-flex-direction: row;flex-direction: row;-webkit-flex-wrap: nowrap;-ms-flex-wrap: nowrap;flex-wrap: nowrap;}
 ul.flex_box li {text-align: center;-webkit-box-flex: 1;box-flex: 1;-webkit-flex: 1;-ms-flex: 1;flex: 1;white-space: nowrap;}
+ul.flex_box li a {display: inline-block;width:90%;border: 1px solid rgba(255, 255, 255, .2);border-bottom: 3px solid rgba(255, 255, 255, .25);padding: .1rem 0 .3rem;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;
+}
+ul.flex_box li a:hover {background-color:#222;}
+ul.flex_box li a .yellow {color:#ffc926;}
 ul.flex_box li p {color: #aedced;}
 ul.flex_box li b {font-size: 18px;color: #fff;}
 </style>
 </head>
   <body>
-	<nav id="menu" class="menu">
-		<header class="slide_logo">
-			<a href="index.html"><img src="asset/images/slide_logo.png"></a>
-		</header>
-
-		<div class="slide_user"><img src="asset/croppie/demo/cat.jpg"><h3>Allen lee</h3><a href="login.html"><i class="fa fa-sign-out"></i></a></div>
-
-		<section class="menu-section">
-			<h3 class="menu-section-title"><i class="fa fa-home"></i> <a href="index.html">首頁 <small>Home</small></a></h3>
-		</section>
-
-		<section class="menu-section">
-			<label for="items" class="menu-section-title">
-				<i class="fa fa-th"></i> 項目 <small>items</small>
-				<i class="fa fa-angle-right"></i>
-			</label>
-			<input class="sh-state" id="items" type="checkbox" />
-			<ul class="menu-section-list sh-modal">
-			  <li><a href="">在線項目</a></li>
-			  <li><a href="form.html">發起項目</a></li>
-			  <li><a href="form.html">發起路演</a></li>
-			</ul>
-		</section>
-
-		<section class="menu-section">
-			<label for="luAnn" class="menu-section-title">
-				<i class="fa fa-calendar-check-o"></i> 路演 <small>LuAnn</small>
-				<i class="fa fa-angle-right"></i>
-			</label>
-			<input class="sh-state" id="luAnn" type="checkbox" />
-			<ul class="menu-section-list sh-modal">
-			  <li><a href="">路演大廳</a></li>
-			  <li><a href="">今日路演</a></li>
-			</ul>
-		</section>
-
-		<section class="menu-section">
-			<h3 class="menu-section-title"><i class="fa fa-bullhorn"></i> <a href="news.html">消息 <small>News</small></a>
-			<span class="notice">0</span></h3>
-		</section>
-
-		<section class="menu-section">
-			<h3 class="menu-section-title"><i class="fa fa-calendar"></i> <a href="activity-list.html">活動 <small>Activity</small></a></h3>
-		</section>
-
-		<section class="menu-section">
-			<label for="member" class="menu-section-title">
-				<i class="fa fa-user"></i> 會員 <small>Member</small>
-				<i class="fa fa-angle-right"></i>
-			</label>
-			<input class="sh-state" id="member" type="checkbox" />
-			<ul class="menu-section-list sh-modal">
-				<li><a href="">我的投資</a></li>
-				<li><a href="">我的融資</a></li>
-				<li><a href="">我的路演</a></li>
-				<li><a href="">我的收藏</a></li>
-				<li><a href="notice.html">我的通知 <span class="notice red_bg">2</span></a></li>
-				<li><a href="user_profile.html">個人設置</a></li>
-			</ul>
-		</section>
-
-		<section class="menu-section">
-			<h3 class="menu-section-title"><i class="fa fa-usd"></i> <a href="">投資者 <small>Investment</small></a></h3>
-		</section>
-
-		<section class="menu-section">
-			<h3 class="menu-section-title"><i class="fa fa-file-text-o"></i> <a href="doc_swiper.html">文件 <small>Docs</small></a></h3>
-		</section>
-
-		<section class="menu-section">
-			<h3 class="menu-section-title"><i class="fa fa-android"></i> <a href="">APP下載 <small>Download</small></a></h3>
-		</section>
-
-	</nav>
+	<nav id="menu" class="menu"></nav>
 
 	<header class="header-hamburger fixed">
 		<a class="ninja-btn" title="menu"><span></span></a>
@@ -195,10 +85,11 @@ ul.flex_box li b {font-size: 18px;color: #fff;}
 			<label for="op"><i class="fa fa-times-circle"></i></label>
 			<nav>
 				<ul>
-					<li><input type="checkbox" id="a1"><label for="a1"><i class="fa fa-check"></i> 預熱中</label></li>
-					<li><input type="checkbox" id="a2"><label for="a2"><i class="fa fa-check"></i> 融資中</label></li>
-					<li><input type="checkbox" id="a3"><label for="a3"><i class="fa fa-check"></i> 融資成功</label></li>
-					<li><input type="checkbox" id="a4"><label for="a4"><i class="fa fa-check"></i> 融資失敗</label></li>
+					<li><input type="checkbox" id="a1"><label for="a1"><i class="fa fa-check"></i> 大廳</label></li>
+					<li><input type="checkbox" id="a2"><label for="a2"><i class="fa fa-check"></i> 今日</label></li>
+					<li><input type="checkbox" id="a3"><label for="a3"><i class="fa fa-check"></i> 重播</label></li>
+					<li><input type="checkbox" id="a4"><label for="a4"><i class="fa fa-check"></i> 報名</label></li>
+					<li><input type="checkbox" id="a5"><label for="a5"><i class="fa fa-check"></i> 我的</label></li>
 				</ul>
 			</nav>
 		</div>
@@ -210,159 +101,183 @@ ul.flex_box li b {font-size: 18px;color: #fff;}
 
 			<section class="card-new"> 
 				<div class="front">
-					<time class="now_stus"><i class="fa fa-eye"></i> 1,23K</time>
-					<img src="http://heart2true.com/rc/newItemcoverImage/1474954749221_How_to_start_a_business_crop.jpg">
-					<h5>青创赛在线启动仪式 [靠谱创业]</h5>
+					<!-- <time class="now_stus"><i class="fa fa-eye"></i> 1,23K</time> -->
+					<div class="badges-static"><span class="badges badges-red">報名中</span></div>
+					<img src="http://placehold.it/720x480">
+					<h5>xxxxxxxx</h5>
 					<div class="info">
-						<p>【时间】2016/10/14  00:00-23:55</p>
+						<p>【时间】2016/10/14  00:00-23:55 0人瀏覽</p>
 						<p>【发会方】左右逢源</p>
 					</div>
 					<div class="btnbar">
-						<button class="luann_btn blue_btn" onclick="showReply(8)">Text</button>
-						<button class="luann_btn green_btn" onclick="showReply(9)">Text</button>
+						<button class="luann_btn blue_btn">Text</button>
+						<button class="luann_btn green_btn">Text</button>
 					</div>
 					<ul class="flex_box">
 						<li>
-							<p class="dark">预约收视</p><b class="dark">1</b>
+							<a href="#"><p>预约收视</p><b class="yellow">1</b></a>
 						</li>
 						<li>
-							<p class="dark">线下报名</p>
-							<b class="dark">无</b>
+							<a href="#"><p>线下报名</p>
+							<b>无</b></a>
 						</li>
 					</ul>
-				</div>
-				<div class="back">
-					<label class="modal__close" for="modal-0"></label>
-					<h5>路演议程</h5>
-					<div class="info">
-						<p>全球青年创业大赛在线启动仪式 <br>14:30~15:00 [靠谱创业]<br><br>14:30经济学分析<br>14:40商业预测<br>14:48黑森林<br>14:50小心三个方向<br>14:54庙算-道天地法将<br>14:57 SWOT分析</p>
-						<p>全球青年创业大赛在线启动仪式 <br>14:30~15:00 [靠谱创业]<br><br>14:30经济学分析<br>14:40商业预测<br>14:48黑森林<br>14:50小心三个方向<br>14:54庙算-道天地法将<br>14:57 SWOT分析</p>
-						<p>全球青年创业大赛在线启动仪式 <br>14:30~15:00 [靠谱创业]<br><br>14:30经济学分析<br>14:40商业预测<br>14:48黑森林<br>14:50小心三个方向<br>14:54庙算-道天地法将<br>14:57 SWOT分析</p>
-						<p>全球青年创业大赛在线启动仪式 <br>14:30~15:00 [靠谱创业]<br><br>14:30经济学分析<br>14:40商业预测<br>14:48黑森林<br>14:50小心三个方向<br>14:54庙算-道天地法将<br>14:57 SWOT分析</p>
-					</div>
-					<footer>
-						<div>
-							<button class="luann_btn blue_btn" onclick="showReply(8)">Blue btn</button>
-							<button class="luann_btn green_btn" onclick="showReply(9)">更多内容</button>
-							<button class="luann_btn default_btn close_btn">Close</button>
-						</div>
-					</footer>
 				</div>
 			</section>
 
 			<section class="card-new"> 
 				<div class="front">
-					<time class="now_stus"><i class="fa fa-thumbs-up"></i> 666</time>
-					<img src="http://heart2true.com/rc/newItemcoverImage/1476857714004_images.jpg">
-					<h5>青创赛在线启动仪式 [靠谱创业]</h5>
+					<div class="badges-static"><span class="badges badges-red">瀏覽 256</span></div>
+					<img src="http://placehold.it/1366x768">
+					<h5>xxxxxxxx</h5>
 					<div class="info">
-						<p>【时间】2016/10/14  00:00-23:55</p>
-						<p>【发会方】左右逢源</p>
+						<p><i class="fa fa-calendar"></i> yyyy/mm/dd 00:00-00:00</p>
+						<p><i class="fa fa-id-card"></i> xxxx</p>
 					</div>
 					<div class="btnbar">
-						<button class="luann_btn blue_btn" onclick="showReply(8)">Text</button>
-						<button class="luann_btn red_btn" onclick="showReply(9)">Text</button>
-						<button class="luann_btn green_btn" onclick="showReply(9)">Text</button>
+						<button class="luann_btn blue_btn">Text</button>
+						<button class="luann_btn red_btn">Text</button>
+						<button class="luann_btn green_btn">Text</button>
 					</div>
 					<ul class="flex_box">
 						<li>
-							<p class="dark">预约收视</p><b class="dark">2</b>
+							<a href="#"><p>预约收视</p><b>0</b></a>
 						</li>
 						<li>
-							<p class="dark">线下报名</p>
-							<b class="dark">无</b>
+							<a href="#"><p>线下报名</p>
+							<b>无</b></a>
 						</li>
 					</ul>
 				</div>
-				<div class="back">
-					<label class="modal__close" for="modal-0"></label>
-					<h5>路演议程</h5>
+			</section>
+
+			<section class="card-new"> 
+				<div class="front">
+					<div class="badges-static"><span class="badges badges-green">直播中</span></div>
+					<img src="http://placehold.it/640x480">
+					<h5>xxxxxxxx</h5>
 					<div class="info">
-						<p>全球青年创业大赛在线启动仪式 <br>14:30~15:00 [靠谱创业]<br><br>14:30经济学分析<br>14:40商业预测<br>14:48黑森林<br>14:50小心三个方向<br>14:54庙算-道天地法将<br>14:57 SWOT分析</p>
-						<p>全球青年创业大赛在线启动仪式 <br>14:30~15:00 [靠谱创业]<br><br>14:30经济学分析<br>14:40商业预测<br>14:48黑森林<br>14:50小心三个方向<br>14:54庙算-道天地法将<br>14:57 SWOT分析</p>
+						<p>【时间】2016/10/14 00:00-23:55 1人瀏覽</p>
+						<p>【发会方】左右逢源</p>
 					</div>
-					<footer>
-						<div>
-							<button class="luann_btn red_btn" onclick="showReply(7)">Red btn</button>
-							<button class="luann_btn blue_btn" onclick="showReply(8)">Blue btn</button>
-							<button class="luann_btn green_btn" onclick="showReply(9)">更多内容</button>
-						</div>
-					</footer>
+					<div class="btnbar">
+						<button class="luann_btn blue_btn">Text</button>
+						<button class="luann_btn red_btn">Text</button>
+						<button class="luann_btn green_btn">Text</button>
+					</div>
+					<ul class="flex_box">
+						<li>
+							<a href="#"><p>预约收视</p><b>0</b></a>
+						</li>
+						<li>
+							<a href="#"><p>线下报名</p>
+							<b>无</b></a>
+						</li>
+					</ul>
 				</div>
 			</section>
 
-			<!-- <section class="card-list"> 
+			<section class="card-new"> 
 				<div class="front">
-					<time class="now_stus"><i class="fa fa-eye"></i> 1,23K</time>
-					<img src="http://heart2true.com/rc/newItemcoverImage/1474954749221_How_to_start_a_business_crop.jpg">
-					<h5 id="id_title9">青创赛在线启动仪式 [靠谱创业]</h5>
+					<div class="badges-static"><span class="badges badges-red">重播中</span></div>
+					<img src="http://placehold.it/640x360">
+					<h5>xxxxxxxx</h5>
 					<div class="info">
-						<p>【时间】2016/10/14  00:00-23:55</p>
+						<p>【时间】2016/10/14 00:00-23:55 0人瀏覽</p>
 						<p>【发会方】左右逢源</p>
 					</div>
-					<div class="row fix_bottom">
-						<div class="col-sm-6">
-							<p class="dark">预约收视</p><b class="dark">1</b>
-						</div>
-						<div class="col-sm-6">
-							<p class="dark">线下报名</p>
-							<b class="dark">无</b>
-						</div>
+					<div class="btnbar">
+						<button class="luann_btn blue_btn">Text</button>
+						<button class="luann_btn red_btn">Text</button>
+						<button class="luann_btn green_btn">Text</button>
 					</div>
-				</div>
-				<div class="back">
-					<h5>路演议程</h5>
-					<div class="info">
-						<p>全球青年创业大赛在线启动仪式 <br>14:30~15:00 [靠谱创业]<br><br>14:30经济学分析<br>14:40商业预测<br>14:48黑森林<br>14:50小心三个方向<br>14:54庙算-道天地法将<br>14:57 SWOT分析</p>
-						<p>全球青年创业大赛在线启动仪式 <br>14:30~15:00 [靠谱创业]<br><br>14:30经济学分析<br>14:40商业预测<br>14:48黑森林<br>14:50小心三个方向<br>14:54庙算-道天地法将<br>14:57 SWOT分析</p>
-						<p>全球青年创业大赛在线启动仪式 <br>14:30~15:00 [靠谱创业]<br><br>14:30经济学分析<br>14:40商业预测<br>14:48黑森林<br>14:50小心三个方向<br>14:54庙算-道天地法将<br>14:57 SWOT分析</p>
-						<p>全球青年创业大赛在线启动仪式 <br>14:30~15:00 [靠谱创业]<br><br>14:30经济学分析<br>14:40商业预测<br>14:48黑森林<br>14:50小心三个方向<br>14:54庙算-道天地法将<br>14:57 SWOT分析</p>
-					</div>
-					<footer>
-						<div>
-							<button class="luann_btn blue_btn" onclick="showReply(8)">Blue btn</button>
-							<button class="luann_btn green_btn" onclick="showReply(9)">更多内容</button>
-						</div>
-					</footer>
+					<ul class="flex_box">
+						<li>
+							<a href="#"><p>预约收视</p><b>0</b></a>
+						</li>
+						<li>
+							<a href="#"><p>线下报名</p>
+							<b>无</b></a>
+						</li>
+					</ul>
 				</div>
 			</section>
 
-			<section class="card-list"> 
+			<section class="card-new"> 
 				<div class="front">
-					<time class="now_stus"><i class="fa fa-thumbs-up"></i> 666</time>
-					<img src="http://heart2true.com/rc/newItemcoverImage/1476857714004_images.jpg">
-					<h5 id="id_title9">青创赛在线启动仪式 [靠谱创业]</h5>
+					<div class="badges-static"><span class="badges badges-blue">直播預備</span></div>
+					<img src="http://placehold.it/1600x900">
+					<h5>xxxxxxxx</h5>
 					<div class="info">
-						<p>【时间】2016/10/14  00:00-23:55</p>
-						<p>【发会方】左右逢源</p>
+						<p><i class="fa fa-calendar"></i> yyyy/mm/dd 00:00-00:00 <i class="fa fa-eye"></i> 1,23K</p>
+						<p><i class="fa fa-id-card"></i> xxxx</p>
 					</div>
-					<div class="row fix_bottom">
-						<div class="col-sm-6">
-							<p class="dark">预约收视</p><b class="dark">1</b>
-						</div>
-						<div class="col-sm-6">
-							<p class="dark">线下报名</p>
-							<b class="dark">无</b>
-						</div>
+					<div class="btnbar">
+						<button class="luann_btn blue_btn">Text</button>
+						<button class="luann_btn">Text</button>
+						<button class="luann_btn green_btn">Text</button>
 					</div>
+					<ul class="flex_box">
+						<li>
+							<a href="#"><p>预约收视</p><b class="yellow">2</b></a>
+						</li>
+						<li>
+							<a href="#"><p>线下报名</p>
+							<b>无</b></a>
+						</li>
+					</ul>
 				</div>
-				<div class="back" style="backface-visibility: hidden;">
-					<h5>路演议程</h5>
+			</section>
+
+			<section class="card-new"> 
+				<div class="front">
+					<div class="badges-static"><span class="badges badges-grey">路演結束</span></div>
+					<img src="http://placehold.it/1920x1080">
+					<h5>xxxxxxxx</h5>
 					<div class="info">
-						<p>全球青年创业大赛在线启动仪式 <br>14:30~15:00 [靠谱创业]<br><br>14:30经济学分析<br>14:40商业预测<br>14:48黑森林<br>14:50小心三个方向<br>14:54庙算-道天地法将<br>14:57 SWOT分析</p>
-						<p>全球青年创业大赛在线启动仪式 <br>14:30~15:00 [靠谱创业]<br><br>14:30经济学分析<br>14:40商业预测<br>14:48黑森林<br>14:50小心三个方向<br>14:54庙算-道天地法将<br>14:57 SWOT分析</p>
-						<p>全球青年创业大赛在线启动仪式 <br>14:30~15:00 [靠谱创业]<br><br>14:30经济学分析<br>14:40商业预测<br>14:48黑森林<br>14:50小心三个方向<br>14:54庙算-道天地法将<br>14:57 SWOT分析</p>
-						<p>全球青年创业大赛在线启动仪式 <br>14:30~15:00 [靠谱创业]<br><br>14:30经济学分析<br>14:40商业预测<br>14:48黑森林<br>14:50小心三个方向<br>14:54庙算-道天地法将<br>14:57 SWOT分析</p>
+						<p><i class="fa fa-calendar"></i> yyyy/mm/dd 00:00-00:00 <i class="fa fa-eye"></i> 0</p>
+						<p><i class="fa fa-id-card"></i> xxxx</p>
 					</div>
-					<footer>
-						<div>
-							<button class="luann_btn red_btn" onclick="showReply(7)">Red btn</button>
-							<button class="luann_btn blue_btn" onclick="showReply(8)">Blue btn</button>
-							<button class="luann_btn green_btn" onclick="showReply(9)">更多内容</button>
-						</div>
-					</footer>
+					<div class="btnbar">
+						<button class="luann_btn blue_btn">Text</button>
+						<button class="luann_btn green_btn">Text</button>
+					</div>
+					<ul class="flex_box">
+						<li>
+							<a href="#"><p>预约收视</p><b>0</b></a>
+						</li>
+						<li>
+							<a href="#"><p>线下报名</p>
+							<b>无</b></a>
+						</li>
+					</ul>
 				</div>
-			</section> -->
+			</section>
+
+			<section class="card-new"> 
+				<div class="front">
+					<div class="badges-static"><span class="badges badges-orange">申請中</span></div>
+					<img src="http://placehold.it/1280x720">
+					<h5>xxxxxxxx</h5>
+					<div class="info">
+						<p><i class="fa fa-calendar"></i> yyyy/mm/dd 00:00-00:00 <i class="fa fa-eye"></i> 0</p>
+						<p><i class="fa fa-id-card"></i> xxxx</p>
+					</div>
+					<div class="btnbar">
+						<button class="luann_btn">Text</button>
+						<button class="luann_btn">Text</button>
+					</div>
+					<ul class="flex_box">
+						<li>
+							<a href="#"><p>预约收视</p><b>0</b></a>
+						</li>
+						<li>
+							<a href="#"><p>线下报名</p>
+							<b>无</b></a>
+						</li>
+					</ul>
+				</div>
+			</section>
 
 		</article>
 
@@ -373,21 +288,8 @@ ul.flex_box li b {font-size: 18px;color: #fff;}
 	<a href="#0" class="cd-top"><div class="jSlider"><span></span></div></a>
 
 	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-	<!-- Flip JS -->
-	<!-- <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script> -->
     <script src="asset/js/slideout.min.js"></script>
 	<script src="asset/js/main.js"></script>
-	<script>
-		// $(".card-list").flip();
-		//$('.card-new img,.card-new h5,.card-new .info,.card-new .flex_box').click(function() {
-		//	//$(this).toggleClass('active');
-		//	$(this).parents('.card-new').addClass('active');
-		//});
-
-		//$('.close_btn,.modal__close').click(function() {
-		//	$(this).parents('.card-new').removeClass('active');
-		//});
-	</script>
 
   </body>
 </html>

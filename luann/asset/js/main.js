@@ -1,3 +1,81 @@
+// Head Star//
+head_items = "<meta http-equiv='X-UA-Compatible' content='IE=edge'>";
+head_items += "<meta http-equiv='cleartype' content='on'>";
+head_items += "<meta name='MobileOptimized' content='320'>";
+head_items += "<meta name='HandheldFriendly' content='True'>";
+head_items += "<meta name='apple-mobile-web-app-capable' content='yes'>";
+head_items += "<meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=no'>";
+head_items += "<link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' integrity='sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN' crossorigin='anonymous'>";
+head_items += "<link rel='stylesheet' href='asset/css/main.css'>";
+$('head').append(head_items);
+// Head End//
+
+// Menu Star//
+menu_items = "<header class='slide_logo'><a href='index.html'><img src='asset/images/slide_logo.png'></a></header>";
+menu_items += "<div class='slide_user'><a href='user_profile.html'><img src='asset/croppie/demo/cat.jpg'></a><h3>Allen lee</h3><a href='login.html'><i class='fa fa-sign-out'></i></a></div>";
+menu_items += "<section class='menu-section'>";
+menu_items += "<label class='menu-section-title'><i class='fa fa-home'></i> <a href='index.html'>首頁 <small>Home</small></a></label>";
+menu_items += "</section>";
+menu_items += "<section class='menu-section'>";
+menu_items += "<label for='items' class='menu-section-title'>";
+menu_items += "<i class='fa fa-th'></i> 項目 <small>items</small>";
+menu_items += "<i class='fa fa-angle-right'></i>";
+menu_items += "</label>";
+menu_items += "<input class='sh-state' id='items' type='checkbox' />";
+menu_items += "<ul class='menu-section-list sh-modal'>";
+menu_items += "<li><a href=''>在線項目</a></li>";
+menu_items += "<li><a href='form.html'>發起項目</a></li>";
+menu_items += "<li><a href='form.html'>發起路演</a></li>";
+menu_items += "</ul>";
+menu_items += "</section>";
+menu_items += "<section class='menu-section'>";
+menu_items += "<label for='luAnn' class='menu-section-title'>";
+menu_items += "<i class='fa fa-calendar-check-o'></i> 路演 <small>LuAnn</small>";
+menu_items += "<i class='fa fa-angle-right'></i>";
+menu_items += "</label>";
+menu_items += "<input class='sh-state' id='luAnn' type='checkbox' />";
+menu_items += "<ul class='menu-section-list sh-modal'>";
+menu_items += "<li><a href=''>大廳</a></li>";
+menu_items += "<li><a href=''>今日</a></li>";
+menu_items += "<li><a href=''>重播</a></li>";
+menu_items += "<li><a href=''>報名</a></li>";
+menu_items += "<li><a href=''>我的</a></li>";
+menu_items += "</ul>";
+menu_items += "</section>";
+menu_items += "<section class='menu-section'>";
+menu_items += "<h3 class='menu-section-title'><i class='fa fa-bullhorn'></i> <a href='news.html'>消息 <small>News</small></a>";
+menu_items += "<span class='notice'>0</span></h3>";
+menu_items += "</section>";
+menu_items += "<section class='menu-section'>";
+menu_items += "<h3 class='menu-section-title'><i class='fa fa-calendar'></i> <a href='activity-list.html'>活動 <small>Activity</small></a></h3>";
+menu_items += "</section>";
+menu_items += "<section class='menu-section'>";
+menu_items += "<label for='member' class='menu-section-title'>";
+menu_items += "<i class='fa fa-user'></i> 會員 <small>Member</small>";
+menu_items += "<i class='fa fa-angle-right'></i>";
+menu_items += "</label>";
+menu_items += "<input class='sh-state' id='member' type='checkbox' />";
+menu_items += "<ul class='menu-section-list sh-modal'>";
+menu_items += "<li><a href=''>我的投資</a></li>";
+menu_items += "<li><a href=''>我的融資</a></li>";
+menu_items += "<li><a href=''>我的路演</a></li>";
+menu_items += "<li><a href=''>我的收藏</a></li>";
+menu_items += "<li><a href='notice.html'>我的通知 <span class='notice red_bg'>2</span></a></li>";
+menu_items += "<li><a href='user_profile.html'>個人設置</a></li>";
+menu_items += "</ul>";
+menu_items += "</section>";
+menu_items += "<section class='menu-section'>";
+menu_items += "<h3 class='menu-section-title'><i class='fa fa-usd'></i> <a href=''>投資者 <small>Investment</small></a></h3>";
+menu_items += "</section>";
+menu_items += "<section class='menu-section'>";
+menu_items += "<h3 class='menu-section-title'><i class='fa fa-file-text-o'></i> <a href='doc_swiper.html'>文件 <small>Docs</small></a></h3>";
+menu_items += "</section>";
+menu_items += "<section class='menu-section'>";
+menu_items += "<h3 class='menu-section-title'><i class='fa fa-android'></i> <a href=''>APP下載 <small>Download</small></a></h3>";
+menu_items += "</section>";
+$('#menu').append(menu_items);
+// Menu End//
+
 var slideout = new Slideout({
 	'panel': document.getElementById('panel'),
 	'menu': document.getElementById('menu'),

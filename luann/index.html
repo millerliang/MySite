@@ -5,23 +5,12 @@
 <head>
 <meta charset="utf-8">
 <title>Home Page</title>
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta http-equiv="cleartype" content="on">
-<meta name="MobileOptimized" content="320">
-<meta name="HandheldFriendly" content="True">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
-<link rel="stylesheet" href="asset/css/main.css">
 <link rel="stylesheet" href="asset/css/swiper.min.css">
 <style>
 .now_stus {background-color:rgba(255,0,0,.8);color:#fff;position:absolute;font-size:xx-small;top:0.7em;left:0;padding:0 4px;}
 .now_stus i {font-size:13px;}
 
-.swiper-container {
-	width: 100%;
-	height: 100%;
-}
+.swiper-container {width: 100%;height: 100%;}
 .swiper-slide {
 	text-align: center;
 	font-size: 18px;
@@ -60,49 +49,6 @@
 .swiper-pagination {text-align: right;width: 98%!important;bottom:5px!important;}
 .swiper-pagination-bullet {background-color:#fff;opacity: .5;margin: 0 3px!important;}
 .swiper-pagination-bullet-active {background-color:#007aff;opacity:1;}
-
-/* Badges Style */
-.badges-static {position:absolute;top:.65rem;}
-.badges {
-	font-size:14px;
-	color:#fff;
-    position: relative;
-    z-index: 1;
-    margin-right: 5px;
-    padding: .32em .7em .32em;
-    font-weight: 400;
-    white-space: nowrap;
-    text-align: center;
-    display: inline-block;
-    vertical-align: baseline;
-    border-radius: 0;
-	line-height: 1.4;
-	height: 19px;
-    border-width: 14px 7px;
-	text-shadow: none;
-}
-.badges:after {
-    display: inline-block;
-    content: "";
-    position: absolute;
-    top: 0;
-    z-index: -1;
-    border: 1px solid transparent;
-	right: -7px;
-    border-width: 14px 7px;
-	-webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-.badges i.fa {font-size:14px;color: #bceaff;}
-.badges-blue {background-color:#1068CC;}
-.badges-blue:after {border-color: #1068CC transparent #1068CC #1068CC;}
-.badges-red {background-color:#fb2d2d;}
-.badges-red:after {border-color: #fb2d2d transparent #fb2d2d #fb2d2d;}
-.badges-green {background-color:#00b386;}
-.badges-green:after {border-color: #00b386 transparent #00b386 #00b386;}
-.badges-grey {background-color:#777;}
-.badges-grey:after {border-color: #777 transparent #777 #777;}
 
 /* Hidden */
 .status {display:none;}
@@ -143,100 +89,7 @@
 </style>
 </head>
   <body>
-	<nav id="menu" class="menu">
-		<header class="slide_logo">
-			<a href="index.html"><img src="asset/images/slide_logo.png"></a>
-		</header>
-
-		<div class="slide_user"><img src="asset/croppie/demo/cat.jpg"><h3>Allen lee</h3><a href="login.html"><i class="fa fa-sign-out"></i></a></div>
-
-		<section class="menu-section">
-			<h3 class="menu-section-title"><i class="fa fa-home"></i> <a href="index.html">首頁 <small>Home</small></a></h3>
-		</section>
-
-		<section class="menu-section">
-			<label for="items" class="menu-section-title">
-				<i class="fa fa-th"></i> 項目 <small>items</small>
-				<i class="fa fa-angle-right"></i>
-			</label>
-			<input class="sh-state" id="items" type="checkbox" />
-			<ul class="menu-section-list sh-modal">
-			  <li><a href="">在線項目</a></li>
-			  <li><a href="form.html">發起項目</a></li>
-			  <li><a href="form.html">發起路演</a></li>
-			</ul>
-		</section>
-
-		<section class="menu-section">
-			<label for="luAnn" class="menu-section-title">
-				<i class="fa fa-calendar-check-o"></i> 路演 <small>LuAnn</small>
-				<i class="fa fa-angle-right"></i>
-			</label>
-			<input class="sh-state" id="luAnn" type="checkbox" />
-			<ul class="menu-section-list sh-modal">
-			  <li><a href="luAnn-list.html">路演大廳</a></li>
-			  <li><a href="luAnn-list.html">今日路演</a></li>
-			</ul>
-		</section>
-
-		<section class="menu-section">
-			<h3 class="menu-section-title"><i class="fa fa-bullhorn"></i> <a href="news.html">消息 <small>News</small></a>
-			<span class="notice">0</span></h3>
-		</section>
-
-		<section class="menu-section">
-			<h3 class="menu-section-title"><i class="fa fa-calendar"></i> <a href="activity-list.html">活動 <small>Activity</small></a></h3>
-		</section>
-
-		<section class="menu-section">
-			<label for="member" class="menu-section-title">
-				<i class="fa fa-user"></i> 會員 <small>Member</small>
-				<i class="fa fa-angle-right"></i>
-			</label>
-			<input class="sh-state" id="member" type="checkbox" />
-			<ul class="menu-section-list sh-modal">
-				<li><a href="">我的投資</a></li>
-				<li><a href="">我的融資</a></li>
-				<li><a href="">我的路演</a></li>
-				<li><a href="">我的收藏</a></li>
-				<li><a href="notice.html">我的通知 <span class="notice red_bg">2</span></a></li>
-				<li><a href="user_profile.html">個人設置</a></li>
-			</ul>
-		</section>
-
-		<section class="menu-section">
-			<h3 class="menu-section-title"><i class="fa fa-usd"></i> <a href="">投資者 <small>Investment</small></a></h3>
-		</section>
-
-		<section class="menu-section">
-			<h3 class="menu-section-title"><i class="fa fa-file-text-o"></i> <a href="doc_swiper.html">文件 <small>Docs</small></a></h3>
-		</section>
-
-		<!-- <section class="menu-section">
-			<label for="docs" class="menu-section-title">
-				<i class="fa fa-file-text-o"></i> 文件 <small>Docs</small>
-				<i class="fa fa-angle-right"></i>
-			</label>
-			<input class="sh-state" id="docs" type="checkbox" />
-			<ul class="menu-section-list sh-modal">
-				<li><a href="使用条款.html">使用条款</a></li>
-				<li><a href="融资人规则.html">融资人规则</a></li>
-				<li><a href="融资信息披露规则.html">融资信息披露规则</a></li>
-				<li><a href="融资居间合同.html">融资居间合同</a></li>
-				<li><a href="投资人规则.html">投资人规则</a></li>
-				<li><a href="風險提示.html">風險提示</a></li>
-				<li><a href="有限合伙协议.html">有限合伙协议</a></li>
-				<li><a href="投资协议.html">投资协议</a></li>
-				<li><a href="股权转让协议.html">股权转让协议</a></li>
-				<li><a href="版权申明.html">版权申明</a></li>
-			</ul>
-		</section> -->
-
-		<section class="menu-section">
-			<h3 class="menu-section-title"><i class="fa fa-android"></i> <a href="">APP下載 <small>Download</small></a></h3>
-		</section>
-
-	</nav>
+	<nav id="menu" class="menu"></nav>
 
 	<header class="header-hamburger fixed">
 		<a class="ninja-btn" title="menu"><span></span></a>
@@ -280,10 +133,6 @@
 					</div>
 					<div class="swiper-slide"><img src="http://placehold.it/720x480"></div>
 					<div class="swiper-slide"><img src="http://placehold.it/720x480"></div>
-					<!-- <div class="swiper-slide">Slide 5</div>
-					<div class="swiper-slide">Slide 6</div>
-					<div class="swiper-slide">Slide 7</div>
-					<div class="swiper-slide">Slide 8</div>-->
 				</div>
 				<!-- Add Pagination -->
 				<div class="swiper-pagination"></div>

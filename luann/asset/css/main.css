@@ -160,6 +160,51 @@ a {color: #2196F3;text-decoration: none;}
 }		
 button.default {background-color:#eee;color:#222;}
 
+/* Badges Style */
+.badges-static {position:absolute;top:.65rem;}
+.badges {
+	font-size:14px;
+	color:#fff;
+    position: relative;
+    z-index: 1;
+    margin-right: 5px;
+    padding: .32em .7em .32em;
+    font-weight: 400;
+    white-space: nowrap;
+    text-align: center;
+    display: inline-block;
+    vertical-align: baseline;
+    border-radius: 0;
+	line-height: 1.4;
+	height: 19px;
+    border-width: 14px 7px;
+	text-shadow: none;
+}
+.badges:after {
+    display: inline-block;
+    content: "";
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    border: 1px solid transparent;
+	right: -7px;
+    border-width: 14px 7px;
+	-webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.badges i.fa {font-size:14px;color: #bceaff;}
+.badges-blue {background-color:#1068CC;}
+.badges-blue:after {border-color: #1068CC transparent #1068CC #1068CC;}
+.badges-red {background-color:#fb2d2d;}
+.badges-red:after {border-color: #fb2d2d transparent #fb2d2d #fb2d2d;}
+.badges-green {background-color:#00b386;}
+.badges-green:after {border-color: #00b386 transparent #00b386 #00b386;}
+.badges-grey {background-color:#777;}
+.badges-grey:after {border-color: #777 transparent #777 #777;}
+.badges-orange {background-color:#ff963e;}
+.badges-orange:after {border-color: #ff963e transparent #ff963e #ff963e;}
+
 /**
  * Header
  */

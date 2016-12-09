@@ -1,0 +1,374 @@
+﻿<!doctype html>
+<!--[if IE 8]><html class="ie8 lt-ie10"><![endif]-->
+<!--[if IE 9]><html class="ie9 lt-ie10"><![endif]-->
+<!--[if gt IE 9]><!--><html lang="en"><!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <title>LuAnn LiveShow</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="cleartype" content="on">
+    <meta name="MobileOptimized" content="320">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="asset/css/main.css">
+	<link rel="stylesheet" href="asset/css/swiper.min.css">
+    <link rel="stylesheet" href="asset/css/tabs_modal.css">
+    <link rel="stylesheet" href="asset/css/items_view.css">
+<style>
+* {box-sizing: border-box;}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {margin: 0;padding: 0;border: 0;font-size: 100%;font: inherit;vertical-align: baseline;}
+html,body {height:100%;}
+body {font: 100%/1.4em 'Helvetica Neue', Helvetica, Arial, sans-serif,'Microsoft Yahei';line-height: 100%;background-image:none;background-color: #f7f7f7;}
+
+/* 主内容区块 */
+article {padding-bottom:5.8rem;}
+article section {width:100%;float:none;}
+article header {padding:.5rem;}
+article header .play_btn {cursor: pointer;float: right;margin-right: .5rem;border: 1px solid #666;padding: .7rem 1rem;border-radius: 50%;width: 3rem;height: 3rem;}
+article header .play_btn i {font-size: 1.6rem;}
+article header p {margin-bottom:.3rem;}
+
+/* 页签样式 */
+.tab {display: none;}
+.tab.active {display: block;}
+.tab {padding:.8rem .5rem;}
+.tab p {margin-bottom:.5rem;}
+
+.tab ul.ppt_imgs {list-style: none;}
+.tab ul.ppt_imgs li {}
+.tab ul.ppt_imgs img {max-width:100%;}
+
+/* 主办资讯 */
+.office_info {background-color:rgba(220,225,245,0.25);padding:.8rem .3rem;margin-bottom:.8rem;border-top: 1px dotted #ddd;border-bottom: 1px dotted #ddd;-webkit-border-radius__:5px;-moz-border-radius__:5px;border-radius__:5px;}
+
+.flex_box {display: -webkit-box;display: -webkit-flex;display: -ms-flexbox;display: flex;-webkit-box-orient: horizontal;-webkit-box-direction: normal;-webkit-flex-direction: row;-ms-flex-direction: row;flex-direction: row;-webkit-flex-wrap: nowrap;-ms-flex-wrap: nowrap;flex-wrap: nowrap;}
+.flex_box li {padding:.2rem;display: block;-webkit-box-flex: 1;box-flex: 1;-webkit-flex: 1;-ms-flex: 1;flex: 1;white-space: nowrap;}
+
+/* 平均得分 */
+.star_color i {color:#999;}
+.star_color i.fa-star,.star_color i.fa-star-half-o {color:#ffa700;}
+
+/* 出席 */
+.attend {margin: 1em -5px;list-style: none;background-color:rgba(255,255,255,.8);-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;}
+.attend li {color:#333;border-bottom: 1px solid #fff;clear: both;padding:.8em;}
+.attend li:last-child {border:none;}
+.attend li::after {clear: both;}
+.attend li::after,.attend li::before {content: "";display: table; }
+.attend li img {
+width: 42px;
+height: 42px;
+float: left;
+margin-right: 1em;
+border: 2px solid #fff;
+-moz-box-shadow: 0px 2px 8px rgba(0,0,0,.5);
+-webkit-box-shadow: 0px 2px 8px rgba(0,0,0,.5);
+box-shadow: 0px 2px 8px rgba(0,0,0,.5);
+-webkit-border-radius: 50%;
+-moz-border-radius: 50%;
+border-radius: 50%;
+}
+.attend li .pull-left > p {margin-bottom:.3em;color: #1c5b92;}
+.attend li .pull-left > p + p {font-size:small;color:#666;margin:0;}
+
+/* 置底部按钮 */
+.panel-footer {background-color: #000;background-color__: #356B9A;box-shadow: 0 -2px 6px rgba(0,0,0,.25);-webkit-box-shadow: 0 -2px 6px rgba(0,0,0,.25);-moz-box-shadow: 0 -2px 6px rgba(0,0,0,.25);}
+.panel-footer img {height:42px;}
+
+.panel-footer ul.any_btn {background-color:#f3f3f3;list-style: none;}
+.panel-footer ul.any_btn li {}
+.panel-footer ul.any_btn li .btn {display:block;background-color:#2067ae;text-align:center;color:#fff;}
+
+/* TOP 标头 */
+.header-hamburger {position: relative;height:auto;box-shadow: 0 2px 6px rgba(0,0,0,.35);-webkit-box-shadow: 0 2px 6px rgba(0,0,0,.35);-moz-box-shadow: 0 2px 6px rgba(0,0,0,.35);}
+.header-hamburger h2 {padding: .5rem;text-align: left;line-height: normal;color:#2e7bc7;}
+
+/* 弹出视窗 */
+.modal__inner {min-height: auto;height:auto;position: relative;top:.3rem!important;box-shadow: 0 2px 12px rgba(0,0,0,.35);-webkit-box-shadow: 0 2px 12px rgba(0,0,0,.35);-moz-box-shadow: 0 2px 12px rgba(0,0,0,.35);}
+.modal__inner textarea {width:100%;border:none;border-bottom:1px solid #ccc;outline: none;}
+.modal__inner .msg_btn {text-align:right;}
+.modal__inner .msg_btn button {width:auto;padding:.5rem 1.5rem;}
+.modal__inner .msg_btn button.blue {background-color:#2067ae;color:#fff;}
+
+/* Star 评价 icons */
+.ctrl_icons *{-webkit-transition: all .3s;-moz-transition: all .3s;transition: all .3s;}
+.ctrl_icons {
+white-space:nowrap;
+background-color__:rgba(0,0,0,.25);;
+margin:3em auto 0;
+left: .6em;
+right: .6em;
+padding:1em 0;
+border__:1px solid rgba(0,0,0,.2);
+position:absolute;
+text-align: center;
+-webkit-border-radius:5px;
+-moz-border-radius:5px;
+border-radius:5px;
+}
+.ctrl_icons span {
+position:relative;
+width: 48px;
+height: 48px;
+margin:0 .2rem;
+cursor: pointer;
+display: inline-block;
+background-color__: rgba(0,0,0,.15);
+-webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%;
+box-shadow: inset 0 -2px 1px rgba(0,0,0,.15);
+-webkit-box-shadow: inset 0 -2px 1px rgba(0,0,0,.15);
+-moz-box-shadow: inset 0 -2px 1px rgba(0,0,0,.15);
+}
+.ctrl_icons i {font-size:2em;width:auto;line-height: 48px;}
+.ctrl_icons i.fa-play {margin-left: .25em;}
+.ctrl_icons span:hover {background-color: rgba(0,140,70,0.5);color:#fff;}
+.ctrl_icons span.active {
+background-color: rgba(0,108,217,0.5);color:#ffd24c;
+top:1px;
+box-shadow: inset 0 3px 5px rgba(0,0,0,.35);
+-webkit-box-shadow: inset 0 3px 5px rgba(0,0,0,.35);
+-moz-box-shadow: inset 0 3px 5px rgba(0,0,0,.35);
+}
+.ctrl_icons:active i {font-size:1.8em;color: #fff;}
+.ppt_show {background-color:#f9f9f9;text-align:center;position:relative;}
+.ppt_show img {max-width:100%;}
+.ppt_show .text {position:absolute;bottom:3rem;width:100%;}
+.ppt_show .text a {color:#2067ae;background-color:rgba(255,255,255,.75);padding:.5rem 1rem;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;}
+</style>
+</head>
+<body>
+<article>
+
+	<header class="header-hamburger">
+		<h2>路演名称 xxxxx xxxxxx xxxx xxxxxxx xxxx</h2>
+	</header><!-- 标题抬头 -->
+
+	<section class="ppt_show">
+		<div class="text"><a href="">注册登入，可看演示文档</a></div>
+		<img src="http://placehold.it/640x480">
+	</section>
+	<header>
+		<span class="play_btn"><i class="fa fa-play"></i></span>
+		<p>路演日期：2016/10/25</p>
+		<p>路演时间：18:00 - 19:00</p>
+		<p>简报页次：15</p>
+	</header>
+
+	<section class="tabs-header">
+		<div class="border"></div>
+		<ul id="show_mm">
+			<li class="active"><a href="#tab-1" tab-id="1" ripple="ripple" ripple-color="#FFF">说 明</a></li>
+			<li><a href="#tab-2" tab-id="2" ripple="ripple" ripple-color="#FFF">聊 天</a></li>
+			<li><a href="#tab-3" tab-id="3" ripple="ripple" ripple-color="#FFF">报 名</a></li>
+		</ul>
+	</section>
+
+	<section>
+		<div tab-id="1" class="tab active">
+			<p>[主办方]：xxxxx</p>
+			<p>[主讲人]：xxxxx</p>
+			<p>[路演简介]：</p>
+			<p>xxxxxxxxxxxxxxxxxxxxxxxx</p>
+			<ul class="ppt_imgs flex_box">
+				<li><img src="http://placehold.it/640x480"></li>
+				<li><img src="http://placehold.it/640x480"></li>
+			</ul>
+			<div class="office_info">
+				<p>会议地点：JYT 办公室</p>
+				<p>会议地址：台北市大安区xxxxxxxxxx</p>
+				<p>报名截止：2016/11/30</p>
+				<p>报名限制：60人为限(剩5个名额)</p>
+			</div>
+			<p>浏览人数：X人</p>
+			<p class="star_color">平均得分：
+			<i class="fa fa-star"></i>
+			<i class="fa fa-star-half-o"></i>
+			<i class="fa fa-star-o"></i>
+			<i class="fa fa-star-o"></i>
+			<i class="fa fa-star-o"></i>
+			1.5 颗星
+			</p>
+		</div>
+		<div tab-id="2" class="tab">
+			<div class="commentArea clearfix" id="commentArea">
+				<div class="row">
+					<img class="command_img" src="asset/images/user-icon.png">
+					<div class="pull-left">
+						<div class="user-info">
+							<span class="user-name">Jason hung</span>
+							<span class="post-time">05/19 <i class="fa fa-clock-o"></i>16:28</span>
+						</div>
+						<div class="bubbledLeft">
+							讲的好 バカやろう
+						</div>
+						<p class="re_Command">
+							<a href="" class="btn_">回应</a>
+						</p>
+					</div>
+				</div>
+
+				<div class="row my_Command">
+					<div class="pull-left">
+						<div class="user-info">
+							<span class="post-time">05/19 <i class="fa fa-clock-o"></i>16:28</span>
+						</div>
+						<div class="bubbledRight">
+							たわけもの
+							日清カップヌードル
+							日清カップヌードル
+							日清カップヌードル
+							日清カップヌードル
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="pull-left">
+						<div class="user-info">
+							<span class="user-name">Eric</span>
+							<span class="post-time">05/19 <i class="fa fa-clock-o"></i>16:28</span>
+						</div>
+						<div class="bubbledLeft">
+							稅金逃れや女性蔑視発言の暴露は遅すぎた
+						</div>
+						<p class="re_Command">
+							<a href="" class="btn_">回应</a>
+						</p>
+					</div>
+				</div>
+
+				<div class="row">
+					<img class="command_img" src="http://heart2true.com/meeting/images/ic_menu_user_active.png">
+					<div class="pull-left">
+						<div class="user-info">
+							<span class="user-name">Alex</span>
+							<span class="post-time">05/19 <i class="fa fa-clock-o"></i>16:28</span>
+						</div>
+						<div class="bubbledLeft">
+							赤身肉、塊肉、熟成肉、そして希少部位。昨今、人気の焼き肉店を訪れると実にさまざまなメニューが用意されています。それゆえに今では、ご丁寧にもメニューごとに焼き方を秒単位で指導してくれる焼き肉店も多々存在するぐらいです。
+						</div>
+						<p class="re_Command">
+							<a href="" class="btn_">回应</a>
+						</p>
+					</div>
+				</div>
+
+				<div class="row">
+					<img class="command_img" src="asset/images/liz-icon.jpg">
+					<div class="pull-left">
+						<div class="user-info">
+							<span class="user-name">Liz</span>
+							<span class="post-time">05/18 <i class="fa fa-clock-o"></i>9:38</span>
+						</div>
+						<div class="bubbledLeft">
+							Liz丽致深层修护面膜给你全方位保养与俢护，商店街开幕庆~众多好康，千万不要错过啰~
+						</div>
+						<p class="re_Command">
+							<a href="" class="btn_">回应</a>
+						</p>
+					</div>
+				</div>
+
+				<div class="row my_Command">
+					<div class="pull-left">
+						<div class="user-info">
+							<span class="post-time">05/18 <i class="fa fa-clock-o"></i>21:19</span>
+						</div>
+						<div class="bubbledRight">
+							蝦米小...朋友？
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<div tab-id="3" class="tab">
+			<h5>
+				<i class="fa fa-user blue"></i>
+				<span id="id_listReserveNum">1</span> 人出席
+			</h5>
+			<ul class="attend">
+				<li>
+					<img src="http://heart2true.com/meeting/images/ic_menu_user_active.png">
+					<div class="pull-left">
+						<p>3345678</p>
+						<p>XD科技有限公司</p>
+						<p>歪理</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</section>
+	<ul class="flex_box clearfix" style="text-align:center;margin:2rem 0;">
+		<li><a class="btn" href="#0">预约收视</a></li>
+		<li><a class="btn" href="#0">线下报名</a></li>
+		<li><a class="btn" href="#0">登录注册</a></li>
+	</ul>
+
+	<footer class="panel-footer">
+		<ul class="any_btn flex_box">
+			<li><label class="btn" for="modal-1"><i class="fa fa-star-o"></i> 给 评</label></li>
+			<li><label class="btn" for="modal-2"><i class="fa fa-comment-o"></i> 聊 天</label></li>
+		</ul>
+		<img src="asset/images/slide_logo.png">
+	</footer><!-- 底部按钮 -->
+
+</article>
+
+<!-- <footer class="panel-footer">
+	<a target="_blank" href="http://www.miitbeian.gov.cn/">蘇ICP備15055858號 常州左右逢源股權投資有限公司版權所有</a>
+</footer>
+<a href="#0" class="cd-top"><div class="jSlider"><span></span></div></a> -->
+
+<!-- /.modal-1 STAR -->
+<input class="modal-state" id="modal-1" type="checkbox" />
+<div class="modal">
+  <label class="modal__bg" for="modal-1"></label>
+  <div class="modal__inner" style="height__: 30%;">
+	<label class="modal__close" for="modal-1"></label>
+	<h4>给 评<small class="grey"> Evaluation</small></h4>
+	<form class="form-style">
+
+		<div class="ctrl_icons" style="position:static;margin:1em 0;background-color__:rgba(0,0,0,.06);">
+			<p style="margin-bottom:1rem;text-align:left;">请给予 1~5 颗星评鉴</p>
+			<span class="active"><i class="fa fa-star"></i></span>
+			<span class="active"><i class="fa fa-star"></i></span>
+			<span><i class="fa fa-star"></i></span>
+			<span><i class="fa fa-star"></i></span>
+			<span><i class="fa fa-star"></i></span>
+		</div>
+
+	</form>
+  </div>
+</div><!-- /.modal-1 END -->
+
+<!-- /.modal-2 STAR -->
+<input class="modal-state" id="modal-2" type="checkbox" />
+<div class="modal">
+  <label class="modal__bg" for="modal-2"></label>
+  <div class="modal__inner"  style="height__:40%;">
+	<label class="modal__close" for="modal-2"></label>
+	<h4>聊 天<small class="grey"> chat</small></h4>
+		<div class="command_input___">
+			<form class="form-style">
+				<textarea id="content" rows="10" placeholder="我想说.........."></textarea>
+				<div class="msg_btn">
+					<button type="button" class="btn"><label for="modal-2">取消</label></button>
+					<button type="button" class="btn blue" onclick="addComment()">发送</button>
+				</div>
+			</form>
+		</div>
+	<footer>
+	<div>
+	</div>
+	</footer>
+  </div>
+</div><!-- /.modal-2 END -->
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src="asset/js/tabs_modal.js"></script>
+<!-- <script src="asset/js/main.js"></script> -->
+
+</body>
+</html>
