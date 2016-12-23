@@ -1,0 +1,245 @@
+﻿<!doctype html>
+<!--[if IE 8]><html class="ie8 lt-ie10"><![endif]-->
+<!--[if IE 9]><html class="ie9 lt-ie10"><![endif]-->
+<!--[if gt IE 9]><!--><html lang="en"><!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <title>LuAnn Cheat</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="cleartype" content="on">
+    <meta name="MobileOptimized" content="320">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="asset/css/main.css">
+	<!-- <link rel="stylesheet" href="asset/css/swiper.min.css">
+    <link rel="stylesheet" href="asset/css/tabs_modal.css">
+    <link rel="stylesheet" href="asset/css/items_view.css"> -->
+<style>
+* {box-sizing: border-box;}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {margin: 0;padding: 0;border: 0;font-size: 100%;font: inherit;vertical-align: baseline;}
+html,body {height:100%;}
+body {font: 100%/1.4em 'Helvetica Neue', Helvetica, Arial, sans-serif,'Microsoft Yahei';line-height: 100%;background-image:none;background-color: #f7f7f7;}
+
+/* 主内容区块 */
+article {padding-bottom:5.8rem;}
+article section {width:100%;float:none;}
+article header {padding:.5rem;}
+article header .play_btn {cursor: pointer;float: right;margin-right: .5rem;border: 1px solid #666;padding: .7rem 1rem;border-radius: 50%;width: 3rem;height: 3rem;}
+article header .play_btn i {font-size: 1.6rem;}
+article header .play_btn i.fa-pause {margin-left: -.2rem;}
+article header p {margin-bottom:.3rem;}
+
+/* 主办资讯 */
+.flex_box {display: -webkit-box;display: -webkit-flex;display: -ms-flexbox;display: flex;-webkit-box-orient: horizontal;-webkit-box-direction: normal;-webkit-flex-direction: row;-ms-flex-direction: row;flex-direction: row;-webkit-flex-wrap: nowrap;-ms-flex-wrap: nowrap;flex-wrap: nowrap;}
+.flex_box li {padding:.2rem;display: block;-webkit-box-flex: 1;box-flex: 1;-webkit-flex: 1;-ms-flex: 1;flex: 1;white-space: nowrap;}
+
+/* 置底部按钮 */
+.panel-footer {background-color: #000;background-color__: #356B9A;box-shadow: 0 -2px 6px rgba(0,0,0,.25);-webkit-box-shadow: 0 -2px 6px rgba(0,0,0,.25);-moz-box-shadow: 0 -2px 6px rgba(0,0,0,.25);}
+.panel-footer img {height:42px;}
+
+.panel-footer ul.any_btn {background-color:#f3f3f3;list-style: none;}
+.panel-footer ul.any_btn li {}
+.panel-footer ul.any_btn li .btn {display:block;background-color:#2067ae;text-align:center;color:#fff;}
+
+/* TOP 标头 */
+.ninja-btn {left:.8rem;}
+.header-hamburger {position: relative;height:auto;box-shadow: 0 2px 6px rgba(0,0,0,.35);-webkit-box-shadow: 0 2px 6px rgba(0,0,0,.35);-moz-box-shadow: 0 2px 6px rgba(0,0,0,.35);}
+.header-hamburger h2 {padding:.2rem 0 .28rem 2.5rem;text-align: left;line-height: normal;color:#2e7bc7;}
+
+/* 弹出视窗 */
+.modal__inner {min-height: auto;height:auto;position: relative;top:.3rem!important;box-shadow: 0 2px 12px rgba(0,0,0,.35);-webkit-box-shadow: 0 2px 12px rgba(0,0,0,.35);-moz-box-shadow: 0 2px 12px rgba(0,0,0,.35);}
+.modal__inner textarea {width:100%;border:none;border-bottom:1px solid #ccc;outline: none;}
+.modal__inner .msg_btn {text-align:right;}
+.modal__inner .msg_btn button {width:auto;padding:.5rem 1.5rem;}
+.modal__inner .msg_btn button.blue {background-color:#2067ae;color:#fff;}
+
+/* Media */
+.lam_btn {text-align:right;padding:1.5rem 1rem;color:#2067ae;margin-bottom:1rem;}/* leave a message */
+.lam_btn {}
+
+.media {margin: 15px 0 2rem;padding: 0 .8rem;}
+.media .media-left {padding-right: 10px;}
+.media .media-left img {width:48px;}
+.media .media-body {width: 10000px;}
+.media .media-body .media-heading {color:#999;margin-bottom:.3rem;}
+.media .media-body .media-heading .icon-like {float:right;}
+.media .media-body .media-heading .icon-like i {color:#2067ae;}
+.media .media-body p {margin-bottom:.5rem;line-height:1.4;}
+.media .media-body time {font-size:small;color:#999;margin-top:1.5rem;}
+
+.media, .media-body {overflow: hidden;zoom: 1;}
+.media-body, .media-left, .media-right {display: table-cell;vertical-align: top;}
+</style>
+</head>
+<body>
+<article>
+
+	<header class="header-hamburger">
+	<a class="ninja-btn active" title="menu"><span></span></a>
+		<h2>荔枝微课</h2>
+		<input type="checkbox" id="op">
+		<div class="lower">
+			<label for="op"><i class="fa fa-ellipsis-v"></i></label>
+		</div>
+	</header><!-- 标题抬头 -->
+
+	<section id="media_list">
+
+		<p class="lam_btn"><label for="modal-1">写留言 <i class="fa fa-pencil"></i></label></p>
+		<!-- <div class="media">	
+			<a class="media-left" href="#">
+				<img src="http://mdbootstrap.com/img/Photos/Avatars/img%20%289%29.jpg" class="img-responsive">
+			</a>
+			<div class="media-body">
+				<h4 class="media-heading">
+					<div class="icon-like">
+						<i class="fa fa-thumbs-up"></i> 6
+					</div>
+					User Name
+				</h4>
+				<p>Your MSG</p>
+				<time>Today</time>
+			</div>
+		</div>
+
+		<div class="media">	
+			<a class="media-left" href="#">
+				<img src="http://heart2true.com/rc/userpicPath/20161215/wxcf707bb887af4aa38ba82cabefb2f476.jpg" class="img-responsive">
+			</a>
+			<div class="media-body">
+				<h4 class="media-heading">
+					<div class="icon-like">
+						<i class="fa fa-thumbs-up"></i> 1
+					</div>
+					User Name
+				</h4>
+				<p>Your MSG</p>
+				<time>Today</time>
+			</div>
+		</div>
+
+		<div class="media">	
+			<a class="media-left" href="#">
+				<img src="http://heart2true.com/rc/userpicPath/20161205/wxabea32ba140b4d5392bbb517f1f9b871.jpg" class="img-responsive">
+			</a>
+			<div class="media-body">
+				<h4 class="media-heading">
+					<div class="icon-like">
+						<i class="fa fa-thumbs-up"></i> 0
+					</div>
+					User Name
+				</h4>
+				<p>Your MSG</p>
+				<time>yesterday</time>
+			</div>
+		</div>
+
+		<div class="media">	
+			<a class="media-left" href="#">
+				<img src="http://heart2true.com/rc/userpicPath/20161020/wx8e4c843e700a4f94bd9097836f8a37d5.jpg" class="img-responsive">
+			</a>
+			<div class="media-body">
+				<h4 class="media-heading">
+					<div class="icon-like">
+						<i class="fa fa-thumbs-up"></i> 0
+					</div>
+					Ale Lan
+				</h4>
+				<p>Your MSG</p>
+				<time>yesterday</time>
+			</div>
+		</div>
+
+		<div class="media">	
+			<a class="media-left" href="#">
+				<img src="http://heart2true.com/rc/userpicPath/1475891669496_image.jpg" class="img-responsive">
+			</a>
+			<div class="media-body">
+				<h4 class="media-heading">
+					<div class="icon-like">
+						<i class="fa fa-thumbs-up"></i> 0
+					</div>
+					AYUMI
+				</h4>
+				<p>Your MSG</p>
+				<time>yesterday</time>
+			</div>
+		</div> -->
+
+	</section>
+
+</article>
+
+<!-- /.modal-1 STAR -->
+<input class="modal-state" id="modal-1" type="checkbox" />
+<div class="modal">
+  <label class="modal__bg" for="modal-1"></label>
+  <div class="modal__inner"  style="height__:40%;">
+	<label class="modal__close" for="modal-1"></label>
+	<h4>聊 天<small class="grey"> chat</small></h4>
+		<div class="command_input___">
+			<form class="form-style">
+				<textarea id="content" rows="10" placeholder="我想说.........."></textarea>
+				<div class="msg_btn">
+					<button type="button" class="btn"><label for="modal-1">取消</label></button>
+					<button type="button" class="btn blue" onclick="addComment()">发送</button>
+				</div>
+			</form>
+		</div>
+	<footer>
+	<div>
+	</div>
+	</footer>
+  </div>
+</div><!-- /.modal-1 END -->
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<!-- <script src="asset/js/tabs_modal.js"></script>
+<script src="asset/js/main.js"></script> -->
+<script>
+var media_text =[{
+		msg_time:"Today",u_name:"User Name",like:"6",img_url:"http://mdbootstrap.com/img/Photos/Avatars/img%20%289%29.jpg",u_text:"Your MSG"
+		},{
+		msg_time:"Today",u_name:"User Name",like:"0",img_url:"http://heart2true.com/rc/userpicPath/20161215/wxcf707bb887af4aa38ba82cabefb2f476.jpg",u_text:"Your MSG"
+		},{
+		msg_time:"Today",u_name:"User Name",like:"1",img_url:"http://heart2true.com/rc/userpicPath/20161205/wxabea32ba140b4d5392bbb517f1f9b871.jpg",u_text:"Your MSG"
+		},{
+		msg_time:"Today",u_name:"Ale Lan",like:"2",img_url:"http://heart2true.com/rc/userpicPath/20161020/wx8e4c843e700a4f94bd9097836f8a37d5.jpg",u_text:"Your MSG"
+		},{
+		msg_time:"yesterday",u_name:"AYUMI",like:"0",img_url:"http://heart2true.com/rc/userpicPath/1475891669496_image.jpg",u_text:"Your MSG"
+		},{
+		msg_time:"yesterday",u_name:"User Name",like:"0",img_url:"http://heart2true.com/rc/userpicPath/20161214/wx4819487c25d44de492513540d24ad678.jpg",u_text:"Your MSG"
+		},{
+		msg_time:"yesterday",u_name:"User Name",like:"0",img_url:"http://heart2true.com/rc/userpicPath/20161209/wx3864229b539b47e883f1d7718b095d1b.jpg",u_text:"Your MSG"
+		},{
+		msg_time:"yesterday",u_name:"User Name",like:"0",img_url:"http://heart2true.com/rc/userpicPath/20161205/wxca2193426a5c4698b29a9e98f3c79e82.jpg",u_text:"Your MSG"
+		},{
+		msg_time:"yesterday",u_name:"User Name",like:"0",img_url:"asset/images/default_icon_grey.png",u_text:"Your MSG"
+		}
+	];
+$.each(media_text,function(index,obj)
+{
+	media_items = "<div class='media'>";
+	media_items += "<a class='media-left' href='#'>";
+	media_items += "<img src='" + obj.img_url + "' class='img-responsive'>";
+	media_items += "</a>";
+	media_items += "<div class='media-body'>";
+	media_items += "<h4 class='media-heading'>";
+	media_items += "<div class='icon-like'>";
+	media_items += "<i class='fa fa-thumbs-up'></i> " + obj.like + "";
+	media_items += "</div>";
+	media_items += "" + obj.u_name + "";
+	media_items += "</h4>";
+	media_items += "<p>" + obj.u_text + "</p>";
+	media_items += "<time>" + obj.msg_time + "</time>";
+	media_items += "</div>";
+	media_items += "</div>";
+	$('#media_list').append(media_items);
+});
+</script>
+
+</body>
+</html>

@@ -36,6 +36,8 @@ __background-color: #1D1F20;
 __background-image: linear-gradient(155deg, #000c22, #215274);
 __background: url(http://vignette1.wikia.nocookie.net/nintendo/images/c/ce/173px-Mario_walking.png/revision/latest?cb=20130214011002&path-prefix=pt-br);
 background:linear-gradient(155deg, #101827, #80919e);
+background:-webkit-linear-gradient(155deg, #101827, #80919e);
+background:-moz-linear-gradient(155deg, #101827, #80919e);
 background-size: 150% 150%;
 -webkit-animation: AnimationName 5s ease-in-out infinite;
 -moz-animation: AnimationName 5s ease-in-out infinite;
