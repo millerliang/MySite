@@ -1,0 +1,185 @@
+<!doctype html>
+<!--[if IE 8]><html class="ie8 lt-ie10"><![endif]-->
+<!--[if IE 9]><html class="ie9 lt-ie10"><![endif]-->
+<!--[if gt IE 9]><!--><html lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>LuAnn List 2</title>
+<link rel="stylesheet" href="asset/css/tabs_modal.css">
+<style>
+/* STAR .modal box */
+.modal__inner {min-height:90%;}
+.modal__inner header {font-size: medium;border-left: 2px solid #e42959;padding-left:.5em;margin-bottom:.8em;}
+
+#popContent {line-height: 1.4;}
+#popContent h3 {font-size:medium;}
+/* END .modal box */
+
+.tabs-content{padding-bottom:2em;margin-top:3em;padding:.5rem 0 1rem;}
+.tabs-content .tab {padding: 0 .35rem;}
+.tabs-header .active a:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 0;
+  box-shadow: 0 0 0px 2px #2d5b83;
+}
+
+ /* 2017/01/16 */
+.this_cards {list-style: none;}
+.this_cards li {width:50%;float:left;margin-bottom:.8rem;}
+.this_cards li .card {margin:0 .5rem;padding:.8rem 1rem;border:1px solid #ccc;background-color:#fff;
+-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;
+-moz-box-shadow: 0px 2px 5px rgba(0,0,0,.15);
+-webkit-box-shadow: 0px 2px 5px rgba(0,0,0,.15);
+box-shadow: 0px 2px 5px rgba(0,0,0,.15);
+}
+.this_cards li .card header {border-bottom: 1px solid #e8e8e8;padding-bottom: .5rem;margin-bottom:1rem;}
+.this_cards li .card header h3 {font-size: 1.3rem;}
+.this_cards li .card button {width:auto;color:#fff;background-color:#09bf14;padding:.5rem 1rem;margin-top:1rem;}
+
+@media screen and (max-width: 980px) {
+	.this_cards li {width:100%;float:none;}
+}
+</style>
+</head>
+<body>
+<nav id="menu" class="menu"></nav>
+
+<header class="header-hamburger fixed">
+	<a class="ninja-btn" title="menu"><span></span></a>
+	<h2>Activity list</h2>
+	<div class="tabs-header">
+		<!-- <div class="border"></div> -->
+		<ul>
+			<li class="active"><a href="#tab-1" tab-id="1" ripple="ripple" ripple-color="#FFF">全部活动</a></li>
+			<li><a href="#tab-2" tab-id="2" ripple="ripple" ripple-color="#FFF">我的报名</a></li>
+		</ul>
+	</div>
+	<input type="checkbox" id="op">
+	<div class="lower">
+		<label for="bell" style="margin-right:.5em;" onclick="location.href='notice.html'"><i class="fa fa-bell-o"></i></label>
+		<label for="op"><i class="fa fa-gear"></i></label>
+	</div>
+	<div class="overlay overlay-hugeinc overlay_b">
+		<label for="op"><i class="fa fa-times-circle"></i></label>
+		<nav class="opt">
+			<ul>
+				<li><button class="btn default"><i class="fa fa-edit"></i> text</button></li>
+				<li><button class="btn blue_bg"><i class="fa fa-refresh"></i> Refresh</button></li>
+				<li><button class="btn red_bg"><i class="fa fa-trash"></i> Clear All</button></li>
+			</ul>
+		</nav>
+	</div>
+</header>
+
+<main id="panel" class="panel">
+
+	<article class="tabs-content" style="padding-bottom:3rem;">
+		<div tab-id="1" class="tab first_tab active">
+
+			<!-- <div class="title clearfix">
+				<span class="tit-hd">Activity<small>activity list</small></span>
+			</div> -->
+
+			<!-- <section class="activity clearfix">
+				<a href="Activity.html">
+					<div class="activity_content">
+						<h2>标 题</h2>
+						<time>活动日期 2016/05/27</time>
+						<p>报名截止</p>
+					</div>
+				</a>
+			</section> -->
+
+			<section class="activity clearfix">
+				<label for="modal-0">
+					<div class="activity_content">
+						<h2>标 题</h2>
+						<time><i class="fa fa-calendar"></i> 活动日期 2016/05/27</time>
+						<p><i class="fa fa-calendar"></i> 报名截止</p>
+					</div>
+				</label>
+			</section>
+
+			<section class="activity clearfix">
+				<label for="modal-0">
+					<div class="activity_content">
+						<h2>标 题</h2>
+						<time><i class="fa fa-calendar"></i> 活动日期 2016/05/27</time>
+						<p><i class="fa fa-calendar"></i> 报名截止</p>
+					</div>
+				</label>
+			</section>
+
+		</div>
+		<div tab-id="2" class="tab">
+			<ul class="this_cards clearfix">
+				<li>
+					<div class="card">
+						<header>
+							<h3>Activity Title</h3>
+							<p class="time"><i class="fa fa-calendar"></i> 2017/01/02</p>
+						</header>
+						<p>数量：1</p>
+						<p>应付：<span class="blue">$120</span></p>
+						<p>付款：<label class="red">尚未付款</label></p>
+						<p><button class="btn"><i class="fa fa-weixin"></i> 微信付款</button></p>
+					</div>
+				</li>
+				<li>
+					<div class="card">
+						<header>
+							<h3>标题</h3>
+							<p class="time"><i class="fa fa-calendar"></i> 2017/01/01</p>
+						</header>
+						<p>数量：5</p>
+						<p>应付：<span class="blue">$300</span></p>
+						<p>付款：<label class="red">尚未付款</label></p>
+						<p><button class="btn"><i class="fa fa-weixin"></i> 微信付款</button></p>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</article>
+
+</main>
+
+<footer class="panel-footer">
+	<a target="_blank" href="http://www.miitbeian.gov.cn/">蘇ICP備15055858號 常州左右逢源股權投資有限公司版權所有</a>
+</footer>
+<a href="#0" class="cd-top"><div class="jSlider"><span></span></div></a>
+<input class="modal-state" id="modal-0" type="checkbox" />
+<div class="modal">
+  <label class="modal__bg" for="modal-0"></label>
+  <div class="modal__inner">
+	<label class="modal__close" for="modal-0"></label>
+	<header>Modal Title</header>
+
+	<div id="popContent">
+		<p>Text Text Text Text Text Text Text Text Text Text Text Text Text Text.</p>
+		<p>Text Text Text Text Text Text Text Text Text Text Text Text Text Text.</p>
+		<p>Text Text Text Text Text Text Text Text Text Text Text Text Text Text.</p>
+		<p>Text Text Text Text Text Text Text Text Text Text Text Text Text Text.</p>
+		<p>Text Text Text Text Text Text Text Text Text Text Text Text Text Text.</p>
+	</div><!-- #popContent End -->
+
+	<!-- <footer style="position: static;margin:0;">
+		<div style="padding:0;">
+			<button type="button" class="btn blue_bg">Send</button>
+			<button type="button" class="btn default"><label for="modal-0">Cancel</label></button>
+		</div>
+	</footer> -->
+  </div>
+</div>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src="asset/js/slideout.min.js"></script>
+<script src="asset/js/main.js"></script>
+<script src="asset/js/tabs_modal.js"></script>
+
+</body>
+</html>

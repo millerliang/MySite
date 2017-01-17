@@ -60,9 +60,9 @@ body, .panel {
 .tabs-o {
   position: relative;
   background: #fff;
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 0 30px rgba(0, 0, 0, 0.1); */
   box-sizing: border-box;
-  overflow: hidden;
+  /* overflow: hidden; */
   margin-top: 3em;
 }
 .tabs-header {
@@ -162,10 +162,10 @@ body, .panel {
   padding: 12px 10px 16px 10px;
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
-  overflow: hidden;
+  /* overflow: hidden; */
   text-align:left;
 }
-.tabs-content:after {
+.tabs-content__:after {
   content: '';
   position: absolute;
   bottom: -1px;

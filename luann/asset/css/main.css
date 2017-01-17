@@ -574,12 +574,14 @@ article section .col-6 footer i {font-size: 13px;}
 /**
  * Activity List styles
  */
+section.activity {width: 100%;float:none;}
+.activity {font-size:100%;padding:0;background-color:#fff;text-align:left;border-bottom:1px solid #dedede;}
+.activity .activity_content {padding:.6rem .8rem 1.4rem;}
 .activity label {cursor: pointer;}
-.activity {font-size:100%;padding:.5rem .8rem;background-color:#fff;text-align:left;border-bottom:1px solid #dedede;}
 .activity:nth-child(even) {background-color: #f5f6f9;}
-.activity h2 {color: #2067AE;line-height:1.6;font-size:110%;}
-.activity time {color:#666;font-size: small;}
-.activity p {color:#666;font-size: small;}
+.activity h2 {color__: #2067AE;line-height:1.6;font-size:1.3rem;}
+.activity time {color:#666;font-size__: small;margin-bottom:.8rem;}
+.activity p {color:#666;font-size__: small;}
 
 /**
  * 進度條
