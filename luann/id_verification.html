@@ -1,0 +1,56 @@
+<!doctype html>
+<!--[if IE 8]><html class="ie8 lt-ie10"><![endif]-->
+<!--[if IE 9]><html class="ie9 lt-ie10"><![endif]-->
+<!--[if gt IE 9]><!--><html lang="en"><!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <title>Dasie Form</title>
+    <link rel="stylesheet" href="asset/css/tabs_modal.css">
+	<style>
+		.panel {background-color: #efefef;background:none;}
+		.btn-sm {padding:.5rem!important;color:#fff;}
+		blockquote {text-align:left;margin-bottom:1rem;padding:.6rem .3rem;}
+		blockquote p {color:#666;}
+	</style>
+  </head>
+  <body>
+	<nav id="menu" class="menu"></nav>
+
+	<header class="header-hamburger fixed">
+		<a class="ninja-btn active" title="menu" onclick="history.go(-1)"><span></span></a>
+		<h2>投票人身分验证</h2>
+	</header>
+
+	<main id="panel" class="panel">
+		<form class="form-style">
+			<div style="padding:.3rem .8rem;background-color:#fff;">
+				<blockquote>
+					<p>您好，凡参加投票者均可获得抽奖资格，请填写您的手机联系资料，并且进行手机号码验证</p>
+				</blockquote>
+				<div class="form-row">
+					<label for="userName"><i class="fa fa-mobile"></i> 请填写手机号码</label>
+					<input type="number" id="userName" placeholder="请填写手机号码">
+					<center><a class="btn btn-sm red_bg" style="display:inline-block;width:50%;text-align:center;margin:.6rem 0 0;">发送短信验证码</a></center>
+				</div>
+				<div style="height:2rem"></div>
+				<div class="form-row">
+					<label for="inputEmai"><i class="fa fa-qrcode"></i> 请填写接获的验证码</label>
+					<input type="number" id="inputTitle" placeholder="请填写接获的验证码">
+					<center><a class="btn btn-sm blue_bg" style="display:inline-block;width:50%;text-align:center;margin:.6rem 0 0;">进行身分验证</a></center>
+				</div>
+			</div>
+		</form>
+
+    </main>
+
+	<footer class="panel-footer">
+		<a target="_blank" href="http://www.miitbeian.gov.cn/">蘇ICP備15055858號 常州左右逢源股權投資有限公司版權所有</a>
+	</footer>
+	<a href="#0" class="cd-top"><div class="jSlider"><span></span></div></a>
+
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src="asset/js/slideout.min.js"></script>
+    <script src="asset/js/main.js"></script>
+    <script src="asset/js/tabs_modal.js"></script>
+  </body>
+</html>

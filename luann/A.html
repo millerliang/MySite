@@ -1,0 +1,227 @@
+<!doctype html>
+<!--[if IE 8]><html class="ie8 lt-ie10"><![endif]-->
+<!--[if IE 9]><html class="ie9 lt-ie10"><![endif]-->
+<!--[if gt IE 9]><!--><html lang="en"><!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <title>Page Title</title>
+<style>
+.header-hamburger {-moz-box-shadow: 0px 2px 6px rgba(0,0,0,.25);-webkit-box-shadow: 0px 2px 6px rgba(0,0,0,.25);box-shadow: 0px 2px 6px rgba(0,0,0,.25);}
+.panel {padding:60px .6rem 1rem!important;
+background: -moz-linear-gradient(90deg, rgba(247,244,225,1) 0%, rgba(122,220,236,1) 100%); /* ff3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(122,220,236,1)), color-stop(100%, rgba(247,244,225,1))); /* safari4+,chrome */
+background: -webkit-linear-gradient(90deg, rgba(247,244,225,1) 0%, rgba(122,220,236,1) 100%); /* safari5.1+,chrome10+ */
+background: -o-linear-gradient(90deg, rgba(247,244,225,1) 0%, rgba(122,220,236,1) 100%); /* opera 11.10+ */
+background: -ms-linear-gradient(90deg, rgba(247,244,225,1) 0%, rgba(122,220,236,1) 100%); /* ie10+ */
+background: linear-gradient(0deg, rgba(247,244,225,1) 0%, rgba(122,220,236,1) 100%); /* w3c */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7ADCEC', endColorstr='#F7F4E1',GradientType=0 ); /* ie6-9 */
+}
+.white {color:#fff;}
+
+.lottery {
+text-align:left;
+background-color:#fff;
+position:relative;
+overflow:hidden;
+-webkit-border-radius:4px;
+-moz-border-radius:4px;
+border-radius:4px;
+-moz-box-shadow: 0px 2px 8px rgba(0,0,0,.25);
+-webkit-box-shadow: 0px 2px 8px rgba(0,0,0,.25);
+box-shadow: 0px 2px 8px rgba(0,0,0,.25);
+}
+
+/* lottery header */
+.lottery header {position:relative;min-height:6rem;}
+.lottery header img {width:100%;}
+.lottery header h2 {
+font-size: 1.25em;
+line-height: 1.25;
+letter-spacing:2px;
+color:#fff;
+position:absolute;
+bottom:.3rem;
+width:100%;
+background-color: rgba(51, 51, 51, .25);
+padding: .5rem 0 .5rem .6rem;
+-moz-text-shadow: 1px 1px 2px rgba(0,0,0,.25);
+-webkit-text-shadow: 1px 2px 1px rgba(0,0,0,.25);
+text-shadow: 1px 1px 2px rgba(0,0,0,.25);
+}
+.lottery header label {position:absolute;right:-.5rem;bottom:2.4rem;}
+.lottery header label a {width:2.8rem;height:2.8rem;text-align:center;color:#fff;position:absolute;right:2rem;background-color:#e42959;
+-webkit-border-radius:50%;
+-moz-border-radius:50%;
+border-radius:50%;
+}
+
+/* lottery cont */
+.lottery .cont {color: #666;padding:.5rem .6rem;}
+.lottery .cont time {display: block;margin-bottom: .6rem;font-size:small;}
+.lottery .cont p {margin-bottom: .6rem;}
+
+/* lottery ol & ul */
+.lottery .cont .ol_list {padding-left:1.5rem;}
+.lottery .cont .ol_list li {margin-bottom:.3rem;}
+.lottery .cont .ol_list ul {padding:0 0 .5rem 1rem;}
+
+ul.flex_box {margin:0em;padding:.6em 0 1rem;list-style: none;display: -webkit-box;display: -webkit-flex;display: -ms-flexbox;display: flex;-webkit-box-orient: horizontal;-webkit-box-direction: normal;-webkit-flex-direction: row;-ms-flex-direction: row;flex-direction: row;-webkit-flex-wrap: nowrap;-ms-flex-wrap: nowrap;flex-wrap: nowrap;}
+ul.flex_box li {text-align: center;-webkit-box-flex: 1;box-flex: 1;-webkit-flex: 1;-ms-flex: 1;flex: 1;white-space: nowrap;}
+ul.flex_box li a {color:#fff;font-size:1rem;display: inline-block;text-align: center;width:95%;border: 1px solid rgba(255, 255, 255, .2);border-bottom: 3px solid rgba(255, 255, 255, .25);padding: .5rem 0 .5rem;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;}
+ul.flex_box li a:hover {}
+
+/* STAR .modal box */
+.modal__inner {min-height:90%;}
+.modal__inner header {font-size: medium;border-left: 2px solid #e42959;padding-left:.5em;margin-bottom:.8em;}
+
+#popContent {line-height: 1.4;}
+#popContent h3 {font-size:medium;}
+#popContent p {margin-bottom:.6rem;}
+/* END .modal box */
+</style>
+  </head>
+  <body>
+	<nav id="menu" class="menu"></nav>
+
+	<header class="header-hamburger fixed">
+		<a class="ninja-btn" title="menu"><span></span></a>
+		<h2>Model Title</h2>
+		<!-- <input type="checkbox" id="op">
+		<div class="lower">
+			<label for="op"><i class="fa fa-ellipsis-v"></i></label>
+		</div>
+		<div class="overlay overlay-hugeinc">
+			<label for="op"><i class="fa fa-times-circle"></i></label>
+			<nav>
+				<ul>
+					<li><input type="checkbox" id="a1"><label for="a1"><i class="fa fa-check"></i> Check 1</label></li>
+					<li><input type="checkbox" id="a2"><label for="a2"><i class="fa fa-check"></i> Check 2</label></li>
+					<li><input type="checkbox" id="a3"><label for="a3"><i class="fa fa-check"></i> Check 3</label></li>
+					<li><input type="checkbox" id="a4"><label for="a4"><i class="fa fa-check"></i> Check 4</label></li>
+					<li><input type="checkbox" id="a5"><label for="a5"><i class="fa fa-check"></i> Check 5</label></li>
+					<li><input type="checkbox" id="a6"><label for="a6"><i class="fa fa-check"></i> Check 6</label></li>
+				</ul>
+			</nav>
+		</div> -->
+	</header>
+
+	<main id="panel" class="panel">
+
+		<!-- <div class="title">
+			<span class="tit-hd">Activity<small>activity list</small></span>
+		</div> -->
+
+		<section class="lottery">
+			<header>
+				<img src="http://www.etidol.com/upload/event/evt_197.jpg">
+				<!-- <img src="https://dummyimage.com/720x420/a2cdde/ebfaff&text=Theme+img">
+				<img src="https://dummyimage.com/720x420/ff4c79/ebfaff&text=Theme+img"> -->
+				<h2>抽獎活動名稱</h2>
+				<label for="modal-0">
+					<a class="btn red_btn">即時抽獎</a>
+				</label>
+			</header>
+			<div class="cont">
+				<p><strong>【抽獎活動期間】</strong></p>
+				<time><i class="fa fa-calendar"></i> yy/mm/dd ~ yy/mm/dd</time>
+				<ul class="flex_box">
+					<li>
+						<a class="btn blue_bg" href="#"><i class="fa fa-gift"></i> 抽獎獎品</a>
+					</li>
+					<li>
+						<a class="btn green_bg" href="#"><i class="fa fa-list-ul"></i> 得獎名單</a>
+					</li>
+				</ul>
+				<p><strong>【抽獎辦法說明】</strong></p>
+				<ol class="ol_list">
+					<li>本設計活動有關參賽報名、獲獎之展覽及專刊刊登皆不另收取費用。</li>
+					<li>所有參賽者，無論身分（學生，專業設計師或社會人士），皆需遵守本競賽所有條文規定，並平等享有獲得獎項/獎金的權利。</li>
+					<li>關於參賽者
+						<ul>
+							<li class="ulli">參賽作品之智慧財產權屬參賽者所有。</li>
+							<li class="ulli">參賽者須配合提供其創作之詳細圖文資料，作為日後報導與展示之用。</li>
+							<li class="ulli">在正式參賽前，若作品有在公開場合展出的可能，參賽者須自行確認並保護其作品之智慧財產權。</li>
+							<li class="ulli">進入決選所繳交之模型（或實品）作品所有權移轉臺北市政府。</li>
+							<li class="ulli">所有的作品皆為參賽者的自主監督下完成。</li>
+							<li class="ulli">參賽者同意遵守由主辦單位決定的比賽規則，並接受評審團的決定是最終決定，同時沒有其它關係人介入評選過程。</li>
+							<li class="ulli">參賽者需為相關的審查和展覽，提供一切合理的資訊和實際生產的樣品（如果需要）。</li>
+							<li class="ulli">參賽者充分了解主辦單位對於歸還作品等相關規定。</li>
+							<li class="ulli">參賽者充分了解有關比賽所提供的資訊是正確且完整的，參賽者所提供的任何個人資訊，將按照主辦單位的隱私政策進行使用。</li>
+							<li class="ulli">參賽者充分了解他們的報名資料，圖像和與任何宣傳素材，可以由主辦單位在機制中規劃的項目中（如書籍，目錄，展覽等）使用。</li>
+							<li class="ulli">參賽者在報名與提交作品時，充分了解簡章的所有內容。</li>
+							<li class="ulli">最佳人氣獎票選活動，相關注意事項將另行公布於官網上。</li>
+							<li class="ulli">請自行負責寄件作品運費和繳納通關時所產生之所有費用。為避免進入臺灣海關時間較長，影響作品到達時間，參賽者於寄件時勿將作品價值填寫超過50美元。</li>
+							<li class="ulli">參加甄選者請按照要求規格提供設計作品；並請詳閱甄選簡章，同意遵守簡章及細則所有之規定。</li>
+							<li class="ulli">為方便國際評審進行甄選作業，每件參賽作品需填寫英文的作品說明，供評審委員參考。</li>
+							<li class="ulli">參賽者需於報名時同意「智慧財產權聲明書」，聲明設計作品不得侵犯他人智慧財產權。</li>
+							<li class="ulli">參賽者需於報名時同意是否願意將個人與作品資料提供給集資平台進行媒合接洽。</li>
+						</ul>
+					</li>
+					<li>關於得獎者
+						<ul>
+							<li class="ulli">得獎名單以評審委員最後決定為最終決定，執行單位將於評審後15日內通知各獲獎者。</li>
+							<li class="ulli">各獎項得經決選評審會議視參賽作品水準議定「從缺」或「調整」，亦得由決選評審會議決議更動獎勵與獎項名稱。</li>
+							<li class="ulli">得獎者之獎金或獎品金額在新台幣20,000元(含)以上者，皆須依中華民國稅法規定扣所得稅(外國國籍者扣20%，中華民國國籍者扣10%)。臺北市政府將於得獎名單公告後1個月內將獎金匯款至得獎者提供的銀行帳戶，但匯款程序可能需要2個月的時間。</li>
+							<li class="ulli">主辦單位將處理相關外匯規定，保證所有的獎金款項都能順利匯出。</li>
+							<li class="ulli">競賽獎金不包含取得設計師的作品智慧財產權。</li>
+							<li class="ulli">所有得獎者將公布於專屬網站上，以提供廠商進行設計合作案之相關洽詢。</li>
+							<li class="ulli">主辦單位將不會對得獎作品進行再製的行為。</li>
+							<li class="ulli">主辦單位將不負責得獎作品的商業開發規畫，故不提供任何開發費用。</li>
+							<li class="ulli">獲臺北市長獎、各類別金、銀、銅、通用設計及應用精進獎之得獎者若為非主辦國之參賽者或團體，由主辦單位邀請並提供參賽者或團體代表1人出席頒獎典禮之機票、食宿及接待費；依臺北市長獎、各類別金、銀、銅獎、通用設計及應用精進獎順序邀約，總計至多6名。</li>
+							<li class="ulli">主辦單位保留對參賽作品進行宣傳的權利，且不涉及商業用途下，於得獎名單公告一年內，可應用作各種宣傳、巡迴展覽、出版或委託出版，本（2016）年度預計舉辦一場公開展覽，發行一本成果專刊與其他平面與電子媒體宣傳計畫，不另支付費用。</li>
+						</ul>
+					</li>
+					<li>凡獲獎作品主辦單位將另通知提供檔案及相關資料作為展出、編錄專輯使用，另配合國際競賽認證規格，依其規定提供必要檔案資料及實品。</li>
+					<li>主辦單位僅針對得獎作品進行宣傳活動，任何未入圍作品，將不會被使用或是公開。</li>
+					<li>資格取消
+						<ul>
+							<li class="ulli">報名繳交作品裱板檔案不得標示創作者姓名、公司名稱或其他影響評選公正性之代號，違者取消入圍資格。</li>
+							<li class="ulli">入圍或得獎作品經人檢舉或告發為2014年6月30日之前創作完成之作品，且有具體事證者，執行單位得取消其入圍及得獎資格並追回已頒發之獎金、獎品、獎座及獎狀。</li>
+							<li class="ulli">入圍或得獎作品經人檢舉或告發為其他設計競賽得獎之作品，且有具體事證者，執行單位得取消其入圍及得獎資格並追回已頒發之獎金、獎品、獎座及獎狀。</li>
+							<li class="ulli">未能於決選繳件截止日前完成決選模型、光碟和文件繳件者，視同放棄進入決選資格。</li>
+							<li class="ulli">入圍或得獎作品經人檢舉或告發為非自行創作、冒用他人作品或有違反著作權等相關法令，且有具體事證者，執行單位得取消其入圍及得獎資格並追回已頒發之獎金、獎品、獎座及獎狀。</li>
+							<li class="ulli">評審委員之個人、親友及所屬公司之設計作品不得參與設計競賽。且不得直接或間接提供參賽者任何協助與諮詢。</li>
+							<li class="ulli">參賽者之個人、親友、及所屬公司直接或間接參與評審過程，並提供參賽者任何協助或諮詢者，將自動取消參賽資格。</li>
+						</ul>
+					</li>
+					<li>本簡章如有未盡事宜，主辦單位得隨時修正，並公布於官網。</li>
+				</ol>
+			</div>
+		</section>
+
+    </main>
+	<footer class="panel-footer">
+		<a target="_blank" href="http://www.miitbeian.gov.cn/">蘇ICP備15055858號 常州左右逢源股權投資有限公司版權所有</a>
+	</footer>
+	<a href="#0" class="cd-top"><div class="jSlider"><span></span></div></a>
+	
+	<input class="modal-state" id="modal-0" type="checkbox" />
+	<div class="modal">
+	  <label class="modal__bg" for="modal-0"></label>
+	  <div class="modal__inner">
+		<label class="modal__close" for="modal-0"></label>
+		<header>注意事項</header>
+
+		<div id="popContent">
+			<p>1.活動獎項價值超過新台幣1,000元者，需依規定完成兌獎，獎項價值超過新台幣20,000元以上，需預先繳10%稅款(外籍人士需扣繳20%)，獎項超過新台幣1,000(含)以上，未達20,000元者，無須於兌獎時繳交所得稅，xxxx購物網將寄發所得稅扣繳憑單給中獎人。</p>
+			<p>2.參加者保證所有填寫或提出之資料均為真實且正確，且未冒用或盜用任何第三人之資料。如有不實或不正確之情事，將被取消參加或得獎資格。</p>
+			<p>3.消費者收到贈品後，若有贈品缺損狀態，請於10天鑑賞期間內反應，超過時間則不接受退換貨服務。</p>
+		</div><!-- #popContent End -->
+
+		<footer>
+			<div>
+				<button type="button" class="btn red_bg white">進行抽獎</button>
+				<button type="button" class="btn default"><label for="modal-0">取 消</label></button>
+			</div>
+		</footer>
+	  </div>
+	</div>
+
+	<script src="asset/js/index_slider.js"></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+	<!-- Swiper JS -->
+    <script src="asset/js/slideout.min.js"></script>
+	<script src="asset/js/main.js"></script>
+
+  </body>
+</html>
