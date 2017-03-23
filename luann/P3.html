@@ -94,9 +94,9 @@ box-shadow: 0px 2px 6px rgba(0,0,0,.35);
 .tab3 h3:before {position:absolute;content:"";width:3px;background-color:#e42959;height: 1.17em;left: .6rem;}
 .tab3 .this_pict img {width:100%;}
 
-.tab3 .tab_pict {border:3px solid #333;}
-.tab3 .tab_pict td {border:2px solid #333;position:relative;overflow:hidden;}
-.tab3 .tab_pict td h2 {text-align:center;font-size: medium;position:absolute;bottom:0;color: #fff;background-color: rgba(0, 0, 0, 0.25);width: 100%;padding: .3rem 0;}
+.tab3 .tab_pict {border__:3px solid #333;}
+.tab3 .tab_pict td {padding: 4px;border: 4px solid #dcdcdc;position:relative;overflow:hidden;width: 33.3333%;background-color__:#333;}
+.tab3 .tab_pict td h2 {text-align:center;font-size:90%;position__:absolute;bottom:0;color: #333;background-color:#fff;width: 100%;padding: .08rem 0;}
 .tab3 .tab_pict td img {width:100%;display:block;border:0;}
 
 .tab3 p {padding:0 .6rem;}
@@ -129,6 +129,8 @@ box-shadow: 0px 2px 6px rgba(0,0,0,.35);
 .__item_list li .table th:first-child {color:#e42959;}
 .__item_list li .table td {padding:.6rem .4rem 0;color:#999;font-size:small;}
 
+.for_ppt {min-height: auto!important;height:auto!important;top:2rem!important;bottom:auto!important;padding: .5rem!important;border-radius:2px!important;-moz-border-radius:2px!importantwebkit-border-radius:2px!important;}
+
  /* 2017/01/16 */
 .this_cards {list-style: none;}
 .this_cards li {width:50%;float:left;margin-bottom:.8rem;}
@@ -138,7 +140,7 @@ box-shadow: 0px 2px 6px rgba(0,0,0,.35);
 -webkit-box-shadow: 0px 2px 5px rgba(0,0,0,.15);
 box-shadow: 0px 2px 5px rgba(0,0,0,.15);
 }
-.this_cards li .card header h3 {    border-bottom: 1px solid #e8e8e8;padding-bottom: .5rem;margin-bottom: .5rem;}
+.this_cards li .card header h3 {border-bottom: 1px solid #e8e8e8;padding-bottom: .5rem;margin-bottom: .5rem;}
 .this_cards li .card button {width:auto;color:#fff;background-color:#09bf14;padding:.5rem 1rem;margin-top:1rem;}
 
 .form-style h5 {color:#fff;padding-left:.8rem;}
@@ -148,9 +150,10 @@ box-shadow: 0px 2px 5px rgba(0,0,0,.15);
 .modal__inner {min-height:90%;}
 .modal__inner header {font-size: medium;border-left: 2px solid #e42959;padding-left:.5em;margin-bottom:.8em;}
 
-#popContent {line-height: 1.4;}
-#popContent h3 {font-size:medium;}
-#popContent img {width:100%;}
+.popContent {line-height: 1.4;}
+.popContent h3 {font-size:medium;}
+.popContent h2 {text-align:center;}
+.popContent img {width:100%;}
 /* END .modal box */
 
 @media screen and (max-width: 980px) {
@@ -274,21 +277,23 @@ box-shadow: 0px 2px 5px rgba(0,0,0,.15);
 				<table class="tab_pict">
 					<tr>
 						<td>
-							<label for="modal-0"><h2>景點名稱</h2>
-							<img src="http://placehold.it/250x250/7399c4/fff?text=PICT 1"></label>
+							<label for="modal-0">
+								<img src="http://image.8264.com/forum/201205/25/1153257ypx5yu2aoo2ow1i.jpg">
+								<h2>嘉峪关长城</h2>
+							</label>
 						</td>
-						<td><label for="modal-0"><h2>景點名稱</h2><img src="http://placehold.it/250x250/97b3d3/fff?text=PICT 2"></label></td>
-						<td><label for="modal-0"><h2>景點名稱</h2><img src="http://placehold.it/250x250/7399c4/fff?text=PICT 3"></label></td>
+						<td><label for="modal-1"><img src="http://placehold.it/800x600/97b3d3/fff?text=PPT"><h2>景點名稱</h2></label></td>
+						<td><label for="modal-0"><img src="http://www.zhonghuayuwen.org/images/user/635967568576787732.jpg"><h2>景點名稱</h2></label></td>
 					</tr>
 					<tr>
-						<td><label for="modal-0"><h2>景點名稱</h2><img src="http://placehold.it/250x250/97b3d3/fff?text=PICT 4"></label></td>
-						<td><label for="modal-0"><h2>景點名稱</h2><img src="http://placehold.it/250x250/7399c4/fff?text=PICT 5"></label></td>
-						<td><label for="modal-0"><h2>景點名稱</h2><img src="http://placehold.it/250x250/97b3d3/fff?text=PICT 6"></label></td>
+						<td><label for="modal-1"><img src="http://placehold.it/800x600/7399c4/fff?text=PPT"><h2>景點名稱</h2></label></td>
+						<td><label for="modal-0"><img src="http://www.jsguolv.com/upload/image/sight/0377020120325183057.jpg"><h2>景點名稱</h2></label></td>
+						<td><label for="modal-1"><img src="http://placehold.it/800x600/7399c4/fff?text=PPT"><h2>景點名稱</h2></label></td>
 					</tr>
 					<tr>
-						<td><label for="modal-0"><h2>景點名稱</h2><img src="http://placehold.it/250x250/7399c4/fff?text=PICT 7"></label></td>
-						<td><label for="modal-0"><h2>景點名稱</h2><img src="http://placehold.it/250x250/97b3d3/fff?text=PICT 8"></label></td>
-						<td><label for="modal-0"><h2>景點名稱</h2><img src="http://placehold.it/250x250/7399c4/fff?text=PICT 9"></label></td>
+						<td><label for="modal-0"><img src="http://www.jsguolv.com/upload/image/sight/0377120120325183057.jpg"><h2>景點名稱</h2></label></td>
+						<td><label for="modal-1"><img src="http://placehold.it/800x600/97b3d3/fff?text=PPT"><h2>景點名稱</h2></label></td>
+						<td><label for="modal-0"><img src="http://images.pccoo.cn/bar/2009910/20099109320465.jpg"><h2>景點名稱</h2></label></td>
 					</tr>
 
 				</table>
@@ -354,6 +359,21 @@ box-shadow: 0px 2px 5px rgba(0,0,0,.15);
 	<a target="_blank" href="http://www.miitbeian.gov.cn/">蘇ICP備15055858號 常州左右逢源股權投資有限公司版權所有</a>
 </footer>
 <a href="#0" class="cd-top"><div class="jSlider"><span></span></div></a>
+
+<input class="modal-state" id="modal-1" type="checkbox" />
+<div class="modal">
+  <label class="modal__bg" for="modal-1"></label>
+  <div class="modal__inner for_ppt">
+	<!-- <label class="modal__close" for="modal-1"></label>
+	<header>Modal Title</header> -->
+
+	<div class="popContent">
+		<img src="http://placehold.it/960x720/dee3ea/666?text=PPT 16:9">
+		<h2>item text</h2>
+	</div><!-- /.popContent End -->
+  </div>
+</div>
+
 <input class="modal-state" id="modal-0" type="checkbox" />
 <div class="modal">
   <label class="modal__bg" for="modal-0"></label>
@@ -361,20 +381,18 @@ box-shadow: 0px 2px 5px rgba(0,0,0,.15);
 	<label class="modal__close" for="modal-0"></label>
 	<header>Modal Title</header>
 
-	<div id="popContent">
-		<img src="http://placehold.it/720x320/ededed/666?text=PICTURE">
-		<p><strong>Sub Text</strong></p>
-		<p><strong class="blue">Text color</strong> <strong class="red">Text color</strong> <strong class="info">Text color</strong> <strong class="grey">Text color</strong></p>
-		<p>Text Text Text Text Text Text Text Text Text Text Text Text Text Text.</p>
-		<p>Text Text Text Text Text Text Text Text Text Text Text Text Text Text.</p>
-		<p>Text Text Text Text Text Text Text Text Text Text Text Text Text Text.</p>
-		<p>Text Text Text Text Text Text Text Text Text Text Text Text Text Text.</p>
-	</div><!-- #popContent End -->
+	<div class="popContent">
+		<!-- <img src="http://placehold.it/720x320/ededed/666?text=PICTURE"> -->
+		<img src="http://www.zhonghuayuwen.org/images/user/635967568576787732.jpg">
+		<p><strong>嘉峪关长城</strong></p>
+		<!-- <p><strong class="blue">Text color</strong> <strong class="red">Text color</strong> <strong class="info">Text color</strong> <strong class="grey">Text color</strong></p> -->
+		<p>嘉峪关长城在嘉峪关市西南隅, 因建于嘉峪山麓而得名，是明朝万里长城西端的终点, 建于1372年。关城平面呈梯形, 面积33500余平方米, 城墙总长733米, 高11.7米。城楼东、西对称, 面阔三间, 周围有廊, 三层歇山顶高17米, 气势雄伟。关城四隅有角楼, 高两层, 形如碉堡。登关楼远望, 寨外风光尽收眼底。</p>
+	</div><!-- /.popContent End -->
 
 	<footer style="position: static;margin:1rem 0 0 0;">
 		<div style="padding:0;">
 			<button type="button" class="btn default"><label for="modal-0">Cancel / Close</label></button>
-			<button type="button" class="btn blue_bg">Confirm / Send</button>
+			<!-- <button type="button" class="btn blue_bg">Confirm / Send</button> -->
 		</div>
 	</footer>
   </div>
