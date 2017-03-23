@@ -1,0 +1,424 @@
+<!doctype html>
+<!--[if IE 8]><html class="ie8 lt-ie10"><![endif]-->
+<!--[if IE 9]><html class="ie9 lt-ie10"><![endif]-->
+<!--[if gt IE 9]><!--><html lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>LuAnn List 2</title>
+<link rel="stylesheet" href="asset/css/tabs_modal.css">
+<style>
+.panel {
+background: -webkit-linear-gradient(45deg, rgba(66, 183, 245, 0.8) 0%, rgba(66, 245, 189, 0.4) 100%);
+background: linear-gradient(45deg, rgba(193, 255, 136, 0.8) 0%, rgba(255, 113, 113, 0.4) 100%);
+}
+.row {margin-left: -15px;margin-right: -15px;}
+.row:before, .row:after {content: " ";display: table;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;clear: both;}
+.badges-static{left: -.3rem;}
+
+/* front btns */
+.front .btnbar {display:flex;padding:.7rem 0;display:none;}
+.front .btnbar .luann_btn {width:100%;margin:2px auto;flex:1;margin:0 4px;border:0;position: relative;padding: 4px 10px;border-radius: 3px;font-size: 16px;color: #333;text-decoration: none;background-color: #e8e8e8;border-bottom: 5px solid #ddd;transition: all 0.1s;-webkit-transition: all 0.1s;}
+.front .btnbar .luann_btn:hover,.back footer .luann_btn:focus {text-decoration: none;}
+.front .btnbar .luann_btn:active {transform: translate(0px,3px);-webkit-transform: translate(0px,3px);border-bottom: 1px solid;}
+
+.front .btnbar .blue_btn {color:#fff;background-color: #3498DB;border-bottom: 5px solid #2980B9;text-shadow: 0px -2px #2980B9;}
+.front .btnbar .green_btn {color:#fff;background-color: #99c050;border-bottom: 5px solid #89AB4B;text-shadow: 0px -2px #659555;}
+.front .btnbar .red_btn {color:#fff;background-color: #D04F39;border-bottom: 5px solid #A73A3A;text-shadow: 0px -2px #6F1E1E;}
+
+/* Card New Style */
+.card-new {margin:.4em 0 .8em;color:#fff;position: relative;width: 100%;float: none;overflow__: hidden;text-align:left;-moz-box-shadow: 0px 2px 6px rgba(0,0,0,.6);-webkit-box-shadow: 0px 2px 6px rgba(0,0,0,.6);box-shadow: 0px 2px 6px rgba(0,0,0,.6);-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;}
+.card-new * {-webkit-transition: all .4s;-moz-transition: all .4s;transition: all .4s;}
+.card-new .front {background:#e3eaef;}
+.card-new .front img {width:100%;}
+.card-new .front h5 {font-size:1.52rem;color: #173956;padding:.4em 8px;border-bottom: 1px solid rgba(0,0,0,.08);margin-bottom:.5em;}
+
+.card-new .back {
+	background:rgba(25,3,46,.9);
+	position: absolute;
+	bottom:-100%;
+	width: 100%;
+	height: 100%;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	align-content: stretch;
+	align-items: stretch;
+	justify-content: space-between;
+
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+
+	-webkit-flex-wrap: nowrap;
+	-ms-flex-wrap: nowrap;
+	flex-wrap: nowrap;
+}
+.card-new:hover___ .back {bottom:0%;}
+.card-new.active .back {bottom:0%;}
+
+.card-new .front .info {color:#555;padding-bottom:.5rem;}
+.card-new .front .info i {margin:0 .2rem 0 .5rem;color: #869aa2;}
+.card-new .back .info {padding:0 .8em;font-size__:small;overflow-x:hidden;flex-basis:85%;}
+.card-new .back footer {position:static;flex-basis:2%;}
+.card-new .back h5 {font-size:1.5rem;border-bottom: 1px solid rgba(255,255,255,.35);padding:.4em 0;margin:8px .5em;border-left: 3px solid #ff4000;padding-left:.4em;}
+
+.card-new ul.flex_box {margin-top___:1em;padding:.6em 0;background-color:#7d3d07;list-style: none;display: -webkit-box;display: -webkit-flex;display: -ms-flexbox;display: flex;-webkit-box-orient: horizontal;-webkit-box-direction: normal;-webkit-flex-direction: row;-ms-flex-direction: row;flex-direction: row;-webkit-flex-wrap: nowrap;-ms-flex-wrap: nowrap;flex-wrap: nowrap;}
+.card-new ul.flex_box li {text-align: center;-webkit-box-flex: 1;box-flex: 1;-webkit-flex: 1;-ms-flex: 1;flex: 1;white-space: nowrap;}
+.card-new ul.flex_box li a {background-color: #c39a2c;display: inline-block;text-align: center;width:95%;border: 1px solid rgba(255, 255, 255, .2);border-bottom: 3px solid rgba(255, 255, 255, .25);padding: .5rem 0 .5rem;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;}
+.card-new ul.flex_box li a:hover {background-color:#997923;}
+.card-new ul.flex_box li a .yellow {color:#ffc926;}
+.card-new ul.flex_box li p {color:#fff;font-size:1.2rem;}
+.card-new ul.flex_box li b {font-size: 18px;color: #fff;}
+
+.tabs-content{min-height__:300px;padding-bottom:2em;margin-top:3em;padding:.5rem 0 1rem;}
+.tabs-content .tab {padding: 0 .35rem;}
+.tabs-header .active a:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 0;
+  box-shadow: 0 0 0px 2px #2d5b83;
+}
+
+.tab3 {position:relative;background-color:#fff;width:100%;float: none;padding-bottom:1rem;
+box-shadow: 0px 2px 6px rgba(0,0,0,.35);
+-webkit-box-shadow: 0px 2px 6px rgba(0,0,0,.35);
+-moz-box-shadow: 0px 2px 6px rgba(0,0,0,.35);
+-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;
+}
+.tab3 h3 {padding:.5rem .6rem .5rem 1rem;}
+.tab3 h3:before {position:absolute;content:"";width:3px;background-color:#e42959;height: 1.17em;left: .6rem;}
+.tab3 .this_pict img {width:100%;}
+
+.tab3 .tab_pict {border:3px solid #333;}
+.tab3 .tab_pict td {border:2px solid #333;position:relative;overflow:hidden;}
+.tab3 .tab_pict td h2 {text-align:center;font-size: medium;position:absolute;bottom:0;color: #fff;background-color: rgba(0, 0, 0, 0.25);width: 100%;padding: .3rem 0;}
+.tab3 .tab_pict td img {width:100%;display:block;border:0;}
+
+.tab3 p {padding:0 .6rem;}
+.method ul.flex_box {margin:0em;padding:.6em 0 1rem;list-style: none;display: -webkit-box;display: -webkit-flex;display: -ms-flexbox;display: flex;-webkit-box-orient: horizontal;-webkit-box-direction: normal;-webkit-flex-direction: row;-ms-flex-direction: row;flex-direction: row;-webkit-flex-wrap: nowrap;-ms-flex-wrap: nowrap;flex-wrap: nowrap;}
+.method ul.flex_box li {text-align: center;-webkit-box-flex: 1;box-flex: 1;-webkit-flex: 1;-ms-flex: 1;flex: 1;white-space: nowrap;}
+.method ul.flex_box li a {color:#fff;font-size:1rem;display: inline-block;text-align: center;width:95%;border: 1px solid rgba(255, 255, 255, .2);border-bottom: 3px solid rgba(255, 255, 255, .25);padding: .5rem 0 .5rem;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;}
+.method ul.flex_box li a:hover {}
+
+.box_outline {border:1px solid #e0e0e0;margin:0 .6rem 1rem;padding:.6em 0;}
+
+.more_btn {text-align:right;padding:0 1.25rem;margin-bottom: .6rem;}
+.more_btn a {}
+
+.table {width:100%;font-size__:small;margin:.6rem 0 1rem;}
+.table th {color:#fff;background-color:#e42959;padding: .2rem .5rem;}
+.table td {max-width:10rem;border: 1px solid #ccc;padding: .2rem .5rem;}
+
+.item_list {position:relative;}
+.item_list li {border-top:1px solid #eaeaea;padding:.6rem 0;display: -webkit-box;display: -webkit-flex;display: -ms-flexbox;display: flex;-webkit-box-orient: horizontal;-webkit-box-direction: normal;-webkit-flex-direction: row;-ms-flex-direction: row;flex-direction: row;-webkit-flex-wrap: nowrap;-ms-flex-wrap: nowrap;flex-wrap: nowrap;}
+.item_list li div {-webkit-box-flex: 1;box-flex: 1;-webkit-flex: 1;-ms-flex: 1;flex: 1;}
+.item_list li div:first-child {max-width:120px;}
+.item_list li div:nth-child(2) {padding-left:.5rem;}
+.item_list li img {max-width:100%;}
+.item_list li div p {font-size:small;padding:0;}
+.item_list li div p:last-child {margin-top:.5rem;}
+.item_list li label.type {border:1px solid #ccc;letter-spacing: 2px;font-size:x-small;padding:.25rem .5rem;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;}
+
+.__item_list li .table {float: right;text-align:center;margin-right:.3rem;}
+.__item_list li .table th {padding:.25rem .4rem 0;font-size: 2rem;color:#05a0e8;}
+.__item_list li .table th:first-child {color:#e42959;}
+.__item_list li .table td {padding:.6rem .4rem 0;color:#999;font-size:small;}
+
+ /* 2017/01/16 */
+.this_cards {list-style: none;}
+.this_cards li {width:50%;float:left;margin-bottom:.8rem;}
+.this_cards li .card {margin:0 .5rem;padding:.8rem 1rem;border:1px solid #ccc;background-color:#fff;
+-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;
+-moz-box-shadow: 0px 2px 5px rgba(0,0,0,.15);
+-webkit-box-shadow: 0px 2px 5px rgba(0,0,0,.15);
+box-shadow: 0px 2px 5px rgba(0,0,0,.15);
+}
+.this_cards li .card header h3 {    border-bottom: 1px solid #e8e8e8;padding-bottom: .5rem;margin-bottom: .5rem;}
+.this_cards li .card button {width:auto;color:#fff;background-color:#09bf14;padding:.5rem 1rem;margin-top:1rem;}
+
+.form-style h5 {color:#fff;padding-left:.8rem;}
+.form-style .form-row {margin:.8rem;}
+
+/* STAR .modal box */
+.modal__inner {min-height:90%;}
+.modal__inner header {font-size: medium;border-left: 2px solid #e42959;padding-left:.5em;margin-bottom:.8em;}
+
+#popContent {line-height: 1.4;}
+#popContent h3 {font-size:medium;}
+#popContent img {width:100%;}
+/* END .modal box */
+
+@media screen and (max-width: 980px) {
+	.this_cards li {width:100%;float:none;}
+}
+</style>
+</head>
+<body>
+<nav id="menu" class="menu"></nav>
+
+<header class="header-hamburger fixed">
+	<a class="ninja-btn" title="menu"><span></span></a>
+	<h2>Dasie list</h2>
+	<div class="tabs-header">
+		<!-- <div class="border"></div> -->
+		<ul>
+			<li class="active"><a href="#tab-1" tab-id="1" ripple="ripple" ripple-color="#FFF">大赛作品</a></li>
+			<li><a href="#tab-2" tab-id="2" ripple="ripple" ripple-color="#FFF">我的投票</a></li>
+			<li><a href="#tab-3" tab-id="3" ripple="ripple" ripple-color="#FFF">大賽抽獎</a></li>
+		</ul>
+	</div>
+	<input type="checkbox" id="op">
+	<div class="lower">
+		<label for="op">筛选 <i class="fa fa-filter"></i></label>
+	</div>
+	<div class="overlay overlay-hugeinc overlay_b">
+		<label for="op"><i class="fa fa-times-circle"></i></label>
+		<nav class="opt">
+			<form class="form-style">
+				<h5><i class="fa fa-filter"></i>  筛选过滤器</h5>
+				<div class="form-row">
+					<select class="form-control">
+						<option value="0">筛选大类</option>
+						<option value="1">Big-1</option>
+						<option value="2">Big-2</option>
+						<option value="3">Big-3</option>
+						<option value="4">Big-4</option>
+					</select>
+				</div>
+				<div class="form-row">
+					<select class="form-control">
+						<option value="0">筛选小类</option>
+						<option value="1">small-1</option>
+						<option value="2">small-2</option>
+						<option value="3">small-3</option>
+					</select>
+				</div>
+			</form>
+			<ul>
+				<li><button class="btn blue_bg" style="text-align:center;">Confirm</button></li>
+			</ul>
+		</nav>
+	</div>
+</header>
+
+<main id="panel" class="panel">
+
+	<article class="tabs-content">
+		<div tab-id="1" class="tab first_tab active">
+
+			<section class="card-new"> 
+				<div class="front">
+					<!-- <time class="now_stus"><i class="fa fa-eye"></i> 1,23K</time> -->
+					<div class="badges-static"><span class="badges badges-red">票数 165</span></div>
+					<a href="dasie-content.html">
+						<img src="http://placehold.it/1136x560">
+						<h5>作品名称 xxxxxxxx</h5>
+					</a>
+					<div class="info">
+						<p>【分类】城市形象标志</p>
+						<p>【參賽】心想设计有限公司</p>
+					</div>
+					<div class="btnbar">
+						<button class="luann_btn blue_btn">Text</button>
+						<button class="luann_btn green_btn">Text</button>
+					</div>
+					<ul class="flex_box">
+						<li>
+							<a class="btn" href="#"><p>我要投票</p></a>
+						</li>
+					</ul>
+				</div>
+			</section>
+
+		</div>
+		<div tab-id="2" class="tab">
+
+			<section class="card-new"> 
+				<div class="front">
+					<!-- <time class="now_stus"><i class="fa fa-eye"></i> 1,23K</time> -->
+					<div class="badges-static"><span class="badges badges-red">票数 166</span></div>
+					<a href="dasie-content.html">
+						<img src="http://placehold.it/720x480">
+						<h5>作品名称 xxxxxxxx</h5>
+					</a>
+					<div class="info">
+						<p>【分类】城市形象标志</p>
+						<p>【參賽】心想设计有限公司</p>
+					</div>
+					<div class="btnbar">
+						<button class="luann_btn blue_btn">Text</button>
+						<button class="luann_btn green_btn">Text</button>
+					</div>
+					<ul class="flex_box">
+						<li>
+							<a class="btn" href="#"><p>我要投票</p></a>
+						</li>
+					</ul>
+				</div>
+			</section>
+
+		</div>
+		<div tab-id="3" class="tab">
+
+			<section class="tab3"> 
+				<h3>大賽抽獎</h3>
+				<!-- <div class="this_pict">
+					<img src="http://placehold.it/720x320/b68ad0/fff?text=代表圖 (翻翻樂)">
+					<img src="http://placehold.it/720x320/7399c4/fff?text=代表圖 (刮刮樂)">
+				</div> -->
+				<table class="tab_pict">
+					<tr>
+						<td>
+							<label for="modal-0"><h2>景點名稱</h2>
+							<img src="http://placehold.it/250x250/7399c4/fff?text=PICT 1"></label>
+						</td>
+						<td><label for="modal-0"><h2>景點名稱</h2><img src="http://placehold.it/250x250/97b3d3/fff?text=PICT 2"></label></td>
+						<td><label for="modal-0"><h2>景點名稱</h2><img src="http://placehold.it/250x250/7399c4/fff?text=PICT 3"></label></td>
+					</tr>
+					<tr>
+						<td><label for="modal-0"><h2>景點名稱</h2><img src="http://placehold.it/250x250/97b3d3/fff?text=PICT 4"></label></td>
+						<td><label for="modal-0"><h2>景點名稱</h2><img src="http://placehold.it/250x250/7399c4/fff?text=PICT 5"></label></td>
+						<td><label for="modal-0"><h2>景點名稱</h2><img src="http://placehold.it/250x250/97b3d3/fff?text=PICT 6"></label></td>
+					</tr>
+					<tr>
+						<td><label for="modal-0"><h2>景點名稱</h2><img src="http://placehold.it/250x250/7399c4/fff?text=PICT 7"></label></td>
+						<td><label for="modal-0"><h2>景點名稱</h2><img src="http://placehold.it/250x250/97b3d3/fff?text=PICT 8"></label></td>
+						<td><label for="modal-0"><h2>景點名稱</h2><img src="http://placehold.it/250x250/7399c4/fff?text=PICT 9"></label></td>
+					</tr>
+
+				</table>
+				<!-- <h3>抽獎辦法</h3> -->
+				<div class="method">
+					<!-- <p>xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx.</p> -->
+					<ul class="flex_box">
+						<li>
+							<a class="btn blue_bg" href="#0"><i class="fa fa-list"></i> 得獎名單</a>
+						</li>
+						<li>
+							<a class="btn green_bg" href="#0"><i class="fa fa-info"></i> 抽獎辦法</a>
+						</li>
+					</ul>
+				</div>
+				<!-- <h3>抽獎公告</h3>
+				<div class="box_outline">
+					<p>公告日期：yyyy/mm/dd</p>
+					<p>抽獎活動：天天投天天抽</p>
+					<p>得獎名單：共xx名</p>
+					<br>
+					<p>獎品名稱 x名</p>
+					<p>會員手機號碼 0918885*** 會員暱稱</p>
+					<br>
+					<p>三等獎 5名</p>
+					<div style="padding:0 .6rem;">
+						<table class="table">
+							<thead>
+								<tr>
+									<th>手機號碼</th>
+									<th>會員暱稱</th>
+								</tr>
+							</thead>
+							<tbody>
+							  <tr>
+								<td>0910112***</td>
+								<td>藍*樑</td>
+							  </tr>
+							  <tr>
+								<td>0989-XXXX-44</td>
+								<td>陳X婷</td>
+							  </tr>
+							  <tr>
+								<td>0928-XXXX-53</td>
+								<td>彭X慈</td>
+							  </tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="more_btn"><a href="#0">看更多...</a></div> -->
+				<h3>我的獎品</h3>
+				<ul id="item_list" class="item_list"></ul>
+				
+			</section>
+
+		</div>
+	</article>
+
+</main>
+
+<footer class="panel-footer">
+	<a target="_blank" href="http://www.miitbeian.gov.cn/">蘇ICP備15055858號 常州左右逢源股權投資有限公司版權所有</a>
+</footer>
+<a href="#0" class="cd-top"><div class="jSlider"><span></span></div></a>
+<input class="modal-state" id="modal-0" type="checkbox" />
+<div class="modal">
+  <label class="modal__bg" for="modal-0"></label>
+  <div class="modal__inner">
+	<label class="modal__close" for="modal-0"></label>
+	<header>Modal Title</header>
+
+	<div id="popContent">
+		<img src="http://placehold.it/720x320/ededed/666?text=PICTURE">
+		<p><strong>Sub Text</strong></p>
+		<p><strong class="blue">Text color</strong> <strong class="red">Text color</strong> <strong class="info">Text color</strong> <strong class="grey">Text color</strong></p>
+		<p>Text Text Text Text Text Text Text Text Text Text Text Text Text Text.</p>
+		<p>Text Text Text Text Text Text Text Text Text Text Text Text Text Text.</p>
+		<p>Text Text Text Text Text Text Text Text Text Text Text Text Text Text.</p>
+		<p>Text Text Text Text Text Text Text Text Text Text Text Text Text Text.</p>
+	</div><!-- #popContent End -->
+
+	<footer style="position: static;margin:1rem 0 0 0;">
+		<div style="padding:0;">
+			<button type="button" class="btn default"><label for="modal-0">Cancel / Close</label></button>
+			<button type="button" class="btn blue_bg">Confirm / Send</button>
+		</div>
+	</footer>
+  </div>
+</div>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src="asset/js/slideout.min.js"></script>
+<script src="asset/js/main.js"></script>
+<script src="asset/js/tabs_modal.js"></script>
+<script>
+var datd_text =[{
+		i_img:"http://icons.veryicon.com/png/File%20Type/Preview%20replacement%20icon/pict.png",i_title:"獎品名稱",i_text:"獎品說明",i_status:"獲獎",i_last:"10",i_quantity:"15",i_date:"yyyy/mm/dd",i_game:"[參加遊戲]"
+		},{
+		i_img:"http://icons.veryicon.com/png/File%20Type/Set%20Icons%20Aperture%20Image%20File/pict.png",i_title:"獎品名稱",i_text:"獎品說明",i_status:"獲獎",i_last:"5",i_quantity:"10",i_date:"yyyy/mm/dd",i_game:"[參加遊戲]"
+		},{
+		i_img:"http://icons.veryicon.com/png/File%20Type/Preview%20replacement%20icon/pict.png",i_title:"獎品名稱",i_text:"獎品說明",i_status:"獲獎",i_last:"11",i_quantity:"12",i_date:"yyyy/mm/dd",i_game:"[參加遊戲]"
+		}
+	];
+$.each(datd_text,function(index,obj)
+{
+	data_items = '<li>';
+	data_items += '<div><label for="modal-0"><img src="'+ obj.i_img +'"></label></div>';
+	data_items += '<div>';
+	data_items += '<strong>'+ obj.i_title +'</strong>';
+	data_items += '<p>'+ obj.i_text +'</p>';
+	data_items += '<p><time>'+ obj.i_date +' '+ obj.i_game +'</time></p>';
+	data_items += '<p><label class="type">'+ obj.i_status +'</label></p>';
+	data_items += '</div>';
+	//data_items += '<div>';
+	//data_items += '<table class="table">';
+	//data_items += '<tr>';
+	//data_items += '<th>'+ obj.i_last +'</th>';
+	//data_items += '<th>'+ obj.i_quantity +'</th>';
+	//data_items += '</tr>';
+	//data_items += '<tr>';
+	//data_items += '<td>剩 餘</td>';
+	//data_items += '<td>數 量</td>';
+	//data_items += '</tr>';
+	//data_items += '</table>';
+	//data_items += '</div>';
+	data_items += '</li>';
+	$('#item_list').append(data_items);
+});
+</script>
+
+</body>
+</html>
