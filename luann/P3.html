@@ -94,10 +94,30 @@ box-shadow: 0px 2px 6px rgba(0,0,0,.35);
 .tab3 h3:before {position:absolute;content:"";width:3px;background-color:#e42959;height: 1.17em;left: .6rem;}
 .tab3 .this_pict img {width:100%;}
 
-.tab3 .tab_pict {border__:3px solid #333;}
-.tab3 .tab_pict td {padding: 4px;border: 4px solid #dcdcdc;position:relative;overflow:hidden;width: 33.3333%;background-color__:#333;}
-.tab3 .tab_pict td h2 {text-align:center;font-size:90%;position__:absolute;bottom:0;color: #333;background-color:#fff;width: 100%;padding: .08rem 0;}
-.tab3 .tab_pict td img {width:100%;display:block;border:0;}
+.tab3 .lottery {padding:.35rem .12rem;overflow:hidden;background-color:#dcdcdc;}
+.tab3 .lottery li {width: 33.3333%;float:left;display:inline-block;animation: blinker 2.5s linear infinite;position:relative;overflow:hidden;}
+.tab3 .lottery li label {margin: .3rem;display: block;cursor: pointer;
+box-shadow: 0 2px 2px rgba(0, 0, 0, .2);
+-webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, .2);
+-moz-box-box-shadow: 0 2px 2px rgba(0, 0, 0, .2);
+}
+.tab3 .lottery li h2 {text-align:center;font-size:90%;position__:absolute;bottom:0;color: #333;background-color:#fff;width: 100%;padding: .08rem 0;}
+.tab3 .lottery li img {width:100%;display:block;border:0;}
+
+.tab3 .lottery_num {
+position:relative;
+text-align: center;
+letter-spacing: 1px;
+background-color: #c53b3b;padding: .35rem;color: #fff;
+-moz-text-shadow: 0px 1px 2px rgba(0,0,0,.5);
+-webkit-text-shadow: 0px 1px 2px rgba(0,0,0,.5);
+text-shadow: 0px 1px 2px rgba(0,0,0,.5);
+background: linear-gradient(360deg, rgb(0, 160, 206)0%, rgb(226, 211, 30)100%); 
+background: -moz-linear-gradient(360deg, rgb(0, 160, 206)0%, rgb(226, 211, 30)100%); 
+background: -webkit-linear-gradient(360deg, rgb(0, 160, 206)0%, rgb(226, 211, 30)100%); 
+background: -o-linear-gradient(360deg, rgb(0, 160, 206)0%, rgb(226, 211, 30)100%);
+}
+.tab3 .lottery_num label {font-size:x-large;margin-left: .4rem;position:absolute;}
 
 .tab3 p {padding:0 .6rem;}
 .method ul.flex_box {margin:0em;padding:.6em 0 1rem;list-style: none;display: -webkit-box;display: -webkit-flex;display: -ms-flexbox;display: flex;-webkit-box-orient: horizontal;-webkit-box-direction: normal;-webkit-flex-direction: row;-ms-flex-direction: row;flex-direction: row;-webkit-flex-wrap: nowrap;-ms-flex-wrap: nowrap;flex-wrap: nowrap;}
@@ -155,6 +175,30 @@ box-shadow: 0px 2px 5px rgba(0,0,0,.15);
 .popContent h2 {text-align:center;}
 .popContent img {width:100%;}
 /* END .modal box */
+
+/* STAR 2017/03/27 Flash */
+
+.blink_me {animation: blinker 1s linear infinite;}
+
+.tab3 .lottery__ li:first-child {-webkit-animation-delay: 0s;animation-delay: 0s;}
+.tab3 .lottery li:nth-child(2) {-webkit-animation-delay: .2s;animation-delay: .2s;}
+.tab3 .lottery li:nth-child(3) {-webkit-animation-delay: .4s;animation-delay: .4s;}
+.tab3 .lottery li:nth-child(4) {-webkit-animation-delay: .6s;animation-delay: .6s;}
+.tab3 .lottery li:nth-child(5) {-webkit-animation-delay: .8s;animation-delay: .8s;}
+.tab3 .lottery li:nth-child(6) {-webkit-animation-delay: 1s;animation-delay: 1s;}
+.tab3 .lottery li:nth-child(7) {-webkit-animation-delay: 1.2s;animation-delay: 1.2s;}
+.tab3 .lottery li:nth-child(8) {-webkit-animation-delay: 1.4s;animation-delay: 1.4s;}
+.tab3 .lottery li:last-child {-webkit-animation-delay: 1.6s;animation-delay: 1.6s;}
+
+@keyframes blinker {
+	20% { opacity: 0;}
+	20.05% { opacity: 1;}
+	20.1% { background-color:#fff;}
+	20.15% { background-color:#d2ff4c;}
+	40% { background-color:#dcdcdc;}
+ }
+
+/* END 2017/03/27 Flash */
 
 @media screen and (max-width: 980px) {
 	.this_cards li {width:100%;float:none;}
@@ -274,29 +318,26 @@ box-shadow: 0px 2px 5px rgba(0,0,0,.15);
 					<img src="http://placehold.it/720x320/b68ad0/fff?text=代表圖 (翻翻樂)">
 					<img src="http://placehold.it/720x320/7399c4/fff?text=代表圖 (刮刮樂)">
 				</div> -->
-				<table class="tab_pict">
-					<tr>
-						<td>
+				<div class="lottery_num">
+					顯示用戶目前可抽獎的機會次數<label>0</label>
+					<p>因為用戶沒有抽獎機會時 是不能參與抽獎<br>只能點及九宮格圖片看資訊</p>
+				</div>
+				<ul class="lottery">
+						<li>
 							<label for="modal-0">
 								<img src="http://image.8264.com/forum/201205/25/1153257ypx5yu2aoo2ow1i.jpg">
 								<h2>嘉峪关长城</h2>
 							</label>
-						</td>
-						<td><label for="modal-1"><img src="http://placehold.it/800x600/97b3d3/fff?text=PPT"><h2>景點名稱</h2></label></td>
-						<td><label for="modal-0"><img src="http://www.zhonghuayuwen.org/images/user/635967568576787732.jpg"><h2>景點名稱</h2></label></td>
-					</tr>
-					<tr>
-						<td><label for="modal-1"><img src="http://placehold.it/800x600/7399c4/fff?text=PPT"><h2>景點名稱</h2></label></td>
-						<td><label for="modal-0"><img src="http://www.jsguolv.com/upload/image/sight/0377020120325183057.jpg"><h2>景點名稱</h2></label></td>
-						<td><label for="modal-1"><img src="http://placehold.it/800x600/7399c4/fff?text=PPT"><h2>景點名稱</h2></label></td>
-					</tr>
-					<tr>
-						<td><label for="modal-0"><img src="http://www.jsguolv.com/upload/image/sight/0377120120325183057.jpg"><h2>景點名稱</h2></label></td>
-						<td><label for="modal-1"><img src="http://placehold.it/800x600/97b3d3/fff?text=PPT"><h2>景點名稱</h2></label></td>
-						<td><label for="modal-0"><img src="http://images.pccoo.cn/bar/2009910/20099109320465.jpg"><h2>景點名稱</h2></label></td>
-					</tr>
-
-				</table>
+						</li>
+						<li><label for="modal-1"><img src="http://placehold.it/800x600/97b3d3/fff?text=PPT"><h2>景點名稱</h2></label></li>
+						<li><label for="modal-0"><img src="http://www.zhonghuayuwen.org/images/user/635967568576787732.jpg"><h2>景點名稱</h2></label></li>
+						<li><label for="modal-1"><img src="http://placehold.it/800x600/7399c4/fff?text=PPT"><h2>景點名稱</h2></label></li>
+						<li><label for="modal-0"><img src="http://www.jsguolv.com/upload/image/sight/0377020120325183057.jpg"><h2>景點名稱</h2></label></li>
+						<li><label for="modal-1"><img src="http://placehold.it/800x600/7399c4/fff?text=PPT"><h2>景點名稱</h2></label></li>
+						<li><label for="modal-0"><img src="http://www.jsguolv.com/upload/image/sight/0377120120325183057.jpg"><h2>景點名稱</h2></label></li>
+						<li><label for="modal-1"><img src="http://placehold.it/800x600/97b3d3/fff?text=PPT"><h2>景點名稱</h2></label></li>
+						<li><label for="modal-0"><img src="http://images.pccoo.cn/bar/2009910/20099109320465.jpg"><h2>景點名稱</h2></label></li>
+				</ul>
 				<!-- <h3>抽獎辦法</h3> -->
 				<div class="method">
 					<!-- <p>xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx.</p> -->
