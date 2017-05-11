@@ -7,10 +7,7 @@
 <title>LuAnn Dasie</title>
 <link rel="stylesheet" href="asset/css/tabs_modal.css">
 <style>
-.panel___ {
-background: -webkit-linear-gradient(45deg, rgba(66, 183, 245, 0.8) 0%, rgba(66, 245, 189, 0.4) 100%);
-background: linear-gradient(45deg, rgba(193, 255, 136, 0.8) 0%, rgba(255, 113, 113, 0.4) 100%);
-}
+.panel {background:none;background-color: #efefef;}
 .row {margin-left: -15px;margin-right: -15px;}
 .row:before, .row:after {content: " ";display: table;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;clear: both;}
 .badges-static{left: -.3rem;}
@@ -28,9 +25,9 @@ background: linear-gradient(45deg, rgba(193, 255, 136, 0.8) 0%, rgba(255, 113, 1
 /* Card New Style */
 .card-new {margin:.4em .228rem .8em;color:#fff;position: relative;width:48%;float__: none;overflow__: hidden;text-align:left;-moz-box-shadow: 0px 2px 6px rgba(0,0,0,.6);-webkit-box-shadow: 0px 2px 6px rgba(0,0,0,.6);box-shadow: 0px 2px 6px rgba(0,0,0,.6);-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;}
 .card-new * {-webkit-transition: all .4s;-moz-transition: all .4s;transition: all .4s;}
-.card-new .front {background:#eaeff3;}
+.card-new .front {background:#fff;}
 .card-new .front img {width:100%;}
-.card-new .front h5 {font-size:1rem;color: #173956;padding:.4em 8px;border-bottom: 1px solid rgba(0,0,0,.08);margin-bottom:.5em;}
+.card-new .front h5 {font-size:1rem;color: #333;min-height:2em;padding:.4em 8px;border-bottom: 1px solid rgba(0,0,0,.08);margin-bottom:.5em;}
 
 .card-new .badges-static {left: -.18rem;}
 .card-new .badges {font-size:xx-small;}
@@ -68,12 +65,13 @@ background: linear-gradient(45deg, rgba(193, 255, 136, 0.8) 0%, rgba(255, 113, 1
 .card-new .back footer {position:static;flex-basis:2%;}
 .card-new .back h5 {font-size:1rem;border-bottom: 1px solid rgba(255,255,255,.35);padding:.4em 0;margin:8px .5em;border-left: 3px solid #ff4000;padding-left:.4em;}
 
-.card-new ul.flex_box {margin-top___:1em;padding:.6em 0;background-color:#fff;list-style: none;display: -webkit-box;display: -webkit-flex;display: -ms-flexbox;display: flex;-webkit-box-orient: horizontal;-webkit-box-direction: normal;-webkit-flex-direction: row;-ms-flex-direction: row;flex-direction: row;-webkit-flex-wrap: nowrap;-ms-flex-wrap: nowrap;flex-wrap: nowrap;}
+.card-new ul.flex_box {padding:.4em 0;background-color:#F0EFEB;list-style: none;display: -webkit-box;display: -webkit-flex;display: -ms-flexbox;display: flex;-webkit-box-orient: horizontal;-webkit-box-direction: normal;-webkit-flex-direction: row;-ms-flex-direction: row;flex-direction: row;-webkit-flex-wrap: nowrap;-ms-flex-wrap: nowrap;flex-wrap: nowrap;}
 .card-new ul.flex_box li {text-align: center;-webkit-box-flex: 1;box-flex: 1;-webkit-flex: 1;-ms-flex: 1;flex: 1;white-space: nowrap;}
-.card-new ul.flex_box li a {background-color: #356b9a;display: inline-block;text-align: center;width:95%;border: 1px solid rgba(255, 255, 255, .2);border-bottom: 3px solid rgba(255, 255, 255, .25);padding: .5rem 0 .5rem;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;}
-.card-new ul.flex_box li a:hover {background-color:#2b597f;}
+.card-new ul.flex_box li a {background-color:#93C42D;display: inline-block;text-align: center;width:95%;border: 1px solid rgba(255, 255, 255, .2);border-bottom: 3px solid rgba(0, 0, 0, 0.2);padding: .5rem 0 .5rem;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;}
+.card-new ul.flex_box li a:hover {background-color:#83af28;}
 .card-new ul.flex_box li a .yellow {color:#ffc926;}
-.card-new ul.flex_box li p {color:#fff;font-size__:1.2rem;}
+.card-new ul.flex_box li p {color:#fff;font-size:smaller;}
+.card-new ul.flex_box li p.vote{color:#333;line-height:3.2;}
 .card-new ul.flex_box li b {font-size: 18px;color: #fff;}
 
 .tabs-content{min-height__:300px;padding-bottom:2em;margin-top:3em;padding:.5rem 0 1rem;}
@@ -95,8 +93,8 @@ box-shadow: 0px 2px 6px rgba(0,0,0,.35);
 -moz-box-shadow: 0px 2px 6px rgba(0,0,0,.35);
 -webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;
 }
-.tab3 h3 {padding:.5rem .6rem .5rem 1rem;}
-.tab3 h3:before {position:absolute;content:"";width:3px;background-color:#356b9a;height: 1.17em;left: .6rem;}
+.tab3 h3 {padding:.5rem .6rem .5rem 1rem;color:#617E2C;}
+.tab3 h3:before {position:absolute;content:"";width:3px;background-color:#93C234;height: 1.17em;left: .6rem;}
 .tab3 .this_pict img {width:100%;}
 
 .tab3 .lottery {padding:.35rem .12rem;overflow:hidden;background-color:#dcdcdc;}
@@ -113,10 +111,10 @@ box-shadow: 0 2px 2px rgba(0, 0, 0, .2);
 position:relative;
 text-align: center;
 letter-spacing: 1px;
-background-color:#767d7d;padding: .35rem;color: #fff;
--moz-text-shadow: 0px 1px 2px rgba(0,0,0,.5);
--webkit-text-shadow: 0px 1px 2px rgba(0,0,0,.5);
-text-shadow: 0px 1px 2px rgba(0,0,0,.5);
+background-color:#f4f5ef;padding: .35rem;color: #333;
+-moz-text-shadow___: 0px 1px 2px rgba(0,0,0,.5);
+-webkit-text-shadow___: 0px 1px 2px rgba(0,0,0,.5);
+text-shadow___: 0px 1px 2px rgba(0,0,0,.5);
 background___: linear-gradient(360deg, rgb(0, 160, 206)0%, rgb(226, 211, 30)100%); 
 background___: -moz-linear-gradient(360deg, rgb(0, 160, 206)0%, rgb(226, 211, 30)100%); 
 background___: -webkit-linear-gradient(360deg, rgb(0, 160, 206)0%, rgb(226, 211, 30)100%); 
@@ -125,7 +123,7 @@ background___: -o-linear-gradient(360deg, rgb(0, 160, 206)0%, rgb(226, 211, 30)1
 .tab3 .lottery_num label {font-size:x-large;margin-left: .4rem;position:absolute;}
 
 .tab3 p {padding:0 .6rem;}
-.method ul.flex_box {margin:0em;padding:.6em 0 1rem;list-style: none;display: -webkit-box;display: -webkit-flex;display: -ms-flexbox;display: flex;-webkit-box-orient: horizontal;-webkit-box-direction: normal;-webkit-flex-direction: row;-ms-flex-direction: row;flex-direction: row;-webkit-flex-wrap: nowrap;-ms-flex-wrap: nowrap;flex-wrap: nowrap;}
+.method ul.flex_box {background-color:#F0EFEB;margin:0em;padding:.6em 0 1rem;list-style: none;display: -webkit-box;display: -webkit-flex;display: -ms-flexbox;display: flex;-webkit-box-orient: horizontal;-webkit-box-direction: normal;-webkit-flex-direction: row;-ms-flex-direction: row;flex-direction: row;-webkit-flex-wrap: nowrap;-ms-flex-wrap: nowrap;flex-wrap: nowrap;}
 .method ul.flex_box li {text-align: center;-webkit-box-flex: 1;box-flex: 1;-webkit-flex: 1;-ms-flex: 1;flex: 1;white-space: nowrap;}
 .method ul.flex_box li a {color:#fff;font-size:1rem;display: inline-block;text-align: center;width:95%;border: 1px solid rgba(255, 255, 255, .2);border-bottom: 3px solid rgba(255, 255, 255, .25);padding: .5rem 0 .5rem;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;}
 .method ul.flex_box li a:hover {}
@@ -180,7 +178,7 @@ box-shadow: 0px 2px 5px rgba(0,0,0,.15);
 
 /* STAR .modal box */
 .modal__inner {min-height:90%;}
-.modal__inner header {font-size: medium;border-left: 2px solid #356b9a;padding-left:.5em;margin-bottom:.8em;}
+.modal__inner header {font-size: medium;border-left: 2px solid #93C234;padding-left:.5em;margin-bottom:.8em;}
 
 .popContent {line-height: 1.4;}
 .popContent h3 {font-size:medium;}
@@ -213,6 +211,17 @@ box-shadow: 0px 2px 5px rgba(0,0,0,.15);
 	.this_cards li {width:100%;float:none;}
 	.tab3 .lottery li img {height: 5.77rem;}
 }
+
+/* 2017/05/03 Dasie Style*/
+.tabs-header li.active a {background-color: #ffad35;}
+.tabs-header .active a::after {box-shadow: 0 0 0px 2px #ce9017;}
+.tabs-header a {color:#888;}
+
+.ninja-btn span, .ninja-btn span:before, .ninja-btn span:after{background-color:#9E7D50!important;}
+.blue_bg {background-color:#FFAD35!important;}
+.info_bg {background-color:#92C52A!important;}
+.overlay_b {background: rgba(102,106,101,0.95)!important;}
+
 </style>
 </head>
 <body>
@@ -231,7 +240,7 @@ box-shadow: 0px 2px 5px rgba(0,0,0,.15);
 	</div>
 	<input type="checkbox" id="op">
 	<div class="lower">
-		<label for="op" style="color:#356b9a;">筛选 <i class="fa fa-filter"></i></label>
+		<label for="op" style="color: #bb7e1e;">筛选 <i class="fa fa-filter"></i></label>
 	</div>
 	<div class="overlay overlay-hugeinc overlay_b">
 		<label for="op"><i class="fa fa-times-circle"></i></label>
@@ -269,27 +278,35 @@ box-shadow: 0px 2px 5px rgba(0,0,0,.15);
 		<div tab-id="1" class="tab first_tab active">
 
 			<section style="width: 100%;position:relative;float:none;">
-				<h2 style="text-align:center;color:#fff;line-height:2;text-shadow:0 1px 2px rgba(0,0,0,.35);">嘉峪关市吉祥物设计大赛</h2>
-				<img style="width:100%;" src="http://placehold.it/940x470/8593b8/fff?text=嘉峪關的關城照片">
+				<h2 style="text-align:center;color: #fff;line-height:2;text-shadow: 0 1px 2px rgba(0,0,0,.5);position: absolute;width: 100%;bottom:4px;background: rgba(0, 0, 0, .12);">嘉峪关市吉祥物设计大赛
+				<small style="
+				color: rgba(255, 255, 255, .75);
+				font-size: medium;
+				display: block;
+				position: relative;
+				top: -.6em;">天天投票 時時抽獎</small></h2>
+				<img style="width:100%;box-shadow: 0 2px 3px rgba(0, 0, 0, .25);-webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, .25);" src="http://www.jsguolv.com/upload/image/sight/0377020120325183057.jpg">
 			</section>
 
 			<section class="card-new"> 
 				<div class="front">
-					<!-- <time class="now_stus"><i class="fa fa-eye"></i> 1,23K</time> -->
-					<div class="badges-static"><span class="badges badges-red">票数 165</span></div>
+					<!-- <time class="now_stus"><i class="fa fa-eye"></i> 1,23K</time>
+					<div class="badges-static"><span class="badges badges-red">票数 165</span></div> -->
 					<a href="dasie-content.html">
-						<img src="http://placehold.it/1136x560">
+						<img src="http://cdnimgs.srxsfjy.com/Portals/312/Images/Article/_thumbs/29c88d09-4b11-4a70-ac7e-3e9308e40b1d_720_480.jpg">
 						<h5>作品名称 xxxxxxxx</h5>
 					</a>
 					<div class="info">
-						<p>城市形象标志</p>
-						<p>心想设计有限公司</p>
+						<p>● 城市形象标志</p>
 					</div>
 					<div class="btnbar">
 						<button class="luann_btn blue_btn">Text</button>
 						<button class="luann_btn green_btn">Text</button>
 					</div>
 					<ul class="flex_box">
+						<li>
+							<p class="vote">xx 票</p>
+						</li>
 						<li>
 							<a class="btn" href="#"><p>我要投票</p></a>
 						</li>
@@ -300,21 +317,21 @@ box-shadow: 0px 2px 5px rgba(0,0,0,.15);
 
 			<section class="card-new"> 
 				<div class="front">
-					<!-- <time class="now_stus"><i class="fa fa-eye"></i> 1,23K</time> -->
-					<div class="badges-static"><span class="badges badges-red">票数 165</span></div>
 					<a href="dasie-content.html">
-						<img src="http://placehold.it/1136x560">
+						<img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQdBhIEO3W5jd-fUtLAj1MFAmdvireV5OMqHhR8B3oszTJAPJglkQ">
 						<h5>作品名称 xxxxxxxx</h5>
 					</a>
 					<div class="info">
-						<p>城市形象标志</p>
-						<p>心想设计有限公司</p>
+						<p>● 城市形象标志</p>
 					</div>
 					<div class="btnbar">
 						<button class="luann_btn blue_btn">Text</button>
 						<button class="luann_btn green_btn">Text</button>
 					</div>
 					<ul class="flex_box">
+						<li>
+							<p class="vote">xx 票</p>
+						</li>
 						<li>
 							<a class="btn" href="#"><p>我要投票</p></a>
 						</li>
@@ -327,15 +344,12 @@ box-shadow: 0px 2px 5px rgba(0,0,0,.15);
 
 			<section class="card-new"> 
 				<div class="front">
-					<!-- <time class="now_stus"><i class="fa fa-eye"></i> 1,23K</time> -->
-					<div class="badges-static"><span class="badges badges-red">票数 166</span></div>
 					<a href="dasie-content.html">
-						<img src="http://placehold.it/720x420">
+						<img src="http://placehold.it/720x480">
 						<h5>作品名称 xxxxxxxx</h5>
 					</a>
 					<div class="info">
-						<p>城市形象标志</p>
-						<p>心想设计有限公司</p>
+						<p>● 城市形象标志</p>
 					</div>
 					<div class="btnbar">
 						<button class="luann_btn blue_btn">Text</button>
@@ -343,94 +357,20 @@ box-shadow: 0px 2px 5px rgba(0,0,0,.15);
 					</div>
 					<ul class="flex_box">
 						<li>
+							<p class="vote">xx 票</p>
+						</li>
+						<li>
 							<a class="btn" href="#"><p>我要投票</p></a>
 						</li>
 					</ul>
 				</div>
 			</section>
 
-			<div class="row layout_33" style="margin:0;">
-				<section class="card-new"> 
-					<div class="front">
-						<!-- <time class="now_stus"><i class="fa fa-eye"></i> 1,23K</time> -->
-						<div class="badges-static"><span class="badges badges-red">票数 166</span></div>
-						<a href="dasie-content.html">
-							<img src="http://placehold.it/720x420">
-							<h5>作品名称 xxxxxxxx</h5>
-						</a>
-						<div class="info">
-							<p>城市形象标志</p>
-							<p>心想设计有限公司</p>
-						</div>
-						<div class="btnbar">
-							<button class="luann_btn blue_btn">Text</button>
-							<button class="luann_btn green_btn">Text</button>
-						</div>
-						<ul class="flex_box">
-							<li>
-								<a class="btn" href="#"><p>我要投票</p></a>
-							</li>
-						</ul>
-					</div>
-				</section>
-				<section class="card-new"> 
-					<div class="front">
-						<!-- <time class="now_stus"><i class="fa fa-eye"></i> 1,23K</time> -->
-						<div class="badges-static"><span class="badges badges-red">票数 166</span></div>
-						<a href="dasie-content.html">
-							<img src="http://placehold.it/720x420">
-							<h5>作品名称 xxxxxxxx</h5>
-						</a>
-						<div class="info">
-							<p>城市形象标志</p>
-							<p>心想设计有限公司</p>
-						</div>
-						<div class="btnbar">
-							<button class="luann_btn blue_btn">Text</button>
-							<button class="luann_btn green_btn">Text</button>
-						</div>
-						<ul class="flex_box">
-							<li>
-								<a class="btn" href="#"><p>我要投票</p></a>
-							</li>
-						</ul>
-					</div>
-				</section>
-				<section class="card-new"> 
-					<div class="front">
-						<!-- <time class="now_stus"><i class="fa fa-eye"></i> 1,23K</time> -->
-						<div class="badges-static"><span class="badges badges-red">票数 166</span></div>
-						<a href="dasie-content.html">
-							<img src="http://placehold.it/720x420">
-							<h5>作品名称 xxxxxxxx</h5>
-						</a>
-						<div class="info">
-							<p>城市形象标志</p>
-							<p>心想设计有限公司</p>
-						</div>
-						<div class="btnbar">
-							<button class="luann_btn blue_btn">Text</button>
-							<button class="luann_btn green_btn">Text</button>
-						</div>
-						<ul class="flex_box">
-							<li>
-								<a class="btn" href="#"><p>我要投票</p></a>
-							</li>
-						</ul>
-					</div>
-				</section>
-
-			</div><!-- /.Layout_33 -->
-
 		</div>
 		<div tab-id="3" class="tab">
 
 			<section class="tab3"> 
 				<h3>大賽抽獎</h3>
-				<!-- <div class="this_pict">
-					<img src="http://placehold.it/720x320/b68ad0/fff?text=代表圖 (翻翻樂)">
-					<img src="http://placehold.it/720x320/7399c4/fff?text=代表圖 (刮刮樂)">
-				</div> -->
 				<div class="lottery_num">
 					顯示用戶目前可抽獎的機會次數<label>0</label>
 					<p>因為用戶沒有抽獎機會時 是不能參與抽獎<br>只能點及九宮格圖片看資訊</p>
@@ -451,9 +391,7 @@ box-shadow: 0px 2px 5px rgba(0,0,0,.15);
 						<li><label for="modal-1"><img src="http://placehold.it/800x600/97b3d3/fff?text=PPT"><h2>景點名稱</h2></label></li>
 						<li><label for="modal-0"><img src="http://images.pccoo.cn/bar/2009910/20099109320465.jpg"><h2>景點名稱</h2></label></li>
 				</ul>
-				<!-- <h3>抽獎辦法</h3> -->
 				<div class="method">
-					<!-- <p>xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx.</p> -->
 					<ul class="flex_box">
 						<li>
 							<a class="btn blue_bg" href="#0"><i class="fa fa-list"></i> 得獎名單</a>
@@ -463,42 +401,6 @@ box-shadow: 0px 2px 5px rgba(0,0,0,.15);
 						</li>
 					</ul>
 				</div>
-				<!-- <h3>抽獎公告</h3>
-				<div class="box_outline">
-					<p>公告日期：yyyy/mm/dd</p>
-					<p>抽獎活動：天天投天天抽</p>
-					<p>得獎名單：共xx名</p>
-					<br>
-					<p>獎品名稱 x名</p>
-					<p>會員手機號碼 0918885*** 會員暱稱</p>
-					<br>
-					<p>三等獎 5名</p>
-					<div style="padding:0 .6rem;">
-						<table class="table">
-							<thead>
-								<tr>
-									<th>手機號碼</th>
-									<th>會員暱稱</th>
-								</tr>
-							</thead>
-							<tbody>
-							  <tr>
-								<td>0910112***</td>
-								<td>藍*樑</td>
-							  </tr>
-							  <tr>
-								<td>0989-XXXX-44</td>
-								<td>陳X婷</td>
-							  </tr>
-							  <tr>
-								<td>0928-XXXX-53</td>
-								<td>彭X慈</td>
-							  </tr>
-							</tbody>
-						</table>
-					</div>
-				</div>
-				<div class="more_btn"><a href="#0">看更多...</a></div> -->
 				<h3>我的獎品</h3>
 				<ul id="item_list" class="item_list"></ul>
 				
@@ -551,7 +453,7 @@ box-shadow: 0px 2px 5px rgba(0,0,0,.15);
 
 	<footer style="position: static;margin:1rem 0 0 0;">
 		<div style="padding:0;">
-			<button type="button" class="btn default"><label for="modal-0">Cancel / Close</label></button>
+			<button type="button" class="btn yellow_bg"><label for="modal-0">Cancel / Close</label></button>
 			<!-- <button type="button" class="btn blue_bg">Confirm / Send</button> -->
 		</div>
 	</footer>
