@@ -44,24 +44,24 @@
 			<div class="tabs-content form-style">
 				<form>
 					<div tab-id="1" class="tab active" style="width: 95%;margin: 0 auto;">
-						<div class="form-row">
+						<section class="form-row">
 							<label for="userAccount">登入帐号</label>
 							<div class="ipt_ico user_ico">
 								<input id="userAccount" name="userAccount" placeholder="请输入手机号或是电邮">
 							</div>
-						</div>
-						<div class="form-row">
+						</section>
+						<section class="form-row">
 							<label for="userPwd">登入密码</label>
 							<div class="ipt_ico userPwd">
 								<input type="password" id="userPwd" placeholder="请输入密码">
 							</div>
-						</div>
+						</section>
 						<footer class="tool_bar">
 							<button type="button" id="btLogin" class="btn blue_bg" onclick="sendForm()">Login</button>
 							<!-- <button type="button" id="btLogout" class="btn red_bg" onclick="logout()">Logout</button> -->
 						</footer>
 						<hr id="seven" data-symbol="OR">
-						<div class="social_bar">
+						<section class="social_bar">
 							<!-- <button class="social-signin facebook">Log in with facebook</button>
 							<button class="social-signin twitter">Log in with Twitter</button>
 							<button class="social-signin google">Log in with Google+</button> -->
@@ -70,41 +70,57 @@
 							<a href="#" class="btn-social btn-google"><i class="fa fa-google"></i> Sign in with Google</a>
 							<!-- <a href="#" class="btn-social btn-twitter"><i class="fa fa-twitter"></i> Sign in with Twitter</a>
 							<a href="#" class="btn-social btn-linkedin"><i class="fa fa-linkedin"></i> Sign in with Linkedin</a> -->
-						</div>
+						</section>
 					</div>
 				</form>
 
 				<div tab-id="2" class="tab">
-					<div class="form-row">
+					<style>
+						.for_msg {}
+						.for_msg button {font-size:small;text-align:center;color:#fff;white-space:nowrap;padding:.5rem .8rem;}
+						.for_msg input {width:90%!important;border:1px solid #ccc;line-height: 2;}
+						.for_msg ul.this_cell {display:table;width: 100%;}
+						.for_msg ul.this_cell li{display:table-cell;}
+						.for_msg ul.this_cell li:last-child {text-align:center;width:35%;}
+					</style>
+					<section class="form-row for_msg">
+						<label><b>*</b>手机号</label>
+						<ul class="this_cell">
+							<li><input type="tel" name="mobile" placeholder="请填写手机号码"></li>
+							<li><button id="id_verfiyMobile_a" type="button" onclick="sendSmsMsg()" class="btn green_bg">发送短信验证码</button></li>
+						</ul>
+					</section>
+					<section class="form-row for_msg">
+						<label><b>*</b>验证码</label>
+						<ul class="this_cell">
+							<li><input type="text" name="email" placeholder="请填写接获的验证码"></li>
+							<li><button id="id_verfiyMobile_re" type="button" onclick="verifyMobileCode()" class="btn green_bg">进行身分验证</button></li>
+						</ul>
+					</section>
+					<section class="form-row">
 						<label><b>*</b>电 邮</label>
-						<div class="">
+						<div>
 							<input type="email" name="email" placeholder="请输入电邮">
 						</div>
-					</div>
-					<div class="form-row">
-						<label><b>*</b>手机号</label>
-						<div class="">
-							<input type="tel" name="mobile" placeholder="请输入手机号(半形数字)">
-						</div>
-					</div>
-					<div class="form-row">
+					</section>
+					<section class="form-row">
 						<label>昵 称</label>
-						<div class="">
+						<div>
 							<input type="text" id="nickName" name="nickName" placeholder="请输入5-20个字昵称" aria-invalid="true">
 						</div>
-					</div>
-					<div class="form-row">
+					</section>
+					<section class="form-row">
 						<label><b>*</b>输入登入密码</label>
-						<div class="">
+						<div>
 							<input type="password" id="userPwd" name="userPwd" placeholder="新密码">
 						</div>
-					</div>
-					<div class="form-row">
+					</section>
+					<section class="form-row">
 						<label><b>*</b>再输入一次密码</label>
-						<div class="">
+						<div>
 							<input type="password" id="userPwdCheck" placeholder="确认密码">
 						</div>
-					</div>
+					</section>
 
 					<section class="checkbox">
 						<input class="check_terms" id="knowRisk" name="knowRisk" type="checkbox" value="1">
@@ -120,14 +136,14 @@
 						<button type="button" class="btn blue_bg" onclick="changePwd()">Sign Up</button>
 					</footer>
 					<hr id="seven" data-symbol="OR">
-					<div class="social_bar">
+					<section class="social_bar">
 						<a href="#" class="btn-social btn-weixin"><i class="fa fa-weixin"></i> Sign Up with Weixin</a>
 						<a href="#" class="btn-social btn-facebook"><i class="fa fa-facebook"></i> Sign Up with Facebook</a>
 						<a href="#" class="btn-social btn-google"><i class="fa fa-facebook"></i> Sign Up with Google</a>
 						<!-- <button class="social-signin facebook">Sign Up with facebook</button>
 						<button class="social-signin twitter">Sign Up with Twitter</button>
 						<button class="social-signin google">Sign Up with Google+</button> -->
-					</div>
+					</section>
 				</div>
 
 			</div>
