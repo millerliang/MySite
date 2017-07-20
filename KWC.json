@@ -23,6 +23,42 @@
 			"Stop" : "13:15",
 			"Arrivals" : "01:04",
 			"Discounted" : "65折起"
+		},{
+			"Trips" : "1637",
+			"Start" : "12:21",
+			"Stop" : "13:23",
+			"Arrivals" : "01:02",
+			"Discounted" : "65折起"
+		},{
+			"Trips" : "0833",
+			"Start" : "14:11",
+			"Stop" : "15:15",
+			"Arrivals" : "01:04",
+			"Discounted" : "8折起"
+		},{
+			"Trips" : "1649",
+			"Start" : "14:21",
+			"Stop" : "15:23",
+			"Arrivals" : "01:02",
+			"Discounted" : "8折起"
+		},{
+			"Trips" : "0837",
+			"Start" : "15:11",
+			"Stop" : "16:15",
+			"Arrivals" : "01:04",
+			"Discounted" : "8折起"
+		},{
+			"Trips" : "1541",
+			"Start" : "16:36",
+			"Stop" : "17:42",
+			"Arrivals" : "01:06",
+			"Discounted" : "65折起"
+		},{
+			"Trips" : "1545",
+			"Start" : "17:36",
+			"Stop" : "18:42",
+			"Arrivals" : "01:06",
+			"Discounted" : "8折起"
 		}
 	]
 }
