@@ -1,0 +1,22 @@
+{
+	"thsrcTimeList" : [{
+			"Trips" : "0817",
+			"Start" : "10:11",
+			"Stop" : "11:15",
+			"Arrivals" : "01:04",
+			"Discounted" : "65折起"
+		},{
+			"Trips" : "0625",
+			"Start" : "10:21",
+			"Stop" : "11:23",
+			"Arrivals" : "01:02",
+			"Discounted" : "65折起"
+		},{
+			"Trips" : "0821",
+			"Start" : "11:11",
+			"Start" : "12:15",
+			"Arrivals" : "01:04",
+			"Discounted" : "8折起"
+		}
+	]
+}
