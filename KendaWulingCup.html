@@ -8,7 +8,8 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 <style>
-body {background-color:#f9f9f9;}
+*{box-sizing: border-box;-webkit-border-box;-moz-box-sizing: border-box;}
+body {background-color:#f9f9f9;margin:0;padding:0;}
 .banner_bg {background: url('http://www.cycling-update.info/uploads/05_tour/01_taiwan-ride/20161116/C92T01_1.jpg') no-repeat center center;-webkit-background-size: cover;background-size: cover;}
 .text-shadow{-moz-text-shadow: 0px 2px 3px rgba(0,0,0,.5);-webkit-text-shadow: 0px 2px 3px rgba(0,0,0,.5);text-shadow: 0px 2px 3px rgba(0,0,0,.5);}
 .white {color:white;}
@@ -22,7 +23,7 @@ body {background-color:#f9f9f9;}
 .table {font-size:small;}
 .table th,.table td{text-align:center;}
 .table tbody td:first-child{color: #e86d07;}
-.table td em{background: #f00d67;padding:3px 6px;min-width: 48px;color: #fff;line-height: 1;font-style: normal;}
+.table td em{background: #f00d67;padding:3px 6px;min-width:88%;display:inline-block;color: #fff;line-height: 1;font-style: normal;}
 </style>
 </head>
 <body>
@@ -30,7 +31,7 @@ body {background-color:#f9f9f9;}
 		<article class="banner_bg mb-4">
 			<header class="container pt-5 pb-2">
 				<h2 class="white text-shadow">【2017第9屆建大輪胎武嶺盃自行車大會師】</h2>
-				<p class="pull-right"><small class="white text-shadow">最後更新</small> <time class="badge badge-default UpDateTime">2017/07/20 PM 14:00</time></p>
+				<p class="pull-right"><small class="white text-shadow">最後更新</small> <time class="badge badge-default UpDateTime"></time></p>
 				<h6 class="white text-shadow pl-2">距離：57公里 / 名額：1000名</h6>
 				<hr class="py-2">
 				<div class="my-5 py-5 hidden-xs-down"></div>
@@ -145,7 +146,7 @@ body {background-color:#f9f9f9;}
 			</section>
 			<hr class="my-4">
 			<section class="row">
-				<div class="col-sm-6">
+				<div class="col-sm-6 mb-3">
 					<h5><i class="fa fa-train grey"></i> 台灣高鐵</h5>
 					<div><i class="fa fa-location-arrow text-muted"></i> 台北站 → 台中站</div>
 					<table class="table table-striped table-hover">
@@ -159,20 +160,6 @@ body {background-color:#f9f9f9;}
 							</tr>
 						</thead>
 						<tbody id="thsrc">
-							<tr>
-								<td>0817</td>
-								<td>10:11</td>
-								<td>11:15</td>
-								<td>01:04</td>
-								<td><em>65折起</em></td>
-							</tr>
-							<tr>
-								<td>0625</td>
-								<td>10:21</td>
-								<td>11:23</td>
-								<td>01:02</td>
-								<td><em>65折起</em></td>
-							</tr>
 						</tbody>
 					</table>
 				</div>
@@ -193,7 +180,7 @@ body {background-color:#f9f9f9;}
 			<p class="mb-3">&nbsp;</p>
 		</article>
 		<article class="container-fluidr" style="background-color:#333;">
-			<address class="container footer_bg white py-2">
+			<div class="container footer_bg white pt-3 pb-4">
 				<span class="grey mb-2 d-block"><i class="fa fa-angle-right"></i> 活動洽詢</span>
 				<section class="row mb-1">
 					<div class="col-sm-6">南投縣體育會自由車委員會</div>
@@ -203,17 +190,21 @@ body {background-color:#f9f9f9;}
 					<div class="col-sm-6">網址︰<a class="white" href="http://www.letsgobike.com.tw" target="_blank">http://www.letsgobike.com.tw</a></div>
 					<div class="col-sm-6">地址：南投縣埔里鎮中華路238號</div>
 				</section>
-				<h6>自由車委員會總幹事 張世義 <a class="white" href="mailto:s341@mail.plvs.ntct.edu-6.tw"><i class="fa fa-envelope-o"></i> s341@mail.plvs.ntct.edu.tw</a></h6>
-			</address>
+				<h6 class="m-0">自由車委員會總幹事 張世義 <a class="white" href="mailto:s341@mail.plvs.ntct.edu-6.tw"><i class="fa fa-envelope-o"></i> s341@mail.plvs.ntct.edu.tw</a></h6>
+			</div>
 		</article>
 	</main>
 <!-- jQuery first, then Tether, then Bootstrap JS. -->
-<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+<!-- <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script> -->
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
 <script src="https://unpkg.com/vue/dist/vue.js"></script>
 <script>
 $(document).ready(function () {
+	
+	// 檔案更新時間
+	$(".UpDateTime").text("2017/07/20 PM 18:00");
 
 	var param = {};
 	var obj = {};
@@ -230,11 +221,11 @@ $(document).ready(function () {
 	.success(function (data) {
 		$.each(data.thsrcTimeList, function (index, d) {
 			item_lists = '<tr>';
-			item_lists += '<td>'+ d.url +'</td>';
-			item_lists += '<td>'+ d.url +'</td>';
-			item_lists += '<td>'+ d.url +'</td>';
-			item_lists += '<td>'+ d.url +'</td>';
-			item_lists += '<td><em>'+ d.url +'</em></td>';
+			item_lists += '<td>'+ d.Trips +'</td>';
+			item_lists += '<td>'+ d.Start +'</td>';
+			item_lists += '<td>'+ d.Stop +'</td>';
+			item_lists += '<td>'+ d.Arrivals +'</td>';
+			item_lists += '<td><em>'+ d.Discounted +'</em></td>';
 			item_lists += '</tr>';
 			$('#thsrc').append(item_lists);
 		});
