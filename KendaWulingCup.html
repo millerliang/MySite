@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>第9屆建大武嶺盃 (西進)</title>
+<meta http-equiv="x-ua-compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <!-- Bootstrap CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
@@ -39,7 +40,7 @@ body {background-color:#f9f9f9;margin:0;padding:0;}
 					<a class="btn btn-sm btn-primary mr-2" href="http://www.bikemap.net/route/1683207?134141829682557" target="_blank" role="button">
 						<i class="fa fa-map"></i> 官方競賽路線圖
 					</a>
-					<a class="btn btn-sm btn-secondary" href="https://www.google.com/maps/d/u/1/edit?hl=zh-TW&authuser=1&mid=1HlH7eQwJPnu5w7O3_1LPkiPbyrE" target="_blank" role="button">
+					<a class="btn btn-sm btn-secondary" href="https://drive.google.com/open?id=1HlH7eQwJPnu5w7O3_1LPkiPbyrE&usp=sharing" target="_blank" role="button">
 						<i class="fa fa-map-marker red"></i> Google Map 路線標示
 					</a>
 				</p>
@@ -96,24 +97,28 @@ body {background-color:#f9f9f9;margin:0;padding:0;}
 			<hr class="my-4">
 			<section>
 				<h4><i class="fa fa-user-circle-o grey"></i> 選手檢錄</h4>
+				<div class="pull-right">
+					武嶺天氣
+					<div id="weather"></div>
+				</div>
 				<dl class="row">
-					<dt class="col-sm-2">05：00-05:20</dt>
+					<dt class="col-sm-2 text-right">05：00-05:20</dt>
 					<dd class="col-sm-9">國道六號埔里交流道下方平面道路</dd>
-					<dt class="col-sm-2">05:30</dt>
+					<dt class="col-sm-2 text-right">05:30</dt>
 					<dd class="col-sm-9">嗚槍出發 <small>(每5分鐘放行1組)</small></dd>
 					<div class="py-4 my-1"></div>
-					<dt class="col-sm-2"><i class="fa fa-angle-right"></i> 第一補給點 <small>(醫務站)</small></dt>
+					<dt class="col-sm-2 text-right"><i class="fa fa-angle-right"></i> 第一補給點</dt>
 					<dd class="col-sm-9">清境龍莊日式會館 <small>(南投縣仁愛鄉大同村壽亭巷30號，台14甲線6.3K)</small></dd>
-					<dt class="col-sm-2"><i class="fa fa-angle-right"></i> 第二補給點 <small>(醫務站)</small></dt>
+					<dt class="col-sm-2 text-right"><i class="fa fa-angle-right"></i> 第二補給點</dt>
 					<dd class="col-sm-9">台14甲線16K小停車場</dd>
-					<dt class="col-sm-2"><i class="fa fa-angle-right"></i> 第三補給點 <small>(醫務站)</small></dt>
+					<dt class="col-sm-2 text-right"><i class="fa fa-angle-right"></i> 第三補給點</dt>
 					<dd class="col-sm-9">鳶峰停車場台 <small>(台14甲24.3K)</small></dd>
 				</dl>
 			</section>
 			<hr class="my-4">
 			<h4><i class="fa fa-bed grey"></i> 住宿</h4>
 			<section class="row">
-				<ul class="list-unstyled col-sm-5">
+				<ul class="list-unstyled col-sm-6">
 					<li class="media">
 						<label class="d-flex mr-3">
 							<img class="img-thumbnail hotelImg" src="https://t-ec.bstatic.com/images/hotel/square200/590/59071429.jpg" alt="永樂園青年旅館">
@@ -146,10 +151,10 @@ body {background-color:#f9f9f9;margin:0;padding:0;}
 			</section>
 			<hr class="my-4">
 			<section class="row">
-				<div class="col-lg-8 col-md-6 mb-3">
+				<div class="col-lg-7 col-md-6 mb-3">
 					<h5><i class="fa fa-train grey"></i> 台灣高鐵</h5>
-					<div><i class="fa fa-location-arrow text-muted"></i> 台北站 → 台中站</div>
-					<table class="table table-striped table-hover">
+					<div class="mb-1"><i class="fa fa-location-arrow text-muted"></i> 台北站 → 台中站</div>
+					<table class="table table-striped table-hover mt-3">
 						<thead>
 							<tr>
 								<th>車次</th>
@@ -163,10 +168,10 @@ body {background-color:#f9f9f9;margin:0;padding:0;}
 						</tbody>
 					</table>
 				</div>
-				<div class="col-lg-4 col-md-6">
+				<div class="col-lg-5 col-md-6">
 					<h5><i class="fa fa-bus grey"></i> 巴士客運</h5>
 					<p class="mt-4 pt-1">國光客運<span class="mx-2 text-muted">‧</span><a href="http://www.kingbus.com.tw/ticketPriceResult.php?sid=143" target="_blank">連結網址</a></p>
-					<p>南投客運<span class="mx-2 text-muted">‧</span><a href="http://www.ntbus.com.tw/lisin.html" target="_blank">連結網址</a></p>
+					<p>南投客運<span class="mx-2 text-muted">‧</span><a href="http://www.ntbus.com.tw/hsr14.html" target="_blank">連結網址</a></p>
 					<p>【1657】 高鐵台中站 → 南投<span class="mx-2 text-muted">‧</span><a href="http://www.ubus.com.tw/html/line/show.php?num=67" target="_blank">連結網址</a></p>
 					<span class="text-muted_"><i class="fa fa-ticket"></i> 票價資訊</span>
 					<section class="row">
@@ -179,7 +184,7 @@ body {background-color:#f9f9f9;margin:0;padding:0;}
 		</article>
 		<article class="container-fluidr" style="background-color:#333;">
 			<div class="container footer_bg white pt-3 pb-4">
-				<span class="grey mb-2 d-block"><i class="fa fa-angle-right"></i> 活動洽詢</span>
+				<span class="grey mb-2 d-block"><i class="fa fa-address-book-o"></i> 活動洽詢</span>
 				<section class="row mb-1">
 					<div class="col-sm-6">南投縣體育會自由車委員會</div>
 					<div class="col-sm-6">電話︰（049）2997837　傳真：（049）2900050</div>
@@ -195,14 +200,31 @@ body {background-color:#f9f9f9;margin:0;padding:0;}
 <!-- jQuery first, then Tether, then Bootstrap JS. -->
 <!-- <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script> -->
 <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
-<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script> -->
+<!-- <script src="https://unpkg.com/vue/dist/vue.js"></script> -->
 <script>
+$.ajax({ 
+	type:'GET',
+	dataType:'xml',
+	url:'', 
+	success:function(xml){
+		var myTitle;
+		var myLink;
+		$('item',xml).each(function(e){
+			myTitle=$('title',this).text();
+			myLink=$('link',this).text();
+			$('<a/>').attr('href',myLink).attr('target','_blank').text(myTitle).appendTo($('#weather'));
+			$('<br/>').appendTo($('#weather'));
+		});
+		alert($('#weather').html());
+	}
+})
+
 $(document).ready(function () {
 	
 	// 檔案更新時間
-	$(".UpDateTime").text("2017/07/20 PM 18:30");
+	$(".UpDateTime").text("2017/07/21 PM 12:00");
 
 	var param = {};
 	var obj = {};
@@ -210,6 +232,10 @@ $(document).ready(function () {
 
 	param.jsonData = JSON.stringify(obj);
 
+	// Get Weather
+	
+
+	// 台灣高鐵時刻表
 	$.ajax({
 		url: "KWC.json",
 		//url: "http://twmac.no-ip.com/KWC.json",
