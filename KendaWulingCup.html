@@ -20,7 +20,7 @@ h4 i.fa,h5 i.fa {font-size:80%;position:relative;top: -.13rem;margin-right:.15re
 .orange {color:#ff8000}
 .green {color:#60bf00}
 .grey {color:#a8a8a8}
-.footer_bg {background-color:#333;}
+.footer_bg {background: url('https://www.toptal.com/designers/subtlepatterns/patterns/footer_lodyas.png') repeat #333;background-size:75% auto;box-shadow: inset 0 2px 12px rgba(0,0,0,.35);-webkit-box-shadow: inset 0 2px 12px rgba(0,0,0,.35);-moz-box-shadow: inset 0 2px 12px rgba(0,0,0,.35);}
 .hotelImg {max-width:72px;max-height:72px;}
 .table {font-size:small;}
 .table th,.table td{text-align:center;}
@@ -217,12 +217,12 @@ h4 i.fa,h5 i.fa {font-size:80%;position:relative;top: -.13rem;margin-right:.15re
 			</section>
 			<p class="mb-3">&nbsp;</p>
 		</article>
-		<article class="container-fluidr" style="background-color:#333;">
-			<div class="container footer_bg white pt-3 pb-4">
-				<span class="grey mb-2 d-block"><i class="fa fa-address-book-o"></i> 活動洽詢</span>
+		<article class="container-fluidr footer_bg">
+			<div class="container white pt-3 pb-4">
+				<span class="grey mb-2 d-block"><i class="fa fa-address-book-o text-warning"></i> 活動洽詢</span>
 				<section class="row mb-1">
 					<div class="col-sm-6">南投縣體育會自由車委員會</div>
-					<div class="col-sm-6">電話︰（049）2997837　傳真：（049）2900050</div>
+					<div class="col-sm-6">電話︰(049)2997837</div>
 				</section>
 				<section class="row mb-2">
 					<div class="col-sm-6">網址︰<a class="white" href="http://www.letsgobike.com.tw" target="_blank">http://www.letsgobike.com.tw</a></div>
@@ -239,6 +239,21 @@ h4 i.fa,h5 i.fa {font-size:80%;position:relative;top: -.13rem;margin-right:.15re
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script> -->
 <!-- <script src="https://unpkg.com/vue/dist/vue.js"></script> -->
 <script>
+$(function () {
+  $.ajax({
+    type: "GET",
+    url: "http://opendata.cwb.gov.tw/opendata/DIV2/O-A0001-001.xml",
+    dataType: "xml",
+    error: function (e) {
+      console.log('oh no');
+    },
+    success: function (e) {
+      var xml = e;
+      console.log($(xml));
+    }
+  });
+});
+
 $(document).ready(function () {
 
 	// 檔案更新時間
