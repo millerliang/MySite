@@ -12,11 +12,17 @@
 			"Arrivals" : "01:02",
 			"Discounted" : "65折起"
 		},{
+			"Trips" : "0627",
+			"Start" : "10:46",
+			"Stop" : "11:46",
+			"Arrivals" : "01:00",
+			"Discounted" : "8折起"
+		},{
 			"Trips" : "0821",
 			"Start" : "11:11",
 			"Stop" : "12:15",
 			"Arrivals" : "01:04",
-			"Discounted" : "8折起"
+			"Discounted" : "65折起"
 		},{
 			"Trips" : "0825",
 			"Start" : "12:11",
@@ -29,6 +35,18 @@
 			"Stop" : "13:23",
 			"Arrivals" : "01:02",
 			"Discounted" : "65折起"
+		},{
+			"Trips" : "0829",
+			"Start" : "13:11",
+			"Stop" : "14:15",
+			"Arrivals" : "01:04",
+			"Discounted" : "65折起"
+		},{
+			"Trips" : "1643",
+			"Start" : "13:21",
+			"Stop" : "14:23",
+			"Arrivals" : "01:02",
+			"Discounted" : "8折起"
 		},{
 			"Trips" : "0833",
 			"Start" : "14:11",
@@ -48,6 +66,12 @@
 			"Arrivals" : "01:04",
 			"Discounted" : "8折起"
 		},{
+			"Trips" : "0841",
+			"Start" : "16:11",
+			"Stop" : "17:15",
+			"Arrivals" : "01:06",
+			"Discounted" : "8折起"
+		},{
 			"Trips" : "1541",
 			"Start" : "16:36",
 			"Stop" : "17:42",
@@ -58,13 +82,13 @@
 			"Start" : "17:36",
 			"Stop" : "18:42",
 			"Arrivals" : "01:06",
-			"Discounted" : "8折起"
+			"Discounted" : "65折起"
 		},{
-			"Trips" : "1549",
-			"Start" : "18:36",
-			"Stop" : "19:42",
+			"Trips" : "1553",
+			"Start" : "19:36",
+			"Stop" : "20:42",
 			"Arrivals" : "01:06",
-			"Discounted" : "8折起"
+			"Discounted" : "65折起"
 		},{
 			"Trips" : "1557",
 			"Start" : "20:36",
@@ -80,6 +104,18 @@
 		},{
 			"Trips" : "1563",
 			"Start" : "22:05",
+			"Stop" : "23:29",
+			"Arrivals" : "01:03",
+			"Discounted" : "65折起"
+		},{
+			"Trips" : "0295",
+			"Start" : "22:16",
+			"Stop" : "23:05",
+			"Arrivals" : "00:49",
+			"Discounted" : "8折起"
+		},{
+			"Trips" : "0565",
+			"Start" : "22:26",
 			"Stop" : "23:29",
 			"Arrivals" : "01:03",
 			"Discounted" : "65折起"
