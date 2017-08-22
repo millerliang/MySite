@@ -241,7 +241,6 @@ h4 i.fa,h5 i.fa {font-size:80%;position:relative;top: -.13rem;margin-right:.15re
 			</div>
 		</article>
 	</main>
-	<div id="load"></div>
 <!-- jQuery first, then Tether, then Bootstrap JS. -->
 <!-- <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script> -->
 <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
@@ -251,7 +250,7 @@ h4 i.fa,h5 i.fa {font-size:80%;position:relative;top: -.13rem;margin-right:.15re
 <script>
 $(document).ready(function () {
 	// 檔案更新時間
-	$(".UpDateTime").text("2017/08/22 PM 14:00");
+	$(".UpDateTime").text("2017/08/22 PM 14:30");
 
 	var param = {};
 	var obj = {};
@@ -260,38 +259,12 @@ $(document).ready(function () {
 	param.jsonData = JSON.stringify(obj);
 
 	// Get Weather
-	$.ajax({
-      url:'http://opendata.cwb.gov.tw/opendataapi?dataid=F-D0047-021&authorizationkey=CWB-D2B3E5CF-5581-4650-940C-B33EC537D691',
-      type: 'GET',
-      dataType: 'xml',
-      timeout: 1000,
-      cache:false,
-      error: function(xml){
-        alert('載入XML錯誤');
-      },
-      success: function(xml){
-        //建立一个代码片段
-        var frag=$("<ul/>");
-        //遍历所有student节点
-        $(xml).find("location").each(function(i){
-          //获取id节点
-          var id=$(this).children("id"),
-          //获取节点文本
-            id_value=id.text(),
-          //获取student下的email属性。
-            email=$(this).attr("locationName");
-          //构造HTML字符串，通过append方法添加进之前建立代码片段
-          frag.append("<li>"+id_value+"-"+locationName+"</li>");
-        });
-        //最后得到的frag添加进HTML文档中
-        frag.appendTo("#load");
-      }
-    });
+
 
 	// 台灣高鐵時刻表
 	$.ajax({
-		//url: "KWC.json",
-		url: "http://twmac.no-ip.com/KWC.json",
+		url: "KWC.json",
+		//url: "http://twmac.no-ip.com/KWC.json",
 		type: "GET",
 		data: param
 	})
