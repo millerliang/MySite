@@ -10,7 +10,9 @@
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 <style>
 .title {padding-top:1rem;color:#fff;text-shadow: 0 1px 0 #ccc,0 2px 0 #c9c9c9,0 3px 0 #bbb,0 4px 0 #b9b9b9,0 5px 0 #aaa,0 6px 1px rgba(0,0,0,.1),0 0 5px rgba(0,0,0,.1),0 1px 3px rgba(0,0,0,.3),0 3px 5px rgba(0,0,0,.2),0 5px 10px rgba(0,0,0,.25),0 10px 10px rgba(0,0,0,.2),0 20px 20px rgba(0,0,0,.15);}
-.topBG {margin-bottom:1.5rem;height:14rem;background:url("https://cdn.pixabay.com/photo/2017/06/04/13/29/road-2371088_960_720.jpg") no-repeat center top;background-size:cover;}
+.topBG {position:relative;margin-bottom:1.5rem;height:14rem;background:url("TW_PHW3_bg.jpg") no-repeat center top;background-size:cover;}
+.thisRGBAbg {background:linear-gradient(to bottom, rgba(0, 60, 90, 0.5) 0%, rgba(195, 140, 235, 0.5) 100%)  ;height:100%;}
+.col-sm-3 a.btn {box-shadow: 0 2px 0 rgba(0, 0, 0, 0.12);}
 .tabStyle {border: 1px solid #c6d1e3;white-space:nowrap;}
 .tabStyle thead tr {background: linear-gradient(to right, rgba(69,97,93,1) 0%, rgba(30,30,0,1) 100%);}
 .tabStyle th {background-color_:#829996;color:#fff;text-align:center;border-bottom: 1px solid #bbb;padding:.35rem;}
@@ -31,21 +33,24 @@ footer {text-align:center;padding:1rem;font-size:small;}
 <body>
 	<main class="">
 	    <header class="topBG container-fluidr">
-			<article class="container">
-				<h1 class="title"><img style="width:42px;margin:-.25rem .35rem 0 0;" src="https://upload.wikimedia.org/wikipedia/commons/a/a2/TW_PHW3.svg"><img>浪漫內山公路</h1>
-			</article>
+			<div class="thisRGBAbg">
+				<article class="container">
+					<h1 class="title"><img style="width:42px;margin:-.25rem .35rem 0 0;" src="https://upload.wikimedia.org/wikipedia/commons/a/a2/TW_PHW3.svg"><img>浪漫內山公路</h1>
+				</article>
+			</div>
 	    </header>
 		<article class="container">
 			
 			<div class="row">
 
 				<section class="col-sm-3">
-					<h3>路線</h3>
+					<h4>路線圖</h4>
 					<a class="btn btn-block btn-secondary" href="https://www.xplova.com/tw/route/BFC32C73-CCC6-719D-60A9-0DF330DD0291"><i class="fa fa-map-o"></i>　Xplova Map</a>
 					<a class="btn btn-block btn-secondary" href="https://drive.google.com/open?id=1YDoiPWob7-YDToPv2BlzFNO33Vu7CPMv&usp=sharing"><i class="fa fa-map-marker text-danger"></i>　Google Map</a>
 					<hr>
 				</section>
 				<section class="col-sm-9">
+					<h4 class="d-none d-sm-block">配速表</h4>
 					<table class="tabStyle table-responsive table-hover" border="0" cellspacing="0" cellpadding="0">
 					  <thead>
 						<tr>
@@ -71,32 +76,32 @@ footer {text-align:center;padding:1rem;font-size:small;}
 						  <td><i class="fa fa-camera"></i> <a href="https://goo.gl/maps/Hm8DoFKctyk">落羽松大道</a><small>(台3乙)</small></td>
 						  <td>24.8KM</td>
 						  <td>01:10</td>
-						  <td>00:10</td>
-						  <td>08:50</td>
+						  <td>00:15</td>
+						  <td>08:55</td>
 						</tr>
 						<tr>
 						  <td>【關西】</td>
 						  <td><i class="fa fa-cutlery"></i> OK 便利商店</td>
 						  <td>40.8KM</td>
-						  <td>00:50</td>
+						  <td>00:45</td>
 						  <td>00:10</td>
-						  <td>09:50</td>
+						  <td>09:40</td>
 						</tr>
 						<tr>
 						  <td>【橫山】</td>
 						  <td><i class="fa fa-camera"></i> <a href="https://goo.gl/maps/WxwMQR2ghKF2">合興車站</a></td>
 						  <td>49.1KM</td>
 						  <td>00:30</td>
-						  <td>00:10</td>
-						  <td>10:30</td>
+						  <td>00:15</td>
+						  <td>10:25</td>
 						</tr>
 						<tr>
 						  <td>&nbsp;</td>
 						  <td><i class="fa fa-camera"></i> <a href="https://goo.gl/maps/PDbTKZmcUmo">軟橋彩繪村</a><small>(122縣道)</small></td>
 						  <td>59.1KM</td>
-						  <td>00:30</td>
-						  <td>00:10</td>
-						  <td>11:10</td>
+						  <td>00:35</td>
+						  <td>00:15</td>
+						  <td>11:15</td>
 						</tr>
 						<tr>
 						  <td>&nbsp;</td>
@@ -119,32 +124,32 @@ footer {text-align:center;padding:1rem;font-size:small;}
 						  <td><i class="fa fa-camera"></i> <a href="https://goo.gl/maps/78G5KkUWinK2">金廣福公館</a></td>
 						  <td>--:--</td>
 						  <td>--:--</td>
-						  <td>00:55</td>
-						  <td>13:00</td>
+						  <td>01:25</td>
+						  <td>13:30</td>
 						</tr>
 						<tr>
 						  <td>【峨眉】</td>
 						  <td><i class="fa fa-camera"></i> <a href="https://goo.gl/maps/jtmYmSjDgUP2">細茅埔吊橋</a></td>
 						  <td>78.2KM</td>
-						  <td>00:40</td>
+						  <td>00:30</td>
 						  <td>00:10</td>
-						  <td>13:50</td>
+						  <td>14:10</td>
 						</tr>
 						<tr>
 						  <td>【南庄】</td>
 						  <td><i class="fa fa-cutlery"></i> 7-11 田野門市</td>
 						  <td>86.8KM</td>
-						  <td>--:--</td>
-						  <td>--:--</td>
-						  <td>--:--</td>
+						  <td>00:30</td>
+						  <td>00:10</td>
+						  <td>14:50</td>
 						</tr>
 						<tr>
 						  <td>【獅潭老街】</td>
 						  <td><i class="fa fa-cutlery"></i> <a href="https://goo.gl/maps/5fg5k2cwGRT2">邱媽媽客家菜包</a></td>
 						  <td>102.1KM</td>
-						  <td>--:--</td>
-						  <td>--:--</td>
-						  <td>--:--</td>
+						  <td>00:50</td>
+						  <td>00:15</td>
+						  <td>15:55</td>
 						</tr>
 						<tr>
 						  <td>&nbsp;</td>
@@ -158,49 +163,49 @@ footer {text-align:center;padding:1rem;font-size:small;}
 						  <td>&nbsp;</td>
 						  <td><i class="fa fa-cutlery"></i> <a href="https://goo.gl/maps/9288eAeUuq72">獅潭仙草</a></td>
 						  <td>102.9KM</td>
-						  <td>--:--</td>
-						  <td>--:--</td>
-						  <td>--:--</td>
+						  <td>00:05</td>
+						  <td>00:15</td>
+						  <td>16:15</td>
 						</tr>
 						<tr>
 						  <td>【汶水】</td>
 						  <td><i class="fa fa-cutlery"></i> 7-11 新雪霸門市</td>
 						  <td>115.5KM</td>
-						  <td>--:--</td>
-						  <td>--:--</td>
-						  <td>--:--</td>
+						  <td>00:40</td>
+						  <td>00:10</td>
+						  <td>17:05</td>
 						</tr>
 						<tr>
 						  <td>&nbsp;</td>
 						  <td><i class="fa fa-cutlery"></i> <a href="https://goo.gl/maps/moar5RNFTTR2">花間集</a></td>
 						  <td>117.8KM</td>
-						  <td>--:--</td>
-						  <td>--:--</td>
-						  <td>--:--</td>
+						  <td>00:10</td>
+						  <td>00:30</td>
+						  <td>17:45</td>
 						</tr>
 						<tr>
 						  <td>【鯉魚潭水庫】</td>
 						  <td><i class="fa fa-camera"></i> <a href="https://goo.gl/maps/BYMXLK6ntf32">鯉魚潭水庫觀景台</a></td>
 						  <td>131.1KM</td>
-						  <td>--:--</td>
-						  <td>--:--</td>
-						  <td>--:--</td>
+						  <td>00:20</td>
+						  <td>00:10</td>
+						  <td>18:15</td>
 						</tr>
 						<tr>
 						  <td>【東勢】</td>
-						  <td><i class="fa fa-cutlery"></i> 7-11 東泰門市</td>
+						  <td><i class="fa fa-cutlery"></i> 7-11 東泰門市<small>(交貨便)</small></td>
 						  <td>146KM</td>
-						  <td>--:--</td>
-						  <td>--:--</td>
-						  <td>--:--</td>
+						  <td>00:45</td>
+						  <td>00:05</td>
+						  <td>19:05</td>
 						</tr>
 						<tr>
 						  <td>&nbsp;</td>
 						  <td><i class="fa fa-building-o text-muted"></i> 東勢汽車商務旅館</td>
 						  <td>147.2KM</td>
+						  <td>00:10</td>
 						  <td>--:--</td>
-						  <td>--:--</td>
-						  <td>--:--</td>
+						  <td>19:15</td>
 						</tr>
 					  </tbody>
 					</table>
@@ -209,7 +214,7 @@ footer {text-align:center;padding:1rem;font-size:small;}
 			</div>
 		</article>
 
-		<footer>2017/12/21 16:15</footer>
+		<footer>2017/12/21 18:00 © Design by Miller</footer>
 	</main>
 
 <!-- jQuery first, then Tether, then Bootstrap JS. -->
