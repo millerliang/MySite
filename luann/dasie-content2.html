@@ -119,7 +119,7 @@ button.blue {background-color:#2067ae;color:#fff;text-align:center;}
 
 /* 给评 Evaluation */
 .tab .starIcons {text-align:right;}
-.tab .starIcons i {font-size:small;color:#ffa700;min-width:auto;}
+.tab .starIcons i {font-size:small;color:#ffa700;min-width:auto;cursor: pointer;}
 .tab .starIcons i.fa-star-o {color:#999}
 
 /* Flex display Style */
@@ -144,6 +144,9 @@ button.blue {background-color:#2067ae;color:#fff;text-align:center;}
 .ctrlBar li i.fa-hand-o-right {transform:rotate(90deg);}
 .ctrlBar li i.active {transform:rotate(0deg);color: #2067ae;}
 .ctrlBar li i.active::before {content: "\f087";}
+.ctrlBar li .fa-stack {width:100%;height:auto;}
+.ctrlBar li i.fa-ban {color:#e42959;font-size:42px;top:-.3rem;-webkit-transition: all .8s;-moz-transition: all .8s;transition: all .8s;}
+.ctrlBar li i.fa-volume-up + .fa-ban {opacity: 0;}
 </style>
 </head>
 <body>
@@ -169,6 +172,13 @@ button.blue {background-color:#2067ae;color:#fff;text-align:center;}
 		</ul>
 		<ul class="flex_box ctrlBar">
 			<li><i class="fa fa-angle-left"></i><label>上一頁</label></li>
+			<li>
+				<span class="fa-stack">
+					<i class="fa fa-volume-off"></i>
+					<i class="fa fa-ban fa-stack-2x"></i>
+				</span>
+				<label>Off</label>
+			</li>
 			<li><i class="fa fa-play"></i><label>Play</label></li>
 			<li><i class="fa fa-hand-o-right"></i><label>投 票</label></li>
 			<!-- <li><label for="modal-1"><i class="fa fa-star-o"></i><div>給 評</div></label></li> -->
@@ -307,6 +317,12 @@ $(".fa-play").click(function(){
 	var text = $(this).next("label").text() == 'Pause' ? 'Play' : 'Pause';
 	$(this).next("label").text(text);
 	$(this).toggleClass("fa-pause")
+});
+
+$(".fa-stack").click(function(){
+	var text = $(this).next("label").text() == 'On' ? 'Off' : 'On';
+	$(this).next("label").text(text);
+	$(this).children("i").toggleClass("fa-volume-up")
 });
 
 $(".fa-hand-o-right").click(function(){
