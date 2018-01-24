@@ -1,5 +1,10 @@
 {
 	"projectItemList" : [{
+			"date" : "2018/01/22",
+			"url" : "//millerliang.github.io/chiconydcdWebApp/",
+			"title" : "群光電子 WebApp",
+			"img" : "imgs/chiconydcdWebapp.png"
+		}, {
 			"date" : "2018/01/09",
 			"url" : "//millerliang.github.io/hejun_426webapp/index.html",
 			"title" : "和君 426 WebApp",
