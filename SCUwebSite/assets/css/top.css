@@ -1151,7 +1151,8 @@ html:not(.sp) .main .news li a:hover {
 }
 @media screen and (max-width: 980px) {
   .main .news li .news-date {
-    width: 8em;
+    width: 6em;
+    font-size: 1.8rem;
   }
 
   .main .news li a:after {
