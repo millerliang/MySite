@@ -1,134 +1,166 @@
 {
-	"projectItemList" : [{
-			"date" : "2018/01/22",
-			"url" : "//millerliang.github.io/chiconydcdWebApp/",
-			"title" : "群光電子 WebApp",
-			"img" : "imgs/chiconydcdWebapp.png"
-		}, {
-			"date" : "2018/01/09",
-			"url" : "//millerliang.github.io/hejun_426webapp/index.html",
-			"title" : "和君 426 WebApp",
-			"img" : "imgs/hejun_426webapp.jpg"
-		}, {
-			"date" : "2017/11/15",
-			"url" : "//millerliang.github.io/hejun_website/index.html",
-			"title" : "和君 RWD WebSite",
-			"img" : "imgs/hejun_rwdWeb.jpg"
-		}, {
-			"date" : "2017/05/12",
-			"url" : "//millerliang.github.io/hejun_ManagerSite/index.html",
-			"title" : "和君後台 RWD ManagerSite",
-			"img" : "imgs/hejun_manager.jpg"
-		}, {
-			"date" : "2016/05/26",
-			"url" : "opening/index.html",
-			"title" : "jQuery 倒數開幕拉簾",
-			"img" : "imgs/openner.jpg"
-		}, {
-			"date" : "2016/10/07",
-			"url" : "luann/index.html",
-			"title" : "路演大廳 for WebApp",
-			"img" : "imgs/luann.png"
-		}, {
-			"date" : "2016/05/17",
-			"url" : "NewLife_Page/index.html",
-			"title" : "左右逢源網站樣板",
-			"img" : "imgs/NewLife.jpg"
-		}, {
-			"date" : "2016/05/24",
-			"url" : "dahsin/index.html",
-			"title" : "大信防水 for WebApp",
-			"img" : "imgs/dahsin.png"
-		}, {
-			"date" : "2016/04/15",
-			"url" : "dahsin_site/exp-001.html",
-			"title" : "大信官網-工程實績改 json",
-			"img" : "imgs/dahsin_exp.jpg"
-		}, {
-			"date" : "2016/03/17",
-			"url" : "BMCsite/index.html",
-			"title" : "BMC Voice Website",
-			"img" : "imgs/bmc_voice.jpg"
-		}, {
-			"date" : "2016/01/14",
-			"url" : "bmcv_user/index.html",
-			"title" : "BMC Voice for WebApp",
-			"img" : "imgs/BMC_voice_wap.jpg"
-		}, {
-			"date" : "2016/04/02",
-			"url" : "HannahSite/index.html",
-			"title" : "瀚吶音頻網站",
-			"img" : "imgs/hannah.jpg"
-		}, {
-			"date" : "2016/03/09",
-			"url" : "LuAnn_ManagerSite/index.html",
-			"title" : "LuAnn 後台管理",
-			"img" : "imgs/LuAnn_ManagerSite.jpg"
-		}, {
-			"date" : "2016/09/21",
-			"url" : "new_IDSC/index.html",
-			"title" : "IDSC 英達思康 (onePage)",
-			"img" : "imgs/new_idsc.jpg"
-		}, {
-			"date" : "2015/12/07",
-			"url" : "IDSC_website/index.html",
-			"title" : "IDSC 英達思康 (old)",
-			"img" : "imgs/IDSC_website.jpg"
-		}, {
-			"date" : "2014/12/23",
-			"url" : "xjy_site/index.html",
-			"title" : "芯碁晔網站",
-			"img" : "imgs/xjy.jpg"
-		}, {
-			"date" : "2015/09/09",
-			"url" : "jput_json/index.html",
-			"title" : "jput_json Demo",
-			"img" : "imgs/jput_json.jpg"
-		}, {
-			"date" : "2015/07/13",
-			"url" : "JFApp_ManagerSite/index.html",
-			"title" : "JF 後台管理",
-			"img" : "imgs/jf_manager.jpg"
-		}, {
-			"date" : "2016/04/12",
-			"url" : "https://uupon.tw/joinMember/joinConnectCard.do",
-			"title" : "UUPON 會員註冊",
-			"img" : "imgs/uupon_registration.jpg"
-		}, {
-			"date" : "2015/04/15",
-			"url" : "uupon_point/index.html",
-			"title" : "UUPON 點數交換 WebApp",
-			"img" : "imgs/uupon_point.jpg"
-		}, {
-			"date" : "2015/04/07",
-			"url" : "uupon_fix_phone/index.html",
-			"title" : "UUPON 註冊送好禮 WebApp",
-			"img" : "imgs/uupon_fix_phone.jpg"
-		}, {
-			"date" : "2015/04/07",
-			"url" : "uupon_fix_q/index.html",
-			"title" : "UUPON 問卷抽獎 WebApp",
-			"img" : "imgs/uupon_fix_q.jpg"
-		}, {
-			"date" : "2015/01/08",
-			"url" : "uupon_fb_share/index.html",
-			"title" : "UUPON Facebook 分享",
-			"img" : "imgs/uupon_fb_share.jpg"
-		}, {
-			"date" : "2015/08/12",
-			"url" : "QA_theme/index.html",
-			"title" : "問答QA_Theme",
-			"img" : "imgs/qa_theme.jpg"
-		}, {
-			"date" : "2014/12/01",
-			"url" : "fontello/index.html",
-			"title" : "向量格式字型圖形",
-			"img" : "imgs/fontello.jpg"
-		}, {
-			"date" : "2013/08/26",
-			"url" : "HTML+CSS/index.html",
-			"title" : "HTML CSS 課程教學",
-			"img" : "imgs/jyt-html.jpg"
-		}
-	]
+  "projectItemList": [
+    {
+      "date": "2019/05/17",
+      "url": "SCUwebSite/index.html",
+      "title": "東吳大學-校史網",
+      "img": "imgs/SCUwebImg.png"
+    },
+    {
+      "date": "2018/01/22",
+      "url": "//millerliang.github.io/chiconydcdWebApp/",
+      "title": "群光電子 WebApp",
+      "img": "imgs/chiconydcdWebapp.png"
+    },
+    {
+      "date": "2018/01/09",
+      "url": "//millerliang.github.io/hejun_426webapp/index.html",
+      "title": "和君 426 WebApp",
+      "img": "imgs/hejun_426webapp.jpg"
+    },
+    {
+      "date": "2017/11/15",
+      "url": "//millerliang.github.io/hejun_website/index.html",
+      "title": "和君 RWD WebSite",
+      "img": "imgs/hejun_rwdWeb.jpg"
+    },
+    {
+      "date": "2017/05/12",
+      "url": "//millerliang.github.io/hejun_ManagerSite/index.html",
+      "title": "和君後台 RWD ManagerSite",
+      "img": "imgs/hejun_manager.jpg"
+    },
+    {
+      "date": "2016/05/26",
+      "url": "opening/index.html",
+      "title": "jQuery 倒數開幕拉簾",
+      "img": "imgs/openner.jpg"
+    },
+    {
+      "date": "2016/10/07",
+      "url": "luann/index.html",
+      "title": "路演大廳 for WebApp",
+      "img": "imgs/luann.png"
+    },
+    {
+      "date": "2016/05/17",
+      "url": "NewLife_Page/index.html",
+      "title": "左右逢源網站樣板",
+      "img": "imgs/NewLife.jpg"
+    },
+    {
+      "date": "2016/05/24",
+      "url": "dahsin/index.html",
+      "title": "大信防水 for WebApp",
+      "img": "imgs/dahsin.png"
+    },
+    {
+      "date": "2016/04/15",
+      "url": "dahsin_site/exp-001.html",
+      "title": "大信官網-工程實績改 json",
+      "img": "imgs/dahsin_exp.jpg"
+    },
+    {
+      "date": "2016/03/17",
+      "url": "BMCsite/index.html",
+      "title": "BMC Voice Website",
+      "img": "imgs/bmc_voice.jpg"
+    },
+    {
+      "date": "2016/01/14",
+      "url": "bmcv_user/index.html",
+      "title": "BMC Voice for WebApp",
+      "img": "imgs/BMC_voice_wap.jpg"
+    },
+    {
+      "date": "2016/04/02",
+      "url": "HannahSite/index.html",
+      "title": "瀚吶音頻網站",
+      "img": "imgs/hannah.jpg"
+    },
+    {
+      "date": "2016/03/09",
+      "url": "LuAnn_ManagerSite/index.html",
+      "title": "LuAnn 後台管理",
+      "img": "imgs/LuAnn_ManagerSite.jpg"
+    },
+    {
+      "date": "2016/09/21",
+      "url": "new_IDSC/index.html",
+      "title": "IDSC 英達思康 (onePage)",
+      "img": "imgs/new_idsc.jpg"
+    },
+    {
+      "date": "2015/12/07",
+      "url": "IDSC_website/index.html",
+      "title": "IDSC 英達思康 (old)",
+      "img": "imgs/IDSC_website.jpg"
+    },
+    {
+      "date": "2014/12/23",
+      "url": "xjy_site/index.html",
+      "title": "芯碁晔網站",
+      "img": "imgs/xjy.jpg"
+    },
+    {
+      "date": "2015/09/09",
+      "url": "jput_json/index.html",
+      "title": "jput_json Demo",
+      "img": "imgs/jput_json.jpg"
+    },
+    {
+      "date": "2015/07/13",
+      "url": "JFApp_ManagerSite/index.html",
+      "title": "JF 後台管理",
+      "img": "imgs/jf_manager.jpg"
+    },
+    {
+      "date": "2016/04/12",
+      "url": "https://uupon.tw/joinMember/joinConnectCard.do",
+      "title": "UUPON 會員註冊",
+      "img": "imgs/uupon_registration.jpg"
+    },
+    {
+      "date": "2015/04/15",
+      "url": "uupon_point/index.html",
+      "title": "UUPON 點數交換 WebApp",
+      "img": "imgs/uupon_point.jpg"
+    },
+    {
+      "date": "2015/04/07",
+      "url": "uupon_fix_phone/index.html",
+      "title": "UUPON 註冊送好禮 WebApp",
+      "img": "imgs/uupon_fix_phone.jpg"
+    },
+    {
+      "date": "2015/04/07",
+      "url": "uupon_fix_q/index.html",
+      "title": "UUPON 問卷抽獎 WebApp",
+      "img": "imgs/uupon_fix_q.jpg"
+    },
+    {
+      "date": "2015/01/08",
+      "url": "uupon_fb_share/index.html",
+      "title": "UUPON Facebook 分享",
+      "img": "imgs/uupon_fb_share.jpg"
+    },
+    {
+      "date": "2015/08/12",
+      "url": "QA_theme/index.html",
+      "title": "問答QA_Theme",
+      "img": "imgs/qa_theme.jpg"
+    },
+    {
+      "date": "2014/12/01",
+      "url": "fontello/index.html",
+      "title": "向量格式字型圖形",
+      "img": "imgs/fontello.jpg"
+    },
+    {
+      "date": "2013/08/26",
+      "url": "HTML+CSS/index.html",
+      "title": "HTML CSS 課程教學",
+      "img": "imgs/jyt-html.jpg"
+    }
+  ]
 }

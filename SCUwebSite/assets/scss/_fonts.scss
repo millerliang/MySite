@@ -1,0 +1,102 @@
+@charset "UTF-8";
+/* ======== fonts ===== */
+@font-face {
+	font-family: "MyYuGothicM";
+	src: local("YuGothic-Medium"),
+			 local("YuGothic-Regular");
+}
+@font-face {
+	font-family: "MyYuGothicM";
+	font-weight: bold;
+	src: local("YuGothic-Bold")
+}
+@font-face {
+	font-family: 'Noto Sans Japanese';
+	src: url("../fonts/NotoSansCJKjp-Regular.eot?");
+	src: url("../fonts/NotoSansCJKjp-Regular.eot?#iefix") format("embedded-opentype"),
+			 url("../fonts/NotoSansCJKjp-Regular.woff") format('woff');
+	font-style: normal;
+	font-weight: 500;
+}
+@font-face {
+	font-family: 'Noto Sans Japanese';
+	src: url("../fonts/NotoSansCJKjp-Medium.eot?");
+	src: url("../fonts/NotoSansCJKjp-Medium.eot?#iefix") format("embedded-opentype"),
+			 url("../fonts/NotoSansCJKjp-Medium.woff") format('woff');
+	font-style: normal;
+	font-weight: 600;
+}
+@font-face {
+	font-family: 'Noto Sans Japanese';
+	src: url("../fonts/NotoSansCJKjp-Bold.eot?");
+	src: url("../fonts/NotoSansCJKjp-Bold.eot?#iefix") format("embedded-opentype"),
+			 url("../fonts/NotoSansCJKjp-Bold.woff") format('woff');
+	font-style: normal;
+	font-weight: 700;
+}
+@font-face {
+	font-family: 'Roboto';
+	src: url("../fonts/Roboto-Regular.eot?");
+	src: url("../fonts/Roboto-Regular.eot?#iefix") format("embedded-opentype"),
+			 url("../fonts/Roboto-Regular.woff") format('woff');
+	font-style: normal;
+	font-weight: 500;
+}
+@font-face {
+	font-family: 'Roboto';
+	src: url("../fonts/Roboto-Bold.eot?");
+	src: url("../fonts/Roboto-Bold.eot?#iefix") format("embedded-opentype"),
+			 url("../fonts/Roboto-Bold.woff") format('woff');
+	font-style: normal;
+	font-weight: 700;
+}
+@font-face {
+	font-family: 'Roboto';
+	src: url("../fonts/Roboto-Thin.eot?");
+	src: url("../fonts/Roboto-Thin.eot?#iefix") format("embedded-opentype"),
+			 url("../fonts/Roboto-Thin.woff") format('woff');
+	font-style: normal;
+	font-weight: 100;
+}
+
+
+
+body {font-family: -apple-system, BlinkMacSystemFont, MyYuGothicM, "Yu Gothic", Meiryo, "Hiragino kaku Gothic ProN", sans-serif;}
+.winChrome body {font-weight: 500;}
+
+/* IEにメイリオを指定（下余白対策） */
+@media all and (-ms-high-contrast:none) {
+	body {font-family: Meiryo, sans-serif;}
+}
+
+input,
+select,
+textarea,
+button {font-family: inherit;}
+
+.notosansregular{
+	font-family: 'Noto Sans Japanese';
+	font-weight: 700;
+}
+.notosansmedium{
+	font-family: 'Noto Sans Japanese';
+	font-weight: 600;
+}
+.notosansbold{
+	font-family: 'Noto Sans Japanese';
+	font-weight: 700;
+}
+
+.txt-en {font-family: 'Roboto', sans-serif !important;}
+.roboto{
+	font-family: 'Roboto';
+	font-weight:500;
+}
+.robotobold{
+	font-family: 'Roboto';
+	font-weight:700;
+}
+.robotothin{
+	font-family: 'Roboto';
+	font-weight:100;
+}
