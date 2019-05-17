@@ -7831,7 +7831,7 @@ body.sidebar-open {
   border-bottom: 2px solid #fff;
 }
 #footer .footer-lower {
-  background-color: #000;
+  background-color: #684823;
   text-align: left;
   width: 100%;
   letter-spacing: 0;
@@ -7839,6 +7839,7 @@ body.sidebar-open {
   box-sizing: border-box;
   padding-left: 100px;
   padding-right: 100px;
+  background-image: url(https://www.transparenttextures.com/patterns/dark-wood.png);
 }
 #footer .footer-links {
   color: #fff;
