@@ -7798,7 +7798,7 @@ body.sidebar-open {
   text-align: center;
   width: 100%;
   height: auto;
-  background-color: #0a1e59;
+  background-color: #a8103e;
   padding-top: 52px;
   padding-bottom: 20px;
   text-decoration: none;
@@ -7823,7 +7823,7 @@ body.sidebar-open {
   transition: all 0.3s;
 }
 #footer #btn-pagetop a:hover {
-  background-color: #0c336d;
+  background-color: #920f37;
   color: #fff;
 }
 #footer #btn-pagetop a:hover:after {
@@ -7885,7 +7885,7 @@ body.sidebar-open {
   display: inline-block;
 }
 #footer .social-link i.fab {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.65);
   cursor: pointer;
   font-size: 3rem;
   margin: 0 0 0 2rem;
