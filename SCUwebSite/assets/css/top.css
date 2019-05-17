@@ -634,7 +634,9 @@ html:not(.sp) .main .top-vertical-link a:hover:after {
 }
 
 #mainvisual .mainvisual-copy p span {
-  font-weight: 700;
+  /* font-weight: 700; */
+  font-size: 1.8rem;
+  color: #444;
 }
 
 #mainvisual .mainvisual-copy p .transparent {
