@@ -25,6 +25,9 @@ body {
 
 
 /* CSS Scroll Bars Star 2019-05-17 */
+#Time-Line-Canvas {
+  overflow: auto;
+}
 #Time-Line-Canvas::-webkit-scrollbar-track
 {
   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
