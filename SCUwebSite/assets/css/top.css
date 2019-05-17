@@ -702,17 +702,16 @@ html:not(.sp) .main .top-vertical-link a:hover:after {
   height: 100%;
 }
 .main .top-product .top-product-panels .panel-covered .txt {
-  text-align: center;
+  /* text-align: center; */
 }
 .main .top-product .top-product-panels .panel-covered .top-product-num {
-  /* margin-top: 75px; */
   color: rgba(255,255,255,.5);
   font-size: 3.4rem;
   font-family: 'roboto';
   font-weight: 500;
-  line-height: 1em;
+  line-height: 0.5em;
   transition: all 1.2s;
-  /* margin-bottom: 14px; */
+  transform: translateX(-2rem);
 }
 .main .top-product .top-product-panels .panel-covered .top-product-title {
   font-size: 2.4rem;
@@ -722,7 +721,7 @@ html:not(.sp) .main .top-vertical-link a:hover:after {
   letter-spacing: 0.05em;
   margin-bottom: 0;
   padding-bottom: 1rem;
-  border-bottom:2px solid #A40D3B;
+  border-bottom: 2px solid #A40D3B;
   text-shadow: 0px 2px 5px rgba(0,0,0,.75);
   transition: all 1.2s;
 }
