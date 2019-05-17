@@ -783,6 +783,10 @@ html:not(.sp) .main .top-vertical-link a:hover:after {
   text-decoration: none;
   position: relative;
   color: #000;
+  transition: all .3s;
+}
+.main .top-product .top-flow-link a:hover {
+  transform: scale(1.08, 1.08);
 }
 .main .top-product .top-flow-link a:before {
   position: absolute;
