@@ -707,7 +707,8 @@ html:not(.sp) .main .top-vertical-link a:hover:after {
 .main .top-product .top-product-panels .panel-covered .top-product-num {
   color: rgba(255,255,255,.5);
   font-size: 3.4rem;
-  font-family: 'roboto';
+  /* font-family: 'roboto'; */
+  font-family: "segoe UI historic";
   font-weight: 500;
   line-height: 0.5em;
   transition: all 1.2s;
