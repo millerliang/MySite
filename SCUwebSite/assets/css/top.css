@@ -705,14 +705,17 @@ html:not(.sp) .main .top-vertical-link a:hover:after {
   /* text-align: center; */
 }
 .main .top-product .top-product-panels .panel-covered .top-product-num {
-  color: rgba(255,255,255,.5);
-  font-size: 3.4rem;
+  position: absolute;
+  top: 2.3rem;
+  color: rgba(255,255,255,.1);
+  font-size: 32rem;
   /* font-family: 'roboto'; */
   font-family: "segoe UI historic";
   font-weight: 500;
   line-height: 0.5em;
+  letter-spacing: -3.2rem;
   transition: all 1.2s;
-  transform: translateX(-2rem);
+  transform: translateX(-4rem) rotate(90deg);
 }
 .main .top-product .top-product-panels .panel-covered .top-product-title {
   font-size: 2.4rem;
