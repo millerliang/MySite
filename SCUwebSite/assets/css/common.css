@@ -23,29 +23,29 @@ body {
   font-weight: 500;
 }
 
-
 /* CSS Scroll Bars Star 2019-05-17 */
 #Time-Line-Canvas {
   overflow: auto;
 }
 #Time-Line-Canvas::-webkit-scrollbar-track
 {
-  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-  border-radius: 10px;
-  background-color: #F5F5F5;
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.35);
+  background-color: #f3f3f3;
 }
 
 #Time-Line-Canvas::-webkit-scrollbar
 {
-  width: 12px;
+  width: 10px;
+  height: 10px;
   background-color: #F5F5F5;
+  padding: 5px;
 }
 
 #Time-Line-Canvas::-webkit-scrollbar-thumb
 {
-  border-radius: 10px;
-  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-  background-color: #D62929;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,.5);
+  background-color: #3c5066;
 }
 /* CSS Scroll Bars End */
 
