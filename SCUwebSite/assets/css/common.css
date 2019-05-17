@@ -2679,12 +2679,10 @@ html:not(.sp) #btn-menu button:hover:before {
 }
 
 .main .panel-covered .txt {
-	width: 100%;
-	text-align: center;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-  /* padding: 30px 30px 10px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 0 0 2rem 3.5rem;
 }
 
 .main .panel-covered .txt.bottom {
@@ -4858,7 +4856,7 @@ html:not(.sp) .main .slick-dots li:hover button,
   }
 
   .main .panel-covered .txt {
-    padding: 20px 20px 0;
+    /* padding: 20px 20px 0; */
   }
 
   .main .panel-covered .link-horizontal {
@@ -5477,7 +5475,7 @@ html:not(.sp) .main .slick-dots li:hover button,
   }
 
   .main .panel-covered .txt {
-    padding: 15px 15px 0;
+    /* padding: 15px 15px 0; */
   }
 
   .main .panel-covered .link-horizontal {
@@ -7932,16 +7930,15 @@ body.sidebar-open {
     padding: 0;
   }
   #footer .footer-links {
-    padding-bottom: 32px;
+    padding-bottom: 1.5rem;
     padding-top: 14px;
     display: flex;
+    flex-direction: column;
   }
   #footer .footer-links li {
-    display: inline-block;
     letter-spacing: 0;
-    font-size: 0;
     margin: 0;
-    width: calc(100% / 3);
+    padding: 0;
   }
   #footer .footer-links a {
     font-size: 1.2rem;
