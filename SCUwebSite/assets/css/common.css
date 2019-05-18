@@ -6177,6 +6177,7 @@ html:not(.sp) .main .heading5 a:hover {
   color: #fff;
   text-decoration: none;
   transform: skewX(-19deg);
+  border-radius: 0 8px 0 8px;
 }
 #mainvisual .mainvisual-btn span {
   font-size: 6rem;
