@@ -674,7 +674,7 @@ main {
   width: 1em;
   height: 2px;
   margin: 10px 0 0;
-  background-color: #373582;
+  background-color: #A80F3E;
 }
 
 .main h2 a {
@@ -6318,13 +6318,13 @@ html:not(.sp) .main .heading5 a:hover {
 }
 .breadcrumb li {
   display: inline-block;
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   line-height: 1em;
-  padding-right: 23px;
+  padding-right: 1.25rem;
   position: relative;
 }
 .breadcrumb li:not(:first-child) {
-  padding-left: 23px;
+  padding-left: 1rem;
 }
 .breadcrumb li:not(:last-child):after {
   position: absolute;
@@ -6339,11 +6339,11 @@ html:not(.sp) .main .heading5 a:hover {
 }
 .breadcrumb a {
   text-decoration: none;
-  color: #373582;
+  color: #A80F3E;
   transition: all 0.3s;
 }
 .breadcrumb a:hover {
-  color: #ff5c00;
+  color: #000;
 }
 .breadcrumb .home {
   background-repeat: no-repeat;
@@ -6366,13 +6366,13 @@ html:not(.sp) .main .heading5 a:hover {
   background-image: url('../images/common/home-on.svg');
   background-position: 0px 0px;
 }
-.breadcrumb .home:hover img {
+/* .breadcrumb .home:hover img {
   opacity: 0;
 }
 
 html.sp .breadcrumb .home:hover img {
   opacity: none;
-}
+} */
 
 #headingarea.headvisual {
   height: 440px;
@@ -7907,7 +7907,6 @@ body.sidebar-open {
 #footer .social-link {
   text-align: center;
   padding-top: 2rem;
-  width: 200px;
   float: right;
   display: inline-block;
 }
@@ -7915,7 +7914,7 @@ body.sidebar-open {
   color: rgba(255, 255, 255, 0.65);
   cursor: pointer;
   font-size: 3rem;
-  margin: 0 0 0 2rem;
+  margin: 0 1.5rem;
 }
 #footer .social-link i.fab:hover {
   color: white;
