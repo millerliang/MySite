@@ -1,12 +1,6 @@
 {
   "projectItemList": [
     {
-      "date": "2019/05/17",
-      "url": "SCUwebSite/index.html",
-      "title": "東吳大學-校史網",
-      "img": "imgs/SCUwebImg.png"
-    },
-    {
       "date": "2018/01/22",
       "url": "//millerliang.github.io/chiconydcdWebApp/",
       "title": "群光電子 WebApp",
