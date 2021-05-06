@@ -37,6 +37,8 @@
       "visiable": true
     }
   ],
+  "signInFormAction": "member/pages7_post1.php",
+  "contactUsAction": "member/pages7_post2.php",
   "mamberLink": {
     "name": "會員專區",
     "url": "member"
